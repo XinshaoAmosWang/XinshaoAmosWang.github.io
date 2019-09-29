@@ -31,7 +31,6 @@ description:           >
 tagline:               >
   Machine Learning (Deep Metric Learning, Robust Learning under Arbitrary Anomalies).
 
-tagline:               >
   Computer Vision (Image/Video Recognition, Person ReID).
 
 #Open `_config.yml` to edit this text.
@@ -55,9 +54,9 @@ author:
 # Add links to the sidebar.
 menu:
   - title:             Blog
-    url:               /Blogs/
+    url:               /hydejack/
   - title:             Projects
-    url:               /Projects/
+    url:               /hyde/
   - title:             Documentation
     url:               /docs/
   - title:             About ME
@@ -108,7 +107,7 @@ font_heading:          Roboto Slab, Helvetica, Arial, sans-serif
 
 defaults:
   - scope:
-      path:            Projects
+      path:            hyde
     values:
       accent_color:    rgb(38,139,210)
       accent_image:
