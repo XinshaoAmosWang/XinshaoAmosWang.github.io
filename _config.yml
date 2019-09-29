@@ -54,9 +54,9 @@ author:
 # Add links to the sidebar.
 menu:
   - title:             Blog
-    url:               /docs/
+    url:               /Blogs/
   - title:             Projects
-    url:               /docs/
+    url:               /Projects/
   - title:             Documentation
     url:               /docs/
   - title:             About ME
