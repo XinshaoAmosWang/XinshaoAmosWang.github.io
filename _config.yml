@@ -79,11 +79,13 @@ copyright:             © 2019. All rights reserved.
 permalink:             /:categories/:year-:month-:day-:title/
 
 
+
+
 # Pagination configuration (used by the `blog` layout)
 paginate:              5
-paginate_path:         "/Blogs/page:num/"
+paginate_path:         /Blogs/page-:num/
 paginate:              5
-paginate_path:         "/Projects/page:num/"
+paginate_path:         /Projects/page-:num/
 
 
 # Customizaton
@@ -251,10 +253,6 @@ hydejack:
 # ========================================================================================
 
 collections:
-  featured_categories:
-    permalink:         /:name/
-    output:            true
-
   featured_categories:
     permalink:         /:name/
     output:            true
