@@ -19,18 +19,18 @@ baseurl:               ''
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Hydejack
+title:                 Xinshao Wang
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  "Best Jekyll Theme by a Mile".
-  **Hydejack** is your presence on the web, featuring a blog, portfolio, and resume.
+  "Welcome to my personal website".
+  **3rd Year PhD Student** will graduate in Sep 2020.
 
 # A shorter description for the sidebar.
 tagline:               >
-  "Best Jekyll Theme by a Mile".
-  Open `_config.yml` to edit this text.
+  "Research interests: Machine Learning (Deep Metric Learning, Robust Learning under Arbitrary Anomalies), Computer Vision (Image/Video Recognition, Person ReID)".
+   #Open `_config.yml` to edit this text.
 
 # A list of keywords for your blog
 keywords:              []
@@ -42,20 +42,21 @@ logo:                  /assets/icons/icon.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                <Xinshao> <Wang>
+  Nickname:                <Xinshao> <Wang>
+  email:               <xwang at qub dot ac dot uk xwang at qub dot ac dot uk>
   # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
 # Add links to the sidebar.
 menu:
-  - title:             Hydejack
-    url:               /hydejack/
-  - title:             Hyde
-    url:               /hyde/
+  - title:             Blog
+    url:               /Blogs/
+  - title:             Projects
+    url:               /Projects/
   - title:             Documentation
     url:               /docs/
-  - title:             About
+  - title:             About ME
     url:               /about/
 
 # Add links to the footer.
