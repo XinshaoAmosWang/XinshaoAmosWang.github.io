@@ -257,6 +257,10 @@ collections:
     permalink:         /:name/
     output:            true
 
+  featured_categories:
+    permalink:         /:name/
+    output:            true
+
   featured_tags:
     permalink:         /tag-:name/
     output:            true
