@@ -29,8 +29,11 @@ description:           >
 
 # A shorter description for the sidebar.
 tagline:               >
-  "Research interests: Machine Learning (Deep Metric Learning, Robust Learning under Arbitrary Anomalies), Computer Vision (Image/Video Recognition, Person ReID)".
-   #Open `_config.yml` to edit this text.
+  Machine Learning (Deep Metric Learning, Robust Learning under Arbitrary Anomalies).
+
+  Computer Vision (Image/Video Recognition, Person ReID).
+
+#Open `_config.yml` to edit this text.
 
 # A list of keywords for your blog
 keywords:              []
