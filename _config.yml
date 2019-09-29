@@ -54,9 +54,9 @@ author:
 # Add links to the sidebar.
 menu:
   - title:             Blog
-    url:               /hydejack/
+    url:               /docs/
   - title:             Projects
-    url:               /hyde/
+    url:               /docs/
   - title:             Documentation
     url:               /docs/
   - title:             About ME
