@@ -2,8 +2,9 @@
 # Must be the same as `author` in `_config.yml`.
 # Change `author1` to your shortname.
 author1:
-  name:              <firstname> <lastname>
-  email:             <mail@domain.tld>
+  name:              <Xinshao> <Wang>
+  Nickname:                <Amos>
+  email:             <xwang at qub dot ac dot uk xwang at qub dot ac dot uk>
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
@@ -34,13 +35,13 @@ author1:
   # Rearrange to change the order in which they appear
   social:
     twitter:         <username>
-    github:          <username>
+    github:          <XinshaoAmosWang>
     # email:           <mail@domain.tld>
     # rss:             https://<url>/feed.xml
     # facebook:        <username>
     # google:          <number>
     # vk:              <username>
-    # youtube:         <string_string_string>
+    youtube:         <string_string_string>
     # vimeo:           <username>
     # vine:            <username>
     # spotify:         <user>/<number>
@@ -55,7 +56,7 @@ author1:
     # ello:            <username>
     # twitch:          <username>
     # steam:           <number>
-    # reddit:          <username>
+    reddit:          <username>
     # tumblr:          <username>
     # pinterest:       <username>
     # foursquare:      <number>
