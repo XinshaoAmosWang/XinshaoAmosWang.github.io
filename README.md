@@ -1,6 +1,6 @@
 # Xinshao Wang's Personal Website
 
-Welcome to my personal website.
+Welcome to [my personal website](https://xinshaoamoswang.github.io/).  
 
 
 ## Research Topics
