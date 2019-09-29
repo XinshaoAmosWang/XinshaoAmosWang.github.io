@@ -25,12 +25,13 @@ title:                 Xinshao Wang
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
   "Welcome to my personal website".
-  **3rd Year PhD Student** will graduate in Sep 2020.
+  **3rd Year PhD Student**, will graduate in Sep 2020.
 
 # A shorter description for the sidebar.
 tagline:               >
   Machine Learning (Deep Metric Learning, Robust Learning under Arbitrary Anomalies).
 
+tagline:               >
   Computer Vision (Image/Video Recognition, Person ReID).
 
 #Open `_config.yml` to edit this text.
@@ -41,7 +42,7 @@ keywords:              []
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/icons/favicon.png
+logo:                  /assets/icons/favicon-32x32.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
