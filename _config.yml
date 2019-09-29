@@ -45,11 +45,12 @@ logo:                  /assets/icons/favicon-32x32.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
-  name:                <Xinshao> <Wang>
-  Nickname:                <Amos>
-  email:               <xwang at qub dot ac dot uk xwang at qub dot ac dot uk>
+  name:                Xinshao Wang
+  Nickname:                Amos
+  email:               xwang at qub dot ac dot uk xwang at qub dot ac dot uk
   # Used by `jekyll-seo-tag`:
   twitter:             <username>
+  about:             Xinshao Wang, **3rd Year PhD Student**, will graduate in Sep 2020. 
 
 
 # Add links to the sidebar.
@@ -273,6 +274,7 @@ include:
 # ========================================================================================
 
 plugins:
+  - jekyll-avatar
   - jekyll-default-layout
   - jekyll-feed
   - jekyll-optional-front-matter
