@@ -1,7 +1,7 @@
 ---
 layout: list
 title: Blogs
-slug: hydejack
+slug: Blogs
 menu: true
 order: 1
 description: >
