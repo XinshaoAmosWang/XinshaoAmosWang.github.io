@@ -4,7 +4,7 @@
 # IMPORTANT: Set the URL of your site.
 # Set to https://<username>.github.io when hosting on GitHub Pages
 # (unless you are using a custom domain).
-url:                   https://xwang
+url:                   https://xwang.com
 
 # IMPORTANT: Set The "base URL" of your site.
 # When your site sits in a subdirectory, set to /<name of directory>
@@ -51,6 +51,7 @@ author:
   # Used by `jekyll-seo-tag`:
   twitter:             <username>
 
+
 # Add links to the sidebar.
 menu:
   - title:             Blog
@@ -76,9 +77,12 @@ copyright:             © 2019. All rights reserved.
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/
 
+
+
+
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
-paginate_path:         /page-:num/
+paginate_path:         /Blogs/page-:num/
 
 
 # Customizaton
