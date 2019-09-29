@@ -1,6 +1,6 @@
 ---
 layout: list
-title: Projects
+title: Blogs
 slug: hydejack
 menu: true
 order: 1
