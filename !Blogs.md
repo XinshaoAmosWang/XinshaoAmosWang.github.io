@@ -1,6 +1,6 @@
 ---
-# file: !my-blog.md
-title: Blogs
+# file: !Blogs.md
+title: Blog
 menu: true
 permalink: /Blogs/
 sitemap: false
