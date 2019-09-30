@@ -13,4 +13,4 @@ permalink: /Resume/
 </object>
 
 
-<iframe src="CV_XinshaoWang_V05.pdf" height="1100px" width="2000px"></iframe>
+<iframe src="CV_XinshaoWang_V05.pdf" height="1100px" width="2000px">Download PDF</iframe>
