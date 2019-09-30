@@ -1,7 +1,8 @@
 ---
 title: Resume
 description: >
-  Resume.
+  Resume. 
+permalink: /Resume/
 ---
 
 ## Resume. 
