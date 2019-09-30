@@ -9,4 +9,6 @@ resume:
     label: "Programmer"
     picture: "/assets/icons/icon.png"
   # ...
+permalink: /Resume/
 ---
+
