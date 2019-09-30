@@ -10,3 +10,8 @@ permalink: /Resume/
 ![Alt](CV_XinshaoWang_V05.pdf)
 
 ![Alt](./CV_XinshaoWang_V05.pdf){width=100% height=400}
+
+
+```{r image-ref-for-in-text, echo = FALSE, message=FALSE, fig.align='center', fig.cap='Some cool caption', out.width='0.75\\linewidth', fig.pos='H'}
+knitr::include_graphics("./CV_XinshaoWang_V05.pdf")
+```
