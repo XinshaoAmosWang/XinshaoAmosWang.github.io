@@ -6,8 +6,6 @@ description: >
 image: /assets/img/blog/steve-harvey.jpg
 ---
 
-Summary of paper notes on ...
-
 ## Generalized Sliced Wasserstein Distances
 **NOTE**: .
 {:.message}
