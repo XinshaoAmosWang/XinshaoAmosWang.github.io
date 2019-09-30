@@ -56,8 +56,10 @@ menu:
     url:               /blogs/
   - title:             Projects
     url:               /projects/
-  - title:             Documentation
-    url:               /docs/
+  - title:             Resume
+    url:               /resume/
+  #- title:             Documentation
+  #  url:               /docs/
   - title:             About ME
     url:               /about/
 
