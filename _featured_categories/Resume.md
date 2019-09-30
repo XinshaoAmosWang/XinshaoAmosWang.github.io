@@ -1,4 +1,5 @@
 ---
+layout: list
 title: Resume
 slug: Resume
 menu: true
@@ -8,5 +9,3 @@ description: >
   Open `_featured_categories/Resume.md` to edit this text.
 ---
 
-
-ddd
