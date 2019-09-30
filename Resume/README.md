@@ -6,3 +6,5 @@ permalink: /Resume/
 ---
 
 <img src="CV_XinshaoWang_V05.pdf" alt="some text"  width="4200" height="4200">
+
+![Alt](CV_XinshaoWang_V05.pdf)
