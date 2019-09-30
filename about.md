@@ -1,5 +1,5 @@
 ---
-image: /assets/img/blog/steve-harvey.png
+image: /assets/img/blog/steve-harvey.jpg
 ---
 
 # About
