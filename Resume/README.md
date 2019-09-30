@@ -9,6 +9,4 @@ permalink: /Resume/
 
 ![Alt](CV_XinshaoWang_V05.pdf)
 
-\begin{center} <br>
-\includegraphics[width=8in]{CV_XinshaoWang_V05.pdf} <br>
-\end{center}
+![Alt](./CV_XinshaoWang_V05.pdf){width=100% height=400}
