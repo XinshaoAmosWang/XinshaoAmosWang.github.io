@@ -15,6 +15,6 @@ permalink: /Resume/
 
 
 <!-- Embed PDF File -->
-<object data="CV_XinshaoWang_V05.pdf" type="application/x-pdf" title="SamplePdf" width="500" height="720">
+<object data="CV_XinshaoWang_V05.pdf" type="application/x-pdf" title="SamplePdf" width="1400px" height="2000px">
     <a href="CV_XinshaoWang_V05.pdf">shree</a> 
 </object>
