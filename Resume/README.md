@@ -6,11 +6,6 @@ permalink: /Resume/
 ---
 
 
-<object data="CV_XinshaoWang_V05.pdf" type="application/pdf" width="1100px" height="2000px">
-    <embed src="CV_XinshaoWang_V05.pdf" type="application/pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="CV_XinshaoWang_V05.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
 
 
-<iframe src="CV_XinshaoWang_V05.pdf" height="1100px" width="2000px">Download PDF</iframe>
+<iframe src="CV_XinshaoWang_V05.pdf" height="2000px" width="1000px">Download PDF</iframe>
