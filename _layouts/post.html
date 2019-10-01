@@ -19,6 +19,9 @@ layout: base
 
 {% include components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image %}
 
+
+
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
@@ -40,35 +43,6 @@ layout: base
 
 
 
-
-
-<div id="post">
-  <h1> {{ page.entry.title }} </h1>
-
-  <p> {{ page.entry.citeproc }} </p>
-
-  {% if page.entry.abstract == empty or page.entry.abstract == nil %}
-  {% else %}
-   <br/>
-   <h3>Abstract:</h3>
-   <p> {{ page.entry.abstract }} </p>
-  {% endif %}
-
-   <h3>Downloads:</h3>
-   <p><ul>
-     {% if page.entry.slides != null and page.entry.slides != empty %}
-      <li> <a href="{{ page.entry.slides }}">slides</a></li>
-     {% else %}
-      <li>No slides available</li>
-     {% endif %}
-   </ul>
-  </p>
-
-  <h3>References:</h3>
-  <pre>{{ page.entry.bibtex }}</pre>
-</div>
-
-<br/>
 
 
 <div id="disqus_thread"></div>
@@ -95,6 +69,11 @@ s.setAttribute('data-timestamp', +new Date());
 </noscript>
 
 <script id="dsq-count-scr" src="//xinshaowang.disqus.com/count.js" async></script>
+
+
+
+
+
 
 
 <hr class="dingbat related" />
