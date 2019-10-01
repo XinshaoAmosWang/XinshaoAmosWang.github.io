@@ -4,7 +4,7 @@ title: Paper Summary on Distance Metric, Representation Learning
 description: >
   
 image: /assets/img/blog/steve-harvey.jpg
-comments: true
+comment: true
 ---
 
 Paper Notes on Distance Metric, Representation Learning

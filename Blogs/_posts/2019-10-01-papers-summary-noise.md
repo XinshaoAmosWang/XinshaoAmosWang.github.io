@@ -4,7 +4,7 @@ title: Paper Summary on Noise, Anomalies, Adversaries
 description: >
   
 image: /assets/img/blog/steve-harvey.jpg
-comments: true
+comment: true
 ---
 
 Paper Notes on Noise (Label noise, adversarial examples, anomalies, outliers, etc)

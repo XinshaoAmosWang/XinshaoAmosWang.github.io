@@ -4,7 +4,7 @@ title: Example Content III
 description: >
   A page showing Hydejack-specific markdown content.
 image: /assets/img/blog/example-content-iii.jpg
-comments: true
+comment: true
 ---
 
 Hydejack offers a few additional features to markup your markdown.
