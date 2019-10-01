@@ -22,6 +22,28 @@ layout: base
 
 
 
+<hr class="dingbat related" />
+
+{% assign addons = page.addons | default:site.hydejack.post_addons %}
+{% unless addons %}{% assign addons = "about,newsletter,related,random" | split:"," %}{% endunless %}
+{% for addon in addons %}
+  {% case addon %}
+  {% when 'about' %}
+     {% include components/about.html %}
+  {% when 'related' %}
+    {% include components/related-posts.html post=post %}
+  {% else %}
+  {% endcase %}
+{% endfor %}
+
+
+
+
+
+
+
+
+
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {
@@ -72,21 +94,4 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 
-
-
-
-
-<hr class="dingbat related" />
-
-{% assign addons = page.addons | default:site.hydejack.post_addons %}
-{% unless addons %}{% assign addons = "about,newsletter,related,random" | split:"," %}{% endunless %}
-{% for addon in addons %}
-  {% case addon %}
-  {% when 'about' %}
-     {% include components/about.html %}
-  {% when 'related' %}
-    {% include components/related-posts.html post=post %}
-  {% else %}
-  {% endcase %}
-{% endfor %}
 
