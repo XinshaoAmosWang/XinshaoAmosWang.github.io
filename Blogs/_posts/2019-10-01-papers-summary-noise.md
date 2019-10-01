@@ -1,16 +1,32 @@
 ---
 layout: post
-title: Paper Notes
+title: Paper Summary on Noise, Anomalies, Adversaries
 description: >
   
 image: /assets/img/blog/steve-harvey.jpg
 ---
 
-Paper Notes on ...
+Paper Notes on Noise (Label noise, adversarial examples, anomalies, outliers, etc)
 {:.message}
 
-## [NeurIPS19-Generalized Sliced Wasserstein Distances](https://arxiv.org/abs/1902.00434)
-**NOTE**: Wasserstein Distances
+
+
+
+## [Adversarial Examples Reading List](Adversarial-Examples-Reading-List.md)
+**NOTE**: 
+
+{:.message}
+
+
+## [ICML19-Improving Adversarial Robustness via Promoting Ensemble Diversity](http://proceedings.mlr.press/v97/pang19a/pang19a.pdf)
+**NOTE**: 
+Though deep neural networks have achieved significant progress on various tasks, often enhanced by model ensemble, existing high-performance models can be vulnerable to adversarial attacks. Many efforts have been devoted to enhancing the robustness of individual networks and then constructing a straightforward ensemble, e.g., by directly averaging the outputs, which ignores the interaction among networks. This paper presents a new method that explores the interaction among individual networks to improve robustness for ensemble models. Technically, we define a new notion of ensemble diversity in the adversarial setting as the diversity among non-maximal predictions of individual members, and present an adaptive diversity promoting (ADP) regularizer to encourage the diversity, which leads to globally better robustness for the ensemble by making adversarial examples difficult to transfer among individual members. Our method is computationally efficient and compatible with the defense methods acting on individual networks. Empirical results on various datasets verify that our method can improve adversarial robustness while maintaining state-of-the-art accuracy on normal examples.
+{:.message}
+
+
+## [NeurIPS19-Metric Learning for Adversarial Robustness](https://arxiv.org/pdf/1909.00900.pdf)
+**NOTE**: 
+Deep networks are well-known to be fragile to adversarial attacks. Using several standard image datasets and established attack mechanisms, we conduct an empirical analysis of deep representations under attack, and find that the attack causes the internal representation to shift closer to the "false" class. Motivated by this observation, we propose to regularize the representation space under attack with metric learning in order to produce more robust classifiers. By carefully sampling examples for metric learning, our learned representation not only increases robustness, but also can detect previously unseen adversarial samples. Quantitative experiments show improvement of robustness accuracy by up to 4% and detection efficiency by up to 6% according to Area Under Curve (AUC) score over baselines.
 {:.message}
 
 
