@@ -1,9 +1,9 @@
 ---
-layout: post
+layout: page
 title: Adversarial Examples Reading List
 description: >
   Forked from: https://github.com/chawins/Adversarial-Examples-Reading-List
-image: /assets/img/blog/steve-harvey.jpg
+hide_description: true
 ---
 
 A compilation of papers in adversarial examples that I have read or plan to read. The number of papers in this subfield can be overwhelming. I hope this list is helpful for anyone who is interested in entering the field or looking for a quick survey. The list is by no means exhaustive so any paper suggestion is very welcome. The order of the papers is arbitrary. Couple of notes:

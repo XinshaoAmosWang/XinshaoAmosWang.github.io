@@ -10,9 +10,7 @@ Paper Notes on Noise (Label noise, adversarial examples, anomalies, outliers, et
 {:.message}
 
 
-
-
-## [Adversarial Examples Reading List](Adversarial-Examples-Reading-List.md)
+## [Adversarial Examples Reading List](../../docs/Adversarial-Examples-Reading-List.md)
 **NOTE**: 
 
 {:.message}
