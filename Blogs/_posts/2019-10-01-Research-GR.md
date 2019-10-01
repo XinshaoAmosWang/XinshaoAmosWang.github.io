@@ -41,14 +41,14 @@ Please see [our paper](https://arxiv.org/pdf/1905.11233.pdf):
 * Outperform existing work on unknown real-world noise. 
 
 <p float="left">
-  <img src="./figs/Figure1.png" width="800">
-  <img src="./figs/Table1.png" width="800">
-  <img src="./figs/Figure2.png" width="800">
-  <img src="./figs/Table4.png" width="800">
-  <img src="./figs/Table5.png" width="800">
-  <img src="./figs/Table6.png" width="800">
-  <img src="./figs/Table7.png" width="800">
-  <img src="./figs/Table9.png" width="800">
+  <img src="/assets/img/blog/figs/Figure1.png" width="800">
+  <img src="/assets/img/blog/figs/Table1.png" width="800">
+  <img src="/assets/img/blog/figs/Figure2.png" width="800">
+  <img src="/assets/img/blog/figs/Table4.png" width="800">
+  <img src="/assets/img/blog/figs/Table5.png" width="800">
+  <img src="/assets/img/blog/figs/Table6.png" width="800">
+  <img src="/assets/img/blog/figs/Table7.png" width="800">
+  <img src="/assets/img/blog/figs/Table9.png" width="800">
 </p>
 
 
