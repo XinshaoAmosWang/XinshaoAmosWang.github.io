@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-10-01T16:13:05+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
+</subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies</title><link href="http://localhost:4000/blogs/2019-10-01-Research-GR/" rel="alternate" type="text/html" title="An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies" /><published>2019-10-01T00:00:00+01:00</published><updated>2019-10-01T00:00:00+01:00</updated><id>http://localhost:4000/blogs/Research-GR</id><content type="html" xml:base="http://localhost:4000/blogs/2019-10-01-Research-GR/">&lt;p&gt;General applicability: Label noise (semantic noise), outliers, heavy perceptual data noise, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;It is reasonable to assume that there is semantic noise in large-scale training datasets&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Class labels may be missing.&lt;/li&gt;
+  &lt;li&gt;The labelling process may be subjective.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Label noise is one of the most explicit cases where some observations and their labels are not matched in the training data. In this case, it is quite crucial to make your models learn meaningful patterns instead of errors.&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Main contribution:&lt;/strong&gt; Intuitively and principally, we claim that two basic factors, what examples
+get higher weights (emphasis focus) and how large variance over examples’ weights (emphasis
+spread), should be babysit simultaneously when it comes to sample differentiation and reweighting.
+Unfortunately, these two intuitive and indispensable factors are not studied together in the literature.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;What training examples should be focused and how much more should they be emphasised when training DNNs under label noise?&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;When noise rate is higher, we can improve a model’s robustness by focusing on relatively less difficult examples.&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.researchgate.net/publication/333418661_Emphasis_Regularisation_by_Gradient_Rescaling_for_Training_Deep_Neural_Networks_with_Noisy_Labels/comments&quot;&gt;More comments and comparison with related work&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://drive.google.com/file/d/1fU3N_u-_puOwEbupK6aOENerP2S45tZX/view?usp=sharing&quot;&gt;Paper reading about outlier detection and robust inference&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;effective-qualitative-and-quantitative-results&quot;&gt;Effective (Qualitative and Quantitative Results)&lt;/h2&gt;
+
+&lt;p&gt;Please see &lt;a href=&quot;https://arxiv.org/pdf/1905.11233.pdf&quot;&gt;our paper&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Outperform existing work on synthetic label noise;&lt;/li&gt;
+  &lt;li&gt;Outperform existing work on unknown real-world noise.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p float=&quot;left&quot;&gt;
+  &lt;img src=&quot;./figs/Figure1.png&quot; width=&quot;800&quot; /&gt;
+  &lt;img src=&quot;./figs/Table1.png&quot; width=&quot;800&quot; /&gt;
+  &lt;img src=&quot;./figs/Figure2.png&quot; width=&quot;800&quot; /&gt;
+  &lt;img src=&quot;./figs/Table4.png&quot; width=&quot;800&quot; /&gt;
+  &lt;img src=&quot;./figs/Table5.png&quot; width=&quot;800&quot; /&gt;
+  &lt;img src=&quot;./figs/Table6.png&quot; width=&quot;800&quot; /&gt;
+  &lt;img src=&quot;./figs/Table7.png&quot; width=&quot;800&quot; /&gt;
+  &lt;img src=&quot;./figs/Table9.png&quot; width=&quot;800&quot; /&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&quot;extremely-simple&quot;&gt;Extremely Simple&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Without advanced training strategies&lt;/strong&gt;: e.g.,&lt;/p&gt;
+
+&lt;p&gt;a. Iterative retraining on gradual data correction&lt;/p&gt;
+
+&lt;p&gt;b. Training based on carefully-designed curriculums&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Without using extra networks&lt;/strong&gt;: e.g.,&lt;/p&gt;
+
+&lt;p&gt;a. Decoupling” when to update” from” how to update”&lt;/p&gt;
+
+&lt;p&gt;b. Co-teaching: Robust training of deep neural networks with extremely noisy labels&lt;/p&gt;
+
+&lt;p&gt;c. Mentornet: Learning datadriven curriculum for very deep neural networks on corrupted labels&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Without using extra validation sets for model optimisation&lt;/strong&gt;: e.g.,&lt;/p&gt;
+
+&lt;p&gt;a.  Learning to reweight examples for
+robust deep learning&lt;/p&gt;
+
+&lt;p&gt;b. Mentornet: Learning datadriven curriculum for very deep neural networks on corrupted labels&lt;/p&gt;
+
+&lt;p&gt;c. Toward robustness against label noise in training deep discriminative neural networks&lt;/p&gt;
+
+&lt;p&gt;d. Learning
+from noisy large-scale datasets with minimal supervision.&lt;/p&gt;
+
+&lt;p&gt;e. Learning from
+noisy labels with distillation.&lt;/p&gt;
+
+&lt;p&gt;f. Cleannet: Transfer learning for
+scalable image classifier training with label noise&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Without data pruning&lt;/strong&gt;: e.g.,&lt;/p&gt;
+
+&lt;p&gt;a. Generalized cross entropy loss for training deep neural networks
+with noisy labels. &lt;br /&gt;
+  …&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Without relabelling&lt;/strong&gt;: e.g.,&lt;/p&gt;
+
+&lt;p&gt;a. A semi-supervised two-stage approach
+to learning from noisy labels&lt;/p&gt;
+
+&lt;p&gt;b. Joint optimization framework for learning with noisy labels&lt;/p&gt;
+
+&lt;p&gt;…&lt;/p&gt;
+
+&lt;h2 id=&quot;citation&quot;&gt;Citation&lt;/h2&gt;
+&lt;p&gt;Please kindly cite us if you find our work useful and inspiring.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;wang2019emphasis,
+  &lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;={&lt;/span&gt;Emphasis Regularisation by Gradient Rescaling &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;Training Deep Neural Networks Robustly&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+  &lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;={&lt;/span&gt;Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+  &lt;span class=&quot;nv&quot;&gt;journal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;={&lt;/span&gt;arXiv preprint arXiv:1905.11233&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+  &lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;={&lt;/span&gt;2019&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Eran Malach and Shai Shalev-Shwartz. Decoupling” when to update” from” how to update”. In
+NIPS, 2017.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Bo Han, Quanming Yao, Xingrui Yu, Gang Niu, Miao Xu, Weihua Hu, Ivor Tsang, and Masashi
+Sugiyama. Co-teaching: Robust training of deep neural networks with extremely noisy labels. In
+NIPS, 2018&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Lu Jiang, Zhengyuan Zhou, Thomas Leung, Li-Jia Li, and Li Fei-Fei. Mentornet: Learning datadriven curriculum for very deep neural networks on corrupted labels. In ICML, 2018.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Mengye Ren, Wenyuan Zeng, Bin Yang, and Raquel Urtasun. Learning to reweight examples for
+robust deep learning. In ICML, 2018.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Arash Vahdat. Toward robustness against label noise in training deep discriminative neural networks.
+In NIPS, 2017.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Andreas Veit, Neil Alldrin, Gal Chechik, Ivan Krasin, Abhinav Gupta, and Serge Belongie. Learning
+from noisy large-scale datasets with minimal supervision. In CVPR, 2017.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Yuncheng Li, Jianchao Yang, Yale Song, Liangliang Cao, Jiebo Luo, and Li-Jia Li. Learning from
+noisy labels with distillation. In ICCV, 2017.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Kuang-Huei Lee, Xiaodong He, Lei Zhang, and Linjun Yang. Cleannet: Transfer learning for
+scalable image classifier training with label noise. In CVPR, 2018.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Zhilu Zhang and Mert R Sabuncu. Generalized cross entropy loss for training deep neural networks
+with noisy labels. In NIPS, 2018.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Yifan Ding, Liqiang Wang, Deliang Fan, and Boqing Gong. A semi-supervised two-stage approach
+to learning from noisy labels. In WACV, 2018.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hwanjun Song, Minseok Kim, and Jae-Gil Lee. Selfie: Refurbishing unclean samples for robust
+deep learning. In ICML, 2019.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Daiki Tanaka, Daiki Ikami, Toshihiko Yamasaki, and Kiyoharu Aizawa. Joint optimization framework for learning with noisy labels. In CVPR, 2018.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">General applicability: Label noise (semantic noise), outliers, heavy perceptual data noise, etc.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/GR/Figure1.png" /></entry><entry><title type="html">Paper Summary on Distance Metric, Representation Learning</title><link href="http://localhost:4000/blogs/2019-10-01-papers-summary-metric/" rel="alternate" type="text/html" title="Paper Summary on Distance Metric, Representation Learning" /><published>2019-10-01T00:00:00+01:00</published><updated>2019-10-01T00:00:00+01:00</updated><id>http://localhost:4000/blogs/papers-summary-metric</id><content type="html" xml:base="http://localhost:4000/blogs/2019-10-01-papers-summary-metric/">&lt;p class=&quot;message&quot;&gt;Paper Notes on Distance Metric, Representation Learning&lt;/p&gt;
+
+&lt;h2 id=&quot;neurips19-metric-learning-for-adversarial-robustness&quot;&gt;&lt;a href=&quot;https://arxiv.org/pdf/1909.00900.pdf&quot;&gt;NeurIPS19-Metric Learning for Adversarial Robustness&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: 
+Deep networks are well-known to be fragile to adversarial attacks. Using several standard image datasets and established attack mechanisms, we conduct an empirical analysis of deep representations under attack, and find that the attack causes the internal representation to shift closer to the “false” class. Motivated by this observation, we propose to regularize the representation space under attack with metric learning in order to produce more robust classifiers. By carefully sampling examples for metric learning, our learned representation not only increases robustness, but also can detect previously unseen adversarial samples. Quantitative experiments show improvement of robustness accuracy by up to 4% and detection efficiency by up to 6% according to Area Under Curve (AUC) score over baselines.&lt;/p&gt;
+
+&lt;h2 id=&quot;neurips19-generalized-sliced-wasserstein-distances&quot;&gt;&lt;a href=&quot;https://arxiv.org/abs/1902.00434&quot;&gt;NeurIPS19-Generalized Sliced Wasserstein Distances&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: 
+Wasserstein Distances&lt;/p&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Paper Notes on Distance Metric, Representation Learning</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Paper Summary on Noise, Anomalies, Adversaries</title><link href="http://localhost:4000/blogs/2019-10-01-papers-summary-noise/" rel="alternate" type="text/html" title="Paper Summary on Noise, Anomalies, Adversaries" /><published>2019-10-01T00:00:00+01:00</published><updated>2019-10-01T00:00:00+01:00</updated><id>http://localhost:4000/blogs/papers-summary-noise</id><content type="html" xml:base="http://localhost:4000/blogs/2019-10-01-papers-summary-noise/">&lt;p class=&quot;message&quot;&gt;Paper Notes on Noise (Label noise, adversarial examples, anomalies, outliers, etc)&lt;/p&gt;
+
+&lt;h2 id=&quot;adversarial-examples-reading-list&quot;&gt;&lt;a href=&quot;/docs/Adversarial-Examples-Reading-List/&quot;&gt;Adversarial Examples Reading List&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;h2 class=&quot;message&quot; id=&quot;icml19-improving-adversarial-robustness-via-promoting-ensemble-diversity&quot;&gt;&lt;a href=&quot;http://proceedings.mlr.press/v97/pang19a/pang19a.pdf&quot;&gt;ICML19-Improving Adversarial Robustness via Promoting Ensemble Diversity&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: 
+Though deep neural networks have achieved significant progress on various tasks, often enhanced by model ensemble, existing high-performance models can be vulnerable to adversarial attacks. Many efforts have been devoted to enhancing the robustness of individual networks and then constructing a straightforward ensemble, e.g., by directly averaging the outputs, which ignores the interaction among networks. This paper presents a new method that explores the interaction among individual networks to improve robustness for ensemble models. Technically, we define a new notion of ensemble diversity in the adversarial setting as the diversity among non-maximal predictions of individual members, and present an adaptive diversity promoting (ADP) regularizer to encourage the diversity, which leads to globally better robustness for the ensemble by making adversarial examples difficult to transfer among individual members. Our method is computationally efficient and compatible with the defense methods acting on individual networks. Empirical results on various datasets verify that our method can improve adversarial robustness while maintaining state-of-the-art accuracy on normal examples.&lt;/p&gt;
+
+&lt;h2 id=&quot;neurips19-metric-learning-for-adversarial-robustness&quot;&gt;&lt;a href=&quot;https://arxiv.org/pdf/1909.00900.pdf&quot;&gt;NeurIPS19-Metric Learning for Adversarial Robustness&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: 
+Deep networks are well-known to be fragile to adversarial attacks. Using several standard image datasets and established attack mechanisms, we conduct an empirical analysis of deep representations under attack, and find that the attack causes the internal representation to shift closer to the “false” class. Motivated by this observation, we propose to regularize the representation space under attack with metric learning in order to produce more robust classifiers. By carefully sampling examples for metric learning, our learned representation not only increases robustness, but also can detect previously unseen adversarial samples. Quantitative experiments show improvement of robustness accuracy by up to 4% and detection efficiency by up to 6% according to Area Under Curve (AUC) score over baselines.&lt;/p&gt;
+
+&lt;h2 id=&quot;icml19-a-tail-index-analysis-of-stochastic-gradient-noise-in-deep-neural-networks&quot;&gt;&lt;a href=&quot;http://proceedings.mlr.press/v97/simsekli19a/simsekli19a.pdf&quot;&gt;ICML19-A Tail-Index Analysis of Stochastic Gradient Noise in Deep Neural Networks&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Stochastic Gradient Noise&lt;/p&gt;
+
+&lt;h2 id=&quot;nips19-first-exit-time-analysis-of-stochastic-gradient-descent-under-heavy-tailed-gradient-noise&quot;&gt;&lt;a href=&quot;https://arxiv.org/pdf/1906.09069.pdf&quot;&gt;NIPS19-First Exit Time Analysis of Stochastic Gradient Descent Under Heavy-Tailed Gradient Noise&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Stochastic Gradient Noise&lt;/p&gt;
+
+&lt;h2 id=&quot;nips19-noise-tolerant-fair-classification&quot;&gt;&lt;a href=&quot;https://arxiv.org/abs/1901.10837&quot;&gt;NIPS19-Noise-tolerant fair classification&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Existing work on the problem operates under the assumption that the sensitive feature available in one’s training sample is perfectly reliable. This assumption may be violated in many real-world cases: for example, respondents to a survey may choose to conceal or obfuscate their group identity out of fear of potential discrimination. This poses the question of whether one can still learn fair classifiers given noisy sensitive features.&lt;/p&gt;
+
+&lt;h2 id=&quot;nips19-reducing-noise-in-gan-training-with-variance-reduced-extragradient&quot;&gt;&lt;a href=&quot;https://arxiv.org/abs/1904.08598&quot;&gt;NIPS19-Reducing Noise in GAN Training with Variance Reduced Extragradient&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: We study the effect of the stochastic gradient noise on the training of generative adversarial networks (GANs) and show that it can prevent the convergence of standard game optimization methods, while the batch version converges. We address this issue with a novel stochastic variance-reduced extragradient (SVRE) optimization algorithm that improves upon the best convergence rates proposed in the literature. We observe empirically that SVRE performs similarly to a batch method on MNIST while being computationally cheaper, and that SVRE yields more stable GAN training on standard datasets.&lt;/p&gt;
+
+&lt;h2 id=&quot;nips19-combinatorial-inference-against-label-noise&quot;&gt;&lt;a href=&quot;&quot;&gt;NIPS19-Combinatorial Inference against Label Noise&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Paper is not available yet.&lt;/p&gt;
+
+&lt;h2 id=&quot;nips19-extending-steins-unbiased-risk-estimator-to-train-deep-denoisers-with-correlated-pairs-of-noisy-images&quot;&gt;&lt;a href=&quot;https://arxiv.org/pdf/1902.02452.pdf&quot;&gt;NIPS19-Extending Stein’s unbiased risk estimator to train deep denoisers with correlated pairs of noisy images&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Recently, Stein’s unbiased risk estimator (SURE) has been applied to unsupervised training of deep neural network Gaussian denoisers that outperformed classical non-deep learning based denoisers and yielded comparable performance to those trained with ground truth. While SURE requires only one noise realization per image for training, it does not take advantage of having multiple noise realizations per image when they are available (e.g., two uncorrelated noise realizations per image for Noise2Noise). Here, we propose an extended SURE (eSURE) to train deep denoisers with correlated pairs of noise realizations per image and applied it to the case with two uncorrelated realizations per image to achieve better performance than SURE based method and comparable results to Noise2Noise. Then, we further investigated the case with imperfect ground truth (i.e., mild noise in ground truth) that may be obtained considering painstaking, time-consuming, and even expensive processes of collecting ground truth images with multiple noisy images. For the case of generating noisy training data by adding synthetic noise to imperfect ground truth to yield correlated pairs of images, our proposed eSURE based training method outperformed conventional SURE based method as well as Noise2Noise.&lt;/p&gt;
+
+&lt;h2 id=&quot;nips19-variational-denoising-network-toward-blind-noise-modeling-and-removal&quot;&gt;&lt;a href=&quot;https://arxiv.org/pdf/1908.11314.pdf&quot;&gt;NIPS19-Variational Denoising Network: Toward Blind Noise Modeling and Removal&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Blind image denoising is an important yet very challenging problem in computer vision due to the complicated acquisition process of real images. In this work we propose a new variational inference method, which integrates both noise estimation and image denoising into a unique Bayesian framework, for blind image denoising. Specifically, an approximate posterior, parameterized by deep neural networks, is presented by taking the intrinsic clean image and noise variances as latent variables conditioned on the input noisy image. This posterior provides explicit parametric forms for all its involved hyper-parameters, and thus can be easily implemented for blind image denoising with automatic noise estimation for the test noisy image. On one hand, as other data-driven deep learning methods, our method, namely variational denoising network (VDN), can perform denoising efficiently due to its explicit form of posterior expression. On the other hand, VDN inherits the advantages of traditional model-driven approaches, especially the good generalization capability of generative models. VDN has good interpretability and can be flexibly utilized to estimate and remove complicated non-i.i.d. noise collected in real scenarios. Comprehensive experiments are performed to substantiate the superiority of our method in blind image denoising.&lt;/p&gt;
+
+&lt;h2 id=&quot;nips19-neural-networks-grown-and-self-organized-by-noise&quot;&gt;&lt;a href=&quot;https://arxiv.org/abs/1906.01039&quot;&gt;NIPS19-Neural networks grown and self-organized by noise&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Living neural networks emerge through a process of growth and self-organization that begins with a single cell and results in a brain, an organized and functional computational device. Artificial neural networks, however, rely on human-designed, hand-programmed architectures for their remarkable performance. Can we develop artificial computational devices that can grow and self-organize without human intervention? In this paper, we propose a biologically inspired developmental algorithm that can ‘grow’ a functional, layered neural network from a single initial cell. The algorithm organizes inter-layer connections to construct a convolutional pooling layer, a key constituent of convolutional neural networks (CNN’s). Our approach is inspired by the mechanisms employed by the early visual system to wire the retina to the lateral geniculate nucleus (LGN), days before animals open their eyes. The key ingredients for robust self-organization are an emergent spontaneous spatiotemporal activity wave in the first layer and a local learning rule in the second layer that ‘learns’ the underlying activity pattern in the first layer. The algorithm is adaptable to a wide-range of input-layer geometries, robust to malfunctioning units in the first layer, and so can be used to successfully grow and self-organize pooling architectures of different pool-sizes and shapes. The algorithm provides a primitive procedure for constructing layered neural networks through growth and self-organization. Broadly, our work shows that biologically inspired developmental algorithms can be applied to autonomously grow functional ‘brains’ in-silico.&lt;/p&gt;
+
+&lt;h2 id=&quot;nips19-l_dmi-a-novel-information-theoretic-loss-function-for-training-deep-nets-robust-to-label-noise&quot;&gt;&lt;a href=&quot;https://arxiv.org/pdf/1909.03388.pdf&quot;&gt;NIPS19-L_DMI: A Novel Information-theoretic Loss Function for Training Deep Nets Robust to Label Noise&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Accurately annotating large scale dataset is notoriously expensive both in time and in money. Although acquiring low-quality-annotated dataset can be much cheaper, it often badly damages the performance of trained models when using such dataset without particular treatment. Various of methods have been proposed for learning with noisy labels. However, they only handle limited kinds of noise patterns, require auxiliary information (e.g,, the noise transition matrix), or lack theoretical justification. In this paper, we propose a novel information-theoretic loss function, LDMI, for training deep neural networks robust to label noise. The core of LDMI is a generalized version of mutual information, termed Determinant based Mutual Information (DMI), which is not only information-monotone but also relatively invariant. \emph{To the best of our knowledge, LDMI is the first loss function that is provably not sensitive to noise patterns and noise amounts, and it can be applied to any existing classification neural networks straightforwardly without any auxiliary information}. In addition to theoretical justification, we also empirically show that using LDMI outperforms all other counterparts in the classification task on Fashion-MNIST, CIFAR-10, Dogs vs. Cats datasets with a variety of synthesized noise patterns and noise amounts as well as a real-world dataset Clothing1M. Codes are available at  https://github.com/Newbeeer/L_DMI&lt;/p&gt;
+
+&lt;h2 id=&quot;nips19-are-anchor-points-really-indispensable-in-label-noise-learning&quot;&gt;&lt;a href=&quot;https://arxiv.org/pdf/1906.00189.pdf&quot;&gt;NIPS19-Are Anchor Points Really Indispensable in Label-Noise Learning?&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: In label-noise learning, \textit{noise transition matrix}, denoting the probabilities that clean labels flip into noisy labels, plays a central role in building \textit{statistically consistent classifiers}. Existing theories have shown that the transition matrix can be learned by exploiting \textit{anchor points} (i.e., data points that belong to a specific class almost surely). However, when there are no anchor points, the transition matrix will be poorly learned, and those current consistent classifiers will significantly degenerate. In this paper, without employing anchor points, we propose a \textit{transition-revision} (T-Revision) method to effectively learn transition matrices, leading to better classifiers. Specifically, to learn a transition matrix, we first initialize it by exploiting data points that are similar to anchor points, having high \textit{noisy class posterior probabilities}. Then, we modify the initialized matrix by adding a \textit{slack variable}, which can be learned and validated together with the classifier by using noisy data. Empirical results on benchmark-simulated and real-world label-noise datasets demonstrate that without using exact anchor points, the proposed method is superior to the state-of-the-art label-noise learning methods.&lt;/p&gt;
+
+&lt;h2 id=&quot;nips19-certified-adversarial-robustness-with-additive-gaussian-noise&quot;&gt;&lt;a href=&quot;https://arxiv.org/pdf/1809.03113.pdf&quot;&gt;NIPS19-Certified Adversarial Robustness with Additive Gaussian Noise&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: The existence of adversarial data examples has drawn significant attention in the deep-learning community; such data are seemingly minimally perturbed relative to the original data, but lead to very different outputs from a deep-learning algorithm. Although a significant body of work on developing defense models has been developed, most such models are heuristic and are often vulnerable to adaptive attacks. Defensive methods that provide theoretical robustness guarantees have been studied intensively, yet most fail to obtain non-trivial robustness when a large-scale model and data are present. To address these limitations, we introduce a framework that is scalable and provides certified bounds on the norm of the input manipulation for constructing adversarial examples. We establish a connection between robustness against adversarial perturbation and additive random noise, and propose a training strategy that can significantly improve the certified bounds. Our evaluation on MNIST, CIFAR-10 and ImageNet suggests that our method is scalable to complicated models and large data sets, while providing competitive robustness to state-of-the-art provable defense methods.&lt;/p&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Paper Notes on Noise (Label noise, adversarial examples, anomalies, outliers, etc)</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Start 3rd year (the final year of my PhD)</title><link href="http://localhost:4000/projects/2019-10-01-PhD-3rd-start/" rel="alternate" type="text/html" title="Start 3rd year (the final year of my PhD)" /><published>2019-10-01T00:00:00+01:00</published><updated>2019-10-01T00:00:00+01:00</updated><id>http://localhost:4000/projects/PhD-3rd-start</id><content type="html" xml:base="http://localhost:4000/projects/2019-10-01-PhD-3rd-start/">&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: This post is outdated and only included for legacy reasons.
+See the &lt;a href=&quot;/docs/&quot;&gt;Documentation&lt;/a&gt; for up-to-date instructions.&lt;/p&gt;</content><author><name>XinshaoAmosWang</name></author><summary type="html">NOTE: This post is outdated and only included for legacy reasons. See the Documentation for up-to-date instructions.</summary></entry><entry><title type="html">Example Content III</title><link href="http://localhost:4000/blogs/2019-06-01-example-content-iii/" rel="alternate" type="text/html" title="Example Content III" /><published>2019-06-01T00:00:00+01:00</published><updated>2019-06-01T00:00:00+01:00</updated><id>http://localhost:4000/blogs/example-content-iii</id><content type="html" xml:base="http://localhost:4000/blogs/2019-06-01-example-content-iii/">&lt;p&gt;Hydejack offers a few additional features to markup your markdown.
+Don’t worry, these are merely CSS classes added with kramdown’s &lt;code class=&quot;highlighter-rouge&quot;&gt;{:...}&lt;/code&gt; syntax,
+so that your content remains compatible with other Jekyll themes.&lt;/p&gt;
+
+&lt;h2 id=&quot;large-tables&quot;&gt;Large Tables&lt;/h2&gt;
+
+&lt;table class=&quot;scroll-table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Default aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Left aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Center aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Right aligned&lt;/th&gt;
+      &lt;th&gt;Default aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Left aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Center aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Right aligned&lt;/th&gt;
+      &lt;th&gt;Default aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Left aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Center aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Right aligned&lt;/th&gt;
+      &lt;th&gt;Default aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Left aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Center aligned&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Right aligned&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;First body part&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Second cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Third cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;fourth cell&lt;/td&gt;
+      &lt;td&gt;First body part&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Second cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Third cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;fourth cell&lt;/td&gt;
+      &lt;td&gt;First body part&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Second cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Third cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;fourth cell&lt;/td&gt;
+      &lt;td&gt;First body part&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;Second cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Third cell&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;fourth cell&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Second line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;foo&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;strong&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;baz&lt;/td&gt;
+      &lt;td&gt;Second line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;foo&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;strong&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;baz&lt;/td&gt;
+      &lt;td&gt;Second line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;foo&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;strong&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;baz&lt;/td&gt;
+      &lt;td&gt;Second line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;foo&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;&lt;strong&gt;strong&lt;/strong&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;baz&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Third line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;quux&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;baz&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;bar&lt;/td&gt;
+      &lt;td&gt;Third line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;quux&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;baz&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;bar&lt;/td&gt;
+      &lt;td&gt;Third line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;quux&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;baz&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;bar&lt;/td&gt;
+      &lt;td&gt;Third line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;quux&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;baz&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;bar&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Second body&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;Second body&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;Second body&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;Second body&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2 line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;2 line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;2 line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;2 line&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Footer row&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;Footer row&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;Footer row&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+      &lt;td&gt;Footer row&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt; &lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;code-blocks&quot;&gt;Code blocks&lt;/h2&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// arguments&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;return a + b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Call the function&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;math&quot;&gt;Math&lt;/h2&gt;
+&lt;p&gt;Lorem ipsum &lt;code class=&quot;MathJax_Preview&quot;&gt;f(x) = x^2&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;f(x) = x^2&lt;/script&gt;.&lt;/p&gt;
+
+&lt;pre class=&quot;MathJax_Preview&quot;&gt;&lt;code&gt;\begin{aligned}
+  \phi(x,y) &amp;amp;= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
+            &amp;amp;= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
+            &amp;amp;= (x_1, \ldots, x_n)
+               \left(\begin{array}{ccc}
+                 \phi(e_1, e_1)  &amp;amp; \cdots &amp;amp; \phi(e_1, e_n) \\
+                 \vdots          &amp;amp; \ddots &amp;amp; \vdots         \\
+                 \phi(e_n, e_1)  &amp;amp; \cdots &amp;amp; \phi(e_n, e_n)
+               \end{array}\right)
+               \left(\begin{array}{c}
+                 y_1    \\
+                 \vdots \\
+                 y_n
+               \end{array}\right)
+\end{aligned}&lt;/code&gt;&lt;/pre&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+  \phi(x,y) &amp;= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
+            &amp;= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
+            &amp;= (x_1, \ldots, x_n)
+               \left(\begin{array}{ccc}
+                 \phi(e_1, e_1)  &amp; \cdots &amp; \phi(e_1, e_n) \\
+                 \vdots          &amp; \ddots &amp; \vdots         \\
+                 \phi(e_n, e_1)  &amp; \cdots &amp; \phi(e_n, e_n)
+               \end{array}\right)
+               \left(\begin{array}{c}
+                 y_1    \\
+                 \vdots \\
+                 y_n
+               \end{array}\right)
+\end{aligned} %]]&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;message-boxes&quot;&gt;Message boxes&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: You can add a message box.&lt;/p&gt;
+
+&lt;h2 id=&quot;large-text&quot;&gt;Large text&lt;/h2&gt;
+&lt;p class=&quot;lead&quot;&gt;You can add large text.&lt;/p&gt;
+
+&lt;h2 id=&quot;large-images&quot;&gt;Large images&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://placehold.it/800x100&quot; alt=&quot;Full-width image&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;captions-to-images&quot;&gt;Captions to images&lt;/h2&gt;
+&lt;p class=&quot;figure&quot;&gt;&lt;img src=&quot;https://placehold.it/800x100&quot; alt=&quot;Full-width image&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;
+A caption to an image.&lt;/p&gt;
+
+&lt;h2 id=&quot;large-quotes&quot;&gt;Large quotes&lt;/h2&gt;
+&lt;blockquote class=&quot;lead&quot;&gt;
+  &lt;p&gt;You can make a quote “pop out”.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;faded-text&quot;&gt;Faded text&lt;/h2&gt;
+&lt;p class=&quot;faded&quot;&gt;I’m faded, faded, faded.&lt;/p&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Hydejack offers a few additional features to markup your markdown. Don’t worry, these are merely CSS classes added with kramdown’s {:...} syntax, so that your content remains compatible with other Jekyll themes.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/example-content-iii.jpg" /></entry><entry><title type="html">Undergraduate graduation</title><link href="http://localhost:4000/projects/2017-07-01-undergraduate-graduation/" rel="alternate" type="text/html" title="Undergraduate graduation" /><published>2017-07-01T00:00:00+01:00</published><updated>2017-07-01T00:00:00+01:00</updated><id>http://localhost:4000/projects/undergraduate-graduation</id><content type="html" xml:base="http://localhost:4000/projects/2017-07-01-undergraduate-graduation/">&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: This post is outdated and only included for legacy reasons.
+See the &lt;a href=&quot;/docs/&quot; class=&quot;heading flip-title&quot;&gt;Documentation&lt;/a&gt; for up-to-date instructions.&lt;/p&gt;</content><author><name>XinshaoAmosWang</name></author><summary type="html">NOTE: This post is outdated and only included for legacy reasons. See the Documentation for up-to-date instructions.</summary></entry></feed>

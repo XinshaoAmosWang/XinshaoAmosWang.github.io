@@ -278,6 +278,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-titles-from-headings
   - jekyll-replace-img
+  - jemoji
 
 # Theme
 # ---------------------------------------------------------------------------------------
@@ -357,3 +358,5 @@ compress_html:
 
 sass:
   style:               compressed
+
+

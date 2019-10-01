@@ -19,6 +19,26 @@ layout: base
 
 {% include components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image %}
 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML">
+</script>
+
+
 <hr class="dingbat related" />
 
 {% assign addons = page.addons | default:site.hydejack.post_addons %}
@@ -32,3 +52,4 @@ layout: base
   {% else %}
   {% endcase %}
 {% endfor %}
+

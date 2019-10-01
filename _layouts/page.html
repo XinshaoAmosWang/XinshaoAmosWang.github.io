@@ -17,6 +17,25 @@
 layout: base
 ---
 
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML">
+</script>
+
 <article class="page" role="article">
   <header>
     <h1 class="page-title">{{ page.title }}</h1>
@@ -25,3 +44,5 @@ layout: base
 
   {{ content }}
 </article>
+
+

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v8.5.2 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+
+
+  
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Paper Summary on Noise, Anomalies, Adversaries | Xinshao Wang</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Paper Summary on Noise, Anomalies, Adversaries" />
+<meta name="author" content="Xinshao Wang" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
+<meta property="og:description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
+<link rel="canonical" href="http://localhost:4000/blogs/2019-10-01-papers-summary-noise/" />
+<meta property="og:url" content="http://localhost:4000/blogs/2019-10-01-papers-summary-noise/" />
+<meta property="og:site_name" content="Xinshao Wang" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/steve-harvey.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-01T00:00:00+01:00" />
+<script type="application/ld+json">
+{"description":"“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2019-10-01-papers-summary-noise/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"image":"http://localhost:4000/assets/img/blog/steve-harvey.jpg","headline":"Paper Summary on Noise, Anomalies, Adversaries","dateModified":"2019-10-01T00:00:00+01:00","datePublished":"2019-10-01T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2019-10-01-papers-summary-noise/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="Xinshao Wang; Machine Learning,Computer Vision,Robust Learning,Deep Metric Learning,Image Recognition,Video Recognition,Person ReID">
+  
+
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Xinshao Wang">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<meta name="application-name" content="Xinshao Wang">
+<meta name="msapplication-config" content="/assets/ieconfig.xml">
+
+
+<meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta name="generator" content="Hydejack v8.5.2" />
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Xinshao Wang" />
+
+
+
+<link rel="alternate" href="http://localhost:4000/blogs/2019-10-01-papers-summary-noise/" hreflang="en">
+
+<link rel="shortcut icon" href="/assets/icons/icon.png">
+<link rel="apple-touch-icon" href="/assets/icons/icon.png">
+
+<link rel="manifest" href="/assets/manifest.json">
+
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+
+
+<link rel="dns-prefetch" href="/" id="_baseURL">
+<link rel="dns-prefetch" href="/sw.js" id="_hrefSW">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.js" id="_hrefKatexJS">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css" id="_hrefKatexCSS">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.js" id="_hrefKatexCopyJS">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.css" id="_hrefKatexCopyCSS">
+<link rel="dns-prefetch" href="/assets/img/swipe.svg" id="_hrefSwipeSVG">
+
+
+
+
+<script>
+!function(e,t){"use strict";function n(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}e.loadJS=function(e,o){var r=t.createElement("script");r.src=e,o&&n(r,"load",o,{once:!0});var a=t.scripts[0];return a.parentNode.insertBefore(r,a),r},e._loaded=!1,e.loadJSDeferred=function(o,r){function a(){e._loaded=!0,r&&n(c,"load",r,{once:!0});var o=t.scripts[0];o.parentNode.insertBefore(c,o)}var c=t.createElement("script");return c.src=o,e._loaded?a():n(e,"load",a,{once:!0}),c},e.setRel=e.setRelStylesheet=function(e){function o(){this.rel="stylesheet"}n(t.getElementById(e),"load",o,{once:!0})}}(window,document);
+;
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+;
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+;
+!function(w, d) {
+  w._noPushState = false;
+  w._noDrawer = false;
+}(window, document);
+</script>
+
+<!--[if gt IE 8]><!---->
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/assets/css/hydejack-8.5.2.css">
+  <link rel="stylesheet" href="/assets/icomoon/style.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400|Noto+Sans:400,400i,700,700i&display=swap">
+  
+
+
+  <style id="_pageStyle">
+
+.content a:not(.btn){color:#4fb1ba;border-color:rgba(79,177,186,0.2)}.content a:not(.btn):hover{border-color:#4fb1ba}:focus{outline-color:#4fb1ba !important}.btn-primary{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:focus,.btn-primary.focus,.form-control:focus,.form-control.focus{box-shadow:0 0 0 3px rgba(79,177,186,0.5)}.btn-primary:hover,.btn-primary.hover{color:#fff;background-color:#409ba3;border-color:#409ba3}.btn-primary:disabled,.btn-primary.disabled{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:active,.btn-primary.active{color:#fff;background-color:#409ba3;border-color:#409ba3}::selection{color:#fff;background:#4fb1ba}::-moz-selection{color:#fff;background:#4fb1ba}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+</head>
+
+<body class="no-color-transition">
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <div class="nav-btn-bar">
+      <span class="sr-only">Jump to:</span>
+      <a id="_menu" class="nav-btn no-hover fl" href="#_navigation">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <!-- <a id="_search" class="nav-btn no-hover fl" href="#_search">
+        <span class="sr-only">Search</span>
+        <span class="icon-search"></span>
+      </a>
+      <form action="https://duckduckgo.com/" method="GET">
+        <div class="form-group fr">
+          <label class="sr-only" for="_search">Search</label>
+          <input id="_search" name="q" class="form-control" type="search" />
+        </div>
+        <input type="hidden" name="q" value="site:hydejack.com" />
+        <input type="hidden" name="ia" value="web" />
+      </form> -->
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+
+<hy-push-state
+  replace-ids="_main"
+  link-selector="a[href]:not([href*='/assets/']):not(.external):not(.no-push-state)"
+  duration="250"
+  script-selector="script:not([type^='math/tex'])"
+  prefetch
+>
+  
+    <main
+  id="_main"
+  class="content fade-in layout-post"
+  role="main"
+  data-color="rgb(79,177,186)"
+  data-theme-color="rgb(25,55,71)"
+  
+    data-image="/assets/img/sidebar-bg.jpg"
+    data-overlay
+  
+  >
+  
+
+
+
+
+<article id="post-blogs-papers-summary-noise" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title">
+      
+        Paper Summary on Noise, Anomalies, Adversaries
+      
+    </h1>
+
+    <p class="post-date heading">
+      
+      <time datetime="2019-10-01T00:00:00+01:00">01 Oct 2019</time>
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+
+in <a href="/blogs/" class="flip-title">Blogs</a>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+    </p>
+
+    
+    
+      <div class="img lead sixteen-nine">
+        
+
+
+  <hy-img
+    
+    src="/assets/img/blog/steve-harvey.jpg"
+    
+    alt="Paper Summary on Noise, Anomalies, Adversaries"
+  
+    
+    root-margin="512px"
+  >
+    <noscript><img data-ignore 
+    src="/assets/img/blog/steve-harvey.jpg"
+    
+    alt="Paper Summary on Noise, Anomalies, Adversaries"
+  /></noscript>
+    <span class="loading" slot="loading" hidden>
+      <span class="icon-cog"></span>
+    </span>
+  </hy-img>
+
+
+      </div>
+      
+    
+
+    
+
+
+
+  
+
+
+  </header>
+
+  
+    <p class="message">Paper Notes on Noise (Label noise, adversarial examples, anomalies, outliers, etc)</p>
+
+<h2 id="adversarial-examples-reading-list"><a href="/docs/Adversarial-Examples-Reading-List/">Adversarial Examples Reading List</a></h2>
+<p><strong>NOTE</strong>:</p>
+
+<h2 class="message" id="icml19-improving-adversarial-robustness-via-promoting-ensemble-diversity"><a href="http://proceedings.mlr.press/v97/pang19a/pang19a.pdf">ICML19-Improving Adversarial Robustness via Promoting Ensemble Diversity</a></h2>
+<p class="message"><strong>NOTE</strong>: 
+Though deep neural networks have achieved significant progress on various tasks, often enhanced by model ensemble, existing high-performance models can be vulnerable to adversarial attacks. Many efforts have been devoted to enhancing the robustness of individual networks and then constructing a straightforward ensemble, e.g., by directly averaging the outputs, which ignores the interaction among networks. This paper presents a new method that explores the interaction among individual networks to improve robustness for ensemble models. Technically, we define a new notion of ensemble diversity in the adversarial setting as the diversity among non-maximal predictions of individual members, and present an adaptive diversity promoting (ADP) regularizer to encourage the diversity, which leads to globally better robustness for the ensemble by making adversarial examples difficult to transfer among individual members. Our method is computationally efficient and compatible with the defense methods acting on individual networks. Empirical results on various datasets verify that our method can improve adversarial robustness while maintaining state-of-the-art accuracy on normal examples.</p>
+
+<h2 id="neurips19-metric-learning-for-adversarial-robustness"><a href="https://arxiv.org/pdf/1909.00900.pdf">NeurIPS19-Metric Learning for Adversarial Robustness</a></h2>
+<p class="message"><strong>NOTE</strong>: 
+Deep networks are well-known to be fragile to adversarial attacks. Using several standard image datasets and established attack mechanisms, we conduct an empirical analysis of deep representations under attack, and find that the attack causes the internal representation to shift closer to the “false” class. Motivated by this observation, we propose to regularize the representation space under attack with metric learning in order to produce more robust classifiers. By carefully sampling examples for metric learning, our learned representation not only increases robustness, but also can detect previously unseen adversarial samples. Quantitative experiments show improvement of robustness accuracy by up to 4% and detection efficiency by up to 6% according to Area Under Curve (AUC) score over baselines.</p>
+
+<h2 id="icml19-a-tail-index-analysis-of-stochastic-gradient-noise-in-deep-neural-networks"><a href="http://proceedings.mlr.press/v97/simsekli19a/simsekli19a.pdf">ICML19-A Tail-Index Analysis of Stochastic Gradient Noise in Deep Neural Networks</a></h2>
+<p class="message"><strong>NOTE</strong>: Stochastic Gradient Noise</p>
+
+<h2 id="nips19-first-exit-time-analysis-of-stochastic-gradient-descent-under-heavy-tailed-gradient-noise"><a href="https://arxiv.org/pdf/1906.09069.pdf">NIPS19-First Exit Time Analysis of Stochastic Gradient Descent Under Heavy-Tailed Gradient Noise</a></h2>
+<p class="message"><strong>NOTE</strong>: Stochastic Gradient Noise</p>
+
+<h2 id="nips19-noise-tolerant-fair-classification"><a href="https://arxiv.org/abs/1901.10837">NIPS19-Noise-tolerant fair classification</a></h2>
+<p class="message"><strong>NOTE</strong>: Existing work on the problem operates under the assumption that the sensitive feature available in one’s training sample is perfectly reliable. This assumption may be violated in many real-world cases: for example, respondents to a survey may choose to conceal or obfuscate their group identity out of fear of potential discrimination. This poses the question of whether one can still learn fair classifiers given noisy sensitive features.</p>
+
+<h2 id="nips19-reducing-noise-in-gan-training-with-variance-reduced-extragradient"><a href="https://arxiv.org/abs/1904.08598">NIPS19-Reducing Noise in GAN Training with Variance Reduced Extragradient</a></h2>
+<p class="message"><strong>NOTE</strong>: We study the effect of the stochastic gradient noise on the training of generative adversarial networks (GANs) and show that it can prevent the convergence of standard game optimization methods, while the batch version converges. We address this issue with a novel stochastic variance-reduced extragradient (SVRE) optimization algorithm that improves upon the best convergence rates proposed in the literature. We observe empirically that SVRE performs similarly to a batch method on MNIST while being computationally cheaper, and that SVRE yields more stable GAN training on standard datasets.</p>
+
+<h2 id="nips19-combinatorial-inference-against-label-noise"><a href="">NIPS19-Combinatorial Inference against Label Noise</a></h2>
+<p class="message"><strong>NOTE</strong>: Paper is not available yet.</p>
+
+<h2 id="nips19-extending-steins-unbiased-risk-estimator-to-train-deep-denoisers-with-correlated-pairs-of-noisy-images"><a href="https://arxiv.org/pdf/1902.02452.pdf">NIPS19-Extending Stein’s unbiased risk estimator to train deep denoisers with correlated pairs of noisy images</a></h2>
+<p class="message"><strong>NOTE</strong>: Recently, Stein’s unbiased risk estimator (SURE) has been applied to unsupervised training of deep neural network Gaussian denoisers that outperformed classical non-deep learning based denoisers and yielded comparable performance to those trained with ground truth. While SURE requires only one noise realization per image for training, it does not take advantage of having multiple noise realizations per image when they are available (e.g., two uncorrelated noise realizations per image for Noise2Noise). Here, we propose an extended SURE (eSURE) to train deep denoisers with correlated pairs of noise realizations per image and applied it to the case with two uncorrelated realizations per image to achieve better performance than SURE based method and comparable results to Noise2Noise. Then, we further investigated the case with imperfect ground truth (i.e., mild noise in ground truth) that may be obtained considering painstaking, time-consuming, and even expensive processes of collecting ground truth images with multiple noisy images. For the case of generating noisy training data by adding synthetic noise to imperfect ground truth to yield correlated pairs of images, our proposed eSURE based training method outperformed conventional SURE based method as well as Noise2Noise.</p>
+
+<h2 id="nips19-variational-denoising-network-toward-blind-noise-modeling-and-removal"><a href="https://arxiv.org/pdf/1908.11314.pdf">NIPS19-Variational Denoising Network: Toward Blind Noise Modeling and Removal</a></h2>
+<p class="message"><strong>NOTE</strong>: Blind image denoising is an important yet very challenging problem in computer vision due to the complicated acquisition process of real images. In this work we propose a new variational inference method, which integrates both noise estimation and image denoising into a unique Bayesian framework, for blind image denoising. Specifically, an approximate posterior, parameterized by deep neural networks, is presented by taking the intrinsic clean image and noise variances as latent variables conditioned on the input noisy image. This posterior provides explicit parametric forms for all its involved hyper-parameters, and thus can be easily implemented for blind image denoising with automatic noise estimation for the test noisy image. On one hand, as other data-driven deep learning methods, our method, namely variational denoising network (VDN), can perform denoising efficiently due to its explicit form of posterior expression. On the other hand, VDN inherits the advantages of traditional model-driven approaches, especially the good generalization capability of generative models. VDN has good interpretability and can be flexibly utilized to estimate and remove complicated non-i.i.d. noise collected in real scenarios. Comprehensive experiments are performed to substantiate the superiority of our method in blind image denoising.</p>
+
+<h2 id="nips19-neural-networks-grown-and-self-organized-by-noise"><a href="https://arxiv.org/abs/1906.01039">NIPS19-Neural networks grown and self-organized by noise</a></h2>
+<p class="message"><strong>NOTE</strong>: Living neural networks emerge through a process of growth and self-organization that begins with a single cell and results in a brain, an organized and functional computational device. Artificial neural networks, however, rely on human-designed, hand-programmed architectures for their remarkable performance. Can we develop artificial computational devices that can grow and self-organize without human intervention? In this paper, we propose a biologically inspired developmental algorithm that can ‘grow’ a functional, layered neural network from a single initial cell. The algorithm organizes inter-layer connections to construct a convolutional pooling layer, a key constituent of convolutional neural networks (CNN’s). Our approach is inspired by the mechanisms employed by the early visual system to wire the retina to the lateral geniculate nucleus (LGN), days before animals open their eyes. The key ingredients for robust self-organization are an emergent spontaneous spatiotemporal activity wave in the first layer and a local learning rule in the second layer that ‘learns’ the underlying activity pattern in the first layer. The algorithm is adaptable to a wide-range of input-layer geometries, robust to malfunctioning units in the first layer, and so can be used to successfully grow and self-organize pooling architectures of different pool-sizes and shapes. The algorithm provides a primitive procedure for constructing layered neural networks through growth and self-organization. Broadly, our work shows that biologically inspired developmental algorithms can be applied to autonomously grow functional ‘brains’ in-silico.</p>
+
+<h2 id="nips19-l_dmi-a-novel-information-theoretic-loss-function-for-training-deep-nets-robust-to-label-noise"><a href="https://arxiv.org/pdf/1909.03388.pdf">NIPS19-L_DMI: A Novel Information-theoretic Loss Function for Training Deep Nets Robust to Label Noise</a></h2>
+<p class="message"><strong>NOTE</strong>: Accurately annotating large scale dataset is notoriously expensive both in time and in money. Although acquiring low-quality-annotated dataset can be much cheaper, it often badly damages the performance of trained models when using such dataset without particular treatment. Various of methods have been proposed for learning with noisy labels. However, they only handle limited kinds of noise patterns, require auxiliary information (e.g,, the noise transition matrix), or lack theoretical justification. In this paper, we propose a novel information-theoretic loss function, LDMI, for training deep neural networks robust to label noise. The core of LDMI is a generalized version of mutual information, termed Determinant based Mutual Information (DMI), which is not only information-monotone but also relatively invariant. \emph{To the best of our knowledge, LDMI is the first loss function that is provably not sensitive to noise patterns and noise amounts, and it can be applied to any existing classification neural networks straightforwardly without any auxiliary information}. In addition to theoretical justification, we also empirically show that using LDMI outperforms all other counterparts in the classification task on Fashion-MNIST, CIFAR-10, Dogs vs. Cats datasets with a variety of synthesized noise patterns and noise amounts as well as a real-world dataset Clothing1M. Codes are available at  https://github.com/Newbeeer/L_DMI</p>
+
+<h2 id="nips19-are-anchor-points-really-indispensable-in-label-noise-learning"><a href="https://arxiv.org/pdf/1906.00189.pdf">NIPS19-Are Anchor Points Really Indispensable in Label-Noise Learning?</a></h2>
+<p class="message"><strong>NOTE</strong>: In label-noise learning, \textit{noise transition matrix}, denoting the probabilities that clean labels flip into noisy labels, plays a central role in building \textit{statistically consistent classifiers}. Existing theories have shown that the transition matrix can be learned by exploiting \textit{anchor points} (i.e., data points that belong to a specific class almost surely). However, when there are no anchor points, the transition matrix will be poorly learned, and those current consistent classifiers will significantly degenerate. In this paper, without employing anchor points, we propose a \textit{transition-revision} (T-Revision) method to effectively learn transition matrices, leading to better classifiers. Specifically, to learn a transition matrix, we first initialize it by exploiting data points that are similar to anchor points, having high \textit{noisy class posterior probabilities}. Then, we modify the initialized matrix by adding a \textit{slack variable}, which can be learned and validated together with the classifier by using noisy data. Empirical results on benchmark-simulated and real-world label-noise datasets demonstrate that without using exact anchor points, the proposed method is superior to the state-of-the-art label-noise learning methods.</p>
+
+<h2 id="nips19-certified-adversarial-robustness-with-additive-gaussian-noise"><a href="https://arxiv.org/pdf/1809.03113.pdf">NIPS19-Certified Adversarial Robustness with Additive Gaussian Noise</a></h2>
+<p class="message"><strong>NOTE</strong>: The existence of adversarial data examples has drawn significant attention in the deep-learning community; such data are seemingly minimally perturbed relative to the original data, but lead to very different outputs from a deep-learning algorithm. Although a significant body of work on developing defense models has been developed, most such models are heuristic and are often vulnerable to adaptive attacks. Defensive methods that provide theoretical robustness guarantees have been studied intensively, yet most fail to obtain non-trivial robustness when a large-scale model and data are present. To address these limitations, we introduce a framework that is scalable and provides certified bounds on the norm of the input manipulation for constructing adversarial examples. We establish a connection between robustness against adversarial perturbation and additive random noise, and propose a training strategy that can significantly improve the certified bounds. Our evaluation on MNIST, CIFAR-10 and ImageNet suggests that our method is scalable to complicated models and large data sets, while providing competitive robustness to state-of-the-art provable defense methods.</p>
+
+
+  
+</article>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML">
+</script>
+
+
+<hr class="dingbat related" />
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+  <hy-img
+    
+    src="/assets/icons/android-chrome-192x192.png"
+    class="avatar"
+    alt="Xinshao Wang"
+    srcset="/assets/icons/android-chrome-192x192.png 1x,/assets/icons/android-chrome-192x192.png 2x"
+    
+  
+    
+    root-margin="512px"
+  >
+    <noscript><img data-ignore 
+    src="/assets/icons/android-chrome-192x192.png"
+    class="avatar"
+    alt="Xinshao Wang"
+    srcset="/assets/icons/android-chrome-192x192.png 1x,/assets/icons/android-chrome-192x192.png 2x"
+    
+  /></noscript>
+    <span class="loading" slot="loading" hidden>
+      <span class="icon-cog"></span>
+    </span>
+  </hy-img>
+
+
+  
+
+  
+  
+  <h2  class="page-title hr">
+    About
+  </h2>
+
+  <p>Xinshao Wang, 3rd year PhD Student.</p>
+
+<p>Working on 
+Machine Learning (Deep Metric Learning, Robust Learning under Arbitrary Anomalies)
+and Computer Vision (Image/Video Recognition, Person ReID).</p>
+
+<p><a href="https://xinshaoamoswang.github.io/">Personal Website</a></p>
+
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+    
+
+    
+    
+
+    
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+  
+
+  
+    
+
+
+
+
+<aside class="related mb4" role="complementary">
+  <h2 class="hr">Related Posts</h2>
+
+  <ul class="related-posts">
+    
+      
+
+
+<li>
+  <a href="/blogs/2019-10-01-papers-summary-metric/" class="h4 flip-title"><span>Paper Summary on Distance Metric, Representation Learning</span></a>
+  <time class="heading faded fine" datetime="2019-10-01T00:00:00+01:00">01 Oct 2019</time>
+</li>
+
+    
+      
+
+
+<li>
+  <a href="/blogs/2019-10-01-Research-GR/" class="h4 flip-title"><span>An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies</span></a>
+  <time class="heading faded fine" datetime="2019-10-01T00:00:00+01:00">01 Oct 2019</time>
+</li>
+
+    
+      
+
+
+<li>
+  <a href="/blogs/2019-06-01-example-content-iii/" class="h4 flip-title"><span>Example Content III</span></a>
+  <time class="heading faded fine" datetime="2019-06-01T00:00:00+01:00">01 Jun 2019</time>
+</li>
+
+    
+  </ul>
+</aside>
+
+  
+
+  
+  
+
+
+
+  
+
+  
+<footer role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2019. All rights reserved.
+</small></p>
+  
+  
+  <p><small>Welcome to Xinshao Wang's Personal Website</small></p>
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+    <hy-drawer
+  class=""
+  align="left"
+  threshold="10"
+  touch-events
+  prevent-default
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+    <div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+      <div class="sidebar-about">
+        
+          <a class="no-hover" href="/" tabindex="-1">
+            <img src="/assets/icons/android-chrome-192x192.png" class="avatar" alt="Xinshao Wang" data-ignore />
+          </a>
+        
+        <h2 class="h1"><a href="/">Xinshao Wang</a></h2>
+        
+        
+          <p class="fine">
+            Machine Learning (Deep Metric Learning, Robust Learning under Arbitrary Anomalies).
+Computer Vision (Image/Video Recognition, Person ReID).
+
+          </p>
+        
+      </div>
+
+      <nav class="sidebar-nav heading" role="navigation">
+        <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_navigation"
+          href="/blogs/"
+          class="sidebar-nav-item active"
+          
+        >
+          Blog
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/projects/"
+          class="sidebar-nav-item"
+          
+        >
+          Projects
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Resume/"
+          class="sidebar-nav-item"
+          
+        >
+          Resume
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/about/"
+          class="sidebar-nav-item"
+          
+        >
+          About ME
+        </a>
+      </li>
+    
+  
+</ul>
+
+      </nav>
+
+      
+
+      <div class="sidebar-social">
+        <span class="sr-only">Social:</span>
+<ul>
+  
+    
+    
+
+    
+    
+
+    
+    
+  
+</ul>
+
+      </div>
+    </div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+  
+</hy-push-state>
+
+<!--[if gt IE 10]><!---->
+
+  <script nomodule>!function(){var e=document.createElement("script");if(!("noModule"in e)&&"onbeforeload"in e){var t=!1;document.addEventListener("beforeload",function(n){if(n.target===e)t=!0;else if(!n.target.hasAttribute("nomodule")||!t)return;n.preventDefault()},!0),e.type="module",e.src=".",document.head.appendChild(e),e.remove()}}();
+</script>
+  <script type="module" src="/assets/js/hydejack-8.5.2.js"></script>
+  <script nomodule src="/assets/js/hydejack-legacy-8.5.2.js" defer></script>
+  
+
+  
+
+
+<!--<![endif]-->
+
+
+
+
+<h2 class="sr-only" hidden>Templates (for web app):</h2>
+
+<template id="_animation-template" hidden>
+  <div class="animation-main fixed-top">
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+<template id="_loading-template" hidden>
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+<template id="_error-template" hidden>
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+<template id="_forward-template" hidden>
+  <button id="_forward" class="forward nav-btn no-hover fl">
+    <span class="sr-only">Forward</span>
+    <span class="icon-arrow-right2"></span>
+  </button>
+</template>
+
+<template id="_back-template" hidden>
+  <button id="_back" class="back nav-btn no-hover fl">
+    <span class="sr-only">Back</span>
+    <span class="icon-arrow-left2"></span>
+  </button>
+</template>
+
+<template id="_permalink-template" hidden>
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="icon-link"></span>
+  </a>
+</template>
+
+
+
+
+</body>
+</html>
