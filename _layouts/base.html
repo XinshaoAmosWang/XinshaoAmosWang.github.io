@@ -38,4 +38,6 @@ layout: compress
 </body>
 
 
-<a href="https://xinshaowang.github.io{{ post.url }}#disqus_thread">0 Comments</a>
+{% if page.comments %} 
+  • <a href="http://localhost:4000{{ page.url }}#disqus_thread">0 Comments</a>
+{% endif %}
