@@ -4,6 +4,7 @@ image: /assets/img/blog/GR/Figure1.png
 description: >
   Paper: https://arxiv.org/pdf/1905.11233.pdf.
   Project page: https://github.com/XinshaoAmosWang/Emphasis-Regularisation-by-Gradient-Rescaling
+comments: true
 ---
 
 General applicability: Label noise (semantic noise), outliers, heavy perceptual data noise, etc.
