@@ -5,7 +5,6 @@ description: >
   
 image: /assets/img/blog/steve-harvey.jpg
 comment: true
-comments: true
 ---
 
 Paper Notes on Noise (Label noise, adversarial examples, anomalies, outliers, etc)
