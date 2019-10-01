@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: list
 title: Adversarial Examples Reading List
 description: >
   Forked from: https://github.com/chawins/Adversarial-Examples-Reading-List
