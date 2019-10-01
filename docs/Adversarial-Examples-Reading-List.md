@@ -1,9 +1,8 @@
 ---
-layout: page
+layout: post
 title: Adversarial Examples Reading List
 description: >
   Forked from: https://github.com/chawins/Adversarial-Examples-Reading-List
-hide_description: true
 ---
 
 A compilation of papers in adversarial examples that I have read or plan to read. The number of papers in this subfield can be overwhelming. I hope this list is helpful for anyone who is interested in entering the field or looking for a quick survey. The list is by no means exhaustive so any paper suggestion is very welcome. The order of the papers is arbitrary. Couple of notes:
@@ -53,7 +52,7 @@ A compilation of papers in adversarial examples that I have read or plan to read
 ## Attacks
 
 - :+1: &nbsp; Sabour et al., **Adversarial Manipulation of Deep Rrepresentations**, ICLR 2016.
-  - Create adversarial examples by matching deep representation of an original sample to that of a guide sample by reducing $\ell_2$ distance of deep representations under a box constraint in the pixel space.
+  - Create adversarial examples by matching deep representation of an original sample to that of a guide sample by reducing $$\ell_2$$ distance of deep representations under a box constraint in the pixel space.
   - Through some analyses, the adversarial examples are found to be __more similar__ to the guide sample than the original despite little change in pixel space. A number of experiments shows that the nature of this deep-representation adversarial examples is very different from that of the normal ones. The experiment with random network weights suggest that this phenomenon might be caused by network architecture rather than the learning algorithm itself.
 - :+1: &nbsp; N. Carlini and D. Wagner, **Towards Evaluating the Robustness of Neural Networks**, IEEE SP 2017.
 - P.-Y. Chen, Y. Sharma, H. Zhang, J. Yi, and C.-J. Hsieh, **EAD: Elastic-Net Attacks to Deep Neural Networks via Adversarial Examples.**
