@@ -37,18 +37,18 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
   
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Upgrade | Xinshao Wang</title>
+<title>Build | Xinshao Wang</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Upgrade" />
+<meta property="og:title" content="Build" />
 <meta name="author" content="Xinshao Wang" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="This chapter shows how to upgrade Hydejack to a newer version. The method depends on how you’ve installed Hydejack." />
-<meta property="og:description" content="This chapter shows how to upgrade Hydejack to a newer version. The method depends on how you’ve installed Hydejack." />
-<link rel="canonical" href="http://localhost:4000/backup_docs/upgrade/" />
-<meta property="og:url" content="http://localhost:4000/backup_docs/upgrade/" />
+<meta name="description" content="This chapters shows how to prepare your Hydejack site for a production build and deployment on 3rd party hosting providers." />
+<meta property="og:description" content="This chapters shows how to prepare your Hydejack site for a production build and deployment on 3rd party hosting providers." />
+<link rel="canonical" href="http://localhost:4000/docs/build/" />
+<meta property="og:url" content="http://localhost:4000/docs/build/" />
 <meta property="og:site_name" content="Xinshao Wang" />
 <script type="application/ld+json">
-{"description":"This chapter shows how to upgrade Hydejack to a newer version. The method depends on how you’ve installed Hydejack.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"WebPage","url":"http://localhost:4000/backup_docs/upgrade/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Upgrade","@context":"https://schema.org"}</script>
+{"description":"This chapters shows how to prepare your Hydejack site for a production build and deployment on 3rd party hosting providers.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"WebPage","url":"http://localhost:4000/docs/build/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Build","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -78,7 +78,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-<link rel="alternate" href="http://localhost:4000/backup_docs/upgrade/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/docs/build/" hreflang="en">
 
 <link rel="shortcut icon" href="/assets/icons/icon.png">
 <link rel="apple-touch-icon" href="/assets/icons/icon.png">
@@ -209,7 +209,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
   >
   <article class="page" role="article">
   <header>
-    <h1 class="page-title">Upgrade</h1>
+    <h1 class="page-title">Build</h1>
     
 
 
@@ -221,81 +221,99 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
   </header>
 
-  <p>This chapter shows how to upgrade Hydejack to a newer version. The method depends on how you’ve installed Hydejack.</p>
+  <p>This chapters shows how to prepare your Hydejack site for a production build and deployment on 3rd party hosting providers.</p>
 
 <h2 class="no_toc" id="table-of-contents">Table of Contents</h2>
 <ol id="markdown-toc">
-  <li><a href="#via-starter-kit" id="markdown-toc-via-starter-kit">Via Starter Kit</a></li>
-  <li><a href="#via-gem" id="markdown-toc-via-gem">Via gem</a></li>
-  <li><a href="#via-zip" id="markdown-toc-via-zip">Via zip</a></li>
-  <li><a href="#via-git" id="markdown-toc-via-git">Via git</a></li>
-  <li><a href="#pro-version" id="markdown-toc-pro-version">PRO Version</a>    <ol>
-      <li><a href="#pro-via-github-advanced" id="markdown-toc-pro-via-github-advanced">PRO via GitHub (advanced)</a></li>
-    </ol>
-  </li>
+  <li><a href="#starter-kit" id="markdown-toc-starter-kit">Starter Kit</a></li>
+  <li><a href="#preparation" id="markdown-toc-preparation">Preparation</a></li>
+  <li><a href="#building-locally" id="markdown-toc-building-locally">Building locally</a></li>
+  <li><a href="#building-locally-with-latent-semantic-analysis" id="markdown-toc-building-locally-with-latent-semantic-analysis">Building locally with latent semantic analysis</a></li>
+  <li><a href="#github-pages" id="markdown-toc-github-pages">GitHub Pages</a></li>
 </ol>
 
-<p class="message"><strong>NOTE</strong>: Before upgrading to v7+, make sure you’ve read the <a href="/CHANGELOG/" class="heading flip-title">CHANGELOG</a>,
-especially the part about the <a href="/CHANGELOG/#license-change">license change</a>!</p>
+<h2 id="starter-kit">Starter Kit</h2>
+<p>If you’re using the <a href="/docs/install/#via-starter-kit">starter kit</a>, all you have to do is push your repository:</p>
 
-<h2 id="via-starter-kit">Via Starter Kit</h2>
-<p>When using the Starter Kit, upgrading Hydejack is as simple as setting the <code class="highlighter-rouge">remote_theme</code> key in <code class="highlighter-rouge">config.yml</code> to the desired version.</p>
-
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">remote_theme</span><span class="pi">:</span> <span class="s">hydecorp/hydejack@v8.5.2</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git add <span class="nb">.</span>
+<span class="nv">$ </span>git commit <span class="s2">"Update"</span>
+<span class="nv">$ </span>git push origin master
 </code></pre></div></div>
 
-<p>To use the latest version on the <code class="highlighter-rouge">v8</code> branch on each build, you can use  <code class="highlighter-rouge">hydecorp/hydejack@v8</code>.</p>
+<h2 id="preparation">Preparation</h2>
 
-<h2 id="via-gem">Via gem</h2>
-<p>Upgrading the gem-based theme is as easy as running</p>
+<p>Before building, make sure the following is part of your config file:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle update jekyll-theme-hydejack
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># file: _config.yml</span>
+<span class="na">compress_html</span><span class="pi">:</span>
+  <span class="na">comments</span><span class="pi">:</span>  <span class="pi">[</span><span class="s2">"</span><span class="s">&lt;!--</span><span class="nv"> </span><span class="s">"</span><span class="pi">,</span> <span class="s2">"</span><span class="nv"> </span><span class="s">--&gt;"</span><span class="pi">]</span>
+  <span class="na">clippings</span><span class="pi">:</span> <span class="s">all</span>
+  <span class="na">endings</span><span class="pi">:</span>   <span class="s">all</span>
+
+<span class="na">sass</span><span class="pi">:</span>
+  <span class="na">style</span><span class="pi">:</span>     <span class="s">compressed</span>
 </code></pre></div></div>
 
-<h2 id="via-zip">Via zip</h2>
-<p>Upgrading via zip is a bit of a dark art, specially if you’ve made changes to any source files,
-and the prime reason why I suggest using the gem-based version of the theme.</p>
+<p>You can check out <a href="https://github.com/penibelst/jekyll-compress-html">jekyll-compress-html</a> and
+<a href="https://jekyllrb.com/docs/assets/#sassscss">https://jekyllrb.com/docs/assets/#sassscss</a> for details.</p>
 
-<p>Generally, you’ll want to copy these files and folders:</p>
+<h2 id="building-locally">Building locally</h2>
+<p>When building Hydejack it is important to set the environment variable <code class="highlighter-rouge">JEKYLL_ENV</code> to <code class="highlighter-rouge">production</code>.
+Otherwise the output will not be minified. Building itself happens via Jekyll’s <code class="highlighter-rouge">build</code> command.</p>
 
-<ul>
-  <li><code class="highlighter-rouge">_includes/</code></li>
-  <li><code class="highlighter-rouge">_layouts/</code></li>
-  <li><code class="highlighter-rouge">_sass/</code></li>
-  <li><code class="highlighter-rouge">assets/</code></li>
-  <li><code class="highlighter-rouge">Gemfile</code></li>
-  <li><code class="highlighter-rouge">Gemfile.lock</code></li>
-</ul>
-
-<p>and merge them with your existing folder. However, you’ll also want to check out <code class="highlighter-rouge">_data</code> and <code class="highlighter-rouge">_config.yml</code> for any changes
-and read latest entries to the <a href="/CHANGELOG/" class="heading flip-title">CHANGELOG</a>.</p>
-
-<p class="message"><strong>NOTE</strong>: If you’ve modified any of Hydejack’s internal files, your changes will most likely be overwritten
-and you have to apply them again.
-Make sure you’ve made a backup before overwriting any files.</p>
-
-<h2 id="via-git">Via git</h2>
-<p>The latest version sits on the <code class="highlighter-rouge">master</code> branch of <a href="https://github.com/hydecorp/hydejack">hydecorp/hydejack</a>.
-To apply them to your repository run</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git remote add hydejack git@github.com:hydecorp/hydejack.git
-<span class="nv">$ </span>git pull hydejack master
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ JEKYLL_ENV</span><span class="o">=</span>production bundle <span class="nb">exec </span>jekyll build
 </code></pre></div></div>
 
-<h2 id="pro-version">PRO Version</h2>
-<p>Buyers of the PRO version will find the files necessary for an upgrade in the <code class="highlighter-rouge">upgrade</code> folder of the downloaded zip archive.</p>
+<p>This will generate the finished static files in <code class="highlighter-rouge">_site</code>,
+which can be deployed using the methods outlined in the <a href="https://jekyllrb.com/docs/deployment-methods/">Jekyll Documentation</a>.</p>
 
-<p class="message"><strong>NOTE</strong>: If you’ve modified any of Hydejack’s internal files, your changes will most likely be overwritten
-and you have to apply them again.
-Make sure you’ve made a backup before overwriting any files.</p>
+<h2 id="building-locally-with-latent-semantic-analysis">Building locally with latent semantic analysis</h2>
+<p>By default, related posts are simply the most recent posts.
+Hydejack modifies this a bit, by showing the most recent posts of the same category or tag.
+However, the results are still pretty “unrelated”.
+To provide better results, Jekyll supports <a href="https://en.wikipedia.org/wiki/Latent_semantic_analysis">latent semantic analysis</a> via <a href="http://www.classifier-reborn.com/"><code class="highlighter-rouge">classifier-reborn</code></a>’s
+<a href="http://www.classifier-reborn.com/lsi">Latent Semantic Indexer</a></p>
 
-<h3 id="pro-via-github-advanced">PRO via GitHub (advanced)</h3>
-<p>If you’ve followed the steps <a href="/backup_docs/install/#pro-via-github-advanced">here</a>, all you need to upgrade is:</p>
+<p>To use the <abbr title="Latent Semantic Indexer">LSI</abbr>, you first have to disable Hydejack’s default behavior,
+by setting <code class="highlighter-rouge">use_lsi: true</code> under the <code class="highlighter-rouge">hydejack</code> key in your config file.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bundle update jekyll-theme-hydejack-pro
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># file: _config.yml</span>
+<span class="na">hydejack</span><span class="pi">:</span>
+  <span class="na">use_lsi</span><span class="pi">:</span> <span class="no">true</span>
 </code></pre></div></div>
 
-<p class="read-more">Continue with <a href="/backup_docs/config/" class="heading flip-title">Config</a></p>
+<p>Then, you have to run <code class="highlighter-rouge">jekyll build</code> with the <code class="highlighter-rouge">--lsi</code> flag:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ JEKYLL_ENV</span><span class="o">=</span>production bundle <span class="nb">exec </span>jekyll build <span class="nt">--lsi</span>
+</code></pre></div></div>
+
+<p>Note that this may take a long time.
+Once it is finished, the generated static files will be located in the <code class="highlighter-rouge">_site</code> directory,
+which can be deployed using the methods outlined in the <a href="https://jekyllrb.com/docs/deployment-methods/">Jekyll Documentation</a>.</p>
+
+<h2 id="github-pages">GitHub Pages</h2>
+<p>To deploy to GitHub Pages, the steps are:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>_site
+<span class="nv">$ </span>git init <span class="c"># you only need to do this once</span>
+<span class="nv">$ </span>git remote add origin &lt;github_remote_url&gt; <span class="c"># you only need to do this once</span>
+<span class="nv">$ </span>git add <span class="nb">.</span>
+<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"Build"</span>
+<span class="nv">$ </span>git push origin master:&lt;remote_branch&gt;
+<span class="nv">$ </span><span class="nb">cd</span> ..
+</code></pre></div></div>
+
+<dl>
+  <dt><code class="highlighter-rouge">github_remote_url</code></dt>
+  <dd>Find this on your repository’s GitHub page.</dd>
+  <dt><code class="highlighter-rouge">remote_branch</code></dt>
+  <dd>Either <code class="highlighter-rouge">master</code> for “user or organization pages”, or <code class="highlighter-rouge">gh-pages</code> for “project pages”</dd>
+</dl>
+
+<p>More on <a href="https://help.github.com/articles/user-organization-and-project-pages/">user, organization, and project pages</a>.</p>
+
+<p class="read-more">Continue with <a href="/docs/advanced/" class="heading flip-title">Advanced</a></p>
+
 
 </article>
 
@@ -432,7 +450,7 @@ Computer Vision (Image/Video Recognition, Person ReID).
       <li>
         <a
           
-          href="/docs/"
+          href="/my_docs/"
           class="sidebar-nav-item"
           
         >
