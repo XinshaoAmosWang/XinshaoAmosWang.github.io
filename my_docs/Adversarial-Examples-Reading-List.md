@@ -3,6 +3,7 @@ layout: page
 title: Adversarial Examples Reading List
 description: >
   Forked from: [Adversarial-Examples-Reading-List](https://github.com/chawins/Adversarial-Examples-Reading-List)
+comment: true
 ---
 
 
