@@ -88,16 +88,16 @@ layout: base
 
 <div class="navigator">
     {% if page.previous %}
-        <span style="float:left"><a href="{{ page.previous.url }}">« {{ page.previous.title }}</a></span>
+        <span style="float:left"><a href="{{ page.previous.url }}">« {{ page.previous.title }}</a>
+        </span>
     {% endif %}
     {% if page.next %}
-        <span style="float:right"><a href="{{ page.next.url }}">{{ page.next.title }} »</a></span>
+        <span style="float:right"><a href="{{ page.next.url }}">{{ page.next.title }} »</a>
+        </span>
     {% endif %}
 </div>
 
 
-{%  include google_analytics.html %}
-{%  include google_adsense.html %}
 
 {% include disqus.html %}
 
