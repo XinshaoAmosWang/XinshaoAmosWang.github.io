@@ -13,6 +13,7 @@ comment: true
 
 ## [Adversarial Examples Reading List](../../my_docs/Adversarial-Examples-Reading-List.md)
 **NOTE**: 
+To be done *55 papers with key words on Adversarial from NeurIPS 2019*.
 {:.message}
 
 
