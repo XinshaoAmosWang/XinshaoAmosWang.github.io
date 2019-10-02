@@ -37,18 +37,18 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
   
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Scripts | Xinshao Wang</title>
+<title>Migration | Xinshao Wang</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Scripts" />
+<meta property="og:title" content="Migration" />
 <meta name="author" content="Xinshao Wang" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="There are two ways of adding third party scripts. Embedding is ideal for one-off scripts, while global scripts are loaded on every page." />
-<meta property="og:description" content="There are two ways of adding third party scripts. Embedding is ideal for one-off scripts, while global scripts are loaded on every page." />
-<link rel="canonical" href="http://localhost:4000/docs_backup/scripts/" />
-<meta property="og:url" content="http://localhost:4000/docs_backup/scripts/" />
+<meta name="description" content="This documents shows how to upgrade Hydejack from previous versions (v5) in a step-by-step manner." />
+<meta property="og:description" content="This documents shows how to upgrade Hydejack from previous versions (v5) in a step-by-step manner." />
+<link rel="canonical" href="http://localhost:4000/backup_docs/migration/" />
+<meta property="og:url" content="http://localhost:4000/backup_docs/migration/" />
 <meta property="og:site_name" content="Xinshao Wang" />
 <script type="application/ld+json">
-{"description":"There are two ways of adding third party scripts. Embedding is ideal for one-off scripts, while global scripts are loaded on every page.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"WebPage","url":"http://localhost:4000/docs_backup/scripts/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Scripts","@context":"https://schema.org"}</script>
+{"description":"This documents shows how to upgrade Hydejack from previous versions (v5) in a step-by-step manner.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"WebPage","url":"http://localhost:4000/backup_docs/migration/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Migration","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -78,7 +78,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-<link rel="alternate" href="http://localhost:4000/docs_backup/scripts/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/backup_docs/migration/" hreflang="en">
 
 <link rel="shortcut icon" href="/assets/icons/icon.png">
 <link rel="apple-touch-icon" href="/assets/icons/icon.png">
@@ -209,7 +209,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
   >
   <article class="page" role="article">
   <header>
-    <h1 class="page-title">Scripts</h1>
+    <h1 class="page-title">Migration</h1>
     
 
 
@@ -221,88 +221,166 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
   </header>
 
-  <p>There are two ways of adding third party scripts.
-<a href="#embedding">Embedding</a> is ideal for one-off scripts, e.g. <code class="highlighter-rouge">widgets.js</code> that is part of embedded tweets (see below).
-Adding <a href="#global-scripts">global scripts</a> is for scripts that should be loaded on every page.</p>
+  <p>This documents shows how to upgrade Hydejack from previous versions (v5) in a step-by-step manner.</p>
+
+<p>Unfortunately, upgrading form v5 and earlier is not straightforward. A lot of patterns and names have changed, motivated by a variety of reasons, including better integration with the rest of the Jekyll ecosystem and simplified workflows enabled by Jekyll Collections.</p>
 
 <h2 class="no_toc" id="table-of-contents">Table of Contents</h2>
 <ol id="markdown-toc">
-  <li><a href="#embedding" id="markdown-toc-embedding">Embedding</a></li>
-  <li><a href="#global-scripts" id="markdown-toc-global-scripts">Global scripts</a></li>
-  <li><a href="#registering-push-state-event-listeners" id="markdown-toc-registering-push-state-event-listeners">Registering push state event listeners</a></li>
-  <li><a href="#if-everything-else-fails" id="markdown-toc-if-everything-else-fails">If everything else fails</a></li>
+  <li><a href="#from-v5" id="markdown-toc-from-v5">From v5</a>    <ol>
+      <li><a href="#updating-the-folder-structure" id="markdown-toc-updating-the-folder-structure">Updating the folder structure</a></li>
+      <li><a href="#updating-the-configuration" id="markdown-toc-updating-the-configuration">Updating the configuration</a></li>
+      <li><a href="#restoring-the-tags" id="markdown-toc-restoring-the-tags">Restoring the tags</a></li>
+      <li><a href="#restoring-the-sidebar-entries" id="markdown-toc-restoring-the-sidebar-entries">Restoring the sidebar entries</a></li>
+      <li><a href="#restoring-the-rss-feed" id="markdown-toc-restoring-the-rss-feed">Restoring the RSS feed</a></li>
+      <li><a href="#restoring-the-comments" id="markdown-toc-restoring-the-comments">Restoring the comments</a></li>
+      <li><a href="#restoring-the-about-page" id="markdown-toc-restoring-the-about-page">Restoring the about page</a></li>
+    </ol>
+  </li>
 </ol>
 
-<h2 id="embedding">Embedding</h2>
-<p>Hydejack supports embedding third party scripts directly inside markdown content. This will work in most cases, except when a script can not be loaded on a page more than once (this will occur when a user navigates to the same page twice).</p>
+<h2 id="from-v5">From v5</h2>
+<h3 id="updating-the-folder-structure">Updating the folder structure</h3>
+<p>Copy the following folders and files from Hydejack v6 into your existing repository. Make sure you merge the folder contents.</p>
 
-<p>Example:</p>
+<ul>
+  <li><code class="highlighter-rouge">_data/</code></li>
+  <li><code class="highlighter-rouge">_includes/</code></li>
+  <li><code class="highlighter-rouge">_layouts/</code></li>
+  <li><code class="highlighter-rouge">_sass/</code></li>
+  <li><code class="highlighter-rouge">assets/</code></li>
+  <li><code class="highlighter-rouge">index.html</code> (<code class="highlighter-rouge">index.md</code>*)</li>
+  <li><code class="highlighter-rouge">Gemfile</code></li>
+  <li><code class="highlighter-rouge">Gemfile.lock</code></li>
+</ul>
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">async</span> <span class="na">src=</span><span class="s">"//platform.twitter.com/widgets.js"</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"twitter-tweet"</span> <span class="na">data-lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;p</span> <span class="na">lang=</span><span class="s">"en"</span> <span class="na">dir=</span><span class="s">"ltr"</span><span class="nt">&gt;</span>
-    The next version of Hydejack (v6.3.0) will allow embedding 3rd party scripts,
-    like the one that comes with this tweet for example.
-  <span class="nt">&lt;/p&gt;</span>
-  <span class="ni">&amp;mdash;</span> Florian Klampfer (@qwtel)
-  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://twitter.com/qwtel/status/871098943505039362"</span><span class="nt">&gt;</span>June 3, 2017<span class="nt">&lt;/a&gt;</span>
-<span class="nt">&lt;/blockquote&gt;</span>
+<p>Note that the <code class="highlighter-rouge">public</code> folder has been renamed to <code class="highlighter-rouge">assets</code>.
+You’ll want to move your static assets there.</p>
+
+<h3 id="updating-the-configuration">Updating the configuration</h3>
+<p><code class="highlighter-rouge">_config.yml</code> has changed considerably. Open it and make the following changes.</p>
+
+<ol>
+  <li>
+    <p>Rename the following keys</p>
+
+    <ul>
+      <li><code class="highlighter-rouge">font_accent</code> =&gt; <code class="highlighter-rouge">font_heading</code></li>
+      <li><code class="highlighter-rouge">load_google_fonts</code> =&gt; <code class="highlighter-rouge">google_fonts</code></li>
+      <li><code class="highlighter-rouge">google_analytics_id</code> =&gt; <code class="highlighter-rouge">google_analytics</code></li>
+    </ul>
+  </li>
+  <li>
+    <p>Enable Jekyll Collections for categories and tags by adding</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">collections</span><span class="pi">:</span>
+  <span class="na">featured_categories</span><span class="pi">:</span>
+    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/category/:name/</span>
+    <span class="na">output</span><span class="pi">:</span>    <span class="no">true</span>
+  <span class="na">featured_tags</span><span class="pi">:</span>
+    <span class="na">permalink</span><span class="pi">:</span> <span class="s">/tag/:name/</span>
+    <span class="na">output</span><span class="pi">:</span>    <span class="no">true</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Delete <code class="highlighter-rouge">photo</code> and <code class="highlighter-rouge">photo2x</code> form the author key and add a <code class="highlighter-rouge">picture</code> hash instead that looks like</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">picture</span><span class="pi">:</span>
+  <span class="na">path</span><span class="pi">:</span> <span class="s">&lt;photo&gt;</span>
+  <span class="na">srcset</span><span class="pi">:</span>
+    <span class="na">1x</span><span class="pi">:</span> <span class="s">&lt;photo&gt;</span>
+    <span class="na">2x</span><span class="pi">:</span> <span class="s">&lt;photo2x&gt;</span>
+</code></pre></div>    </div>
+
+    <p>If you have only one photo, you can just provide the URL directly, e.g. <code class="highlighter-rouge">picture: &lt;url&gt;</code>.</p>
+
+    <p>For more information, see <a href="/backup_docs/config/#adding-an-author">Adding an author</a>.</p>
+  </li>
+  <li>
+    <p>Rename <code class="highlighter-rouge">gems</code> to <code class="highlighter-rouge">plugins</code> and make sure the list contains <code class="highlighter-rouge">jekyll-seo-tag</code>.</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-seo-tag</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<p class="message"><strong>NOTE</strong>: When making changes to <code class="highlighter-rouge">_config.yml</code>, it is necessary to restart the Jekyll process for the changes to take effect.</p>
+
+<h3 id="restoring-the-tags">Restoring the tags</h3>
+<ol>
+  <li>Delete the <code class="highlighter-rouge">tag</code> folder.</li>
+  <li>Create a top-level folder called <code class="highlighter-rouge">_featured_tags</code>.</li>
+  <li>For each entry in <code class="highlighter-rouge">_data/tags.yml</code>, create a markdown file in <code class="highlighter-rouge">_features_tags</code> with the name of the tag as filename,
+e.g. <code class="highlighter-rouge">hyde.md</code> for tag “hyde”.</li>
+  <li>
+    <p>For each tag, copy its contents from <code class="highlighter-rouge">_data/tags.yml</code> into the new file’s front matter, e.g.</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">list</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">Hyde</span>
+<span class="na">description</span><span class="pi">:</span> <span class="pi">&gt;</span>
+  <span class="s">Hyde is a brazen two-column Jekyll theme...</span>
+<span class="na">accent_image</span><span class="pi">:</span> <span class="s">/hydejack/public/img/hyde.jpg</span>
+<span class="na">accent_color</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#949667'</span>
+<span class="nn">---</span>
+</code></pre></div>    </div>
+
+    <p>Be aware that <code class="highlighter-rouge">image</code> has been renamed to <code class="highlighter-rouge">accent_image</code> and <code class="highlighter-rouge">color</code> has been renamed to <code class="highlighter-rouge">accent_color</code>.</p>
+  </li>
+  <li>Add <code class="highlighter-rouge">layout: list</code> to the front matter.</li>
+  <li>Once you’ve copied all tags into their own files, delete <code class="highlighter-rouge">_data/tags.yml</code>.</li>
+</ol>
+
+<h3 id="restoring-the-sidebar-entries">Restoring the sidebar entries</h3>
+<p>Hydejack can now link to any kind of page in the sidebar.</p>
+
+<ol>
+  <li>Delete <code class="highlighter-rouge">sidebar_tags</code> in <code class="highlighter-rouge">_config.yml</code>.</li>
+  <li>Open a file who’s page you would like to add to the sidebar. If you want to add a tag, open <code class="highlighter-rouge">_featured_tags/&lt;tagname&gt;.md</code>.</li>
+  <li>Add <code class="highlighter-rouge">menu: true</code> to its front matter.</li>
+  <li>(Optional) Set <code class="highlighter-rouge">order: &lt;number&gt;</code>, where <code class="highlighter-rouge">&lt;number&gt;</code> is the number at which you would like the link to appear.</li>
+</ol>
+
+<h3 id="restoring-the-rss-feed">Restoring the RSS feed</h3>
+<p>The feed is now provided by the <code class="highlighter-rouge">jekyll-feed</code> plugin instead of a custom solution.</p>
+
+<ol>
+  <li>Delete <code class="highlighter-rouge">atom.xml</code></li>
+  <li>
+    <p>Add <code class="highlighter-rouge">- jekyll-feed</code> to <code class="highlighter-rouge">gems</code> in <code class="highlighter-rouge">_config.yml</code>, e.g.</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">gems</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">jekyll-seo-tag</span>
+  <span class="pi">-</span> <span class="s">jekyll-feed</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>(Optional) Add the following to <code class="highlighter-rouge">_config.yml</code> to make the feed appear at the same URL as the old <code class="highlighter-rouge">atom.xml</code>.</p>
+
+    <div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">feed</span><span class="pi">:</span>
+  <span class="na">path</span><span class="pi">:</span> <span class="s">atom.xml</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h3 id="restoring-the-comments">Restoring the comments</h3>
+<p>The way comments are enabled has changed slightly.
+You now have to enable them per page by adding <code class="highlighter-rouge">comments: true</code> to the front matter
+(this is what the <a href="https://disqus.com/admin/install/platforms/jekyll/">Disqus integration guide</a> suggests).
+To enable them for all posts, add to the config file</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">defaults</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">scope</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">posts</span>
+    <span class="na">values</span><span class="pi">:</span>
+      <span class="na">comments</span><span class="pi">:</span> <span class="no">true</span>
 </code></pre></div></div>
 
-<script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The next version of Hydejack (v6.3.0) will allow embedding 3rd party scripts, like the one that comes with this tweet for example.</p>&mdash; Florian Klampfer (@qwtel) <a href="https://twitter.com/qwtel/status/871098943505039362">June 3, 2017</a></blockquote>
-
-<h2 id="global-scripts">Global scripts</h2>
-<p>If you have scripts that should be included on every page you can add them globally by
-opening (or creating) <code class="highlighter-rouge">_includes/my-scripts.html</code> and adding them like you normally would:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- file: _includes/my-scripts.html --&gt;</span>
-<span class="nt">&lt;script
-  </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.2.1.slim.min.js"</span>
-  <span class="na">integrity=</span><span class="s">"sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="</span>
-  <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</code></pre></div></div>
-
-<p><code class="highlighter-rouge">my-scripts.html</code> will be included at the end of the <code class="highlighter-rouge">body</code> tag.</p>
-
-<h2 id="registering-push-state-event-listeners">Registering push state event listeners</h2>
-<p>When embedding scripts globally you might want to run some init code after each page load. However, the problem with push state-based page loads is that the <code class="highlighter-rouge">load</code> event won’t fire again. Luckily, Hydejack’s push state component exposes an event that you can listen to instead.</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- file: _includes/my-scripts.html --&gt;</span>
-<span class="nt">&lt;script&gt;</span>
-  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="dl">'</span><span class="s1">hy-push-state</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">hy-push-state-load</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// </span><span class="o">&lt;</span><span class="nx">your</span> <span class="nx">init</span> <span class="nx">code</span><span class="o">&gt;</span>
-  <span class="p">});</span>
-<span class="nt">&lt;/script&gt;</span>
-</code></pre></div></div>
-
-<p>Note that the above code must only run once, so include it in your <code class="highlighter-rouge">my-scripts.html</code>.</p>
-
-<dl>
-  <dt><code class="highlighter-rouge">hy-push-state-start</code></dt>
-  <dd>Occurs after clicking a link.</dd>
-  <dt><code class="highlighter-rouge">hy-push-state-ready</code></dt>
-  <dd>Animation fished and response has been parsed, ready to swap out the content.</dd>
-  <dt><code class="highlighter-rouge">hy-push-state-after</code></dt>
-  <dd>The old content has been replaced with the new content.</dd>
-  <dt><code class="highlighter-rouge">hy-push-state-progress</code></dt>
-  <dd>Special case when animation is finished, but no response from server has arrived yet.
-This is when the loading spinner will appear.</dd>
-  <dt><code class="highlighter-rouge">hy-push-state-load</code></dt>
-  <dd>All embedded script tags have been inserted into the document and have finished loading.</dd>
-</dl>
-
-<h2 id="if-everything-else-fails">If everything else fails</h2>
-<p>If you can’t make an external script work with Hydejack’s push state approach to page loading,
-you can disable push state by adding to your config file:</p>
-
-<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># file: _config.yml</span>
-<span class="na">hydejack</span><span class="pi">:</span>
-  <span class="na">no_push_state</span><span class="pi">:</span> <span class="no">true</span>
-</code></pre></div></div>
-
-<p class="read-more">Continue with <a href="/docs_backup/build/" class="heading flip-title">Build</a></p>
+<h3 id="restoring-the-about-page">Restoring the about page</h3>
+<p>Hydejack now has a dedicated layout for about pages.
+To use it, open <code class="highlighter-rouge">about.md</code> and change the <code class="highlighter-rouge">layout</code> in the front matter to <code class="highlighter-rouge">about</code>
+and delete <code class="highlighter-rouge">{\% include about-short.html author=site.author %\}</code>.</p>
 
 </article>
 
@@ -432,6 +510,18 @@ Computer Vision (Image/Video Recognition, Person ReID).
           
         >
           Resume
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/docs/"
+          class="sidebar-nav-item"
+          
+        >
+          Documentations
         </a>
       </li>
     

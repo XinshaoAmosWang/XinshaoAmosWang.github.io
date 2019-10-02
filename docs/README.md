@@ -1,8 +1,7 @@
 ---
-title: Documentation
+title: Documentations
 description: >
   Summary and Display of all documentations.
-hide_description: true
 permalink: /docs/
 ---
 
