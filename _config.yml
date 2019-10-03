@@ -58,8 +58,8 @@ menu:
     url:               /projects/
   - title:             Resume
     url:               /Resume/
-  - title:             Documentations
-    url:               /my_docs/
+  #- title:             Documentations
+  #  url:               /my_docs/
   - title:             About ME
     url:               /about/
 
