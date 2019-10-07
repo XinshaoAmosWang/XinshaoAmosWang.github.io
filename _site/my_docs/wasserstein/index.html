@@ -37,21 +37,19 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
   
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Paper Summary on Distance Metric, Representation Learning | Xinshao Wang</title>
+<title>Wasserstein | Xinshao Wang</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Paper Summary on Distance Metric, Representation Learning" />
+<meta property="og:title" content="Wasserstein" />
 <meta name="author" content="Xinshao Wang" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
 <meta property="og:description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
-<link rel="canonical" href="http://localhost:4000/blogs/2019-10-01-papers-summary-metric/" />
-<meta property="og:url" content="http://localhost:4000/blogs/2019-10-01-papers-summary-metric/" />
+<link rel="canonical" href="http://localhost:4000/my_docs/wasserstein/" />
+<meta property="og:url" content="http://localhost:4000/my_docs/wasserstein/" />
 <meta property="og:site_name" content="Xinshao Wang" />
 <meta property="og:image" content="http://localhost:4000/assets/img/blog/steve-harvey.jpg" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-10-01T00:00:00+01:00" />
 <script type="application/ld+json">
-{"description":"“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2019-10-01-papers-summary-metric/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"image":"http://localhost:4000/assets/img/blog/steve-harvey.jpg","headline":"Paper Summary on Distance Metric, Representation Learning","dateModified":"2019-10-01T00:00:00+01:00","datePublished":"2019-10-01T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2019-10-01-papers-summary-metric/"},"@context":"https://schema.org"}</script>
+{"description":"“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"WebPage","url":"http://localhost:4000/my_docs/wasserstein/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"image":"http://localhost:4000/assets/img/blog/steve-harvey.jpg","headline":"Wasserstein","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -81,7 +79,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-<link rel="alternate" href="http://localhost:4000/blogs/2019-10-01-papers-summary-metric/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/my_docs/wasserstein/" hreflang="en">
 
 <link rel="shortcut icon" href="/assets/icons/icon.png">
 <link rel="apple-touch-icon" href="/assets/icons/icon.png">
@@ -193,128 +191,62 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 <hy-push-state replace-ids="_main" link-selector="a[href]:not([href*='/assets/']):not(.external):not(.no-push-state)" duration="250" script-selector="script:not([type^='math/tex'])" prefetch>
   
-    <main id="_main" class="content fade-in layout-post" role="main" data-color="rgb(79,177,186)" data-theme-color="rgb(25,55,71)" data-image="/assets/img/sidebar-bg.jpg" data-overlay>
-  
-
-
-
-
-<article id="post-blogs-papers-summary-metric" class="page post mb6" role="article">
+    <main id="_main" class="content fade-in layout-page" role="main" data-color="rgb(79,177,186)" data-theme-color="rgb(25,55,71)" data-image="/assets/img/sidebar-bg.jpg" data-overlay>
+  <article class="page" role="article">
   <header>
-    <h1 class="post-title">
-      
-        Paper Summary on Distance Metric, Representation Learning
-      
-    </h1>
-
-    <p class="post-date heading">
-      
-      <time datetime="2019-10-01T00:00:00+01:00">01 Oct 2019</time>
-      
-      
-      
-      
-      
-
-
-
-
-
-
-
-
-
-in <a href="/blogs/" class="flip-title">Blogs</a>
-
-      
-
-
-
-
-
-
-
-
-
-
-
-    </p>
-
-    
-    
-      <div class="img lead sixteen-nine">
-        
-
-
-  <hy-img src="/assets/img/blog/steve-harvey.jpg" alt="Paper Summary on Distance Metric, Representation Learning" root-margin="512px">
-    <noscript><img data-ignore src="/assets/img/blog/steve-harvey.jpg" alt="Paper Summary on Distance Metric, Representation Learning"></noscript>
-    <span class="loading" slot="loading" hidden>
-      <span class="icon-cog"></span>
-    </span>
-  </hy-img>
-
-
-      </div>
-      
-    
-
+    <h1 class="page-title">Wasserstein</h1>
     
 
 
 
-  
+  <div class="hr pb0"></div>
 
 
   </header>
 
-  
-    <p class="message">Paper Notes on Distance Metric, Representation Learning <br>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> means being highly related to my personal research interest.</p>
+  <p class="message"><img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> means being highly related to my personal research interest.</p>
 
-<h2 id="few-shot-learning"><a href="/my_docs/few-shot/">Few-shot Learning</a></h2>
-<p class="message"><strong>NOTE</strong>:</p>
-
-<h2 id="large-output-spaces"><a href="/my_docs/large-output-spaces/">Large Output Spaces</a></h2>
-<p class="message"><strong>NOTE</strong>:</p>
-
-<h2 id="poincaré-hyperbolic-curvilinear"><a href="/my_docs/Poincare-Hyperbolic-Curvilinear/">Poincaré, Hyperbolic, Curvilinear</a></h2>
-<p class="message"><strong>NOTE</strong>:</p>
-
-<h2 id="wasserstein"><a href="/my_docs/wasserstein/">Wasserstein</a></h2>
-<p class="message"><strong>NOTE</strong>:</p>
-
-<h2 id="1-cvpr-2019-label-propagation-for-deep-semi-supervised-learning">
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Iscen_Label_Propagation_for_Deep_Semi-Supervised_Learning_CVPR_2019_paper.pdf">CVPR 2019-Label Propagation for Deep Semi-supervised Learning</a>
-</h2>
+<h2 id="neurips-2019-generalized-sliced-wasserstein-distances"><a href="https://arxiv.org/abs/1902.00434">NeurIPS 2019-Generalized Sliced Wasserstein Distances</a></h2>
 <p class="message"><strong>NOTE</strong>: 
-Semi-supervised learning is becoming increasingly important because it can combine data carefully labeled by humans with abundant unlabeled data to train deep neural networks. Classic methods on semi-supervised learning that have focused on transductive learning have not been fully exploited in the inductive framework followed by modern deep learning. The same holds for the manifold assumption—that similar examples should get the same prediction. <br>
-In this work, we employ a transductive label propagation method that is based on the <strong>manifold assumption to make predictions</strong> on the entire dataset and use these predictions to generate pseudo-labels for the unlabeled data and train a deep neural network. At the core of the transductive method lies <strong>a nearest neighbor graph of the dataset that we create based on the embeddings of the same network.</strong> 
-Therefore our learning process <strong>iterates between these two steps.</strong> We improve performance on several datasets especially in the few labels regime and show that our work is complementary to current state of the art.</p>
+Wasserstein Distances</p>
 
-<h2 id="1-iclr-2019-unsupervised-learning-via-meta-learning">
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="https://openreview.net/pdf?id=r1My6sR9tX">ICLR 2019-Unsupervised Learning via Meta-Learning</a>
-</h2>
+<h2 id="neurips-2019-tree-sliced-variants-of-wasserstein-distances"><a href="https://arxiv.org/abs/1902.00342">NeurIPS 2019-Tree-Sliced Variants of Wasserstein Distances</a></h2>
 <p class="message"><strong>NOTE</strong>: 
-A central goal of unsupervised learning is to acquire representations from unlabeled data or experience that can be used for more effective learning of downstream tasks from modest amounts of labeled data. <br>
-Many prior unsupervised learning works aim to do so by developing <strong>proxy objectives based on reconstruction, disentanglement, prediction, and other metrics.</strong> <br>
-Instead, we develop an unsupervised meta-learning method that explicitly optimizes for the ability to learn a variety of tasks from small amounts of data. To do so, <strong>we construct tasks from unlabeled data in an automatic way and run meta-learning over the constructed tasks.</strong> Surprisingly, we find that, <strong>when integrated with meta-learning, relatively simple task construction mechanisms, such as clustering embeddings</strong>, lead to good performance on a variety of downstream, human-specified tasks. Our experiments across four image datasets indicate that our unsupervised meta-learning approach acquires a learning algorithm without any labeled data that is applicable to a wide range of downstream classification tasks, improving upon the embedding learned by four prior unsupervised learning methods.</p>
+Wasserstein Distances</p>
 
-<h2 id="neurips-2019-stochastic-shared-embeddings-data-driven-regularization-of-embedding-layers"><a href="https://arxiv.org/pdf/1905.10630.pdf">NeurIPS 2019-Stochastic Shared Embeddings: Data-driven Regularization of Embedding Layers</a></h2>
+<h2 id="neurips-2019-sliced-gromov-wasserstein"><a href="https://arxiv.org/pdf/1905.10124.pdf">NeurIPS 2019-Sliced Gromov-Wasserstein</a></h2>
 <p class="message"><strong>NOTE</strong>: 
-In deep neural nets, lower level embedding layers account for a large portion of the total number of parameters.<strong>Tikhonov regularization, graph-based regularization, and hard parameter sharing are approaches that introduce explicit biases into training in a hope to reduce statistical complexity.</strong> Alternatively, we propose stochastically shared embeddings (SSE), a data-driven approach to regularizing embedding layers, which stochastically transitions between embeddings during stochastic gradient descent (SGD). Because SSE integrates seamlessly with existing SGD algorithms, it can be used with only minor modifications when training large scale neural networks. We develop two versions of SSE: SSE-Graph using knowledge graphs of embeddings; SSE-SE using no prior information. We provide theoretical guarantees for our method and show its empirical effectiveness on 6 distinct tasks, from simple neural networks with one hidden layer in recommender systems, to the transformer and BERT in natural languages. <strong>We find that when used along with widely-used regularization methods such as weight decay and dropout, our proposed SSE can further reduce overfitting, which often leads to more favorable generalization results.</strong> <br>
-We conducted <strong>experiments for a total of 6 tasks from simple neural networks with one hidden layer in recommender systems, to the transformer and BERT in natural languages.</strong></p>
+Wasserstein Distances</p>
 
-<h2 id="neurips-2019-metric-learning-for-adversarial-robustness"><a href="https://arxiv.org/pdf/1909.00900.pdf">NeurIPS 2019-Metric Learning for Adversarial Robustness</a></h2>
+<h2 id="neurips-2019-wasserstein-dependency-measure-for-representation-learning"><a href="https://arxiv.org/pdf/1903.11780.pdf">NeurIPS 2019-Wasserstein Dependency Measure for Representation Learning</a></h2>
 <p class="message"><strong>NOTE</strong>: 
-Deep networks are well-known to be fragile to adversarial attacks. Using several standard image datasets and established attack mechanisms, we conduct an empirical analysis of deep representations under attack, and find that the <strong>attack causes the internal representation to shift closer to the “false” class. Motivated by this observation, we propose to regularize the representation space under attack with metric learning in order to produce more robust classifiers.</strong> By carefully sampling examples for metric learning, our learned representation not only <strong>increases robustness, but also can detect previously unseen adversarial samples.</strong> Quantitative experiments show improvement of robustness accuracy by up to 4% and detection efficiency by up to 6% according to Area Under Curve (AUC) score over baselines.</p>
+Mutual information maximization has emerged
+as a powerful learning objective for unsupervised
+representation learning obtaining state-of-the-art
+performance in applications such as object recognition, speech recognition, and reinforcement
+learning. However, such approaches are fundamentally limited since a tight lower bound on mutual information requires sample size exponential
+in the mutual information. This limits the applicability of these approaches for prediction tasks
+with high mutual information, such as in video
+understanding or reinforcement learning. In these
+settings, such techniques are prone to overfit, both
+in theory and in practice, and capture only a few
+of the relevant factors of variation. This leads to
+incomplete representations that are not optimal
+for downstream tasks. In this work, we empirically demonstrate that mutual information-based
+representation learning approaches do fail to learn
+complete representations on a number of designed
+and real-world tasks. To mitigate these problems
+we introduce the Wasserstein dependency measure, which learns more complete representations
+by using the Wasserstein distance instead of the
+KL divergence in the mutual information estimator. We show that a practical approximation to
+this theoretically motivated solution, constructed
+using Lipschitz constraint techniques from the
+GAN literature, achieves substantially improved
+results on tasks where incomplete representations
+are a major challenge.</p>
 
 
-  
 </article>
-
-
-
-<hr class="dingbat related">
 
 
 
@@ -349,14 +281,6 @@ Deep networks are well-known to be fragile to adversarial attacks. Using several
 
 <div class="navigator">
     
-        <span style="float:left"><a href="/blogs/2019-10-01-Research-GR/">« An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies</a>
-          · <a href="https://xinshaoamoswang.github.io/blogs/2019-10-01-Research-GR/#disqus_thread"></a>
-        </span>
-    
-    
-        <span style="float:right"><a href="/blogs/2019-10-01-papers-summary-noise/">Paper Summary on Noise, Anomalies, Adversaries »</a>
-          · <a href="https://xinshaoamoswang.github.io/blogs/2019-10-01-papers-summary-noise/#disqus_thread"></a>
-        </span>
     
 </div>
 
@@ -371,8 +295,8 @@ Deep networks are well-known to be fragile to adversarial attacks. Using several
 
 <script>
     var disqus_config = function () {
-            this.page.url = "https://xinshaoamoswang.github.io/blogs/2019-10-01-papers-summary-metric/";
-            this.page.identifier = "/blogs/papers-summary-metric";
+            this.page.url = "https://xinshaoamoswang.github.io/my_docs/wasserstein/";
+            this.page.identifier = "";
         }; 
 
     (function() { 
@@ -387,6 +311,8 @@ Deep networks are well-known to be fragile to adversarial attacks. Using several
 <noscript>Please enable JavaScript to view the 
     <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
 </noscript>
+
+
 
 
 
@@ -437,7 +363,7 @@ Computer Vision (Image/Video Recognition, Person ReID).
     
       
       <li>
-        <a id="_navigation" href="/blogs/" class="sidebar-nav-item active">
+        <a id="_navigation" href="/blogs/" class="sidebar-nav-item">
           Blog
         </a>
       </li>
