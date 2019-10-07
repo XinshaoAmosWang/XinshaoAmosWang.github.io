@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/blogs/</loc>
-<lastmod>2019-10-07T18:31:42+01:00</lastmod>
+<lastmod>2019-10-07T22:09:59+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/projects/</loc>
-<lastmod>2019-10-07T18:31:42+01:00</lastmod>
+<lastmod>2019-10-07T22:09:59+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/projects/2017-07-01-undergraduate-graduation/</loc>
@@ -36,6 +36,12 @@
 <loc>http://localhost:4000/my_docs/Adversarial-Examples-Reading-List/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/my_docs/Denoiser/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/my_docs/Label-Noise/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/my_docs/Poincare-Hyperbolic-Curvilinear/</loc>
 </url>
 <url>
@@ -48,10 +54,19 @@
 <loc>http://localhost:4000/Resume/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/my_docs/Semi-Un-Supervised-Learning/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/my_docs/Stochastic-Gradient-Noise/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/docs/advanced/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/my_docs/adversary/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/docs/basics/</loc>

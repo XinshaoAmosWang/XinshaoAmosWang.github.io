@@ -25,3 +25,14 @@ comment: true
 [京东安联](https://www.allianz360.com/?media=d4cd86c5e9444316994e5a2c00fa9cd6&type=1)
 
 [Aer Lingus: Dublin T2 => London Heathrow](https://www.aerlingus.com/html/flightSearchResult.html#/fareType=ONEWAY&fareCategory=ECONOMY&promoCode=&numAdults=1&numChildren=0&numInfants=0&groupBooking=false&sourceAirportCode_0=DUB&destinationAirportCode_0=LHR&departureDate_0=2019-10-19&flightCode_0=EI168)
+
+
+## GDrive
+
+[GDrive Github](https://github.com/gdrive-org/gdrive)
+
+[List Folder, Root](https://github.com/gdrive-org/gdrive/issues/116)
+
+[Download entire folder](https://askubuntu.com/questions/867284/using-gdrive-to-download-entire-folder)
+
+[How to use GDrive in linux?](http://www.linuxandubuntu.com/home/google-drive-cli-client-for-linux)

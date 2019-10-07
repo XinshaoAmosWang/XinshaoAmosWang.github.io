@@ -1,0 +1,24 @@
+---
+layout: page
+title: Stochastic-Gradient-Noise
+description: >
+  
+comment: true
+---
+
+
+:+1: means being highly related to my personal research interest. 
+{:.message}
+
+
+
+## :+1: [ICML 2019-A Tail-Index Analysis of Stochastic Gradient Noise in Deep Neural Networks](http://proceedings.mlr.press/v97/simsekli19a/simsekli19a.pdf)
+**NOTE**: Stochastic Gradient Noise <br />
+Stochastic gradient descent (SGD) has been widely used in machine learning due to its computational efficiency and favorable generalization properties. Recently, it has been empirically demonstrated that the gradient noise in several deep learning settings admits a non-Gaussian, heavy-tailed behavior. **This suggests that the gradient noise can be modeled by using α-stable distributions, a family of heavy-tailed distributions that appear in the generalized central limit theorem. In this context, SGD can be viewed as a discretization of a stochastic differential equation (SDE) driven by a Lévy motion, and the metastability results for this SDE can then be used for illuminating the behavior of SGD, especially in terms of `preferring wide minima'.** While this approach brings a new perspective for analyzing SGD, it is limited in the sense that, due to the time discretization, SGD might admit a significantly different behavior than its continuous-time limit. Intuitively, the behaviors of these two systems are expected to be similar to each other only when the discretization step is sufficiently small; however, to the best of our knowledge, **there is no theoretical understanding on how small the step-size should be chosen in order to guarantee that the discretized system inherits the properties of the continuous-time system.** In this study, we provide formal theoretical analysis where we derive explicit conditions for the step-size such that the metastability behavior of the discrete-time system is similar to its continuous-time limit. We show that the behaviors of the two systems are indeed similar for small step-sizes and we identify how the error depends on the algorithm and problem parameters. We illustrate our results with simulations on a synthetic model and neural networks.
+{:.message}
+
+
+## [NeurIPS 2019-First Exit Time Analysis of Stochastic Gradient Descent Under Heavy-Tailed Gradient Noise](https://arxiv.org/pdf/1906.09069.pdf)
+**NOTE**: Stochastic Gradient Noise
+{:.message}
+
