@@ -7,10 +7,11 @@ image: /assets/img/blog/steve-harvey.jpg
 comment: true
 ---
 
-Paper Notes on Distance Metric, Representation Learning
+Paper Notes on Distance Metric, Representation Learning <br />
+:+1: means being highly related to my personal research interest. 
 {:.message}
 
-## [CVPR 2019-Label Propagation for Deep Semi-supervised Learning](http://openaccess.thecvf.com/content_CVPR_2019/papers/Iscen_Label_Propagation_for_Deep_Semi-Supervised_Learning_CVPR_2019_paper.pdf)
+## :+1: [CVPR 2019-Label Propagation for Deep Semi-supervised Learning](http://openaccess.thecvf.com/content_CVPR_2019/papers/Iscen_Label_Propagation_for_Deep_Semi-Supervised_Learning_CVPR_2019_paper.pdf)
 **NOTE**: 
 Semi-supervised learning is becoming increasingly important because it can combine data carefully labeled by humans with abundant unlabeled data to train deep neural networks. Classic methods on semi-supervised learning that have focused on transductive learning have not been fully exploited in the inductive framework followed by modern deep learning. The same holds for the manifold assumption—that similar examples should get the same prediction. <br />
 In this work, **we employ a transductive label propagation method that is based on the manifold assumption to make predictions on the entire dataset and use these predictions to generate pseudo-labels for the unlabeled data and train a deep neural network.** At the core of the transductive method lies a nearest neighbor graph of the dataset that we create based on the embeddings of the same network. 

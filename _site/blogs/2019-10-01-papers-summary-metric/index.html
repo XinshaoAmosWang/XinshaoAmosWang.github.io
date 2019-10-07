@@ -188,28 +188,12 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
     </div>
   </div>
 </div>
-<hr class="sr-only" hidden />
+<hr class="sr-only" hidden>
 
 
-<hy-push-state
-  replace-ids="_main"
-  link-selector="a[href]:not([href*='/assets/']):not(.external):not(.no-push-state)"
-  duration="250"
-  script-selector="script:not([type^='math/tex'])"
-  prefetch
->
+<hy-push-state replace-ids="_main" link-selector="a[href]:not([href*='/assets/']):not(.external):not(.no-push-state)" duration="250" script-selector="script:not([type^='math/tex'])" prefetch>
   
-    <main
-  id="_main"
-  class="content fade-in layout-post"
-  role="main"
-  data-color="rgb(79,177,186)"
-  data-theme-color="rgb(25,55,71)"
-  
-    data-image="/assets/img/sidebar-bg.jpg"
-    data-overlay
-  
-  >
+    <main id="_main" class="content fade-in layout-post" role="main" data-color="rgb(79,177,186)" data-theme-color="rgb(25,55,71)" data-image="/assets/img/sidebar-bg.jpg" data-overlay>
   
 
 
@@ -262,20 +246,8 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
         
 
 
-  <hy-img
-    
-    src="/assets/img/blog/steve-harvey.jpg"
-    
-    alt="Paper Summary on Distance Metric, Representation Learning"
-  
-    
-    root-margin="512px"
-  >
-    <noscript><img data-ignore 
-    src="/assets/img/blog/steve-harvey.jpg"
-    
-    alt="Paper Summary on Distance Metric, Representation Learning"
-  /></noscript>
+  <hy-img src="/assets/img/blog/steve-harvey.jpg" alt="Paper Summary on Distance Metric, Representation Learning" root-margin="512px">
+    <noscript><img data-ignore src="/assets/img/blog/steve-harvey.jpg" alt="Paper Summary on Distance Metric, Representation Learning"></noscript>
     <span class="loading" slot="loading" hidden>
       <span class="icon-cog"></span>
     </span>
@@ -296,34 +268,37 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
   </header>
 
   
-    <p class="message">Paper Notes on Distance Metric, Representation Learning</p>
+    <p class="message">Paper Notes on Distance Metric, Representation Learning <br>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> means being highly related to my personal research interest.</p>
 
-<h2 id="cvpr-2019-label-propagation-for-deep-semi-supervised-learning"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Iscen_Label_Propagation_for_Deep_Semi-Supervised_Learning_CVPR_2019_paper.pdf">CVPR 2019-Label Propagation for Deep Semi-supervised Learning</a></h2>
+<h2 id="1-cvpr-2019-label-propagation-for-deep-semi-supervised-learning">
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Iscen_Label_Propagation_for_Deep_Semi-Supervised_Learning_CVPR_2019_paper.pdf">CVPR 2019-Label Propagation for Deep Semi-supervised Learning</a>
+</h2>
 <p class="message"><strong>NOTE</strong>: 
-Semi-supervised learning is becoming increasingly important because it can combine data carefully labeled by humans with abundant unlabeled data to train deep neural networks. Classic methods on semi-supervised learning that have focused on transductive learning have not been fully exploited in the inductive framework followed by modern deep learning. The same holds for the manifold assumption—that similar examples should get the same prediction. <br />
+Semi-supervised learning is becoming increasingly important because it can combine data carefully labeled by humans with abundant unlabeled data to train deep neural networks. Classic methods on semi-supervised learning that have focused on transductive learning have not been fully exploited in the inductive framework followed by modern deep learning. The same holds for the manifold assumption—that similar examples should get the same prediction. <br>
 In this work, <strong>we employ a transductive label propagation method that is based on the manifold assumption to make predictions on the entire dataset and use these predictions to generate pseudo-labels for the unlabeled data and train a deep neural network.</strong> At the core of the transductive method lies a nearest neighbor graph of the dataset that we create based on the embeddings of the same network. 
 Therefore our learning process iterates between these two steps. We improve performance on several datasets especially in the few labels regime and show that our work is complementary to current state of the art.</p>
 
 <h2 id="neurips-2019-learning-to-self-train-for-semi-supervised-few-shot-classification"><a href="https://arxiv.org/pdf/1906.00562.pdf">NeurIPS 2019-Learning to Self-Train for Semi-Supervised Few-Shot Classification</a></h2>
 <p class="message"><strong>NOTE</strong>: 
-Few-shot classification (FSC) is challenging due to the scarcity of labeled training data (e.g. only one labeled data point per class). Meta-learning has shown to achieve promising results by learning to initialize a classification model for FSC. In this paper we propose a novel semi-supervised meta-learning method called learning to self-train (LST) that leverages unlabeled data and specifically meta-learns how to cherry-pick and label such unsupervised data to further improve performance. To this end, we train the LST model through a large number of semi-supervised few-shot tasks. On each task, we train a few-shot model to predict pseudo labels for unlabeled data, and then iterate the self-training steps on labeled and pseudo-labeled data with each step followed by fine-tuning. We additionally learn a soft weighting network (SWN) to optimize the self-training weights of pseudo labels so that better ones can contribute more to gradient descent optimization. We evaluate our LST method on two ImageNet benchmarks for semi-supervised few-shot classification and achieve large improvements over the state-of-the-art method. <br />
+Few-shot classification (FSC) is challenging due to the scarcity of labeled training data (e.g. only one labeled data point per class). Meta-learning has shown to achieve promising results by learning to initialize a classification model for FSC. In this paper we propose a novel semi-supervised meta-learning method called learning to self-train (LST) that leverages unlabeled data and specifically meta-learns how to cherry-pick and label such unsupervised data to further improve performance. To this end, we train the LST model through a large number of semi-supervised few-shot tasks. On each task, we train a few-shot model to predict pseudo labels for unlabeled data, and then iterate the self-training steps on labeled and pseudo-labeled data with each step followed by fine-tuning. We additionally learn a soft weighting network (SWN) to optimize the self-training weights of pseudo labels so that better ones can contribute more to gradient descent optimization. We evaluate our LST method on two ImageNet benchmarks for semi-supervised few-shot classification and achieve large improvements over the state-of-the-art method. <br>
 <a href="https://github.com/xinzheli1217/learning-to-self-train">Code url</a></p>
 
 <h2 id="iclr-2018-meta-learning-for-semi-supervised-few-shot-classification"><a href="https://openreview.net/pdf?id=HJcSzz-CZ">ICLR 2018-Meta-Learning for Semi-Supervised Few-Shot Classification</a></h2>
 <p class="message"><strong>NOTE</strong>: 
-In few-shot classification, we are interested in learning algorithms that train a classifier from only a handful of labeled examples. Recent progress in few-shot classification has featured meta-learning, in which a parameterized model for a learning algorithm is defined and trained on episodes representing different classification problems, each with a small labeled training set and its corresponding test set. In this work, we advance this few-shot classification paradigm towards a scenario where unlabeled examples are also available within each episode. We consider two situations: one where all unlabeled examples are assumed to belong to the same set of classes as the labeled examples of the episode, as well as the more challenging situation where examples from other distractor classes are also provided. To address this paradigm, we propose novel extensions of Prototypical Networks (Snell et al., 2017) that are augmented with the ability to use unlabeled examples when producing prototypes. These models are trained in an end-to-end way on episodes, to learn to leverage the unlabeled examples successfully. We evaluate these methods on versions of the Omniglot and miniImageNet benchmarks, adapted to this new framework augmented with unlabeled examples. We also propose a new split of ImageNet, consisting of a large set of classes, with a hierarchical structure. Our experiments confirm that our Prototypical Networks can learn to improve their predictions due to unlabeled examples, much like a semi-supervised algorithm would. <br />
+In few-shot classification, we are interested in learning algorithms that train a classifier from only a handful of labeled examples. Recent progress in few-shot classification has featured meta-learning, in which a parameterized model for a learning algorithm is defined and trained on episodes representing different classification problems, each with a small labeled training set and its corresponding test set. In this work, we advance this few-shot classification paradigm towards a scenario where unlabeled examples are also available within each episode. We consider two situations: one where all unlabeled examples are assumed to belong to the same set of classes as the labeled examples of the episode, as well as the more challenging situation where examples from other distractor classes are also provided. To address this paradigm, we propose novel extensions of Prototypical Networks (Snell et al., 2017) that are augmented with the ability to use unlabeled examples when producing prototypes. These models are trained in an end-to-end way on episodes, to learn to leverage the unlabeled examples successfully. We evaluate these methods on versions of the Omniglot and miniImageNet benchmarks, adapted to this new framework augmented with unlabeled examples. We also propose a new split of ImageNet, consisting of a large set of classes, with a hierarchical structure. Our experiments confirm that our Prototypical Networks can learn to improve their predictions due to unlabeled examples, much like a semi-supervised algorithm would. <br>
 TL;DR: <strong>We propose novel extensions of Prototypical Networks that are augmented with the ability to use unlabeled examples when producing prototypes.</strong></p>
 
 <h2 id="iclr-2019-unsupervised-learning-via-meta-learning"><a href="https://openreview.net/pdf?id=r1My6sR9tX">ICLR 2019-Unsupervised Learning via Meta-Learning</a></h2>
 <p class="message"><strong>NOTE</strong>: 
-A central goal of unsupervised learning is to acquire representations from unlabeled data or experience that can be used for more effective learning of downstream tasks from modest amounts of labeled data. <br />
-Many prior unsupervised learning works aim to do so by developing proxy objectives based on <strong>reconstruction, disentanglement, prediction, and other metrics.</strong> <br />
+A central goal of unsupervised learning is to acquire representations from unlabeled data or experience that can be used for more effective learning of downstream tasks from modest amounts of labeled data. <br>
+Many prior unsupervised learning works aim to do so by developing proxy objectives based on <strong>reconstruction, disentanglement, prediction, and other metrics.</strong> <br>
 Instead, we develop an unsupervised meta-learning method that explicitly optimizes for the ability to learn a variety of tasks from small amounts of data. To do so, we construct tasks from unlabeled data in an automatic way and run meta-learning over the constructed tasks. Surprisingly, we find that, <strong>when integrated with meta-learning, relatively simple task construction mechanisms, such as clustering embeddings</strong>, lead to good performance on a variety of downstream, human-specified tasks. Our experiments across four image datasets indicate that our unsupervised meta-learning approach acquires a learning algorithm without any labeled data that is applicable to a wide range of downstream classification tasks, improving upon the embedding learned by four prior unsupervised learning methods.</p>
 
 <h2 id="neurips-2019-unsupervised-meta-learning-for-few-show-image-classification"><a href="https://arxiv.org/pdf/1811.11819.pdf">NeurIPS 2019-Unsupervised Meta Learning for Few-Show Image Classification</a></h2>
 <p class="message"><strong>NOTE</strong>: 
-Few-shot or one-shot learning of classifiers for images or videos is an important next frontier in computer vision. The extreme paucity of training data means that the learning must start with a significant inductive bias towards the type of task to be learned. One way to acquire this is by meta-learning on tasks similar to the target task. However, if the meta-learning phase requires labeled data for a large number of tasks closely related to the target task, it not only increases the difficulty and cost, but also conceptually limits the approach to variations of well-understood domains.<br />
-In this paper, we propose UMTRA, an algorithm that performs meta-learning on an unlabeled dataset in an unsupervised fashion, without putting any constraint on the classifier network architecture. The only requirements towards the dataset are: sufficient size, diversity and number of classes, and relevance of the domain to the one in the target task. Exploiting this information, UMTRA generates synthetic training tasks for the meta-learning phase.<br />
+Few-shot or one-shot learning of classifiers for images or videos is an important next frontier in computer vision. The extreme paucity of training data means that the learning must start with a significant inductive bias towards the type of task to be learned. One way to acquire this is by meta-learning on tasks similar to the target task. However, if the meta-learning phase requires labeled data for a large number of tasks closely related to the target task, it not only increases the difficulty and cost, but also conceptually limits the approach to variations of well-understood domains.<br>
+In this paper, we propose UMTRA, an algorithm that performs meta-learning on an unlabeled dataset in an unsupervised fashion, without putting any constraint on the classifier network architecture. The only requirements towards the dataset are: sufficient size, diversity and number of classes, and relevance of the domain to the one in the target task. Exploiting this information, UMTRA generates synthetic training tasks for the meta-learning phase.<br>
 We evaluate UMTRA on few-shot and one-shot learning on both image and video domains. To the best of our knowledge, we are the first to evaluate meta-learning approaches on UCF-101. On the Omniglot and Mini-Imagenet few-shot learning benchmarks, UMTRA outperforms every tested approach based on unsupervised learning of representations, while alternating for the best performance with the recent CACTUs algorithm. Compared to supervised model-agnostic meta-learning approaches, UMTRA trades off some classification accuracy for a vast decrease in the number of labeled data needed. For instance, on the five-way one-shot classification on the Omniglot, we retain 85% of the accuracy of MAML, a recently proposed supervised meta-learning algorithm, while reducing the number of required labels from 24005 to 5.</p>
 
 <h2 id="neurips-2019-adaptive-cross-modal-few-shot-learning"><a href="">NeurIPS 2019-Adaptive Cross-Modal Few-shot Learning</a></h2>
@@ -383,13 +358,13 @@ Hyperbolic embeddings have recently gained attention in machine learning due to 
 
 <h2 id="neurips-2019-numerically-accurate-hyperbolic-embeddings-using-tiling-based-models"><a href="">NeurIPS 2019-Numerically Accurate Hyperbolic Embeddings Using Tiling-Based Models</a></h2>
 <p class="message"><strong>NOTE</strong>: 
-Not available yet. <br />
-Related work: <br />
-     <a href="https://hazyresearch.github.io/hyperE/">HyperE: Hyperbolic Embeddings for Entities</a>.<br /></p>
+Not available yet. <br>
+Related work: <br>
+     <a href="https://hazyresearch.github.io/hyperE/">HyperE: Hyperbolic Embeddings for Entities</a>.<br></p>
 
 <h2 id="neurips-2019-stochastic-shared-embeddings-data-driven-regularization-of-embedding-layers"><a href="https://arxiv.org/pdf/1905.10630.pdf">NeurIPS 2019-Stochastic Shared Embeddings: Data-driven Regularization of Embedding Layers</a></h2>
 <p class="message"><strong>NOTE</strong>: 
-In deep neural nets, lower level embedding layers account for a large portion of the total number of parameters.<strong>Tikhonov regularization, graph-based regularization, and hard parameter sharing are approaches that introduce explicit biases into training in a hope to reduce statistical complexity.</strong> Alternatively, we propose stochastically shared embeddings (SSE), a data-driven approach to regularizing embedding layers, which stochastically transitions between embeddings during stochastic gradient descent (SGD). Because SSE integrates seamlessly with existing SGD algorithms, it can be used with only minor modifications when training large scale neural networks. We develop two versions of SSE: SSE-Graph using knowledge graphs of embeddings; SSE-SE using no prior information. We provide theoretical guarantees for our method and show its empirical effectiveness on 6 distinct tasks, from simple neural networks with one hidden layer in recommender systems, to the transformer and BERT in natural languages. <strong>We find that when used along with widely-used regularization methods such as weight decay and dropout, our proposed SSE can further reduce overfitting, which often leads to more favorable generalization results.</strong> <br />
+In deep neural nets, lower level embedding layers account for a large portion of the total number of parameters.<strong>Tikhonov regularization, graph-based regularization, and hard parameter sharing are approaches that introduce explicit biases into training in a hope to reduce statistical complexity.</strong> Alternatively, we propose stochastically shared embeddings (SSE), a data-driven approach to regularizing embedding layers, which stochastically transitions between embeddings during stochastic gradient descent (SGD). Because SSE integrates seamlessly with existing SGD algorithms, it can be used with only minor modifications when training large scale neural networks. We develop two versions of SSE: SSE-Graph using knowledge graphs of embeddings; SSE-SE using no prior information. We provide theoretical guarantees for our method and show its empirical effectiveness on 6 distinct tasks, from simple neural networks with one hidden layer in recommender systems, to the transformer and BERT in natural languages. <strong>We find that when used along with widely-used regularization methods such as weight decay and dropout, our proposed SSE can further reduce overfitting, which often leads to more favorable generalization results.</strong> <br>
 We conducted <strong>experiments for a total of 6 tasks from simple neural networks with one hidden layer in recommender systems, to the transformer and BERT in natural languages.</strong></p>
 
 <h2 id="neurips-2019-curvilinear-distance-metric-learning"><a href="">NeurIPS 2019-Curvilinear Distance Metric Learning</a></h2>
@@ -445,7 +420,7 @@ are a major challenge.</p>
 
 
 
-<hr class="dingbat related" />
+<hr class="dingbat related">
 
 
 
@@ -471,8 +446,7 @@ are a major challenge.</p>
   });
 </script>
 
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML">
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML">
 </script>
 
 
@@ -526,26 +500,20 @@ are a major challenge.</p>
 
   
 <footer role="contentinfo">
-  <hr/>
+  <hr>
   
     <p><small class="copyright">© 2019. All rights reserved.
 </small></p>
   
   
   <p><small>Welcome to Xinshao Wang's Personal Website</small></p>
-  <hr class="sr-only"/>
+  <hr class="sr-only">
 </footer>
 
 
 </main>
 
-    <hy-drawer
-  class=""
-  align="left"
-  threshold="10"
-  touch-events
-  prevent-default
->
+    <hy-drawer class="" align="left" threshold="10" touch-events prevent-default>
   <header id="_sidebar" class="sidebar" role="banner">
     
     <div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
@@ -554,7 +522,7 @@ are a major challenge.</p>
       <div class="sidebar-about">
         
           <a class="no-hover" href="/" tabindex="-1">
-            <img src="/assets/icons/android-chrome-192x192.png" class="avatar" alt="Xinshao Wang" data-ignore />
+            <img src="/assets/icons/android-chrome-192x192.png" class="avatar" alt="Xinshao Wang" data-ignore>
           </a>
         
         <h2 class="h1"><a href="/">Xinshao Wang</a></h2>
@@ -575,48 +543,28 @@ Computer Vision (Image/Video Recognition, Person ReID).
     
       
       <li>
-        <a
-          id="_navigation"
-          href="/blogs/"
-          class="sidebar-nav-item active"
-          
-        >
+        <a id="_navigation" href="/blogs/" class="sidebar-nav-item active">
           Blog
         </a>
       </li>
     
       
       <li>
-        <a
-          
-          href="/projects/"
-          class="sidebar-nav-item"
-          
-        >
+        <a href="/projects/" class="sidebar-nav-item">
           Projects
         </a>
       </li>
     
       
       <li>
-        <a
-          
-          href="/Resume/"
-          class="sidebar-nav-item"
-          
-        >
+        <a href="/Resume/" class="sidebar-nav-item">
           Resume
         </a>
       </li>
     
       
       <li>
-        <a
-          
-          href="/about/"
-          class="sidebar-nav-item"
-          
-        >
+        <a href="/about/" class="sidebar-nav-item">
           About ME
         </a>
       </li>
@@ -647,7 +595,7 @@ Computer Vision (Image/Video Recognition, Person ReID).
     </div>
   </header>
 </hy-drawer>
-<hr class="sr-only" hidden />
+<hr class="sr-only" hidden>
 
   
 </hy-push-state>
