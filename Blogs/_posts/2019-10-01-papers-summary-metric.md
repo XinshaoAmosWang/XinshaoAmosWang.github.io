@@ -11,27 +11,17 @@ comment: true
 {:.message}
 
 ## [Few-shot Learning](../../my_docs/few-shot.md)
-**NOTE**: 
-{:.message}
 
 
 ## [Large Output Spaces](../../my_docs/large-output-spaces.md)
-**NOTE**: 
-{:.message}
 
 
 ## [Poincaré, Hyperbolic, Curvilinear](../../my_docs/Poincare-Hyperbolic-Curvilinear.md)
-**NOTE**: 
-{:.message}
 
 ## [Wasserstein](../../my_docs/wasserstein.md)
-**NOTE**: 
-{:.message}
 
 
 ## [Semi-supervised or Unsupervised Learning](../../my_docs/Semi-Un-Supervised-Learning.md)
-**NOTE**: 
-{:.message}
 
 
 

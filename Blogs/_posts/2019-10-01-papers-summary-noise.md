@@ -12,23 +12,15 @@ comment: true
 
 
 ## [GAN, Adversary Examples, Adversary Machine Learning](../../my_docs/adversary.md)
-**NOTE**: 
-{:.message}
 
 
 ## [Label Noise](../../my_docs/Label-Noise.md)
-**NOTE**: 
-{:.message}
 
 
 ## [Stochastic-Gradient-Noise](../../my_docs/Stochastic-Gradient-Noise.md)
-**NOTE**: 
-{:.message}
 
 
 ## [Denoiser, Noise Removal](../../my_docs/Denoiser.md)
-**NOTE**: 
-{:.message}
 
 
 

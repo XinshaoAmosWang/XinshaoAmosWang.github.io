@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-10-07T22:09:59+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-10-08T11:20:00+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
 </subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies</title><link href="http://localhost:4000/blogs/2019-10-01-Research-GR/" rel="alternate" type="text/html" title="An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies" /><published>2019-10-01T00:00:00+01:00</published><updated>2019-10-01T00:00:00+01:00</updated><id>http://localhost:4000/blogs/Research-GR</id><content type="html" xml:base="http://localhost:4000/blogs/2019-10-01-Research-GR/">&lt;p&gt;General applicability: Label noise (semantic noise), outliers, heavy perceptual data noise, etc.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;It is reasonable to assume that there is semantic noise in large-scale training datasets&lt;/strong&gt;:&lt;/p&gt;
@@ -168,19 +168,14 @@ deep learning. In ICML, 2019.&lt;/p&gt;
 &lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">General applicability: Label noise (semantic noise), outliers, heavy perceptual data noise, etc.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/GR/Figure1.png" /></entry><entry><title type="html">Paper Summary on Distance Metric, Representation Learning</title><link href="http://localhost:4000/blogs/2019-10-01-papers-summary-metric/" rel="alternate" type="text/html" title="Paper Summary on Distance Metric, Representation Learning" /><published>2019-10-01T00:00:00+01:00</published><updated>2019-10-01T00:00:00+01:00</updated><id>http://localhost:4000/blogs/papers-summary-metric</id><content type="html" xml:base="http://localhost:4000/blogs/2019-10-01-papers-summary-metric/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 
 &lt;h2 id=&quot;few-shot-learning&quot;&gt;&lt;a href=&quot;/my_docs/few-shot/&quot;&gt;Few-shot Learning&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;h2 id=&quot;large-output-spaces&quot;&gt;&lt;a href=&quot;/my_docs/large-output-spaces/&quot;&gt;Large Output Spaces&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;h2 id=&quot;poincaré-hyperbolic-curvilinear&quot;&gt;&lt;a href=&quot;/my_docs/Poincare-Hyperbolic-Curvilinear/&quot;&gt;Poincaré, Hyperbolic, Curvilinear&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;h2 id=&quot;wasserstein&quot;&gt;&lt;a href=&quot;/my_docs/wasserstein/&quot;&gt;Wasserstein&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;h2 id=&quot;semi-supervised-or-unsupervised-learning&quot;&gt;&lt;a href=&quot;/my_docs/Semi-Un-Supervised-Learning/&quot;&gt;Semi-supervised or Unsupervised Learning&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;h2 id=&quot;neurips-2019-metric-learning-for-adversarial-robustness&quot;&gt;&lt;a href=&quot;https://arxiv.org/pdf/1909.00900.pdf&quot;&gt;NeurIPS 2019-Metric Learning for Adversarial Robustness&lt;/a&gt;&lt;/h2&gt;
 &lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: 
@@ -192,16 +187,12 @@ In deep neural nets, lower level embedding layers account for a large portion of
 We conducted &lt;strong&gt;experiments for a total of 6 tasks from simple neural networks with one hidden layer in recommender systems, to the transformer and BERT in natural languages.&lt;/strong&gt;&lt;/p&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Paper Summary on Noise, Anomalies, Adversaries</title><link href="http://localhost:4000/blogs/2019-10-01-papers-summary-noise/" rel="alternate" type="text/html" title="Paper Summary on Noise, Anomalies, Adversaries" /><published>2019-10-01T00:00:00+01:00</published><updated>2019-10-01T00:00:00+01:00</updated><id>http://localhost:4000/blogs/papers-summary-noise</id><content type="html" xml:base="http://localhost:4000/blogs/2019-10-01-papers-summary-noise/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 
 &lt;h2 id=&quot;gan-adversary-examples-adversary-machine-learning&quot;&gt;&lt;a href=&quot;/my_docs/adversary/&quot;&gt;GAN, Adversary Examples, Adversary Machine Learning&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;h2 id=&quot;label-noise&quot;&gt;&lt;a href=&quot;/my_docs/Label-Noise/&quot;&gt;Label Noise&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;h2 id=&quot;stochastic-gradient-noise&quot;&gt;&lt;a href=&quot;/my_docs/Stochastic-Gradient-Noise/&quot;&gt;Stochastic-Gradient-Noise&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;h2 id=&quot;denoiser-noise-removal&quot;&gt;&lt;a href=&quot;/my_docs/Denoiser/&quot;&gt;Denoiser, Noise Removal&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;h2 id=&quot;1--neurips-2019-noise-tolerant-fair-classification&quot;&gt;:+1:  &lt;a href=&quot;https://arxiv.org/abs/1901.10837&quot;&gt;NeurIPS 2019-Noise-tolerant fair classification&lt;/a&gt;&lt;/h2&gt;
 &lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Existing work on the problem operates &lt;strong&gt;under the assumption that the sensitive feature available in one’s training sample is perfectly reliable.&lt;/strong&gt; This assumption may be violated in many real-world cases: for example, respondents to a survey may choose to conceal or obfuscate their group identity out of fear of potential discrimination. This poses the question of whether one can still learn fair classifiers given noisy sensitive features.&lt;/p&gt;
