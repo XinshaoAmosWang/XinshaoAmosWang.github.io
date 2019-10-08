@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-10-08T11:20:00+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-10-08T11:36:04+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
 </subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies</title><link href="http://localhost:4000/blogs/2019-10-01-Research-GR/" rel="alternate" type="text/html" title="An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies" /><published>2019-10-01T00:00:00+01:00</published><updated>2019-10-01T00:00:00+01:00</updated><id>http://localhost:4000/blogs/Research-GR</id><content type="html" xml:base="http://localhost:4000/blogs/2019-10-01-Research-GR/">&lt;p&gt;General applicability: Label noise (semantic noise), outliers, heavy perceptual data noise, etc.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;It is reasonable to assume that there is semantic noise in large-scale training datasets&lt;/strong&gt;:&lt;/p&gt;
@@ -168,18 +168,43 @@ deep learning. In ICML, 2019.&lt;/p&gt;
 &lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">General applicability: Label noise (semantic noise), outliers, heavy perceptual data noise, etc.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/GR/Figure1.png" /></entry><entry><title type="html">Paper Summary on Distance Metric, Representation Learning</title><link href="http://localhost:4000/blogs/2019-10-01-papers-summary-metric/" rel="alternate" type="text/html" title="Paper Summary on Distance Metric, Representation Learning" /><published>2019-10-01T00:00:00+01:00</published><updated>2019-10-01T00:00:00+01:00</updated><id>http://localhost:4000/blogs/papers-summary-metric</id><content type="html" xml:base="http://localhost:4000/blogs/2019-10-01-papers-summary-metric/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 
 &lt;h2 id=&quot;few-shot-learning&quot;&gt;&lt;a href=&quot;/my_docs/few-shot/&quot;&gt;Few-shot Learning&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;ICLR 2018-Meta-Learning for Semi-Supervised Few-Shot Classification&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Unsupervised Meta Learning for Few-Show Image Classification&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Learning to Self-Train for Semi-Supervised Few-Shot Classification&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Adaptive Cross-Modal Few-shot Learning&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Cross Attention Network for Few-shot Classification&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Incremental Few-Shot Learning with Attention Attractor Networks&lt;/li&gt;
+  &lt;li&gt;ICML 2019-LGM-Net: Learning to Generate Matching Networks for Few-Shot Learning&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;large-output-spaces&quot;&gt;&lt;a href=&quot;/my_docs/large-output-spaces/&quot;&gt;Large Output Spaces&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;NeurIPS 2019-Breaking the Glass Ceiling for Embedding-Based Classifiers for Large Output Spaces&lt;/li&gt;
+  &lt;li&gt;AISTATS 2019-Stochastic Negative Mining for Learning with Large Output Spaces&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;poincaré-hyperbolic-curvilinear&quot;&gt;&lt;a href=&quot;/my_docs/Poincare-Hyperbolic-Curvilinear/&quot;&gt;Poincaré, Hyperbolic, Curvilinear&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;NeurIPS 2019-Multi-relational Poincaré Graph Embeddings&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Numerically Accurate Hyperbolic Embeddings Using Tiling-Based Models&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Curvilinear Distance Metric Learning&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;wasserstein&quot;&gt;&lt;a href=&quot;/my_docs/wasserstein/&quot;&gt;Wasserstein&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;NeurIPS 2019-Generalized Sliced Wasserstein Distances&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Tree-Sliced Variants of Wasserstein Distances&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Sliced Gromov-Wasserstein&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Wasserstein Dependency Measure for Representation Learning&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;semi-supervised-or-unsupervised-learning&quot;&gt;&lt;a href=&quot;/my_docs/Semi-Un-Supervised-Learning/&quot;&gt;Semi-supervised or Unsupervised Learning&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h2 id=&quot;neurips-2019-metric-learning-for-adversarial-robustness&quot;&gt;&lt;a href=&quot;https://arxiv.org/pdf/1909.00900.pdf&quot;&gt;NeurIPS 2019-Metric Learning for Adversarial Robustness&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: 
-Deep networks are well-known to be fragile to adversarial attacks. Using several standard image datasets and established attack mechanisms, we conduct an empirical analysis of deep representations under attack, and find that the &lt;strong&gt;attack causes the internal representation to shift closer to the “false” class. Motivated by this observation, we propose to regularize the representation space under attack with metric learning in order to produce more robust classifiers.&lt;/strong&gt; By carefully sampling examples for metric learning, our learned representation not only &lt;strong&gt;increases robustness, but also can detect previously unseen adversarial samples.&lt;/strong&gt; Quantitative experiments show improvement of robustness accuracy by up to 4% and detection efficiency by up to 6% according to Area Under Curve (AUC) score over baselines.&lt;/p&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;CVPR 2019-Label Propagation for Deep Semi-supervised Learning&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2017-Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results&lt;/li&gt;
+  &lt;li&gt;ICLR 2019-Unsupervised Learning via Meta-Learning&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;neurips-2019-stochastic-shared-embeddings-data-driven-regularization-of-embedding-layers&quot;&gt;&lt;a href=&quot;https://arxiv.org/pdf/1905.10630.pdf&quot;&gt;NeurIPS 2019-Stochastic Shared Embeddings: Data-driven Regularization of Embedding Layers&lt;/a&gt;&lt;/h2&gt;
 &lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: 

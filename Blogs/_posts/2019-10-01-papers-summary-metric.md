@@ -10,25 +10,44 @@ comment: true
 :+1: means being highly related to my personal research interest. 
 {:.message}
 
-## [Few-shot Learning](../../my_docs/few-shot.md)
-
+## [Few-shot Learning](../../my_docs/few-shot.md) 
+* ICLR 2018-Meta-Learning for Semi-Supervised Few-Shot Classification
+* NeurIPS 2019-Unsupervised Meta Learning for Few-Show Image Classification
+* NeurIPS 2019-Learning to Self-Train for Semi-Supervised Few-Shot Classification
+* NeurIPS 2019-Adaptive Cross-Modal Few-shot Learning
+* NeurIPS 2019-Cross Attention Network for Few-shot Classification
+* NeurIPS 2019-Incremental Few-Shot Learning with Attention Attractor Networks
+* ICML 2019-LGM-Net: Learning to Generate Matching Networks for Few-Shot Learning
+{:.message}
 
 ## [Large Output Spaces](../../my_docs/large-output-spaces.md)
-
+* NeurIPS 2019-Breaking the Glass Ceiling for Embedding-Based Classifiers for Large Output Spaces
+* AISTATS 2019-Stochastic Negative Mining for Learning with Large Output Spaces
+{:.message}
 
 ## [Poincaré, Hyperbolic, Curvilinear](../../my_docs/Poincare-Hyperbolic-Curvilinear.md)
+* NeurIPS 2019-Multi-relational Poincaré Graph Embeddings
+* NeurIPS 2019-Numerically Accurate Hyperbolic Embeddings Using Tiling-Based Models
+* NeurIPS 2019-Curvilinear Distance Metric Learning
+{:.message}
+
+
 
 ## [Wasserstein](../../my_docs/wasserstein.md)
+* NeurIPS 2019-Generalized Sliced Wasserstein Distances 
+* NeurIPS 2019-Tree-Sliced Variants of Wasserstein Distances
+* NeurIPS 2019-Sliced Gromov-Wasserstein
+* NeurIPS 2019-Wasserstein Dependency Measure for Representation Learning
+{:.message}
 
 
 ## [Semi-supervised or Unsupervised Learning](../../my_docs/Semi-Un-Supervised-Learning.md)
-
-
-
-## [NeurIPS 2019-Metric Learning for Adversarial Robustness](https://arxiv.org/pdf/1909.00900.pdf)
-**NOTE**: 
-Deep networks are well-known to be fragile to adversarial attacks. Using several standard image datasets and established attack mechanisms, we conduct an empirical analysis of deep representations under attack, and find that the **attack causes the internal representation to shift closer to the "false" class. Motivated by this observation, we propose to regularize the representation space under attack with metric learning in order to produce more robust classifiers.** By carefully sampling examples for metric learning, our learned representation not only **increases robustness, but also can detect previously unseen adversarial samples.** Quantitative experiments show improvement of robustness accuracy by up to 4% and detection efficiency by up to 6% according to Area Under Curve (AUC) score over baselines.
+* CVPR 2019-Label Propagation for Deep Semi-supervised Learning
+* NeurIPS 2017-Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results
+* ICLR 2019-Unsupervised Learning via Meta-Learning
 {:.message}
+
+
 
 
 ## [NeurIPS 2019-Stochastic Shared Embeddings: Data-driven Regularization of Embedding Layers](https://arxiv.org/pdf/1905.10630.pdf)
