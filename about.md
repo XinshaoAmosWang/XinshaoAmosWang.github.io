@@ -2,68 +2,46 @@
 image: /assets/img/blog/steve-harvey.jpg
 ---
 
-# About
 
-Xinshao Wang.
-
-PhD Student, Queens University Belfast, Anyvision. 
+Xinshao Wang, PhD Student, Queens University Belfast, Anyvision. 
 {:.lead}
 
-## A Personal Site 
+* Machine Learning: Deep Metric Learning, Robust Representation Learning under Arbitrary Anomalies. 
 
-## Features
+* Computer Vision: Image/Video Recognition, Person Re-identification (ReID). 
 
-* Full in-app page loading, powered by [hy-push-state]{:.external}
-* Customizable sidebar and touch-enabled drawer menu, powered by [hy-drawer]{:.external}
-* Lazy image loading with cancellation and placeholder, powered by [hy-img]{:.external}
-* Advanced FLIP animations, inspired by Material Design
-* 99/100 [Google PageSpeed Score][gpss][^2]
-* [Syntax highlighting][syntax], powered by [Rouge]
-* [LaTeX math blocks][latex], powered by [KaTeX]
-* Change the wording of built-in strings and possibly translate in other languages
-* Support for categories and tags
-* Built-in icons for many social networks
-* Simple and semantic HTML
-* Structured Data for core entities
-* Author section below each article and support for multiple authors
-* Google Analytics and Google Fonts support
+## Robust Learning and Robust Inference in the context of deep learning: noisy labels, noisy observations, outliers, adversaries, etc. 
 
+**Why is it important?**
 
-[^1]: Actual page load speed depends on your hosting provider, resolution of embedded images and usage of 3rd party plugins.
+DNNs can fit well training examples with random lables. 'Understanding deep learning requires rethinking generalization, [https://arxiv.org/abs/1611.03530](https://arxiv.org/abs/1611.03530)'
+
+In the large-scale training datasets, noisy training data points generally exist. Specifically and explicitly, the observations and their corresponding semantic labels may not matched. `Emphasis Regularisation by Gradient Rescaling for Training Deep Neural Networks with Noisy Labels, [https://arxiv.org/pdf/1905.11233.pdf](https://arxiv.org/pdf/1905.11233.pdf)'
+
+Fortunately, the concept of adversarial examples become universe/unrestricted now, i.e., any examples that fool a model can be viewed as a adversary, e.g., examples with noisy labels which are fitted well during training, outliers which are fitted well during training or get high confidence scores during testing, examples with small pixel perturbation and perceptually ignorable which fool the model.
+
+Paper reading: [https://drive.google.com/file/d/1fU3N_u-_puOwEbupK6aOENerP2S45tZX/view?usp=sharing](https://drive.google.com/file/d/1fU3N_u-_puOwEbupK6aOENerP2S45tZX/view?usp=sharing)
+
+Github page: [https://github.com/XinshaoAmosWang/Emphasis-Regularisation-by-Gradient-Rescaling/wiki/Robust-Learning-and-Robust-Inference-in-the-context-of-deep-learning:-noisy-examples,-outliers,-adversaries,-etc](https://github.com/XinshaoAmosWang/Emphasis-Regularisation-by-Gradient-Rescaling/wiki/Robust-Learning-and-Robust-Inference-in-the-context-of-deep-learning:-noisy-examples,-outliers,-adversaries,-etc)
 
 
+**Are deep models robust to massive noise intrinsically?**
 
-[blog]: https://hydejack.com/blog/
-[portfolio]: https://hydejack.com/projects/
-[resume]: https://hydejack.com/resume/
-[download]: https://hydejack.com/download/
-[welcome]: https://hydejack.com/
-[forms]: https://hydejack.com/forms-by-example/
+* No: [DNNs can fit well training examples with random lables.](https://arxiv.org/abs/1611.03530)
+* Yes: [Deep Learning is Robust to Massive Label Noise](https://arxiv.org/abs/1705.10694)?
 
-[features]: #features
-[news]: #build-an-audience
-[syntax]: #syntax-highlighting
-[latex]: hydejack/_posts/2018-06-01-example-content-iii.md#math
-[darkm]: hydejack/_posts/2018-09-01-introducing-dark-mode.md
+* You may have your own answer if you read: 
 
-[lic]: LICENSE.md
-[pro]: licenses/PRO.md
-[docs]: docs/README.md
-[ofln]: docs/advanced.md#enabling-offline-support
+    * [How to preserve MAE's (mean absolute error) noise-tolerance and improve its fitting ability?](https://github.com/XinshaoAmosWang/Improving-Mean-Absolute-Error-against-CCE)
 
-[kit]: https://github.com/qwtel/hydejack-starter-kit/archive/v8.5.0.zip
-[src]: https://github.com/qwtel/hydejack
-[gem]: https://rubygems.org/gems/jekyll-theme-hydejack
-[buy]: https://app.simplegoods.co/i/NATYVLYT
-[nfy]: https://app.netlify.com/start/deploy?repository=https://github.com/qwtel/hydejack-starter-kit
-[dtn]: https://www.netlify.com/img/deploy/button.svg
+    * [An Extremely Simple and Principled Solution for Avoiding Overfitting and Achieving Better Generalisation](https://github.com/XinshaoAmosWang/Emphasis-Regularisation-by-Gradient-Rescaling)   
 
-[gpss]: https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fhydejack.com%2F
-[hy-push-state]: https://qwtel.com/hy-push-state/
-[hy-drawer]: https://qwtel.com/hy-drawer/
-[hy-img]: https://qwtel.com/hy-img/
-[rouge]: http://rouge.jneen.net
-[katex]: https://khan.github.io/KaTeX/
-[tinyletter]: https://tinyletter.com/
 
-*[FLIP]: First-Last-Invert-Play. A coding technique to achieve performant page transition animations.
+
+**Intuitive concepts to keep in mind**
+
+* The definition of abnormal examples: A training example, i.e., an observation-label pair, is abnormal when an obserevation and its corresponding annotated label for learning supervision are semantically unmatched. 
+
+* Fitting of abnormal examples: When a deep model fits an abnormal example, i.e., mapping an oberservation to a semantically unmatched label, this abnormal example can be viewed as an successful adversary, i.e., an unrestricted adversarial example. 
+
+* Learning objective: A deep model is supposed to extract/learn meaningful patterns from training data, while avoid fitting any anomaly. 

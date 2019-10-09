@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Paper Summary on Noise, Anomalies, Adversaries
+title: Paper Summary on Noise, Anomalies, Adversaries, Robust Learning, Generalization
 description: >
   
 image: /assets/img/blog/steve-harvey.jpg
@@ -11,17 +11,26 @@ comment: true
 {:.message}
 
 
+## :+1: [ICML 2019-Better generalization with less data using robust gradient descent](http://proceedings.mlr.press/v97/holland19a/holland19a.pdf)
+
 ## [GAN, Adversary Examples, Adversary Machine Learning](../../my_docs/adversary.md)
 
 
 ## [Label Noise](../../my_docs/Label-Noise.md)
-
+* NeurIPS 2019-L_DMI: A Novel Information-theoretic Loss Function for Training Deep Nets Robust to Label Noise
+* NeurIPS 2019-Are Anchor Points Really Indispensable in Label-Noise Learning?
+* NeurIPS 2019-Combinatorial Inference against Label Noise
+{:.message}
 
 ## [Stochastic-Gradient-Noise](../../my_docs/Stochastic-Gradient-Noise.md)
-
+* ICML 2019-A Tail-Index Analysis of Stochastic Gradient Noise in Deep Neural Networks
+* NeurIPS 2019-First Exit Time Analysis of Stochastic Gradient Descent Under Heavy-Tailed Gradient Noise
+{:.message}
 
 ## [Denoiser, Noise Removal](../../my_docs/Denoiser.md)
-
+* NeurIPS 2019-Extending Stein’s unbiased risk estimator to train deep denoisers with correlated pairs of noisy images
+* NeurIPS 2019-Variational Denoising Network: Toward Blind Noise Modeling and Removal
+{:.message}
 
 
 ## :+1:  [NeurIPS 2019-Noise-tolerant fair classification](https://arxiv.org/abs/1901.10837)
