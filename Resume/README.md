@@ -8,4 +8,4 @@ permalink: /Resume/
 
 
 
-<iframe src="CV_XinshaoWang_V05.pdf" height="2000px" width="1000px">Download PDF</iframe>
+<embed src="CV_XinshaoWang_V05.pdf" type="application/pdf" width="100%" height="1000px"/>
