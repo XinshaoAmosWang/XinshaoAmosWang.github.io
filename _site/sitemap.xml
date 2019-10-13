@@ -2,15 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/blogs/</loc>
-<lastmod>2019-10-11T16:23:28+01:00</lastmod>
+<lastmod>2019-10-11T17:09:03+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/projects/</loc>
-<lastmod>2019-10-11T16:23:28+01:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/projects/2017-07-01-undergraduate-graduation/</loc>
-<lastmod>2017-07-01T00:00:00+01:00</lastmod>
+<lastmod>2019-10-11T17:09:03+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/blogs/2019-06-01-example-content-iii/</loc>
@@ -31,6 +27,14 @@
 <url>
 <loc>http://localhost:4000/projects/2019-10-01-PhD-3rd-start/</loc>
 <lastmod>2019-10-01T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/projects/2019-10-10-arbitrary-semantic-anomalies/</loc>
+<lastmod>2019-10-10T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/projects/2019-10-10-person-reidentification/</loc>
+<lastmod>2019-10-10T00:00:00+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/my_docs/Adversarial-Examples-Reading-List/</loc>
@@ -140,6 +144,10 @@
 <url>
 <loc>http://localhost:4000/Resume/CV_XinshaoWang_V05.pdf</loc>
 <lastmod>2019-09-09T11:58:31+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/Resume/CV_XinshaoWang_V06.pdf</loc>
+<lastmod>2019-10-11T16:35:32+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/Resume.pdf</loc>
