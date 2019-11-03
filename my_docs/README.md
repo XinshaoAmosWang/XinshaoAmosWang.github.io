@@ -36,3 +36,18 @@ comment: true
 [Download entire folder](https://askubuntu.com/questions/867284/using-gdrive-to-download-entire-folder)
 
 [How to use GDrive in linux?](http://www.linuxandubuntu.com/home/google-drive-cli-client-for-linux)
+
+
+## Github: Configuration of local machine to github remote
+
+[Local: Generating a new ssh key](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
+
+
+[Local: Adding your new SSH key to the ssh-agent](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent)
+
+
+[Remote: Adding your new SSH key to your GitHub account](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
+
+
+[Common commands](https://github.com/XinshaoAmosWang/Deep-Metric-Embedding/blob/master/common_git.md)
+
