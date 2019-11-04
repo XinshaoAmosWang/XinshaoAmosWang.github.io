@@ -49,9 +49,28 @@ ranking, better than current state-of-the art.
 
 
 ![Full-width image](./imgs/img03.png){:.lead data-width="200" data-height="100"}
-ResNet 50, Input images are resized to
+* ResNet 50, Input images are resized to
 256×128, All
-models are trained with only softmax loss, 
+models are trained with only softmax loss.
+* CSA: competitive snippet aggregation
+* [STMP-Inception-v3](https://arxiv.org/pdf/1812.10305.pdf):  Liu et al. [29] propose a recurrent architecture to aggregate the frame-level representations and
+yield a sequence-level human feature representation. **RNN
+introduces a certain number of fully-connected layers and
+gates for temporal cue modeling, making it complicated and
+difficult to train**
+* [M3D-ResNet50](https://arxiv.org/pdf/1811.07468.pdf): 3D convolution directly extracts spatial-temporal features through end-to-end CNN training. Recently, deep 3D
+CNN is introduced for video representation learning. Tran
+et al. [41] propose C3D networks for spatial-temporal feature learning. Qiu et al. [32] factorize the 3D convolutional
+filters into spatial and temporal components, which yield
+performance gains. **Li et al. [19] build a compact Multiscale 3D (M3D) convolution network to learn multi-scale
+temporal cues. Although 3D CNN has exhibited promising performance, it is still sensitive to spatial misalignments
+and needs to stack a certain number of 3D convolutional kernels, resulting in large parameter overheads and increased
+difficult for CNN optimization.**
+* [STA-ResNet50](https://arxiv.org/pdf/1811.04129.pdf): **STA introduces multi-branches for part feature
+learning and uses triplet loss to promote the performance.**
+Compared with those works, our method achieves competitive performance with simple design., e.g., we extract global
+feature with basic backbone and train only with the softmax
+loss. 
 {:.figure}
 
 
@@ -170,5 +189,6 @@ sequence.
 
 
 ![Full-width image](./imgs/img10.png){:.lead data-width="200" data-height="100"} 
+ResNet-50
 {:.figure}
 

@@ -274,14 +274,35 @@ ranking, better than current state-of-the art.</li>
 </hy-img>
 </p>
 
-<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img03.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+<p><hy-img root-margin="512px" src="/Papers/imgs/img03.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
   <noscript><img data-ignore src="/Papers/imgs/img03.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
 </hy-img>
-
-ResNet 50, Input images are resized to
+</p>
+<ul class="figure">
+  <li>ResNet 50, Input images are resized to
 256×128, All
-models are trained with only softmax loss,</p>
+models are trained with only softmax loss.</li>
+  <li>CSA: competitive snippet aggregation</li>
+  <li><a href="https://arxiv.org/pdf/1812.10305.pdf">STMP-Inception-v3</a>:  Liu et al. [29] propose a recurrent architecture to aggregate the frame-level representations and
+yield a sequence-level human feature representation. <strong>RNN
+introduces a certain number of fully-connected layers and
+gates for temporal cue modeling, making it complicated and
+difficult to train</strong></li>
+  <li><a href="https://arxiv.org/pdf/1811.07468.pdf">M3D-ResNet50</a>: 3D convolution directly extracts spatial-temporal features through end-to-end CNN training. Recently, deep 3D
+CNN is introduced for video representation learning. Tran
+et al. [41] propose C3D networks for spatial-temporal feature learning. Qiu et al. [32] factorize the 3D convolutional
+filters into spatial and temporal components, which yield
+performance gains. <strong>Li et al. [19] build a compact Multiscale 3D (M3D) convolution network to learn multi-scale
+temporal cues. Although 3D CNN has exhibited promising performance, it is still sensitive to spatial misalignments
+and needs to stack a certain number of 3D convolutional kernels, resulting in large parameter overheads and increased
+difficult for CNN optimization.</strong></li>
+  <li><a href="https://arxiv.org/pdf/1811.04129.pdf">STA-ResNet50</a>: <strong>STA introduces multi-branches for part feature
+learning and uses triplet loss to promote the performance.</strong>
+Compared with those works, our method achieves competitive performance with simple design., e.g., we extract global
+feature with basic backbone and train only with the softmax
+loss.</li>
+</ul>
 
 <h3 id="iccv-2019-temporal-knowledge-propagation-for-image-to-video-person-re-identification"><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Gu_Temporal_Knowledge_Propagation_for_Image-to-Video_Person_Re-Identification_ICCV_2019_paper.pdf">ICCV 2019: Temporal Knowledge Propagation for Image-to-Video Person Re-identification</a></h3>
 
@@ -420,7 +441,8 @@ sequence.</p>
   <noscript><img data-ignore src="/Papers/imgs/img10.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
 </hy-img>
-</p>
+ 
+ResNet-50</p>
 
 
 </article>
