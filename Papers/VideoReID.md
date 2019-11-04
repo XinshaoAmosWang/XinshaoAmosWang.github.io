@@ -5,7 +5,7 @@ comment: true
 
 Recent papers on video person reid.
 
-### ICCV 2019: Co-segmentation Inspired Attention Networks for Video-based Person Re-identification
+### [ICCV 2019: Co-segmentation Inspired Attention Networks for Video-based Person Re-identification](http://openaccess.thecvf.com/content_ICCV_2019/papers/Subramaniam_Co-Segmentation_Inspired_Attention_Networks_for_Video-Based_Person_Re-Identification_ICCV_2019_paper.pdf)
 
  * Why: Video-based Re-ID approaches have gained significant attention recently since a video, and not just an image, is often available.
 
@@ -17,5 +17,158 @@ Recent papers on video person reid.
     datasets
 
 ![Full-width image](./imgs/co-segmentation-attention-illustration.png){:.lead data-width="200" data-height="100"}
-co-segmentation-attention-illustration.
 {:.figure}
+
+
+![Full-width image](./imgs/co-segmentation-results.png){:.lead data-width="200" data-height="100"}
+{:.figure}
+
+
+
+
+
+### [ICCV 2019: Global-Local Temporal Representations For Video Person Re-Identification](http://openaccess.thecvf.com/content_ICCV_2019/papers/Li_Global-Local_Temporal_Representations_for_Video_Person_Re-Identification_ICCV_2019_paper.pdf)
+
+* This paper proposes the Global-Local Temporal Repre-
+sentation (GLTR) to **exploit the multi-scale temporal cues in video sequences for video person Re-Identification (ReID).** GLTR is constructed by first modeling the **short-term temporal cues among adjacent frames**, then capturing the
+**long-term relations among inconsecutive frames**. Specifically, the short-term temporal cues are modeled by **parallel dilated convolutions with different temporal dilation rates to represent the motion and appearance of pedestrian.** The long-term relations are captured by **a temporal self-attention model to alleviate the occlusions and noises in video sequences**. 
+The short and long-term temporal cues are aggregated as the final GLTR by a simple single-stream CNN. GLTR shows substantial superiority to existing fea-
+tures learned with body part cues or metric learning on four
+widely-used video ReID datasets. For instance, it achieves
+Rank-1 Accuracy of 87.02% on MARS dataset without re-
+ranking, better than current state-of-the art.
+
+
+![Full-width image](./imgs/img01.png){:.lead data-width="200" data-height="100"}
+{:.figure}
+
+
+
+![Full-width image](./imgs/img02.png){:.lead data-width="200" data-height="100"}
+{:.figure}
+
+
+![Full-width image](./imgs/img03.png){:.lead data-width="200" data-height="100"}
+ResNet 50, Input images are resized to
+256×128, All
+models are trained with only softmax loss, 
+{:.figure}
+
+
+### [ICCV 2019: Temporal Knowledge Propagation for Image-to-Video Person Re-identification](http://openaccess.thecvf.com/content_ICCV_2019/papers/Gu_Temporal_Knowledge_Propagation_for_Image-to-Video_Person_Re-Identification_ICCV_2019_paper.pdf)
+
+* In many scenarios of Person Re-identification (Re-ID),
+the gallery set consists of lots of surveillance videos and the
+query is just an image, thus Re-ID has to be conducted be-
+tween image and videos
+
+
+![Full-width image](./imgs/img04.png){:.lead data-width="200" data-height="100"} 
+{:.figure}
+
+
+
+
+![Full-width image](./imgs/img05.png){:.lead data-width="200" data-height="100"} 
+* We pre-train ResNet-50 on ImageNet [26] and adopt the
+method in [33] to initialize the non-local blocks.
+* During
+training, we randomly sample 4 frames with a stride of 8
+frames from the original full-length video to form an input
+video clip.
+* For iLIDS-VID, we first pre-train the
+model on large-scale dataset and then fine-tune it on iLIDS-
+VID following [31].
+* In the test phase, the query image features are extracted
+by image representation model. For each gallery video, we
+first split it into several 32-frame clips. For each clip, we
+utilize video representation model to extract video represen-
+tation. The final video feature is the averaged representation
+of all clips.
+{:.figure}
+
+
+
+### [CVPR 2019: Attribute-Driven Feature Disentangling and Temporal Aggregation for Video Person Re-Identification](http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhao_Attribute-Driven_Feature_Disentangling_and_Temporal_Aggregation_for_Video_Person_Re-Identification_CVPR_2019_paper.pdf)
+
+* In this paper, we
+propose an attribute-driven method for feature disentan-
+gling and frame re-weighting. **The features of single frames
+are disentangled into groups of sub-features, each corre-
+sponds to specific semantic attributes.** 
+**The sub-features are
+re-weighted by the confidence of attribute recognition and
+then aggregated at the temporal dimension as the final rep-
+resentation.** By means of this strategy, the most informa-
+tive regions of each frame are enhanced and contributes to
+a more discriminative sequence representation. Extensive
+ablation studies verify **the effectiveness of feature disentan-
+gling as well as temporal re-weighting**. The experimental
+results on the iLIDS-VID, PRID-2011 and MARS datasets
+demonstrate that our proposed method outperforms exist-
+ing state-of-the-art approaches.
+
+
+
+![Full-width image](./imgs/img06.png){:.lead data-width="200" data-height="100"} 
+{:.figure}
+
+
+![Full-width image](./imgs/img07.png){:.lead data-width="200" data-height="100"} 
+{:.figure}
+
+
+![Full-width image](./imgs/img08.png){:.lead data-width="200" data-height="100"} 
+* Some existing methods perform pairwise
+comparison to calculate the similarity between query and
+gallery sequences, e.g. a pair of sequence are input to the
+network for verification. This strategy is impracticable in
+large-scale scenarios because all the gallery sequences need
+to be calculated once for each query. An efficient practice
+is extracting features of large gallery set once in an off-
+line way and sorting them by Euclidean distances in fea-
+ture space when given a query sequence.
+* Our proposed
+method, which does not require optical flow and pairwise
+comparison, is more suitable for real-world applications.
+Based on the same “Res50 + RGB-Only + Sing-Pass” set-
+ting, our method significantly improves the mAP on MARS
+by 10.5% and boosts the CMC-1 by 4.7%/6.1%/0.7% on
+the three dataset.
+{:.figure}
+
+
+### [CVPR 2019: VRSTC: Occlusion-Free Video Person Re-Identification](http://openaccess.thecvf.com/content_CVPR_2019/papers/Hou_VRSTC_Occlusion-Free_Video_Person_Re-Identification_CVPR_2019_paper.pdf)
+
+* Different from most
+previous works that discard the occluded frames, **STCnet
+can recover the appearance of the occluded parts.** For one
+thing, the spatial structure of a pedestrian frame can be
+used to predict the occluded body parts from the unoccluded
+body parts of this frame. For another, the temporal patterns
+of pedestrian sequence provide important clues to generate
+the contents of occluded parts. With the spatio-temporal in-
+formation, STCnet can recover the appearance for the oc-
+cluded parts, which could be leveraged with those unoc-
+cluded parts for more accurate video re-ID.
+
+* We train ResNet-50
+with cross-entropy loss to be the ID guider of STCNet.
+In training term, four-frame input tracks are cropped out
+from an input sequence. The frame features are extracted
+by ResNet-50, then the average temporal pooling is used
+to obtain the sequence feature. Input images are resized
+to 256 × 128.
+
+* We embed the non-local block [29] in
+the re-ID network to capture temporal dependency of input
+sequence.
+
+
+![Full-width image](./imgs/img09.png){:.lead data-width="200" data-height="100"} 
+{:.figure}
+
+
+![Full-width image](./imgs/img10.png){:.lead data-width="200" data-height="100"} 
+{:.figure}
+
