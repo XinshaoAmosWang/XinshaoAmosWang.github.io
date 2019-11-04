@@ -225,7 +225,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 <ul>
   <li>
-    <p>Why: Video-based Re-ID approaches have gained significant attention recently since a video, and not just an image, is often available.</p>
+    <p><strong>Why Video</strong>: Video-based Re-ID approaches have gained significant attention recently since a video, and not just an image, is often available.</p>
   </li>
   <li>
     <p>We propose a novel Co-segmentation in-
@@ -241,13 +241,43 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
   <noscript><img data-ignore src="/Papers/imgs/co-segmentation-attention-illustration.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
 </hy-img>
-</p>
 
-<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/co-segmentation-results.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+<strong>Motivation</strong></p>
+
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img11.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/img11.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+
+<strong>Object co-segmentation is the task of identifying and
+segmenting common objects from two or more images according to “some” common characteristics [50, 27] such as
+similarity of object-class and appearance.</strong></p>
+
+<p><hy-img root-margin="512px" src="/Papers/imgs/co-segmentation-results.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
   <noscript><img data-ignore src="/Papers/imgs/co-segmentation-results.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
 </hy-img>
-</p>
+
+<strong>Results</strong></p>
+<ul class="figure">
+  <li>Every video of the person is split
+into <strong>multiple non-overlapping video-snippets of length N
+frames</strong> and each snippet is passed through the network to
+obtain a <strong>snippet-level descriptor.</strong></li>
+  <li><strong>The video-snippet
+level descriptors are averaged to get the video-level descriptor.</strong> Then, these video-level descriptors are compared using the L2 distance to calculate the CMC and mAP performances.</li>
+  <li><strong>Snippet-level idea is bad:</strong> 1) if the video is too short; 2) if the video is too long.</li>
+  <li>An in-depth analysis by <strong>plugging in multiple
+COSAMs at various locations</strong> is detailed in the Supplementary Material.</li>
+</ul>
+
+<p class="figure"><hy-img root-margin="512px" src="./imgs/img12.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="./imgs/img12.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+
+<strong>Snippet-level idea is bad:</strong> 1) if the video is too short; 2) if the video is too long. 
+<strong>Not reasonable design</strong></p>
 
 <h3 id="iccv-2019-global-local-temporal-representations-for-video-person-re-identification"><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Li_Global-Local_Temporal_Representations_for_Video_Person_Re-Identification_ICCV_2019_paper.pdf">ICCV 2019: Global-Local Temporal Representations For Video Person Re-Identification</a></h3>
 

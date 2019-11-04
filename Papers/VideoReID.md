@@ -7,7 +7,7 @@ Recent papers on video person reid.
 
 ### [ICCV 2019: Co-segmentation Inspired Attention Networks for Video-based Person Re-identification](http://openaccess.thecvf.com/content_ICCV_2019/papers/Subramaniam_Co-Segmentation_Inspired_Attention_Networks_for_Video-Based_Person_Re-Identification_ICCV_2019_paper.pdf)
 
- * Why: Video-based Re-ID approaches have gained significant attention recently since a video, and not just an image, is often available.
+ * **Why Video**: Video-based Re-ID approaches have gained significant attention recently since a video, and not just an image, is often available.
 
 * We propose a novel Co-segmentation in-
     spired video Re-ID deep architecture and formulate a Co-
@@ -17,13 +17,34 @@ Recent papers on video person reid.
     datasets
 
 ![Full-width image](./imgs/co-segmentation-attention-illustration.png){:.lead data-width="200" data-height="100"}
+**Motivation**
+{:.figure}
+
+
+![Full-width image](./imgs/img11.png){:.lead data-width="200" data-height="100"}
+**Object co-segmentation is the task of identifying and
+segmenting common objects from two or more images according to “some” common characteristics [50, 27] such as
+similarity of object-class and appearance.** 
 {:.figure}
 
 
 ![Full-width image](./imgs/co-segmentation-results.png){:.lead data-width="200" data-height="100"}
+**Results**
+* Every video of the person is split
+into **multiple non-overlapping video-snippets of length N
+frames** and each snippet is passed through the network to
+obtain a **snippet-level descriptor.**
+* **The video-snippet
+level descriptors are averaged to get the video-level descriptor.** Then, these video-level descriptors are compared using the L2 distance to calculate the CMC and mAP performances. 
+* **Snippet-level idea is bad:** 1) if the video is too short; 2) if the video is too long. 
+* An in-depth analysis by **plugging in multiple
+COSAMs at various locations** is detailed in the Supplementary Material.
 {:.figure}
 
-
+![Full-width image](./imgs/img12.png){:.lead data-width="200" data-height="100"}
+**Snippet-level idea is bad:** 1) if the video is too short; 2) if the video is too long. 
+**Not reasonable design**
+{:.figure}
 
 
 
