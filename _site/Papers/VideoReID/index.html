@@ -282,18 +282,30 @@ COSAMs at various locations</strong> is detailed in the Supplementary Material.<
 <h3 id="iccv-2019-global-local-temporal-representations-for-video-person-re-identification"><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Li_Global-Local_Temporal_Representations_for_Video_Person_Re-Identification_ICCV_2019_paper.pdf">ICCV 2019: Global-Local Temporal Representations For Video Person Re-Identification</a></h3>
 
 <ul>
-  <li>This paper proposes the Global-Local Temporal Repre-
+  <li>
+    <p>Abstract: This paper proposes the Global-Local Temporal Repre-
 sentation (GLTR) to <strong>exploit the multi-scale temporal cues in video sequences for video person Re-Identification (ReID).</strong> GLTR is constructed by first modeling the <strong>short-term temporal cues among adjacent frames</strong>, then capturing the
 <strong>long-term relations among inconsecutive frames</strong>. Specifically, the short-term temporal cues are modeled by <strong>parallel dilated convolutions with different temporal dilation rates to represent the motion and appearance of pedestrian.</strong> The long-term relations are captured by <strong>a temporal self-attention model to alleviate the occlusions and noises in video sequences</strong>. 
-The short and long-term temporal cues are aggregated as the final GLTR by a simple single-stream CNN. GLTR shows substantial superiority to existing fea-
-tures learned with body part cues or metric learning on four
-widely-used video ReID datasets. For instance, it achieves
-Rank-1 Accuracy of 87.02% on MARS dataset without re-
-ranking, better than current state-of-the art.</li>
+The short and long-term temporal cues are aggregated as the final GLTR by a simple single-stream CNN. GLTR shows substantial superiority to existing features learned with body part cues or metric learning on four
+widely-used video ReID datasets. For instance, <strong>it achieves
+Rank-1 Accuracy of 87.02% on MARS dataset without reranking</strong>, better than current state-of-the art.</p>
+  </li>
+  <li>
+    <p>Dilated Temporal Pyramid (DTP) Convolution for local temporal context learning</p>
+  </li>
+  <li>
+    <p>Temporal Self-Attention (TSA) for exploiting the global temporal cues.</p>
+  </li>
 </ul>
 
-<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img01.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
-  <noscript><img data-ignore src="/Papers/imgs/img01.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img01.png" alt="Full-width image" class="lead" data-width="300" data-height="150">
+  <noscript><img data-ignore src="/Papers/imgs/img01.png" alt="Full-width image" class="lead" data-width="300" data-height="150"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img13.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/img13.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
 </hy-img>
 </p>
@@ -310,15 +322,27 @@ ranking, better than current state-of-the art.</li>
 </hy-img>
 </p>
 <ul class="figure">
-  <li>ResNet 50, Input images are resized to
-256×128, All
-models are trained with only softmax loss.</li>
+  <li>We employ standard ResNet50 [12] as the backbone for
+frame feature extraction.</li>
+  <li>Input images are resized to 256×128.</li>
+  <li>All models are trained and finetuned with PyTorch.</li>
+  <li>For 2D CNN training, each batch contains 128 images.</li>
+  <li>For DTP and TSA training, we sample 16 adjacent frames from each sequence as input for each training epoch. The batch size is set as 10.</li>
+  <li>
+    <p>All models are trained with only softmax loss.</p>
+  </li>
+  <li>
+    <p><strong>Testing</strong>: We use 2D CNN to extract a d=128-dim
+feature from each video frame, then fuse frame features into GLTR using the network illustrated in Fig. 2. The video
+feature is finally used for person ReID with Euclidean distance.</p>
+  </li>
   <li>CSA: competitive snippet aggregation</li>
   <li><a href="https://arxiv.org/pdf/1812.10305.pdf">STMP-Inception-v3</a>:  Liu et al. [29] propose a recurrent architecture to aggregate the frame-level representations and
 yield a sequence-level human feature representation. <strong>RNN
 introduces a certain number of fully-connected layers and
 gates for temporal cue modeling, making it complicated and
-difficult to train</strong></li>
+difficult to train.</strong> STMP [29] introduces a complex recurrent network
+and uses part cues and triplet loss.</li>
   <li><a href="https://arxiv.org/pdf/1811.07468.pdf">M3D-ResNet50</a>: 3D convolution directly extracts spatial-temporal features through end-to-end CNN training. Recently, deep 3D
 CNN is introduced for video representation learning. Tran
 et al. [41] propose C3D networks for spatial-temporal feature learning. Qiu et al. [32] factorize the 3D convolutional
@@ -326,7 +350,8 @@ filters into spatial and temporal components, which yield
 performance gains. <strong>Li et al. [19] build a compact Multiscale 3D (M3D) convolution network to learn multi-scale
 temporal cues. Although 3D CNN has exhibited promising performance, it is still sensitive to spatial misalignments
 and needs to stack a certain number of 3D convolutional kernels, resulting in large parameter overheads and increased
-difficult for CNN optimization.</strong></li>
+difficult for CNN optimization.</strong> M3D [19] use 3D CNN
+to learn the temporal cues, hence requires higher computational complexity.</li>
   <li><a href="https://arxiv.org/pdf/1811.04129.pdf">STA-ResNet50</a>: <strong>STA introduces multi-branches for part feature
 learning and uses triplet loss to promote the performance.</strong>
 Compared with those works, our method achieves competitive performance with simple design., e.g., we extract global
@@ -337,47 +362,84 @@ loss.</li>
 <h3 id="iccv-2019-temporal-knowledge-propagation-for-image-to-video-person-re-identification"><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Gu_Temporal_Knowledge_Propagation_for_Image-to-Video_Person_Re-Identification_ICCV_2019_paper.pdf">ICCV 2019: Temporal Knowledge Propagation for Image-to-Video Person Re-identification</a></h3>
 
 <ul>
-  <li>In many scenarios of Person Re-identification (Re-ID),
+  <li>
+    <p>In many scenarios of Person Re-identification (Re-ID),
 the gallery set consists of lots of surveillance videos and the
 query is just an image, thus Re-ID has to be conducted be-
-tween image and videos</li>
+tween image and videos</p>
+  </li>
+  <li>
+    <p>Specifically, <strong>given the input videos,
+we enforce the image representation network to fit the outputs of video representation network in a shared feature
+space.</strong> <strong>With back propagation, temporal knowledge can
+be transferred to enhance the image features</strong> and the information asymmetry problem can be alleviated.</p>
+  </li>
+  <li>
+    <p>Note that both image and video networks use ResNet50 as backbone. <strong>The only difference is that video network add extra non-local blocks to model temporal information.</strong> Given the same inputs, TKP loss enforces these two networks to output similar features. Obviously, the weights
+of additional non-local blocks being 0 is the optimal solution of minimizing TKP loss. In that case, the non-local
+blocks can not capture any temporal information. <strong>So updating video network by TKP deteriorates modeling temporal
+knowledge.</strong> Unless specified, in our emperiments, $L^F_{TKP}$
+and $L^D_{TKP}$ are not back-propagated through the video representation network during model training.</p>
+  </li>
+  <li>
+    <p>Objective functions:</p>
+    <ul>
+      <li>Classification Loss: We build two shared weights
+classifiers to map the image features and video features to a
+shared identity space.</li>
+      <li>
+        <p>Integrated Triplet Loss: We also use triplet loss with
+hard sample mining [10] to constrain the relative sample
+distances in the shared feature space. Specifically, we integrate four kinds of triplet losses, image-to-video (I2V),
+video-to-image (V2I), image-to-image (I2I) and video-tovideo (V2V) triplet losses. The final triplet loss LT is defined as:</p>
+
+        <p>$L_T = L_{I2V} + L_{V2I} + L_{I2I} + L_{V2V}$</p>
+      </li>
+      <li>
+        <p>The final objective function is formulated as
+the combination of classification loss, integrated triplet loss
+and the proposed TKP loss:</p>
+
+        <p>$L = L_C + L_T + L^D_{TKP} + L^F_{TKP}$</p>
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img04.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
-  <noscript><img data-ignore src="/Papers/imgs/img04.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img04.png" alt="Full-width image" class="lead" data-width="100" data-height="50">
+  <noscript><img data-ignore src="/Papers/imgs/img04.png" alt="Full-width image" class="lead" data-width="100" data-height="50"/></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
 </hy-img>
 </p>
 
-<p><hy-img root-margin="512px" src="/Papers/imgs/img05.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
-  <noscript><img data-ignore src="/Papers/imgs/img05.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+<p><hy-img root-margin="512px" src="/Papers/imgs/img05.png" alt="Full-width image" class="lead" data-width="100" data-height="50">
+  <noscript><img data-ignore src="/Papers/imgs/img05.png" alt="Full-width image" class="lead" data-width="100" data-height="50"/></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
 </hy-img>
 </p>
 <ul class="figure">
   <li>We pre-train ResNet-50 on ImageNet [26] and adopt the
 method in [33] to initialize the non-local blocks.</li>
-  <li>During
-training, we randomly sample 4 frames with a stride of 8
-frames from the original full-length video to form an input
-video clip.</li>
+  <li>During training, we <strong>randomly sample 4 frames with a stride of 8
+frames from the original full-length video</strong> to form an input
+video clip. For the original video less than 32 frames, we
+duplicate it to meet the length.</li>
   <li>For iLIDS-VID, we first pre-train the
 model on large-scale dataset and then fine-tune it on iLIDS-
 VID following [31].</li>
   <li>In the test phase, the query image features are extracted
-by image representation model. For each gallery video, we
-first split it into several 32-frame clips. For each clip, we
+by image representation model. <strong>For each gallery video, we
+first split it into several 32-frame clips.</strong> For each clip, we
 utilize video representation model to extract video represen-
-tation. The final video feature is the averaged representation
-of all clips.</li>
+tation. <strong>The final video feature is the averaged representation
+of all clips.</strong></li>
 </ul>
 
 <h3 id="cvpr-2019-attribute-driven-feature-disentangling-and-temporal-aggregation-for-video-person-re-identification"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhao_Attribute-Driven_Feature_Disentangling_and_Temporal_Aggregation_for_Video_Person_Re-Identification_CVPR_2019_paper.pdf">CVPR 2019: Attribute-Driven Feature Disentangling and Temporal Aggregation for Video Person Re-Identification</a></h3>
 
 <ul>
   <li>In this paper, we
-propose an attribute-driven method for feature disentan-
-gling and frame re-weighting. <strong>The features of single frames
+propose an attribute-driven method for feature disentangling and frame re-weighting. <strong>The features of single frames
 are disentangled into groups of sub-features, each corre-
 sponds to specific semantic attributes.</strong> 
 <strong>The sub-features are
@@ -405,26 +467,41 @@ ing state-of-the-art approaches.</li>
 </hy-img>
 </p>
 
+<p class="figure"><hy-img root-margin="512px" src="./imgs/img14.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="./imgs/img14.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
 <p><hy-img root-margin="512px" src="/Papers/imgs/img08.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
   <noscript><img data-ignore src="/Papers/imgs/img08.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
 </hy-img>
 </p>
 <ul class="figure">
-  <li>Some existing methods perform pairwise
-comparison to calculate the similarity between query and
+  <li>Input images are first resized to 144 × 288 and
+cropped at 128 × 256. For the data augmentation, we use
+random crops with random horizontal mirroring for training
+and a single center crop for testing.</li>
+  <li>We use SGD to train our
+model and the batch size is 32.  The sequence length is set to T = 8. The learning rate starts from
+0.05 and is divided by 10 every 40 epochs to train the model
+for 100 epochs.</li>
+  <li>In real-world applications, <strong>computational efficiency</strong> is
+equally important to performance. It is worth noting that
+<strong>Snippet and ASTPN require optical flow as input</strong> to provide motion features. However, <strong>the calculation of optical flow is very time-consuming</strong> and is hard to be applied in
+real-time system.</li>
+  <li>Some existing methods perform <strong>pairwise comparison</strong> to calculate the similarity between query and
 gallery sequences, e.g. a pair of sequence are input to the
-network for verification. This strategy is impracticable in
-large-scale scenarios because all the gallery sequences need
+network for verification. <strong>This strategy is impracticable in large-scale scenarios</strong> because all the gallery sequences need
 to be calculated once for each query. An efficient practice
 is extracting features of large gallery set once in an off-
 line way and sorting them by Euclidean distances in fea-
 ture space when given a query sequence.</li>
   <li>Our proposed
-method, which does not require optical flow and pairwise
-comparison, is more suitable for real-world applications.
-Based on the same “Res50 + RGB-Only + Sing-Pass” set-
-ting, our method significantly improves the mAP on MARS
+method, which <strong>does not require optical flow and pairwise comparison</strong>, is more suitable for real-world applications.
+Based on the same <strong>“Res50 + RGB-Only + Sing-Pass” set-
+ting</strong>, our method significantly improves the mAP on MARS
 by 10.5% and boosts the CMC-1 by 4.7%/6.1%/0.7% on
 the three dataset.</li>
 </ul>
@@ -440,15 +517,14 @@ thing, the spatial structure of a pedestrian frame can be
 used to predict the occluded body parts from the unoccluded
 body parts of this frame. For another, the temporal patterns
 of pedestrian sequence provide important clues to generate
-the contents of occluded parts. With the spatio-temporal in-
-formation, STCnet can recover the appearance for the oc-
+the contents of occluded parts. With the spatiotemporal information, STCnet can recover the appearance for the oc-
 cluded parts, which could be leveraged with those unoc-
 cluded parts for more accurate video re-ID.</p>
   </li>
+  <li>We train ResNet-50
+with cross-entropy loss to be the ID guider of STCNet.</li>
   <li>
-    <p>We train ResNet-50
-with cross-entropy loss to be the ID guider of STCNet.
-In training term, four-frame input tracks are cropped out
+    <p>In training term, four-frame input tracks are cropped out
 from an input sequence. The frame features are extracted
 by ResNet-50, then the average temporal pooling is used
 to obtain the sequence feature. Input images are resized
@@ -459,6 +535,28 @@ to 256 × 128.</p>
 the re-ID network to capture temporal dependency of input
 sequence.</p>
   </li>
+  <li>
+    <p><strong>Locating occluded regions.</strong> With the pretrained re-ID
+network as feature extractor, we use the similarity scoring
+mechanism to generate the score for each frame region. We
+regard the regions whose scores are lower than τ as the occluded regions, and we define the frames without occluded
+regions as the unoccluded frames. In our experiment, τ is
+set to 0.89.</p>
+  </li>
+  <li>
+    <p>The occluded regions of the frames in raw re-ID dataset are
+replaced with the regions generated by STCnet to <strong>form a
+new dataset.</strong> <strong>Then the re-ID network is trained and tested
+with the new dataset.</strong></p>
+  </li>
+  <li>
+    <p>In order to verify the effectiveness of STCnet as a kind of <strong>data enhancement method</strong>, we use a simple re-ID network with <strong>average temporal pooling and the cross entropy loss.</strong></p>
+  </li>
+  <li>In order to <strong>capture temporal dependency</strong>, we <strong>embed
+the non-local blocks [29] into the re-ID network.</strong> Different
+from the previous works that only build temporal dependency in the end, the non-local blocks can be inserted into
+the earlier part of deep neural networks. This allows us to
+build a richer hierarchical temporal dependency that combines both non-local and local information.</li>
 </ul>
 
 <p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img09.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
