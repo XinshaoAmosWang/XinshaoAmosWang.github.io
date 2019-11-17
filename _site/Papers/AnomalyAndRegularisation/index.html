@@ -37,20 +37,18 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
   
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Person Re-identification | Xinshao Wang</title>
+<title>Papers on Anomalies, Regularisation | Xinshao Wang</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Person Re-identification" />
+<meta property="og:title" content="Papers on Anomalies, Regularisation" />
 <meta name="author" content="Xinshao Wang" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
 <meta property="og:description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
-<link rel="canonical" href="http://localhost:4000/projects/2019-10-10-person-reidentification/" />
-<meta property="og:url" content="http://localhost:4000/projects/2019-10-10-person-reidentification/" />
+<link rel="canonical" href="http://localhost:4000/Papers/AnomalyAndRegularisation/" />
+<meta property="og:url" content="http://localhost:4000/Papers/AnomalyAndRegularisation/" />
 <meta property="og:site_name" content="Xinshao Wang" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-10-10T00:00:00+01:00" />
 <script type="application/ld+json">
-{"description":"“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"BlogPosting","url":"http://localhost:4000/projects/2019-10-10-person-reidentification/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Person Re-identification","dateModified":"2019-10-10T00:00:00+01:00","datePublished":"2019-10-10T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/2019-10-10-person-reidentification/"},"@context":"https://schema.org"}</script>
+{"description":"“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"WebPage","url":"http://localhost:4000/Papers/AnomalyAndRegularisation/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Papers on Anomalies, Regularisation","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -80,7 +78,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-<link rel="alternate" href="http://localhost:4000/projects/2019-10-10-person-reidentification/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/Papers/AnomalyAndRegularisation/" hreflang="en">
 
 <link rel="shortcut icon" href="/assets/icons/icon.png">
 <link rel="apple-touch-icon" href="/assets/icons/icon.png">
@@ -200,7 +198,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
   
     <main
   id="_main"
-  class="content fade-in layout-post"
+  class="content fade-in layout-page"
   role="main"
   data-color="rgb(79,177,186)"
   data-theme-color="rgb(25,55,71)"
@@ -209,55 +207,9 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
     data-overlay
   
   >
-  
-
-
-
-
-<article id="post-projects-person-reidentification" class="page post mb6" role="article">
+  <article class="page" role="article">
   <header>
-    <h1 class="post-title">
-      
-        Person Re-identification
-      
-    </h1>
-
-    <p class="post-date heading">
-      
-      <time datetime="2019-10-10T00:00:00+01:00">10 Oct 2019</time>
-      
-      
-      
-      
-      
-
-
-
-
-
-
-
-
-
-in <a href="/projects/" class="flip-title">Projects</a>
-
-      
-
-
-
-
-
-
-
-
-
-
-
-    </p>
-
-    
-    
-
+    <h1 class="page-title">Papers on Anomalies, Regularisation</h1>
     
 
 
@@ -267,17 +219,83 @@ in <a href="/projects/" class="flip-title">Projects</a>
 
   </header>
 
-  
-    <p class="message">Summary of research progress on person re-identification.</p>
+  <p>Recent papers on Anomalies, Regularisation.</p>
 
-<h2 id="paper-notes-on-video-person-re-identification"><a href="/Papers/VideoReID/">Paper notes on video person re-identification</a></h2>
+<h3 id="iclr-2019-learning-deep-representations-by-mutual-information-estimation-and-maximization"><a href="https://openreview.net/forum?id=Bklr3j0cKX">ICLR 2019: Learning deep representations by mutual information estimation and maximization</a></h3>
 
-  
+<ul>
+  <li><strong>Abstract:</strong>
+    <ul>
+      <li><strong>Problem&amp;Solution:</strong> This work investigates unsupervised learning of representations by maximizing mutual information between an input and the output of a deep neural network encoder. Importantly, we show that structure matters: incorporating knowledge about locality in the input into the objective can significantly improve a representation’s suitability for downstream tasks. We further control characteristics of the representation by matching to a prior distribution adversarially.</li>
+      <li><strong>Importance:</strong> Our method, which we call Deep InfoMax (DIM), outperforms a number of popular unsupervised learning methods and compares favorably with fully-supervised learning on several classification tasks in with some standard architectures. DIM opens new avenues for unsupervised learning of representations and is an important step towards flexible formulations of representation learning objectives for specific end-goals.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>By structuring the network and objectives to encode input locality or priors on the representation, DIM learns features that are useful for downstream tasks without relying on reconstruction or a generative model.</p>
+
+<ul>
+  <li><a href="https://openreview.net/forum?id=Bklr3j0cKX&amp;noteId=BkxA0Kt3nQ">Strong points of the paper are</a>:
+    <ul>
+      <li>This gives a principled design of the objective function based on the mutual information between the input data point and output representation.</li>
+      <li>The performance is gained by incorporating local structures and matching of representation distribution to a certain target (called a prior).</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="iclr-2019-deep-anomaly-detection-with-outlier-exposure"><a href="https://openreview.net/forum?id=HyxCxhRcY7">ICLR 2019: Deep Anomaly Detection with Outlier Exposure</a></h3>
+
+<ul>
+  <li>Abstract:
+    <ul>
+      <li><strong>Targeted problem:</strong> The use of larger and more complex inputs in deep learning magnifies the difficulty of distinguishing between anomalous and in-distribution examples. At the same time, diverse image and text data are available in enormous quantities. We propose leveraging these data to improve deep anomaly detection by training anomaly detectors against an auxiliary dataset of outliers, an approach we call Outlier Exposure (OE). This enables anomaly detectors to generalize and detect unseen anomalies.</li>
+      <li>Results: 
+  In extensive experiments on natural language processing and small- and large-scale vision tasks, we find that Outlier Exposure significantly improves detection performance. We also observe that cutting-edge generative models trained on CIFAR-10 may assign higher likelihoods to SVHN images than to CIFAR-10 images; we use OE to mitigate this issue. We also analyze the flexibility and robustness of Outlier Exposure, and identify characteristics of the auxiliary dataset that improve performance.</li>
+      <li>TL, DR: OE teaches anomaly detectors to learn heuristics for detecting unseen anomalies; experiments are in classification, density estimation, and calibration in NLP and vision settings; we do not tune on test distribution samples, unlike previous work.</li>
+      <li>Code: <a href="https://github.com/hendrycks/outlier-exposure">https://github.com/hendrycks/outlier-exposure</a></li>
+    </ul>
+  </li>
+  <li>Comments: <a href="https://openreview.net/forum?id=HyxCxhRcY7&amp;noteId=Skl4qxWN67">https://openreview.net/forum?id=HyxCxhRcY7&amp;noteId=Skl4qxWN67</a>
+    <ul>
+      <li>For softmax classifier, the OE loss forces the posterior distribution to become uniform distribution on outlier dataset.</li>
+    </ul>
+  </li>
+  <li>Comments: <a href="https://openreview.net/forum?id=HyxCxhRcY7&amp;noteId=Bye5XYYT37">https://openreview.net/forum?id=HyxCxhRcY7&amp;noteId=Bye5XYYT37</a>
+    <ul>
+      <li>For classification, the fine-tuning objective encourages out-of-distribution samples to have a uniform distribution over all class labels.</li>
+      <li>For density estimation, the objective encourages out-of-distribution samples to be ranked as less probability than in-distribution samples.</li>
+      <li>The biggest weakness in this paper is the assumption that we have access to out-of-distribution data, and that we will encounter data from that same distribution in the future. For the typical anomaly detection setting, we expect that anomalies could look like almost anything. For example, in network intrusion detection (a common application of anomaly detection), future attacks are likely to have different characteristics than past attacks, but will still look unusual in some way. The challenge is to define “normal” behavior in a way that captures the full range of normal while excluding “unusual” examples. This topic has been studied for decades.</li>
+      <li>My initial read of this paper was incorrect – the authors do indeed separate the outlier distribution used to train the detector from the outlier distribution used for evaluation.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="iclr-2020-under-review-deep-semi-supervised-anomaly-detection"><a href="https://openreview.net/forum?id=HkgH0TEYwH">ICLR 2020 Under review: Deep Semi-Supervised Anomaly Detection</a></h3>
+
+<ul>
+  <li>Abstract:
+    <ul>
+      <li>Problem: Typically anomaly detection is treated as an unsupervised learning problem. In practice however, one may have—in addition to a large set of unlabeled samples—access to a small pool of labeled samples, e.g. a subset verified by some domain expert as being normal or anomalous.</li>
+      <li>Prior work: Semi-supervised approaches to anomaly detection aim to utilize such labeled samples, but most proposed methods are limited to merely including labeled normal samples. Only a few methods take advantage of labeled anomalies, with existing deep approaches being domain-specific.</li>
+      <li>This work: we present Deep SAD, an end-to-end deep methodology for general semi-supervised anomaly detection. Using an information-theoretic perspective on anomaly detection, we derive a loss motivated by the idea that the entropy of the latent distribution for normal data should be lower than the entropy of the anomalous distribution.</li>
+      <li>Evalation: We demonstrate in extensive experiments on MNIST, Fashion-MNIST, and CIFAR-10, along with other anomaly detection benchmark datasets, that our method is on par or outperforms shallow, hybrid, and deep competitors, yielding appreciable performance improvements even when provided with only little labeled data.</li>
+      <li>Code: <a href="https://tinyurl.com/y6rwhn5r">https://tinyurl.com/y6rwhn5r</a>.</li>
+    </ul>
+  </li>
+  <li>Comments: <a href="https://openreview.net/forum?id=HkgH0TEYwH&amp;noteId=SylNjaV9iS">https://openreview.net/forum?id=HkgH0TEYwH&amp;noteId=SylNjaV9iS</a>
+    <ul>
+      <li>Other recent work on deep anomaly detection utilizing self-supervised classification have incorporated the use of anomalies during training in a similar way, albeit without theoretical justification [5]. In these methods normal samples are trained to minimize a classification loss. On the other hand anomalous samples are trained so that the softmax output distribution has high entropy, not for misclassification. This results in a network where the softmax output from normal samples are concentrated around at the corners of the probability simplex, and anomalous samples are diffusely spread around the center. Our information-theoretic framework offers a potential explanation for why such an objective is natural and connects it to our method.</li>
+    </ul>
+  </li>
+  <li>Comments: <a href="https://openreview.net/forum?id=HkgH0TEYwH&amp;noteId=BylBYZcAFH">https://openreview.net/forum?id=HkgH0TEYwH&amp;noteId=BylBYZcAFH</a>
+    <ul>
+      <li>Starting from the assumption that abnormal data are sampled from background unpredicted distribution, rather than “cluster” assumption, it is argued that conventional discriminative formulation is not applicable. Motivated by the recent deep AD methods (e.g., deep SVDD), the paper proposes to approach semi-supervised AD from the information theoretic perspective where 1) mutual information between raw data and learnt representation should be maximized (infomax principle), 2) entropy of labeled positive data should be minimized (“compactness” constraint), and 3) enrtropy of labeled negative data should be maximized to reflect the uncertainty assumption of anomaly. The solution is implemented by the encoder of a pre-trained autoencoder that is further fine tuned to enforce entropy assumption on all types of training data.</li>
+    </ul>
+  </li>
+</ul>
+
+
 </article>
-
-
-
-<hr class="dingbat related" />
 
 
 
@@ -313,12 +331,37 @@ in <a href="/projects/" class="flip-title">Projects</a>
 
 <div class="navigator">
     
-        <span style="float:left"><a href="/projects/2019-10-10-arbitrary-semantic-anomalies/">« Robust Learning under Arbitrary Semantic Anomalies</a>
-          · <a href="https://xinshaoamoswang.github.io/projects/2019-10-10-arbitrary-semantic-anomalies/#disqus_thread"></a>
-        </span>
-    
     
 </div>
+
+
+
+
+
+
+
+<div id="disqus_thread"></div>
+
+
+<script>
+    var disqus_config = function () {
+            this.page.url = "https://xinshaoamoswang.github.io/Papers/AnomalyAndRegularisation/";
+            this.page.identifier = "";
+        }; 
+
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://xinshaowang.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+<noscript>Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
 
 
 
@@ -391,7 +434,7 @@ Computer Vision (Image/Video Recognition, Person ReID).
         <a
           
           href="/projects/"
-          class="sidebar-nav-item active"
+          class="sidebar-nav-item"
           
         >
           Projects
