@@ -221,6 +221,63 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
   <p>Recent papers on Anomalies, Regularisation.</p>
 
+<h3 id="iclr-2019-decoupled-weight-decay-regularization"><a href="https://openreview.net/forum?id=Bkg6RiCqY7">ICLR 2019: Decoupled Weight Decay Regularization</a></h3>
+
+<h3 id="neurips-2018-predictive-uncertainty-estimation-via-prior-networks"><a href="https://papers.nips.cc/paper/7936-predictive-uncertainty-estimation-via-prior-networks.pdf">NeurIPS 2018: Predictive Uncertainty Estimation via Prior Networks</a></h3>
+
+<ul>
+  <li>Abstract:
+    <ul>
+      <li><strong>Problem:</strong> Estimating how uncertain an AI system is in its predictions is important to improve the safety of such systems. Uncertainty in predictive can result from uncertainty in model parameters, irreducible data uncertainty and uncertainty due to distributional mismatch between the test and training data distributions. Different actions might be taken depending on the source of the uncertainty so it is important to be able to distinguish between them.</li>
+      <li>
+        <p><strong>Prior work</strong>: Recently, baseline tasks and metrics have been defined
+  and several practical methods to estimate uncertainty developed. These methods,
+  however, attempt to model uncertainty due to distributional mismatch either implicitly through model uncertainty or as data uncertainty</p>
+      </li>
+      <li><strong>This work and importance</strong>: This work proposes a
+  new framework for modeling predictive uncertainty called Prior Networks (PNs)
+  which explicitly models distributional uncertainty. PNs do this by parameterizing
+  a prior distribution over predictive distributions. This work focuses on uncertainty
+  for classification and evaluates PNs on the tasks of identifying out-of-distribution
+  (OOD) samples and detecting misclassification on the MNIST and CIFAR-10
+  datasets, where they are found to outperform previous methods. Experiments on
+  synthetic and MNIST and CIFAR-10 data show that unlike previous non-Bayesian
+  methods PNs are able to distinguish between data and distributional uncertainty.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Good Introduction:</strong> The primary issue with these approaches is that they conflate different aspects of predictive uncertainty,
+which results from three separate factors - model uncertainty, data uncertainty and distributional
+uncertainty. Model uncertainty, or epistemic uncertainty [23], measures the uncertainty in estimating
+the model parameters given the training data - this measures how well the model is matched to the
+data. Model uncertainty is reducible1 as the size of training data increases. Data uncertainty, or
+aleatoric uncertainty [23], is irreducible uncertainty which arises from the natural complexity of the
+data, such as class overlap, label noise, homoscedastic and heteroscedastic noise. Data uncertainty
+can be considered a ’known-unknown’ - the model understands (knows) the data and can confidently
+state whether a given input is difficult to classify (an unknown). Distributional uncertainty arises due
+to mismatch between the training and test distributions (also called dataset shift [24]) - a situation
+which often arises for real world problems. Distributional uncertainty is an ’unknown-unknown’ - the
+model is unfamiliar with the test data and thus cannot confidently make predictions. The approaches
+discussed above either conflate distributional uncertainty with data uncertainty or implicitly model
+distributional uncertainty through model uncertainty, as in Bayesian approaches. The ability to
+separately model the 3 types of predictive uncertainty is important, as different actions can be taken
+by the model depending on the source of uncertainty. For example, in active learning tasks detection
+of distributional uncertainty would indicate the need to collect training data from this distribution.
+This work addresses the explicit prediction of each of the three types of predictive uncertainty by
+extending the work done in [21, 22] while taking inspiration from Bayesian approaches.</p>
+  </li>
+  <li><strong>Summary of Contributions.</strong> This work describes the limitations of previous methods of obtaining
+uncertainty estimates and proposes a new framework for modeling predictive uncertainty, called Prior
+Networks (PNs), which allows distributional uncertainty to be treated as distinct from both data
+uncertainty and model uncertainty. This work focuses on the application of PNs to classification tasks.
+Additionally, this work presents a discussion of a range of uncertainty metrics in the context of each
+source of uncertainty. Experiments on synthetic and real data show that unlike previous non-Bayesian
+methods PNs are able to distinguish between data uncertainty and distributional uncertainty. Finally,
+PNs are evaluated2 on the tasks of identifying out-of-distribution (OOD) samples and detecting
+misclassification outlined in [13], where they outperform previous methods on the MNIST and
+CIFAR-10 datasets.</li>
+</ul>
+
 <h3 id="iclr-2019-learning-deep-representations-by-mutual-information-estimation-and-maximization"><a href="https://openreview.net/forum?id=Bklr3j0cKX">ICLR 2019: Learning deep representations by mutual information estimation and maximization</a></h3>
 
 <ul>
