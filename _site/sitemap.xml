@@ -2,15 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/blogs/</loc>
-<lastmod>2019-12-31T12:33:10+00:00</lastmod>
+<lastmod>2019-12-31T14:07:59+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/paperlists/</loc>
-<lastmod>2019-12-31T12:33:10+00:00</lastmod>
+<lastmod>2019-12-31T14:07:59+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/projects/</loc>
-<lastmod>2019-12-31T12:33:10+00:00</lastmod>
+<lastmod>2019-12-31T14:07:59+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/blogs/2019-10-01-Research-GR/</loc>
@@ -194,6 +194,10 @@
 <url>
 <loc>http://localhost:4000/Resume/CV_XinshaoWang_V06.pdf</loc>
 <lastmod>2019-10-25T13:40:16+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/Resume/CV_XinshaoWang_V07.pdf</loc>
+<lastmod>2019-12-31T12:31:51+00:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/Resume.pdf</loc>
