@@ -270,6 +270,97 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
   
     <p class="message"><img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> means being highly related to my personal research interest.</p>
 
+<h2 id="iccv-2019-on-label-noise-">ICCV 2019 on label noise, …</h2>
+<ul class="message">
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Han_Deep_Self-Learning_From_Noisy_Labels_ICCV_2019_paper.pdf">Deep Self-Learning From Noisy Labels</a>: The proposed SMP trains in an iterative manner which
+contains two phases: the first phase is to train a network
+with <strong>the original noisy label and corrected label</strong> generated
+in the second phase.</li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Co-Mining_Deep_Face_Recognition_With_Noisy_Labels_ICCV_2019_paper.pdf">Co-Mining: Deep Face Recognition With Noisy Labels</a>: We propose a novel <strong>co-mining</strong> framework, which employs two peer networks to <strong>detect the noisy faces,
+exchanges the high-confidence clean faces and reweights the clean faces</strong> in a mini-batch fashion.</li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Kim_NLNL_Negative_Learning_for_Noisy_Labels_ICCV_2019_paper.pdf">NLNL: Negative Learning for Noisy Labels</a>: Input image belongs to this label–Positive Learning; Negative Learning (NL)–CNNs are trained using a complementary label as in “input image does not belong to this complementary label.”</li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Symmetric_Cross_Entropy_for_Robust_Learning_With_Noisy_Labels_ICCV_2019_paper.pdf">Symmetric Cross Entropy for Robust Learning With Noisy Labels</a>: Already compared in our method.</li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Huang_O2U-Net_A_Simple_Noisy_Label_Detection_Approach_for_Deep_Neural_ICCV_2019_paper.pdf">O2U-Net: A Simple Noisy Label Detection Approach for Deep Neural Networks</a>: It only requires adjusting the hyper-parameters of the deep network to make its status transfer from overfitting to underfitting (O2U) cyclically. The losses of each sample are recorded during iterations. The higher the normalized average loss of a sample, the higher the probability of being noisy labels.</li>
+</ul>
+
+<h2 id="1-neurips-2019-meta-weight-net-learning-an-explicit-mapping-for-sample-weighting">
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="https://papers.nips.cc/paper/8467-meta-weight-net-learning-an-explicit-mapping-for-sample-weighting">NeurIPS 2019-Meta-Weight-Net: Learning an Explicit Mapping For Sample Weighting</a>
+</h2>
+<ul class="message">
+  <li>Targted problems: (1) Corrupted Labels (2) Class imbalance</li>
+  <li>Methodology: Guided by <strong>a small amount of unbiased meta-data</strong>,  to learn an explicit weighting layer which takes training losses as input and outputs examples’ weights.</li>
+  <li>Code: <a href="https://github.com/xjtushujun/meta-weight-net">https://github.com/xjtushujun/meta-weight-net</a>
+</li>
+  <li>
+<strong>Introduciton: Why are the targeted problems important?</strong> In practice, however, such biased training data are commonly encountered. For instance, practically
+collected training samples always contain corrupted labels [10, 11, 12, 13, 14, 15, 16, 17]. A typical
+example is a dataset roughly collected from a crowdsourcing system [18] or search engines [19, 20],
+which would possibly yield a large amount of noisy labels. Another popular type of biased training
+data is those with class imbalance. Real-world datasets are usually depicted as skewed distributions,
+with a long-tailed configuration. A few classes account for most of the data, while most classes are
+under-represented. Effective learning with these biased training data, which is regarded to be biased
+from evaluation/test ones, is thus an important while challenging issue in machine learning [1, 21].</li>
+  <li>There exist <strong>two entirely contradictive
+ideas for constructing such a loss-weight mapping:</strong>
+    <ul>
+      <li>
+<strong>Emphasise on harder ones:</strong> Enforce the learning to more emphasize samples with larger loss values
+since they are more like to be uncertain hard samples located on the classification boundary. Typical
+methods of this category include AdaBoost [22, 23], hard negative mining [24] and focal loss [25]. <strong>This sample weighting manner is known to be necessary for class imbalance problems, since it can
+prioritize the minority class with relatively higher training losses.</strong>
+</li>
+      <li>
+<strong>Emphasise on easier ones:</strong> The rationality
+lies on that these samples are more likely to be high-confident ones with clean labels. Typical methods
+include self-paced learning(SPL) [26], iterative reweighting [27, 17] and multiple variants [28, 29, 30].
+This weighting strategy has been especially used in noisy label cases, since it inclines to suppress the
+effects of samples with extremely large loss values, possibly with corrupted incorrect labels.</li>
+      <li>
+<strong>Deficiencies:</strong>
+        <ul>
+          <li>How about the case that the training set is both imbalanced and
+noisy.</li>
+          <li>They inevitably involve hyper-parameters, to be manually preset or tuned by cross-validation.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Experiments of this work:
+    <ul>
+      <li>Class Imbalance Experiments
+        <ul>
+          <li>ResNet-32 on  long-tailed CIFAR-10 and CIFAR-100.</li>
+        </ul>
+      </li>
+      <li>Corrupted Label Experiments on CIFAR-10 and CIFAR-100
+        <ul>
+          <li>WRN-28-10 with varying noise rates under uniform noise.</li>
+          <li>ResNet-32 with varying noise rates under flip noise - non-uniform noise.</li>
+        </ul>
+      </li>
+      <li>Real-world data-Clothing 1M with ResNet-50
+        <ul>
+          <li>We use the 7k clean data as the meta dataset.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Problems of this work:
+    <ul>
+      <li>For <strong>the case where the training set is both imbalanced and noisy</strong>, the authors mentioned in the introduction section that conventional methods cannot address this case. 
+  However, there is no experiment to demontrate that this method works.</li>
+      <li>Conventional methods inevitably involve hyper-parameters to tune by cross-validation. 
+  However, for the proposed method, <strong>unbiased meta-data is required, which is a more expensive hyper-factor</strong> in practice. 
+  Tuning hyper-parameters is cheaper than collecting unbiased meta-data for training the weighting function.</li>
+    </ul>
+  </li>
+</ul>
+
 <h2 id="1-icml-2019-better-generalization-with-less-data-using-robust-gradient-descent">
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="http://proceedings.mlr.press/v97/holland19a/holland19a.pdf">ICML 2019-Better generalization with less data using robust gradient descent</a>
 </h2>
@@ -283,6 +374,14 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
   <li>NeurIPS 2019-Combinatorial Inference against Label Noise</li>
 </ul>
 
+<h2 id="1--neurips-2019-noise-tolerant-fair-classification">
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">  <a href="https://arxiv.org/abs/1901.10837">NeurIPS 2019-Noise-tolerant fair classification</a>
+</h2>
+<p class="message"><strong>NOTE</strong>: Existing work on the problem operates <strong>under the assumption that the sensitive feature available in one’s training sample is perfectly reliable.</strong> This assumption may be violated in many real-world cases: for example, respondents to a survey may choose to conceal or obfuscate their group identity out of fear of potential discrimination. This poses the question of whether one can still learn fair classifiers given noisy sensitive features.</p>
+
+<h2 id="neurips-2019-neural-networks-grown-and-self-organized-by-noise"><a href="https://arxiv.org/abs/1906.01039">NeurIPS 2019-Neural networks grown and self-organized by noise</a></h2>
+<p class="message"><strong>NOTE</strong>: <strong>Living neural networks</strong> emerge through a process of growth and self-organization that begins with a single cell and results in a brain, an organized and functional computational device. Artificial neural networks, however, rely on human-designed, hand-programmed architectures for their remarkable performance. <strong>Can we develop artificial computational devices that can grow and self-organize without human intervention?</strong> In this paper, we propose a biologically inspired developmental algorithm that can <strong>‘grow’ a functional, layered neural network from a single initial cell.</strong> The algorithm organizes inter-layer connections to construct a convolutional pooling layer, a key constituent of convolutional neural networks (CNN’s). Our approach is inspired by the mechanisms employed by the early visual system to wire the retina to the lateral geniculate nucleus (LGN), days before animals open their eyes. The key ingredients for robust self-organization are an emergent spontaneous spatiotemporal activity wave in the first layer and a local learning rule in the second layer that ‘learns’ the underlying activity pattern in the first layer. The algorithm is adaptable to a wide-range of input-layer geometries, robust to malfunctioning units in the first layer, and so can be used to <strong>successfully grow and self-organize pooling architectures of different pool-sizes and shapes.</strong> The algorithm provides a primitive procedure for constructing layered neural networks through growth and self-organization. Broadly, our work shows that biologically inspired developmental algorithms can be applied to autonomously grow functional ‘brains’ in-silico.</p>
+
 <h2 id="stochastic-gradient-noise"><a href="/my_docs/Stochastic-Gradient-Noise/">Stochastic-Gradient-Noise</a></h2>
 <ul class="message">
   <li>ICML 2019-A Tail-Index Analysis of Stochastic Gradient Noise in Deep Neural Networks</li>
@@ -294,15 +393,6 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
   <li>NeurIPS 2019-Extending Stein’s unbiased risk estimator to train deep denoisers with correlated pairs of noisy images</li>
   <li>NeurIPS 2019-Variational Denoising Network: Toward Blind Noise Modeling and Removal</li>
 </ul>
-
-<h2 id="1--neurips-2019-noise-tolerant-fair-classification">
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">  <a href="https://arxiv.org/abs/1901.10837">NeurIPS 2019-Noise-tolerant fair classification</a>
-</h2>
-<p class="message"><strong>NOTE</strong>: Existing work on the problem operates <strong>under the assumption that the sensitive feature available in one’s training sample is perfectly reliable.</strong> This assumption may be violated in many real-world cases: for example, respondents to a survey may choose to conceal or obfuscate their group identity out of fear of potential discrimination. This poses the question of whether one can still learn fair classifiers given noisy sensitive features.</p>
-
-<h2 id="neurips-2019-neural-networks-grown-and-self-organized-by-noise"><a href="https://arxiv.org/abs/1906.01039">NeurIPS 2019-Neural networks grown and self-organized by noise</a></h2>
-<p class="message"><strong>NOTE</strong>: <strong>Living neural networks</strong> emerge through a process of growth and self-organization that begins with a single cell and results in a brain, an organized and functional computational device. Artificial neural networks, however, rely on human-designed, hand-programmed architectures for their remarkable performance. <strong>Can we develop artificial computational devices that can grow and self-organize without human intervention?</strong> In this paper, we propose a biologically inspired developmental algorithm that can <strong>‘grow’ a functional, layered neural network from a single initial cell.</strong> The algorithm organizes inter-layer connections to construct a convolutional pooling layer, a key constituent of convolutional neural networks (CNN’s). Our approach is inspired by the mechanisms employed by the early visual system to wire the retina to the lateral geniculate nucleus (LGN), days before animals open their eyes. The key ingredients for robust self-organization are an emergent spontaneous spatiotemporal activity wave in the first layer and a local learning rule in the second layer that ‘learns’ the underlying activity pattern in the first layer. The algorithm is adaptable to a wide-range of input-layer geometries, robust to malfunctioning units in the first layer, and so can be used to <strong>successfully grow and self-organize pooling architectures of different pool-sizes and shapes.</strong> The algorithm provides a primitive procedure for constructing layered neural networks through growth and self-organization. Broadly, our work shows that biologically inspired developmental algorithms can be applied to autonomously grow functional ‘brains’ in-silico.</p>
-
 
   
 </article>
@@ -439,6 +529,13 @@ Computer Vision (Image/Video Recognition, Person ReID).
     
       
       <li>
+        <a href="/paperlists/" class="sidebar-nav-item">
+          PaperLists
+        </a>
+      </li>
+    
+      
+      <li>
         <a href="/projects/" class="sidebar-nav-item">
           Projects
         </a>
@@ -562,4 +659,5 @@ Computer Vision (Image/Video Recognition, Person ReID).
 
 
 <script id="dsq-count-scr" src="//xinshaowang.disqus.com/count.js" async></script>
-</html>
+
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script></html>

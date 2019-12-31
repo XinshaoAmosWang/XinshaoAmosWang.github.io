@@ -2,6 +2,11 @@
 image: /assets/img/blog/steve-harvey.jpg
 ---
 
+<!---
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="xinshaowang">
+<a class="LI-simple-link" href='https://uk.linkedin.com/in/xinshaowang?trk=profile-badge'>Xinshao Wang, PhD Student, Queens University Belfast, Anyvision. </a>
+</div>
+-->
 
 Xinshao Wang, PhD Student, Queens University Belfast, Anyvision. 
 {:.lead}
@@ -9,6 +14,8 @@ Xinshao Wang, PhD Student, Queens University Belfast, Anyvision.
 * Machine Learning: Deep Metric Learning, Robust Representation Learning under Arbitrary Anomalies. 
 
 * Computer Vision: Image/Video Recognition, Person Re-identification (ReID). 
+
+
 
 ## Robust Learning and Robust Inference in the context of deep learning: noisy labels, noisy observations, outliers, adversaries, etc. 
 

@@ -1,5 +1,215 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-12-12T11:41:46+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
-</subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Robust Learning under Arbitrary Semantic Anomalies</title><link href="http://localhost:4000/projects/2019-10-10-arbitrary-semantic-anomalies/" rel="alternate" type="text/html" title="Robust Learning under Arbitrary Semantic Anomalies" /><published>2019-10-10T00:00:00+01:00</published><updated>2019-10-10T00:00:00+01:00</updated><id>http://localhost:4000/projects/arbitrary-semantic-anomalies</id><content type="html" xml:base="http://localhost:4000/projects/2019-10-10-arbitrary-semantic-anomalies/">&lt;p class=&quot;message&quot;&gt;Summary of research progress on Robust Learning under Arbitrary Semantic Anomalies. &lt;br /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2019-12-31T12:15:31+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
+</subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">CVPR-2019</title><link href="http://localhost:4000/paperlists/2019-12-29-CVPR/" rel="alternate" type="text/html" title="CVPR-2019" /><published>2019-12-29T00:00:00+00:00</published><updated>2019-12-29T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/CVPR</id><content type="html" xml:base="http://localhost:4000/paperlists/2019-12-29-CVPR/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
+
+&lt;h2 id=&quot;deep-metric-learning&quot;&gt;Deep Metric Learning&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Sanakoyeu_Divide_and_Conquer_the_Embedding_Space_for_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Divide and Conquer the Embedding Space for Metric Learning&lt;/a&gt; 
+:+1:
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Each learner will learn a separate distance metric using only a subspace of the original embedding space and &lt;strong&gt;a part of the data&lt;/strong&gt;.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Natural hard negatives mining: Finally, &lt;strong&gt;the splitting and sampling connect to hard negative mining&lt;/strong&gt;, which is verified by them. (I appreciate this ablation study in Table 6 )&lt;/li&gt;
+      &lt;li&gt;Divide means: 1) Splitting the training data into K Clusters; 
+  2) Splitting the embedding into K Slices.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Cakir_Deep_Metric_Learning_to_Rank_CVPR_2019_paper.pdf&quot;&gt;Deep Metric Learning to Rank&lt;/a&gt; :+1:
+    &lt;ul&gt;
+      &lt;li&gt;Our main contribution is a novel solution to optimizing Average Precision under the Euclidean metric, based on the probabilistic interpretation of AP as the area under precision-recall curve, as well as distance quantization.&lt;/li&gt;
+      &lt;li&gt;We also propose a category-based minibatch sampling strategy and a large-batch training heuristic.&lt;/li&gt;
+      &lt;li&gt;On three &lt;strong&gt;few-shot image retrieval datasets&lt;/strong&gt;, FastAP consistently outperforms competing methods, which often involve complex optimization heuristics or costly model ensembles.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Multi-Similarity_Loss_With_General_Pair_Weighting_for_Deep_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Multi-Similarity Loss With General Pair Weighting for Deep Metric Learning&lt;/a&gt; :+1:
+    &lt;ul&gt;
+      &lt;li&gt;Objective of the proposed multi-similarity loss, which aims to collect informative pairs, and weight these pairs through their own and relative similarities.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1903.03238.pdf&quot;&gt;Ranked List Loss for Deep Metric Learning&lt;/a&gt; :+1:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Suh_Stochastic_Class-Based_Hard_Example_Mining_for_Deep_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Stochastic Class-Based Hard Example Mining for Deep Metric Learning&lt;/a&gt; :+1:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Scale linearly to the number of classes.&lt;/li&gt;
+      &lt;li&gt;The methods proposed by Movshovitz-Attias et al. [14] and Wen et al. [34] are related to ours in a sense that class representatives are jointly trained with the feature extractor. 
+However, their goal is to formulate new losses using the class representatives whereas we use them for hard negative mining.&lt;/li&gt;
+      &lt;li&gt;Given an anchor instance, our algorithm first selects a few hard negative classes based on the class-to-sample distances and then performs a refined search in an instance-level only from the selected classes.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A Theoretically Sound Upper Bound on the Triplet Loss for Improving the Efficiency of Deep Distance Metric Learning :+1:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Unsupervised&lt;/strong&gt; Embedding Learning via Invariant and Spreading Instance Feature :+1:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Yuan_Signal-To-Noise_Ratio_A_Robust_Distance_Metric_for_Deep_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Signal-To-Noise Ratio: A Robust Distance Metric for Deep Metric Learning&lt;/a&gt; :+1:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;We propose a robust SNR distance metric based on Signal-to-Noise Ratio (SNR) for measuring the similarity of image pairs for deep metric learning. Compared with Euclidean distance metric, our SNR distance metric can further jointly reduce the intra-class distances and enlarge the inter-class distances for learned features.&lt;/li&gt;
+      &lt;li&gt;SNR in signal processing is used to measure the level of a desired signal to the level of noise, and a larger SNR value means a higher signal quality.
+  For similarity measurement in deep metric learning, a pair of learned features x and y can be given as y = x + n, where n can be treated as a noise. Then, the SNR is the ratio of the feature variance and the noise variance.&lt;/li&gt;
+      &lt;li&gt;To show the generality of our SNR-based metric, we also extend our approach to hashing retrieval learning.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Branchaud-Charron_Spectral_Metric_for_Dataset_Complexity_Assessment_CVPR_2019_paper.pdf&quot;&gt;Spectral Metric for Dataset Complexity Assessment&lt;/a&gt; :+1:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Related work: &lt;a href=&quot;https://openreview.net/forum?id=ryup8-WCW&quot;&gt;Measuring the Intrinsic Dimension of Objective Landscapes ICLR 2018&lt;/a&gt;, 
+  &lt;a href=&quot;https://arxiv.org/abs/1808.03591&quot;&gt;How Complex is your classification problem? A survey on measuring classification complexity Survey on complexity measures&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Deep Asymmetric Metric Learning via Rich Relationship Mining :+1:
+    &lt;ul&gt;
+      &lt;li&gt;DAMLRRM relaxes the constraint on positive pairs to extend the generalization capability. We build positive pairs training pool by constructing a minimum connected tree for each category instead of considering all positive pairs within a mini-batch. As a result, there will exist a direct or indirect path between any positive pair, which ensures the relevance being bridged to each other. The inspiration comes from ranking on manifold [58] that spreads the relevance to their nearby neighbors one by one.&lt;/li&gt;
+      &lt;li&gt;Idea is novel. The results on SOP are not good, only 69.7 with GoogLeNet&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Hybrid-Attention_Based_Decoupled_Metric_Learning_for_Zero-Shot_Image_Retrieval_CVPR_2019_paper.pdf&quot;&gt;Hybrid-Attention Based Decoupled Metric Learning for Zero-Shot Image Retrieval&lt;/a&gt; :-1:
+    &lt;ul&gt;
+      &lt;li&gt;Very complex: object attention, spatial attention, random walk graph, etc.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1904.09626.pdf&quot;&gt;Deep Metric Learning Beyond Binary Supervision&lt;/a&gt; :-1:
+    &lt;ul&gt;
+      &lt;li&gt;Binary supervision indicating whether a pair of images are of the same class or not.&lt;/li&gt;
+      &lt;li&gt;Using continuous labels&lt;/li&gt;
+      &lt;li&gt;Learn the degree of similarity rather than just the order.&lt;/li&gt;
+      &lt;li&gt;A triplet mining strategy adapted to metric learning with continuous labels.&lt;/li&gt;
+      &lt;li&gt;Image retrieval tasks with continuous labels in terms of human poses, room layouts and image captions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hardness-aware deep metric learning 
+:-1: : data augmentation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ensemble Deep Manifold Similarity Learning using Hard Proxies :-1: random walk algorithm, ensemble models.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Re-Ranking via Metric Fusion for Object Retrieval and Person Re-Identification :-1:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Deep Embedding Learning With Discriminative Sampling Policy :-1:&lt;/li&gt;
+  &lt;li&gt;Point Cloud Oversegmentation With Graph-Structured Deep Metric Learning :-1:&lt;/li&gt;
+  &lt;li&gt;Polysemous Visual-Semantic Embedding for Cross-Modal Retrieval :-1:&lt;/li&gt;
+  &lt;li&gt;A Compact Embedding for Facial Expression Similarity :-1:&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Karlinsky_RepMet_Representative-Based_Metric_Learning_for_Classification_and_Few-Shot_Object_Detection_CVPR_2019_paper.pdf&quot;&gt;RepMet: Representative-Based Metric Learning for Classification and Few-Shot Object Detection&lt;/a&gt; :-1:&lt;/li&gt;
+  &lt;li&gt;Eliminating Exposure Bias and Metric Mismatch in Multiple Object Tracking :-1:&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">ICCV-2019</title><link href="http://localhost:4000/paperlists/2019-12-29-ICCV/" rel="alternate" type="text/html" title="ICCV-2019" /><published>2019-12-29T00:00:00+00:00</published><updated>2019-12-29T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ICCV</id><content type="html" xml:base="http://localhost:4000/paperlists/2019-12-29-ICCV/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
+
+&lt;h2 id=&quot;noisy-labels-&quot;&gt;Noisy Labels, …&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Han_Deep_Self-Learning_From_Noisy_Labels_ICCV_2019_paper.pdf&quot;&gt;Deep Self-Learning From Noisy Labels&lt;/a&gt;: The proposed SMP trains in an iterative manner which
+contains two phases: the first phase is to train a network
+with &lt;strong&gt;the original noisy label and corrected label&lt;/strong&gt; generated
+in the second phase.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Co-Mining_Deep_Face_Recognition_With_Noisy_Labels_ICCV_2019_paper.pdf&quot;&gt;Co-Mining: Deep Face Recognition With Noisy Labels&lt;/a&gt;: We propose a novel &lt;strong&gt;co-mining&lt;/strong&gt; framework, which employs two peer networks to &lt;strong&gt;detect the noisy faces,
+exchanges the high-confidence clean faces and reweights the clean faces&lt;/strong&gt; in a mini-batch fashion.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Kim_NLNL_Negative_Learning_for_Noisy_Labels_ICCV_2019_paper.pdf&quot;&gt;NLNL: Negative Learning for Noisy Labels&lt;/a&gt;: Input image belongs to this label–Positive Learning; Negative Learning (NL)–CNNs are trained using a complementary label as in “input image does not belong to this complementary label.”&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Symmetric_Cross_Entropy_for_Robust_Learning_With_Noisy_Labels_ICCV_2019_paper.pdf&quot;&gt;Symmetric Cross Entropy for Robust Learning With Noisy Labels&lt;/a&gt;: Already compared in our method.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Huang_O2U-Net_A_Simple_Noisy_Label_Detection_Approach_for_Deep_Neural_ICCV_2019_paper.pdf&quot;&gt;O2U-Net: A Simple Noisy Label Detection Approach for Deep Neural Networks&lt;/a&gt;: It only requires adjusting the hyper-parameters of the deep network to make its status transfer from overfitting to underfitting (O2U) cyclically. The losses of each sample are recorded during iterations. The higher the normalized average loss of a sample, the higher the probability of being noisy labels.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;robustness&quot;&gt;Robustness&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Gowal_Scalable_Verified_Training_for_Provably_Robust_Image_Classification_ICCV_2019_paper.pdf&quot;&gt;Scalable Verified Training for Provably Robust Image Classification&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Chen_Improving_Adversarial_Robustness_via_Guided_Complement_Entropy_ICCV_2019_paper.pdf&quot;&gt;Improving Adversarial Robustness via Guided Complement Entropy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Bilateral_Adversarial_Training_Towards_Fast_Training_of_More_Robust_Models_ICCV_2019_paper.pdf&quot;&gt;Bilateral Adversarial Training: Towards Fast Training of More Robust Models
+Against Adversarial Attacks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Peterson_Human_Uncertainty_Makes_Classification_More_Robust_ICCV_2019_paper.pdf&quot;&gt;Human uncertainty makes classification more robust&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Yamaguchi_Subspace_Structure-Aware_Spectral_Clustering_for_Robust_Subspace_Clustering_ICCV_2019_paper.pdf&quot;&gt;Subspace Structure-aware Spectral Clustering for Robust Subspace Clustering&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;deep-metric-learning-&quot;&gt;Deep Metric Learning, …&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Foundations of Deep Learning, Machine Learning</title><link href="http://localhost:4000/blogs/2019-12-12-papers-summary-reweighting/" rel="alternate" type="text/html" title="Foundations of Deep Learning, Machine Learning" /><published>2019-12-12T00:00:00+00:00</published><updated>2019-12-12T00:00:00+00:00</updated><id>http://localhost:4000/blogs/papers-summary-reweighting</id><content type="html" xml:base="http://localhost:4000/blogs/2019-12-12-papers-summary-reweighting/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
+
+&lt;h2 id=&quot;iccv-2019-robustness&quot;&gt;ICCV 2019: Robustness&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Gowal_Scalable_Verified_Training_for_Provably_Robust_Image_Classification_ICCV_2019_paper.pdf&quot;&gt;Scalable Verified Training for Provably Robust Image Classification&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Chen_Improving_Adversarial_Robustness_via_Guided_Complement_Entropy_ICCV_2019_paper.pdf&quot;&gt;Improving Adversarial Robustness via Guided Complement Entropy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Bilateral_Adversarial_Training_Towards_Fast_Training_of_More_Robust_Models_ICCV_2019_paper.pdf&quot;&gt;Bilateral Adversarial Training: Towards Fast Training of More Robust Models
+Against Adversarial Attacks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Peterson_Human_Uncertainty_Makes_Classification_More_Robust_ICCV_2019_paper.pdf&quot;&gt;Human uncertainty makes classification more robust&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Yamaguchi_Subspace_Structure-Aware_Spectral_Clustering_for_Robust_Subspace_Clustering_ICCV_2019_paper.pdf&quot;&gt;Subspace Structure-aware Spectral Clustering for Robust Subspace Clustering&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1-neurips-2019-learning-data-manipulation-for-augmentation-and-weighting&quot;&gt;:+1: &lt;a href=&quot;https://papers.nips.cc/paper/9706-learning-data-manipulation-for-augmentation-and-weighting.pdf&quot;&gt;NeurIPS 2019-Learning Data Manipulation for Augmentation and Weighting&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;Our
+approach builds upon a recent connection of supervised learning and reinforcement
+learning (RL), and adapts an off-the-shelf reward learning algorithm from RL for
+joint data manipulation learning and model training. Different parameterization
+of the “data reward” function instantiates different manipulation schemes.&lt;/li&gt;
+  &lt;li&gt;We
+showcase data augmentation that learns a text transformation network, and data
+weighting that dynamically adapts the data sample importance. Experiments show
+the resulting algorithms significantly improve the image and text classification
+performance in low data regime and class-imbalance problems.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1-iclr-2019-critical-learning-periods-in-deep-networks&quot;&gt;:+1: &lt;a href=&quot;https://openreview.net/forum?id=BkeStsCcKQ&quot;&gt;ICLR 2019-Critical Learning Periods in Deep Networks&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;Counterintuitively, information rises rapidly in the early phases of
+training, and then decreases, preventing redistribution of information resources in a phenomenon we refer to as a loss of “Information Plasticity”&lt;/li&gt;
+  &lt;li&gt;Our analysis suggests that the
+first few epochs are critical for the creation of strong connections that are optimal relative
+to the input data distribution. Once such strong connections are created, they do not appear
+to change during additional training.&lt;/li&gt;
+  &lt;li&gt;The initial learning transient, under-scrutinized compared to asymptotic behavior, plays a key role in determining
+the outcome of the training process.&lt;/li&gt;
+  &lt;li&gt;The early transient is critical in determining the
+final solution of the optimization associated with training an artificial neural network. In particular,
+the effects of sensory deficits during a critical period cannot be overcome, no matter how much
+additional training is performed.&lt;/li&gt;
+  &lt;li&gt;Our experiments show that, rather than helpful, pre-training can be detrimental, even if the
+tasks are similar (e.g., same labels, slightly blurred images).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1-neurips-2019-time-matters-in-regularizing-deep-networks-weight-decay-and-data-augmentation-affect-early-learning-dynamics-matter-little-near-convergence&quot;&gt;:+1: &lt;a href=&quot;https://papers.nips.cc/paper/9252-time-matters-in-regularizing-deep-networks-weight-decay-and-data-augmentation-affect-early-learning-dynamics-matter-little-near-convergence.pdf&quot;&gt;NeurIPS 2019-Time Matters in Regularizing Deep Networks: Weight Decay and Data Augmentation Affect Early Learning Dynamics, Matter Little Near Convergence&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;Regularization is typically understood as improving generalization by altering
+the landscape of local extrema to which the model eventually converges. Deep
+neural networks (DNNs), however, challenge this view: We show that removing
+regularization after an initial transient period has little effect on generalization,
+even if the final loss landscape is the same as if there had been no regularization.&lt;/li&gt;
+  &lt;li&gt;In some cases, generalization even improves after interrupting regularization.&lt;/li&gt;
+  &lt;li&gt;Conversely, if regularization is applied only after the initial transient, it has no effect
+on the final solution, whose generalization gap is as bad as if regularization never
+happened.&lt;/li&gt;
+  &lt;li&gt;What matters for training deep networks is not just
+whether or how, but when to regularize.&lt;/li&gt;
+  &lt;li&gt;The phenomena we observe are manifest
+in different datasets (CIFAR-10, CIFAR-100, SVHN, ImageNet), different architectures (ResNet-18, All-CNN), different regularization methods (weight decay, data
+augmentation, mixup), different learning rate schedules (exponential, piece-wise
+constant). They collectively suggest that there is a “critical period” for regularizing
+deep networks that is decisive of the final performance. More analysis should,
+therefore, focus on the transient rather than asymptotic behavior of learning.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Imposing regularization all along, however, causes over-smoothing&lt;/strong&gt;, whereas the ground-truth disparity field is typically discontinuous. So, &lt;strong&gt;regularization is introduced initially and then removed to capture fine details.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;neurips-2019-inherent-weight-normalization-in-stochastic-neural-networks&quot;&gt;&lt;a href=&quot;https://papers.nips.cc/paper/8591-inherent-weight-normalization-in-stochastic-neural-networks&quot;&gt;NeurIPS 2019-Inherent Weight Normalization in Stochastic Neural Networks&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;img src=&quot;/imgs/Inherent_weight_normalisation.png&quot; alt=&quot;Full-width image&quot; class=&quot;lead&quot; data-width=&quot;200&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;neurips-2019-weight-agnostic-neural-networks&quot;&gt;&lt;a href=&quot;https://papers.nips.cc/paper/8777-weight-agnostic-neural-networks.pdf&quot;&gt;NeurIPS 2019-Weight Agnostic Neural Networks&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;Not all neural network architectures are created equal, some perform much better
+than others for certain tasks. But how important are the weight parameters of a
+neural network compared to its architecture? In this work, we question to what
+extent neural network architectures alone, without learning any weight parameters,
+can encode solutions for a given task. We propose a search method for neural
+network architectures that can already perform a task without any explicit weight
+training. To evaluate these networks, we populate the connections with a single
+shared weight parameter sampled from a uniform random distribution, and measure
+the expected performance. We demonstrate that our method can find minimal neural
+network architectures that can perform several reinforcement learning tasks without
+weight training. On a supervised learning domain, we find network architectures
+that achieve much higher than chance accuracy on MNIST using random weights.
+Interactive version of this paper at &lt;a href=&quot;https://weightagnostic.github.io/&quot;&gt;https://weightagnostic.github.io/&lt;/a&gt;&lt;/p&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary></entry><entry><title type="html">Robust Learning under Arbitrary Semantic Anomalies</title><link href="http://localhost:4000/projects/2019-10-10-arbitrary-semantic-anomalies/" rel="alternate" type="text/html" title="Robust Learning under Arbitrary Semantic Anomalies" /><published>2019-10-10T00:00:00+01:00</published><updated>2019-10-10T00:00:00+01:00</updated><id>http://localhost:4000/projects/arbitrary-semantic-anomalies</id><content type="html" xml:base="http://localhost:4000/projects/2019-10-10-arbitrary-semantic-anomalies/">&lt;p class=&quot;message&quot;&gt;Summary of research progress on Robust Learning under Arbitrary Semantic Anomalies. &lt;br /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/XinshaoAmosWang/Emphasis-Regularisation-by-Gradient-Rescaling&quot;&gt;An Extremely Simple and Principled Solution for Avoiding Overfitting and Achieving Better Generalisation&lt;/a&gt;&lt;/li&gt;
@@ -173,6 +383,106 @@ deep learning. In ICML, 2019.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">General applicability: Label noise (semantic noise), outliers, heavy perceptual data noise, etc.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/GR/Figure1.png" /></entry><entry><title type="html">Paper Summary on Distance Metric, Representation Learning</title><link href="http://localhost:4000/blogs/2019-10-01-papers-summary-metric/" rel="alternate" type="text/html" title="Paper Summary on Distance Metric, Representation Learning" /><published>2019-10-01T00:00:00+01:00</published><updated>2019-10-01T00:00:00+01:00</updated><id>http://localhost:4000/blogs/papers-summary-metric</id><content type="html" xml:base="http://localhost:4000/blogs/2019-10-01-papers-summary-metric/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 
+&lt;h2 id=&quot;cvpr-2019-deep-metric-learning&quot;&gt;CVPR 2019 Deep Metric Learning&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Sanakoyeu_Divide_and_Conquer_the_Embedding_Space_for_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Divide and Conquer the Embedding Space for Metric Learning&lt;/a&gt; 
+:+1:
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Each learner will learn a separate distance metric using only a subspace of the original embedding space and &lt;strong&gt;a part of the data&lt;/strong&gt;.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Natural hard negatives mining: Finally, &lt;strong&gt;the splitting and sampling connect to hard negative mining&lt;/strong&gt;, which is verified by them. (I appreciate this ablation study in Table 6 )&lt;/li&gt;
+      &lt;li&gt;Divide means: 1) Splitting the training data into K Clusters; 
+  2) Splitting the embedding into K Slices.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Cakir_Deep_Metric_Learning_to_Rank_CVPR_2019_paper.pdf&quot;&gt;Deep Metric Learning to Rank&lt;/a&gt; :+1:
+    &lt;ul&gt;
+      &lt;li&gt;Our main contribution is a novel solution to optimizing Average Precision under the Euclidean metric, based on the probabilistic interpretation of AP as the area under precision-recall curve, as well as distance quantization.&lt;/li&gt;
+      &lt;li&gt;We also propose a category-based minibatch sampling strategy and a large-batch training heuristic.&lt;/li&gt;
+      &lt;li&gt;On three &lt;strong&gt;few-shot image retrieval datasets&lt;/strong&gt;, FastAP consistently outperforms competing methods, which often involve complex optimization heuristics or costly model ensembles.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Multi-Similarity_Loss_With_General_Pair_Weighting_for_Deep_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Multi-Similarity Loss With General Pair Weighting for Deep Metric Learning&lt;/a&gt; :+1:
+    &lt;ul&gt;
+      &lt;li&gt;Objective of the proposed multi-similarity loss, which aims to collect informative pairs, and weight these pairs through their own and relative similarities.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1903.03238.pdf&quot;&gt;Ranked List Loss for Deep Metric Learning&lt;/a&gt; :+1:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Suh_Stochastic_Class-Based_Hard_Example_Mining_for_Deep_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Stochastic Class-Based Hard Example Mining for Deep Metric Learning&lt;/a&gt; :+1:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Scale linearly to the number of classes.&lt;/li&gt;
+      &lt;li&gt;The methods proposed by Movshovitz-Attias et al. [14] and Wen et al. [34] are related to ours in a sense that class representatives are jointly trained with the feature extractor. 
+However, their goal is to formulate new losses using the class representatives whereas we use them for hard negative mining.&lt;/li&gt;
+      &lt;li&gt;Given an anchor instance, our algorithm first selects a few hard negative classes based on the class-to-sample distances and then performs a refined search in an instance-level only from the selected classes.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A Theoretically Sound Upper Bound on the Triplet Loss for Improving the Efficiency of Deep Distance Metric Learning :+1:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Unsupervised&lt;/strong&gt; Embedding Learning via Invariant and Spreading Instance Feature :+1:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Yuan_Signal-To-Noise_Ratio_A_Robust_Distance_Metric_for_Deep_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Signal-To-Noise Ratio: A Robust Distance Metric for Deep Metric Learning&lt;/a&gt; :+1:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;We propose a robust SNR distance metric based on Signal-to-Noise Ratio (SNR) for measuring the similarity of image pairs for deep metric learning. Compared with Euclidean distance metric, our SNR distance metric can further jointly reduce the intra-class distances and enlarge the inter-class distances for learned features.&lt;/li&gt;
+      &lt;li&gt;SNR in signal processing is used to measure the level of a desired signal to the level of noise, and a larger SNR value means a higher signal quality.
+  For similarity measurement in deep metric learning, a pair of learned features x and y can be given as y = x + n, where n can be treated as a noise. Then, the SNR is the ratio of the feature variance and the noise variance.&lt;/li&gt;
+      &lt;li&gt;To show the generality of our SNR-based metric, we also extend our approach to hashing retrieval learning.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Branchaud-Charron_Spectral_Metric_for_Dataset_Complexity_Assessment_CVPR_2019_paper.pdf&quot;&gt;Spectral Metric for Dataset Complexity Assessment&lt;/a&gt; :+1:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Related work: &lt;a href=&quot;https://openreview.net/forum?id=ryup8-WCW&quot;&gt;Measuring the Intrinsic Dimension of Objective Landscapes ICLR 2018&lt;/a&gt;, 
+  &lt;a href=&quot;https://arxiv.org/abs/1808.03591&quot;&gt;How Complex is your classification problem? A survey on measuring classification complexity Survey on complexity measures&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Deep Asymmetric Metric Learning via Rich Relationship Mining :+1:
+    &lt;ul&gt;
+      &lt;li&gt;DAMLRRM relaxes the constraint on positive pairs to extend the generalization capability. We build positive pairs training pool by constructing a minimum connected tree for each category instead of considering all positive pairs within a mini-batch. As a result, there will exist a direct or indirect path between any positive pair, which ensures the relevance being bridged to each other. The inspiration comes from ranking on manifold [58] that spreads the relevance to their nearby neighbors one by one.&lt;/li&gt;
+      &lt;li&gt;Idea is novel. The results on SOP are not good, only 69.7 with GoogLeNet&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Hybrid-Attention_Based_Decoupled_Metric_Learning_for_Zero-Shot_Image_Retrieval_CVPR_2019_paper.pdf&quot;&gt;Hybrid-Attention Based Decoupled Metric Learning for Zero-Shot Image Retrieval&lt;/a&gt; :-1:
+    &lt;ul&gt;
+      &lt;li&gt;Very complex: object attention, spatial attention, random walk graph, etc.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1904.09626.pdf&quot;&gt;Deep Metric Learning Beyond Binary Supervision&lt;/a&gt; :-1:
+    &lt;ul&gt;
+      &lt;li&gt;Binary supervision indicating whether a pair of images are of the same class or not.&lt;/li&gt;
+      &lt;li&gt;Using continuous labels&lt;/li&gt;
+      &lt;li&gt;Learn the degree of similarity rather than just the order.&lt;/li&gt;
+      &lt;li&gt;A triplet mining strategy adapted to metric learning with continuous labels.&lt;/li&gt;
+      &lt;li&gt;Image retrieval tasks with continuous labels in terms of human poses, room layouts and image captions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hardness-aware deep metric learning 
+:-1: : data augmentation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ensemble Deep Manifold Similarity Learning using Hard Proxies :-1: random walk algorithm, ensemble models.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Re-Ranking via Metric Fusion for Object Retrieval and Person Re-Identification :-1:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Deep Embedding Learning With Discriminative Sampling Policy :-1:&lt;/li&gt;
+  &lt;li&gt;Point Cloud Oversegmentation With Graph-Structured Deep Metric Learning :-1:&lt;/li&gt;
+  &lt;li&gt;Polysemous Visual-Semantic Embedding for Cross-Modal Retrieval :-1:&lt;/li&gt;
+  &lt;li&gt;A Compact Embedding for Facial Expression Similarity :-1:&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Karlinsky_RepMet_Representative-Based_Metric_Learning_for_Classification_and_Few-Shot_Object_Detection_CVPR_2019_paper.pdf&quot;&gt;RepMet: Representative-Based Metric Learning for Classification and Few-Shot Object Detection&lt;/a&gt; :-1:&lt;/li&gt;
+  &lt;li&gt;Eliminating Exposure Bias and Metric Mismatch in Multiple Object Tracking :-1:&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&quot;few-shot-learning&quot;&gt;&lt;a href=&quot;/my_docs/few-shot/&quot;&gt;Few-shot Learning&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;ICLR 2018-Meta-Learning for Semi-Supervised Few-Shot Classification&lt;/li&gt;
@@ -217,6 +527,84 @@ deep learning. In ICML, 2019.&lt;/p&gt;
 In deep neural nets, lower level embedding layers account for a large portion of the total number of parameters.&lt;strong&gt;Tikhonov regularization, graph-based regularization, and hard parameter sharing are approaches that introduce explicit biases into training in a hope to reduce statistical complexity.&lt;/strong&gt; Alternatively, we propose stochastically shared embeddings (SSE), a data-driven approach to regularizing embedding layers, which stochastically transitions between embeddings during stochastic gradient descent (SGD). Because SSE integrates seamlessly with existing SGD algorithms, it can be used with only minor modifications when training large scale neural networks. We develop two versions of SSE: SSE-Graph using knowledge graphs of embeddings; SSE-SE using no prior information. We provide theoretical guarantees for our method and show its empirical effectiveness on 6 distinct tasks, from simple neural networks with one hidden layer in recommender systems, to the transformer and BERT in natural languages. &lt;strong&gt;We find that when used along with widely-used regularization methods such as weight decay and dropout, our proposed SSE can further reduce overfitting, which often leads to more favorable generalization results.&lt;/strong&gt; &lt;br /&gt;
 We conducted &lt;strong&gt;experiments for a total of 6 tasks from simple neural networks with one hidden layer in recommender systems, to the transformer and BERT in natural languages.&lt;/strong&gt;&lt;/p&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Paper Summary on Noise, Anomalies, Adversaries, Robust Learning, Generalization</title><link href="http://localhost:4000/blogs/2019-10-01-papers-summary-noise/" rel="alternate" type="text/html" title="Paper Summary on Noise, Anomalies, Adversaries, Robust Learning, Generalization" /><published>2019-10-01T00:00:00+01:00</published><updated>2019-10-01T00:00:00+01:00</updated><id>http://localhost:4000/blogs/papers-summary-noise</id><content type="html" xml:base="http://localhost:4000/blogs/2019-10-01-papers-summary-noise/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 
+&lt;h2 id=&quot;iccv-2019-on-label-noise-&quot;&gt;ICCV 2019 on label noise, …&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Han_Deep_Self-Learning_From_Noisy_Labels_ICCV_2019_paper.pdf&quot;&gt;Deep Self-Learning From Noisy Labels&lt;/a&gt;: The proposed SMP trains in an iterative manner which
+contains two phases: the first phase is to train a network
+with &lt;strong&gt;the original noisy label and corrected label&lt;/strong&gt; generated
+in the second phase.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Co-Mining_Deep_Face_Recognition_With_Noisy_Labels_ICCV_2019_paper.pdf&quot;&gt;Co-Mining: Deep Face Recognition With Noisy Labels&lt;/a&gt;: We propose a novel &lt;strong&gt;co-mining&lt;/strong&gt; framework, which employs two peer networks to &lt;strong&gt;detect the noisy faces,
+exchanges the high-confidence clean faces and reweights the clean faces&lt;/strong&gt; in a mini-batch fashion.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Kim_NLNL_Negative_Learning_for_Noisy_Labels_ICCV_2019_paper.pdf&quot;&gt;NLNL: Negative Learning for Noisy Labels&lt;/a&gt;: Input image belongs to this label–Positive Learning; Negative Learning (NL)–CNNs are trained using a complementary label as in “input image does not belong to this complementary label.”&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Symmetric_Cross_Entropy_for_Robust_Learning_With_Noisy_Labels_ICCV_2019_paper.pdf&quot;&gt;Symmetric Cross Entropy for Robust Learning With Noisy Labels&lt;/a&gt;: Already compared in our method.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Huang_O2U-Net_A_Simple_Noisy_Label_Detection_Approach_for_Deep_Neural_ICCV_2019_paper.pdf&quot;&gt;O2U-Net: A Simple Noisy Label Detection Approach for Deep Neural Networks&lt;/a&gt;: It only requires adjusting the hyper-parameters of the deep network to make its status transfer from overfitting to underfitting (O2U) cyclically. The losses of each sample are recorded during iterations. The higher the normalized average loss of a sample, the higher the probability of being noisy labels.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;1-neurips-2019-meta-weight-net-learning-an-explicit-mapping-for-sample-weighting&quot;&gt;:+1: &lt;a href=&quot;https://papers.nips.cc/paper/8467-meta-weight-net-learning-an-explicit-mapping-for-sample-weighting&quot;&gt;NeurIPS 2019-Meta-Weight-Net: Learning an Explicit Mapping For Sample Weighting&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;Targted problems: (1) Corrupted Labels (2) Class imbalance&lt;/li&gt;
+  &lt;li&gt;Methodology: Guided by &lt;strong&gt;a small amount of unbiased meta-data&lt;/strong&gt;,  to learn an explicit weighting layer which takes training losses as input and outputs examples’ weights.&lt;/li&gt;
+  &lt;li&gt;Code: &lt;a href=&quot;https://github.com/xjtushujun/meta-weight-net&quot;&gt;https://github.com/xjtushujun/meta-weight-net&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Introduciton: Why are the targeted problems important?&lt;/strong&gt; In practice, however, such biased training data are commonly encountered. For instance, practically
+collected training samples always contain corrupted labels [10, 11, 12, 13, 14, 15, 16, 17]. A typical
+example is a dataset roughly collected from a crowdsourcing system [18] or search engines [19, 20],
+which would possibly yield a large amount of noisy labels. Another popular type of biased training
+data is those with class imbalance. Real-world datasets are usually depicted as skewed distributions,
+with a long-tailed configuration. A few classes account for most of the data, while most classes are
+under-represented. Effective learning with these biased training data, which is regarded to be biased
+from evaluation/test ones, is thus an important while challenging issue in machine learning [1, 21].&lt;/li&gt;
+  &lt;li&gt;There exist &lt;strong&gt;two entirely contradictive
+ideas for constructing such a loss-weight mapping:&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Emphasise on harder ones:&lt;/strong&gt; Enforce the learning to more emphasize samples with larger loss values
+since they are more like to be uncertain hard samples located on the classification boundary. Typical
+methods of this category include AdaBoost [22, 23], hard negative mining [24] and focal loss [25]. &lt;strong&gt;This sample weighting manner is known to be necessary for class imbalance problems, since it can
+prioritize the minority class with relatively higher training losses.&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Emphasise on easier ones:&lt;/strong&gt; The rationality
+lies on that these samples are more likely to be high-confident ones with clean labels. Typical methods
+include self-paced learning(SPL) [26], iterative reweighting [27, 17] and multiple variants [28, 29, 30].
+This weighting strategy has been especially used in noisy label cases, since it inclines to suppress the
+effects of samples with extremely large loss values, possibly with corrupted incorrect labels.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Deficiencies:&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;How about the case that the training set is both imbalanced and
+noisy.&lt;/li&gt;
+          &lt;li&gt;They inevitably involve hyper-parameters, to be manually preset or tuned by cross-validation.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Experiments of this work:
+    &lt;ul&gt;
+      &lt;li&gt;Class Imbalance Experiments
+        &lt;ul&gt;
+          &lt;li&gt;ResNet-32 on  long-tailed CIFAR-10 and CIFAR-100.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Corrupted Label Experiments on CIFAR-10 and CIFAR-100
+        &lt;ul&gt;
+          &lt;li&gt;WRN-28-10 with varying noise rates under uniform noise.&lt;/li&gt;
+          &lt;li&gt;ResNet-32 with varying noise rates under flip noise - non-uniform noise.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Real-world data-Clothing 1M with ResNet-50
+        &lt;ul&gt;
+          &lt;li&gt;We use the 7k clean data as the meta dataset.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Problems of this work:
+    &lt;ul&gt;
+      &lt;li&gt;For &lt;strong&gt;the case where the training set is both imbalanced and noisy&lt;/strong&gt;, the authors mentioned in the introduction section that conventional methods cannot address this case. 
+  However, there is no experiment to demontrate that this method works.&lt;/li&gt;
+      &lt;li&gt;Conventional methods inevitably involve hyper-parameters to tune by cross-validation. 
+  However, for the proposed method, &lt;strong&gt;unbiased meta-data is required, which is a more expensive hyper-factor&lt;/strong&gt; in practice. 
+  Tuning hyper-parameters is cheaper than collecting unbiased meta-data for training the weighting function.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&quot;1-icml-2019-better-generalization-with-less-data-using-robust-gradient-descent&quot;&gt;:+1: &lt;a href=&quot;http://proceedings.mlr.press/v97/holland19a/holland19a.pdf&quot;&gt;ICML 2019-Better generalization with less data using robust gradient descent&lt;/a&gt;&lt;/h2&gt;
 
 &lt;h2 id=&quot;gan-adversary-examples-adversary-machine-learning&quot;&gt;&lt;a href=&quot;/my_docs/adversary/&quot;&gt;GAN, Adversary Examples, Adversary Machine Learning&lt;/a&gt;&lt;/h2&gt;
@@ -228,6 +616,12 @@ We conducted &lt;strong&gt;experiments for a total of 6 tasks from simple neural
   &lt;li&gt;NeurIPS 2019-Combinatorial Inference against Label Noise&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&quot;1--neurips-2019-noise-tolerant-fair-classification&quot;&gt;:+1:  &lt;a href=&quot;https://arxiv.org/abs/1901.10837&quot;&gt;NeurIPS 2019-Noise-tolerant fair classification&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Existing work on the problem operates &lt;strong&gt;under the assumption that the sensitive feature available in one’s training sample is perfectly reliable.&lt;/strong&gt; This assumption may be violated in many real-world cases: for example, respondents to a survey may choose to conceal or obfuscate their group identity out of fear of potential discrimination. This poses the question of whether one can still learn fair classifiers given noisy sensitive features.&lt;/p&gt;
+
+&lt;h2 id=&quot;neurips-2019-neural-networks-grown-and-self-organized-by-noise&quot;&gt;&lt;a href=&quot;https://arxiv.org/abs/1906.01039&quot;&gt;NeurIPS 2019-Neural networks grown and self-organized by noise&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;strong&gt;Living neural networks&lt;/strong&gt; emerge through a process of growth and self-organization that begins with a single cell and results in a brain, an organized and functional computational device. Artificial neural networks, however, rely on human-designed, hand-programmed architectures for their remarkable performance. &lt;strong&gt;Can we develop artificial computational devices that can grow and self-organize without human intervention?&lt;/strong&gt; In this paper, we propose a biologically inspired developmental algorithm that can &lt;strong&gt;‘grow’ a functional, layered neural network from a single initial cell.&lt;/strong&gt; The algorithm organizes inter-layer connections to construct a convolutional pooling layer, a key constituent of convolutional neural networks (CNN’s). Our approach is inspired by the mechanisms employed by the early visual system to wire the retina to the lateral geniculate nucleus (LGN), days before animals open their eyes. The key ingredients for robust self-organization are an emergent spontaneous spatiotemporal activity wave in the first layer and a local learning rule in the second layer that ‘learns’ the underlying activity pattern in the first layer. The algorithm is adaptable to a wide-range of input-layer geometries, robust to malfunctioning units in the first layer, and so can be used to &lt;strong&gt;successfully grow and self-organize pooling architectures of different pool-sizes and shapes.&lt;/strong&gt; The algorithm provides a primitive procedure for constructing layered neural networks through growth and self-organization. Broadly, our work shows that biologically inspired developmental algorithms can be applied to autonomously grow functional ‘brains’ in-silico.&lt;/p&gt;
+
 &lt;h2 id=&quot;stochastic-gradient-noise&quot;&gt;&lt;a href=&quot;/my_docs/Stochastic-Gradient-Noise/&quot;&gt;Stochastic-Gradient-Noise&lt;/a&gt;&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;ICML 2019-A Tail-Index Analysis of Stochastic Gradient Noise in Deep Neural Networks&lt;/li&gt;
@@ -238,13 +632,7 @@ We conducted &lt;strong&gt;experiments for a total of 6 tasks from simple neural
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;NeurIPS 2019-Extending Stein’s unbiased risk estimator to train deep denoisers with correlated pairs of noisy images&lt;/li&gt;
   &lt;li&gt;NeurIPS 2019-Variational Denoising Network: Toward Blind Noise Modeling and Removal&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;1--neurips-2019-noise-tolerant-fair-classification&quot;&gt;:+1:  &lt;a href=&quot;https://arxiv.org/abs/1901.10837&quot;&gt;NeurIPS 2019-Noise-tolerant fair classification&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Existing work on the problem operates &lt;strong&gt;under the assumption that the sensitive feature available in one’s training sample is perfectly reliable.&lt;/strong&gt; This assumption may be violated in many real-world cases: for example, respondents to a survey may choose to conceal or obfuscate their group identity out of fear of potential discrimination. This poses the question of whether one can still learn fair classifiers given noisy sensitive features.&lt;/p&gt;
-
-&lt;h2 id=&quot;neurips-2019-neural-networks-grown-and-self-organized-by-noise&quot;&gt;&lt;a href=&quot;https://arxiv.org/abs/1906.01039&quot;&gt;NeurIPS 2019-Neural networks grown and self-organized by noise&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;strong&gt;Living neural networks&lt;/strong&gt; emerge through a process of growth and self-organization that begins with a single cell and results in a brain, an organized and functional computational device. Artificial neural networks, however, rely on human-designed, hand-programmed architectures for their remarkable performance. &lt;strong&gt;Can we develop artificial computational devices that can grow and self-organize without human intervention?&lt;/strong&gt; In this paper, we propose a biologically inspired developmental algorithm that can &lt;strong&gt;‘grow’ a functional, layered neural network from a single initial cell.&lt;/strong&gt; The algorithm organizes inter-layer connections to construct a convolutional pooling layer, a key constituent of convolutional neural networks (CNN’s). Our approach is inspired by the mechanisms employed by the early visual system to wire the retina to the lateral geniculate nucleus (LGN), days before animals open their eyes. The key ingredients for robust self-organization are an emergent spontaneous spatiotemporal activity wave in the first layer and a local learning rule in the second layer that ‘learns’ the underlying activity pattern in the first layer. The algorithm is adaptable to a wide-range of input-layer geometries, robust to malfunctioning units in the first layer, and so can be used to &lt;strong&gt;successfully grow and self-organize pooling architectures of different pool-sizes and shapes.&lt;/strong&gt; The algorithm provides a primitive procedure for constructing layered neural networks through growth and self-organization. Broadly, our work shows that biologically inspired developmental algorithms can be applied to autonomously grow functional ‘brains’ in-silico.&lt;/p&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Start 3rd year (the final year of my PhD)</title><link href="http://localhost:4000/projects/2019-10-01-PhD-3rd-start/" rel="alternate" type="text/html" title="Start 3rd year (the final year of my PhD)" /><published>2019-10-01T00:00:00+01:00</published><updated>2019-10-01T00:00:00+01:00</updated><id>http://localhost:4000/projects/PhD-3rd-start</id><content type="html" xml:base="http://localhost:4000/projects/2019-10-01-PhD-3rd-start/">&lt;p class=&quot;message&quot;&gt;My final year of PhD training started.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Start 3rd year (the final year of my PhD)</title><link href="http://localhost:4000/projects/2019-10-01-PhD-3rd-start/" rel="alternate" type="text/html" title="Start 3rd year (the final year of my PhD)" /><published>2019-10-01T00:00:00+01:00</published><updated>2019-10-01T00:00:00+01:00</updated><id>http://localhost:4000/projects/PhD-3rd-start</id><content type="html" xml:base="http://localhost:4000/projects/2019-10-01-PhD-3rd-start/">&lt;p class=&quot;message&quot;&gt;My final year of PhD training started.&lt;/p&gt;
 
 &lt;h2 id=&quot;to-do-list&quot;&gt;To do list:&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;
