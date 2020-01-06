@@ -1,0 +1,11 @@
+{
+  "name": "hydejack-assets",
+  "homepage": "https://xinshaoamoswang.github.io/",
+  "author": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "html5shiv": "^3.7.3",
+    "katex": "^0.10.2"
+  }
+}

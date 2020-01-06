@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v8.5.2 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+
+
+  
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Papers on Video Person ReID | Xinshao Wang</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Papers on Video Person ReID" />
+<meta name="author" content="Xinshao Wang" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
+<meta property="og:description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
+<link rel="canonical" href="http://localhost:4000/Papers/VideoReID/" />
+<meta property="og:url" content="http://localhost:4000/Papers/VideoReID/" />
+<meta property="og:site_name" content="Xinshao Wang" />
+<script type="application/ld+json">
+{"description":"“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"WebPage","url":"http://localhost:4000/Papers/VideoReID/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Papers on Video Person ReID","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="Xinshao Wang; Machine Learning,Computer Vision,Robust Learning,Deep Metric Learning,Image Recognition,Video Recognition,Person ReID">
+  
+
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Xinshao Wang">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<meta name="application-name" content="Xinshao Wang">
+<meta name="msapplication-config" content="/assets/ieconfig.xml">
+
+
+<meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta name="generator" content="Hydejack v8.5.2" />
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Xinshao Wang" />
+
+
+
+<link rel="alternate" href="http://localhost:4000/Papers/VideoReID/" hreflang="en">
+
+<link rel="shortcut icon" href="/assets/icons/icon.png">
+<link rel="apple-touch-icon" href="/assets/icons/icon.png">
+
+<link rel="manifest" href="/assets/manifest.json">
+
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+
+
+<link rel="dns-prefetch" href="/" id="_baseURL">
+<link rel="dns-prefetch" href="/sw.js" id="_hrefSW">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.js" id="_hrefKatexJS">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css" id="_hrefKatexCSS">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.js" id="_hrefKatexCopyJS">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.css" id="_hrefKatexCopyCSS">
+<link rel="dns-prefetch" href="/assets/img/swipe.svg" id="_hrefSwipeSVG">
+
+
+
+
+<script>
+!function(e,t){"use strict";function n(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}e.loadJS=function(e,o){var r=t.createElement("script");r.src=e,o&&n(r,"load",o,{once:!0});var a=t.scripts[0];return a.parentNode.insertBefore(r,a),r},e._loaded=!1,e.loadJSDeferred=function(o,r){function a(){e._loaded=!0,r&&n(c,"load",r,{once:!0});var o=t.scripts[0];o.parentNode.insertBefore(c,o)}var c=t.createElement("script");return c.src=o,e._loaded?a():n(e,"load",a,{once:!0}),c},e.setRel=e.setRelStylesheet=function(e){function o(){this.rel="stylesheet"}n(t.getElementById(e),"load",o,{once:!0})}}(window,document);
+;
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+;
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+;
+!function(w, d) {
+  w._noPushState = false;
+  w._noDrawer = false;
+}(window, document);
+</script>
+
+<!--[if gt IE 8]><!---->
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/assets/css/hydejack-8.5.2.css">
+  <link rel="stylesheet" href="/assets/icomoon/style.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400|Noto+Sans:400,400i,700,700i&display=swap">
+  
+
+
+  <style id="_pageStyle">
+
+.content a:not(.btn){color:#4fb1ba;border-color:rgba(79,177,186,0.2)}.content a:not(.btn):hover{border-color:#4fb1ba}:focus{outline-color:#4fb1ba !important}.btn-primary{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:focus,.btn-primary.focus,.form-control:focus,.form-control.focus{box-shadow:0 0 0 3px rgba(79,177,186,0.5)}.btn-primary:hover,.btn-primary.hover{color:#fff;background-color:#409ba3;border-color:#409ba3}.btn-primary:disabled,.btn-primary.disabled{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:active,.btn-primary.active{color:#fff;background-color:#409ba3;border-color:#409ba3}::selection{color:#fff;background:#4fb1ba}::-moz-selection{color:#fff;background:#4fb1ba}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-70478493-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <script data-ad-client="ca-pub-8231481254980115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+</script>
+</head>
+
+<body class="no-color-transition">
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <div class="nav-btn-bar">
+      <span class="sr-only">Jump to:</span>
+      <a id="_menu" class="nav-btn no-hover fl" href="#_navigation">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <!-- <a id="_search" class="nav-btn no-hover fl" href="#_search">
+        <span class="sr-only">Search</span>
+        <span class="icon-search"></span>
+      </a>
+      <form action="https://duckduckgo.com/" method="GET">
+        <div class="form-group fr">
+          <label class="sr-only" for="_search">Search</label>
+          <input id="_search" name="q" class="form-control" type="search" />
+        </div>
+        <input type="hidden" name="q" value="site:hydejack.com" />
+        <input type="hidden" name="ia" value="web" />
+      </form> -->
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+
+<hy-push-state
+  replace-ids="_main"
+  link-selector="a[href]:not([href*='/assets/']):not(.external):not(.no-push-state)"
+  duration="250"
+  script-selector="script:not([type^='math/tex'])"
+  prefetch
+>
+  
+    <main
+  id="_main"
+  class="content fade-in layout-page"
+  role="main"
+  data-color="rgb(79,177,186)"
+  data-theme-color="rgb(25,55,71)"
+  
+    data-image="/assets/img/sidebar-bg.jpg"
+    data-overlay
+  
+  >
+  <article class="page" role="article">
+  <header>
+    <h1 class="page-title">Papers on Video Person ReID</h1>
+    
+
+
+
+  <div class="hr pb0"></div>
+
+
+  </header>
+
+  <p>Recent papers on video person reid.</p>
+
+<h3 id="iccv-2019-co-segmentation-inspired-attention-networks-for-video-based-person-re-identification"><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Subramaniam_Co-Segmentation_Inspired_Attention_Networks_for_Video-Based_Person_Re-Identification_ICCV_2019_paper.pdf">ICCV 2019: Co-segmentation Inspired Attention Networks for Video-based Person Re-identification</a></h3>
+
+<ul>
+  <li>
+    <p><strong>Why Video</strong>: Video-based Re-ID approaches have gained significant attention recently since a video, and not just an image, is often available.</p>
+  </li>
+  <li>
+    <p>We propose a novel Co-segmentation in-
+  spired video Re-ID deep architecture and formulate a Co-
+  segmentation based Attention Module (COSAM) that <strong>activates a common set of salient features across multiple frames of a video via mutual consensus in an unsupervised manner.</strong> 
+  As opposed to most of the prior work, our approach is able to <strong>attend to person accessories along with the person.</strong> 
+  Our plug-and-play and interpretable COSAM module applied on two deep architectures (ResNet50, SE-ResNet50) outperform the state-of-the-art methods on three benchmark
+  datasets</p>
+  </li>
+</ul>
+
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/co-segmentation-attention-illustration.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/co-segmentation-attention-illustration.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+
+<strong>Motivation</strong></p>
+
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img11.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/img11.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+
+<strong>Object co-segmentation is the task of identifying and
+segmenting common objects from two or more images according to “some” common characteristics [50, 27] such as
+similarity of object-class and appearance.</strong></p>
+
+<p><hy-img root-margin="512px" src="/Papers/imgs/co-segmentation-results.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/co-segmentation-results.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+
+<strong>Results</strong></p>
+<ul class="figure">
+  <li>Every video of the person is split
+into <strong>multiple non-overlapping video-snippets of length N
+frames</strong> and each snippet is passed through the network to
+obtain a <strong>snippet-level descriptor.</strong></li>
+  <li><strong>The video-snippet
+level descriptors are averaged to get the video-level descriptor.</strong> Then, these video-level descriptors are compared using the L2 distance to calculate the CMC and mAP performances.</li>
+  <li><strong>Snippet-level idea is bad:</strong> 1) if the video is too short; 2) if the video is too long.</li>
+  <li>An in-depth analysis by <strong>plugging in multiple
+COSAMs at various locations</strong> is detailed in the Supplementary Material.</li>
+</ul>
+
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img12.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/img12.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+
+<strong>Snippet-level idea is bad:</strong> 1) if the video is too short; 2) if the video is too long. 
+<strong>Not reasonable design</strong></p>
+
+<h3 id="iccv-2019-global-local-temporal-representations-for-video-person-re-identification"><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Li_Global-Local_Temporal_Representations_for_Video_Person_Re-Identification_ICCV_2019_paper.pdf">ICCV 2019: Global-Local Temporal Representations For Video Person Re-Identification</a></h3>
+
+<ul>
+  <li>
+    <p>Abstract: This paper proposes the Global-Local Temporal Repre-
+sentation (GLTR) to <strong>exploit the multi-scale temporal cues in video sequences for video person Re-Identification (ReID).</strong> GLTR is constructed by first modeling the <strong>short-term temporal cues among adjacent frames</strong>, then capturing the
+<strong>long-term relations among inconsecutive frames</strong>. Specifically, the short-term temporal cues are modeled by <strong>parallel dilated convolutions with different temporal dilation rates to represent the motion and appearance of pedestrian.</strong> The long-term relations are captured by <strong>a temporal self-attention model to alleviate the occlusions and noises in video sequences</strong>. 
+The short and long-term temporal cues are aggregated as the final GLTR by a simple single-stream CNN. GLTR shows substantial superiority to existing features learned with body part cues or metric learning on four
+widely-used video ReID datasets. For instance, <strong>it achieves
+Rank-1 Accuracy of 87.02% on MARS dataset without reranking</strong>, better than current state-of-the art.</p>
+  </li>
+  <li>
+    <p>Dilated Temporal Pyramid (DTP) Convolution for local temporal context learning</p>
+  </li>
+  <li>
+    <p>Temporal Self-Attention (TSA) for exploiting the global temporal cues.</p>
+  </li>
+</ul>
+
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img01.png" alt="Full-width image" class="lead" data-width="300" data-height="150">
+  <noscript><img data-ignore src="/Papers/imgs/img01.png" alt="Full-width image" class="lead" data-width="300" data-height="150"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img13.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/img13.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img02.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/img02.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<p><hy-img root-margin="512px" src="/Papers/imgs/img03.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/img03.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+<ul class="figure">
+  <li>We employ standard ResNet50 [12] as the backbone for
+frame feature extraction.</li>
+  <li>Input images are resized to 256×128.</li>
+  <li>All models are trained and finetuned with PyTorch.</li>
+  <li>For 2D CNN training, each batch contains 128 images.</li>
+  <li>For DTP and TSA training, we sample 16 adjacent frames from each sequence as input for each training epoch. The batch size is set as 10.</li>
+  <li>
+    <p>All models are trained with only softmax loss.</p>
+  </li>
+  <li>
+    <p><strong>Testing</strong>: We use 2D CNN to extract a d=128-dim
+feature from each video frame, then fuse frame features into GLTR using the network illustrated in Fig. 2. The video
+feature is finally used for person ReID with Euclidean distance.</p>
+  </li>
+  <li>CSA: competitive snippet aggregation</li>
+  <li><a href="https://arxiv.org/pdf/1812.10305.pdf">STMP-Inception-v3</a>:  Liu et al. [29] propose a recurrent architecture to aggregate the frame-level representations and
+yield a sequence-level human feature representation. <strong>RNN
+introduces a certain number of fully-connected layers and
+gates for temporal cue modeling, making it complicated and
+difficult to train.</strong> STMP [29] introduces a complex recurrent network
+and uses part cues and triplet loss.</li>
+  <li><a href="https://arxiv.org/pdf/1811.07468.pdf">M3D-ResNet50</a>: 3D convolution directly extracts spatial-temporal features through end-to-end CNN training. Recently, deep 3D
+CNN is introduced for video representation learning. Tran
+et al. [41] propose C3D networks for spatial-temporal feature learning. Qiu et al. [32] factorize the 3D convolutional
+filters into spatial and temporal components, which yield
+performance gains. <strong>Li et al. [19] build a compact Multiscale 3D (M3D) convolution network to learn multi-scale
+temporal cues. Although 3D CNN has exhibited promising performance, it is still sensitive to spatial misalignments
+and needs to stack a certain number of 3D convolutional kernels, resulting in large parameter overheads and increased
+difficult for CNN optimization.</strong> M3D [19] use 3D CNN
+to learn the temporal cues, hence requires higher computational complexity.</li>
+  <li><a href="https://arxiv.org/pdf/1811.04129.pdf">STA-ResNet50</a>: <strong>STA introduces multi-branches for part feature
+learning and uses triplet loss to promote the performance.</strong>
+Compared with those works, our method achieves competitive performance with simple design., e.g., we extract global
+feature with basic backbone and train only with the softmax
+loss.</li>
+</ul>
+
+<h3 id="iccv-2019-temporal-knowledge-propagation-for-image-to-video-person-re-identification"><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Gu_Temporal_Knowledge_Propagation_for_Image-to-Video_Person_Re-Identification_ICCV_2019_paper.pdf">ICCV 2019: Temporal Knowledge Propagation for Image-to-Video Person Re-identification</a></h3>
+
+<ul>
+  <li>
+    <p>In many scenarios of Person Re-identification (Re-ID),
+the gallery set consists of lots of surveillance videos and the
+query is just an image, thus Re-ID has to be conducted be-
+tween image and videos</p>
+  </li>
+  <li>
+    <p>Specifically, <strong>given the input videos,
+we enforce the image representation network to fit the outputs of video representation network in a shared feature
+space.</strong> <strong>With back propagation, temporal knowledge can
+be transferred to enhance the image features</strong> and the information asymmetry problem can be alleviated.</p>
+  </li>
+  <li>
+    <p>Note that both image and video networks use ResNet50 as backbone. <strong>The only difference is that video network add extra non-local blocks to model temporal information.</strong> Given the same inputs, TKP loss enforces these two networks to output similar features. Obviously, the weights
+of additional non-local blocks being 0 is the optimal solution of minimizing TKP loss. In that case, the non-local
+blocks can not capture any temporal information. <strong>So updating video network by TKP deteriorates modeling temporal
+knowledge.</strong> Unless specified, in our emperiments, $L^F_{TKP}$
+and $L^D_{TKP}$ are not back-propagated through the video representation network during model training.</p>
+  </li>
+  <li>
+    <p>Objective functions:</p>
+    <ul>
+      <li>Classification Loss: We build two shared weights
+classifiers to map the image features and video features to a
+shared identity space.</li>
+      <li>
+        <p>Integrated Triplet Loss: We also use triplet loss with
+hard sample mining [10] to constrain the relative sample
+distances in the shared feature space. Specifically, we integrate four kinds of triplet losses, image-to-video (I2V),
+video-to-image (V2I), image-to-image (I2I) and video-tovideo (V2V) triplet losses. The final triplet loss LT is defined as:</p>
+
+        <p>$L_T = L_{I2V} + L_{V2I} + L_{I2I} + L_{V2V}$</p>
+      </li>
+      <li>
+        <p>The final objective function is formulated as
+the combination of classification loss, integrated triplet loss
+and the proposed TKP loss:</p>
+
+        <p>$L = L_C + L_T + L^D_{TKP} + L^F_{TKP}$</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img04.png" alt="Full-width image" class="lead" data-width="100" data-height="50">
+  <noscript><img data-ignore src="/Papers/imgs/img04.png" alt="Full-width image" class="lead" data-width="100" data-height="50"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<p><hy-img root-margin="512px" src="/Papers/imgs/img05.png" alt="Full-width image" class="lead" data-width="100" data-height="50">
+  <noscript><img data-ignore src="/Papers/imgs/img05.png" alt="Full-width image" class="lead" data-width="100" data-height="50"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+<ul class="figure">
+  <li>We pre-train ResNet-50 on ImageNet [26] and adopt the
+method in [33] to initialize the non-local blocks.</li>
+  <li>During training, we <strong>randomly sample 4 frames with a stride of 8
+frames from the original full-length video</strong> to form an input
+video clip. For the original video less than 32 frames, we
+duplicate it to meet the length.</li>
+  <li>For iLIDS-VID, we first pre-train the
+model on large-scale dataset and then fine-tune it on iLIDS-
+VID following [31].</li>
+  <li>In the test phase, the query image features are extracted
+by image representation model. <strong>For each gallery video, we
+first split it into several 32-frame clips.</strong> For each clip, we
+utilize video representation model to extract video represen-
+tation. <strong>The final video feature is the averaged representation
+of all clips.</strong></li>
+</ul>
+
+<h3 id="cvpr-2019-attribute-driven-feature-disentangling-and-temporal-aggregation-for-video-person-re-identification"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhao_Attribute-Driven_Feature_Disentangling_and_Temporal_Aggregation_for_Video_Person_Re-Identification_CVPR_2019_paper.pdf">CVPR 2019: Attribute-Driven Feature Disentangling and Temporal Aggregation for Video Person Re-Identification</a></h3>
+
+<ul>
+  <li>In this paper, we
+propose an attribute-driven method for feature disentangling and frame re-weighting. <strong>The features of single frames
+are disentangled into groups of sub-features, each corre-
+sponds to specific semantic attributes.</strong> 
+<strong>The sub-features are
+re-weighted by the confidence of attribute recognition and
+then aggregated at the temporal dimension as the final rep-
+resentation.</strong> By means of this strategy, the most informa-
+tive regions of each frame are enhanced and contributes to
+a more discriminative sequence representation. Extensive
+ablation studies verify <strong>the effectiveness of feature disentan-
+gling as well as temporal re-weighting</strong>. The experimental
+results on the iLIDS-VID, PRID-2011 and MARS datasets
+demonstrate that our proposed method outperforms exist-
+ing state-of-the-art approaches.</li>
+</ul>
+
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img06.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/img06.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img07.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/img07.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img14.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/img14.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<p><hy-img root-margin="512px" src="/Papers/imgs/img08.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/img08.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+<ul class="figure">
+  <li>Input images are first resized to 144 × 288 and
+cropped at 128 × 256. For the data augmentation, we use
+random crops with random horizontal mirroring for training
+and a single center crop for testing.</li>
+  <li>We use SGD to train our
+model and the batch size is 32.  The sequence length is set to T = 8. The learning rate starts from
+0.05 and is divided by 10 every 40 epochs to train the model
+for 100 epochs.</li>
+  <li>In real-world applications, <strong>computational efficiency</strong> is
+equally important to performance. It is worth noting that
+<strong>Snippet and ASTPN require optical flow as input</strong> to provide motion features. However, <strong>the calculation of optical flow is very time-consuming</strong> and is hard to be applied in
+real-time system.</li>
+  <li>Some existing methods perform <strong>pairwise comparison</strong> to calculate the similarity between query and
+gallery sequences, e.g. a pair of sequence are input to the
+network for verification. <strong>This strategy is impracticable in large-scale scenarios</strong> because all the gallery sequences need
+to be calculated once for each query. An efficient practice
+is extracting features of large gallery set once in an off-
+line way and sorting them by Euclidean distances in fea-
+ture space when given a query sequence.</li>
+  <li>Our proposed
+method, which <strong>does not require optical flow and pairwise comparison</strong>, is more suitable for real-world applications.
+Based on the same <strong>“Res50 + RGB-Only + Sing-Pass” set-
+ting</strong>, our method significantly improves the mAP on MARS
+by 10.5% and boosts the CMC-1 by 4.7%/6.1%/0.7% on
+the three dataset.</li>
+</ul>
+
+<h3 id="cvpr-2019-vrstc-occlusion-free-video-person-re-identification"><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Hou_VRSTC_Occlusion-Free_Video_Person_Re-Identification_CVPR_2019_paper.pdf">CVPR 2019: VRSTC: Occlusion-Free Video Person Re-Identification</a></h3>
+
+<ul>
+  <li>
+    <p>Different from most
+previous works that discard the occluded frames, <strong>STCnet
+can recover the appearance of the occluded parts.</strong> For one
+thing, the spatial structure of a pedestrian frame can be
+used to predict the occluded body parts from the unoccluded
+body parts of this frame. For another, the temporal patterns
+of pedestrian sequence provide important clues to generate
+the contents of occluded parts. With the spatiotemporal information, STCnet can recover the appearance for the oc-
+cluded parts, which could be leveraged with those unoc-
+cluded parts for more accurate video re-ID.</p>
+  </li>
+  <li>We train ResNet-50
+with cross-entropy loss to be the ID guider of STCNet.</li>
+  <li>
+    <p>In training term, four-frame input tracks are cropped out
+from an input sequence. The frame features are extracted
+by ResNet-50, then the average temporal pooling is used
+to obtain the sequence feature. Input images are resized
+to 256 × 128.</p>
+  </li>
+  <li>
+    <p>We embed the non-local block [29] in
+the re-ID network to capture temporal dependency of input
+sequence.</p>
+  </li>
+  <li>
+    <p><strong>Locating occluded regions.</strong> With the pretrained re-ID
+network as feature extractor, we use the similarity scoring
+mechanism to generate the score for each frame region. We
+regard the regions whose scores are lower than τ as the occluded regions, and we define the frames without occluded
+regions as the unoccluded frames. In our experiment, τ is
+set to 0.89.</p>
+  </li>
+  <li>
+    <p>The occluded regions of the frames in raw re-ID dataset are
+replaced with the regions generated by STCnet to <strong>form a
+new dataset.</strong> <strong>Then the re-ID network is trained and tested
+with the new dataset.</strong></p>
+  </li>
+  <li>
+    <p>In order to verify the effectiveness of STCnet as a kind of <strong>data enhancement method</strong>, we use a simple re-ID network with <strong>average temporal pooling and the cross entropy loss.</strong></p>
+  </li>
+  <li>In order to <strong>capture temporal dependency</strong>, we <strong>embed
+the non-local blocks [29] into the re-ID network.</strong> Different
+from the previous works that only build temporal dependency in the end, the non-local blocks can be inserted into
+the earlier part of deep neural networks. This allows us to
+build a richer hierarchical temporal dependency that combines both non-local and local information.</li>
+</ul>
+
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img09.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/img09.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<p class="figure"><hy-img root-margin="512px" src="/Papers/imgs/img10.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
+  <noscript><img data-ignore src="/Papers/imgs/img10.png" alt="Full-width image" class="lead" data-width="200" data-height="100"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+ 
+ResNet-50</p>
+
+
+</article>
+
+
+
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML">
+</script>
+
+
+
+
+
+<div class="navigator">
+    
+    
+</div>
+
+
+
+
+
+
+
+<div id="disqus_thread"></div>
+
+
+<script>
+    var disqus_config = function () {
+            this.page.url = "https://xinshaoamoswang.github.io/Papers/VideoReID/";
+            this.page.identifier = "";
+        }; 
+
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://xinshaowang.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+<noscript>Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+
+
+
+
+  
+
+  
+<footer role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2019. All rights reserved.
+</small></p>
+  
+  
+  <p><small>Welcome to Xinshao Wang's Personal Website</small></p>
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+    <hy-drawer
+  class=""
+  align="left"
+  threshold="10"
+  touch-events
+  prevent-default
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+    <div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+      <div class="sidebar-about">
+        
+          <a class="no-hover" href="/" tabindex="-1">
+            <img src="/assets/icons/android-chrome-192x192.png" class="avatar" alt="Xinshao Wang" data-ignore />
+          </a>
+        
+        <h2 class="h1"><a href="/">Xinshao Wang</a></h2>
+        
+        
+          <p class="fine">
+            Machine Learning (Deep Metric Learning, Robust Learning under Arbitrary Anomalies).
+Computer Vision (Image/Video Recognition, Person ReID).
+
+          </p>
+        
+      </div>
+
+      <nav class="sidebar-nav heading" role="navigation">
+        <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_navigation"
+          href="/blogs/"
+          class="sidebar-nav-item"
+          
+        >
+          Blog
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/paperlists/"
+          class="sidebar-nav-item"
+          
+        >
+          PaperLists
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/projects/"
+          class="sidebar-nav-item"
+          
+        >
+          Projects
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/Resume/"
+          class="sidebar-nav-item"
+          
+        >
+          Resume
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/about/"
+          class="sidebar-nav-item"
+          
+        >
+          About ME
+        </a>
+      </li>
+    
+  
+</ul>
+
+      </nav>
+
+      
+
+      <div class="sidebar-social">
+        <span class="sr-only">Social:</span>
+<ul>
+  
+    
+    
+
+    
+    
+
+    
+    
+  
+</ul>
+
+      </div>
+    </div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+  
+</hy-push-state>
+
+<!--[if gt IE 10]><!---->
+
+  <script nomodule>!function(){var e=document.createElement("script");if(!("noModule"in e)&&"onbeforeload"in e){var t=!1;document.addEventListener("beforeload",function(n){if(n.target===e)t=!0;else if(!n.target.hasAttribute("nomodule")||!t)return;n.preventDefault()},!0),e.type="module",e.src=".",document.head.appendChild(e),e.remove()}}();
+</script>
+  <script type="module" src="/assets/js/hydejack-8.5.2.js"></script>
+  <script nomodule src="/assets/js/hydejack-legacy-8.5.2.js" defer></script>
+  
+
+  
+
+
+<!--<![endif]-->
+
+
+
+
+<h2 class="sr-only" hidden>Templates (for web app):</h2>
+
+<template id="_animation-template" hidden>
+  <div class="animation-main fixed-top">
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+<template id="_loading-template" hidden>
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+<template id="_error-template" hidden>
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+<template id="_forward-template" hidden>
+  <button id="_forward" class="forward nav-btn no-hover fl">
+    <span class="sr-only">Forward</span>
+    <span class="icon-arrow-right2"></span>
+  </button>
+</template>
+
+<template id="_back-template" hidden>
+  <button id="_back" class="back nav-btn no-hover fl">
+    <span class="sr-only">Back</span>
+    <span class="icon-arrow-left2"></span>
+  </button>
+</template>
+
+<template id="_permalink-template" hidden>
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="icon-link"></span>
+  </a>
+</template>
+
+
+
+
+</body>
+
+
+<script id="dsq-count-scr" src="//xinshaowang.disqus.com/count.js" async></script>
+
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script></html>
