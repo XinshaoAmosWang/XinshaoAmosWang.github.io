@@ -11,1226 +11,604 @@
                 \/__/                  \/___/
 
 Powered by Hydejack v8.5.2 <https://hydejack.com/>
--->
-
-
-
-
-
-
-
-
-
-
-
-<head>
-  
-
-
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-
-
-
-
-  
-<!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Adversarial Examples Reading List | Xinshao Wang</title>
-<meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Adversarial Examples Reading List" />
-<meta name="author" content="Xinshao Wang" />
-<meta property="og:locale" content="en" />
-<meta name="description" content="Forked from: Adversarial-Examples-Reading-List" />
-<meta property="og:description" content="Forked from: Adversarial-Examples-Reading-List" />
-<link rel="canonical" href="http://localhost:4000/my_docs/Adversarial-Examples-Reading-List/" />
-<meta property="og:url" content="http://localhost:4000/my_docs/Adversarial-Examples-Reading-List/" />
-<meta property="og:site_name" content="Xinshao Wang" />
-<script type="application/ld+json">
-{"description":"Forked from: Adversarial-Examples-Reading-List","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"WebPage","url":"http://localhost:4000/my_docs/Adversarial-Examples-Reading-List/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Adversarial Examples Reading List","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-
-
-  
-
-  
-    <meta name="keywords" content="Xinshao Wang; Machine Learning,Computer Vision,Robust Learning,Deep Metric Learning,Image Recognition,Video Recognition,Person ReID">
-  
-
-
-<meta name="mobile-web-app-capable" content="yes">
-
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Xinshao Wang">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-<meta name="application-name" content="Xinshao Wang">
-<meta name="msapplication-config" content="/assets/ieconfig.xml">
-
-
-<meta name="theme-color" content="rgb(25,55,71)">
-
-
-<meta name="generator" content="Hydejack v8.5.2" />
-
-<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Xinshao Wang" />
-
-
-
-<link rel="alternate" href="http://localhost:4000/my_docs/Adversarial-Examples-Reading-List/" hreflang="en">
-
-<link rel="shortcut icon" href="/assets/icons/icon.png">
-<link rel="apple-touch-icon" href="/assets/icons/icon.png">
-
-<link rel="manifest" href="/assets/manifest.json">
-
-
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-
-
-
-
-<link rel="dns-prefetch" href="/" id="_baseURL">
-<link rel="dns-prefetch" href="/sw.js" id="_hrefSW">
-<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.js" id="_hrefKatexJS">
-<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css" id="_hrefKatexCSS">
-<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.js" id="_hrefKatexCopyJS">
-<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.css" id="_hrefKatexCopyCSS">
-<link rel="dns-prefetch" href="/assets/img/swipe.svg" id="_hrefSwipeSVG">
-
-
-
-
-<script>
-!function(e,t){"use strict";function n(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}e.loadJS=function(e,o){var r=t.createElement("script");r.src=e,o&&n(r,"load",o,{once:!0});var a=t.scripts[0];return a.parentNode.insertBefore(r,a),r},e._loaded=!1,e.loadJSDeferred=function(o,r){function a(){e._loaded=!0,r&&n(c,"load",r,{once:!0});var o=t.scripts[0];o.parentNode.insertBefore(c,o)}var c=t.createElement("script");return c.src=o,e._loaded?a():n(e,"load",a,{once:!0}),c},e.setRel=e.setRelStylesheet=function(e){function o(){this.rel="stylesheet"}n(t.getElementById(e),"load",o,{once:!0})}}(window,document);
-;
-!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
-;
-!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
-;
-!function(w, d) {
-  w._noPushState = false;
-  w._noDrawer = false;
-}(window, document);
-</script>
-
-<!--[if gt IE 8]><!---->
-
-
-
-
-
-
-
-
-
-
-
-  <link rel="stylesheet" href="/assets/css/hydejack-8.5.2.css">
-  <link rel="stylesheet" href="/assets/icomoon/style.css">
-  
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400|Noto+Sans:400,400i,700,700i&display=swap">
-  
-
-
-  <style id="_pageStyle">
-
-.content a:not(.btn){color:#4fb1ba;border-color:rgba(79,177,186,0.2)}.content a:not(.btn):hover{border-color:#4fb1ba}:focus{outline-color:#4fb1ba !important}.btn-primary{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:focus,.btn-primary.focus,.form-control:focus,.form-control.focus{box-shadow:0 0 0 3px rgba(79,177,186,0.5)}.btn-primary:hover,.btn-primary.hover{color:#fff;background-color:#409ba3;border-color:#409ba3}.btn-primary:disabled,.btn-primary.disabled{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:active,.btn-primary.active{color:#fff;background-color:#409ba3;border-color:#409ba3}::selection{color:#fff;background:#4fb1ba}::-moz-selection{color:#fff;background:#4fb1ba}
-
-</style>
-
-
-<!--<![endif]-->
-
-
-
-
-</head>
-
-<body class="no-color-transition">
-  <div id="_navbar" class="navbar fixed-top">
-  <div class="content">
-    <div class="nav-btn-bar">
-      <span class="sr-only">Jump to:</span>
-      <a id="_menu" class="nav-btn no-hover fl" href="#_navigation">
-        <span class="sr-only">Navigation</span>
-        <span class="icon-menu"></span>
-      </a>
-      <!-- <a id="_search" class="nav-btn no-hover fl" href="#_search">
-        <span class="sr-only">Search</span>
-        <span class="icon-search"></span>
-      </a>
-      <form action="https://duckduckgo.com/" method="GET">
-        <div class="form-group fr">
-          <label class="sr-only" for="_search">Search</label>
-          <input id="_search" name="q" class="form-control" type="search" />
-        </div>
-        <input type="hidden" name="q" value="site:hydejack.com" />
-        <input type="hidden" name="ia" value="web" />
-      </form> -->
-    </div>
-  </div>
-</div>
-<hr class="sr-only" hidden>
-
-
-<hy-push-state replace-ids="_main" link-selector="a[href]:not([href*='/assets/']):not(.external):not(.no-push-state)" duration="250" script-selector="script:not([type^='math/tex'])" prefetch>
-  
-    <main id="_main" class="content fade-in layout-page" role="main" data-color="rgb(79,177,186)" data-theme-color="rgb(25,55,71)" data-image="/assets/img/sidebar-bg.jpg" data-overlay>
-  <article class="page" role="article">
-  <header>
-    <h1 class="page-title">Adversarial Examples Reading List</h1>
-    
-
-
-
-  
-    <p class="message">
-      Forked from: <a href="https://github.com/chawins/Adversarial-Examples-Reading-List">Adversarial-Examples-Reading-List</a>
-
-    </p>
-  
-
-
-  </header>
-
-  <p>A compilation of papers in adversarial examples that I have read or plan to read. The number of papers in this subfield can be overwhelming. I hope this list is helpful for anyone who is interested in entering the field or looking for a quick survey. The list is by no means exhaustive so any paper suggestion is very welcome. The order of the papers is arbitrary. Couple of notes:</p>
+--><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta http-equiv="x-ua-compatible" content="ie=edge"><title>Adversarial Examples Reading List | Xinshao Wang</title><meta name="generator" content="Jekyll v3.8.6" /><meta property="og:title" content="Adversarial Examples Reading List" /><meta name="author" content="Xinshao Wang" /><meta property="og:locale" content="en" /><meta name="description" content="Forked from: Adversarial-Examples-Reading-List" /><meta property="og:description" content="Forked from: Adversarial-Examples-Reading-List" /><link rel="canonical" href="https://xinshaowang.com/my_docs/Adversarial-Examples-Reading-List/" /><meta property="og:url" content="https://xinshaowang.com/my_docs/Adversarial-Examples-Reading-List/" /><meta property="og:site_name" content="Xinshao Wang" /> <script type="application/ld+json"> {"description":"Forked from: Adversarial-Examples-Reading-List","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"WebPage","url":"https://xinshaowang.com/my_docs/Adversarial-Examples-Reading-List/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://xinshaowang.com/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Adversarial Examples Reading List","@context":"https://schema.org"}</script><meta name="keywords" content="Xinshao Wang; Machine Learning,Computer Vision,Robust Learning,Deep Metric Learning,Image Recognition,Video Recognition,Person ReID"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Xinshao Wang"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="application-name" content="Xinshao Wang"><meta name="msapplication-config" content="/assets/ieconfig.xml"><meta name="theme-color" content="rgb(25,55,71)"><meta name="generator" content="Hydejack v8.5.2" /><link type="application/atom+xml" rel="alternate" href="https://xinshaowang.com/feed.xml" title="Xinshao Wang" /><link rel="alternate" href="https://xinshaowang.com/my_docs/Adversarial-Examples-Reading-List/" hreflang="en"><link rel="shortcut icon" href="/assets/icons/icon.png"><link rel="apple-touch-icon" href="/assets/icons/icon.png"><link rel="manifest" href="/assets/manifest.json"><link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com"><link rel="dns-prefetch" href="/" id="_baseURL"><link rel="dns-prefetch" href="/sw.js" id="_hrefSW"><link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.js" id="_hrefKatexJS"><link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css" id="_hrefKatexCSS"><link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.js" id="_hrefKatexCopyJS"><link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.css" id="_hrefKatexCopyCSS"><link rel="dns-prefetch" href="/assets/img/swipe.svg" id="_hrefSwipeSVG"> <script> !function(e,t){"use strict";function n(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}e.loadJS=function(e,o){var r=t.createElement("script");r.src=e,o&&n(r,"load",o,{once:!0});var a=t.scripts[0];return a.parentNode.insertBefore(r,a),r},e._loaded=!1,e.loadJSDeferred=function(o,r){function a(){e._loaded=!0,r&&n(c,"load",r,{once:!0});var o=t.scripts[0];o.parentNode.insertBefore(c,o)}var c=t.createElement("script");return c.src=o,e._loaded?a():n(e,"load",a,{once:!0}),c},e.setRel=e.setRelStylesheet=function(e){function o(){this.rel="stylesheet"}n(t.getElementById(e),"load",o,{once:!0})}}(window,document); ; !function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this); ; !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this); ; !function(w, d) { w._noPushState = false; w._noDrawer = false; }(window, document); </script> <!--[if gt IE 8]><!----><style> body{--code-font-family: Menlo,Monaco,Consolas,monospace;--font-weight: 400;--font-weight-bold: 700;--font-weight-heading: 400;--text-muted: #888;--gray-bg: rgba(0,0,0,0.025);--gray-text: #666;--menu-text: #bbb;--body-color: #333;--body-bg: #fff;--border-color: #ebebeb}.clearfix,.sidebar-social::after{content:"";display:table;clear:both}.color-transition,body,p,hr,.hr,table:not(.highlight) td,table:not(.highlight) th,.message{transition:background-color 1s ease, border-color 1s ease}.no-color-transition{transition:none !important}*{box-sizing:border-box}html,body{margin:0;padding:0}html{font-size:16px;line-height:1.75}body{color:var(--body-color);background-color:var(--body-bg);font-weight:var(--font-weight);overflow-y:scroll}a{text-decoration:none}.lead{margin-left:-1rem;margin-right:-1rem}.content img,.img,.content video,.video{max-width:100%}.content img.lead,.img.lead,.content video.lead,.video.lead{max-width:calc(100% + 2rem);width:calc(100% + 2rem)}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-weight:var(--font-weight-heading);margin:5rem 0 1rem}h1,.h1{font-size:2rem;line-height:1.3}h2,.h2{font-size:1.5rem;line-height:1.4}h3,.h3{font-size:1.17em;line-height:1.5}h4,h5,h6,.h4,.h5,.h6{font-size:1rem;margin-bottom:0.5rem}p{margin-top:0;margin-bottom:1rem}p.lead{font-size:1.2em;margin-top:1.5rem;margin-bottom:1.5rem;padding:0 1rem}ul,ol,dl{margin-top:0;margin-bottom:1rem}ul,ol{padding-left:1.25rem}hr{position:relative;margin:3rem 0;border:0;border-top:1px solid var(--border-color)}.hr{border-bottom:1px solid var(--border-color);padding-bottom:1rem;margin-bottom:2rem}table:not(.highlight){border-collapse:collapse;margin-bottom:2rem;margin-left:-1rem}table:not(.highlight) td,table:not(.highlight) th{padding:.25rem .5rem;border:1px solid var(--border-color)}table:not(.highlight) td:first-child,table:not(.highlight) th:first-child{padding-left:1rem}table:not(.highlight) td:last-child,table:not(.highlight) th:last-child{padding-right:1rem}.page{margin-bottom:3em}.page li+li{margin-top:.25rem}.page>header{margin-bottom:2rem}.page-title,.post-title{margin-top:0}.post-date{display:block;margin-top:-0.5rem;margin-bottom:1rem;color:var(--text-muted)}.related-posts{padding-left:0;list-style:none;margin-bottom:2rem}.related-posts>li,.related-posts>li+li{margin-top:1rem}.message{margin-bottom:1rem;padding:1rem;color:var(--gray-text);background-color:var(--gray-bg);margin-left:-1rem;margin-right:-1rem}@media screen{body::before{content:'';width:.5rem;background:var(--border-color);position:fixed;left:0;top:0;bottom:0}}@media screen and (min-width: 64em){body::before{width:21rem}}@media screen and (min-width: 1666px){body::before{width:calc(50% - 28rem)}}@media screen and (min-width: 42em){html{font-size:17px}}@media screen and (min-width: 124em){html{font-size:18px}}.fade-in{animation-duration:500ms;animation-timing-function:ease;animation-name:fade-in;animation-fill-mode:forwards}@keyframes fade-in{from{transform:translateY(-3rem);opacity:0}50%{transform:translateY(-3rem);opacity:0}to{transform:translateY(0);opacity:1}}.fl{float:left}.fr{float:right}.mb4{margin-bottom:4rem}.mb6{margin-bottom:6rem}.mt0{margin-top:0}.mt2{margin-top:2rem}.mt3{margin-top:3rem}.mt4{margin-top:4rem}.pb0{padding-bottom:0}.sixteen-nine{position:relative}.sixteen-nine::before{display:block;content:"";width:100%;padding-top:56.25%}.sixteen-nine>*{position:absolute;top:0;left:0;right:0;bottom:0}.sr-only{display:none}.border{border:1px solid var(--border-color)}hy-push-state a,.a{position:relative;padding-bottom:.15rem;border-bottom:1px solid}hy-push-state a.no-hover,.a.no-hover{border-bottom:none;padding-bottom:0}.content .img{overflow:hidden}.content .img img{margin:0;width:100%;height:100%;background-color:var(--gray-bg)}hy-drawer{width:100%;position:relative;overflow:hidden}@media screen and (min-width: 64em){hy-drawer{position:fixed;width:21rem;top:0;left:0;bottom:0;margin-left:0}hy-drawer.cover{position:relative;width:100%}}@media screen and (min-width: 1666px){hy-drawer{width:calc(50% - 28rem)}}.sidebar{position:relative;display:flex;justify-content:center;align-items:center;color:rgba(255,255,255,0.75);text-align:center;z-index:2;min-height:100vh}.sidebar a{color:#fff;border-bottom-color:rgba(255,255,255,0.2)}.sidebar-bg{position:absolute;top:0;left:calc(50% - 50vw);width:100vw;height:100%;background:#202020 center / cover}.sidebar-bg::after{content:"";position:absolute;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.05)}.sidebar-bg.sidebar-overlay::after{background:linear-gradient(to bottom, rgba(32,32,32,0) 0%, rgba(32,32,32,0.5) 50%, rgba(32,32,32,0) 100%)}.sidebar-sticky{position:relative;z-index:3;max-width:21rem;padding:1.5rem;contain:content}.sidebar-about .avatar{margin-bottom:1.5rem}.sidebar-about>h2{margin-top:0}.sidebar-nav>ul{list-style:none;padding-left:0}a.sidebar-nav-item{display:inline-block;font-weight:var(--font-weight-heading);line-height:1.75;padding:.25rem;border-bottom:1px solid rgba(255,255,255,0.2)}.sidebar-social>ul{display:inline-block;list-style:none;padding-left:0;margin-bottom:0}.sidebar-social>ul>li{float:left}.sidebar-social>ul>li>a{display:inline-block;text-align:center;font-size:1.4rem;width:3rem;height:4rem;padding:.5rem 0;line-height:3rem}.sidebar-social>ul li+li{margin-top:0}.fixed-common,.fixed-top,.fixed-bottom{position:fixed;left:0;width:100%;z-index:2}.fixed-top{top:0}.fixed-bottom{bottom:0}.navbar>.content{padding-top:0;padding-bottom:0;min-height:0;color:var(--menu-text)}.nav-btn-bar{margin:0 -1rem 0 -.875rem}.nav-btn{background:none;border:none;padding:1.75rem .875rem;color:var(--menu-text) !important;cursor:pointer}.animation-main{opacity:0;pointer-events:none}.content{position:relative;margin-left:auto;margin-right:auto;padding:6rem 1rem 12rem}@media screen{.content{padding-left:1.5rem;max-width:38rem;min-height:100vh}}@media screen and (min-width: 54em){.content{max-width:42rem}}@media screen and (min-width: 64em){.content{padding-left:1rem;margin-left:24rem;margin-right:3rem}}@media screen and (min-width: 88em){.content{margin-left:25rem;margin-right:4rem;max-width:48rem}}@media screen and (min-width: 1666px){.content{margin:auto}}.avatar{width:6.5rem;height:6.5rem;border-radius:100%;overflow:hidden}@media screen and (min-width: 88em){.avatar{width:7rem;height:7rem}}.content .avatar{float:right;margin-left:.5rem}html{font-family:Noto Sans,Helvetica,Arial,sans-serif}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,.heading{font-family:Roboto Slab,Helvetica,Arial,sans-serif}</style><link rel="preload" as="style" href="/assets/css/hydejack-8.5.2.css" id="_stylePreload"><link rel="preload" as="style" href="/assets/icomoon/style.css" id="_iconsPreload"><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400|Noto+Sans:400,400i,700,700i&display=swap" id="_fontsPreload"> <script>setRel('_stylePreload');setRel('_iconsPreload');/**/setRel('_fontsPreload');/**/</script> <noscript><link rel="stylesheet" href="/assets/css/hydejack-8.5.2.css"><link rel="stylesheet" href="/assets/icomoon/style.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400|Noto+Sans:400,400i,700,700i&display=swap"> </noscript><style id="_pageStyle"> .content a:not(.btn){color:#4fb1ba;border-color:rgba(79,177,186,0.2)}.content a:not(.btn):hover{border-color:#4fb1ba}:focus{outline-color:#4fb1ba !important}.btn-primary{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:focus,.btn-primary.focus,.form-control:focus,.form-control.focus{box-shadow:0 0 0 3px rgba(79,177,186,0.5)}.btn-primary:hover,.btn-primary.hover{color:#fff;background-color:#409ba3;border-color:#409ba3}.btn-primary:disabled,.btn-primary.disabled{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:active,.btn-primary.active{color:#fff;background-color:#409ba3;border-color:#409ba3}::selection{color:#fff;background:#4fb1ba}::-moz-selection{color:#fff;background:#4fb1ba}</style><!--<![endif]--><body class="no-color-transition"><div id="_navbar" class="navbar fixed-top"><div class="content"><div class="nav-btn-bar"> <span class="sr-only">Jump to:</span> <a id="_menu" class="nav-btn no-hover fl" href="#_navigation"> <span class="sr-only">Navigation</span> <span class="icon-menu"></span> </a>
+</div></div></div><hr class="sr-only" hidden> <hy-push-state replace-ids="_main" link-selector="a[href]:not([href*='/assets/']):not(.external):not(.no-push-state)" duration="250" script-selector="script:not([type^='math/tex'])" prefetch><main id="_main" class="content fade-in layout-page" role="main" data-color="rgb(79,177,186)" data-theme-color="rgb(25,55,71)" data-image="/assets/img/sidebar-bg.jpg" data-overlay><article class="page" role="article"><header><h1 class="page-title">Adversarial Examples Reading List</h1>
+<p class="message"> Forked from: <a href="https://github.com/chawins/Adversarial-Examples-Reading-List">Adversarial-Examples-Reading-List</a></p></header><p>A compilation of papers in adversarial examples that I have read or plan to read. The number of papers in this subfield can be overwhelming. I hope this list is helpful for anyone who is interested in entering the field or looking for a quick survey. The list is by no means exhaustive so any paper suggestion is very welcome. The order of the papers is arbitrary. Couple of notes:</p>
 <ul>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> simply denotes papers that, solely based on my <strong>personal</strong> opinion, are influential to the way I think about adversarial examples.</li>
-  <li>Some papers will have a short summary I wrote to remind myself what the paper is about + my personal thoughts/reactions. It is not a complete description of the paper.</li>
-  <li>I recommend using <strong>TeX All the Things</strong> Chrome Extension for viewing math equations on this page.</li>
-  <li>Do expect mistakes, misunderstanding, and shallow interpretation as I am an ignorant PhD student. Please correct me if you found one of those mistakes. I will really appreciate it.</li>
-  <li>Enjoy!</li>
+<li>Some papers will have a short summary I wrote to remind myself what the paper is about + my personal thoughts/reactions. It is not a complete description of the paper.</li>
+<li>I recommend using <strong>TeX All the Things</strong> Chrome Extension for viewing math equations on this page.</li>
+<li>Do expect mistakes, misunderstanding, and shallow interpretation as I am an ignorant PhD student. Please correct me if you found one of those mistakes. I will really appreciate it.</li>
+<li>Enjoy!</li>
 </ul>
-
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
-  <li><a href="#background">Background</a></li>
-  <li>
-<a href="#attacks">Attacks</a>
-    <ul>
-      <li><a href="#attacks-with-gan">Attacks with GAN</a></li>
-    </ul>
-  </li>
-  <li><a href="#transferability--attack-and-defense-">Transferability (Attack and Defense)</a></li>
-  <li>
-<a href="#defenses">Defenses</a>
-    <ul>
-      <li><a href="#heuristic-defense">Heuristic Defense</a></li>
-      <li><a href="#detection">Detection</a></li>
-      <li><a href="#certifiable-defense">Certifiable Defense</a></li>
-      <li><a href="#certifiable-defense-with--randomized-smoothing-">Certifiable Defense with “Randomized Smoothing”</a></li>
-      <li><a href="#lipschitz-network">Lipschitz Network</a></li>
-      <li><a href="#defenses-with-gan--vae">Defenses with GAN, VAE</a></li>
-      <li><a href="#ensemble-based-defense">Ensemble-Based Defense</a></li>
-      <li><a href="#beating-defenses">Beating Defenses</a></li>
-    </ul>
-  </li>
-  <li>
-<a href="#theoretical---empirical-analysis">Theoretical &amp; Empirical Analysis</a>
-    <ul>
-      <li><a href="#hardness-of-defense">Hardness of Defense</a></li>
-    </ul>
-  </li>
-  <li>
-<a href="#applications">Applications</a>
-    <ul>
-      <li><a href="#text">Text</a></li>
-      <li><a href="#audio">Audio</a></li>
-    </ul>
-  </li>
-  <li><a href="#etc">Etc.</a></li>
-  <li><a href="#other-cool-security-adversarial-ml-papers">Other Cool Security/Adversarial ML papers</a></li>
-  <li><a href="#useful-links">Useful Links</a></li>
-  <li><a href="#to-read">To-Read</a></li>
+<li><a href="#background">Background</a></li>
+<li>
+<a href="#attacks">Attacks</a><ul><li><a href="#attacks-with-gan">Attacks with GAN</a></li></ul>
+</li>
+<li><a href="#transferability--attack-and-defense-">Transferability (Attack and Defense)</a></li>
+<li>
+<a href="#defenses">Defenses</a><ul>
+<li><a href="#heuristic-defense">Heuristic Defense</a></li>
+<li><a href="#detection">Detection</a></li>
+<li><a href="#certifiable-defense">Certifiable Defense</a></li>
+<li><a href="#certifiable-defense-with--randomized-smoothing-">Certifiable Defense with “Randomized Smoothing”</a></li>
+<li><a href="#lipschitz-network">Lipschitz Network</a></li>
+<li><a href="#defenses-with-gan--vae">Defenses with GAN, VAE</a></li>
+<li><a href="#ensemble-based-defense">Ensemble-Based Defense</a></li>
+<li><a href="#beating-defenses">Beating Defenses</a></li>
 </ul>
-
+</li>
+<li>
+<a href="#theoretical---empirical-analysis">Theoretical &amp; Empirical Analysis</a><ul><li><a href="#hardness-of-defense">Hardness of Defense</a></li></ul>
+</li>
+<li>
+<a href="#applications">Applications</a><ul>
+<li><a href="#text">Text</a></li>
+<li><a href="#audio">Audio</a></li>
+</ul>
+</li>
+<li><a href="#etc">Etc.</a></li>
+<li><a href="#other-cool-security-adversarial-ml-papers">Other Cool Security/Adversarial ML papers</a></li>
+<li><a href="#useful-links">Useful Links</a></li>
+<li><a href="#to-read">To-Read</a></li>
+</ul>
 <hr>
-
 <h2 id="background">Background</h2>
-
 <ul>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   C. Szegedy, J. Bruna, D. Erhan, and I. Goodfellow, <strong>Intriguing Properties of Neural Networks</strong>, ICLR 2014. <a href="https://arxiv.org/abs/1312.6199">[link]</a>
 </li>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   I. J. Goodfellow, J. Shlens, and C. Szegedy, <strong>Explaining and Harnessing Adversarial Examples</strong>, ICLR 2015. <a href="https://arxiv.org/abs/1412.6572">[link]</a>
 </li>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   A. Nguyen, J. Yosinski, and J. Clune, <strong>Deep Neural Networks are Easily Fooled</strong>, CVPR, 2015 IEEE Conf., pp. 427–436, 2015.</li>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   N. Papernot, P. Mcdaniel, I. Goodfellow, S. Jha, Z. B. Celik, and A. Swami, <strong>Practical Black-Box Attacks against Deep Learning Systems using Adversarial Examples.</strong>
 </li>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   N. Papernot, P. McDaniel, S. Jha, M. Fredrikson, Z. B. Celik, and A. Swami, <strong>The Limitations of Deep Learning in Adversarial Settings</strong>, IEEE, Nov. 2015.</li>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   N. Papernot, P. Mcdaniel, A. Sinha, and M. Wellman, <strong>SoK : Towards the Science of Security and Privacy in Machine Learning.</strong>
 </li>
 </ul>
-
 <hr>
-
 <h2 id="attacks">Attacks</h2>
-
 <ul>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Sabour et al., <strong>Adversarial Manipulation of Deep Rrepresentations</strong>, ICLR 2016.
-    <ul>
-      <li>Create adversarial examples by matching deep representation of an original sample to that of a guide sample by reducing $\ell_2$ distance of deep representations under a box constraint in the pixel space.</li>
-      <li>Through some analyses, the adversarial examples are found to be <strong>more similar</strong> to the guide sample than the original despite little change in pixel space. A number of experiments shows that the nature of this deep-representation adversarial examples is very different from that of the normal ones. The experiment with random network weights suggest that this phenomenon might be caused by network architecture rather than the learning algorithm itself.</li>
-    </ul>
-  </li>
-  <li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Sabour et al., <strong>Adversarial Manipulation of Deep Rrepresentations</strong>, ICLR 2016.<ul>
+<li>Create adversarial examples by matching deep representation of an original sample to that of a guide sample by reducing $\ell_2$ distance of deep representations under a box constraint in the pixel space.</li>
+<li>Through some analyses, the adversarial examples are found to be <strong>more similar</strong> to the guide sample than the original despite little change in pixel space. A number of experiments shows that the nature of this deep-representation adversarial examples is very different from that of the normal ones. The experiment with random network weights suggest that this phenomenon might be caused by network architecture rather than the learning algorithm itself.</li>
+</ul>
+</li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   N. Carlini and D. Wagner, <strong>Towards Evaluating the Robustness of Neural Networks</strong>, IEEE SP 2017.</li>
-  <li>P.-Y. Chen, Y. Sharma, H. Zhang, J. Yi, and C.-J. Hsieh, <strong>EAD: Elastic-Net Attacks to Deep Neural Networks via Adversarial Examples.</strong>
+<li>P.-Y. Chen, Y. Sharma, H. Zhang, J. Yi, and C.-J. Hsieh, <strong>EAD: Elastic-Net Attacks to Deep Neural Networks via Adversarial Examples.</strong>
 </li>
-  <li>O. Poursaeed, I. Katsman, B. Gao, and S. Belongie, <strong>Generative Adversarial Perturbations.</strong>
+<li>O. Poursaeed, I. Katsman, B. Gao, and S. Belongie, <strong>Generative Adversarial Perturbations.</strong>
 </li>
-  <li>S. Baluja and I. Fischer, <strong>Adversarial Transformation Networks: Learning to Generate Adversarial Examples.</strong>
-    <ul>
-      <li>Train neural net to generate adversarial examples</li>
-    </ul>
-  </li>
-  <li>F. Tramèr, A. Kurakin, N. Papernot, D. Boneh, and P. Mcdaniel, <strong>Ensemble Adversarial Training: Attacks and Defenses.</strong>
+<li>S. Baluja and I. Fischer, <strong>Adversarial Transformation Networks: Learning to Generate Adversarial Examples.</strong><ul><li>Train neural net to generate adversarial examples</li></ul>
 </li>
-  <li>
+<li>F. Tramèr, A. Kurakin, N. Papernot, D. Boneh, and P. Mcdaniel, <strong>Ensemble Adversarial Training: Attacks and Defenses.</strong>
+</li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   S.-M. Moosavi-Dezfooli, A. Fawzi, O. Fawzi, and P. Frossard, <strong>Universal adversarial perturbations</strong>, 2016.</li>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   S.-M. Moosavi-Dezfooli, A. Fawzi, and P. Frossard, <strong>DeepFool: a simple and accurate method to fool deep neural networks</strong>, CVPR, pp. 2574–2582, 2016.</li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   M. Cisse, Y. Adi, N. Neverova, and J. Keshet, <strong>Houdini: Fooling Deep Structured Prediction Models.</strong>
-    <ul>
-      <li>Generating adversarial examples using surrogate loss in place of real non-differentiable task loss</li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   W. Brendel, J. Rauber, and M. Bethge, <strong>Decision-Based Adversarial Attacks: Reliable Attacks Against Black-Box Machine Learning Models</strong>, 2017. <a href="https://arxiv.org/abs/1712.04248">[link]</a>
-    <ul>
-      <li>Attack that requires only the classifier’s output (# of queries $\approx10^5$). Start with an image of target class and move towards a desired benign image.</li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Xiao et al., <strong>Spatially Transformed Adversarial Examples</strong>, ICLR 2018. <a href="https://arxiv.org/abs/1801.02612">[link]</a> <a href="https://github.com/rakutentech/stAdv">[Github]</a>
-    <ul>
-      <li>White-box attack using GD on a different objective function calculated from displacement of pixels (called <em>flow</em>), use differentiable bilinear interpolation for continuous (and differentiable) objective function.</li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   <strong>The Limitation of Adversarial Training and the Blind-Spot Attack</strong>, ICLR 2019
-    <ul>
-      <li>Measure (1) distance from one test sample to all training samples with mean distance of the $k$-nearest neighbors in an arbitrary deep representation, (2) KL divergence of training and test sets (use same deep representation as (1), project with t-SNE, then KDE)</li>
-      <li>Blind-spot attack: find test sample <strong>far away</strong> from the training samples by pixel-wise affine transform and clipping to [0, 1], then use CW $\ell_\infty$ attack</li>
-      <li>Very successful against adversarial training: the attack is far from the learned manifold, even for adversarial training. Interestingly, the affine transformation part does not affect clean accuracy at all. So the network generalizes to such transformation, but the transformation does put the starting sample in a <strong>more vulnerable</strong> region.</li>
-    </ul>
-  </li>
-  <li>Dong et al., <strong>Boosting Adversarial Attacks with Momentum</strong>, CVPR 2018.
-    <ul>
-      <li>Iterative $\ell_\infty$ gradient attack with momentum update. Improve transferability without hurting white-box success rate, but the increase in success rate might be attributed to larger $\ell_2$ norm.</li>
-    </ul>
-  </li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   M. Cisse, Y. Adi, N. Neverova, and J. Keshet, <strong>Houdini: Fooling Deep Structured Prediction Models.</strong><ul><li>Generating adversarial examples using surrogate loss in place of real non-differentiable task loss</li></ul>
+</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   W. Brendel, J. Rauber, and M. Bethge, <strong>Decision-Based Adversarial Attacks: Reliable Attacks Against Black-Box Machine Learning Models</strong>, 2017. <a href="https://arxiv.org/abs/1712.04248">[link]</a><ul><li>Attack that requires only the classifier’s output (# of queries $\approx10^5$). Start with an image of target class and move towards a desired benign image.</li></ul>
+</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Xiao et al., <strong>Spatially Transformed Adversarial Examples</strong>, ICLR 2018. <a href="https://arxiv.org/abs/1801.02612">[link]</a> <a href="https://github.com/rakutentech/stAdv">[Github]</a><ul><li>White-box attack using GD on a different objective function calculated from displacement of pixels (called <em>flow</em>), use differentiable bilinear interpolation for continuous (and differentiable) objective function.</li></ul>
+</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   <strong>The Limitation of Adversarial Training and the Blind-Spot Attack</strong>, ICLR 2019<ul>
+<li>Measure (1) distance from one test sample to all training samples with mean distance of the $k$-nearest neighbors in an arbitrary deep representation, (2) KL divergence of training and test sets (use same deep representation as (1), project with t-SNE, then KDE)</li>
+<li>Blind-spot attack: find test sample <strong>far away</strong> from the training samples by pixel-wise affine transform and clipping to [0, 1], then use CW $\ell_\infty$ attack</li>
+<li>Very successful against adversarial training: the attack is far from the learned manifold, even for adversarial training. Interestingly, the affine transformation part does not affect clean accuracy at all. So the network generalizes to such transformation, but the transformation does put the starting sample in a <strong>more vulnerable</strong> region.</li>
 </ul>
-
+</li>
+<li>Dong et al., <strong>Boosting Adversarial Attacks with Momentum</strong>, CVPR 2018.<ul><li>Iterative $\ell_\infty$ gradient attack with momentum update. Improve transferability without hurting white-box success rate, but the increase in success rate might be attributed to larger $\ell_2$ norm.</li></ul>
+</li>
+</ul>
 <h3 id="attacks-with-gan">Attacks with GAN</h3>
-
 <ul>
-  <li>Z. Zhao, D. Dua, and S. Singh, <strong>Generating Natural Adversarial Examples.</strong>
+<li>Z. Zhao, D. Dua, and S. Singh, <strong>Generating Natural Adversarial Examples.</strong>
 </li>
-  <li>J. Hayes, G. Danezis, <strong>Learning Universal Adversarial Perturbations with Generative Models.</strong>
+<li>J. Hayes, G. Danezis, <strong>Learning Universal Adversarial Perturbations with Generative Models.</strong>
 </li>
-  <li>Xiao et al., <strong>GENERATING ADVERSARIAL EXAMPLES WITH ADVERSARIAL NETWORKS</strong>, 2018.</li>
-  <li>Poursaeed et al., <strong>Generative Adversarial Perturbations</strong>, 2017.</li>
+<li>Xiao et al., <strong>GENERATING ADVERSARIAL EXAMPLES WITH ADVERSARIAL NETWORKS</strong>, 2018.</li>
+<li>Poursaeed et al., <strong>Generative Adversarial Perturbations</strong>, 2017.</li>
 </ul>
-
 <hr>
-
 <h2 id="transferability-attack-and-defense">Transferability (Attack and Defense)</h2>
-
 <ul>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Y. Liu, X. Chen, C. Liu, and D. Song, <strong>Delving into Transferable Adversarial Examples and Black-box Attacks</strong>, 2016.</li>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   F. Tramèr, N. Papernot, I. Goodfellow, D. Boneh, and P. Mcdaniel, <strong>The Space of Transferable Adversarial Examples.</strong>
 </li>
-  <li>Xie et al., <strong>Improving Transferability of Adversarial Examples with Input Diversity</strong>, 2018.
-    <ul>
-      <li>Random resizing and padding input at every step increases transferability.</li>
-    </ul>
-  </li>
-  <li>Chen and Vorobeychik, <strong>Regularized Ensembles and Transferability in Adversarial Learning</strong>, AAAI 2018.
-    <ul>
-      <li>Transferability seems to be blocked by 1) different last layer/loss (normal, SVM), 2) regularization norm ($\ell_1, \ell_2$), 3) regularization constant (5, 4.999999, 4.9999999). Choice of regularization constant is particularly interesting. Could tiny change in the loss function change the landscape of the optima?</li>
-      <li>Attack with ensemble (average last layer): more sub-models increases attack success rate, redundant sub-models in the ensemble (sub-models not in the target) hurts success rate slightly, but after two extra models, adding more does not reduce success rate. This is likely due to the two type of regularizations used or potentially the choice of target network.</li>
-    </ul>
-  </li>
-  <li>Shumailov et al., <strong>Sitatapatra: Blocking the Transfer of Adversarial Examples</strong>, 2019.
-    <ul>
-      <li>Each convolutional layer is extended with two components: Detector and Guard.
-        <ul>
-          <li>Detector: put each activation through element-wise polynomial (coefficients are randomized and kept secret). The model is trained to minimize this polynomial to be under some threshold $t$. Assumption is clean samples won’t trigger this threshold, but adversarial examples may.
-            <ul>
-              <li>Choice of coefficient affects transferability (more similar more transfer) e.g. $2x^2 + 3x + 5 &lt; t = 6$. But wouldn’t this just tries to make activation small? How does it help distinguish OOD? Why not use higher degree?</li>
-            </ul>
-          </li>
-          <li>Guard: use some per-channel attention masking with randomized secret pre-determined coefficients. This is said to diversify the gradient and reduce transferability.</li>
-        </ul>
-      </li>
-      <li>(Results) weak evaluation section (lack comparison with other methods and baseline). It seems to prevent transfer when $\epsilon$ is small, fail when $\epsilon$ is large but become more detectable.</li>
-      <li>Propose an idea of tracing from which model an adversarial example is generated from. The experiments and evaluations are weak. However, this is an interesting question that no one thought about probably due to lack of real use cases.</li>
-    </ul>
-  </li>
+<li>Xie et al., <strong>Improving Transferability of Adversarial Examples with Input Diversity</strong>, 2018.<ul><li>Random resizing and padding input at every step increases transferability.</li></ul>
+</li>
+<li>Chen and Vorobeychik, <strong>Regularized Ensembles and Transferability in Adversarial Learning</strong>, AAAI 2018.<ul>
+<li>Transferability seems to be blocked by 1) different last layer/loss (normal, SVM), 2) regularization norm ($\ell_1, \ell_2$), 3) regularization constant (5, 4.999999, 4.9999999). Choice of regularization constant is particularly interesting. Could tiny change in the loss function change the landscape of the optima?</li>
+<li>Attack with ensemble (average last layer): more sub-models increases attack success rate, redundant sub-models in the ensemble (sub-models not in the target) hurts success rate slightly, but after two extra models, adding more does not reduce success rate. This is likely due to the two type of regularizations used or potentially the choice of target network.</li>
 </ul>
-
+</li>
+<li>Shumailov et al., <strong>Sitatapatra: Blocking the Transfer of Adversarial Examples</strong>, 2019.<ul>
+<li>Each convolutional layer is extended with two components: Detector and Guard.<ul>
+<li>Detector: put each activation through element-wise polynomial (coefficients are randomized and kept secret). The model is trained to minimize this polynomial to be under some threshold $t$. Assumption is clean samples won’t trigger this threshold, but adversarial examples may.<ul><li>Choice of coefficient affects transferability (more similar more transfer) e.g. $2x^2 + 3x + 5 &lt; t = 6$. But wouldn’t this just tries to make activation small? How does it help distinguish OOD? Why not use higher degree?</li></ul>
+</li>
+<li>Guard: use some per-channel attention masking with randomized secret pre-determined coefficients. This is said to diversify the gradient and reduce transferability.</li>
+</ul>
+</li>
+<li>(Results) weak evaluation section (lack comparison with other methods and baseline). It seems to prevent transfer when $\epsilon$ is small, fail when $\epsilon$ is large but become more detectable.</li>
+<li>Propose an idea of tracing from which model an adversarial example is generated from. The experiments and evaluations are weak. However, this is an interesting question that no one thought about probably due to lack of real use cases.</li>
+</ul>
+</li>
+</ul>
 <hr>
-
 <h2 id="defenses">Defenses</h2>
-
 <h3 id="heuristic-defense">Heuristic Defense</h3>
 <ul>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   N. Papernot, P. McDaniel, X. Wu, S. Jha, and A. Swami, <strong>Distillation as a Defense to Adversarial Perturbations against Deep Neural Networks</strong>, 2015.</li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   A. Kurakin, G. Brain, I. J. Goodfellow, and S. Bengio, <strong>Adversarial Machine Learning at Scale.</strong>
-    <ul>
-      <li>First introduction of adversarial training with FGSM</li>
-    </ul>
-  </li>
-  <li>S. Gu, L. Rigazio, <strong>Towards Deep Neural Network Architectures Robust to Adversarial Examples</strong>, 2015.</li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   A. Mądry, A. Makelov, L. Schmidt, D. Tsipras, and A. Vladu, <strong>Towards Deep Learning Models Resistant to Adversarial Attacks.</strong>
-    <ul>
-      <li>Adversarial training with PGD provides strong defense (MNIST, CIFAR) even in white-box setting</li>
-    </ul>
-  </li>
-  <li>Xie et al., <strong>Mitigating Adversarial Effects through Randomization</strong>, 2017.
-    <ul>
-      <li>Defense against adversarial examples with randomization layer which resizes and pads an image, use ensemble with adversarial training like Tramer et al. 2017.</li>
-      <li>Evaluated on ImageNet against an attack that uses an ensemble of a fixed set of 21 patterns (resize + pad). Seem to improve robustness significantly against gradient-based attack, especially DeepFool and CW.</li>
-      <li>CW performs slightly worse than FGSM in this case potentially because the randomization further prevents transferability which is already poor for CW. Curious to see an attack directly on the ensemble of models, i.e. the patterns are re-randomized at every iteration.</li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   H. Kannan, A. Kurakin, I. Goodfellow, <strong>Adversarial Logit Pairing</strong>, 2018.</li>
-  <li>W. Xu, D. Evans, and Q. Yanjun, <strong>Feature Squeezing: Detecting Adversarial Examples in Deep Neural Networks</strong>, NDSS 2018. <a href="https://arxiv.org/abs/1704.01155">[link]</a>
-    <ul>
-      <li>Experiment with three “feature squeezing”: reduce bit depth, local smoothing, non-local smoothing.</li>
-      <li>Evaluated on MNIST, CIFAR-10, ImageNet. Some performance drop on CIFAR-10 and ImageNet.</li>
-      <li>Each method works well with different types of norms (i.e. bit depth reduction is very good against $\ell_2$ or $\ell_\infty$, smoothing is good against $\ell_0$, etc.).</li>
-      <li>Can be used as a detector by comparing ($\ell_1$ distance) logits of the input before and after squeezing.</li>
-      <li>Obvious adaptive adversary does not succeed.</li>
-    </ul>
-  </li>
-  <li>S. Zheng, T. Leung, and I. Goodfellow, <strong>Improving the Robustness of Deep Neural Networks via Stability Training.</strong>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   A. Kurakin, G. Brain, I. J. Goodfellow, and S. Bengio, <strong>Adversarial Machine Learning at Scale.</strong><ul><li>First introduction of adversarial training with FGSM</li></ul>
 </li>
-  <li>A. Galloway, T. Tanay, G. Taylor, <strong>Adversarial Training Versus Weight Decay</strong>, 2018.</li>
-  <li>A. Mosca, and G. Magoulas, <strong>Hardening against adversarial examples with the smooth gradient method</strong>, 2018.</li>
-  <li>S. Srisakaokul, Z. Zhong, Y. Zhang, W. Yang, and T. Xie, <strong>MULDEF: Multi-model-based Defense Against Adversarial Examples for Neural Networks</strong>, 2018. <a href="https://arxiv.org/abs/1809.00065">[link]</a>
-    <ul>
-      <li>They propose a simple scheme of adversarial training with multiple models: to summarize, the first model is trained on clean samples, and each of the subsequent models is trained on a union of clean samples and FGSM adversarial examples generated from all of the models before it.</li>
-      <li>The robustness relies on the random model selection, and each model is not robust to its own adversarial examples but significantly more robust to adversarial examples generated from the other models.</li>
-    </ul>
-  </li>
-  <li>Mustafa et al., <strong>Adversarial Defense by Restricting the Hidden Space of Deep Neural Networks</strong>, 2019.
-    <ul>
-      <li>Propose a defense against adversarial examples, classifying samples by finding distance to “class mean” in the representation layer. The class mean is not really a mean but a trainable weight that is trained as an auxiliary loss (pull: mean &amp; samples from same class. push: mean &amp; samples from diff class, mean &amp; mean from diff class) in addition to normal CE loss. Further improve robustness when combined with PGD/FGSM adversarial training.</li>
-      <li>The results are however not convincing. This method should perform much worse than Madry et al. on MNIST at $\epsilon = 0.3$, but the paper omits this result. Results on CIFAR-10 are also not SOTA.</li>
-    </ul>
-  </li>
-  <li>Khoury and Hadfield-Menell, <strong>Adversarial Training with Voronoi Constraints</strong>, 2019.
-    <ul>
-      <li>Assuming the “low-dimensional manifold hypothesis” (data is $k$-dimensional manifold in $d$-dimensional space where $k \ll d$), they show that kNN is more robust to adversarial examples and is more data-efficient to do “adversarial training”</li>
-      <li>“Nearest neighbor classifiers are naturally robust in high <strong>codimensions</strong> because the Voronoi cells are elongated in the directions normal to the manifold when data are dense”</li>
-      <li>Theorem 2: Provide sampling condition on training data (there must exist a sample within $\delta$ distance from any point in manifold) such that an $\epsilon$-expansion of the data manifold is classified correctly by nearest neighbor or adversarial training.</li>
-      <li>Theorem 3: The size of training data (under sampling condition from Theorem 2) for nearest neighbor is exponentially smaller in $k$ compared to adversarial training. This proof, however, assumes very simplified manifolds.</li>
-      <li>Propose adversarial training with Voronoi cell constraint instead of a norm ball. The inner maximization problem is similar to that of Madry et al’s but constrains that the objective variable, $\hat{x}$, stays in the Voronoi cell of the original training sample $x$. To avoid projection step on Voronoi cell, they take gradient step on the loss function and check if the constraint is satisfied after every step. If not, the optimization terminates. To speed up, instead of checking against the entire training set, only $m$ nearest samples from each class are sought and checked per one training sample, and this needs to be computed only once per dataset.</li>
-      <li>The proposed adversarial training is for neural networks and not nearest neighbor, and no theoretical justification is given for why this adversarial training is better. My take is that it tries to make the network have similar behavior to 1-NN. No need to set $\epsilon$ as it leaves that to property of the dataset. Experiments on MNIST show improve in robustness at large $\ell_\infty$-norm with minimal accuracy drop on clean data. On CIFAR-10, it performs similarly to Madry et al.</li>
-    </ul>
-  </li>
+<li>S. Gu, L. Rigazio, <strong>Towards Deep Neural Network Architectures Robust to Adversarial Examples</strong>, 2015.</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   A. Mądry, A. Makelov, L. Schmidt, D. Tsipras, and A. Vladu, <strong>Towards Deep Learning Models Resistant to Adversarial Attacks.</strong><ul><li>Adversarial training with PGD provides strong defense (MNIST, CIFAR) even in white-box setting</li></ul>
+</li>
+<li>Xie et al., <strong>Mitigating Adversarial Effects through Randomization</strong>, 2017.<ul>
+<li>Defense against adversarial examples with randomization layer which resizes and pads an image, use ensemble with adversarial training like Tramer et al. 2017.</li>
+<li>Evaluated on ImageNet against an attack that uses an ensemble of a fixed set of 21 patterns (resize + pad). Seem to improve robustness significantly against gradient-based attack, especially DeepFool and CW.</li>
+<li>CW performs slightly worse than FGSM in this case potentially because the randomization further prevents transferability which is already poor for CW. Curious to see an attack directly on the ensemble of models, i.e. the patterns are re-randomized at every iteration.</li>
 </ul>
-
+</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   H. Kannan, A. Kurakin, I. Goodfellow, <strong>Adversarial Logit Pairing</strong>, 2018.</li>
+<li>W. Xu, D. Evans, and Q. Yanjun, <strong>Feature Squeezing: Detecting Adversarial Examples in Deep Neural Networks</strong>, NDSS 2018. <a href="https://arxiv.org/abs/1704.01155">[link]</a><ul>
+<li>Experiment with three “feature squeezing”: reduce bit depth, local smoothing, non-local smoothing.</li>
+<li>Evaluated on MNIST, CIFAR-10, ImageNet. Some performance drop on CIFAR-10 and ImageNet.</li>
+<li>Each method works well with different types of norms (i.e. bit depth reduction is very good against $\ell_2$ or $\ell_\infty$, smoothing is good against $\ell_0$, etc.).</li>
+<li>Can be used as a detector by comparing ($\ell_1$ distance) logits of the input before and after squeezing.</li>
+<li>Obvious adaptive adversary does not succeed.</li>
+</ul>
+</li>
+<li>S. Zheng, T. Leung, and I. Goodfellow, <strong>Improving the Robustness of Deep Neural Networks via Stability Training.</strong>
+</li>
+<li>A. Galloway, T. Tanay, G. Taylor, <strong>Adversarial Training Versus Weight Decay</strong>, 2018.</li>
+<li>A. Mosca, and G. Magoulas, <strong>Hardening against adversarial examples with the smooth gradient method</strong>, 2018.</li>
+<li>S. Srisakaokul, Z. Zhong, Y. Zhang, W. Yang, and T. Xie, <strong>MULDEF: Multi-model-based Defense Against Adversarial Examples for Neural Networks</strong>, 2018. <a href="https://arxiv.org/abs/1809.00065">[link]</a><ul>
+<li>They propose a simple scheme of adversarial training with multiple models: to summarize, the first model is trained on clean samples, and each of the subsequent models is trained on a union of clean samples and FGSM adversarial examples generated from all of the models before it.</li>
+<li>The robustness relies on the random model selection, and each model is not robust to its own adversarial examples but significantly more robust to adversarial examples generated from the other models.</li>
+</ul>
+</li>
+<li>Mustafa et al., <strong>Adversarial Defense by Restricting the Hidden Space of Deep Neural Networks</strong>, 2019.<ul>
+<li>Propose a defense against adversarial examples, classifying samples by finding distance to “class mean” in the representation layer. The class mean is not really a mean but a trainable weight that is trained as an auxiliary loss (pull: mean &amp; samples from same class. push: mean &amp; samples from diff class, mean &amp; mean from diff class) in addition to normal CE loss. Further improve robustness when combined with PGD/FGSM adversarial training.</li>
+<li>The results are however not convincing. This method should perform much worse than Madry et al. on MNIST at $\epsilon = 0.3$, but the paper omits this result. Results on CIFAR-10 are also not SOTA.</li>
+</ul>
+</li>
+<li>Khoury and Hadfield-Menell, <strong>Adversarial Training with Voronoi Constraints</strong>, 2019.<ul>
+<li>Assuming the “low-dimensional manifold hypothesis” (data is $k$-dimensional manifold in $d$-dimensional space where $k \ll d$), they show that kNN is more robust to adversarial examples and is more data-efficient to do “adversarial training”</li>
+<li>“Nearest neighbor classifiers are naturally robust in high <strong>codimensions</strong> because the Voronoi cells are elongated in the directions normal to the manifold when data are dense”</li>
+<li>Theorem 2: Provide sampling condition on training data (there must exist a sample within $\delta$ distance from any point in manifold) such that an $\epsilon$-expansion of the data manifold is classified correctly by nearest neighbor or adversarial training.</li>
+<li>Theorem 3: The size of training data (under sampling condition from Theorem 2) for nearest neighbor is exponentially smaller in $k$ compared to adversarial training. This proof, however, assumes very simplified manifolds.</li>
+<li>Propose adversarial training with Voronoi cell constraint instead of a norm ball. The inner maximization problem is similar to that of Madry et al’s but constrains that the objective variable, $\hat{x}$, stays in the Voronoi cell of the original training sample $x$. To avoid projection step on Voronoi cell, they take gradient step on the loss function and check if the constraint is satisfied after every step. If not, the optimization terminates. To speed up, instead of checking against the entire training set, only $m$ nearest samples from each class are sought and checked per one training sample, and this needs to be computed only once per dataset.</li>
+<li>The proposed adversarial training is for neural networks and not nearest neighbor, and no theoretical justification is given for why this adversarial training is better. My take is that it tries to make the network have similar behavior to 1-NN. No need to set $\epsilon$ as it leaves that to property of the dataset. Experiments on MNIST show improve in robustness at large $\ell_\infty$-norm with minimal accuracy drop on clean data. On CIFAR-10, it performs similarly to Madry et al.</li>
+</ul>
+</li>
+</ul>
 <h3 id="detection">Detection</h3>
 <ul>
-  <li>Metzen et al., <strong>On Detecting Adversarial Perturbations</strong>, ICLR 2017.
-    <ul>
-      <li>Use a classifier with a branch off one of the deep representations. The branch detects adversarial examples, and the entire network is trained end-to-end with adversarial training using FGSM (clean : adv = 1 : 1).</li>
-      <li>The method works relatively well even against adaptive adversary (FGSM, BIM, DeepFool). There seems to be an optimal magnitude of perturbation. Too small or too large perturbation seem to be easily detected. Detectors trained for large perturbation (FGSM) also seem to not generalize well to adversarial examples with small perturbation. This potentially suggests that this previous adversarial training method is not robust as it fails to generalize. Bypassed by Carlini and Wagner 2017.</li>
-    </ul>
-  </li>
-  <li>Feinman et al., <strong>Detecting Adversarial Samples from Artifacts</strong>, 2017.
-    <ul>
-      <li>Use two metrics, kernel density estimation and uncertainty measure with dropout, to detect adversarial examples relying on a claim that adversarial examples lie outside of a learned manifold resulting in low density region and high uncertainty. Note that both measurements are calculated on a deep representation due to a claim that it is more well-behaved.</li>
-      <li>Gal &amp; Ghahramani (2015): dropout is an approximate deep Gaussian process. So randomly picked distribution on dropout can potentially measure uncertainty of given samples.</li>
-      <li>Combining both metrics, a simple logistic regression can seemingly reliably detect adversarial examples (FGSM, BIM, CW). However, it is bypassed by Carlini and Wagner 2017.</li>
-    </ul>
-  </li>
-  <li>Ma et al., <strong>Characterizing Adversarial Subspaces Using Local Intrinsic Dimensionality</strong>, ICLR 2018. <a href="https://arxiv.org/abs/1801.02613">[link]</a>
-</li>
-  <li>N. Worzyk, and O. Kramer, <strong>Properties of adv−1 – Adversarials of Adversarials</strong>, ESANN 2018. <a href="https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2018-164.pdf">[link]</a>
-    <ul>
-      <li>Apply various adversarial example generation methods on top of adversarial examples, measure $\ell_2$ difference for detecting adversarial examples</li>
-      <li>A good portion of “doubly adversarial” examples revert to their original correct class, depending on which attack is used first and which is used after</li>
-    </ul>
-  </li>
-  <li>Dathathri et al., <strong>Detecting Adversarial Examples via Neural Fingerprinting</strong>, 2018 (ICLR 2019 submission). <a href="https://openreview.net/forum?id=SJekyhCctQ">[link]</a>
-    <ul>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td>Train normalized logits to match with some fingerprints: $(\Delta x, \Delta y)$: $\min</td>
-              <td> </td>
-              <td>(f(x + \Delta x) - f(x)) - \Delta y</td>
-              <td> </td>
-              <td>_2^2$. $\Delta x$ is randomly sampled.</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>The detection accuracy is close to perfect even against adaptive white-box adversary using various attack methods (FGSM, PGD, CW, SPAS).</li>
-      <li>The method, however, shows no performance decline even with larger perturbation.</li>
-    </ul>
-  </li>
+<li>Metzen et al., <strong>On Detecting Adversarial Perturbations</strong>, ICLR 2017.<ul>
+<li>Use a classifier with a branch off one of the deep representations. The branch detects adversarial examples, and the entire network is trained end-to-end with adversarial training using FGSM (clean : adv = 1 : 1).</li>
+<li>The method works relatively well even against adaptive adversary (FGSM, BIM, DeepFool). There seems to be an optimal magnitude of perturbation. Too small or too large perturbation seem to be easily detected. Detectors trained for large perturbation (FGSM) also seem to not generalize well to adversarial examples with small perturbation. This potentially suggests that this previous adversarial training method is not robust as it fails to generalize. Bypassed by Carlini and Wagner 2017.</li>
 </ul>
-
+</li>
+<li>Feinman et al., <strong>Detecting Adversarial Samples from Artifacts</strong>, 2017.<ul>
+<li>Use two metrics, kernel density estimation and uncertainty measure with dropout, to detect adversarial examples relying on a claim that adversarial examples lie outside of a learned manifold resulting in low density region and high uncertainty. Note that both measurements are calculated on a deep representation due to a claim that it is more well-behaved.</li>
+<li>Gal &amp; Ghahramani (2015): dropout is an approximate deep Gaussian process. So randomly picked distribution on dropout can potentially measure uncertainty of given samples.</li>
+<li>Combining both metrics, a simple logistic regression can seemingly reliably detect adversarial examples (FGSM, BIM, CW). However, it is bypassed by Carlini and Wagner 2017.</li>
+</ul>
+</li>
+<li>Ma et al., <strong>Characterizing Adversarial Subspaces Using Local Intrinsic Dimensionality</strong>, ICLR 2018. <a href="https://arxiv.org/abs/1801.02613">[link]</a>
+</li>
+<li>N. Worzyk, and O. Kramer, <strong>Properties of adv−1 – Adversarials of Adversarials</strong>, ESANN 2018. <a href="https://www.elen.ucl.ac.be/Proceedings/esann/esannpdf/es2018-164.pdf">[link]</a><ul>
+<li>Apply various adversarial example generation methods on top of adversarial examples, measure $\ell_2$ difference for detecting adversarial examples</li>
+<li>A good portion of “doubly adversarial” examples revert to their original correct class, depending on which attack is used first and which is used after</li>
+</ul>
+</li>
+<li>Dathathri et al., <strong>Detecting Adversarial Examples via Neural Fingerprinting</strong>, 2018 (ICLR 2019 submission). <a href="https://openreview.net/forum?id=SJekyhCctQ">[link]</a><ul>
+<li><table><tbody><tr>
+<td>Train normalized logits to match with some fingerprints: $(\Delta x, \Delta y)$: $\min</td>
+<td> </td>
+<td>(f(x + \Delta x) - f(x)) - \Delta y</td>
+<td> </td>
+<td>_2^2$. $\Delta x$ is randomly sampled.</td>
+</tr></tbody></table></li>
+<li>The detection accuracy is close to perfect even against adaptive white-box adversary using various attack methods (FGSM, PGD, CW, SPAS).</li>
+<li>The method, however, shows no performance decline even with larger perturbation.</li>
+</ul>
+</li>
+</ul>
 <h3 id="certifiable-defense">Certifiable Defense</h3>
 <ul>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   A. Raghunathan, J. Steinhardt, and P. Liang, <strong>Certified Defenses against Adversarial Examples</strong>, 2018.</li>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Wong and Kolter, <strong>Provable defenses against adversarial examples via the convex outer adversarial polytope</strong>, ICML 2018. <a href="https://arxiv.org/abs/1711.00851">[link]</a>
 </li>
-  <li>Wong et al., <strong>Scaling provable adversarial defenses</strong>, NeurIPS 2018. <a href="https://arxiv.org/abs/1805.12514">[link]</a>
+<li>Wong et al., <strong>Scaling provable adversarial defenses</strong>, NeurIPS 2018. <a href="https://arxiv.org/abs/1805.12514">[link]</a>
 </li>
 </ul>
-
 <h3 id="certifiable-defense-with-randomized-smoothing">Certifiable Defense with “Randomized Smoothing”</h3>
 <ul>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Lecuyer et al., <strong>Certified Robustness to Adversarial Examples with Differential Privacy</strong>, IEEE S&amp;P 2018.
-    <ul>
-      <li>Prove robustness lower bound with differential privacy scheme ($\epsilon,\delta$)-DP. If $p_i(x) \geq e^{2\epsilon}p_j(x) + (1+e^\epsilon)\delta$ for $i$ is a correct label and $j \neq i$, then $x$ is robust within an $\ell_p$-ball of radius 1. Use MC to estimate $p(x)$.</li>
-      <li>Gaussian (or Laplacian) noise is added after the first layer. $\sigma \sim \Delta_{p,2}L/\epsilon$. For larger ($L$) and tighter ($\epsilon$) bound, std also needs to be large, but larger std means lower accuracy. $\Delta_{p,2}$ is sensitivity of the first layer (i.e. $p=2$, spectral norm of the weight). Empirically, adding noise after the first layer yields higher accuracy but smaller bound.</li>
-      <li>After noise layer remains DP due to post-processing property of DP.</li>
-    </ul>
-  </li>
-  <li>Li et al., <strong>Certified Adversarial Robustness with Additive Gaussian Noise</strong>, 2019.
-    <ul>
-      <li>Prove certifiable lower bound from Renyi divergence. Estimate probability (and confidence interval) with MC similarly to Lecuyer et al.</li>
-      <li>Use stability training (Zheng et al. ‘16) to make network perform better when added with  Gaussian noise. Stability training helps significantly. The bound is tighter than Lecuyer et al. Empirical robustness is also decent. Empirical attacks can be better than TRADES for $\ell_2$-adv.</li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Pinot et al., <strong>Theoretical evidence for adversarial robustness through randomization: the case of the Exponential family</strong>, 2019. <a href="https://arxiv.org/abs/1902.01148">[link]</a>
-    <ul>
-      <li>Define robustness for output of neural networks (any layer) as a probabilistic mapping. Rough idea: given some norm-bounded perturbation, measure distance (Renyi divergence) on two random distributions mapped from a clean input and its perturbed version. Ball-bounded input -&gt; (Theorem 3) Renyi-robust after first layer -&gt; (Lemma 1 + Theorem 2) Renyi-div in output -&gt; (Theorem 1) Total Variation distance in output -&gt; certifiable robustness. Only consider noise added to activation after the first layer (same as Lecuyer et al.).</li>
-      <li>“Renyi-robustness” depends on 4 parameters $\lambda, \alpha, \epsilon, \gamma$, defined over distribution of all samples. $\gamma$ is set to 0.</li>
-      <li>Point out that robustness definition (bounded change in output) is disconnected from clean accuracy (i.e. you can have very robust classifier with useless accuracy). Regard noise injection during training as distribution shift problem from noise injection during inference.</li>
-      <li>Evaluate with four distributions from Exponential family (Gaussian, Laplacian, Exponential, Weibull). Exponential seems to do best, but none helps against CW attack (perturbation is unbounded). Assuming one noise draw per sample since there’s no need to compute any probability (?). The results are not reported with $\epsilon$ or $\alpha$ so it is difficult to see how the accuracy drops. Clean acc. and $\ell_2$-PGD are very close for the given norm of 0.3.</li>
-    </ul>
-  </li>
-  <li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Lecuyer et al., <strong>Certified Robustness to Adversarial Examples with Differential Privacy</strong>, IEEE S&amp;P 2018.<ul>
+<li>Prove robustness lower bound with differential privacy scheme ($\epsilon,\delta$)-DP. If $p_i(x) \geq e^{2\epsilon}p_j(x) + (1+e^\epsilon)\delta$ for $i$ is a correct label and $j \neq i$, then $x$ is robust within an $\ell_p$-ball of radius 1. Use MC to estimate $p(x)$.</li>
+<li>Gaussian (or Laplacian) noise is added after the first layer. $\sigma \sim \Delta_{p,2}L/\epsilon$. For larger ($L$) and tighter ($\epsilon$) bound, std also needs to be large, but larger std means lower accuracy. $\Delta_{p,2}$ is sensitivity of the first layer (i.e. $p=2$, spectral norm of the weight). Empirically, adding noise after the first layer yields higher accuracy but smaller bound.</li>
+<li>After noise layer remains DP due to post-processing property of DP.</li>
+</ul>
+</li>
+<li>Li et al., <strong>Certified Adversarial Robustness with Additive Gaussian Noise</strong>, 2019.<ul>
+<li>Prove certifiable lower bound from Renyi divergence. Estimate probability (and confidence interval) with MC similarly to Lecuyer et al.</li>
+<li>Use stability training (Zheng et al. ‘16) to make network perform better when added with Gaussian noise. Stability training helps significantly. The bound is tighter than Lecuyer et al. Empirical robustness is also decent. Empirical attacks can be better than TRADES for $\ell_2$-adv.</li>
+</ul>
+</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Pinot et al., <strong>Theoretical evidence for adversarial robustness through randomization: the case of the Exponential family</strong>, 2019. <a href="https://arxiv.org/abs/1902.01148">[link]</a><ul>
+<li>Define robustness for output of neural networks (any layer) as a probabilistic mapping. Rough idea: given some norm-bounded perturbation, measure distance (Renyi divergence) on two random distributions mapped from a clean input and its perturbed version. Ball-bounded input -&gt; (Theorem 3) Renyi-robust after first layer -&gt; (Lemma 1 + Theorem 2) Renyi-div in output -&gt; (Theorem 1) Total Variation distance in output -&gt; certifiable robustness. Only consider noise added to activation after the first layer (same as Lecuyer et al.).</li>
+<li>“Renyi-robustness” depends on 4 parameters $\lambda, \alpha, \epsilon, \gamma$, defined over distribution of all samples. $\gamma$ is set to 0.</li>
+<li>Point out that robustness definition (bounded change in output) is disconnected from clean accuracy (i.e. you can have very robust classifier with useless accuracy). Regard noise injection during training as distribution shift problem from noise injection during inference.</li>
+<li>Evaluate with four distributions from Exponential family (Gaussian, Laplacian, Exponential, Weibull). Exponential seems to do best, but none helps against CW attack (perturbation is unbounded). Assuming one noise draw per sample since there’s no need to compute any probability (?). The results are not reported with $\epsilon$ or $\alpha$ so it is difficult to see how the accuracy drops. Clean acc. and $\ell_2$-PGD are very close for the given norm of 0.3.</li>
+</ul>
+</li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Cohen et al., <strong>Certified Adversarial Robustness via Randomized Smoothing</strong>, 2019. <a href="https://arxiv.org/abs/1902.02918">[link]</a>
 </li>
 </ul>
-
 <h3 id="lipschitz-network">Lipschitz Network</h3>
 <ul>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Cisse et al., <strong>Parseval Networks: Improving Robustness to Adversarial Examples</strong>, ICML 2017.</li>
-  <li>Tsuzuku et al., <strong>Lipschitz-Margin Training: Scalable Certification of Perturbation Invariance for Deep Neural Networks</strong>, NeurIPS 2018.</li>
-  <li>Ono et al., <strong>Lightweight Lipschitz Margin Training for Certified Defense against Adversarial Examples</strong>, 2018.</li>
-  <li>Anil et al., <strong>Sorting out Lipschitz Function Approximation</strong>, 2018 (ICLR 2019 submission). <a href="https://openreview.net/forum?id=ryxY73AcK7">[link]</a>
-    <ul>
-      <li>Introduce GroupSort (partition and sort) as an activation function for neural network that has its weight constrained by Lipschitz. They show that ReLU (or tanh) norm-constrained (1-Lipschitz) network cannot approximate universal Lipschitz function (e.g. absolute value, which is 1-Lipschitz). They show theoretically and empirically that GroupSort with unit spectral norm matrix can represent absolute value.</li>
-      <li>They show that in training MNIST classifier with $K = 10$ GroupSort network utilizes “Lipschitz-ness” better (i.e. spectral norm of Jacobian at input $x$ is closer to $K$) than ReLU network.</li>
-      <li>The weight normalization (spectral norm constraint) is done by Bjorck et al. for $\ell_2$ (equivalent to enforcing orthonormality) and by Condat for $\ell_\infty$ case. There is little difference in clean accuracy between ReLU and GroupSort network. Normal network with dropout tends to perform slightly better.</li>
-      <li>Lipschitz network can certify adversarial robustness but in this work, the bound is still slightly loose. Robustness of MNIST is still far inferior compared to Madry et al. (~40% to ~95% accuracy at $\epsilon = 0.3$)</li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Huster et al., <strong>Limitations of the Lipschitz Constant as a Defense Against Adversarial Examples</strong>, 2018.
-    <ul>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td>Prove a tighter perturbation bound with Lipschitz constant in binary case: assume that any pair of samples from two different classes is at least $c$ apart in $\ell_p$, there exists a $2/c$-Lipschitz function $f$ such that $sign(f(x+\delta))=y$ for $</td>
-              <td> </td>
-              <td>\delta</td>
-              <td> </td>
-              <td>_p &lt; c/2$. An example of such Lipschitz function is given.</td>
-            </tr>
-          </tbody>
-        </table>
-        <ul>
-          <li>have to check proof for case $f(x)=0$ and how to ensure the assumption for test set (if it is needed).</li>
-        </ul>
-      </li>
-      <li>The bound is, however, coupled with distance $c$ of the dataset. This assumption must be required for any K-Lipschitz bound that tries to achieve 100% accuracy. What’s an effective way to balance clean accuracy and robustness with Lipschitz?</li>
-      <li>Given a fully-connected network with ReLU activation, they also show that “atomic” Lipschitz constant, $k_A$ (product of weight norm from each layer) is limiting. It suffers accuracy loss and cannot express some functions (e.g. absolute function which has $k=1$ cannot be expressed by a network with $k_A&lt;2$.</li>
-      <li>Theoretical results make sense, but in practice, this might come down to training methods and how the Lipschitz constant is bounded/penalized. It might be less limiting for real datasets with appropriate techniques.</li>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td>They show that “paired-layer” Lipschitz bound is tighter. This method is used by Raghunathan et al. on two-layer network: $k \leq \max_s</td>
-              <td> </td>
-              <td>W_2diag(s)W_1</td>
-              <td> </td>
-              <td>$ where $s$ is a binary vector indicating which ReLU is on/off. While the bound is tighter in this one (e.g. works with absolute function), it is still not perfect.</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>GroupSort (Anil et al.) tackles this problem differently by using a different activation function completely. GroupSort allows this bound to be tight, but it seems to still hit the fundamental limit in the first assumption.</li>
-    </ul>
-  </li>
-  <li>Qian &amp; Wegman, <strong>L2-Nonexpansive Neural Networks</strong>, ICLR 2019.
-    <ul>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td>Proposes network architecture that preserves $\ell_2$-norm (“distance”) of input and output, i.e. Lipschitz from input to logits is less than or equal to 1 under $\ell_2$-norm. To constrain the weight’s spectral norm, $</td>
-              <td> </td>
-              <td>W^TW</td>
-              <td> </td>
-              <td>
-<em>2 \leq 1$, use an $\ell</em>\infty$ upper bound. ReLU is replaced with two-sided ReLU, and max-pooling is replaced with norm-pooling. The loss function is complicated, consisting of three terms.</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>The weight constraint itself is more general than that of Parseval network.</li>
-      <li>Adversarial robustness is evaluated against CW L2 attacks. The $\ell_2$-norm is bounded at 3 for MNIST and 1.5 for CIFAR-10, and the model seems more robust than $\ell_\infty$ Madry model. Not all attacks succeed at this perturbation, and combining with adv. train further improves robustness slightly.</li>
-      <li>Questions: not sure why norm of Jacobian is not bounded to 1 for “multi-L2NNN classifiers” (page 6)? If it is bounded, can it provide certifiable robustness?</li>
-    </ul>
-  </li>
+<li>Tsuzuku et al., <strong>Lipschitz-Margin Training: Scalable Certification of Perturbation Invariance for Deep Neural Networks</strong>, NeurIPS 2018.</li>
+<li>Ono et al., <strong>Lightweight Lipschitz Margin Training for Certified Defense against Adversarial Examples</strong>, 2018.</li>
+<li>Anil et al., <strong>Sorting out Lipschitz Function Approximation</strong>, 2018 (ICLR 2019 submission). <a href="https://openreview.net/forum?id=ryxY73AcK7">[link]</a><ul>
+<li>Introduce GroupSort (partition and sort) as an activation function for neural network that has its weight constrained by Lipschitz. They show that ReLU (or tanh) norm-constrained (1-Lipschitz) network cannot approximate universal Lipschitz function (e.g. absolute value, which is 1-Lipschitz). They show theoretically and empirically that GroupSort with unit spectral norm matrix can represent absolute value.</li>
+<li>They show that in training MNIST classifier with $K = 10$ GroupSort network utilizes “Lipschitz-ness” better (i.e. spectral norm of Jacobian at input $x$ is closer to $K$) than ReLU network.</li>
+<li>The weight normalization (spectral norm constraint) is done by Bjorck et al. for $\ell_2$ (equivalent to enforcing orthonormality) and by Condat for $\ell_\infty$ case. There is little difference in clean accuracy between ReLU and GroupSort network. Normal network with dropout tends to perform slightly better.</li>
+<li>Lipschitz network can certify adversarial robustness but in this work, the bound is still slightly loose. Robustness of MNIST is still far inferior compared to Madry et al. (~40% to ~95% accuracy at $\epsilon = 0.3$)</li>
 </ul>
-
+</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Huster et al., <strong>Limitations of the Lipschitz Constant as a Defense Against Adversarial Examples</strong>, 2018.<ul>
+<li>
+<table><tbody><tr>
+<td>Prove a tighter perturbation bound with Lipschitz constant in binary case: assume that any pair of samples from two different classes is at least $c$ apart in $\ell_p$, there exists a $2/c$-Lipschitz function $f$ such that $sign(f(x+\delta))=y$ for $</td>
+<td> </td>
+<td>\delta</td>
+<td> </td>
+<td>_p &lt; c/2$. An example of such Lipschitz function is given.</td>
+</tr></tbody></table>
+<ul><li>have to check proof for case $f(x)=0$ and how to ensure the assumption for test set (if it is needed).</li></ul>
+</li>
+<li>The bound is, however, coupled with distance $c$ of the dataset. This assumption must be required for any K-Lipschitz bound that tries to achieve 100% accuracy. What’s an effective way to balance clean accuracy and robustness with Lipschitz?</li>
+<li>Given a fully-connected network with ReLU activation, they also show that “atomic” Lipschitz constant, $k_A$ (product of weight norm from each layer) is limiting. It suffers accuracy loss and cannot express some functions (e.g. absolute function which has $k=1$ cannot be expressed by a network with $k_A&lt;2$.</li>
+<li>Theoretical results make sense, but in practice, this might come down to training methods and how the Lipschitz constant is bounded/penalized. It might be less limiting for real datasets with appropriate techniques.</li>
+<li><table><tbody><tr>
+<td>They show that “paired-layer” Lipschitz bound is tighter. This method is used by Raghunathan et al. on two-layer network: $k \leq \max_s</td>
+<td> </td>
+<td>W_2diag(s)W_1</td>
+<td> </td>
+<td>$ where $s$ is a binary vector indicating which ReLU is on/off. While the bound is tighter in this one (e.g. works with absolute function), it is still not perfect.</td>
+</tr></tbody></table></li>
+<li>GroupSort (Anil et al.) tackles this problem differently by using a different activation function completely. GroupSort allows this bound to be tight, but it seems to still hit the fundamental limit in the first assumption.</li>
+</ul>
+</li>
+<li>Qian &amp; Wegman, <strong>L2-Nonexpansive Neural Networks</strong>, ICLR 2019.<ul>
+<li><table><tbody><tr>
+<td>Proposes network architecture that preserves $\ell_2$-norm (“distance”) of input and output, i.e. Lipschitz from input to logits is less than or equal to 1 under $\ell_2$-norm. To constrain the weight’s spectral norm, $</td>
+<td> </td>
+<td>W^TW</td>
+<td> </td>
+<td>
+<em>2 \leq 1$, use an $\ell</em>\infty$ upper bound. ReLU is replaced with two-sided ReLU, and max-pooling is replaced with norm-pooling. The loss function is complicated, consisting of three terms.</td>
+</tr></tbody></table></li>
+<li>The weight constraint itself is more general than that of Parseval network.</li>
+<li>Adversarial robustness is evaluated against CW L2 attacks. The $\ell_2$-norm is bounded at 3 for MNIST and 1.5 for CIFAR-10, and the model seems more robust than $\ell_\infty$ Madry model. Not all attacks succeed at this perturbation, and combining with adv. train further improves robustness slightly.</li>
+<li>Questions: not sure why norm of Jacobian is not bounded to 1 for “multi-L2NNN classifiers” (page 6)? If it is bounded, can it provide certifiable robustness?</li>
+</ul>
+</li>
+</ul>
 <h3 id="defenses-with-gan-vae">Defenses with GAN, VAE</h3>
 <ul>
-  <li>Y. Song at al., <strong>PixelDefend: Leveraging Generative Models to Understand and Defend Against Adversarial Examples</strong>, 2017. <a href="https://arxiv.org/abs/1710.10766">[link]</a>
+<li>Y. Song at al., <strong>PixelDefend: Leveraging Generative Models to Understand and Defend Against Adversarial Examples</strong>, 2017. <a href="https://arxiv.org/abs/1710.10766">[link]</a>
 </li>
-  <li>S. Shen et al., <strong>APE-GAN: Adversarial Perturbation Elimination with GAN.</strong>
+<li>S. Shen et al., <strong>APE-GAN: Adversarial Perturbation Elimination with GAN.</strong>
 </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   D. Meng and H. Chen, <strong>MagNet: a Two-Pronged Defense against Adversarial Examples.</strong> <a href="https://arxiv.org/abs/1705.09064">[link]</a>
-    <ul>
-      <li>Use autoencoder to “detect” and “reform” adversarial examples.</li>
-      <li>Detect: measure probability divergence (Jensen-Shannon divergence + temperature) on classifier’s after-softmax output</li>
-      <li>Reform: use output of autoencoder to reconstruct adversarial examples (hoping that it will be reconstructed to the valid distribution)
-        <ul>
-          <li>Problem: autoencoder is not perfect as it incurs some reconstruction loss, which is also in some L-p norm. White-box attack can easily obtain the gradient.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   P. Samangouei, M. Kabkab, and R. Chellappa, <strong>Defense-GAN: Protecting Classifiers Against Adversarial Attacks Using Generative Models</strong>, 2018. <a href="https://arxiv.org/abs/1805.06605">[link]</a>
-    <ul>
-      <li>Use WGAN trained on MNIST (F-MNIST, CelebA) in addition to any black-box neural network, which is trained on the same training set. Works against both white-box and black-box attacks.</li>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td>Use gradient descent to search a latent variable $z$ that produces a sample $G(z)$ closest in L2 distance to a given input $x$, i.e. $\min</td>
-              <td> </td>
-              <td>G(z) - x</td>
-              <td> </td>
-              <td>_2^2$</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>Problems: require GAN that can model the data distribution (almost) perfectly, GD steps add lots of overhead, still vulnerable to on-distribution adversarial examples</li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Ilyas et al., <strong>The Robust Manifold Defense: Adversarial Training using Generative Models</strong>, 2018.</li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   L. Schott et al., <strong>Towards the First Adversarially Robust Neural Network Model on MNIST</strong>, 2018. <a href="https://arxiv.org/abs/1805.09190">[link]</a>
-    <ul>
-      <li>ABS (Analysis by Synthesis): train VAE for each class of MNIST, use GD to find a point in the latent space that minimizes lower bound of log-likelihood (for VAE’s of all classes), finetune with learnable class-dependent scalar, pass to softmax for classification</li>
-      <li>Greate evaluation: evaluated on different attacks, norms, and with multiple defenses. For each sample, use many attacks and report one with smallest distortion</li>
-      <li>ABS seems to be the most robust model for all norms ($\ell_0, \ell_2, \ell_\infty$), but successful attacks on ABS have a high variance of distortion</li>
-    </ul>
-  </li>
-  <li>Jasjeet Dhaliwal, Saurabh Shintre, <strong>Gradient Similarity: An Explainable Approach to Detect Adversarial Attacks against Deep Learning</strong>, 2018.
-    <ul>
-      <li>Gradient similarity defined between a pair of train and test samples, taken from influence function (Koh and Liang 2017), but the Hessian is omitted as they show that the Hessian only scales with constant. $GS(\hat{x},x’) = \nabla_\theta L(\hat{\theta}, x’, y’)^T \cdot \nabla_\theta L(\hat{\theta}, \hat{x}, \hat{y})$</li>
-      <li>GS is separated into two features: $\ell_2$-norm of gradient and cosine of the angle between the two gradient terms. Logistic regression is trained on the features, half clean and half adversarial (FGSM, BIM, CW, DeepFool, JSMA). Works well against adversaries that have no knowledge of the defense, but fails in white-box setting.</li>
-    </ul>
-  </li>
-  <li>Kyatham et al., <strong>Variational Inference with Latent Space Quantization for Adversarial Robustness</strong>, 2019.
-    <ul>
-      <li>Train a VAE that uses mean squared error instead of log-likelihood for reconstruction and penalize norm of input-latent Jacobian to control Lipschitz constant. The latent space is also quantized “to prevent gradient-based attack.” This VAE is used to reconstruct any input sample before passing it to any (undefended) classifier.</li>
-      <li>The main idea is constrained Lipschitz constant will “bound” change in the latent code given change in the input, and so by quantizing the latent space, the perturbation will be ignored by the decoder. There is some flaws, however. First, quantization helps against $\ell_\infty$-norm perturbation, but in the paper, spectral norm is used. This choice should be consistent but unfortunately is specific to adversary.</li>
-      <li>The white-box attack experiments states that quantization “prevents attacks” but does not explain how the attack is carried out. The defense can be better evaluated by replacing the hard quantization with a soft one for gradient-based attack. Also, perturbation norm for CW or Deepfool is not reported. The defense is surprisingly most vulnerable to FGSM. The black-box attack uses transfer between different classifiers.</li>
-    </ul>
-  </li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   D. Meng and H. Chen, <strong>MagNet: a Two-Pronged Defense against Adversarial Examples.</strong> <a href="https://arxiv.org/abs/1705.09064">[link]</a><ul>
+<li>Use autoencoder to “detect” and “reform” adversarial examples.</li>
+<li>Detect: measure probability divergence (Jensen-Shannon divergence + temperature) on classifier’s after-softmax output</li>
+<li>Reform: use output of autoencoder to reconstruct adversarial examples (hoping that it will be reconstructed to the valid distribution)<ul><li>Problem: autoencoder is not perfect as it incurs some reconstruction loss, which is also in some L-p norm. White-box attack can easily obtain the gradient.</li></ul>
+</li>
 </ul>
-
+</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   P. Samangouei, M. Kabkab, and R. Chellappa, <strong>Defense-GAN: Protecting Classifiers Against Adversarial Attacks Using Generative Models</strong>, 2018. <a href="https://arxiv.org/abs/1805.06605">[link]</a><ul>
+<li>Use WGAN trained on MNIST (F-MNIST, CelebA) in addition to any black-box neural network, which is trained on the same training set. Works against both white-box and black-box attacks.</li>
+<li><table><tbody><tr>
+<td>Use gradient descent to search a latent variable $z$ that produces a sample $G(z)$ closest in L2 distance to a given input $x$, i.e. $\min</td>
+<td> </td>
+<td>G(z) - x</td>
+<td> </td>
+<td>_2^2$</td>
+</tr></tbody></table></li>
+<li>Problems: require GAN that can model the data distribution (almost) perfectly, GD steps add lots of overhead, still vulnerable to on-distribution adversarial examples</li>
+</ul>
+</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Ilyas et al., <strong>The Robust Manifold Defense: Adversarial Training using Generative Models</strong>, 2018.</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   L. Schott et al., <strong>Towards the First Adversarially Robust Neural Network Model on MNIST</strong>, 2018. <a href="https://arxiv.org/abs/1805.09190">[link]</a><ul>
+<li>ABS (Analysis by Synthesis): train VAE for each class of MNIST, use GD to find a point in the latent space that minimizes lower bound of log-likelihood (for VAE’s of all classes), finetune with learnable class-dependent scalar, pass to softmax for classification</li>
+<li>Greate evaluation: evaluated on different attacks, norms, and with multiple defenses. For each sample, use many attacks and report one with smallest distortion</li>
+<li>ABS seems to be the most robust model for all norms ($\ell_0, \ell_2, \ell_\infty$), but successful attacks on ABS have a high variance of distortion</li>
+</ul>
+</li>
+<li>Jasjeet Dhaliwal, Saurabh Shintre, <strong>Gradient Similarity: An Explainable Approach to Detect Adversarial Attacks against Deep Learning</strong>, 2018.<ul>
+<li>Gradient similarity defined between a pair of train and test samples, taken from influence function (Koh and Liang 2017), but the Hessian is omitted as they show that the Hessian only scales with constant. $GS(\hat{x},x’) = \nabla_\theta L(\hat{\theta}, x’, y’)^T \cdot \nabla_\theta L(\hat{\theta}, \hat{x}, \hat{y})$</li>
+<li>GS is separated into two features: $\ell_2$-norm of gradient and cosine of the angle between the two gradient terms. Logistic regression is trained on the features, half clean and half adversarial (FGSM, BIM, CW, DeepFool, JSMA). Works well against adversaries that have no knowledge of the defense, but fails in white-box setting.</li>
+</ul>
+</li>
+<li>Kyatham et al., <strong>Variational Inference with Latent Space Quantization for Adversarial Robustness</strong>, 2019.<ul>
+<li>Train a VAE that uses mean squared error instead of log-likelihood for reconstruction and penalize norm of input-latent Jacobian to control Lipschitz constant. The latent space is also quantized “to prevent gradient-based attack.” This VAE is used to reconstruct any input sample before passing it to any (undefended) classifier.</li>
+<li>The main idea is constrained Lipschitz constant will “bound” change in the latent code given change in the input, and so by quantizing the latent space, the perturbation will be ignored by the decoder. There is some flaws, however. First, quantization helps against $\ell_\infty$-norm perturbation, but in the paper, spectral norm is used. This choice should be consistent but unfortunately is specific to adversary.</li>
+<li>The white-box attack experiments states that quantization “prevents attacks” but does not explain how the attack is carried out. The defense can be better evaluated by replacing the hard quantization with a soft one for gradient-based attack. Also, perturbation norm for CW or Deepfool is not reported. The defense is surprisingly most vulnerable to FGSM. The black-box attack uses transfer between different classifiers.</li>
+</ul>
+</li>
+</ul>
 <h3 id="ensemble-based-defense">Ensemble-Based Defense</h3>
 <ul>
-  <li>Strauss et al., <strong>Ensemble Methods as a Defense to Adversarial Perturbations Against Deep Neural Networks</strong>, 2018 (ICLR 2018 submission).
-    <ul>
-      <li>Experiment with different methods of ensemble (random init, different models, bagging, Gaussian noise) and evaluate their robustness against adversarial examples. Gaussian noise seems to perform the best, but it may still require more experiments to be conclusive.</li>
-    </ul>
-  </li>
-  <li>Adam et al., <strong>Stochastic Combinatorial Ensembles for Defending Against Adversarial Examples</strong>, 2018.
-    <ul>
-      <li>Autoencoder at each layer</li>
-      <li>Orthogonal gradient training</li>
-    </ul>
-  </li>
-  <li>Grefenstette et al., <strong>Strength in Numbers: Trading-off Robustness and Computation via Adversarially-Trained Ensembles</strong>, 2018 (ICLR 2019 submission).
-    <ul>
-      <li>Ensemble two models and then adversarially train them (not an ensemble of two separate adversarially trained models) performs better than single-model adversarial training (even with same number of parameters) and ensemble of two adversarially trained models.</li>
-    </ul>
-  </li>
-  <li>Pang et al., <strong>Improving Adversarial Robustness via Promoting Ensemble Diversity</strong>, 2019.
-    <ul>
-      <li>Train ensemble (average logits) with two regularization terms: (1) increase entropy of averaged output $H(\sum F_i)$, (2) increase “diversity” of non-maximal prediction (via determinant point process) which maximizes at 1 when all non-maximal predictions of all models in ensemble are mutually orthogonal.</li>
-      <li>In white-box setting, experiments show that it increases robustness but slightly less than PGD adversarial training. When combined, it can improve PGD slightly. It also reduces transferability between models in the same ensemble.</li>
-    </ul>
-  </li>
-  <li>Kariyappa and Qureshi, <strong>Improving Adversarial Robustness of Ensembles with Diversity Training</strong>, 2019.
-    <ul>
-      <li>Rely on the claim that adversarial examples in ensemble exist because they share a large adversarial subspace. They claim that reducing gradient alignment between models in an ensemble makes it more robust.
-        <ul>
-          <li>It is not clear how reducing the adversarial subspace would provide adversarial robustness. In adversarial case, robustness depends only on the worst-case (closest) point that is misclassified. The method does not seem to affect the boundary so white-box robustness is questionable. It potentially could make adversarial examples harder to find and maybe reduce transferability.</li>
-          <li>It is also not clear how misaligning gradient direction at each sample will reduce the volume of this space.</li>
-        </ul>
-      </li>
-      <li>Train ensemble with regularization term penalizing cosine similarity between gradients in the ensemble (smoothed max with logistic). Use leaky ReLU to prevent vanishing gradient (otherwise, gradients are very sparse).</li>
-      <li>Improve accuracy against transfer attack (ensemble of 5 models, architecture is known, only exact weights are not) considerably for small $\epsilon$, but little improvement for large $\epsilon$. Improvement is smaller than Tramer et al. 2017, but can improve a little when combined.</li>
-    </ul>
-  </li>
+<li>Strauss et al., <strong>Ensemble Methods as a Defense to Adversarial Perturbations Against Deep Neural Networks</strong>, 2018 (ICLR 2018 submission).<ul><li>Experiment with different methods of ensemble (random init, different models, bagging, Gaussian noise) and evaluate their robustness against adversarial examples. Gaussian noise seems to perform the best, but it may still require more experiments to be conclusive.</li></ul>
+</li>
+<li>Adam et al., <strong>Stochastic Combinatorial Ensembles for Defending Against Adversarial Examples</strong>, 2018.<ul>
+<li>Autoencoder at each layer</li>
+<li>Orthogonal gradient training</li>
 </ul>
-
+</li>
+<li>Grefenstette et al., <strong>Strength in Numbers: Trading-off Robustness and Computation via Adversarially-Trained Ensembles</strong>, 2018 (ICLR 2019 submission).<ul><li>Ensemble two models and then adversarially train them (not an ensemble of two separate adversarially trained models) performs better than single-model adversarial training (even with same number of parameters) and ensemble of two adversarially trained models.</li></ul>
+</li>
+<li>Pang et al., <strong>Improving Adversarial Robustness via Promoting Ensemble Diversity</strong>, 2019.<ul>
+<li>Train ensemble (average logits) with two regularization terms: (1) increase entropy of averaged output $H(\sum F_i)$, (2) increase “diversity” of non-maximal prediction (via determinant point process) which maximizes at 1 when all non-maximal predictions of all models in ensemble are mutually orthogonal.</li>
+<li>In white-box setting, experiments show that it increases robustness but slightly less than PGD adversarial training. When combined, it can improve PGD slightly. It also reduces transferability between models in the same ensemble.</li>
+</ul>
+</li>
+<li>Kariyappa and Qureshi, <strong>Improving Adversarial Robustness of Ensembles with Diversity Training</strong>, 2019.<ul>
+<li>Rely on the claim that adversarial examples in ensemble exist because they share a large adversarial subspace. They claim that reducing gradient alignment between models in an ensemble makes it more robust.<ul>
+<li>It is not clear how reducing the adversarial subspace would provide adversarial robustness. In adversarial case, robustness depends only on the worst-case (closest) point that is misclassified. The method does not seem to affect the boundary so white-box robustness is questionable. It potentially could make adversarial examples harder to find and maybe reduce transferability.</li>
+<li>It is also not clear how misaligning gradient direction at each sample will reduce the volume of this space.</li>
+</ul>
+</li>
+<li>Train ensemble with regularization term penalizing cosine similarity between gradients in the ensemble (smoothed max with logistic). Use leaky ReLU to prevent vanishing gradient (otherwise, gradients are very sparse).</li>
+<li>Improve accuracy against transfer attack (ensemble of 5 models, architecture is known, only exact weights are not) considerably for small $\epsilon$, but little improvement for large $\epsilon$. Improvement is smaller than Tramer et al. 2017, but can improve a little when combined.</li>
+</ul>
+</li>
+</ul>
 <h3 id="beating-defenses">Beating Defenses</h3>
 <ul>
-  <li>N. Carlini and D. Wagner, <strong>Adversarial Examples Are Not Easily Detected: Bypassing Ten Detection Methods.</strong>
+<li>N. Carlini and D. Wagner, <strong>Adversarial Examples Are Not Easily Detected: Bypassing Ten Detection Methods.</strong>
 </li>
-  <li>W. He, J. Wei, X. Chen, and N. Carlini, <strong>Adversarial Example Defenses: Ensembles of Weak Defenses are not Strong.</strong>
+<li>W. He, J. Wei, X. Chen, and N. Carlini, <strong>Adversarial Example Defenses: Ensembles of Weak Defenses are not Strong.</strong>
 </li>
-  <li>Athalye et al., <strong>Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples</strong>, 2018.</li>
+<li>Athalye et al., <strong>Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples</strong>, 2018.</li>
 </ul>
-
 <hr>
-
 <h2 id="theoretical--empirical-analysis">Theoretical &amp; Empirical Analysis</h2>
-
 <ul>
-  <li>O. Bastani, Y. Ioannou, L. Lampropoulos, D. Vytiniotis, A. V Nori, and A. Criminisi, <strong>Measuring Neural Net Robustness with Constraints.</strong>
+<li>O. Bastani, Y. Ioannou, L. Lampropoulos, D. Vytiniotis, A. V Nori, and A. Criminisi, <strong>Measuring Neural Net Robustness with Constraints.</strong>
 </li>
-  <li>Weng et al., <strong>Evaluating the Robustness of Neural Networks: An Extreme Value Theory Approach</strong>, ICLR 2018. <a href="https://openreview.net/forum?id=BkUHlMZ0b">[link]</a>
-    <ul>
-      <li>Attempts to provide model-agnostic robustness metric as empirical robustness heavily depends on attack algorithms and models. CLEVER approximates lower bound of adversarial perturbation (by approximating local Lipschitz constant around a given sample).</li>
-      <li>Approximating the Lipschitz constant is done by Extreme Value Theory, or more precisely Fisher-Tippett-Gnedenko Theorem. For a given sample, CLEVER samples a large number of points in the norm ball around it, computes gradients, and estimates the Lipschitz constant as Reverse Weibull distribution. The experiment also shows that the chosen Reverse Weibull distribution is a “good fit.”</li>
-      <li>While the CLEVER bound is mostly correct (no attack finds perturbation smaller than the bound), it is very loose even when compared with supposedly close-to-optimal attack like CW. CLEVER takes reasonable time to run (&lt; 10s per samples) for a large network.</li>
-      <li>Gradient Masking Causes CLEVER to Overestimate Adversarial Perturbation Size: https://arxiv.org/pdf/1804.07870.pdf. A follow-up work: On Extensions of CLEVER: A Neural Network Robustness Evaluation Algorithm https://arxiv.org/pdf/1810.08640.pdf</li>
-    </ul>
-  </li>
-  <li>A. Matyasko and L. Chau, <strong>Margin Maximization for Robust Classification using Deep Learning</strong>, pp. 300–307, 2017.</li>
-  <li>J. Sokolic, R. Giryes, G. Sapiro, and M. R. D. Rodrigues, <strong>Robust Large Margin Deep Neural Networks</strong>, May 2016.</li>
-  <li>E. D. Cubuk, B. Zoph, S. S. Schoenholz, Q. V Le, and G. Brain, <strong>Intriguing Properties of Adversarial Examples.</strong>
-    <ul>
-      <li>Universal properties of small perturbation</li>
-      <li>Improving robustness with larger logits difference</li>
-    </ul>
-  </li>
-  <li>D. Su, H. Zhang, H. Chen, J. Yi, P.Y. Chen, and Y. Gao, <strong>Is Robustness the Cost of Accuracy? – A Comprehensive Study on the Robustness of 18 Deep Image Classification Models</strong>, ECCV 2018. <a href="https://arxiv.org/abs/1808.01688">[link]</a>
-    <ul>
-      <li>There is a trade-off between robustness and test accuracy, i.e. $distortion \sim \log(classification~error)$</li>
-      <li>Network architecture affects robustness more than model size</li>
-      <li>Adversarial examples generated from VGG transfer well to the other models while the rest often only transfer within the same family of models. Transferability is often asymmetric.</li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Jetley et al., <strong>With Friends Like These, Who Needs Adversaries?</strong>, NeurIPS 2018.
-    <ul>
-      <li>Experiment with some <strong>universal class-dependent</strong> directions in the input space, extending the works of Fawzi et al.: (1) use DeepFool to find boundary close to samples, (2) find Hessian of difference of loss of the correct class and all other classes, (3) find eigenvalues, eigenvectors of mean of Hessian.</li>
-      <li>Moving along or in reverse direction of most positive or most negative curvature (eigenvalue) significantly affects class scores whereas moving along directions with zero curvature does not. These directions are mostly shared between samples, and the ones with high curvature contribute to classification performance but is mutually exploited by adversarial examples (shown by linearly projecting data to subspaces with different numbers of dimension).</li>
-      <li>Hypothesis: attempt to improve robustness by removing directions exploited by adversaries will significantly affect classification performance.</li>
-    </ul>
-  </li>
-  <li>Wang et al., <strong>One Bit Matters: Understanding Adversarial Examples as the Abuse of Redundancy</strong>, 2018.
-    <ul>
-      <li>Consider a simple model: input is $x_1, x_2, x_3$, network outputs $x_1 == x_2$. $x_3$ is thus “redundant” and all neurons connected to it should have weight of zero for the network to make no error, but this constraint on the weights grow exponentially on redundant input.</li>
-      <li>“General model” has two components: erasing noise/unrelated features, and matching with known patterns. Adversarial attacks simply create patterns or enough redundancy that the model cannot completely erase.</li>
-      <li>Hypothesis &amp; experiment: (1) Adversarial examples are more “complex”: (a) require larger networks to memorize/classify, (b) higher entropy (i.e. for MNIST, maximum likelihood, minimax, compression estimator). (2) More robust models learn features with less entropy.</li>
-    </ul>
-  </li>
-  <li>D. Stutz, M. Hein, and B. Schiele, <strong>Disentangling Adversarial Robustness and Generalization</strong>, 2018.
-    <ul>
-      <li>Define on- and off-manifold adversarial examples. Data manifold is assumed to be learned by VAE-GAN, or is approximated by subspace formed by some nearest neighbors.
-        <ul>
-          <li>What’s a good way to approximate manifold locally?</li>
-        </ul>
-      </li>
-      <li>Claim that regular (gradient-based) adversarial examples are off manifold by measuring distance between a sample and its projection on the “true manifold.” Also claim that regular perturbation is almost orthogonal to the manifold, and  by projecting it back to the manifold almost returns it to the original sample.</li>
-      <li>Adversarial training with on-manifold adversarial examples (i.e. searching in latent space of VAE-GAN) improves “generalization”: lower test error, lower on-manifold adv. success rate. Does not lower off-manifold adv. success rate.</li>
-      <li>Regular adversarial training (Madry et al.) does not improve test error and is not robust to on-manifold adversarial examples.</li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Ford et al., <strong>Adversarial Examples Are a Natural Consequence of Test Error in Noise</strong>, 2018.
-    <ul>
-      <li>Try to show that adversarial examples are not a surprising phenomenon and can be expected from any well-behaved classifiers. The $\epsilon$-boundary measure, probability that $x$ is $\epsilon$ away from the error set, is large even if  the error set itself is small.</li>
-      <li>They also show, on CIFAR-10 and ImageNet, that training with different types of noises, especially Gaussian with large std, can moderately improve model’s robustness against adversarial examples (but less than adversarial training). However, an adversarially trained model is also more susceptible to Gaussian noise but still better than the undefended model.</li>
-      <li>Defenses that exhibit gradient masking (does not create a larger distance to boundary) do not improve robustness to other types of noise. Encourage improvement in robustness to general noise, and say that perfect accuracy under noises is nontrivial.</li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Ding et al., <strong>On the Sensitivity of Adversarial Robustness to Input Data Distribution</strong>, ICLR 2019.
-    <ul>
-      <li>Adversarial robustness depends heavily on some characteristic of dataset. Data can be transformed in such a way that its clean accuracy is unchanged, but robust accuracy can vary significantly. Hypothesis: loosely speaking, feature squeezing makes dataset “easier” to learn so adversarial training works better, hence the model becomes more robust.</li>
-      <li>Saturated CIFAR-10 (similar to bit depth squeezing) seems be very robust when combined with adversarial training. Edge detection on FMNIST or adjusting gamma on CIFAR-10 seems to also affect robustness after adversarial training.</li>
-      <li>Analysis on the phenomenon: (1) “perturbable volume”: binarization pushes data towards the edge of the allowed domain? Removing the [0, 1] constraint in the attack does not seem to have any effect, though in this case, the volumes inside and outside the training data manifold should be naturally different. (2) Inter-class distance: seems correlated, but there are lots of easy counterexamples. “Distance” here is $\ell_2$-based and seems arbitrary (top 10% nearest neighbors). (3) Model capacity and training set size have significant effects. Larger models are usually more robust but requires more data. More data reduces the generalization gap (between test and train robust accuracies) and the gap between clean and robust accuracies.</li>
-    </ul>
-  </li>
-  <li>Kim et al., <strong>Bridging Adversarial Robustness and Gradient Interpretability</strong>, ICLR Workshop 2019.
-    <ul>
-      <li>Hypothesis 1: Adversarial examples on adversarially trained models lie closer to natural data manifold compared to undefended models. They show this using VAE-GAN and measure distance between input and its reconstruction. They also speculate that gradient of samples closer to clean data manifold is more interpretable.</li>
-      <li>Hypothesis 2: Connection to tilting boundary theory. They show on 2D toy dataset that adversarial training aligns the decision boundary more perpendicular to high-variance direction (invariant to low-variance direction), and so they hypothesize that gradient required to cross the boundary aligns better with “human perception.”</li>
-      <li>They test two attribution techniques (just gradient and gradient * input) and measure their interpretability score with two metrics (retain and retrain, keep and retrain). They show that strength of adversarial training correlates with higher interpretability scores.</li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Rajput et al., <strong>Does Data Augmentation lead to Positive Margin?</strong>, 2019.
-    <ul>
-      <li>Note that all proofs are based on <strong>worst-case margin</strong> (w.r.t. samples and possible classifier that (non)linearly separates data). This work proves lower bound on the number of augmented data points are needed to increase the margin in various settings (linear/non-linear classifier, norm-bounded/random noise).</li>
-      <li>Theorem 10 (non-linear classifier, non-random augment): For $r \leq \epsilon$, there exists an $r$-ball augmented data set of size $d+1$ times the original, that increases margin for any classifier chosen from a set of $\epsilon$<strong>-respectful</strong> classifiers (see Definition 7).</li>
-      <li>Lemma 9: If $\epsilon &lt; d(X_+,X_-)/4$, then set of $\epsilon$<strong>-respectful</strong> classifiers is guaranteed to be non-empty.</li>
-      <li>Theorem 13 ((non)-linear classifier, random augment): For $r &lt; \epsilon$, worst-case margin is $\geq \frac{1}{2\sqrt{2}} \sqrt{\frac{log(N/d)}{d}}r$ where $N$ is number of augmentation per samples.</li>
-      <li>Theorem 7: For linear classifier, $r$ can be chosen to be O(max-margin) so worst-case margin is also linear to  max-margin.</li>
-    </ul>
-  </li>
-  <li>
+<li>Weng et al., <strong>Evaluating the Robustness of Neural Networks: An Extreme Value Theory Approach</strong>, ICLR 2018. <a href="https://openreview.net/forum?id=BkUHlMZ0b">[link]</a><ul>
+<li>Attempts to provide model-agnostic robustness metric as empirical robustness heavily depends on attack algorithms and models. CLEVER approximates lower bound of adversarial perturbation (by approximating local Lipschitz constant around a given sample).</li>
+<li>Approximating the Lipschitz constant is done by Extreme Value Theory, or more precisely Fisher-Tippett-Gnedenko Theorem. For a given sample, CLEVER samples a large number of points in the norm ball around it, computes gradients, and estimates the Lipschitz constant as Reverse Weibull distribution. The experiment also shows that the chosen Reverse Weibull distribution is a “good fit.”</li>
+<li>While the CLEVER bound is mostly correct (no attack finds perturbation smaller than the bound), it is very loose even when compared with supposedly close-to-optimal attack like CW. CLEVER takes reasonable time to run (&lt; 10s per samples) for a large network.</li>
+<li>Gradient Masking Causes CLEVER to Overestimate Adversarial Perturbation Size: https://arxiv.org/pdf/1804.07870.pdf. A follow-up work: On Extensions of CLEVER: A Neural Network Robustness Evaluation Algorithm https://arxiv.org/pdf/1810.08640.pdf</li>
+</ul>
+</li>
+<li>A. Matyasko and L. Chau, <strong>Margin Maximization for Robust Classification using Deep Learning</strong>, pp. 300–307, 2017.</li>
+<li>J. Sokolic, R. Giryes, G. Sapiro, and M. R. D. Rodrigues, <strong>Robust Large Margin Deep Neural Networks</strong>, May 2016.</li>
+<li>E. D. Cubuk, B. Zoph, S. S. Schoenholz, Q. V Le, and G. Brain, <strong>Intriguing Properties of Adversarial Examples.</strong><ul>
+<li>Universal properties of small perturbation</li>
+<li>Improving robustness with larger logits difference</li>
+</ul>
+</li>
+<li>D. Su, H. Zhang, H. Chen, J. Yi, P.Y. Chen, and Y. Gao, <strong>Is Robustness the Cost of Accuracy? – A Comprehensive Study on the Robustness of 18 Deep Image Classification Models</strong>, ECCV 2018. <a href="https://arxiv.org/abs/1808.01688">[link]</a><ul>
+<li>There is a trade-off between robustness and test accuracy, i.e. $distortion \sim \log(classification~error)$</li>
+<li>Network architecture affects robustness more than model size</li>
+<li>Adversarial examples generated from VGG transfer well to the other models while the rest often only transfer within the same family of models. Transferability is often asymmetric.</li>
+</ul>
+</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Jetley et al., <strong>With Friends Like These, Who Needs Adversaries?</strong>, NeurIPS 2018.<ul>
+<li>Experiment with some <strong>universal class-dependent</strong> directions in the input space, extending the works of Fawzi et al.: (1) use DeepFool to find boundary close to samples, (2) find Hessian of difference of loss of the correct class and all other classes, (3) find eigenvalues, eigenvectors of mean of Hessian.</li>
+<li>Moving along or in reverse direction of most positive or most negative curvature (eigenvalue) significantly affects class scores whereas moving along directions with zero curvature does not. These directions are mostly shared between samples, and the ones with high curvature contribute to classification performance but is mutually exploited by adversarial examples (shown by linearly projecting data to subspaces with different numbers of dimension).</li>
+<li>Hypothesis: attempt to improve robustness by removing directions exploited by adversaries will significantly affect classification performance.</li>
+</ul>
+</li>
+<li>Wang et al., <strong>One Bit Matters: Understanding Adversarial Examples as the Abuse of Redundancy</strong>, 2018.<ul>
+<li>Consider a simple model: input is $x_1, x_2, x_3$, network outputs $x_1 == x_2$. $x_3$ is thus “redundant” and all neurons connected to it should have weight of zero for the network to make no error, but this constraint on the weights grow exponentially on redundant input.</li>
+<li>“General model” has two components: erasing noise/unrelated features, and matching with known patterns. Adversarial attacks simply create patterns or enough redundancy that the model cannot completely erase.</li>
+<li>Hypothesis &amp; experiment: (1) Adversarial examples are more “complex”: (a) require larger networks to memorize/classify, (b) higher entropy (i.e. for MNIST, maximum likelihood, minimax, compression estimator). (2) More robust models learn features with less entropy.</li>
+</ul>
+</li>
+<li>D. Stutz, M. Hein, and B. Schiele, <strong>Disentangling Adversarial Robustness and Generalization</strong>, 2018.<ul>
+<li>Define on- and off-manifold adversarial examples. Data manifold is assumed to be learned by VAE-GAN, or is approximated by subspace formed by some nearest neighbors.<ul><li>What’s a good way to approximate manifold locally?</li></ul>
+</li>
+<li>Claim that regular (gradient-based) adversarial examples are off manifold by measuring distance between a sample and its projection on the “true manifold.” Also claim that regular perturbation is almost orthogonal to the manifold, and by projecting it back to the manifold almost returns it to the original sample.</li>
+<li>Adversarial training with on-manifold adversarial examples (i.e. searching in latent space of VAE-GAN) improves “generalization”: lower test error, lower on-manifold adv. success rate. Does not lower off-manifold adv. success rate.</li>
+<li>Regular adversarial training (Madry et al.) does not improve test error and is not robust to on-manifold adversarial examples.</li>
+</ul>
+</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Ford et al., <strong>Adversarial Examples Are a Natural Consequence of Test Error in Noise</strong>, 2018.<ul>
+<li>Try to show that adversarial examples are not a surprising phenomenon and can be expected from any well-behaved classifiers. The $\epsilon$-boundary measure, probability that $x$ is $\epsilon$ away from the error set, is large even if the error set itself is small.</li>
+<li>They also show, on CIFAR-10 and ImageNet, that training with different types of noises, especially Gaussian with large std, can moderately improve model’s robustness against adversarial examples (but less than adversarial training). However, an adversarially trained model is also more susceptible to Gaussian noise but still better than the undefended model.</li>
+<li>Defenses that exhibit gradient masking (does not create a larger distance to boundary) do not improve robustness to other types of noise. Encourage improvement in robustness to general noise, and say that perfect accuracy under noises is nontrivial.</li>
+</ul>
+</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Ding et al., <strong>On the Sensitivity of Adversarial Robustness to Input Data Distribution</strong>, ICLR 2019.<ul>
+<li>Adversarial robustness depends heavily on some characteristic of dataset. Data can be transformed in such a way that its clean accuracy is unchanged, but robust accuracy can vary significantly. Hypothesis: loosely speaking, feature squeezing makes dataset “easier” to learn so adversarial training works better, hence the model becomes more robust.</li>
+<li>Saturated CIFAR-10 (similar to bit depth squeezing) seems be very robust when combined with adversarial training. Edge detection on FMNIST or adjusting gamma on CIFAR-10 seems to also affect robustness after adversarial training.</li>
+<li>Analysis on the phenomenon: (1) “perturbable volume”: binarization pushes data towards the edge of the allowed domain? Removing the [0, 1] constraint in the attack does not seem to have any effect, though in this case, the volumes inside and outside the training data manifold should be naturally different. (2) Inter-class distance: seems correlated, but there are lots of easy counterexamples. “Distance” here is $\ell_2$-based and seems arbitrary (top 10% nearest neighbors). (3) Model capacity and training set size have significant effects. Larger models are usually more robust but requires more data. More data reduces the generalization gap (between test and train robust accuracies) and the gap between clean and robust accuracies.</li>
+</ul>
+</li>
+<li>Kim et al., <strong>Bridging Adversarial Robustness and Gradient Interpretability</strong>, ICLR Workshop 2019.<ul>
+<li>Hypothesis 1: Adversarial examples on adversarially trained models lie closer to natural data manifold compared to undefended models. They show this using VAE-GAN and measure distance between input and its reconstruction. They also speculate that gradient of samples closer to clean data manifold is more interpretable.</li>
+<li>Hypothesis 2: Connection to tilting boundary theory. They show on 2D toy dataset that adversarial training aligns the decision boundary more perpendicular to high-variance direction (invariant to low-variance direction), and so they hypothesize that gradient required to cross the boundary aligns better with “human perception.”</li>
+<li>They test two attribution techniques (just gradient and gradient * input) and measure their interpretability score with two metrics (retain and retrain, keep and retrain). They show that strength of adversarial training correlates with higher interpretability scores.</li>
+</ul>
+</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Rajput et al., <strong>Does Data Augmentation lead to Positive Margin?</strong>, 2019.<ul>
+<li>Note that all proofs are based on <strong>worst-case margin</strong> (w.r.t. samples and possible classifier that (non)linearly separates data). This work proves lower bound on the number of augmented data points are needed to increase the margin in various settings (linear/non-linear classifier, norm-bounded/random noise).</li>
+<li>Theorem 10 (non-linear classifier, non-random augment): For $r \leq \epsilon$, there exists an $r$-ball augmented data set of size $d+1$ times the original, that increases margin for any classifier chosen from a set of $\epsilon$<strong>-respectful</strong> classifiers (see Definition 7).</li>
+<li>Lemma 9: If $\epsilon &lt; d(X_+,X_-)/4$, then set of $\epsilon$<strong>-respectful</strong> classifiers is guaranteed to be non-empty.</li>
+<li>Theorem 13 ((non)-linear classifier, random augment): For $r &lt; \epsilon$, worst-case margin is $\geq \frac{1}{2\sqrt{2}} \sqrt{\frac{log(N/d)}{d}}r$ where $N$ is number of augmentation per samples.</li>
+<li>Theorem 7: For linear classifier, $r$ can be chosen to be O(max-margin) so worst-case margin is also linear to max-margin.</li>
+</ul>
+</li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Franceschi et al., <strong>Robustness of classifiers to uniform $\ell_p$ and Gaussian noise</strong>, 2018.</li>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Fawsi et al., <strong>Robustness of classifiers: from adversarial to random noise</strong>, NeurIPS 2016.</li>
-  <li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Fawsi et al., <strong>The robustness of deep networks: A geometrical perspective</strong>, 2017.</li>
 </ul>
-
 <h3 id="hardness-of-defense">Hardness of Defense</h3>
 <ul>
-  <li>A. Fawzi, O. Fawzi, and P. Frossard, <strong>Analysis of classifiers’ robustness to adversarial perturbations.</strong>
+<li>A. Fawzi, O. Fawzi, and P. Frossard, <strong>Analysis of classifiers’ robustness to adversarial perturbations.</strong>
 </li>
-  <li>Schmidt et al., <strong>Adversarially Robust Generalization Requires More Data</strong>, NeurIPS 2018.
-    <ul>
-      <li>Study two simple data distributions (Gaussian and Bernoulli) and size of training set required for <strong>any</strong> learning algorithm to have robust generalization. The gap between robust and normal generalization is a factor of $O(\sqrt{d})$ for Gaussian. For Bernoulli, with thresholding, the gap is $O(1)$.</li>
-      <li>Experiment on MNIST shows that more training data is more robust, normal &lt; threshold &lt; adversarial training &lt; adversarial training + threshold.</li>
-    </ul>
-  </li>
-  <li>Tsipras et al., <strong>Robustness May Be at Odds with Accuracy</strong>, ICLR 2019.</li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Gilmer et al., <strong>Motivating the Rules of the Game for Adversarial Example Research</strong>, 2018. <a href="https://arxiv.org/abs/1807.06732">[link]</a>
-    <ul>
-      <li>Analyze and propose different threat models for adversarial examples in the context of real-world security-critical applications</li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Mahloujifar et al., <strong>The Curse of Concentration in Robust Learning: Evasion and Poisoning Attacks from Concentration of Measure</strong>, 2018.
-    <ul>
-      <li>Prove existence of adversarial examples with an assumption on Concentration of the measure. Shows that normal Levy family satisfies this assumption.</li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Shafahi et al., <strong>Are adversarial examples inevitable?</strong>, ICLR 2019.
-    <ul>
-      <li>Provide bound on probability of finding an adversarial examples, independent on classifiers but dependent on data distribution (shape of input domain and <strong>density</strong>). The proofs are shown for a unit ball and a unit cube with upper-bounded density. Lower density and higher dimension mean higher probability.</li>
-      <li>However, high dimension alone does not account for more susceptibility because the density also implicitly depends on dimension in an exponential manner which can end up nullifying an increase in dimension (that does not affect intrinsic density i.e. image resizing). Note that $\epsilon$ does increase for higher-dimension MNIST, but it scales with $\sqrt{n}$ for $\ell_2$. See Figure 4b. The authors argue that the probability rather depends on the density (or data <strong>complexity</strong>), comparing between two datasets of equal dimension.</li>
-      <li>Probability of finding adversarial examples within $\epsilon$-ball is <strong>at least</strong> $1 - U_c e^{-\pi \epsilon^2/2\pi}$ where $U_c$ is an upperbound of density function of class $c$.</li>
-    </ul>
-  </li>
-  <li>Mahloujifar et al., <strong>Empirically Measuring Concentration: Fundamental Limits on Intrinsic Robustness</strong>, 2019.</li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Dohmatob, <strong>Limitations of adversarial robustness: strong No Free Lunch Theorem</strong>, ICML 2019.
-    <ul>
-      <li>Provide a generalization of other previous works (Gilmer et al. 2018, Tsipras et al. 2018, etc.). Covers both geodesic distance and $\ell_p$-norm on flat space. Main tools are borrowed from measure theory (Talagrand W2 transportation-cost inequality, blow-up property).</li>
-    </ul>
-  </li>
+<li>Schmidt et al., <strong>Adversarially Robust Generalization Requires More Data</strong>, NeurIPS 2018.<ul>
+<li>Study two simple data distributions (Gaussian and Bernoulli) and size of training set required for <strong>any</strong> learning algorithm to have robust generalization. The gap between robust and normal generalization is a factor of $O(\sqrt{d})$ for Gaussian. For Bernoulli, with thresholding, the gap is $O(1)$.</li>
+<li>Experiment on MNIST shows that more training data is more robust, normal &lt; threshold &lt; adversarial training &lt; adversarial training + threshold.</li>
 </ul>
-
-<hr>
-
-<h2 id="applications">Applications</h2>
-
-<ul>
-  <li>Physically robust adversarial examples
-    <ul>
-      <li>A. Kurakin, I. J. Goodfellow, and S. Bengio, <strong>ADVERSARIAL EXAMPLES IN THE PHYSICAL WORLD.</strong>
 </li>
-      <li>
+<li>Tsipras et al., <strong>Robustness May Be at Odds with Accuracy</strong>, ICLR 2019.</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Gilmer et al., <strong>Motivating the Rules of the Game for Adversarial Example Research</strong>, 2018. <a href="https://arxiv.org/abs/1807.06732">[link]</a><ul><li>Analyze and propose different threat models for adversarial examples in the context of real-world security-critical applications</li></ul>
+</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Mahloujifar et al., <strong>The Curse of Concentration in Robust Learning: Evasion and Poisoning Attacks from Concentration of Measure</strong>, 2018.<ul><li>Prove existence of adversarial examples with an assumption on Concentration of the measure. Shows that normal Levy family satisfies this assumption.</li></ul>
+</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Shafahi et al., <strong>Are adversarial examples inevitable?</strong>, ICLR 2019.<ul>
+<li>Provide bound on probability of finding an adversarial examples, independent on classifiers but dependent on data distribution (shape of input domain and <strong>density</strong>). The proofs are shown for a unit ball and a unit cube with upper-bounded density. Lower density and higher dimension mean higher probability.</li>
+<li>However, high dimension alone does not account for more susceptibility because the density also implicitly depends on dimension in an exponential manner which can end up nullifying an increase in dimension (that does not affect intrinsic density i.e. image resizing). Note that $\epsilon$ does increase for higher-dimension MNIST, but it scales with $\sqrt{n}$ for $\ell_2$. See Figure 4b. The authors argue that the probability rather depends on the density (or data <strong>complexity</strong>), comparing between two datasets of equal dimension.</li>
+<li>Probability of finding adversarial examples within $\epsilon$-ball is <strong>at least</strong> $1 - U_c e^{-\pi \epsilon^2/2\pi}$ where $U_c$ is an upperbound of density function of class $c$.</li>
+</ul>
+</li>
+<li>Mahloujifar et al., <strong>Empirically Measuring Concentration: Fundamental Limits on Intrinsic Robustness</strong>, 2019.</li>
+<li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   Dohmatob, <strong>Limitations of adversarial robustness: strong No Free Lunch Theorem</strong>, ICML 2019.<ul><li>Provide a generalization of other previous works (Gilmer et al. 2018, Tsipras et al. 2018, etc.). Covers both geodesic distance and $\ell_p$-norm on flat space. Main tools are borrowed from measure theory (Talagrand W2 transportation-cost inequality, blow-up property).</li></ul>
+</li>
+</ul>
+<hr>
+<h2 id="applications">Applications</h2>
+<ul>
+<li>Physically robust adversarial examples<ul>
+<li>A. Kurakin, I. J. Goodfellow, and S. Bengio, <strong>ADVERSARIAL EXAMPLES IN THE PHYSICAL WORLD.</strong>
+</li>
+<li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">   A. Athalye, L. Engstrom, A. Ilyas, and K. Kwok, <strong>Synthesizing Robust Adversarial Examples</strong>, 2018. <a href="https://arxiv.org/abs/1707.07397">[link]</a>
 </li>
-      <li>J. Lu, H. Sibai, E. Fabry, and D. Forsyth, <strong>NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles</strong>, 2017.</li>
-      <li>J. Lu, H. Sibai, E. Fabry, and D. Forsyth, <strong>Standard detectors aren’t (currently) fooled by physical adversarial stop signs.</strong>
+<li>J. Lu, H. Sibai, E. Fabry, and D. Forsyth, <strong>NO Need to Worry about Adversarial Examples in Object Detection in Autonomous Vehicles</strong>, 2017.</li>
+<li>J. Lu, H. Sibai, E. Fabry, and D. Forsyth, <strong>Standard detectors aren’t (currently) fooled by physical adversarial stop signs.</strong>
 </li>
-      <li>C. Sitawarin, A. Bhagoji, A. Mosenia, M. Chiang, P. Mittal, <strong>DARTS: Deceiving Autonomous Cars with Toxic Signs</strong>, 2018.</li>
-    </ul>
-  </li>
-  <li>C. Xie, J. Wang, Z. Zhang, Y. Zhou, L. Xie, and A. Yuille, <strong>Adversarial Examples for Semantic Segmentation and Object Detection.</strong>
+<li>C. Sitawarin, A. Bhagoji, A. Mosenia, M. Chiang, P. Mittal, <strong>DARTS: Deceiving Autonomous Cars with Toxic Signs</strong>, 2018.</li>
+</ul>
 </li>
-  <li>S. Huang, N. Papernot, I. Goodfellow, Y. Duan, and P. Abbeel, <strong>Adversarial Attacks on Neural Network Policies.</strong>
+<li>C. Xie, J. Wang, Z. Zhang, Y. Zhou, L. Xie, and A. Yuille, <strong>Adversarial Examples for Semantic Segmentation and Object Detection.</strong>
 </li>
-  <li>J. Lu, H. Sibai, and E. Fabry, <strong>Adversarial Examples that Fool Detectors.</strong>
+<li>S. Huang, N. Papernot, I. Goodfellow, Y. Duan, and P. Abbeel, <strong>Adversarial Attacks on Neural Network Policies.</strong>
+</li>
+<li>J. Lu, H. Sibai, and E. Fabry, <strong>Adversarial Examples that Fool Detectors.</strong>
 </li>
 </ul>
-
 <h3 id="text">Text</h3>
-
 <ul>
-  <li>J. Gao, J. Lanchantin, M. Soffa, Y. Qi, <strong>Black-box Generation of Adversarial Text Sequences to Evade Deep Learning Classifiers</strong>, 2018.</li>
-  <li>Kuleshov et al., <strong>Adversarial Examples for Natural Language Classification Problems</strong>, 2018.</li>
-  <li>Ebrahimi et al., <strong>HotFlip: White-Box Adversarial Examples for Text Classification</strong>, 2018.</li>
-  <li>Samanta et al., <strong>Towards Crafting Text Adversarial Samples</strong>, 2018.</li>
+<li>J. Gao, J. Lanchantin, M. Soffa, Y. Qi, <strong>Black-box Generation of Adversarial Text Sequences to Evade Deep Learning Classifiers</strong>, 2018.</li>
+<li>Kuleshov et al., <strong>Adversarial Examples for Natural Language Classification Problems</strong>, 2018.</li>
+<li>Ebrahimi et al., <strong>HotFlip: White-Box Adversarial Examples for Text Classification</strong>, 2018.</li>
+<li>Samanta et al., <strong>Towards Crafting Text Adversarial Samples</strong>, 2018.</li>
 </ul>
-
 <h3 id="audio">Audio</h3>
-
-<ul>
-  <li>Carlini et al., <strong>Audio Adversarial Examples: Targeted Attacks on Speech-to-Text</strong>, 2018.</li>
-</ul>
-
+<ul><li>Carlini et al., <strong>Audio Adversarial Examples: Targeted Attacks on Speech-to-Text</strong>, 2018.</li></ul>
 <hr>
-
 <h2 id="etc">Etc.</h2>
-
 <ul>
-  <li>Neural network verification
-    <ul>
-      <li>X. Huang, M. Kwiatkowska, S. Wang, and M. Wu, <strong>Safety Verification of Deep Neural Networks.</strong>
+<li>Neural network verification<ul>
+<li>X. Huang, M. Kwiatkowska, S. Wang, and M. Wu, <strong>Safety Verification of Deep Neural Networks.</strong>
 </li>
-      <li>G. Katz, C. Barrett, D. Dill, K. Julian, and M. Kochenderfer, <strong>Reluplex: An Efficient SMT Solver for Verifying Deep Neural Networks.</strong>
+<li>G. Katz, C. Barrett, D. Dill, K. Julian, and M. Kochenderfer, <strong>Reluplex: An Efficient SMT Solver for Verifying Deep Neural Networks.</strong>
 </li>
-      <li>N. Carlini, G. Katz, C. Barrett, and D. L. Dill, <strong>Ground-Truth Adversarial Examples.</strong>
+<li>N. Carlini, G. Katz, C. Barrett, and D. L. Dill, <strong>Ground-Truth Adversarial Examples.</strong>
 </li>
-    </ul>
-  </li>
-  <li>Elsayed et al., <strong>Adversarial Examples that Fool both Human and Computer Vision</strong>, 2018.</li>
 </ul>
-
+</li>
+<li>Elsayed et al., <strong>Adversarial Examples that Fool both Human and Computer Vision</strong>, 2018.</li>
+</ul>
 <hr>
-
 <h2 id="other-cool-securityadversarial-ml-papers">Other Cool Security/Adversarial ML papers</h2>
-
 <ul>
-  <li>N. Carlini et al., <strong>Hidden Voice Commands</strong>, USENIX, 2016. <a href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/carlini">[link]</a>
+<li>N. Carlini et al., <strong>Hidden Voice Commands</strong>, USENIX, 2016. <a href="https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/carlini">[link]</a>
 </li>
-  <li>M. Sharif, S. Bhagavatula, L. Bauer, and M. K. Reiter, <strong>Accessorize to a Crime: Real and Stealthy Attacks on State-of-the-Art Face Recognition</strong>, In Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security (CCS ‘16). ACM, New York, NY, USA, 1528-1540. DOI: <a href="https://doi.org/10.1145/2976749.2978392">[link]</a>
+<li>M. Sharif, S. Bhagavatula, L. Bauer, and M. K. Reiter, <strong>Accessorize to a Crime: Real and Stealthy Attacks on State-of-the-Art Face Recognition</strong>, In Proceedings of the 2016 ACM SIGSAC Conference on Computer and Communications Security (CCS ‘16). ACM, New York, NY, USA, 1528-1540. DOI: <a href="https://doi.org/10.1145/2976749.2978392">[link]</a>
 </li>
 </ul>
-
 <hr>
-
 <h2 id="useful-links">Useful Links</h2>
-
 <ul>
-  <li>https://github.com/tensorflow/cleverhans</li>
-  <li>https://evademl.org/</li>
-  <li>https://github.com/mzweilin/EvadeML-Zoo</li>
-  <li>https://github.com/MadryLab/mnist_challenge</li>
-  <li>http://adversarial-learning.princeton.edu/</li>
-  <li>https://secml.github.io/</li>
-</ul>
-
-</article>
-
-
-
-
-
-
-
-
-
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-      inlineMath: [['$','$'], ['\\(','\\)']],
-      processEscapes: true
-    },
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    }
-  });
-</script>
-
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML">
-</script>
-
-
-
-
-
-<div class="navigator">
-    
-    
+<li>https://github.com/tensorflow/cleverhans</li>
+<li>https://evademl.org/</li>
+<li>https://github.com/mzweilin/EvadeML-Zoo</li>
+<li>https://github.com/MadryLab/mnist_challenge</li>
+<li>http://adversarial-learning.princeton.edu/</li>
+<li>https://secml.github.io/</li>
+</ul></article><script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true }, TeX: { equationNumbers: { autoNumber: "AMS" } } }); </script> <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML"> </script><div class="navigator"></div>
+<div id="disqus_thread"></div>
+<script> var disqus_config = function () { this.page.url = "https://xinshaoamoswang.github.io/my_docs/Adversarial-Examples-Reading-List/"; this.page.identifier = ""; }; (function() { var d = document, s = d.createElement('script'); s.src = 'https://xinshaowang.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })(); </script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a> </noscript>
+<footer role="contentinfo"><hr>
+<p><small class="copyright">© 2019. All rights reserved. </small></p>
+<p><small>Welcome to Xinshao Wang's Personal Website</small></p>
+<hr class="sr-only"></footer></main><hy-drawer class="" align="left" threshold="10" touch-events prevent-default><header id="_sidebar" class="sidebar" role="banner"><div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-sticky">
+<div class="sidebar-about"> <a class="no-hover" href="/" tabindex="-1"> <img src="/assets/icons/android-chrome-192x192.png" class="avatar" alt="Xinshao Wang" data-ignore> </a><h2 class="h1"><a href="/">Xinshao Wang</a></h2>
+<p class="fine"> Machine Learning (Deep Metric Learning, Robust Learning under Arbitrary Anomalies). Computer Vision (Image/Video Recognition, Person ReID).</p>
 </div>
-
-
-
-
-
-
-
-<div id="disqus_thread"></div>
-
-
-<script>
-    var disqus_config = function () {
-            this.page.url = "https://xinshaoamoswang.github.io/my_docs/Adversarial-Examples-Reading-List/";
-            this.page.identifier = "";
-        }; 
-
-    (function() { 
-    var d = document, s = d.createElement('script');
-    s.src = 'https://xinshaowang.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-
-
-<noscript>Please enable JavaScript to view the 
-    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-
-
-
-
-
-  
-
-  
-<footer role="contentinfo">
-  <hr>
-  
-    <p><small class="copyright">© 2019. All rights reserved.
-</small></p>
-  
-  
-  <p><small>Welcome to Xinshao Wang's Personal Website</small></p>
-  <hr class="sr-only">
-</footer>
-
-
-</main>
-
-    <hy-drawer class="" align="left" threshold="10" touch-events prevent-default>
-  <header id="_sidebar" class="sidebar" role="banner">
-    
-    <div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
-
-    <div class="sidebar-sticky">
-      <div class="sidebar-about">
-        
-          <a class="no-hover" href="/" tabindex="-1">
-            <img src="/assets/icons/android-chrome-192x192.png" class="avatar" alt="Xinshao Wang" data-ignore>
-          </a>
-        
-        <h2 class="h1"><a href="/">Xinshao Wang</a></h2>
-        
-        
-          <p class="fine">
-            Machine Learning (Deep Metric Learning, Robust Learning under Arbitrary Anomalies).
-Computer Vision (Image/Video Recognition, Person ReID).
-
-          </p>
-        
-      </div>
-
-      <nav class="sidebar-nav heading" role="navigation">
-        <span class="sr-only">Navigation:</span>
-<ul>
-  
-    
-      
-      <li>
-        <a id="_navigation" href="/blogs/" class="sidebar-nav-item">
-          Blog
-        </a>
-      </li>
-    
-      
-      <li>
-        <a href="/paperlists/" class="sidebar-nav-item">
-          PaperLists
-        </a>
-      </li>
-    
-      
-      <li>
-        <a href="/projects/" class="sidebar-nav-item">
-          Projects
-        </a>
-      </li>
-    
-      
-      <li>
-        <a href="/Resume/" class="sidebar-nav-item">
-          Resume
-        </a>
-      </li>
-    
-      
-      <li>
-        <a href="/about/" class="sidebar-nav-item">
-          About ME
-        </a>
-      </li>
-    
-  
-</ul>
-
-      </nav>
-
-      
-
-      <div class="sidebar-social">
-        <span class="sr-only">Social:</span>
-<ul>
-  
-    
-    
-
-    
-    
-
-    
-    
-  
-</ul>
-
-      </div>
-    </div>
-  </header>
-</hy-drawer>
-<hr class="sr-only" hidden>
-
-  
-</hy-push-state>
-
-<!--[if gt IE 10]><!---->
-
-  <script nomodule>!function(){var e=document.createElement("script");if(!("noModule"in e)&&"onbeforeload"in e){var t=!1;document.addEventListener("beforeload",function(n){if(n.target===e)t=!0;else if(!n.target.hasAttribute("nomodule")||!t)return;n.preventDefault()},!0),e.type="module",e.src=".",document.head.appendChild(e),e.remove()}}();
-</script>
-  <script type="module" src="/assets/js/hydejack-8.5.2.js"></script>
-  <script nomodule src="/assets/js/hydejack-legacy-8.5.2.js" defer></script>
-  
-
-  
-
-
-<!--<![endif]-->
-
-
-
-
-<h2 class="sr-only" hidden>Templates (for web app):</h2>
-
-<template id="_animation-template" hidden>
-  <div class="animation-main fixed-top">
-    <div class="content">
-      <div class="page"></div>
-    </div>
-  </div>
-</template>
-
-<template id="_loading-template" hidden>
-  <div class="loading nav-btn fr">
-    <span class="sr-only">Loading…</span>
-    <span class="icon-cog"></span>
-  </div>
-</template>
-
-<template id="_error-template" hidden>
-  <div class="page">
-    <h1 class="page-title">Error</h1>
-    
-    
-    <p class="lead">
-      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
-
-    </p>
-  </div>
-</template>
-
-<template id="_forward-template" hidden>
-  <button id="_forward" class="forward nav-btn no-hover fl">
-    <span class="sr-only">Forward</span>
-    <span class="icon-arrow-right2"></span>
-  </button>
-</template>
-
-<template id="_back-template" hidden>
-  <button id="_back" class="back nav-btn no-hover fl">
-    <span class="sr-only">Back</span>
-    <span class="icon-arrow-left2"></span>
-  </button>
-</template>
-
-<template id="_permalink-template" hidden>
-  <a href="#" class="permalink">
-    <span class="sr-only">Permalink</span>
-    <span class="icon-link"></span>
-  </a>
-</template>
-
-
-
-
-
-  
-
-  
-  
-<script data-ad-client="ca-pub-8231481254980115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-  
-
-
-
-<div id="disqus_thread"></div>
-
-
-<script>
-    var disqus_config = function () {
-            this.page.url = "https://xinshaoamoswang.github.io/my_docs/Adversarial-Examples-Reading-List/";
-            this.page.identifier = "";
-        }; 
-
-    (function() { 
-    var d = document, s = d.createElement('script');
-    s.src = 'https://xinshaowang.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-
-
-<noscript>Please enable JavaScript to view the 
-    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-
-
-
-</body>
-
-
-<script id="dsq-count-scr" src="//xinshaowang.disqus.com/count.js" async></script>
-
-<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-
-</html>
+<nav class="sidebar-nav heading" role="navigation"> <span class="sr-only">Navigation:</span><ul>
+<li> <a id="_navigation" href="/blogs/" class="sidebar-nav-item"> Blog </a>
+</li>
+<li> <a href="/paperlists/" class="sidebar-nav-item"> PaperLists </a>
+</li>
+<li> <a href="/projects/" class="sidebar-nav-item"> Projects </a>
+</li>
+<li> <a href="/Resume/" class="sidebar-nav-item"> Resume </a>
+</li>
+<li> <a href="/about/" class="sidebar-nav-item"> About ME </a>
+</li>
+</ul></nav><div class="sidebar-social"> <span class="sr-only">Social:</span><ul></ul>
+</div>
+</div></header></hy-drawer><hr class="sr-only" hidden> </hy-push-state> <!--[if gt IE 10]><!----> <script nomodule>!function(){var e=document.createElement("script");if(!("noModule"in e)&&"onbeforeload"in e){var t=!1;document.addEventListener("beforeload",function(n){if(n.target===e)t=!0;else if(!n.target.hasAttribute("nomodule")||!t)return;n.preventDefault()},!0),e.type="module",e.src=".",document.head.appendChild(e),e.remove()}}(); </script> <script type="module" src="/assets/js/hydejack-8.5.2.js"></script> <script nomodule src="/assets/js/hydejack-legacy-8.5.2.js" defer></script> <!--<![endif]--><h2 class="sr-only" hidden>Templates (for web app):</h2><template id="_animation-template" hidden><div class="animation-main fixed-top"><div class="content"><div class="page"></div></div></div></template> <template id="_loading-template" hidden><div class="loading nav-btn fr"> <span class="sr-only">Loading…</span> <span class="icon-cog"></span>
+</div></template> <template id="_error-template" hidden><div class="page">
+<h1 class="page-title">Error</h1>
+<p class="lead"> Sorry, an error occurred while loading <a class="this-link" href=""></a>.</p>
+</div></template> <template id="_forward-template" hidden> <button id="_forward" class="forward nav-btn no-hover fl"> <span class="sr-only">Forward</span> <span class="icon-arrow-right2"></span> </button> </template> <template id="_back-template" hidden> <button id="_back" class="back nav-btn no-hover fl"> <span class="sr-only">Back</span> <span class="icon-arrow-left2"></span> </button> </template> <template id="_permalink-template" hidden> <a href="#" class="permalink"> <span class="sr-only">Permalink</span> <span class="icon-link"></span> </a> </template> <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-156337007-1', 'auto'); ga('send', 'pageview'); </script> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156337007-1"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-156337007-1'); </script> <script data-ad-client="ca-pub-8231481254980115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><div id="disqus_thread"></div><script> var disqus_config = function () { this.page.url = "https://xinshaoamoswang.github.io/my_docs/Adversarial-Examples-Reading-List/"; this.page.identifier = ""; }; (function() { var d = document, s = d.createElement('script'); s.src = 'https://xinshaowang.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); })(); </script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a> </noscript> <script id="dsq-count-scr" src="//xinshaowang.disqus.com/count.js" async></script> <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
