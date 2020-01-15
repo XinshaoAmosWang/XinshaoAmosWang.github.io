@@ -12,6 +12,8 @@ comment: true
 
 [Jekyll Variables](https://jekyllrb.com/docs/variables/)
 
+[Add Google Analytics](https://michaelsoolee.com/google-analytics-jekyll/)
+
 
 
 ## Useful links on Travel & Insurance. 

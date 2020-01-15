@@ -31,16 +31,23 @@ layout: compress
 
 <head>
   {% include head/index.html %}
-  
-  {%  include google_analytics.html %}
-  {%  include google_adsense.html %}
 </head>
 
 <body class="no-color-transition">
   {% include body/index.html %}
+
+  {% if jekyll.environment == 'production' %}
+  {%  include google_analytics.html %}
+  {% endif %}
+
+  
+  {%  include google_adsense.html %}
+
+  {% include disqus.html %}
 </body>
 
 
 <script id="dsq-count-scr" src="//xinshaowang.disqus.com/count.js" async></script>
 
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
