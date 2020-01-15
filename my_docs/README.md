@@ -9,6 +9,7 @@ comment: true
 ## Useful links on Jekyll, Google AdSense, Markdown. 
 
 [Add Google AdSense to a Jekyll website](https://mycyberuniverse.com/en-gb/add-google-adsense-to-a-jekyll-website.html)
+[AdSense Jekyll + Github](http://www.lewisgavin.co.uk/Google-Analytics-Adsense/)
 
 [Jekyll Variables](https://jekyllrb.com/docs/variables/)
 
