@@ -261,10 +261,15 @@ in <a href="/paperlists/" class="flip-title">Paper Lists</a>
 <h2 id="noisy-labels-">Noisy Labels, …</h2>
 <ul class="message">
   <li>
-<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Han_Deep_Self-Learning_From_Noisy_Labels_ICCV_2019_paper.pdf">Deep Self-Learning From Noisy Labels</a>: The proposed SMP trains in an iterative manner which
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Han_Deep_Self-Learning_From_Noisy_Labels_ICCV_2019_paper.pdf">Deep Self-Learning From Noisy Labels</a>:  Self means `without extra supervision’
+    <ul>
+      <li>The proposed SMP trains in an iterative manner which
 contains two phases: the first phase is to train a network
 with <strong>the original noisy label and corrected label</strong> generated
 in the second phase.</li>
+      <li>By extracting multiple prototypes for a category, we demonstrate that more prototypes would get a better representation of a class and obtain better label-correction results.</li>
+    </ul>
+  </li>
   <li>
 <a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Co-Mining_Deep_Face_Recognition_With_Noisy_Labels_ICCV_2019_paper.pdf">Co-Mining: Deep Face Recognition With Noisy Labels</a>: We propose a novel <strong>co-mining</strong> framework, which employs two peer networks to <strong>detect the noisy faces,
 exchanges the high-confidence clean faces and reweights the clean faces</strong> in a mini-batch fashion.</li>
@@ -273,17 +278,78 @@ exchanges the high-confidence clean faces and reweights the clean faces</strong>
   <li>
 <a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Symmetric_Cross_Entropy_for_Robust_Learning_With_Noisy_Labels_ICCV_2019_paper.pdf">Symmetric Cross Entropy for Robust Learning With Noisy Labels</a>: Already compared in our method.</li>
   <li>
-<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Huang_O2U-Net_A_Simple_Noisy_Label_Detection_Approach_for_Deep_Neural_ICCV_2019_paper.pdf">O2U-Net: A Simple Noisy Label Detection Approach for Deep Neural Networks</a>: It only requires adjusting the hyper-parameters of the deep network to make its status transfer from overfitting to underfitting (O2U) cyclically. The losses of each sample are recorded during iterations. The higher the normalized average loss of a sample, the higher the probability of being noisy labels.</li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Huang_O2U-Net_A_Simple_Noisy_Label_Detection_Approach_for_Deep_Neural_ICCV_2019_paper.pdf">O2U-Net: A Simple Noisy Label Detection Approach for Deep Neural Networks</a>–<strong>Overall, this method is complex</strong>:
+    <ul>
+      <li>We propose a novel noisy label detection approach, named O2U-net, without human annotation and verification.
+  It only requires adjusting the hyper-parameters of the deep network to <strong>make its status transfer from overfitting to underfitting (O2U) cyclically</strong>. 
+  <strong>By calculating and ranking the normalized average loss of every sample, the mislabeled samples can be identified.</strong>
+</li>
+      <li>
+<strong>The losses of each sample are recorded during iterations.</strong> The higher the normalized average loss of a sample, the higher the probability of being noisy labels.
+  =&gt; <strong>Is it scalable to large datasets?</strong>
+</li>
+      <li>O2U-net is naturally compatible with active learning and other human annotation approaches. This introduces extra flexibility for learning with noisy labels.</li>
+      <li>The whole training process:
+        <ul>
+          <li>Pre-training:  Train the network directly on the original dataset including noisy labels. At this step, a common constant learning rate is applied. <strong>A large batch size</strong> is applied to reduce the impact of label noise <a href="https://arxiv.org/abs/1705.10694">Deep Learning is Robust to Massive Label Noise</a>.  We use <strong>a validation set to monitor the performance of training.</strong> The network is trained until the accuracy in the validation set stays stable. (<strong>Validation Data is Needed!</strong>)</li>
+          <li>Cyclical Training: <strong>A small batch size</strong>–A smaller batch size is chosen to make the network more easily transfer from overfitting to underfitting.
+  After the whole cyclical training, the average of the
+  normalized losses of every sample is computed. All
+  the average losses are then ranked in descending order.
+  The top k% of samples are removed from the original
+  dataset as noisy labels, where k depends on the prior
+  knowledge on the dataset. Such prior knowledge can
+  be obtained by manually verifying a small group of
+  randomly selected samples.</li>
+          <li>Training on Clean Data: Lastly, we <strong>re-initialize</strong> the
+  parameters of the network, and <strong>re-train</strong> it on the cleansing dataset ordinarily until achieving stable accuracy
+  and loss in the validation set.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="robustness">Robustness</h2>
 <ul class="message">
-  <li><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Gowal_Scalable_Verified_Training_for_Provably_Robust_Image_Classification_ICCV_2019_paper.pdf">Scalable Verified Training for Provably Robust Image Classification</a></li>
-  <li><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Chen_Improving_Adversarial_Robustness_via_Guided_Complement_Entropy_ICCV_2019_paper.pdf">Improving Adversarial Robustness via Guided Complement Entropy</a></li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Peterson_Human_Uncertainty_Makes_Classification_More_Robust_ICCV_2019_paper.pdf">Human uncertainty makes classification more robust–From Labels to Label Distributions</a>
+    <ul>
+      <li>We suggest <strong>an alternative objective: not
+just trying to capture the most likely label, but trying to capture the full distribution over labels.</strong> Although there has been much work scaling the number of images in datasets [18], and investigating label noise
+[40, 12, 48], little effort has been put into identifying the
+benefits from increasing the richness of (informative) label
+distributions for image classification tasks.</li>
+      <li>
+<strong>Soft Labels</strong>: One of the core contributions of our work is around using the soft labels provided through human confusion as a replacement for one-hot label encodings.</li>
+      <li>Our approach proposes <strong>utilizing these human disagreements</strong> to improve the accuracy and robustness of a model, complementing existing work aimed at leveraging “errors” in human labeling</li>
+      <li>As accuracy gains have begun to asymptote at
+near-perfect levels [11], there has been <strong>increasing focus on
+out-of-training-set performance—in particular, the ability
+to generalize to related stimuli [39], and robustness to adversarial examples [29]</strong>. On these tasks, by contrast, CNNs
+tend to perform rather poorly, whereas humans continue to
+perform well.</li>
+    </ul>
+  </li>
+</ul>
+
+<ul class="message">
+  <li><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Yamaguchi_Subspace_Structure-Aware_Spectral_Clustering_for_Robust_Subspace_Clustering_ICCV_2019_paper.pdf">Subspace Structure-aware Spectral Clustering for Robust Subspace Clustering</a></li>
+</ul>
+
+<h2 id="adversarial-robustness">Adversarial Robustness</h2>
+<ul class="message">
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Gowal_Scalable_Verified_Training_for_Provably_Robust_Image_Classification_ICCV_2019_paper.pdf">Scalable Verified Training for Provably Robust Image Classification</a>
+    <ul>
+      <li>Train deep neural networks that are provably robust to norm-bounded adversarial perturbations.</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Chen_Improving_Adversarial_Robustness_via_Guided_Complement_Entropy_ICCV_2019_paper.pdf">Improving Adversarial Robustness via Guided Complement Entropy</a></p>
+  </li>
   <li><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Bilateral_Adversarial_Training_Towards_Fast_Training_of_More_Robust_Models_ICCV_2019_paper.pdf">Bilateral Adversarial Training: Towards Fast Training of More Robust Models
 Against Adversarial Attacks</a></li>
-  <li><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Peterson_Human_Uncertainty_Makes_Classification_More_Robust_ICCV_2019_paper.pdf">Human uncertainty makes classification more robust</a></li>
-  <li><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Yamaguchi_Subspace_Structure-Aware_Spectral_Clustering_for_Robust_Subspace_Clustering_ICCV_2019_paper.pdf">Subspace Structure-aware Spectral Clustering for Robust Subspace Clustering</a></li>
 </ul>
 
 <h2 id="deep-metric-learning-">Deep Metric Learning, …</h2>
