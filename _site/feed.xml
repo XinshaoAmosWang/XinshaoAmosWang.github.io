@@ -1,9 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-08T12:00:55+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-12T19:29:16+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
 </subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">ICLR-2020</title><link href="http://localhost:4000/paperlists/2020-01-02-ICLR/" rel="alternate" type="text/html" title="ICLR-2020" /><published>2020-01-02T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ICLR</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-01-02-ICLR/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 
 &lt;h2 id=&quot;foundation-of-deep-learning&quot;&gt;Foundation of Deep Learning&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;https://openreview.net/forum?id=B1g8VkHFPH&quot;&gt;Rethinking the Hyperparameters for Fine-tuning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">ICLR-2019</title><link href="http://localhost:4000/paperlists/2019-12-30-ICLR/" rel="alternate" type="text/html" title="ICLR-2019" /><published>2019-12-30T00:00:00+00:00</published><updated>2019-12-30T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ICLR</id><content type="html" xml:base="http://localhost:4000/paperlists/2019-12-30-ICLR/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
+
+&lt;h2 id=&quot;corefundamental-deep-learning-informativeforgettable-example-uncertain-examples&quot;&gt;Core/Fundamental Deep Learning (Informative/Forgettable Example, Uncertain Examples)&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://openreview.net/forum?id=BJlxm30cKm&quot;&gt;Informative/Forgettable Examples: An Empirical Study of Example Forgetting during Deep Neural Network Learning&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;We define a ``forgetting event’’ to have occurred when an individual training example transitions from being classified correctly to incorrectly over the course of learning.
+  We show that catastrophic forgetting occurs within what is considered to be a single task and find that examples that are not prone to forgetting can be removed from the training set without loss of generalization.&lt;/li&gt;
+      &lt;li&gt;Across several benchmark data sets, we find that:
+        &lt;ul&gt;
+          &lt;li&gt;(i) certain examples are forgotten with high frequency, and some not at all;&lt;/li&gt;
+          &lt;li&gt;(ii) a data set’s (un)forgettable examples generalize across neural architectures;&lt;/li&gt;
+          &lt;li&gt;(iii) based on forgetting dynamics, a significant fraction of examples can be omitted from the training data set while still maintaining state-of-the-art generalization performance.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Their finding: Harder/Support/informative samples are learned later and may include noisy examples. &lt;br /&gt;
+  Then a question is arouse: How to differentiate informative and noisy examples? 
+  Our work provides a solution for this question. &lt;a href=&quot;https://arxiv.org/pdf/1905.11233.pdf&quot;&gt;Derivative Manipulation for General Example Weighting&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Detailed findings of theirs:
+        &lt;ul&gt;
+          &lt;li&gt;Support examples = forgettable examples = Informative examples that cannot be removed. Removing unforgottable examples do not hurt the generalisation performance when training a model from scratch on the remained subset.&lt;/li&gt;
+          &lt;li&gt;The properties of support/informative examples: a) learnt later; b) larget misclassification margin when forgotten; c) perceptually ambiguous; d) tend to be noisy.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://papers.nips.cc/paper/6701-active-bias-training-more-accurate-neural-networks-by-emphasizing-high-variance-samples.pdf&quot;&gt;Uncertain Examples-NeurIPS2017: Active Bias: Training More Accurate Neural Networks by Emphasizing High Variance Samples&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">CVPR-2019</title><link href="http://localhost:4000/paperlists/2019-12-29-CVPR/" rel="alternate" type="text/html" title="CVPR-2019" /><published>2019-12-29T00:00:00+00:00</published><updated>2019-12-29T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/CVPR</id><content type="html" xml:base="http://localhost:4000/paperlists/2019-12-29-CVPR/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 
 &lt;h2 id=&quot;deep-metric-learning&quot;&gt;Deep Metric Learning&lt;/h2&gt;
@@ -349,170 +382,4 @@ Interactive version of this paper at &lt;a href=&quot;https://weightagnostic.git
   &lt;li&gt;&lt;a href=&quot;https://github.com/XinshaoAmosWang/Emphasis-Regularisation-by-Gradient-Rescaling&quot;&gt;An Extremely Simple and Principled Solution for Avoiding Overfitting and Achieving Better Generalisation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Summary of research progress on Robust Learning under Arbitrary Semantic Anomalies.</summary></entry><entry><title type="html">Person Re-identification</title><link href="http://localhost:4000/projects/2019-10-10-person-reidentification/" rel="alternate" type="text/html" title="Person Re-identification" /><published>2019-10-10T00:00:00+01:00</published><updated>2019-10-10T00:00:00+01:00</updated><id>http://localhost:4000/projects/person-reidentification</id><content type="html" xml:base="http://localhost:4000/projects/2019-10-10-person-reidentification/">&lt;p class=&quot;message&quot;&gt;Summary of research progress on person re-identification.&lt;/p&gt;
 
-&lt;h2 id=&quot;paper-notes-on-video-person-re-identification&quot;&gt;&lt;a href=&quot;/Papers/VideoReID/&quot;&gt;Paper notes on video person re-identification&lt;/a&gt;&lt;/h2&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Summary of research progress on person re-identification.</summary></entry><entry><title type="html">An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies</title><link href="http://localhost:4000/blogs/2019-10-01-Research-GR/" rel="alternate" type="text/html" title="An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies" /><published>2019-10-01T00:00:00+01:00</published><updated>2019-10-01T00:00:00+01:00</updated><id>http://localhost:4000/blogs/Research-GR</id><content type="html" xml:base="http://localhost:4000/blogs/2019-10-01-Research-GR/">&lt;p&gt;General applicability: Label noise (semantic noise), outliers, heavy perceptual data noise, etc.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;It is reasonable to assume that there is semantic noise in large-scale training datasets&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Class labels may be missing.&lt;/li&gt;
-  &lt;li&gt;The labelling process may be subjective.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Label noise is one of the most explicit cases where some observations and their labels are not matched in the training data. In this case, it is quite crucial to make your models learn meaningful patterns instead of errors.&lt;/p&gt;
-
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;Main contribution:&lt;/strong&gt; Intuitively and principally, we claim that two basic factors, what examples
-get higher weights (emphasis focus) and how large variance over examples’ weights (emphasis
-spread), should be babysit simultaneously when it comes to sample differentiation and reweighting.
-Unfortunately, these two intuitive and indispensable factors are not studied together in the literature.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;What training examples should be focused and how much more should they be emphasised when training DNNs under label noise?&lt;/p&gt;
-
-    &lt;p&gt;&lt;strong&gt;When noise rate is higher, we can improve a model’s robustness by focusing on relatively less difficult examples.&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.researchgate.net/publication/333418661_Emphasis_Regularisation_by_Gradient_Rescaling_for_Training_Deep_Neural_Networks_with_Noisy_Labels/comments&quot;&gt;More comments and comparison with related work&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://drive.google.com/file/d/1fU3N_u-_puOwEbupK6aOENerP2S45tZX/view?usp=sharing&quot;&gt;Paper reading about outlier detection and robust inference&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;effective-qualitative-and-quantitative-results&quot;&gt;Effective (Qualitative and Quantitative Results)&lt;/h2&gt;
-
-&lt;p&gt;Please see &lt;a href=&quot;https://arxiv.org/pdf/1905.11233.pdf&quot;&gt;our paper&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Outperform existing work on synthetic label noise;&lt;/li&gt;
-  &lt;li&gt;Outperform existing work on unknown real-world noise.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p float=&quot;left&quot;&gt;
-  &lt;img src=&quot;/assets/img/blog/figs/Figure1.png&quot; width=&quot;800&quot; /&gt;
-  &lt;img src=&quot;/assets/img/blog/figs/Table1.png&quot; width=&quot;800&quot; /&gt;
-  &lt;img src=&quot;/assets/img/blog/figs/Figure2.png&quot; width=&quot;800&quot; /&gt;
-  &lt;img src=&quot;/assets/img/blog/figs/Table4.png&quot; width=&quot;800&quot; /&gt;
-  &lt;img src=&quot;/assets/img/blog/figs/Table5.png&quot; width=&quot;800&quot; /&gt;
-  &lt;img src=&quot;/assets/img/blog/figs/Table6.png&quot; width=&quot;800&quot; /&gt;
-  &lt;img src=&quot;/assets/img/blog/figs/Table7.png&quot; width=&quot;800&quot; /&gt;
-  &lt;img src=&quot;/assets/img/blog/figs/Table9.png&quot; width=&quot;800&quot; /&gt;
-&lt;/p&gt;
-
-&lt;h2 id=&quot;extremely-simple&quot;&gt;Extremely Simple&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Without advanced training strategies&lt;/strong&gt;: e.g.,&lt;/p&gt;
-
-&lt;p&gt;a. Iterative retraining on gradual data correction&lt;/p&gt;
-
-&lt;p&gt;b. Training based on carefully-designed curriculums&lt;/p&gt;
-
-&lt;p&gt;…&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Without using extra networks&lt;/strong&gt;: e.g.,&lt;/p&gt;
-
-&lt;p&gt;a. Decoupling” when to update” from” how to update”&lt;/p&gt;
-
-&lt;p&gt;b. Co-teaching: Robust training of deep neural networks with extremely noisy labels&lt;/p&gt;
-
-&lt;p&gt;c. Mentornet: Learning datadriven curriculum for very deep neural networks on corrupted labels&lt;/p&gt;
-
-&lt;p&gt;…&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Without using extra validation sets for model optimisation&lt;/strong&gt;: e.g.,&lt;/p&gt;
-
-&lt;p&gt;a.  Learning to reweight examples for
-robust deep learning&lt;/p&gt;
-
-&lt;p&gt;b. Mentornet: Learning datadriven curriculum for very deep neural networks on corrupted labels&lt;/p&gt;
-
-&lt;p&gt;c. Toward robustness against label noise in training deep discriminative neural networks&lt;/p&gt;
-
-&lt;p&gt;d. Learning
-from noisy large-scale datasets with minimal supervision.&lt;/p&gt;
-
-&lt;p&gt;e. Learning from
-noisy labels with distillation.&lt;/p&gt;
-
-&lt;p&gt;f. Cleannet: Transfer learning for
-scalable image classifier training with label noise&lt;/p&gt;
-
-&lt;p&gt;…&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Without data pruning&lt;/strong&gt;: e.g.,&lt;/p&gt;
-
-&lt;p&gt;a. Generalized cross entropy loss for training deep neural networks
-with noisy labels. &lt;br /&gt;
-  …&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Without relabelling&lt;/strong&gt;: e.g.,&lt;/p&gt;
-
-&lt;p&gt;a. A semi-supervised two-stage approach
-to learning from noisy labels&lt;/p&gt;
-
-&lt;p&gt;b. Joint optimization framework for learning with noisy labels&lt;/p&gt;
-
-&lt;p&gt;…&lt;/p&gt;
-
-&lt;h2 id=&quot;citation&quot;&gt;Citation&lt;/h2&gt;
-&lt;p&gt;Please kindly cite us if you find our work useful and inspiring.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;wang2019emphasis,
-  &lt;span class=&quot;nv&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;={&lt;/span&gt;Emphasis Regularisation by Gradient Rescaling &lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;Training Deep Neural Networks Robustly&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
-  &lt;span class=&quot;nv&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;={&lt;/span&gt;Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
-  &lt;span class=&quot;nv&quot;&gt;journal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;={&lt;/span&gt;arXiv preprint arXiv:1905.11233&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
-  &lt;span class=&quot;nv&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;={&lt;/span&gt;2019&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Eran Malach and Shai Shalev-Shwartz. Decoupling” when to update” from” how to update”. In
-NIPS, 2017.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Bo Han, Quanming Yao, Xingrui Yu, Gang Niu, Miao Xu, Weihua Hu, Ivor Tsang, and Masashi
-Sugiyama. Co-teaching: Robust training of deep neural networks with extremely noisy labels. In
-NIPS, 2018&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Lu Jiang, Zhengyuan Zhou, Thomas Leung, Li-Jia Li, and Li Fei-Fei. Mentornet: Learning datadriven curriculum for very deep neural networks on corrupted labels. In ICML, 2018.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Mengye Ren, Wenyuan Zeng, Bin Yang, and Raquel Urtasun. Learning to reweight examples for
-robust deep learning. In ICML, 2018.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Arash Vahdat. Toward robustness against label noise in training deep discriminative neural networks.
-In NIPS, 2017.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Andreas Veit, Neil Alldrin, Gal Chechik, Ivan Krasin, Abhinav Gupta, and Serge Belongie. Learning
-from noisy large-scale datasets with minimal supervision. In CVPR, 2017.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Yuncheng Li, Jianchao Yang, Yale Song, Liangliang Cao, Jiebo Luo, and Li-Jia Li. Learning from
-noisy labels with distillation. In ICCV, 2017.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Kuang-Huei Lee, Xiaodong He, Lei Zhang, and Linjun Yang. Cleannet: Transfer learning for
-scalable image classifier training with label noise. In CVPR, 2018.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Zhilu Zhang and Mert R Sabuncu. Generalized cross entropy loss for training deep neural networks
-with noisy labels. In NIPS, 2018.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Yifan Ding, Liqiang Wang, Deliang Fan, and Boqing Gong. A semi-supervised two-stage approach
-to learning from noisy labels. In WACV, 2018.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Hwanjun Song, Minseok Kim, and Jae-Gil Lee. Selfie: Refurbishing unclean samples for robust
-deep learning. In ICML, 2019.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Daiki Tanaka, Daiki Ikami, Toshihiko Yamasaki, and Kiyoharu Aizawa. Joint optimization framework for learning with noisy labels. In CVPR, 2018.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">General applicability: Label noise (semantic noise), outliers, heavy perceptual data noise, etc.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/GR/Figure1.png" /></entry></feed>
+&lt;h2 id=&quot;paper-notes-on-video-person-re-identification&quot;&gt;&lt;a href=&quot;/Papers/VideoReID/&quot;&gt;Paper notes on video person re-identification&lt;/a&gt;&lt;/h2&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Summary of research progress on person re-identification.</summary></entry></feed>
