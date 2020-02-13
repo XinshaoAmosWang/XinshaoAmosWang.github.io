@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-12T20:25:02+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-13T15:43:40+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
 </subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">ICLR-2020</title><link href="http://localhost:4000/paperlists/2020-01-02-ICLR/" rel="alternate" type="text/html" title="ICLR-2020" /><published>2020-01-02T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ICLR</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-01-02-ICLR/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 
 &lt;h2 id=&quot;foundation-of-deep-learning&quot;&gt;Foundation of Deep Learning&lt;/h2&gt;
@@ -34,7 +34,7 @@
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://papers.nips.cc/paper/6701-active-bias-training-more-accurate-neural-networks-by-emphasizing-high-variance-samples.pdf&quot;&gt;Uncertain Examples-NeurIPS2017: Active Bias: Training More Accurate Neural Networks by Emphasizing High Variance Samples&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;How to define uncertain examples: predicitons in the history.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">CVPR-2019</title><link href="http://localhost:4000/paperlists/2019-12-29-CVPR/" rel="alternate" type="text/html" title="CVPR-2019" /><published>2019-12-29T00:00:00+00:00</published><updated>2019-12-29T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/CVPR</id><content type="html" xml:base="http://localhost:4000/paperlists/2019-12-29-CVPR/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
@@ -151,7 +151,26 @@ This work achieves promising results with meta-learning. Our result on Clothing 
     &lt;ul&gt;
       &lt;li&gt;Too many hyper-parameters shown in their Algorithm 1 and implementation section 4.2.&lt;/li&gt;
       &lt;li&gt;The strategies of iterative training together with iterative data filtering/cleaning, reusing last-round best model as mentor, etc., make it difficult to handle in practice.&lt;/li&gt;
-      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/LiJunnan1992/MLNT/issues/1&quot;&gt;https://github.com/LiJunnan1992/MLNT/issues/1&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Yi_Probabilistic_End-To-End_Noise_Correction_for_Learning_With_Noisy_Labels_CVPR_2019_paper.pdf&quot;&gt;Probabilistic End-to-end Noise Correction for Learning with Noisy Labels&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Questions on “Probabilistic End-to-end Noise Correction for Learning with Noisy Labels, CVPR 2019”. Discussion and sharing are appreciated.&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Question 1: There is a softmax transformation between two label vectors and a gradient flow path between them. However, according to my understanding, this path is not necessary. &lt;strong&gt;The target is to learn true labels y^d, which can be initialised by observed labels directly.&lt;/strong&gt; Therefore, the true label distributions should be the end of the graph, it does not make sense to back-propagate to another label vector version.&lt;/li&gt;
+          &lt;li&gt;Question 2: &lt;strong&gt;If the answer of Question1 is yes&lt;/strong&gt;, then learning the true labels for minimising the loss should be exactly the same as ‘Joint Optimisation Framework for Learning with Noisy Labels’, i.e., Alternative Optimisation.  The fact is that if we set the true labels as the network’s predictions, the loss becomes zero naturally. &lt;strong&gt;Therefore, gradient back-propagation is unnecessary for estimating the true labels.&lt;/strong&gt;&lt;/li&gt;
+          &lt;li&gt;Question 3: The compatibility loss penalises distant true labels versus observed labels. I have no idea why it works when noise rate is high in the experiments?  Is it meaningful to penalise distant true labels when noise rate is very high?&lt;/li&gt;
+          &lt;li&gt;Question 4: The model is trained by 3 stages:
+            &lt;ul&gt;
+              &lt;li&gt;1) Backbone learning without noise handling (only cross entropy loss);&lt;/li&gt;
+              &lt;li&gt;2) pencil learning with 3 losses jointly (one classification loss + two regularisation terms);&lt;/li&gt;
+              &lt;li&gt;3) fine-tuning with only classification loss (regularisation terms are removed).&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;Is anybody interested in seeing the result of each stage training? By which we can know exactly how much improvement comes from each step.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">ICCV-2019</title><link href="http://localhost:4000/paperlists/2019-12-29-ICCV/" rel="alternate" type="text/html" title="ICCV-2019" /><published>2019-12-29T00:00:00+00:00</published><updated>2019-12-29T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ICCV</id><content type="html" xml:base="http://localhost:4000/paperlists/2019-12-29-ICCV/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
@@ -253,13 +272,13 @@ of sample loss values during training to allow
 online estimation of the probability that a sample is mislabelled.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1905.05040.pdf&quot;&gt;Understanding and Utilizing Deep Neural Networks Trained with Noisy Labels&lt;/a&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1905.05040.pdf&quot;&gt;Understanding and Utilizing Deep Neural Networks Trained with Noisy Labels&lt;/a&gt;-I am skeptical of their conclusion.
     &lt;ul&gt;
-      &lt;li&gt;We find that the test accuracy can be
+      &lt;li&gt;We find that &lt;strong&gt;the test accuracy can be
 quantitatively characterized in terms of the noise
-ratio in datasets. The test accuracy
+ratio in datasets&lt;/strong&gt;. &lt;strong&gt;The test accuracy
 is a quadratic function of the noise ratio in the
-case of symmetric noise, which explains the experimental findings previously published. (I am not convinced on this!)&lt;/li&gt;
+case of symmetric noise&lt;/strong&gt;, which explains the experimental findings previously published. (&lt;strong&gt;I am not convinced on this!&lt;/strong&gt;)&lt;/li&gt;
       &lt;li&gt;DNNs tend to learn simple patterns
 first, then gradually memorize all samples, which justifies
 the widely used small-loss criteria: treating samples with
@@ -271,8 +290,38 @@ et al., 2018).&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;robustness&quot;&gt;Robustness&lt;/h2&gt;
-&lt;ul&gt;
+&lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;http://proceedings.mlr.press/v97/cohen19c/cohen19c.pdf&quot;&gt;Certified Adversarial Robustness via Randomized Smoothing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;importance-weighting&quot;&gt;Importance Weighting?&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;http://proceedings.mlr.press/v97/byrd19a/byrd19a.pdf&quot;&gt;What is the Effect of Importance Weighting in Deep Learning?&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Across tasks, architectures and datasets, our results confirm that for standard neural networks, &lt;strong&gt;weighting has a significant effect early in training.&lt;/strong&gt;
+  However, &lt;strong&gt;as training progresses the effect dissipates&lt;/strong&gt; and for most weight ratios considered (between 256:1 and 1:256) the effect of importance weighting is indistinguishable from unweighted risk minimization after sufficient training epochs.&lt;/li&gt;
+      &lt;li&gt;While L2 regularization restores some of the impact of importance weighting, this has the perplexing consequence of expressing the amount by which importance weights affect the learned model in terms of a seemingly unrelated quantity—the degree of regularization—prompting the question: how does one appropriately choose the L2 regularization given importance weights? Interestingly, dropout regularization, which is often used interchangeably with L2 regularization, does not exhibit any such interaction with importance weighting. Batch normalization also appears to interact with importance weights, although as we will discuss later, the precise mechanism remains unclear.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Related Papers from other conferences
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://openreview.net/pdf?id=BkeStsCcKQ&quot;&gt;ICLR2019-CRITICAL LEARNING PERIODS IN DEEP NETWORKS&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Our findings, described in Section 2, indicate that the early transient is critical in determining the final solution of the optimization associated with training an artificial neural network.&lt;/li&gt;
+          &lt;li&gt;To study this early phase, in Section 3, we use the Fisher Information to quantify the effective connectivity of a network during training, and introduce the notion of Information Plasticity in learning. Information Plasticity is maximal during the memorization phase, and decreases in the reorganization phase. We show that deficit sensitivity during critical periods correlates strongly with the effective connectivity.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://proceedings.mlr.press/v80/katharopoulos18a.html&quot;&gt;ICML2018-Not All Samples Are Created Equal: Deep Learning with Importance Sampling&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Deep Neural Network training spends most of the computation on &lt;strong&gt;examples that are properly handled, and could be ignored&lt;/strong&gt;. We propose to mitigate this phenomenon with a principled importance sampling scheme that focuses computation on &lt;strong&gt;“informative” examples&lt;/strong&gt;, and &lt;strong&gt;reduces the variance of the stochastic gradients&lt;/strong&gt; during training.&lt;/li&gt;
+          &lt;li&gt;Our contribution is twofold: first, we derive a &lt;strong&gt;tractable upper bound to the per-sample gradient norm&lt;/strong&gt;, and second we &lt;strong&gt;derive an estimator of the variance reduction achieved with importance sampling, which enables us to switch it on when it will result in an actual speedup.&lt;/strong&gt;&lt;/li&gt;
+          &lt;li&gt;Recently, researchers have shifted their focus on using importance sampling to improve and accelerate the training of
+  neural networks (Alain et al., 2015; Loshchilov &amp;amp; Hutter, 2015; Schaul et al., 2015). Those works, employ &lt;strong&gt;either the gradient norm or the loss to compute each sample’s importance.&lt;/strong&gt; However, the former is prohibitively expensive to compute and the latter is not a particularly good approximation of the gradient norm.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Firstly we provide an intuitive metric to predict how useful importance sampling is going to be, thus we are able to decide when to switch on importance sampling during training. Secondly, we also provide theoretical guarantees for speedup, when variance reduction is above a threshold.&lt;/strong&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">IJCAI-2019</title><link href="http://localhost:4000/paperlists/2019-12-29-IJCAI/" rel="alternate" type="text/html" title="IJCAI-2019" /><published>2019-12-29T00:00:00+00:00</published><updated>2019-12-29T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/IJCAI</id><content type="html" xml:base="http://localhost:4000/paperlists/2019-12-29-IJCAI/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 
 &lt;h2 id=&quot;robustness&quot;&gt;Robustness&lt;/h2&gt;
