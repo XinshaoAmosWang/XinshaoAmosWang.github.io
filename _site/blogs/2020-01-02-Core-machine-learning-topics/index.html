@@ -37,20 +37,20 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
   
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Blogs | Xinshao Wang</title>
+<title>Notes on Core ML Topics | Xinshao Wang</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Blogs" />
+<meta property="og:title" content="Notes on Core ML Topics" />
 <meta name="author" content="Xinshao Wang" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Hi, welcome to my blogs!" />
-<meta property="og:description" content="Hi, welcome to my blogs!" />
-<link rel="canonical" href="http://localhost:4000/blogs/" />
-<meta property="og:url" content="http://localhost:4000/blogs/" />
+<meta name="description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
+<meta property="og:description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
+<link rel="canonical" href="http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/" />
+<meta property="og:url" content="http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/" />
 <meta property="og:site_name" content="Xinshao Wang" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-02-14T10:25:45+00:00" />
+<meta property="article:published_time" content="2020-01-02T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"Hi, welcome to my blogs!","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"WebPage","url":"http://localhost:4000/blogs/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Blogs","dateModified":"2020-02-14T10:25:45+00:00","datePublished":"2020-02-14T10:25:45+00:00","@context":"https://schema.org"}</script>
+{"description":"“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Notes on Core ML Topics","dateModified":"2020-01-02T00:00:00+00:00","datePublished":"2020-01-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -80,7 +80,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-<link rel="alternate" href="http://localhost:4000/blogs/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/" hreflang="en">
 
 <link rel="shortcut icon" href="/assets/icons/icon.png">
 <link rel="apple-touch-icon" href="/assets/icons/icon.png">
@@ -191,7 +191,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
   
     <main
   id="_main"
-  class="content fade-in layout-list"
+  class="content fade-in layout-post"
   role="main"
   data-color="rgb(79,177,186)"
   data-theme-color="rgb(25,55,71)"
@@ -203,106 +203,108 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
   
 
 
+
+
+<article id="post-blogs-Core-machine-learning-topics" class="page post mb6" role="article">
   <header>
-    <h1 class="page-title">Blogs</h1>
+    <h1 class="post-title">
+      
+        Notes on Core ML Topics
+      
+    </h1>
+
+    <p class="post-date heading">
+      
+      <time datetime="2020-01-02T00:00:00+00:00">02 Jan 2020</time>
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+
+in <a href="/blogs/" class="flip-title">Blogs</a>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+    </p>
+
+    
+    
+
     
 
 
 
-  
-    <p class="message" >
-      Hi, welcome to my blogs!
-
-    </p>
-  
+  <div class="hr pb0"></div>
 
 
   </header>
-  <hr class="sr-only"/>
-
-
-
-
-
-
-
-
-
 
   
-  
-    
-    <h2 id="y-2020" class="hr">2020</h2>
-    <ul class="related-posts">
-    
-  
-  
-
-
-<li>
-  <a href="/blogs/2020-01-02-Core-machine-learning-topics/" class="h4 flip-title"><span>Notes on Core ML Topics</span></a>
-  · <a href="https://xinshaoamoswang.github.io/blogs/2020-01-02-Core-machine-learning-topics/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2020-01-02T00:00:00+00:00">02 Jan</time>
-</li>
-
-  
-
-  
-  
+    <ul class="message">
+  <li>What is the main difference between GAN and autoencoder?
+    <ul>
+      <li><a href="https://datascience.stackexchange.com/a/55094">An autoencoder learns to represent some input information very efficiently, and subsequently how to reconstruct the input from it’s compressed form.</a>
+  ~ :) ~<a href="https://qr.ae/TzM5Mv">An autoencoder compresses its input down to a vector - with much fewer dimensions than its input data, and then transforms it back into a tensor with the same shape as its input over several neural net layers. They’re trained to reproduce their input, so it’s kind of like learning a compression algorithm for that specific dataset.</a></li>
+      <li>
+        <p><a href="https://datascience.stackexchange.com/a/55094">A GAN uses an adversarial feedback loop to learn how to generate some information that “seems real” (i.e. looks the same/sounds the same/is otherwise indistinguishable from some real data)</a> ~ :) ~ <a href="https://qr.ae/TzM5Mv">Instead of being given a bit of data as input, it’s given a small vector of random numbers. The generator network tries to transform this little vector into a realistic sample from the training data. The discriminator network then takes this generated sample(and some real samples from the dataset) and learns to guess whether the samples are real or fake.</a></p>
+      </li>
+      <li>
+        <p><a href="https://qr.ae/TzM5Mv">Another difference: while they both fall under the umbrella of unsupervised learning, they are different approaches to the problem. A GAN is a generative model - it’s supposed to learn to generate realistic <em>new</em> samples of a dataset. Variational autoencoders are generative models, but normal “vanilla” autoencoders just reconstruct their inputs and can’t generate realistic new samples.</a></p>
+      </li>
+      <li>
+        <p><a href="https://qr.ae/TzMSyS">Autoencoders learn a given distribution comparing its input to its output, this is good for learning hidden representations of data, but is pretty bad for generating new data. Mainly because we learn an averaged representation of the data thus the output becomes pretty blurry.
+  Generative Adversarial Networks take an entirely different approach. They use another network (so-called Discriminator) to measure the distance between the generated and the real data.
+  The main advantage of GANs over Autoencoders in generating data is that they can be conditioned by different inputs. For example, you can learn the mapping between two domains: satellite images to google maps [1] . Or you can teach the generator to reproduce several classes of data: generating the MNIST dataset[2] .
+  </a></p>
+      </li>
+      <li><a href="https://blog.keras.io/building-autoencoders-in-keras.html"> Building Autoencoders in Keras</a></li>
+      <li><a href="https://towardsdatascience.com/gans-vs-autoencoders-comparison-of-deep-generative-models-985cf15936ea">Coding: GANs vs. Autoencoders: Comparison of Deep Generative Models</a></li>
     </ul>
-    <h2 id="y-2019" class="hr">2019</h2>
-    <ul class="related-posts">
-    
-  
-  
+  </li>
+</ul>
 
-
-<li>
-  <a href="/blogs/2019-12-12-papers-summary-reweighting/" class="h4 flip-title"><span>Foundations of Deep Learning, Machine Learning</span></a>
-  · <a href="https://xinshaoamoswang.github.io/blogs/2019-12-12-papers-summary-reweighting/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-12-12T00:00:00+00:00">12 Dec</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/blogs/2019-10-01-papers-summary-noise/" class="h4 flip-title"><span>Paper Summary on Noise, Anomalies, Adversaries, Robust Learning, Generalization</span></a>
-  · <a href="https://xinshaoamoswang.github.io/blogs/2019-10-01-papers-summary-noise/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-10-01T00:00:00+01:00">01 Oct</time>
-</li>
+<ul class="message">
+  <li>What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?
+    <ul>
+      <li><a href="https://blog.keras.io/building-autoencoders-in-keras.html"> Building Autoencoders in Keras</a></li>
+      <li><a href="https://distill.pub/2017/aia/">Using Artificial Intelligence to Augment Human Intelligence</a></li>
+      <li><a href="https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf">Intuitively Understanding Variational Autoencoders – Towards Data Science by Irhum Shafkat.</a></li>
+      <li><a href="http://efrosgans.eecs.berkeley.edu/CVPR18_slides/VAE_GANS_by_Rosca.pdf">VAEs and GANs
+Mihaela Rosca</a></li>
+      <li>
+        <p><a href="https://syncedreview.com/2019/06/06/going-beyond-gan-new-deepmind-vae-model-generates-high-fidelity-human-faces/">Going Beyond GAN? New DeepMind VAE Model Generates High Fidelity Human Faces</a></p>
+      </li>
+      <li><span class="quora-content-embed" data-name="Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154">Read <a class="quora-content-link" data-width="560" data-height="260" href="https://www.quora.com/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154" data-type="answer" data-id="66853410" data-key="a5099035f08fbac1ed45a4bb7a1c5d2c" load-full-answer="False" data-embed="trhonms"><a href="https://www.quora.com/Vishal-Sharma-154">Vishal Sharma</a>'s <a href="/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder?top_ans=66853410">answer</a> to <a href="/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder" ref="canonical"><span class="rendered_qtext">What's the difference between a Variational Autoencoder (VAE) and an Autoencoder?</span></a></a> on <a href="https://www.quora.com">Quora</a><script type="text/javascript" src="https://www.quora.com/widgets/content"></script></span></li>
+    </ul>
+  </li>
+</ul>
 
   
-
-  
-  
-  
+</article>
 
 
-<li>
-  <a href="/blogs/2019-10-01-papers-summary-metric/" class="h4 flip-title"><span>Paper Summary on Distance Metric, Representation Learning</span></a>
-  · <a href="https://xinshaoamoswang.github.io/blogs/2019-10-01-papers-summary-metric/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-10-01T00:00:00+01:00">01 Oct</time>
-</li>
 
-  
+<hr class="dingbat related" />
 
-  
-  
-  
-
-
-<li>
-  <a href="/blogs/2019-10-01-Research-GR/" class="h4 flip-title"><span>An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies</span></a>
-  · <a href="https://xinshaoamoswang.github.io/blogs/2019-10-01-Research-GR/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-10-01T00:00:00+01:00">01 Oct</time>
-</li>
-
-  </ul>
 
 
 
@@ -335,16 +337,47 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-
-
 <div class="navigator">
     
+        <span style="float:left"><a href="/paperlists/2019-12-30-ICLR/">« ICLR-2019</a>
+          · <a href="https://xinshaoamoswang.github.io/paperlists/2019-12-30-ICLR/#disqus_thread"></a>
+        </span>
     
-        <span style="float:right"><a href="/paperlists/">Paper Lists »</a>
+    
+        <span style="float:right"><a href="/paperlists/2020-01-02-ICLR/">ICLR-2020 »</a>
+          · <a href="https://xinshaoamoswang.github.io/paperlists/2020-01-02-ICLR/#disqus_thread"></a>
         </span>
     
 </div>
 
+
+<script data-ad-client="ca-pub-8231481254980115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+
+<div id="disqus_thread"></div>
+
+
+<script>
+    var disqus_config = function () {
+            this.page.url = "https://xinshaoamoswang.github.io/blogs/2020-01-02-Core-machine-learning-topics/";
+            this.page.identifier = "/blogs/Core-machine-learning-topics";
+        }; 
+
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://xinshaowang.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+<noscript>Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
 
