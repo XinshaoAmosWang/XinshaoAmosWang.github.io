@@ -32,12 +32,14 @@ comment: true
 
 
 * What's the difference between a Variational Autoencoder (VAE) and an Autoencoder?
+    * [Intuitively Understanding Variational Autoencoders – Towards Data Science by Irhum Shafkat.](https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf)
+
+    * <span class='quora-content-embed' data-name='Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154'>Read <a class='quora-content-link' data-width='560' data-height='260' href='https://www.quora.com/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154' data-type='answer' data-id='66853410' data-key='a5099035f08fbac1ed45a4bb7a1c5d2c' load-full-answer='False' data-embed='trhonms'><a href='https://www.quora.com/Vishal-Sharma-154'>Vishal Sharma</a>&#039;s <a href='/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder?top_ans=66853410'>answer</a> to <a href='/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder' ref='canonical'><span class="rendered_qtext">What&#039;s the difference between a Variational Autoencoder (VAE) and an Autoencoder?</span></a></a> on <a href='https://www.quora.com'>Quora</a><script type="text/javascript" src="https://www.quora.com/widgets/content"></script></span>
+
     * [ Building Autoencoders in Keras](https://blog.keras.io/building-autoencoders-in-keras.html)
     * [Using Artificial Intelligence to Augment Human Intelligence](https://distill.pub/2017/aia/)
-    * [Intuitively Understanding Variational Autoencoders – Towards Data Science by Irhum Shafkat.](https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf)
+    
     * [VAEs and GANs
 Mihaela Rosca](http://efrosgans.eecs.berkeley.edu/CVPR18_slides/VAE_GANS_by_Rosca.pdf)
     * [Going Beyond GAN? New DeepMind VAE Model Generates High Fidelity Human Faces](https://syncedreview.com/2019/06/06/going-beyond-gan-new-deepmind-vae-model-generates-high-fidelity-human-faces/)
-    
-    * <span class='quora-content-embed' data-name='Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154'>Read <a class='quora-content-link' data-width='560' data-height='260' href='https://www.quora.com/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154' data-type='answer' data-id='66853410' data-key='a5099035f08fbac1ed45a4bb7a1c5d2c' load-full-answer='False' data-embed='trhonms'><a href='https://www.quora.com/Vishal-Sharma-154'>Vishal Sharma</a>&#039;s <a href='/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder?top_ans=66853410'>answer</a> to <a href='/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder' ref='canonical'><span class="rendered_qtext">What&#039;s the difference between a Variational Autoencoder (VAE) and an Autoencoder?</span></a></a> on <a href='https://www.quora.com'>Quora</a><script type="text/javascript" src="https://www.quora.com/widgets/content"></script></span>
 {:.message}
