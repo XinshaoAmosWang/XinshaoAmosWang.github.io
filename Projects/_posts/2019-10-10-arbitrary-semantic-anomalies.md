@@ -10,4 +10,6 @@ Summary of research progress on Robust Learning under Arbitrary Semantic Anomali
 {:.message}
 
 
-* [An Extremely Simple and Principled Solution for Avoiding Overfitting and Achieving Better Generalisation](https://github.com/XinshaoAmosWang/Emphasis-Regularisation-by-Gradient-Rescaling)  
+* [Paper notes on Anomalies&Regularisation](../../Papers/AnomalyAndRegularisation.md)
+
+* [Derivative Manipulation for General Example Weighting](https://github.com/XinshaoAmosWang/DerivativeManipulation)  

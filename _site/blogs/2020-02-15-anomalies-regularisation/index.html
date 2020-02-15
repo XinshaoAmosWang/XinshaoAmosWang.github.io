@@ -37,20 +37,20 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
   
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Notes on Core ML Topics | Xinshao Wang</title>
+<title>Paper notes on Anomalies&amp;Regularisation | Xinshao Wang</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Notes on Core ML Topics" />
+<meta property="og:title" content="Paper notes on Anomalies&amp;Regularisation" />
 <meta name="author" content="Xinshao Wang" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
 <meta property="og:description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
-<link rel="canonical" href="http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/" />
-<meta property="og:url" content="http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/" />
+<link rel="canonical" href="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/" />
+<meta property="og:url" content="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/" />
 <meta property="og:site_name" content="Xinshao Wang" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-01-02T00:00:00+00:00" />
+<meta property="article:published_time" content="2020-02-15T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Notes on Core ML Topics","dateModified":"2020-01-02T00:00:00+00:00","datePublished":"2020-01-02T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/"},"@context":"https://schema.org"}</script>
+{"description":"“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Paper notes on Anomalies&amp;Regularisation","dateModified":"2020-02-15T00:00:00+00:00","datePublished":"2020-02-15T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -80,7 +80,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-<link rel="alternate" href="http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/" hreflang="en">
 
 <link rel="shortcut icon" href="/assets/icons/icon.png">
 <link rel="apple-touch-icon" href="/assets/icons/icon.png">
@@ -206,17 +206,17 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-<article id="post-blogs-Core-machine-learning-topics" class="page post mb6" role="article">
+<article id="post-blogs-anomalies-regularisation" class="page post mb6" role="article">
   <header>
     <h1 class="post-title">
       
-        Notes on Core ML Topics
+        Paper notes on Anomalies&Regularisation
       
     </h1>
 
     <p class="post-date heading">
       
-      <time datetime="2020-01-02T00:00:00+00:00">02 Jan 2020</time>
+      <time datetime="2020-02-15T00:00:00+00:00">15 Feb 2020</time>
       
       
       
@@ -260,64 +260,8 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
   </header>
 
   
-    <ol class="message">
-  <li><a href="#kullback-leibler-divergence">Kullback-Leibler Divergence</a></li>
-  <li><a href="#what-is-the-main-difference-between-gan-and-autoencoder">What is the main difference between GAN and autoencoder</a></li>
-  <li><a href="#whats-the-difference-between-a-variational-autoencoder-vae-and-an-autoencoder">What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?</a></li>
-</ol>
-
-<h4 id="kullback-leibler-divergence">Kullback-Leibler Divergence</h4>
-<ul class="message">
-  <li><a href="https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained">How to approximate our data (choose a parameterized distribution =&gt; optimise its parameters): KL Divergence helps us to measure just how much information we lose when we choose an approximation compared with our observations.</a>
-    <ul>
-      <li>The most important metric in information theory is called <strong>Entropy</strong>, typically denoted as $\mathbf{H}$. The definition of Entropy for a probability distribution is: $\mathbf{H}=-\sum_{i=1}^{n} p(\mathbf{x}_i) \log p(\mathbf{x}_i) $.</li>
-      <li>If we use $\log_2$ for our calculation we can interpret entropy as “the minimum number of bits it would take us to encode our information”.</li>
-    </ul>
-  </li>
-  <li><a href="https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-understanding-kl-divergence-2b382ca2b2a8">Intuitive Guide to Understanding KL Divergence</a>
-    <ul>
-      <li>What is a distributin?</li>
-      <li>What is an event?</li>
-      <li>Problem we’re trying to solve: choose a parameterized distribution =&gt; optimise its parameters): KL Divergence helps us to measure just how much information we lose when we choose an approximation compared with our observations.</li>
-    </ul>
-  </li>
-</ul>
-
-<h4 id="what-is-the-main-difference-between-gan-and-autoencoder">What is the main difference between GAN and autoencoder?</h4>
-<ul class="message">
-  <li><a href="https://datascience.stackexchange.com/a/55094">An autoencoder learns to represent some input information very efficiently, and subsequently how to reconstruct the input from it’s compressed form.</a>
-  ~ :) ~<a href="https://qr.ae/TzM5Mv">An autoencoder compresses its input down to a vector - with much fewer dimensions than its input data, and then transforms it back into a tensor with the same shape as its input over several neural net layers. They’re trained to reproduce their input, so it’s kind of like learning a compression algorithm for that specific dataset.</a></li>
-  <li>
-    <p><a href="https://datascience.stackexchange.com/a/55094">A GAN uses an adversarial feedback loop to learn how to generate some information that “seems real” (i.e. looks the same/sounds the same/is otherwise indistinguishable from some real data)</a> ~ :) ~ <a href="https://qr.ae/TzM5Mv">Instead of being given a bit of data as input, it’s given a small vector of random numbers. The generator network tries to transform this little vector into a realistic sample from the training data. The discriminator network then takes this generated sample(and some real samples from the dataset) and learns to guess whether the samples are real or fake.</a></p>
-  </li>
-  <li>
-    <p><a href="https://qr.ae/TzM5Mv">Another difference: while they both fall under the umbrella of unsupervised learning, they are different approaches to the problem. A GAN is a generative model - it’s supposed to learn to generate realistic <em>new</em> samples of a dataset. Variational autoencoders are generative models, but normal “vanilla” autoencoders just reconstruct their inputs and can’t generate realistic new samples.</a></p>
-  </li>
-  <li>
-    <p><a href="https://qr.ae/TzMSyS">Autoencoders learn a given distribution comparing its input to its output, this is good for learning hidden representations of data, but is pretty bad for generating new data. Mainly because we learn an averaged representation of the data thus the output becomes pretty blurry.
-  Generative Adversarial Networks take an entirely different approach. They use another network (so-called Discriminator) to measure the distance between the generated and the real data.
-  The main advantage of GANs over Autoencoders in generating data is that they can be conditioned by different inputs. For example, you can learn the mapping between two domains: satellite images to google maps [1] . Or you can teach the generator to reproduce several classes of data: generating the MNIST dataset[2] .
-  </a></p>
-  </li>
-  <li><a href="https://blog.keras.io/building-autoencoders-in-keras.html"> Building Autoencoders in Keras</a></li>
-  <li><a href="https://towardsdatascience.com/gans-vs-autoencoders-comparison-of-deep-generative-models-985cf15936ea">Coding: GANs vs. Autoencoders: Comparison of Deep Generative Models</a></li>
-</ul>
-
-<h4 id="whats-the-difference-between-a-variational-autoencoder-vae-and-an-autoencoder">What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?</h4>
-<ul class="message">
-  <li>
-    <p><a href="https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf">Intuitively Understanding Variational Autoencoders – Towards Data Science by Irhum Shafkat.</a></p>
-  </li>
-  <li>
-    <p><span class="quora-content-embed" data-name="Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154">Read <a class="quora-content-link" data-width="560" data-height="260" href="https://www.quora.com/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154" data-type="answer" data-id="66853410" data-key="a5099035f08fbac1ed45a4bb7a1c5d2c" load-full-answer="False" data-embed="trhonms"><a href="https://www.quora.com/Vishal-Sharma-154">Vishal Sharma</a>'s <a href="/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder?top_ans=66853410">answer</a> to <a href="/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder" ref="canonical"><span class="rendered_qtext">What's the difference between a Variational Autoencoder (VAE) and an Autoencoder?</span></a></a> on <a href="https://www.quora.com">Quora</a><script type="text/javascript" src="https://www.quora.com/widgets/content"></script></span></p>
-  </li>
-  <li><a href="https://blog.keras.io/building-autoencoders-in-keras.html"> Building Autoencoders in Keras</a></li>
-  <li>
-    <p><a href="https://distill.pub/2017/aia/">Using Artificial Intelligence to Augment Human Intelligence</a></p>
-  </li>
-  <li><a href="http://efrosgans.eecs.berkeley.edu/CVPR18_slides/VAE_GANS_by_Rosca.pdf">VAEs and GANs
-Mihaela Rosca</a></li>
-  <li><a href="https://syncedreview.com/2019/06/06/going-beyond-gan-new-deepmind-vae-model-generates-high-fidelity-human-faces/">Going Beyond GAN? New DeepMind VAE Model Generates High Fidelity Human Faces</a></li>
+    <ul class="message">
+  <li><a href="/Papers/AnomalyAndRegularisation/">Paper notes on Anomalies&amp;Regularisation</a></li>
 </ul>
 
   
@@ -374,14 +318,10 @@ Mihaela Rosca</a></li>
 
 <div class="navigator">
     
-        <span style="float:left"><a href="/paperlists/2019-12-30-ICLR/">« ICLR-2019</a>
-          · <a href="https://xinshaoamoswang.github.io/paperlists/2019-12-30-ICLR/#disqus_thread"></a>
-        </span>
-    
-    
-        <span style="float:right"><a href="/paperlists/2020-01-02-ICLR/">ICLR-2020 »</a>
+        <span style="float:left"><a href="/paperlists/2020-01-02-ICLR/">« ICLR-2020</a>
           · <a href="https://xinshaoamoswang.github.io/paperlists/2020-01-02-ICLR/#disqus_thread"></a>
         </span>
+    
     
 </div>
 
@@ -398,8 +338,8 @@ Mihaela Rosca</a></li>
 
 <script>
     var disqus_config = function () {
-            this.page.url = "https://xinshaoamoswang.github.io/blogs/2020-01-02-Core-machine-learning-topics/";
-            this.page.identifier = "/blogs/Core-machine-learning-topics";
+            this.page.url = "https://xinshaoamoswang.github.io/blogs/2020-02-15-anomalies-regularisation/";
+            this.page.identifier = "/blogs/anomalies-regularisation";
         }; 
 
     (function() { 

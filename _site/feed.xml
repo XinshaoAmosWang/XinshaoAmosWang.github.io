@@ -1,46 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-15T12:27:02+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
-</subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Notes on Core ML Topics</title><link href="http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/" rel="alternate" type="text/html" title="Notes on Core ML Topics" /><published>2020-01-02T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><id>http://localhost:4000/blogs/Core-machine-learning-topics</id><content type="html" xml:base="http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/">&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;What is the main difference between GAN and autoencoder?
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-15T22:40:32+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
+</subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Paper notes on Anomalies&amp;amp;Regularisation</title><link href="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/" rel="alternate" type="text/html" title="Paper notes on Anomalies&amp;Regularisation" /><published>2020-02-15T00:00:00+00:00</published><updated>2020-02-15T00:00:00+00:00</updated><id>http://localhost:4000/blogs/anomalies-regularisation</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/">&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;/Papers/AnomalyAndRegularisation/&quot;&gt;Paper notes on Anomalies&amp;amp;Regularisation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Paper notes on Anomalies&amp;amp;Regularisation</summary></entry><entry><title type="html">Notes on Core ML Topics</title><link href="http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/" rel="alternate" type="text/html" title="Notes on Core ML Topics" /><published>2020-01-02T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><id>http://localhost:4000/blogs/Core-machine-learning-topics</id><content type="html" xml:base="http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/">&lt;ol class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#kullback-leibler-divergence&quot;&gt;Kullback-Leibler Divergence&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-is-the-main-difference-between-gan-and-autoencoder&quot;&gt;What is the main difference between GAN and autoencoder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#whats-the-difference-between-a-variational-autoencoder-vae-and-an-autoencoder&quot;&gt;What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;kullback-leibler-divergence&quot;&gt;Kullback-Leibler Divergence&lt;/h4&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained&quot;&gt;How to approximate our data (choose a parameterized distribution =&amp;gt; optimise its parameters): KL Divergence helps us to measure just how much information we lose when we choose an approximation compared with our observations.&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://datascience.stackexchange.com/a/55094&quot;&gt;An autoencoder learns to represent some input information very efficiently, and subsequently how to reconstruct the input from it’s compressed form.&lt;/a&gt;
-  ~ :) ~&lt;a href=&quot;https://qr.ae/TzM5Mv&quot;&gt;An autoencoder compresses its input down to a vector - with much fewer dimensions than its input data, and then transforms it back into a tensor with the same shape as its input over several neural net layers. They’re trained to reproduce their input, so it’s kind of like learning a compression algorithm for that specific dataset.&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;a href=&quot;https://datascience.stackexchange.com/a/55094&quot;&gt;A GAN uses an adversarial feedback loop to learn how to generate some information that “seems real” (i.e. looks the same/sounds the same/is otherwise indistinguishable from some real data)&lt;/a&gt; ~ :) ~ &lt;a href=&quot;https://qr.ae/TzM5Mv&quot;&gt;Instead of being given a bit of data as input, it’s given a small vector of random numbers. The generator network tries to transform this little vector into a realistic sample from the training data. The discriminator network then takes this generated sample(and some real samples from the dataset) and learns to guess whether the samples are real or fake.&lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;a href=&quot;https://qr.ae/TzM5Mv&quot;&gt;Another difference: while they both fall under the umbrella of unsupervised learning, they are different approaches to the problem. A GAN is a generative model - it’s supposed to learn to generate realistic &lt;em&gt;new&lt;/em&gt; samples of a dataset. Variational autoencoders are generative models, but normal “vanilla” autoencoders just reconstruct their inputs and can’t generate realistic new samples.&lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;a href=&quot;https://qr.ae/TzMSyS&quot;&gt;Autoencoders learn a given distribution comparing its input to its output, this is good for learning hidden representations of data, but is pretty bad for generating new data. Mainly because we learn an averaged representation of the data thus the output becomes pretty blurry.
-  Generative Adversarial Networks take an entirely different approach. They use another network (so-called Discriminator) to measure the distance between the generated and the real data.
-  The main advantage of GANs over Autoencoders in generating data is that they can be conditioned by different inputs. For example, you can learn the mapping between two domains: satellite images to google maps [1] . Or you can teach the generator to reproduce several classes of data: generating the MNIST dataset[2] .
-  &lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://blog.keras.io/building-autoencoders-in-keras.html&quot;&gt; Building Autoencoders in Keras&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/gans-vs-autoencoders-comparison-of-deep-generative-models-985cf15936ea&quot;&gt;Coding: GANs vs. Autoencoders: Comparison of Deep Generative Models&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;The most important metric in information theory is called &lt;strong&gt;Entropy&lt;/strong&gt;, typically denoted as $\mathbf{H}$. The definition of Entropy for a probability distribution is: $\mathbf{H}=-\sum_{i=1}^{n} p(\mathbf{x}_i) \log p(\mathbf{x}_i) $.&lt;/li&gt;
+      &lt;li&gt;If we use $\log_2$ for our calculation we can interpret entropy as “the minimum number of bits it would take us to encode our information”.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-understanding-kl-divergence-2b382ca2b2a8&quot;&gt;Intuitive Guide to Understanding KL Divergence&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;What is a distributin?&lt;/li&gt;
+      &lt;li&gt;What is an event?&lt;/li&gt;
+      &lt;li&gt;Problem we’re trying to solve: choose a parameterized distribution =&amp;gt; optimise its parameters): KL Divergence helps us to measure just how much information we lose when we choose an approximation compared with our observations.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h4 id=&quot;what-is-the-main-difference-between-gan-and-autoencoder&quot;&gt;What is the main difference between GAN and autoencoder?&lt;/h4&gt;
 &lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;a href=&quot;https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf&quot;&gt;Intuitively Understanding Variational Autoencoders – Towards Data Science by Irhum Shafkat.&lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;span class=&quot;quora-content-embed&quot; data-name=&quot;Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154&quot;&gt;Read &lt;a class=&quot;quora-content-link&quot; data-width=&quot;560&quot; data-height=&quot;260&quot; href=&quot;https://www.quora.com/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154&quot; data-type=&quot;answer&quot; data-id=&quot;66853410&quot; data-key=&quot;a5099035f08fbac1ed45a4bb7a1c5d2c&quot; load-full-answer=&quot;False&quot; data-embed=&quot;trhonms&quot;&gt;&lt;a href=&quot;https://www.quora.com/Vishal-Sharma-154&quot;&gt;Vishal Sharma&lt;/a&gt;'s &lt;a href=&quot;/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder?top_ans=66853410&quot;&gt;answer&lt;/a&gt; to &lt;a href=&quot;/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder&quot; ref=&quot;canonical&quot;&gt;&lt;span class=&quot;rendered_qtext&quot;&gt;What's the difference between a Variational Autoencoder (VAE) and an Autoencoder?&lt;/span&gt;&lt;/a&gt;&lt;/a&gt; on &lt;a href=&quot;https://www.quora.com&quot;&gt;Quora&lt;/a&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;https://www.quora.com/widgets/content&quot;&gt;&lt;/script&gt;&lt;/span&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://blog.keras.io/building-autoencoders-in-keras.html&quot;&gt; Building Autoencoders in Keras&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;a href=&quot;https://distill.pub/2017/aia/&quot;&gt;Using Artificial Intelligence to Augment Human Intelligence&lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://efrosgans.eecs.berkeley.edu/CVPR18_slides/VAE_GANS_by_Rosca.pdf&quot;&gt;VAEs and GANs
-Mihaela Rosca&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://syncedreview.com/2019/06/06/going-beyond-gan-new-deepmind-vae-model-generates-high-fidelity-human-faces/&quot;&gt;Going Beyond GAN? New DeepMind VAE Model Generates High Fidelity Human Faces&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://datascience.stackexchange.com/a/55094&quot;&gt;An autoencoder learns to represent some input information very efficiently, and subsequently how to reconstruct the input from it’s compressed form.&lt;/a&gt;
+  ~ :) ~&lt;a href=&quot;https://qr.ae/TzM5Mv&quot;&gt;An autoencoder compresses its input down to a vector - with much fewer dimensions than its input data, and then transforms it back into a tensor with the same shape as its input over several neural net layers. They’re trained to reproduce their input, so it’s kind of like learning a compression algorithm for that specific dataset.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://datascience.stackexchange.com/a/55094&quot;&gt;A GAN uses an adversarial feedback loop to learn how to generate some information that “seems real” (i.e. looks the same/sounds the same/is otherwise indistinguishable from some real data)&lt;/a&gt; ~ :) ~ &lt;a href=&quot;https://qr.ae/TzM5Mv&quot;&gt;Instead of being given a bit of data as input, it’s given a small vector of random numbers. The generator network tries to transform this little vector into a realistic sample from the training data. The discriminator network then takes this generated sample(and some real samples from the dataset) and learns to guess whether the samples are real or fake.&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">What is the main difference between GAN and autoencoder? An autoencoder learns to represent some input information very efficiently, and subsequently how to reconstruct the input from it’s compressed form. ~ :) ~An autoencoder compresses its input down to a vector - with much fewer dimensions than its input data, and then transforms it back into a tensor with the same shape as its input over several neural net layers. They’re trained to reproduce their input, so it’s kind of like learning a compression algorithm for that specific dataset. A GAN uses an adversarial feedback loop to learn how to generate some information that “seems real” (i.e. looks the same/sounds the same/is otherwise indistinguishable from some real data) ~ :) ~ Instead of being given a bit of data as input, it’s given a small vector of random numbers. The generator network tries to transform this little vector into a realistic sample from the training data. The discriminator network then takes this generated sample(and some real samples from the dataset) and learns to guess whether the samples are real or fake.</summary></entry><entry><title type="html">ICLR-2020</title><link href="http://localhost:4000/paperlists/2020-01-02-ICLR/" rel="alternate" type="text/html" title="ICLR-2020" /><published>2020-01-02T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ICLR</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-01-02-ICLR/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://qr.ae/TzM5Mv&quot;&gt;Another difference: while they both fall under the umbrella of unsupervised learning, they are different approaches to the problem. A GAN is a generative model - it’s supposed to learn to generate realistic &lt;em&gt;new&lt;/em&gt; samples of a dataset. Variational autoencoders are generative models, but normal “vanilla” autoencoders just reconstruct their inputs and can’t generate realistic new samples.&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://qr.ae/TzMSyS&quot;&gt;Autoencoders learn a given distribution comparing its input to its output, this is good for learning hidden representations of data, but is pretty bad for generating new data. Mainly because we learn an averaged representation of the data thus the output becomes pretty blurry.
+  Generative Adversarial Networks take an entirely different approach. They use another network (so-called Discriminator) to measure the distance between the generated and the real data.
+  The main advantage of GANs over Autoencoders in generating data is that they can be conditioned by different inputs. For example, you can learn the mapping between two domains: satellite images to google maps [1] . Or you can teach the generator to reproduce several classes of data: generating the MNIST dataset[2] .
+  &lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.keras.io/building-autoencoders-in-keras.html&quot;&gt; Building Autoencoders in Keras&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/gans-vs-autoencoders-comparison-of-deep-generative-models-985cf15936ea&quot;&gt;Coding: GANs vs. Autoencoders: Comparison of Deep Generative Models&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;whats-the-difference-between-a-variational-autoencoder-vae-and-an-autoencoder&quot;&gt;What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?&lt;/h4&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf&quot;&gt;Intuitively Understanding Variational Autoencoders – Towards Data Science by Irhum Shafkat.&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;span class=&quot;quora-content-embed&quot; data-name=&quot;Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154&quot;&gt;Read &lt;a class=&quot;quora-content-link&quot; data-width=&quot;560&quot; data-height=&quot;260&quot; href=&quot;https://www.quora.com/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154&quot; data-type=&quot;answer&quot; data-id=&quot;66853410&quot; data-key=&quot;a5099035f08fbac1ed45a4bb7a1c5d2c&quot; load-full-answer=&quot;False&quot; data-embed=&quot;trhonms&quot;&gt;&lt;a href=&quot;https://www.quora.com/Vishal-Sharma-154&quot;&gt;Vishal Sharma&lt;/a&gt;'s &lt;a href=&quot;/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder?top_ans=66853410&quot;&gt;answer&lt;/a&gt; to &lt;a href=&quot;/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder&quot; ref=&quot;canonical&quot;&gt;&lt;span class=&quot;rendered_qtext&quot;&gt;What's the difference between a Variational Autoencoder (VAE) and an Autoencoder?&lt;/span&gt;&lt;/a&gt;&lt;/a&gt; on &lt;a href=&quot;https://www.quora.com&quot;&gt;Quora&lt;/a&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;https://www.quora.com/widgets/content&quot;&gt;&lt;/script&gt;&lt;/span&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.keras.io/building-autoencoders-in-keras.html&quot;&gt; Building Autoencoders in Keras&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://distill.pub/2017/aia/&quot;&gt;Using Artificial Intelligence to Augment Human Intelligence&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://efrosgans.eecs.berkeley.edu/CVPR18_slides/VAE_GANS_by_Rosca.pdf&quot;&gt;VAEs and GANs
+Mihaela Rosca&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://syncedreview.com/2019/06/06/going-beyond-gan-new-deepmind-vae-model-generates-high-fidelity-human-faces/&quot;&gt;Going Beyond GAN? New DeepMind VAE Model Generates High Fidelity Human Faces&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Kullback-Leibler Divergence What is the main difference between GAN and autoencoder What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?</summary></entry><entry><title type="html">ICLR-2020</title><link href="http://localhost:4000/paperlists/2020-01-02-ICLR/" rel="alternate" type="text/html" title="ICLR-2020" /><published>2020-01-02T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ICLR</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-01-02-ICLR/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 
 &lt;h2 id=&quot;foundation-of-deep-learning&quot;&gt;Foundation of Deep Learning&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;
@@ -469,8 +488,4 @@ the expected performance. We demonstrate that our method can find minimal neural
 network architectures that can perform several reinforcement learning tasks without
 weight training. On a supervised learning domain, we find network architectures
 that achieve much higher than chance accuracy on MNIST using random weights.
-Interactive version of this paper at &lt;a href=&quot;https://weightagnostic.github.io/&quot;&gt;https://weightagnostic.github.io/&lt;/a&gt;&lt;/p&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary></entry><entry><title type="html">Robust Learning under Arbitrary Semantic Anomalies</title><link href="http://localhost:4000/projects/2019-10-10-arbitrary-semantic-anomalies/" rel="alternate" type="text/html" title="Robust Learning under Arbitrary Semantic Anomalies" /><published>2019-10-10T00:00:00+01:00</published><updated>2019-10-10T00:00:00+01:00</updated><id>http://localhost:4000/projects/arbitrary-semantic-anomalies</id><content type="html" xml:base="http://localhost:4000/projects/2019-10-10-arbitrary-semantic-anomalies/">&lt;p class=&quot;message&quot;&gt;Summary of research progress on Robust Learning under Arbitrary Semantic Anomalies. &lt;br /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/XinshaoAmosWang/Emphasis-Regularisation-by-Gradient-Rescaling&quot;&gt;An Extremely Simple and Principled Solution for Avoiding Overfitting and Achieving Better Generalisation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Summary of research progress on Robust Learning under Arbitrary Semantic Anomalies.</summary></entry></feed>
+Interactive version of this paper at &lt;a href=&quot;https://weightagnostic.github.io/&quot;&gt;https://weightagnostic.github.io/&lt;/a&gt;&lt;/p&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary></entry></feed>
