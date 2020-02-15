@@ -1,13 +1,15 @@
 ---
+layout: post
 title: An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies
-image: /assets/img/blog/GR/Figure1.png
 description: >
-  Paper: https://arxiv.org/pdf/1905.11233.pdf.
-  Project page: https://github.com/XinshaoAmosWang/Emphasis-Regularisation-by-Gradient-Rescaling
+  
+image: /assets/img/blog/steve-harvey.jpg
 comment: true
 ---
 
-General applicability: Label noise (semantic noise), outliers, heavy perceptual data noise, etc.
+0. [Project page:Derivative Manipulation](https://github.com/XinshaoAmosWang/DerivativeManipulation)
+
+0. General applicability: Label noise (semantic noise), outliers, heavy perceptual data noise, etc.
 
 **It is reasonable to assume that there is semantic noise in large-scale training datasets**: 
 * Class labels may be missing. 
