@@ -29,9 +29,9 @@ description:           >
 
 # A shorter description for the sidebar.
 tagline:               >
-  Machine Learning (Deep Metric Learning, Robust Learning under Arbitrary Anomalies).
+  Machine Learning (Robust Learning under Adverse Conditions, Deep Metric Learning).
 
-  Computer Vision (Image/Video Recognition, Person ReID).
+  Computer Vision (Image/Video Recognition including retrieval and clustering, Person ReID).
 
 # A list of keywords for your blog
 keywords:              [Xinshao Wang; Machine Learning, Computer Vision, Robust Learning, Deep Metric Learning, Image Recognition, Video Recognition, Person ReID]
