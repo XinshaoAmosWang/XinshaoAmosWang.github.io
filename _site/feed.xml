@@ -1,5 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-15T23:10:49+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
-</subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Paper notes on Anomalies&amp;amp;Regularisation</title><link href="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/" rel="alternate" type="text/html" title="Paper notes on Anomalies&amp;Regularisation" /><published>2020-02-15T00:00:00+00:00</published><updated>2020-02-15T00:00:00+00:00</updated><id>http://localhost:4000/blogs/anomalies-regularisation</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/">&lt;ul class=&quot;message&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-16T15:51:19+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
+</subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">arXiv-2020</title><link href="http://localhost:4000/paperlists/2020-02-16-arXiv/" rel="alternate" type="text/html" title="arXiv-2020" /><published>2020-02-16T00:00:00+00:00</published><updated>2020-02-16T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/arXiv</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-02-16-arXiv/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
+
+&lt;h2 id=&quot;foundation-of-deep-learning&quot;&gt;Foundation of Deep Learning&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/2002.05709.pdf&quot;&gt;A Simple Framework for Contrastive Learning of Visual Representations&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Data augmentation: composition of data augmentations plays a critical role in defining effective predictive tasks;&lt;/li&gt;
+      &lt;li&gt;Auxiliary transformation:  introducing a learnable nonlinear transformation between the representation and the contrastive loss substantially improves the quality of the learned representations;&lt;/li&gt;
+      &lt;li&gt;Larger batch size and more training steps: contrastive learning benefits from larger batch sizes and more training steps compared to supervised learning.&lt;/li&gt;
+      &lt;li&gt;Results: By combining these findings, we are able to considerably outperform previous methods for self-supervised and semi-supervised learning on ImageNet. A linear classifier trained on self-supervised representations learned by SimCLR achieves 76.5% top-1 accuracy.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;message&quot;&gt;Note that the proposed loss expression &lt;strong&gt;NT-Xent (the normalized
+temperature-scaled cross entropy loss)&lt;/strong&gt; has been proposed in &lt;a href=&quot;https://openreview.net/pdf?id=BJeguTEKDB&quot;&gt;Instance Cross Entropy for Deep Metric Learning–ICLR2020 Submission Version&lt;/a&gt;, &lt;a href=&quot;https://arxiv.org/pdf/1911.09976.pdf&quot;&gt;arXiv Version&lt;/a&gt;: cross entropy computation and dot product scaling.&lt;/p&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Paper notes on Anomalies&amp;amp;Regularisation</title><link href="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/" rel="alternate" type="text/html" title="Paper notes on Anomalies&amp;Regularisation" /><published>2020-02-15T00:00:00+00:00</published><updated>2020-02-15T00:00:00+00:00</updated><id>http://localhost:4000/blogs/anomalies-regularisation</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/">&lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;/Papers/AnomalyAndRegularisation/&quot;&gt;Paper notes on Anomalies&amp;amp;Regularisation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Paper notes on Anomalies&amp;amp;Regularisation</summary></entry><entry><title type="html">Notes on Core ML Topics</title><link href="http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/" rel="alternate" type="text/html" title="Notes on Core ML Topics" /><published>2020-01-02T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><id>http://localhost:4000/blogs/Core-machine-learning-topics</id><content type="html" xml:base="http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#kullback-leibler-divergence&quot;&gt;Kullback-Leibler Divergence&lt;/a&gt;&lt;/li&gt;
@@ -406,86 +421,4 @@ data in a meta-learning manner. Due to the universal approximation capability of
 samples better complying with the meta-data knowledge will be improved, while those violating such meta-knowledge will be suppressed.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Foundations of Deep Learning, Machine Learning</title><link href="http://localhost:4000/blogs/2019-12-12-papers-summary-reweighting/" rel="alternate" type="text/html" title="Foundations of Deep Learning, Machine Learning" /><published>2019-12-12T00:00:00+00:00</published><updated>2019-12-12T00:00:00+00:00</updated><id>http://localhost:4000/blogs/papers-summary-reweighting</id><content type="html" xml:base="http://localhost:4000/blogs/2019-12-12-papers-summary-reweighting/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
-
-&lt;h2 id=&quot;iccv-2019-robustness&quot;&gt;ICCV 2019: Robustness&lt;/h2&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Gowal_Scalable_Verified_Training_for_Provably_Robust_Image_Classification_ICCV_2019_paper.pdf&quot;&gt;Scalable Verified Training for Provably Robust Image Classification&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Chen_Improving_Adversarial_Robustness_via_Guided_Complement_Entropy_ICCV_2019_paper.pdf&quot;&gt;Improving Adversarial Robustness via Guided Complement Entropy&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Bilateral_Adversarial_Training_Towards_Fast_Training_of_More_Robust_Models_ICCV_2019_paper.pdf&quot;&gt;Bilateral Adversarial Training: Towards Fast Training of More Robust Models
-Against Adversarial Attacks&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Peterson_Human_Uncertainty_Makes_Classification_More_Robust_ICCV_2019_paper.pdf&quot;&gt;Human uncertainty makes classification more robust&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Yamaguchi_Subspace_Structure-Aware_Spectral_Clustering_for_Robust_Subspace_Clustering_ICCV_2019_paper.pdf&quot;&gt;Subspace Structure-aware Spectral Clustering for Robust Subspace Clustering&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;1-neurips-2019-learning-data-manipulation-for-augmentation-and-weighting&quot;&gt;:+1: &lt;a href=&quot;https://papers.nips.cc/paper/9706-learning-data-manipulation-for-augmentation-and-weighting.pdf&quot;&gt;NeurIPS 2019-Learning Data Manipulation for Augmentation and Weighting&lt;/a&gt;&lt;/h2&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;Our
-approach builds upon a recent connection of supervised learning and reinforcement
-learning (RL), and adapts an off-the-shelf reward learning algorithm from RL for
-joint data manipulation learning and model training. Different parameterization
-of the “data reward” function instantiates different manipulation schemes.&lt;/li&gt;
-  &lt;li&gt;We
-showcase data augmentation that learns a text transformation network, and data
-weighting that dynamically adapts the data sample importance. Experiments show
-the resulting algorithms significantly improve the image and text classification
-performance in low data regime and class-imbalance problems.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;1-iclr-2019-critical-learning-periods-in-deep-networks&quot;&gt;:+1: &lt;a href=&quot;https://openreview.net/forum?id=BkeStsCcKQ&quot;&gt;ICLR 2019-Critical Learning Periods in Deep Networks&lt;/a&gt;&lt;/h2&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;Counterintuitively, information rises rapidly in the early phases of
-training, and then decreases, preventing redistribution of information resources in a phenomenon we refer to as a loss of “Information Plasticity”&lt;/li&gt;
-  &lt;li&gt;Our analysis suggests that the
-first few epochs are critical for the creation of strong connections that are optimal relative
-to the input data distribution. Once such strong connections are created, they do not appear
-to change during additional training.&lt;/li&gt;
-  &lt;li&gt;The initial learning transient, under-scrutinized compared to asymptotic behavior, plays a key role in determining
-the outcome of the training process.&lt;/li&gt;
-  &lt;li&gt;The early transient is critical in determining the
-final solution of the optimization associated with training an artificial neural network. In particular,
-the effects of sensory deficits during a critical period cannot be overcome, no matter how much
-additional training is performed.&lt;/li&gt;
-  &lt;li&gt;Our experiments show that, rather than helpful, pre-training can be detrimental, even if the
-tasks are similar (e.g., same labels, slightly blurred images).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;1-neurips-2019-time-matters-in-regularizing-deep-networks-weight-decay-and-data-augmentation-affect-early-learning-dynamics-matter-little-near-convergence&quot;&gt;:+1: &lt;a href=&quot;https://papers.nips.cc/paper/9252-time-matters-in-regularizing-deep-networks-weight-decay-and-data-augmentation-affect-early-learning-dynamics-matter-little-near-convergence.pdf&quot;&gt;NeurIPS 2019-Time Matters in Regularizing Deep Networks: Weight Decay and Data Augmentation Affect Early Learning Dynamics, Matter Little Near Convergence&lt;/a&gt;&lt;/h2&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;Regularization is typically understood as improving generalization by altering
-the landscape of local extrema to which the model eventually converges. Deep
-neural networks (DNNs), however, challenge this view: We show that removing
-regularization after an initial transient period has little effect on generalization,
-even if the final loss landscape is the same as if there had been no regularization.&lt;/li&gt;
-  &lt;li&gt;In some cases, generalization even improves after interrupting regularization.&lt;/li&gt;
-  &lt;li&gt;Conversely, if regularization is applied only after the initial transient, it has no effect
-on the final solution, whose generalization gap is as bad as if regularization never
-happened.&lt;/li&gt;
-  &lt;li&gt;What matters for training deep networks is not just
-whether or how, but when to regularize.&lt;/li&gt;
-  &lt;li&gt;The phenomena we observe are manifest
-in different datasets (CIFAR-10, CIFAR-100, SVHN, ImageNet), different architectures (ResNet-18, All-CNN), different regularization methods (weight decay, data
-augmentation, mixup), different learning rate schedules (exponential, piece-wise
-constant). They collectively suggest that there is a “critical period” for regularizing
-deep networks that is decisive of the final performance. More analysis should,
-therefore, focus on the transient rather than asymptotic behavior of learning.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Imposing regularization all along, however, causes over-smoothing&lt;/strong&gt;, whereas the ground-truth disparity field is typically discontinuous. So, &lt;strong&gt;regularization is introduced initially and then removed to capture fine details.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;neurips-2019-inherent-weight-normalization-in-stochastic-neural-networks&quot;&gt;&lt;a href=&quot;https://papers.nips.cc/paper/8591-inherent-weight-normalization-in-stochastic-neural-networks&quot;&gt;NeurIPS 2019-Inherent Weight Normalization in Stochastic Neural Networks&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;&lt;img src=&quot;/imgs/Inherent_weight_normalisation.png&quot; alt=&quot;Full-width image&quot; class=&quot;lead&quot; data-width=&quot;200&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;neurips-2019-weight-agnostic-neural-networks&quot;&gt;&lt;a href=&quot;https://papers.nips.cc/paper/8777-weight-agnostic-neural-networks.pdf&quot;&gt;NeurIPS 2019-Weight Agnostic Neural Networks&lt;/a&gt;&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;Not all neural network architectures are created equal, some perform much better
-than others for certain tasks. But how important are the weight parameters of a
-neural network compared to its architecture? In this work, we question to what
-extent neural network architectures alone, without learning any weight parameters,
-can encode solutions for a given task. We propose a search method for neural
-network architectures that can already perform a task without any explicit weight
-training. To evaluate these networks, we populate the connections with a single
-shared weight parameter sampled from a uniform random distribution, and measure
-the expected performance. We demonstrate that our method can find minimal neural
-network architectures that can perform several reinforcement learning tasks without
-weight training. On a supervised learning domain, we find network architectures
-that achieve much higher than chance accuracy on MNIST using random weights.
-Interactive version of this paper at &lt;a href=&quot;https://weightagnostic.github.io/&quot;&gt;https://weightagnostic.github.io/&lt;/a&gt;&lt;/p&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry></feed>
