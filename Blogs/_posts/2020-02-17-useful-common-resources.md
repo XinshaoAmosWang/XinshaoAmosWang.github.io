@@ -15,6 +15,19 @@ comment: true
 {:.message}
 
 
+### Replace string in files recursively
+* Simplest way to replace (all files, directory, recursive): 
+    ``` 
+    find . -type f -not -path '*/\.*' -exec sed -i 's/Previous string/New string/g' {} + 
+    ```
+* Note: Sometimes you might need to ignore some hidden files i.e. .git, you can use above command.
+If you want to include hidden files use,
+```
+find . -type f  -exec sed -i 's/Previous string/New string/g' {} +
+```
+{:.message}
+
+
 ### Useful Links on General Study
 * Information about probabilistic models of cognition
   * [Tom's Bayesian reading list](http://cocosci.princeton.edu/tom/bayes.html)

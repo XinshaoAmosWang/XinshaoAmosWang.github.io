@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-17T17:39:20+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-17T20:17:11+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
 </subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Usefull Common Resources/Tricks</title><link href="http://localhost:4000/blogs/2020-02-17-useful-common-resources/" rel="alternate" type="text/html" title="Usefull Common Resources/Tricks" /><published>2020-02-17T00:00:00+00:00</published><updated>2020-02-17T00:00:00+00:00</updated><id>http://localhost:4000/blogs/useful-common-resources</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-17-useful-common-resources/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#useful-links-on-general-study&quot;&gt;Useful Links on General Study&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#github-configuration-of-local-machine-to-github-remote&quot;&gt;Github: Configuration of local machine to github remote&lt;/a&gt;&lt;/li&gt;
@@ -6,6 +6,19 @@
   &lt;li&gt;&lt;a href=&quot;#useful-links-on-jekyll-google-adsense-markdown&quot;&gt;Useful links on Jekyll, Google AdSense, Markdown. &lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#useful-links-on-travel--insurance&quot;&gt;Useful links on Travel &amp;amp; Insurance.  &lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h3 id=&quot;replace-string-in-files-recursively&quot;&gt;Replace string in files recursively&lt;/h3&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;Simplest way to replace (all files, directory, recursive):
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  find . -type f -not -path '*/\.*' -exec sed -i 's/Previous string/New string/g' {} + 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Note: Sometimes you might need to ignore some hidden files i.e. .git, you can use above command.
+If you want to include hidden files use,
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;find . -type f  -exec sed -i 's/Previous string/New string/g' {} +
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;useful-links-on-general-study&quot;&gt;Useful Links on General Study&lt;/h3&gt;
 &lt;ul&gt;

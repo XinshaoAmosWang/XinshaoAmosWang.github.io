@@ -268,6 +268,19 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
   <li><a href="#useful-links-on-travel--insurance">Useful links on Travel &amp; Insurance.  </a></li>
 </ol>
 
+<h3 id="replace-string-in-files-recursively">Replace string in files recursively</h3>
+<ul class="message">
+  <li>Simplest way to replace (all files, directory, recursive):
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  find . -type f -not -path '*/\.*' -exec sed -i 's/Previous string/New string/g' {} + 
+</code></pre></div>    </div>
+  </li>
+  <li>Note: Sometimes you might need to ignore some hidden files i.e. .git, you can use above command.
+If you want to include hidden files use,
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -type f  -exec sed -i 's/Previous string/New string/g' {} +
+</code></pre></div>    </div>
+  </li>
+</ul>
+
 <h3 id="useful-links-on-general-study">Useful Links on General Study</h3>
 <ul>
   <li>Information about probabilistic models of cognition
