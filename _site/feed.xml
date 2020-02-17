@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-16T22:50:32+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-17T09:51:58+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
 </subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">arXiv-2020</title><link href="http://localhost:4000/paperlists/2020-02-16-arXiv/" rel="alternate" type="text/html" title="arXiv-2020" /><published>2020-02-16T00:00:00+00:00</published><updated>2020-02-16T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/arXiv</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-02-16-arXiv/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 
 &lt;h2 id=&quot;foundation-of-deep-learning&quot;&gt;Foundation of Deep Learning&lt;/h2&gt;
-&lt;ul&gt;
+&lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/2002.05709.pdf&quot;&gt;A Simple Framework for Contrastive Learning of Visual Representations&lt;/a&gt;
     &lt;ul&gt;
       &lt;li&gt;Data augmentation: composition of data augmentations plays a critical role in defining effective predictive tasks;&lt;/li&gt;
@@ -11,10 +11,24 @@
       &lt;li&gt;Results: By combining these findings, we are able to considerably outperform previous methods for self-supervised and semi-supervised learning on ImageNet. A linear classifier trained on self-supervised representations learned by SimCLR achieves 76.5% top-1 accuracy.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1911.09976.pdf&quot;&gt;Instance Cross Entropy for Deep Metric Learning&lt;/a&gt; and its application in SimCLR-A Simple Framework for Contrastive Learning of Visual Representations&lt;/p&gt;
 
-&lt;p class=&quot;message&quot;&gt;Note that the proposed loss expression &lt;strong&gt;NT-Xent (the normalized
-temperature-scaled cross entropy loss)&lt;/strong&gt; has been proposed in &lt;a href=&quot;https://openreview.net/pdf?id=BJeguTEKDB&quot;&gt;Instance Cross Entropy for Deep Metric Learning–ICLR2020 Submission Version&lt;/a&gt;, &lt;a href=&quot;https://arxiv.org/pdf/1911.09976.pdf&quot;&gt;arXiv Version&lt;/a&gt;: cross entropy computation and dot product scaling.&lt;/p&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Paper notes on Anomalies&amp;amp;Regularisation</title><link href="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/" rel="alternate" type="text/html" title="Paper notes on Anomalies&amp;Regularisation" /><published>2020-02-15T00:00:00+00:00</published><updated>2020-02-15T00:00:00+00:00</updated><id>http://localhost:4000/blogs/anomalies-regularisation</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/">&lt;ul class=&quot;message&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;I am very glad to highlight that:  our proposed ICE is simple and effective, which has also been demonstrated in recent work SimCLR, in the context of self-supervised learning: A Simple Framework for Contrastive Learning of Visual Representations&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Its loss expression NT-Xent (the normalized temperature-scaled cross entropy loss) is a fantastic application of our recently proposed Instance Cross Entropy for Deep Metric Learning,  in the context of self-supervised learnining. I am very excited about this.
+        &lt;ul&gt;
+          &lt;li&gt;#InstanceCrossEntropy #TemperatureScaling #RepresentationLearning&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.researchgate.net/publication/337485049_Instance_Cross_Entropy_for_Deep_Metric_Learning/comments&quot;&gt;Research Gate&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://openreview.net/forum?id=BJeguTEKDB&amp;amp;noteId=txrrkCL-sXhttps://openreview.net/forum?id=BJeguTEKDB&amp;amp;noteId=txrrkCL-sX&quot;&gt;Open Review&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/MachineLearning/comments/f4x1sh/r_instance_cross_entropy_for_deep_metric_learning/&quot;&gt;Reddit&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Paper notes on Anomalies&amp;amp;Regularisation</title><link href="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/" rel="alternate" type="text/html" title="Paper notes on Anomalies&amp;Regularisation" /><published>2020-02-15T00:00:00+00:00</published><updated>2020-02-15T00:00:00+00:00</updated><id>http://localhost:4000/blogs/anomalies-regularisation</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/">&lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;/Papers/AnomalyAndRegularisation/&quot;&gt;Paper notes on Anomalies&amp;amp;Regularisation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Paper notes on Anomalies&amp;amp;Regularisation</summary></entry><entry><title type="html">Notes on Core ML Topics</title><link href="http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/" rel="alternate" type="text/html" title="Notes on Core ML Topics" /><published>2020-01-02T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><id>http://localhost:4000/blogs/Core-machine-learning-topics</id><content type="html" xml:base="http://localhost:4000/blogs/2020-01-02-Core-machine-learning-topics/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#kullback-leibler-divergence&quot;&gt;Kullback-Leibler Divergence&lt;/a&gt;&lt;/li&gt;
