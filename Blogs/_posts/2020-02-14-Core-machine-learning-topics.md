@@ -14,7 +14,7 @@ comment: true
 0. [What's the difference between a Variational Autoencoder (VAE) and an Autoencoder?](#whats-the-difference-between-a-variational-autoencoder-vae-and-an-autoencoder)
 {:.message}
 
-#### Kullback-Leibler Divergence
+### Kullback-Leibler Divergence
  * [How to approximate our data (choose a parameterized distribution => optimise its parameters): KL Divergence helps us to measure just how much information we lose when we choose an approximation compared with our observations.](https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained)
     * The most important metric in information theory is called **Entropy**, typically denoted as $\mathbf{H}$. The definition of Entropy for a probability distribution is: $\mathbf{H}=-\sum_{i=1}^{n} p(\mathbf{x}_i) \log p(\mathbf{x}_i) $.
     * If we use $\log_2$ for our calculation we can interpret entropy as "the minimum number of bits it would take us to encode our information".
@@ -24,7 +24,7 @@ comment: true
     * Problem we’re trying to solve: choose a parameterized distribution => optimise its parameters): KL Divergence helps us to measure just how much information we lose when we choose an approximation compared with our observations.
 {:.message}
 
-#### What is the main difference between GAN and autoencoder?
+### What is the main difference between GAN and autoencoder?
 * [An autoencoder learns to represent some input information very efficiently, and subsequently how to reconstruct the input from it's compressed form.](https://datascience.stackexchange.com/a/55094)
     ~ :) ~[An autoencoder compresses its input down to a vector - with much fewer dimensions than its input data, and then transforms it back into a tensor with the same shape as its input over several neural net layers. They’re trained to reproduce their input, so it’s kind of like learning a compression algorithm for that specific dataset.](https://qr.ae/TzM5Mv)
 * [A GAN uses an adversarial feedback loop to learn how to generate some information that "seems real" (i.e. looks the same/sounds the same/is otherwise indistinguishable from some real data)](https://datascience.stackexchange.com/a/55094) ~ :) ~ [Instead of being given a bit of data as input, it’s given a small vector of random numbers. The generator network tries to transform this little vector into a realistic sample from the training data. The discriminator network then takes this generated sample(and some real samples from the dataset) and learns to guess whether the samples are real or fake.](https://qr.ae/TzM5Mv)
@@ -45,7 +45,7 @@ comment: true
 
 
 
-#### What's the difference between a Variational Autoencoder (VAE) and an Autoencoder?
+### What's the difference between a Variational Autoencoder (VAE) and an Autoencoder?
 * [Intuitively Understanding Variational Autoencoders – Towards Data Science by Irhum Shafkat.](https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf)
 
 * <span class='quora-content-embed' data-name='Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154'>Read <a class='quora-content-link' data-width='560' data-height='260' href='https://www.quora.com/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154' data-type='answer' data-id='66853410' data-key='a5099035f08fbac1ed45a4bb7a1c5d2c' load-full-answer='False' data-embed='trhonms'><a href='https://www.quora.com/Vishal-Sharma-154'>Vishal Sharma</a>&#039;s <a href='/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder?top_ans=66853410'>answer</a> to <a href='/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder' ref='canonical'><span class="rendered_qtext">What&#039;s the difference between a Variational Autoencoder (VAE) and an Autoencoder?</span></a></a> on <a href='https://www.quora.com'>Quora</a><script type="text/javascript" src="https://www.quora.com/widgets/content"></script></span>

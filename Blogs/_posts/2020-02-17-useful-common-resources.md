@@ -1,35 +1,40 @@
 ---
-title: Documentations
+layout: post
+title: Usefull Common Resources/Tricks
 description: >
-  Summary and Display of all documentations.
-permalink: /my_docs/
+  
+#image: /assets/img/blog/steve-harvey.jpg
 comment: true
 ---
 
+0. [Useful Links on General Study](#useful-links-on-general-study)
+0. [Github: Configuration of local machine to github remote](#github-configuration-of-local-machine-to-github-remote)
+0. [GDrive](#gdrive)
+0. [Useful links on Jekyll, Google AdSense, Markdown. ](#useful-links-on-jekyll-google-adsense-markdown)
+0. [Useful links on Travel & Insurance.  ](#useful-links-on-travel--insurance)
+{:.message}
 
 
-## Useful Links on General Study
-
-
+### Useful Links on General Study
 * Information about probabilistic models of cognition
   * [Tom's Bayesian reading list](http://cocosci.princeton.edu/tom/bayes.html)
 
 ...[http://cocosci.princeton.edu/resources.php](http://cocosci.princeton.edu/resources.php)
+{:.message}
 
 
-## Useful links on Jekyll, Google AdSense, Markdown. 
-
+### Useful links on Jekyll, Google AdSense, Markdown. 
 * [Add Google AdSense to a Jekyll website](https://mycyberuniverse.com/en-gb/add-google-adsense-to-a-jekyll-website.html)
 * [AdSense Jekyll + Github](http://www.lewisgavin.co.uk/Google-Analytics-Adsense/)
 
 * [Jekyll Variables](https://jekyllrb.com/docs/variables/)
 
 * [Add Google Analytics](https://michaelsoolee.com/google-analytics-jekyll/)
+{:.message}
 
 
 
-## Useful links on Travel & Insurance. 
-
+### Useful links on Travel & Insurance. 
 * [Collecting Avios](https://www.britishairways.com/en-gb/executive-club/collecting-avios)
 
 * [Virgin: What's covered](https://uk.virginmoney.com/virgin/travel-insurance/whats-covered.jsp)
@@ -39,10 +44,10 @@ comment: true
 * [京东安联](https://www.allianz360.com/?media=d4cd86c5e9444316994e5a2c00fa9cd6&type=1)
 
 * [Aer Lingus: Dublin T2 => London Heathrow](https://www.aerlingus.com/html/flightSearchResult.html#/fareType=ONEWAY&fareCategory=ECONOMY&promoCode=&numAdults=1&numChildren=0&numInfants=0&groupBooking=false&sourceAirportCode_0=DUB&destinationAirportCode_0=LHR&departureDate_0=2019-10-19&flightCode_0=EI168)
+{:.message}
 
 
-## GDrive
-
+### GDrive
 * [GDrive Github](https://github.com/gdrive-org/gdrive)
 
 * [List Folder, Root](https://github.com/gdrive-org/gdrive/issues/116)
@@ -50,10 +55,10 @@ comment: true
 * [Download entire folder](https://askubuntu.com/questions/867284/using-gdrive-to-download-entire-folder)
 
 * [How to use GDrive in linux?](http://www.linuxandubuntu.com/home/google-drive-cli-client-for-linux)
+{:.message}
 
 
-## Github: Configuration of local machine to github remote
-
+### Github: Configuration of local machine to github remote
 * [Local: Generating a new ssh key](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
 
 
@@ -64,4 +69,4 @@ comment: true
 
 
 * [Common commands](https://github.com/XinshaoAmosWang/Deep-Metric-Embedding/blob/master/common_git.md)
-
+{:.message}
