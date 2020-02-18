@@ -37,18 +37,18 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
   
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Posts | Xinshao Wang</title>
+<title>Derivative Manipulation for General Example Weighting | Xinshao Wang</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Posts" />
+<meta property="og:title" content="Derivative Manipulation for General Example Weighting" />
 <meta name="author" content="Xinshao Wang" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="This is the list layout for showing blog posts, which shows just the title and groups them by year of publication. Check out the blog layout for comparison. Open posts.md to edit this text." />
-<meta property="og:description" content="This is the list layout for showing blog posts, which shows just the title and groups them by year of publication. Check out the blog layout for comparison. Open posts.md to edit this text." />
-<link rel="canonical" href="http://localhost:4000/posts/" />
-<meta property="og:url" content="http://localhost:4000/posts/" />
+<meta name="description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
+<meta property="og:description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
+<link rel="canonical" href="http://localhost:4000/my_docs/DM_Code_Illustration/" />
+<meta property="og:url" content="http://localhost:4000/my_docs/DM_Code_Illustration/" />
 <meta property="og:site_name" content="Xinshao Wang" />
 <script type="application/ld+json">
-{"description":"This is the list layout for showing blog posts, which shows just the title and groups them by year of publication. Check out the blog layout for comparison. Open posts.md to edit this text.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"WebPage","url":"http://localhost:4000/posts/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Posts","@context":"https://schema.org"}</script>
+{"description":"“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"WebPage","url":"http://localhost:4000/my_docs/DM_Code_Illustration/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Derivative Manipulation for General Example Weighting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -78,7 +78,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-<link rel="alternate" href="http://localhost:4000/posts/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/my_docs/DM_Code_Illustration/" hreflang="en">
 
 <link rel="shortcut icon" href="/assets/icons/icon.png">
 <link rel="apple-touch-icon" href="/assets/icons/icon.png">
@@ -190,7 +190,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
   
     <main
   id="_main"
-  class="content fade-in layout-list"
+  class="content fade-in layout-page"
   role="main"
   data-color="rgb(79,177,186)"
   data-theme-color="rgb(25,55,71)"
@@ -199,340 +199,156 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
     data-overlay
   
   >
-  
-
-
+  <article class="page" role="article">
   <header>
-    <h1 class="page-title">Posts</h1>
+    <h1 class="page-title">Derivative Manipulation for General Example Weighting</h1>
     
 
 
 
-  
-    <p class="message" >
-      This is the <code class="highlighter-rouge">list</code> layout for showing blog posts, which shows just the title and groups them by year of publication. Check out the <code class="highlighter-rouge">blog</code> layout for comparison. Open <code class="highlighter-rouge">posts.md</code> to edit this text.
-
-    </p>
-  
+  <div class="hr pb0"></div>
 
 
   </header>
-  <hr class="sr-only"/>
-
-
-
-
-
-
-
-
-
 
   
-  
+<h2 id="downloading-link">Downloading Link</h2>
+
+<p><a href="https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0">https://www.dropbox.com/sh/tn0yj9jlx03oamx/AACPpChxNN2C-bVs4jrmiX45a?dl=0</a></p>
+
+<h2 id="command-for-visualising-the-repositorydirectory-tree-structure">Command for Visualising the Repository/Directory Tree Structure</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd directory_name
+tree
+</code></pre></div></div>
+
+<h2 id="dependencies">Dependencies</h2>
+<p>The core functions are implemented in the <a href="https://github.com/BVLC/caffe">caffe</a> framework. We use matlab interfaces matcaffe for data preparation.</p>
+<ul>
+  <li><a href="https://github.com/sciencefans/CaffeMex_v2/tree/9bab8d2aaa2dbc448fd7123c98d225c680b066e4">CaffeMex_v2</a></li>
+  <li><a href="https://uk.mathworks.com/products/new_products/release2017b.html">MATLAB 2017b</a></li>
+</ul>
+
+<h2 id="setup">Setup</h2>
+
+<ul>
+  <li><a href="http://caffe.berkeleyvision.org/install_apt.html">Install dependencies on Ubuntu 16.04</a>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">sudo </span>apt-get <span class="nb">install </span>libprotobuf-dev libleveldb-dev libsnappy-dev libopencv-dev libhdf5-serial-dev protobuf-compiler
+  <span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">--no-install-recommends</span> libboost-all-dev
+  <span class="nb">sudo </span>apt-get <span class="nb">install </span>libopenblas-dev
+  <span class="nb">sudo </span>apt-get <span class="nb">install </span>python-dev
+  <span class="nb">sudo </span>apt-get <span class="nb">install </span>libgflags-dev libgoogle-glog-dev liblmdb-dev
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Install <a href="https://uk.mathworks.com/products/new_products/release2017b.html">MATLAB 2017b</a></p>
+
+    <p>Download and Run the install binary file</p>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ./install
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Compile Caffe and matlab interface</p>
+
+    <p>Note you may need to change some paths in Makefile.config according your system environment and MATLAB path</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">cd </span>CaffeMex_CCE_sumW
+  make <span class="nt">-j8</span>  <span class="o">&amp;&amp;</span> make matcaffe
+  <span class="nb">cd</span> ../CaffeMex_UnifiedWeight_V01
+  make <span class="nt">-j8</span>  <span class="o">&amp;&amp;</span> make matcaffe
     
-    <h2 id="y-2020" class="hr">2020</h2>
-    <ul class="related-posts">
+  <span class="nb">cd</span> ../CaffeMex_GCE
+  make <span class="nt">-j8</span>  <span class="o">&amp;&amp;</span> make matcaffe
+  <span class="nb">cd</span> ../CaffeMex_GCE_sumW
+  make <span class="nt">-j8</span>  <span class="o">&amp;&amp;</span> make matcaffe
     
-  
-  
+  <span class="nb">cd</span> ../CaffeMex_MAE_sumW
+  make <span class="nt">-j8</span>  <span class="o">&amp;&amp;</span> make matcaffe
+  <span class="nb">cd</span> ../CaffeMex_MAE_V00
+  make <span class="nt">-j8</span>  <span class="o">&amp;&amp;</span> make matcaffe
+    
+  <span class="nb">cd</span> ../CaffeMex_MSE
+  make <span class="nt">-j8</span>  <span class="o">&amp;&amp;</span> make matcaffe
+  <span class="nb">cd</span> ../CaffeMex_MSE_sumW
+  make <span class="nt">-j8</span>  <span class="o">&amp;&amp;</span> make matcaffe
 
+</code></pre></div>    </div>
+  </li>
+</ul>
 
-<li>
-  <a href="/blogs/2020-02-18-code-releasing/" class="h4 flip-title"><span>Code Releasing of My Recent Work-Derivative Manipulation</span></a>
-  · <a href="https://xinshaoamoswang.github.io/blogs/2020-02-18-code-releasing/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2020-02-18T00:00:00+00:00">18 Feb</time>
-</li>
+<h2 id="usage">Usage</h2>
 
-  
+<p>Examples for reproducing our results on <a href="https://www.cs.toronto.edu/~kriz/cifar.html">CIFAR-100</a> are given.</p>
 
-  
-  
-  
+<ul>
+  <li>
+    <p>Data preparation for CIFAR-100</p>
 
-
-<li>
-  <a href="/blogs/2020-02-17-useful-common-resources/" class="h4 flip-title"><span>Usefull Common Resources/Tricks</span></a>
-  · <a href="https://xinshaoamoswang.github.io/blogs/2020-02-17-useful-common-resources/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2020-02-17T00:00:00+00:00">17 Feb</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/paperlists/2020-02-16-arXiv/" class="h4 flip-title"><span>arXiv-2020</span></a>
-  · <a href="https://xinshaoamoswang.github.io/paperlists/2020-02-16-arXiv/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2020-02-16T00:00:00+00:00">16 Feb</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/blogs/2020-02-15-anomalies-regularisation/" class="h4 flip-title"><span>Paper notes on Anomalies&Regularisation</span></a>
-  · <a href="https://xinshaoamoswang.github.io/blogs/2020-02-15-anomalies-regularisation/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2020-02-15T00:00:00+00:00">15 Feb</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/blogs/2020-02-14-Core-machine-learning-topics/" class="h4 flip-title"><span>Notes on Core ML Topics</span></a>
-  · <a href="https://xinshaoamoswang.github.io/blogs/2020-02-14-Core-machine-learning-topics/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2020-02-14T00:00:00+00:00">14 Feb</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/paperlists/2020-01-02-ICLR/" class="h4 flip-title"><span>ICLR-2020</span></a>
-  · <a href="https://xinshaoamoswang.github.io/paperlists/2020-01-02-ICLR/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2020-01-02T00:00:00+00:00">02 Jan</time>
-</li>
-
-  
-
-  
-  
+    <ul>
+      <li>Prepare testing data:
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cd CIFAR100_Data_Toolkit
+  matlab -nodisplay -nosplash -nodesktop -r "run('test_data_preparation.m');exit;" | tail -n +11
+</code></pre></div>        </div>
+      </li>
+      <li>Prepare training data (symmetric noise rate: 0.0, 0.2, 0.4, 0.6):
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  matlab -nodisplay -nosplash -nodesktop -r "run('train_data_preparationV2_noise_0_0.m');exit;" | tail -n +11
+  matlab -nodisplay -nosplash -nodesktop -r "run('train_data_preparationV2_noise_0_2.m');exit;" | tail -n +11
+  matlab -nodisplay -nosplash -nodesktop -r "run('train_data_preparationV2_noise_0_4.m');exit;" | tail -n +11
+  matlab -nodisplay -nosplash -nodesktop -r "run('train_data_preparationV2_noise_0_6.m');exit;" | tail -n +11
+</code></pre></div>        </div>
+      </li>
+      <li>Copy data
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cd .. 
+  echo CIFAR100_ResNet44*/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TestImageDataCell.mat
+  echo CIFAR100_ResNet44*/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TrainImageDataCell0.0.mat
+  echo CIFAR100_ResNet44*/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TrainImageDataCell0.2.mat
+  echo CIFAR100_ResNet44*/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TrainImageDataCell0.4.mat
+  echo CIFAR100_ResNet44*/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TrainImageDataCell0.6.mat
+</code></pre></div>        </div>
+      </li>
     </ul>
-    <h2 id="y-2019" class="hr">2019</h2>
-    <ul class="related-posts">
-    
-  
-  
+  </li>
+  <li>
+    <p>Train &amp; Test</p>
 
+    <p>Run the training and testing scripts in the training folder of a specific setting defined by its corresponding prototxt folder.</p>
 
-<li>
-  <a href="/paperlists/2019-12-30-ICLR/" class="h4 flip-title"><span>ICLR-2019</span></a>
-  · <a href="https://xinshaoamoswang.github.io/paperlists/2019-12-30-ICLR/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-12-30T00:00:00+00:00">30 Dec</time>
-</li>
+    <p>For example,</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cd CIFAR100_ResNet44_V03_lambda0_5/train_Res44_USW_Beta06_lambda1_0.0
+  matlab -nodisplay -nosplash -nodesktop -r "run('train.m');exit;" | tail -n +11
+  matlab -nodisplay -nosplash -nodesktop -r "run('test.m');exit;" | tail -n +11
+</code></pre></div>    </div>
+  </li>
+</ul>
 
-  
+<h2 id="our-trained-results">Our trained results</h2>
 
-  
-  
-  
-
-
-<li>
-  <a href="/paperlists/2019-12-29-NeurIPS/" class="h4 flip-title"><span>NeurIPS-2019</span></a>
-  · <a href="https://xinshaoamoswang.github.io/paperlists/2019-12-29-NeurIPS/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-12-29T00:00:00+00:00">29 Dec</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/paperlists/2019-12-29-IJCAI/" class="h4 flip-title"><span>IJCAI-2019</span></a>
-  · <a href="https://xinshaoamoswang.github.io/paperlists/2019-12-29-IJCAI/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-12-29T00:00:00+00:00">29 Dec</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/paperlists/2019-12-29-ICML/" class="h4 flip-title"><span>ICML-2019</span></a>
-  · <a href="https://xinshaoamoswang.github.io/paperlists/2019-12-29-ICML/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-12-29T00:00:00+00:00">29 Dec</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/paperlists/2019-12-29-ICCV/" class="h4 flip-title"><span>ICCV-2019</span></a>
-  · <a href="https://xinshaoamoswang.github.io/paperlists/2019-12-29-ICCV/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-12-29T00:00:00+00:00">29 Dec</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/paperlists/2019-12-29-CVPR/" class="h4 flip-title"><span>CVPR-2019</span></a>
-  · <a href="https://xinshaoamoswang.github.io/paperlists/2019-12-29-CVPR/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-12-29T00:00:00+00:00">29 Dec</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/blogs/2019-12-12-papers-summary-reweighting/" class="h4 flip-title"><span>Foundations of Deep Learning, Machine Learning</span></a>
-  · <a href="https://xinshaoamoswang.github.io/blogs/2019-12-12-papers-summary-reweighting/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-12-12T00:00:00+00:00">12 Dec</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/projects/2019-10-10-person-reidentification/" class="h4 flip-title"><span>Person Re-identification</span></a>
-  · <a href="https://xinshaoamoswang.github.io/projects/2019-10-10-person-reidentification/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-10-10T00:00:00+01:00">10 Oct</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/projects/2019-10-10-arbitrary-semantic-anomalies/" class="h4 flip-title"><span>Robust Learning under Arbitrary Semantic Anomalies</span></a>
-  · <a href="https://xinshaoamoswang.github.io/projects/2019-10-10-arbitrary-semantic-anomalies/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-10-10T00:00:00+01:00">10 Oct</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/projects/2019-10-01-PhD-3rd-start/" class="h4 flip-title"><span>Start 3rd year (the final year of my PhD)</span></a>
-  · <a href="https://xinshaoamoswang.github.io/projects/2019-10-01-PhD-3rd-start/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-10-01T00:00:00+01:00">01 Oct</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/blogs/2019-10-01-papers-summary-noise/" class="h4 flip-title"><span>Paper Summary on Noise, Anomalies, Adversaries, Robust Learning, Generalization</span></a>
-  · <a href="https://xinshaoamoswang.github.io/blogs/2019-10-01-papers-summary-noise/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-10-01T00:00:00+01:00">01 Oct</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/blogs/2019-10-01-papers-summary-metric/" class="h4 flip-title"><span>Paper Summary on Distance Metric, Representation Learning</span></a>
-  · <a href="https://xinshaoamoswang.github.io/blogs/2019-10-01-papers-summary-metric/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-10-01T00:00:00+01:00">01 Oct</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/blogs/2019-10-01-Research-GR/" class="h4 flip-title"><span>An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies</span></a>
-  · <a href="https://xinshaoamoswang.github.io/blogs/2019-10-01-Research-GR/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2019-10-01T00:00:00+01:00">01 Oct</time>
-</li>
-
-  
-
-  
-  
+<ul>
+  <li>Our trained results are stored in corresponding folders. For example, in Folder <strong>CIFAR100_ResNet44_V03_lambda0_5 train_Res44_USW_Beta06_lambda1_0.0</strong>, there are:
+    <ul>
+      <li>accuracy.txt</li>
+      <li>accuracy_curve.png</li>
     </ul>
-    <h2 id="y-2018" class="hr">2018</h2>
-    <ul class="related-posts">
-    
-  
-  
+  </li>
+  <li>Without changing the random seed (123), you are supposed to obtain exactly the same results.</li>
+</ul>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<p>Our implementation benefits from:</p>
+
+<ul>
+  <li>
+    <p>Caffe library: https://caffe.berkeleyvision.org/</p>
+  </li>
+  <li>
+    <p>CaffeMex_v2 library: https://github.com/sciencefans/CaffeMex_v2/tree/9bab8d2aaa2dbc448fd7123c98d225c680b066e4</p>
+  </li>
+</ul>
 
 
-<li>
-  <a href="/paperlists/2018-12-30-ICML/" class="h4 flip-title"><span>ICML-2018</span></a>
-  · <a href="https://xinshaoamoswang.github.io/paperlists/2018-12-30-ICML/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2018-12-30T00:00:00+00:00">30 Dec</time>
-</li>
+</article>
 
-  
-
-  
-  
-  
-
-
-<li>
-  <a href="/paperlists/2018-12-30-ICLR/" class="h4 flip-title"><span>ICLR-2018</span></a>
-  · <a href="https://xinshaoamoswang.github.io/paperlists/2018-12-30-ICLR/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2018-12-30T00:00:00+00:00">30 Dec</time>
-</li>
-
-  
-
-  
-  
-    </ul>
-    <h2 id="y-2017" class="hr">2017</h2>
-    <ul class="related-posts">
-    
-  
-  
-
-
-<li>
-  <a href="/paperlists/2017-12-30-NeurIPS/" class="h4 flip-title"><span>NeurIPS-2017</span></a>
-  · <a href="https://xinshaoamoswang.github.io/paperlists/2017-12-30-NeurIPS/#disqus_thread"></a>
-  <time class="heading faded fine" datetime="2017-12-30T00:00:00+00:00">30 Dec</time>
-</li>
-
-  </ul>
 
 
 
@@ -565,7 +381,6 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <ins class="adsbygoogle"
       style="display:block"
@@ -577,7 +392,6 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
       (adsbygoogle = window.adsbygoogle || []).push({});
   </script>
 
-  
 
 
 
@@ -586,6 +400,10 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
     
 </div>
 
+
+<script data-ad-client="ca-pub-8231481254980115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script data-ad-client="ca-pub-8231481254980115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 
 
