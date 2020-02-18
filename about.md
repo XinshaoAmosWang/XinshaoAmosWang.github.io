@@ -30,7 +30,7 @@ Fortunately, the concept of adversarial examples become universe/unrestricted no
 
 
 ### Research Delivering: 
-* [Derivative Manipulation for General Example](https://github.com/XinshaoAmosWang/DerivativeManipulation)
+* [Derivative Manipulation for General Example Weighting](https://github.com/XinshaoAmosWang/DerivativeManipulation)
 * [IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters](https://github.com/XinshaoAmosWang/Improving-Mean-Absolute-Error-against-CCE)
 * [Instance Cross Entropy for Deep Metric Learning and its application in SimCLR-A Simple Framework for Contrastive Learning of Visual Representations](https://www.reddit.com/r/MachineLearning/comments/f4x1sh/r_instance_cross_entropy_for_deep_metric_learning/?utm_content=post&utm_medium=twitter&utm_source=share&utm_name=submit&utm_term=t3_f4x1sh)
 * [Code Releasing of My Recent Work-Derivative Manipulation](https://xinshaoamoswang.github.io/blogs/2020-02-18-code-releasing/)
