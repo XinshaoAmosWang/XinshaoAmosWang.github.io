@@ -24,8 +24,8 @@ title:                 Xinshao Wang
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  "Welcome to my personal website".
-  **3rd Year PhD Student**, will graduate in Sep 2020.
+  "Stay Hungry. Stay Foolish. -- Steve Jobs 2005".
+  ML/DL/AI Research with applications to CV/NLP, etc
 
 # A shorter description for the sidebar.
 tagline:               >
@@ -48,7 +48,7 @@ author:
   email:               xwang at qub dot ac dot uk xwang at qub dot ac dot uk
   # Used by `jekyll-seo-tag`:
   twitter:             <username>
-  about:             Xinshao Wang, **3rd Year PhD Student**, will graduate in Sep 2020. 
+  about:             Xinshao Wang, ML/DL/AI Research with applications to CV/NLP, etc 
 
 # Add links to the sidebar.
 menu:

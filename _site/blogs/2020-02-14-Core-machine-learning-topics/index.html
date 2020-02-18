@@ -42,15 +42,15 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 <meta property="og:title" content="Notes on Core ML Topics" />
 <meta name="author" content="Xinshao Wang" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
-<meta property="og:description" content="“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020." />
+<meta name="description" content="“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc" />
+<meta property="og:description" content="“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc" />
 <link rel="canonical" href="http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/" />
 <meta property="og:url" content="http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/" />
 <meta property="og:site_name" content="Xinshao Wang" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-02-14T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"“Welcome to my personal website”. 3rd Year PhD Student, will graduate in Sep 2020.","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Notes on Core ML Topics","dateModified":"2020-02-14T00:00:00+00:00","datePublished":"2020-02-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/"},"@context":"https://schema.org"}</script>
+{"description":"“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc","author":{"@type":"Person","name":"Xinshao Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao Wang"},"headline":"Notes on Core ML Topics","dateModified":"2020-02-14T00:00:00+00:00","datePublished":"2020-02-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -264,7 +264,88 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
   <li><a href="#kullback-leibler-divergence">Kullback-Leibler Divergence</a></li>
   <li><a href="#what-is-the-main-difference-between-gan-and-autoencoder">What is the main difference between GAN and autoencoder</a></li>
   <li><a href="#whats-the-difference-between-a-variational-autoencoder-vae-and-an-autoencoder">What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?</a></li>
+  <li><a href="#ensemble-methods">Ensemble methods</a></li>
+  <li><a href="#meta-learning">Meta-learning</a></li>
+  <li><a href="#Long-tailed-Recognition">Long-tailed Recognition</a></li>
 </ol>
+
+<h3 id="knowledge-distillation">Knowledge Distillation</h3>
+<ul class="message">
+  <li><a href="https://arxiv.org/pdf/1503.02531.pdf">Distilling the Knowledge in a Neural Network</a>
+    <ul>
+      <li>
+        <p>Knowledge Definition: A more
+abstract view of the knowledge, that frees it from any particular instantiation, is that it is a learned mapping from input vectors to output vectors.</p>
+      </li>
+      <li>
+        <p>An obvious way to transfer the generalization ability of the cumbersome model to a small model is
+to use the class probabilities produced by the cumbersome model as <strong>“soft targets” for training the
+small model.</strong> When the soft targets
+have high entropy, they provide much more information per training case than hard targets and much
+less variance in the gradient between training cases, so the small model can often be trained on much
+less data than the original cumbersome model and using a much higher learning rate.</p>
+      </li>
+      <li>
+        <p><a href="#ensemble-methods">A very simple way to improve the performance of almost any machine learning
+algorithm is to train many different models on the same data and then to average
+their predictions</a> =&gt; cumbersome and may be too computationally expensive</p>
+      </li>
+      <li>
+        <p>Compress the knowledge in an ensemble into a single model which is much easier to deploy (distilling the knowledge in an ensemble of models into a single model);</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="confidence-penalty--label-smoothing">Confidence penalty &amp; Label Smoothing</h3>
+<ul class="message">
+  <li><a href="https://openreview.net/pdf?id=HkCjNI5ex">Regularizing Neural Networks by Penalizing Confident Output Distributions</a>
+    <ul>
+      <li><strong>Output Regularisation</strong>: Regularizing the output distribution of large, deep neural networks has largely been unexplored.  Output regularization has the property that it is invariant
+to the parameterization of the underlying neural network.</li>
+      <li><strong>Knowledge definition</strong>: To motivate output regularizers, we can view the knowledge of a model as the conditional distribution it produces over outputs given an input (Hinton et al., 2015) as opposed to the learned values
+of its parameters.</li>
+      <li><strong>Distillation definition:</strong> explicitly training a small network to assign the same probabilities to incorrect
+classes as a large network or ensemble of networks that generalizes well.</li>
+      <li><strong>Two output regularizers</strong>:
+        <ul>
+          <li>A maximum entropy based confidence penalty;</li>
+          <li>Label smoothing (uniform and unigram).</li>
+          <li>We connect a maximum entropy based confidence penalty to label smoothing through the direction of the KL divergence.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Label-Smoothing Regularization proposed in <a href="https://arxiv.org/pdf/1512.00567.pdf">Rethinking the Inception Architecture for Computer Vision</a>-A mechanism for encouraging the model to be less confident.
+    <ul>
+      <li>Over-fitting</li>
+      <li>Reduces the ability of the model to <strong>adapt: bounded gradient</strong></li>
+      <li></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 class="message" id="uncertainty">Uncertainty</h3>
+
+<h3 class="message" id="long-tailed-recognition">Long-tailed Recognition</h3>
+
+<h3 class="message" id="meta-learning">Meta-learning</h3>
+
+<h3 id="ensemble-methods">Ensemble methods</h3>
+<ul class="message">
+  <li><a href="http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=7F08BF5ADDA7E8BB9D5F40EA4241AD81?doi=10.1.1.228.2236&amp;rep=rep1&amp;type=pdf">Ensemble methods in machine learning</a>
+    <ul>
+      <li>Ensemble methods are learning algorithms that construct <strong>a set of classifiers</strong> and then classify new data points by taking <strong>a weighted vote of their predictions.</strong></li>
+      <li>The original ensemble method is <strong>Bayesian averaging</strong> but more recent algorithms include error correcting output coding, Bagging and boosting. <strong>This paper reviews these methods and explains why ensembles can often perform better than any single classifier.</strong>
+        <ul>
+          <li>Bayesian Voting Enumerating the Hypotheses.</li>
+          <li>Bagging: Bagging presents the learning algorithm with a training set that consists of a sample of $m$ training examples drawn randomly with replacement from the original training set of $m$ items.</li>
+          <li>…</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="kullback-leibler-divergence">Kullback-Leibler Divergence</h3>
 <ul class="message">

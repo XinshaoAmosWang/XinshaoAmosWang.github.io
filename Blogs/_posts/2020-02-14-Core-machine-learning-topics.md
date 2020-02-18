@@ -12,7 +12,68 @@ comment: true
 0. [Kullback-Leibler Divergence](#kullback-leibler-divergence)
 0. [What is the main difference between GAN and autoencoder](#what-is-the-main-difference-between-gan-and-autoencoder)
 0. [What's the difference between a Variational Autoencoder (VAE) and an Autoencoder?](#whats-the-difference-between-a-variational-autoencoder-vae-and-an-autoencoder)
+0. [Ensemble methods](#ensemble-methods)
+0. [Meta-learning](#meta-learning)
+0. [Long-tailed Recognition](#Long-tailed-Recognition)
 {:.message}
+
+
+### Knowledge Distillation
+* [Distilling the Knowledge in a Neural Network](https://arxiv.org/pdf/1503.02531.pdf)
+    * Knowledge Definition: A more
+abstract view of the knowledge, that frees it from any particular instantiation, is that it is a learned mapping from input vectors to output vectors.
+
+    *  An obvious way to transfer the generalization ability of the cumbersome model to a small model is
+to use the class probabilities produced by the cumbersome model as **“soft targets” for training the
+small model.** When the soft targets
+have high entropy, they provide much more information per training case than hard targets and much
+less variance in the gradient between training cases, so the small model can often be trained on much
+less data than the original cumbersome model and using a much higher learning rate.
+
+    * [A very simple way to improve the performance of almost any machine learning
+algorithm is to train many different models on the same data and then to average
+their predictions](#ensemble-methods) => cumbersome and may be too computationally expensive
+
+    * Compress the knowledge in an ensemble into a single model which is much easier to deploy (distilling the knowledge in an ensemble of models into a single model);
+{:.message}
+
+### Confidence penalty & Label Smoothing
+* [Regularizing Neural Networks by Penalizing Confident Output Distributions](https://openreview.net/pdf?id=HkCjNI5ex)
+    * **Output Regularisation**: Regularizing the output distribution of large, deep neural networks has largely been unexplored.  Output regularization has the property that it is invariant
+to the parameterization of the underlying neural network.
+    * **Knowledge definition**: To motivate output regularizers, we can view the knowledge of a model as the conditional distribution it produces over outputs given an input (Hinton et al., 2015) as opposed to the learned values
+of its parameters.
+    * **Distillation definition:** explicitly training a small network to assign the same probabilities to incorrect
+classes as a large network or ensemble of networks that generalizes well.
+    * **Two output regularizers**: 
+        * A maximum entropy based confidence penalty;
+        * Label smoothing (uniform and unigram). 
+        * We connect a maximum entropy based confidence penalty to label smoothing through the direction of the KL divergence.
+* Label-Smoothing Regularization proposed in [Rethinking the Inception Architecture for Computer Vision](https://arxiv.org/pdf/1512.00567.pdf)-A mechanism for encouraging the model to be less confident.
+    * Over-fitting 
+    * Reduces the ability of the model to **adapt: bounded gradient**
+    * 
+{:.message}
+
+### Uncertainty
+{:.message}
+
+### Long-tailed Recognition
+{:.message}
+
+### Meta-learning
+{:.message}
+
+### Ensemble methods
+* [Ensemble methods in machine learning](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=7F08BF5ADDA7E8BB9D5F40EA4241AD81?doi=10.1.1.228.2236&rep=rep1&type=pdf)
+    * Ensemble methods are learning algorithms that construct **a set of classifiers** and then classify new data points by taking **a weighted vote of their predictions.** 
+    * The original ensemble method is **Bayesian averaging** but more recent algorithms include error correcting output coding, Bagging and boosting. **This paper reviews these methods and explains why ensembles can often perform better than any single classifier.**
+        * Bayesian Voting Enumerating the Hypotheses. 
+        * Bagging: Bagging presents the learning algorithm with a training set that consists of a sample of $m$ training examples drawn randomly with replacement from the original training set of $m$ items. 
+        * ...
+{:.message}
+
+
 
 ### Kullback-Leibler Divergence
  * [How to approximate our data (choose a parameterized distribution => optimise its parameters): KL Divergence helps us to measure just how much information we lose when we choose an approximation compared with our observations.](https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained)

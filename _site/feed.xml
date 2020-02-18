@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-18T17:26:30+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Welcome to my personal website&quot;. **3rd Year PhD Student**, will graduate in Sep 2020.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-18T20:28:32+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
 </subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Code Releasing of My Recent Work-Derivative Manipulation</title><link href="http://localhost:4000/blogs/2020-02-18-code-releasing/" rel="alternate" type="text/html" title="Code Releasing of My Recent Work-Derivative Manipulation" /><published>2020-02-18T00:00:00+00:00</published><updated>2020-02-18T00:00:00+00:00</updated><id>http://localhost:4000/blogs/code-releasing</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-18-code-releasing/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;../../my_docs/IMAE_Code_Illustration&quot;&gt;IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters&lt;/a&gt;&lt;/p&gt;
@@ -143,7 +143,88 @@ If you want to include hidden files use,
   &lt;li&gt;&lt;a href=&quot;#kullback-leibler-divergence&quot;&gt;Kullback-Leibler Divergence&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#what-is-the-main-difference-between-gan-and-autoencoder&quot;&gt;What is the main difference between GAN and autoencoder&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#whats-the-difference-between-a-variational-autoencoder-vae-and-an-autoencoder&quot;&gt;What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ensemble-methods&quot;&gt;Ensemble methods&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#meta-learning&quot;&gt;Meta-learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#Long-tailed-Recognition&quot;&gt;Long-tailed Recognition&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+
+&lt;h3 id=&quot;knowledge-distillation&quot;&gt;Knowledge Distillation&lt;/h3&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1503.02531.pdf&quot;&gt;Distilling the Knowledge in a Neural Network&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Knowledge Definition: A more
+abstract view of the knowledge, that frees it from any particular instantiation, is that it is a learned mapping from input vectors to output vectors.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;An obvious way to transfer the generalization ability of the cumbersome model to a small model is
+to use the class probabilities produced by the cumbersome model as &lt;strong&gt;“soft targets” for training the
+small model.&lt;/strong&gt; When the soft targets
+have high entropy, they provide much more information per training case than hard targets and much
+less variance in the gradient between training cases, so the small model can often be trained on much
+less data than the original cumbersome model and using a much higher learning rate.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;#ensemble-methods&quot;&gt;A very simple way to improve the performance of almost any machine learning
+algorithm is to train many different models on the same data and then to average
+their predictions&lt;/a&gt; =&amp;gt; cumbersome and may be too computationally expensive&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Compress the knowledge in an ensemble into a single model which is much easier to deploy (distilling the knowledge in an ensemble of models into a single model);&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;confidence-penalty--label-smoothing&quot;&gt;Confidence penalty &amp;amp; Label Smoothing&lt;/h3&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://openreview.net/pdf?id=HkCjNI5ex&quot;&gt;Regularizing Neural Networks by Penalizing Confident Output Distributions&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Output Regularisation&lt;/strong&gt;: Regularizing the output distribution of large, deep neural networks has largely been unexplored.  Output regularization has the property that it is invariant
+to the parameterization of the underlying neural network.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Knowledge definition&lt;/strong&gt;: To motivate output regularizers, we can view the knowledge of a model as the conditional distribution it produces over outputs given an input (Hinton et al., 2015) as opposed to the learned values
+of its parameters.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Distillation definition:&lt;/strong&gt; explicitly training a small network to assign the same probabilities to incorrect
+classes as a large network or ensemble of networks that generalizes well.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Two output regularizers&lt;/strong&gt;:
+        &lt;ul&gt;
+          &lt;li&gt;A maximum entropy based confidence penalty;&lt;/li&gt;
+          &lt;li&gt;Label smoothing (uniform and unigram).&lt;/li&gt;
+          &lt;li&gt;We connect a maximum entropy based confidence penalty to label smoothing through the direction of the KL divergence.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Label-Smoothing Regularization proposed in &lt;a href=&quot;https://arxiv.org/pdf/1512.00567.pdf&quot;&gt;Rethinking the Inception Architecture for Computer Vision&lt;/a&gt;-A mechanism for encouraging the model to be less confident.
+    &lt;ul&gt;
+      &lt;li&gt;Over-fitting&lt;/li&gt;
+      &lt;li&gt;Reduces the ability of the model to &lt;strong&gt;adapt: bounded gradient&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class=&quot;message&quot; id=&quot;uncertainty&quot;&gt;Uncertainty&lt;/h3&gt;
+
+&lt;h3 class=&quot;message&quot; id=&quot;long-tailed-recognition&quot;&gt;Long-tailed Recognition&lt;/h3&gt;
+
+&lt;h3 class=&quot;message&quot; id=&quot;meta-learning&quot;&gt;Meta-learning&lt;/h3&gt;
+
+&lt;h3 id=&quot;ensemble-methods&quot;&gt;Ensemble methods&lt;/h3&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=7F08BF5ADDA7E8BB9D5F40EA4241AD81?doi=10.1.1.228.2236&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;Ensemble methods in machine learning&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Ensemble methods are learning algorithms that construct &lt;strong&gt;a set of classifiers&lt;/strong&gt; and then classify new data points by taking &lt;strong&gt;a weighted vote of their predictions.&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;The original ensemble method is &lt;strong&gt;Bayesian averaging&lt;/strong&gt; but more recent algorithms include error correcting output coding, Bagging and boosting. &lt;strong&gt;This paper reviews these methods and explains why ensembles can often perform better than any single classifier.&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Bayesian Voting Enumerating the Hypotheses.&lt;/li&gt;
+          &lt;li&gt;Bagging: Bagging presents the learning algorithm with a training set that consists of a sample of $m$ training examples drawn randomly with replacement from the original training set of $m$ items.&lt;/li&gt;
+          &lt;li&gt;…&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;kullback-leibler-divergence&quot;&gt;Kullback-Leibler Divergence&lt;/h3&gt;
 &lt;ul class=&quot;message&quot;&gt;
@@ -197,7 +278,7 @@ If you want to include hidden files use,
   &lt;li&gt;&lt;a href=&quot;http://efrosgans.eecs.berkeley.edu/CVPR18_slides/VAE_GANS_by_Rosca.pdf&quot;&gt;VAEs and GANs
 Mihaela Rosca&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://syncedreview.com/2019/06/06/going-beyond-gan-new-deepmind-vae-model-generates-high-fidelity-human-faces/&quot;&gt;Going Beyond GAN? New DeepMind VAE Model Generates High Fidelity Human Faces&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Kullback-Leibler Divergence What is the main difference between GAN and autoencoder What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?</summary></entry><entry><title type="html">ICLR-2020</title><link href="http://localhost:4000/paperlists/2020-01-02-ICLR/" rel="alternate" type="text/html" title="ICLR-2020" /><published>2020-01-02T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ICLR</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-01-02-ICLR/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Kullback-Leibler Divergence What is the main difference between GAN and autoencoder What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder? Ensemble methods Meta-learning Long-tailed Recognition</summary></entry><entry><title type="html">ICLR-2020</title><link href="http://localhost:4000/paperlists/2020-01-02-ICLR/" rel="alternate" type="text/html" title="ICLR-2020" /><published>2020-01-02T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ICLR</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-01-02-ICLR/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 
 &lt;h2 id=&quot;foundation-of-deep-learning&quot;&gt;Foundation of Deep Learning&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;
