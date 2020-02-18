@@ -12,18 +12,23 @@ comment: true
 0. [Kullback-Leibler Divergence](#kullback-leibler-divergence)
 0. [What is the main difference between GAN and autoencoder](#what-is-the-main-difference-between-gan-and-autoencoder)
 0. [What's the difference between a Variational Autoencoder (VAE) and an Autoencoder?](#whats-the-difference-between-a-variational-autoencoder-vae-and-an-autoencoder)
-0. [Ensemble methods](#ensemble-methods)
+
+0. [Knowledge Distillation](#knowledge-distillation)
+0. [Confidence penalty & Label Smoothing && Ouput Regularisation](#confidence-penalty--label-smoothing--ouput-regularisation)
+
+0. [Uncertainty](#uncertainty)
+0. [Long-tailed Recognition](#long-tailed-recognition)
 0. [Meta-learning](#meta-learning)
-0. [Long-tailed Recognition](#Long-tailed-Recognition)
+0. [Ensemble methods](#ensemble-methods)
 {:.message}
 
 
 ### Knowledge Distillation
 * [Distilling the Knowledge in a Neural Network](https://arxiv.org/pdf/1503.02531.pdf)
-    * Knowledge Definition: A more
+    * **Knowledge definition**: A more
 abstract view of the knowledge, that frees it from any particular instantiation, is that it is a learned mapping from input vectors to output vectors.
 
-    *  An obvious way to transfer the generalization ability of the cumbersome model to a small model is
+    *  An obvious way to **transfer the generalization ability of the cumbersome model to a small model** is
 to use the class probabilities produced by the cumbersome model as **“soft targets” for training the
 small model.** When the soft targets
 have high entropy, they provide much more information per training case than hard targets and much
@@ -34,12 +39,12 @@ less data than the original cumbersome model and using a much higher learning ra
 algorithm is to train many different models on the same data and then to average
 their predictions](#ensemble-methods) => cumbersome and may be too computationally expensive
 
-    * Compress the knowledge in an ensemble into a single model which is much easier to deploy (distilling the knowledge in an ensemble of models into a single model);
+    * **Compress/distill the knowledge in an ensemble into a single model** which is much easier to deploy (distilling the knowledge in an ensemble of models into a single model);
 {:.message}
 
-### Confidence penalty & Label Smoothing
+### Confidence penalty & Label Smoothing && Ouput Regularisation
 * [Regularizing Neural Networks by Penalizing Confident Output Distributions](https://openreview.net/pdf?id=HkCjNI5ex)
-    * **Output Regularisation**: Regularizing the output distribution of large, deep neural networks has largely been unexplored.  Output regularization has the property that it is invariant
+    * **Output regularisation**: Regularizing the output distribution of large, deep neural networks has largely been unexplored.  Output regularization has the property that it is invariant
 to the parameterization of the underlying neural network.
     * **Knowledge definition**: To motivate output regularizers, we can view the knowledge of a model as the conditional distribution it produces over outputs given an input (Hinton et al., 2015) as opposed to the learned values
 of its parameters.
@@ -49,10 +54,30 @@ classes as a large network or ensemble of networks that generalizes well.
         * A maximum entropy based confidence penalty;
         * Label smoothing (uniform and unigram). 
         * We connect a maximum entropy based confidence penalty to label smoothing through the direction of the KL divergence.
+    * ANNEALING AND THRESHOLDING THE CONFIDENCE PENALTY
+        *  Suggesting a confidence penalty
+that is weak at the beginning of training and strong near convergence. 
+        * Only penalize output distributions when they are below a certain entropy threshold
+* Label/Objective smoothing: 
+    * Smoothing the labels with a uniform distribution-[Rethinking the Inception Architecture](https://arxiv.org/pdf/1512.00567.pdf)
+    
+    * Smooth the labels with a teacher model [Distilling, Hinton et al., 2015](https://arxiv.org/pdf/1503.02531.pdf) 
+    
+    * Smooth the labels with the model’s own distribution-[TRAINING DEEP NEURAL NETWORKS
+ON NOISY LABELS WITH BOOTSTRAPPING (Reed et al., 2014)](https://arxiv.org/pdf/1412.6596.pdf)
+    
+    * Adding label noise simply-[Disturblabel: Regularizing cnn on the loss layer--CVPR 2016](https://www.zpascal.net/cvpr2016/Xie_DisturbLabel_Regularizing_CNN_CVPR_2016_paper.pdf)
+    
+    * **Distillation and self-distillation both
+regularize a network by incorporating information about the ratios between incorrect classes.**
+
 * Label-Smoothing Regularization proposed in [Rethinking the Inception Architecture for Computer Vision](https://arxiv.org/pdf/1512.00567.pdf)-A mechanism for encouraging the model to be less confident.
     * Over-fitting 
     * Reduces the ability of the model to **adapt: bounded gradient**
-    * 
+
+* Virtual adversarial training (VAT) [Distributional
+smoothing by virtual adversarial examples](https://arxiv.org/pdf/1507.00677.pdf)
+    * Another promising smoothing regularizer. However, it has multiple hyperparameters, significantly more computation in grid-searching
 {:.message}
 
 ### Uncertainty

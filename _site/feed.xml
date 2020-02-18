@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-18T20:28:32+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-18T21:44:22+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
 </subtitle><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Code Releasing of My Recent Work-Derivative Manipulation</title><link href="http://localhost:4000/blogs/2020-02-18-code-releasing/" rel="alternate" type="text/html" title="Code Releasing of My Recent Work-Derivative Manipulation" /><published>2020-02-18T00:00:00+00:00</published><updated>2020-02-18T00:00:00+00:00</updated><id>http://localhost:4000/blogs/code-releasing</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-18-code-releasing/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;../../my_docs/IMAE_Code_Illustration&quot;&gt;IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters&lt;/a&gt;&lt;/p&gt;
@@ -142,10 +142,17 @@ If you want to include hidden files use,
 &lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Paper notes on Anomalies&amp;amp;Regularisation</summary></entry><entry><title type="html">Notes on Core ML Topics</title><link href="http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/" rel="alternate" type="text/html" title="Notes on Core ML Topics" /><published>2020-02-14T00:00:00+00:00</published><updated>2020-02-14T00:00:00+00:00</updated><id>http://localhost:4000/blogs/Core-machine-learning-topics</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#kullback-leibler-divergence&quot;&gt;Kullback-Leibler Divergence&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#what-is-the-main-difference-between-gan-and-autoencoder&quot;&gt;What is the main difference between GAN and autoencoder&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#whats-the-difference-between-a-variational-autoencoder-vae-and-an-autoencoder&quot;&gt;What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#ensemble-methods&quot;&gt;Ensemble methods&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#whats-the-difference-between-a-variational-autoencoder-vae-and-an-autoencoder&quot;&gt;What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#knowledge-distillation&quot;&gt;Knowledge Distillation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;#confidence-penalty--label-smoothing--ouput-regularisation&quot;&gt;Confidence penalty &amp;amp; Label Smoothing &amp;amp;&amp;amp; Ouput Regularisation&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#uncertainty&quot;&gt;Uncertainty&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#long-tailed-recognition&quot;&gt;Long-tailed Recognition&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#meta-learning&quot;&gt;Meta-learning&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#Long-tailed-Recognition&quot;&gt;Long-tailed Recognition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ensemble-methods&quot;&gt;Ensemble methods&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&quot;knowledge-distillation&quot;&gt;Knowledge Distillation&lt;/h3&gt;
@@ -153,11 +160,11 @@ If you want to include hidden files use,
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1503.02531.pdf&quot;&gt;Distilling the Knowledge in a Neural Network&lt;/a&gt;
     &lt;ul&gt;
       &lt;li&gt;
-        &lt;p&gt;Knowledge Definition: A more
+        &lt;p&gt;&lt;strong&gt;Knowledge definition&lt;/strong&gt;: A more
 abstract view of the knowledge, that frees it from any particular instantiation, is that it is a learned mapping from input vectors to output vectors.&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;An obvious way to transfer the generalization ability of the cumbersome model to a small model is
+        &lt;p&gt;An obvious way to &lt;strong&gt;transfer the generalization ability of the cumbersome model to a small model&lt;/strong&gt; is
 to use the class probabilities produced by the cumbersome model as &lt;strong&gt;“soft targets” for training the
 small model.&lt;/strong&gt; When the soft targets
 have high entropy, they provide much more information per training case than hard targets and much
@@ -170,17 +177,17 @@ algorithm is to train many different models on the same data and then to average
 their predictions&lt;/a&gt; =&amp;gt; cumbersome and may be too computationally expensive&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;Compress the knowledge in an ensemble into a single model which is much easier to deploy (distilling the knowledge in an ensemble of models into a single model);&lt;/p&gt;
+        &lt;p&gt;&lt;strong&gt;Compress/distill the knowledge in an ensemble into a single model&lt;/strong&gt; which is much easier to deploy (distilling the knowledge in an ensemble of models into a single model);&lt;/p&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;confidence-penalty--label-smoothing&quot;&gt;Confidence penalty &amp;amp; Label Smoothing&lt;/h3&gt;
+&lt;h3 id=&quot;confidence-penalty--label-smoothing--ouput-regularisation&quot;&gt;Confidence penalty &amp;amp; Label Smoothing &amp;amp;&amp;amp; Ouput Regularisation&lt;/h3&gt;
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;https://openreview.net/pdf?id=HkCjNI5ex&quot;&gt;Regularizing Neural Networks by Penalizing Confident Output Distributions&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Output Regularisation&lt;/strong&gt;: Regularizing the output distribution of large, deep neural networks has largely been unexplored.  Output regularization has the property that it is invariant
+      &lt;li&gt;&lt;strong&gt;Output regularisation&lt;/strong&gt;: Regularizing the output distribution of large, deep neural networks has largely been unexplored.  Output regularization has the property that it is invariant
 to the parameterization of the underlying neural network.&lt;/li&gt;
       &lt;li&gt;&lt;strong&gt;Knowledge definition&lt;/strong&gt;: To motivate output regularizers, we can view the knowledge of a model as the conditional distribution it produces over outputs given an input (Hinton et al., 2015) as opposed to the learned values
 of its parameters.&lt;/li&gt;
@@ -193,13 +200,46 @@ classes as a large network or ensemble of networks that generalizes well.&lt;/li
           &lt;li&gt;We connect a maximum entropy based confidence penalty to label smoothing through the direction of the KL divergence.&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
+      &lt;li&gt;ANNEALING AND THRESHOLDING THE CONFIDENCE PENALTY
+        &lt;ul&gt;
+          &lt;li&gt;Suggesting a confidence penalty
+that is weak at the beginning of training and strong near convergence.&lt;/li&gt;
+          &lt;li&gt;Only penalize output distributions when they are below a certain entropy threshold&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Label/Objective smoothing:
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Smoothing the labels with a uniform distribution-&lt;a href=&quot;https://arxiv.org/pdf/1512.00567.pdf&quot;&gt;Rethinking the Inception Architecture&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Smooth the labels with a teacher model &lt;a href=&quot;https://arxiv.org/pdf/1503.02531.pdf&quot;&gt;Distilling, Hinton et al., 2015&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Smooth the labels with the model’s own distribution-&lt;a href=&quot;https://arxiv.org/pdf/1412.6596.pdf&quot;&gt;TRAINING DEEP NEURAL NETWORKS
+ON NOISY LABELS WITH BOOTSTRAPPING (Reed et al., 2014)&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Adding label noise simply-&lt;a href=&quot;https://www.zpascal.net/cvpr2016/Xie_DisturbLabel_Regularizing_CNN_CVPR_2016_paper.pdf&quot;&gt;Disturblabel: Regularizing cnn on the loss layer–CVPR 2016&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;Distillation and self-distillation both
+regularize a network by incorporating information about the ratios between incorrect classes.&lt;/strong&gt;&lt;/p&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Label-Smoothing Regularization proposed in &lt;a href=&quot;https://arxiv.org/pdf/1512.00567.pdf&quot;&gt;Rethinking the Inception Architecture for Computer Vision&lt;/a&gt;-A mechanism for encouraging the model to be less confident.
     &lt;ul&gt;
       &lt;li&gt;Over-fitting&lt;/li&gt;
       &lt;li&gt;Reduces the ability of the model to &lt;strong&gt;adapt: bounded gradient&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Virtual adversarial training (VAT) &lt;a href=&quot;https://arxiv.org/pdf/1507.00677.pdf&quot;&gt;Distributional
+smoothing by virtual adversarial examples&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Another promising smoothing regularizer. However, it has multiple hyperparameters, significantly more computation in grid-searching&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -278,7 +318,7 @@ classes as a large network or ensemble of networks that generalizes well.&lt;/li
   &lt;li&gt;&lt;a href=&quot;http://efrosgans.eecs.berkeley.edu/CVPR18_slides/VAE_GANS_by_Rosca.pdf&quot;&gt;VAEs and GANs
 Mihaela Rosca&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://syncedreview.com/2019/06/06/going-beyond-gan-new-deepmind-vae-model-generates-high-fidelity-human-faces/&quot;&gt;Going Beyond GAN? New DeepMind VAE Model Generates High Fidelity Human Faces&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Kullback-Leibler Divergence What is the main difference between GAN and autoencoder What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder? Ensemble methods Meta-learning Long-tailed Recognition</summary></entry><entry><title type="html">ICLR-2020</title><link href="http://localhost:4000/paperlists/2020-01-02-ICLR/" rel="alternate" type="text/html" title="ICLR-2020" /><published>2020-01-02T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ICLR</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-01-02-ICLR/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Xinshao Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Kullback-Leibler Divergence What is the main difference between GAN and autoencoder What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?</summary></entry><entry><title type="html">ICLR-2020</title><link href="http://localhost:4000/paperlists/2020-01-02-ICLR/" rel="alternate" type="text/html" title="ICLR-2020" /><published>2020-01-02T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ICLR</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-01-02-ICLR/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 
 &lt;h2 id=&quot;foundation-of-deep-learning&quot;&gt;Foundation of Deep Learning&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;

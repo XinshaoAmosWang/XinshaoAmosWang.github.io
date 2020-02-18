@@ -222,49 +222,43 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 <ul>
   <li>
-    <p>Machine Learning: Deep Metric Learning, Robust Representation Learning under Arbitrary Anomalies.</p>
+    <p>Machine Learning (Deep Metric Learning, Robust Representation Learning under Adverse
+Conditions, e.g., Noisy Data and Sample Imbalance).</p>
   </li>
   <li>
-    <p>Computer Vision: Image/Video Recognition, Person Re-identification (ReID).</p>
+    <p>Computer Vision (Image/Video Recognition, Person Re-identification).</p>
   </li>
 </ul>
 
-<h2 id="robust-learning-and-robust-inference-in-the-context-of-deep-learning-noisy-labels-noisy-observations-outliers-adversaries-etc">Robust Learning and Robust Inference in the context of deep learning: noisy labels, noisy observations, outliers, adversaries, etc.</h2>
+<h3 id="robust-learning-and-inference-under-adverse-conditions-eg-noisy-labels-noisy-observations-outliers-adversaries-etc">Robust Learning and Inference under Adverse Conditions, e.g., noisy labels, noisy observations, outliers, adversaries, etc.</h3>
 
 <p><strong>Why is it important?</strong></p>
 
 <p>DNNs can fit well training examples with random lables. ‘Understanding deep learning requires rethinking generalization, <a href="https://arxiv.org/abs/1611.03530">https://arxiv.org/abs/1611.03530</a>’</p>
 
-<p>In the large-scale training datasets, noisy training data points generally exist. Specifically and explicitly, the observations and their corresponding semantic labels may not matched. `Emphasis Regularisation by Gradient Rescaling for Training Deep Neural Networks with Noisy Labels, <a href="https://arxiv.org/pdf/1905.11233.pdf">https://arxiv.org/pdf/1905.11233.pdf</a>’</p>
+<p>In the large-scale training datasets, noisy training data points generally exist. Specifically and explicitly, the observations and their corresponding semantic labels may not matched.</p>
 
 <p>Fortunately, the concept of adversarial examples become universe/unrestricted now, i.e., any examples that fool a model can be viewed as a adversary, e.g., examples with noisy labels which are fitted well during training, outliers which are fitted well during training or get high confidence scores during testing, examples with small pixel perturbation and perceptually ignorable which fool the model.</p>
 
-<p>Paper reading: <a href="https://drive.google.com/file/d/1fU3N_u-_puOwEbupK6aOENerP2S45tZX/view?usp=sharing">https://drive.google.com/file/d/1fU3N_u-_puOwEbupK6aOENerP2S45tZX/view?usp=sharing</a></p>
+<h3 id="research-delivering">Research Delivering:</h3>
+<ul>
+  <li><a href="https://github.com/XinshaoAmosWang/DerivativeManipulation">Derivative Manipulation for General Example</a></li>
+  <li><a href="https://github.com/XinshaoAmosWang/Improving-Mean-Absolute-Error-against-CCE">IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters</a></li>
+  <li><a href="https://www.reddit.com/r/MachineLearning/comments/f4x1sh/r_instance_cross_entropy_for_deep_metric_learning/?utm_content=post&amp;utm_medium=twitter&amp;utm_source=share&amp;utm_name=submit&amp;utm_term=t3_f4x1sh">Instance Cross Entropy for Deep Metric Learning and its application in SimCLR-A Simple Framework for Contrastive Learning of Visual Representations</a></li>
+  <li><a href="https://xinshaoamoswang.github.io/blogs/2020-02-18-code-releasing/">Code Releasing of My Recent Work-Derivative Manipulation</a></li>
+</ul>
 
-<p>Github page: <a href="https://github.com/XinshaoAmosWang/Emphasis-Regularisation-by-Gradient-Rescaling/wiki/Robust-Learning-and-Robust-Inference-in-the-context-of-deep-learning:-noisy-examples,-outliers,-adversaries,-etc">https://github.com/XinshaoAmosWang/Emphasis-Regularisation-by-Gradient-Rescaling/wiki/Robust-Learning-and-Robust-Inference-in-the-context-of-deep-learning:-noisy-examples,-outliers,-adversaries,-etc</a></p>
-
-<p><strong>Are deep models robust to massive noise intrinsically?</strong></p>
+<h3 id="are-deep-models-robust-to-massive-noise-intrinsically">Are deep models robust to massive noise intrinsically?</h3>
 
 <ul>
   <li>No: <a href="https://arxiv.org/abs/1611.03530">DNNs can fit well training examples with random lables.</a></li>
   <li>
     <p>Yes: <a href="https://arxiv.org/abs/1705.10694">Deep Learning is Robust to Massive Label Noise</a>?</p>
   </li>
-  <li>
-    <p>You may have your own answer if you read:</p>
-
-    <ul>
-      <li>
-        <p><a href="https://github.com/XinshaoAmosWang/Improving-Mean-Absolute-Error-against-CCE">How to preserve MAE’s (mean absolute error) noise-tolerance and improve its fitting ability?</a></p>
-      </li>
-      <li>
-        <p><a href="https://github.com/XinshaoAmosWang/Emphasis-Regularisation-by-Gradient-Rescaling">An Extremely Simple and Principled Solution for Avoiding Overfitting and Achieving Better Generalisation</a></p>
-      </li>
-    </ul>
-  </li>
+  <li>You may have your own answer if you read <a href="#research-delivering">Research Delivering</a>,   <a href="https://xinshaoamoswang.github.io/blogs/2020-02-14-Core-machine-learning-topics/#confidence-penalty--label-smoothing--ouput-regularisation">Confidence penalty &amp; Label Smoothing &amp;&amp; Ouput Regularisation</a></li>
 </ul>
 
-<p><strong>Intuitive concepts to keep in mind</strong></p>
+<h3 id="intuitive-concepts-to-keep-in-mind">Intuitive concepts to keep in mind</h3>
 
 <ul>
   <li>
@@ -277,6 +271,10 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
     <p>Learning objective: A deep model is supposed to extract/learn meaningful patterns from training data, while avoid fitting any anomaly.</p>
   </li>
 </ul>
+
+<h3 id="related-papers-reading">Related papers reading</h3>
+<p><a href="https://drive.google.com/file/d/1fU3N_u-_puOwEbupK6aOENerP2S45tZX/view?usp=sharing">https://drive.google.com/file/d/1fU3N_u-_puOwEbupK6aOENerP2S45tZX/view?usp=sharing</a></p>
+
 
 </article>
 
