@@ -19,7 +19,7 @@ baseurl:               ''
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Xinshao Wang
+title:                 Xinshao (Amos) Wang
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -34,7 +34,7 @@ tagline:               >
   Computer Vision (Image/Video Recognition including retrieval and clustering, Person ReID).
 
 # A list of keywords for your blog
-keywords:              [Xinshao Wang; Machine Learning, Computer Vision, Robust Learning, Deep Metric Learning, Image Recognition, Video Recognition, Person ReID]
+keywords:              [Xinshao (Amos) Wang; Machine Learning, Computer Vision, Robust Learning, Deep Metric Learning, Image Recognition, Video Recognition, Person ReID]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
@@ -43,12 +43,12 @@ logo:                  /assets/icons/android-chrome-192x192.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
-  name:                Xinshao Wang
+  name:                Xinshao (Amos) Wang
   Nickname:                Amos
   email:               xwang at qub dot ac dot uk xwang at qub dot ac dot uk
   # Used by `jekyll-seo-tag`:
   twitter:             <username>
-  about:             Xinshao Wang, ML/DL/AI Research with applications to CV/NLP, etc 
+  about:             Xinshao (Amos) Wang, ML/DL/AI Research with applications to CV/NLP, etc 
 
 # Add links to the sidebar.
 menu:
