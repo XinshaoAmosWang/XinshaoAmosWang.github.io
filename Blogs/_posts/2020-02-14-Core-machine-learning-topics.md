@@ -83,9 +83,25 @@ smoothing by virtual adversarial examples](https://arxiv.org/pdf/1507.00677.pdf)
 
 
 ### Uncertainty
+* [The variational auto-encoder](https://ermongroup.github.io/cs228-notes/extras/vae/)
+
+* [Information Constraints on Auto-Encoding Variational Bayes-NeurIPS 2018](https://papers.nips.cc/paper/7850-information-constraints-on-auto-encoding-variational-bayes.pdf)
+
+* [Decision-Making with Auto-Encoding Variational Bayes](https://arxiv.org/pdf/2002.07217.pdf)
+
+* [Auto-Encoding Variational Bayes-ICLR 2014](https://arxiv.org/pdf/1312.6114.pdf)
+
+* [Deep Variational Information Bottleneck-ICLR2017](https://openreview.net/forum?id=HyxQzBceg)
+
+* [Deep Variational Canonical Correlation Analysis](https://arxiv.org/pdf/1610.03454.pdf)
+
+* [The information bottleneck (IB) principle--The information
+bottleneck method](https://arxiv.org/pdf/physics/0004057.pdf)
+
+* [CS 228 - Probabilistic Graphical Models](https://ermongroup.github.io/cs228-notes/)
+
+* [Rethinking Person Re-Identification with Confidence](https://arxiv.org/pdf/1906.04692.pdf)
 {:.message}
-
-
 
 
 
