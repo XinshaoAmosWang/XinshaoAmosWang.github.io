@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Notes on Core ML Topics
+title: Notes on Core ML Techniques
 description: >
   
 #image: /assets/img/blog/steve-harvey.jpg
@@ -17,7 +17,7 @@ comment: true
 0. [Confidence penalty & Label Smoothing && Ouput Regularisation](#confidence-penalty--label-smoothing--ouput-regularisation)
 
 0. [Uncertainty](#uncertainty)
-0. [Long-tailed Recognition](#long-tailed-recognition)
+0. [Long-tailed Recognition-Sample Imbalance](#long-tailed-recognition)
 0. [Meta-learning](#meta-learning)
 0. [Ensemble methods](#ensemble-methods)
 {:.message}
@@ -80,14 +80,54 @@ smoothing by virtual adversarial examples](https://arxiv.org/pdf/1507.00677.pdf)
     * Another promising smoothing regularizer. However, it has multiple hyperparameters, significantly more computation in grid-searching
 {:.message}
 
+
+
 ### Uncertainty
 {:.message}
 
+
+
+
+
 ### Long-tailed Recognition
+* [DECOUPLING REPRESENTATION AND CLASSIFIER
+FOR LONG-TAILED RECOGNITION-ICLR2020](https://openreview.net/references/pdf?id=nHObduxXz)
+    * Representation Learning: We first train models to learn representations with different sampling strategies, including the standard instance-based sampling, class-balanced sampling and a mixture of them. 
+    * Classification: We study three different basic approaches to obtain a classifier with balanced decision boundaries, on top of the learned representations.
 {:.message}
 
+
+
+
 ### Meta-learning
+* [Confusion on the definition of Meta-learning](https://www.reddit.com/r/MachineLearning/comments/f6e25t/r_confusion_on_the_definition_of_metalearning/)
+
+* [Few-shot Learning is an instantiation of Meta-learning](../../my_docs/few-shot)
+* [MetaCleaner: Learning to Hallucinate Clean Representations for Noisy-Labeled Visual Recognition](http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_MetaCleaner_Learning_to_Hallucinate_Clean_Representations_for_Noisy-Labeled_Visual_Recognition_CVPR_2019_paper.pdf)
+    * Noisy Weighting: estimate the confidence scores of all the images in the noisy subset;  **MetaCleaner compares these representations in the feature space => discover relations between images => generate the confidence score of each image in the subset.** 
+    * Clean Hallucinating: to hallucinate a `clean‘ representation of a class from the noisy subset, by summarizing the noisy images with their confidence scores;
+    * **MetaCleaner as a new layer before classifier: batch size $K \times N => K$, $K$ categories, $N$ images per class in the batch**.  
+    * Different from prototypical network, our MetaCleaner mainly develops a robust classifier to reduce confusion of noisy labels. Hence, it adaptively uses the weighted prototype as a ‘clean’ representation to generalize softmax classifier, instead of using the mean prototype to construct a metric classifier for low-shot learning.
+    * **Why is this called meta-learning?** 
+* [Learning to Learn From Noisy Labeled Data-CVPR 2019](http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Learning_to_Learn_From_Noisy_Labeled_Data_CVPR_2019_paper.pdf)
+    * [My Understanding: https://github.com/LiJunnan1992/MLNT/issues/1](https://github.com/LiJunnan1992/MLNT/issues/1)
+        * Iteratively Improve the Teacher/Oracle == Soft Target
+        * **Meta-obejctive-training/testing:**   The meta-training sees synthetic noisy training examples. After training on them, the meta-testing evaluates its consistency with oracle and aims to maximise the consistency, i.e., making it unaffected after seeing synthetic noise.
+    * [Reddit Analysis](https://www.reddit.com/r/MachineLearning/comments/bws5iv/r_cvpr_2019_noisetolerant_training_work_learning/): Extremely complex in practice. However, the ideas are interesting and novel. 
+* [Learning to Reweight Examples for Robust Deep Learning-ICML 2018](https://arxiv.org/pdf/1803.09050.pdf)- Simultaneously minimize the loss on **a clean unbiased validation set**.
+    * **Meta-objective**: a novel meta-learning algorithm that learns to assign weights to training examples based on their gradient directions. 
+    * **Solution**:  Suppose that **a pair of training and validation examples are very similar**, and they also provide
+**similar gradient directions**, then this training example is
+helpful and should be up-weighted, and conversely, if they
+provide **opposite gradient directions**, this training example
+is harmful and should be downweighed.
+* [Meta-Weight-Net: Learning an Explicit Mapping
+For Sample Weighting-NeurIPS 2019](https://papers.nips.cc/paper/8467-meta-weight-net-learning-an-explicit-mapping-for-sample-weighting.pdf)
+    * The major difference with [Learning to Reweight Examples](https://arxiv.org/pdf/1803.09050.pdf) is that the weights are implicitly learned there, without an explicit weighting function. 
+        * **I am skeptical and not convinced here!**
 {:.message}
+
+
 
 ### Ensemble methods
 * [Ensemble methods in machine learning](http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=7F08BF5ADDA7E8BB9D5F40EA4241AD81?doi=10.1.1.228.2236&rep=rep1&type=pdf)

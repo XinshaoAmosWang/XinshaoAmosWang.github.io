@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-18T22:14:55+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-19T17:42:55+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
 </subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Code Releasing of My Recent Work-Derivative Manipulation</title><link href="http://localhost:4000/blogs/2020-02-18-code-releasing/" rel="alternate" type="text/html" title="Code Releasing of My Recent Work-Derivative Manipulation" /><published>2020-02-18T00:00:00+00:00</published><updated>2020-02-18T00:00:00+00:00</updated><id>http://localhost:4000/blogs/code-releasing</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-18-code-releasing/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;../../my_docs/IMAE_Code_Illustration&quot;&gt;IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters&lt;/a&gt;&lt;/p&gt;
@@ -139,7 +139,7 @@ If you want to include hidden files use,
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Paper notes on Anomalies&amp;amp;Regularisation</title><link href="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/" rel="alternate" type="text/html" title="Paper notes on Anomalies&amp;Regularisation" /><published>2020-02-15T00:00:00+00:00</published><updated>2020-02-15T00:00:00+00:00</updated><id>http://localhost:4000/blogs/anomalies-regularisation</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/">&lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;/Papers/AnomalyAndRegularisation/&quot;&gt;Paper notes on Anomalies&amp;amp;Regularisation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Paper notes on Anomalies&amp;amp;Regularisation</summary></entry><entry><title type="html">Notes on Core ML Topics</title><link href="http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/" rel="alternate" type="text/html" title="Notes on Core ML Topics" /><published>2020-02-14T00:00:00+00:00</published><updated>2020-02-14T00:00:00+00:00</updated><id>http://localhost:4000/blogs/Core-machine-learning-topics</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/">&lt;ol class=&quot;message&quot;&gt;
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Paper notes on Anomalies&amp;amp;Regularisation</summary></entry><entry><title type="html">Notes on Core ML Techniques</title><link href="http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/" rel="alternate" type="text/html" title="Notes on Core ML Techniques" /><published>2020-02-14T00:00:00+00:00</published><updated>2020-02-14T00:00:00+00:00</updated><id>http://localhost:4000/blogs/Core-machine-learning-topics</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#kullback-leibler-divergence&quot;&gt;Kullback-Leibler Divergence&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#what-is-the-main-difference-between-gan-and-autoencoder&quot;&gt;What is the main difference between GAN and autoencoder&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;
@@ -150,7 +150,7 @@ If you want to include hidden files use,
     &lt;p&gt;&lt;a href=&quot;#confidence-penalty--label-smoothing--ouput-regularisation&quot;&gt;Confidence penalty &amp;amp; Label Smoothing &amp;amp;&amp;amp; Ouput Regularisation&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#uncertainty&quot;&gt;Uncertainty&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#long-tailed-recognition&quot;&gt;Long-tailed Recognition&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#long-tailed-recognition&quot;&gt;Long-tailed Recognition-Sample Imbalance&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#meta-learning&quot;&gt;Meta-learning&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#ensemble-methods&quot;&gt;Ensemble methods&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -246,9 +246,64 @@ smoothing by virtual adversarial examples&lt;/a&gt;
 
 &lt;h3 class=&quot;message&quot; id=&quot;uncertainty&quot;&gt;Uncertainty&lt;/h3&gt;
 
-&lt;h3 class=&quot;message&quot; id=&quot;long-tailed-recognition&quot;&gt;Long-tailed Recognition&lt;/h3&gt;
+&lt;h3 id=&quot;long-tailed-recognition&quot;&gt;Long-tailed Recognition&lt;/h3&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://openreview.net/references/pdf?id=nHObduxXz&quot;&gt;DECOUPLING REPRESENTATION AND CLASSIFIER
+FOR LONG-TAILED RECOGNITION-ICLR2020&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Representation Learning: We first train models to learn representations with different sampling strategies, including the standard instance-based sampling, class-balanced sampling and a mixture of them.&lt;/li&gt;
+      &lt;li&gt;Classification: We study three different basic approaches to obtain a classifier with balanced decision boundaries, on top of the learned representations.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 class=&quot;message&quot; id=&quot;meta-learning&quot;&gt;Meta-learning&lt;/h3&gt;
+&lt;h3 id=&quot;meta-learning&quot;&gt;Meta-learning&lt;/h3&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/MachineLearning/comments/f6e25t/r_confusion_on_the_definition_of_metalearning/&quot;&gt;Confusion on the definition of Meta-learning&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;../../my_docs/few-shot&quot;&gt;Few-shot Learning is an instantiation of Meta-learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_MetaCleaner_Learning_to_Hallucinate_Clean_Representations_for_Noisy-Labeled_Visual_Recognition_CVPR_2019_paper.pdf&quot;&gt;MetaCleaner: Learning to Hallucinate Clean Representations for Noisy-Labeled Visual Recognition&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Noisy Weighting: estimate the confidence scores of all the images in the noisy subset;  &lt;strong&gt;MetaCleaner compares these representations in the feature space =&amp;gt; discover relations between images =&amp;gt; generate the confidence score of each image in the subset.&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Clean Hallucinating: to hallucinate a `clean‘ representation of a class from the noisy subset, by summarizing the noisy images with their confidence scores;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;MetaCleaner as a new layer before classifier: batch size $K \times N =&amp;gt; K$, $K$ categories, $N$ images per class in the batch&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;Different from prototypical network, our MetaCleaner mainly develops a robust classifier to reduce confusion of noisy labels. Hence, it adaptively uses the weighted prototype as a ‘clean’ representation to generalize softmax classifier, instead of using the mean prototype to construct a metric classifier for low-shot learning.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Why is this called meta-learning?&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Learning_to_Learn_From_Noisy_Labeled_Data_CVPR_2019_paper.pdf&quot;&gt;Learning to Learn From Noisy Labeled Data-CVPR 2019&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/LiJunnan1992/MLNT/issues/1&quot;&gt;My Understanding: https://github.com/LiJunnan1992/MLNT/issues/1&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Iteratively Improve the Teacher/Oracle == Soft Target&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Meta-obejctive-training/testing:&lt;/strong&gt;   The meta-training sees synthetic noisy training examples. After training on them, the meta-testing evaluates its consistency with oracle and aims to maximise the consistency, i.e., making it unaffected after seeing synthetic noise.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/MachineLearning/comments/bws5iv/r_cvpr_2019_noisetolerant_training_work_learning/&quot;&gt;Reddit Analysis&lt;/a&gt;: Extremely complex in practice. However, the ideas are interesting and novel.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1803.09050.pdf&quot;&gt;Learning to Reweight Examples for Robust Deep Learning-ICML 2018&lt;/a&gt;- Simultaneously minimize the loss on &lt;strong&gt;a clean unbiased validation set&lt;/strong&gt;.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Meta-objective&lt;/strong&gt;: a novel meta-learning algorithm that learns to assign weights to training examples based on their gradient directions.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Solution&lt;/strong&gt;:  Suppose that &lt;strong&gt;a pair of training and validation examples are very similar&lt;/strong&gt;, and they also provide
+&lt;strong&gt;similar gradient directions&lt;/strong&gt;, then this training example is
+helpful and should be up-weighted, and conversely, if they
+provide &lt;strong&gt;opposite gradient directions&lt;/strong&gt;, this training example
+is harmful and should be downweighed.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://papers.nips.cc/paper/8467-meta-weight-net-learning-an-explicit-mapping-for-sample-weighting.pdf&quot;&gt;Meta-Weight-Net: Learning an Explicit Mapping
+For Sample Weighting-NeurIPS 2019&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;The major difference with &lt;a href=&quot;https://arxiv.org/pdf/1803.09050.pdf&quot;&gt;Learning to Reweight Examples&lt;/a&gt; is that the weights are implicitly learned there, without an explicit weighting function.
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;I am skeptical and not convinced here!&lt;/strong&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;ensemble-methods&quot;&gt;Ensemble methods&lt;/h3&gt;
 &lt;ul class=&quot;message&quot;&gt;
