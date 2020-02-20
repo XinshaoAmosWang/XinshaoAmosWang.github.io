@@ -83,6 +83,8 @@ smoothing by virtual adversarial examples](https://arxiv.org/pdf/1507.00677.pdf)
 
 
 ### Uncertainty
+* [NeurIPS 2018: Predictive Uncertainty Estimation via Prior Networks](https://xinshaoamoswang.github.io/Papers/AnomalyAndRegularisation/#neurips-2018-predictive-uncertainty-estimation-via-prior-networks)
+
 * [The variational auto-encoder](https://ermongroup.github.io/cs228-notes/extras/vae/)
 
 * [Information Constraints on Auto-Encoding Variational Bayes-NeurIPS 2018](https://papers.nips.cc/paper/7850-information-constraints-on-auto-encoding-variational-bayes.pdf)
