@@ -1,5 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-20T11:38:12+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
-</subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Code Releasing of My Recent Work-Derivative Manipulation</title><link href="http://localhost:4000/blogs/2020-02-18-code-releasing/" rel="alternate" type="text/html" title="Code Releasing of My Recent Work-Derivative Manipulation" /><published>2020-02-18T00:00:00+00:00</published><updated>2020-02-18T00:00:00+00:00</updated><id>http://localhost:4000/blogs/code-releasing</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-18-code-releasing/">&lt;ol class=&quot;message&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-02-21T15:22:41+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
+</subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">AAAI-2020</title><link href="http://localhost:4000/paperlists/2020-02-21-AAAI/" rel="alternate" type="text/html" title="AAAI-2020" /><published>2020-02-21T00:00:00+00:00</published><updated>2020-02-21T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/AAAI</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-02-21-AAAI/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
+
+&lt;h2 id=&quot;learning-to-compare-and-retrieve&quot;&gt;Learning to Compare and Retrieve&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1910.04115.pdf&quot;&gt;Active Ordinal Querying for Tuplewise Similarity Learning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Code Releasing of My Recent Work-Derivative Manipulation</title><link href="http://localhost:4000/blogs/2020-02-18-code-releasing/" rel="alternate" type="text/html" title="Code Releasing of My Recent Work-Derivative Manipulation" /><published>2020-02-18T00:00:00+00:00</published><updated>2020-02-18T00:00:00+00:00</updated><id>http://localhost:4000/blogs/code-releasing</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-18-code-releasing/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;../../my_docs/IMAE_Code_Illustration&quot;&gt;IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
@@ -672,65 +677,4 @@ Against Adversarial Attacks&lt;/a&gt;&lt;/li&gt;
 &lt;h2 id=&quot;deep-metric-learning-&quot;&gt;Deep Metric Learning, …&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">ICML-2019</title><link href="http://localhost:4000/paperlists/2019-12-29-ICML/" rel="alternate" type="text/html" title="ICML-2019" /><published>2019-12-29T00:00:00+00:00</published><updated>2019-12-29T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ICML</id><content type="html" xml:base="http://localhost:4000/paperlists/2019-12-29-ICML/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
-
-&lt;h2 id=&quot;label-noise&quot;&gt;Label Noise&lt;/h2&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;http://proceedings.mlr.press/v97/arazo19a/arazo19a.pdf&quot;&gt;Unsupervised Label Noise Modeling and Loss Correction&lt;/a&gt; :+1:
-    &lt;ul&gt;
-      &lt;li&gt;A suitable two-component mixture model as an unsupervised generative model
-of sample loss values during training to allow
-online estimation of the probability that a sample is mislabelled.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1905.05040.pdf&quot;&gt;Understanding and Utilizing Deep Neural Networks Trained with Noisy Labels&lt;/a&gt;-&lt;strong&gt;I am skeptical of their conclusion.&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;We find that &lt;strong&gt;the test accuracy can be
-quantitatively characterized in terms of the noise
-ratio in datasets&lt;/strong&gt;. &lt;strong&gt;The test accuracy
-is a quadratic function of the noise ratio in the
-case of symmetric noise&lt;/strong&gt;, which explains the experimental findings previously published. (&lt;strong&gt;I am not convinced on this!&lt;/strong&gt;)&lt;/li&gt;
-      &lt;li&gt;DNNs tend to learn simple patterns
-first, then gradually memorize all samples, which justifies
-the widely used small-loss criteria: treating samples with
-small training loss as clean ones (Han et al., 2018; Jiang
-et al., 2018).&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://proceedings.mlr.press/v97/song19b/song19b.pdf&quot;&gt;SELFIE: Refurbishing Unclean Samples for Robust Deep Learning&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;robustness&quot;&gt;Robustness&lt;/h2&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;http://proceedings.mlr.press/v97/cohen19c/cohen19c.pdf&quot;&gt;Certified Adversarial Robustness via Randomized Smoothing&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;importance-weighting&quot;&gt;Importance Weighting?&lt;/h2&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;http://proceedings.mlr.press/v97/byrd19a/byrd19a.pdf&quot;&gt;What is the Effect of Importance Weighting in Deep Learning?&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Across tasks, architectures and datasets, our results confirm that for standard neural networks, &lt;strong&gt;weighting has a significant effect early in training.&lt;/strong&gt;
-  However, &lt;strong&gt;as training progresses the effect dissipates&lt;/strong&gt; and for most weight ratios considered (between 256:1 and 1:256) the effect of importance weighting is indistinguishable from unweighted risk minimization after sufficient training epochs.&lt;/li&gt;
-      &lt;li&gt;While L2 regularization restores some of the impact of importance weighting, this has the perplexing consequence of expressing the amount by which importance weights affect the learned model in terms of a seemingly unrelated quantity—the degree of regularization—prompting the question: how does one appropriately choose the L2 regularization given importance weights? Interestingly, dropout regularization, which is often used interchangeably with L2 regularization, does not exhibit any such interaction with importance weighting. Batch normalization also appears to interact with importance weights, although as we will discuss later, the precise mechanism remains unclear.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Related Papers from other conferences
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://openreview.net/pdf?id=BkeStsCcKQ&quot;&gt;ICLR2019-CRITICAL LEARNING PERIODS IN DEEP NETWORKS&lt;/a&gt;
-        &lt;ul&gt;
-          &lt;li&gt;Our findings, described in Section 2, indicate that the early transient is critical in determining the final solution of the optimization associated with training an artificial neural network.&lt;/li&gt;
-          &lt;li&gt;To study this early phase, in Section 3, we use the Fisher Information to quantify the effective connectivity of a network during training, and introduce the notion of Information Plasticity in learning. Information Plasticity is maximal during the memorization phase, and decreases in the reorganization phase. We show that deficit sensitivity during critical periods correlates strongly with the effective connectivity.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://proceedings.mlr.press/v80/katharopoulos18a.html&quot;&gt;ICML2018-Not All Samples Are Created Equal: Deep Learning with Importance Sampling&lt;/a&gt;
-        &lt;ul&gt;
-          &lt;li&gt;Deep Neural Network training spends most of the computation on &lt;strong&gt;examples that are properly handled, and could be ignored&lt;/strong&gt;. We propose to mitigate this phenomenon with a principled importance sampling scheme that focuses computation on &lt;strong&gt;“informative” examples&lt;/strong&gt;, and &lt;strong&gt;reduces the variance of the stochastic gradients&lt;/strong&gt; during training.&lt;/li&gt;
-          &lt;li&gt;Our contribution is twofold: first, we derive a &lt;strong&gt;tractable upper bound to the per-sample gradient norm&lt;/strong&gt;, and second we &lt;strong&gt;derive an estimator of the variance reduction achieved with importance sampling, which enables us to switch it on when it will result in an actual speedup.&lt;/strong&gt;&lt;/li&gt;
-          &lt;li&gt;Recently, researchers have shifted their focus on using importance sampling to improve and accelerate the training of
-  neural networks (Alain et al., 2015; Loshchilov &amp;amp; Hutter, 2015; Schaul et al., 2015). Those works, employ &lt;strong&gt;either the gradient norm or the loss to compute each sample’s importance.&lt;/strong&gt; However, the former is prohibitively expensive to compute and the latter is not a particularly good approximation of the gradient norm.&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;Firstly we provide an intuitive metric to predict how useful importance sampling is going to be, thus we are able to decide when to switch on importance sampling during training. Secondly, we also provide theoretical guarantees for speedup, when variance reduction is above a threshold.&lt;/strong&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry></feed>
