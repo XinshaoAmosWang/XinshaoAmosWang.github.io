@@ -35,6 +35,9 @@ Contrastive Predictive Coding](https://arxiv.org/pdf/1807.03748.pdf)
 * [Selfie: Refurbishing Unclean Samples for Robust Deep Learning-ICML 2019]()
 * [Unsupervised Label Noise Modeling and Loss Correction-ICML 2019]()
 * [Using Trusted Data to Train Deep Networks on Labels Corrupted by Severe Noise-NeurIPS 2018]()
+
+## Example Weighting
+* [Weighted Machine Learning-Mahdi Hashemi∗, Hassan A. Karimi](https://www.researchgate.net/publication/328731166_Weighted_Machine_Learning)
 {:.message}
 
 
