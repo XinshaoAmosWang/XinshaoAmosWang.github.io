@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-03-02T22:33:18+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-03-02T22:53:16+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
 </subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Papers Related to My PhD Thesis-Example Weighting in Classification and Distance Metric Learning</title><link href="http://localhost:4000/paperlists/2020-02-24-ThesisRelatedPapers/" rel="alternate" type="text/html" title="Papers Related to My PhD Thesis-Example Weighting in Classification and Distance Metric Learning" /><published>2020-02-24T00:00:00+00:00</published><updated>2020-02-24T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ThesisRelatedPapers</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-02-24-ThesisRelatedPapers/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#distance-metric-learning-learning-to-retrieve&quot;&gt;Learning to Retrieve&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#learning-to-classify&quot;&gt;Learning to Classify &lt;/a&gt;&lt;/li&gt;
@@ -37,17 +37,19 @@ Contrastive Predictive Coding&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#papers-on-applications&quot;&gt;Papers on Applications&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h3 id=&quot;what-i-am-doing-now&quot;&gt;What I am doing now?&lt;/h3&gt;
+&lt;h3 id=&quot;what-am-i-working-on-now-discussions-are-welcome&quot;&gt;What am I working on now? Discussions are Welcome!&lt;/h3&gt;
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;[Interpreting $$ p(y&lt;/td&gt;
-          &lt;td&gt;x) $$ and modelling example weighting](../2020-02-18-code-releasing)&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
+    &lt;p&gt;&lt;a href=&quot;../2020-02-18-code-releasing&quot;&gt;Interpreting &lt;code class=&quot;MathJax_Preview&quot;&gt;p(y\|x)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;p(y\|x)&lt;/script&gt; and modelling example weighting&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Going to stop treating &lt;code class=&quot;MathJax_Preview&quot;&gt;p(y\|x)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;p(y\|x)&lt;/script&gt; as a classfication confidence metric, since it is determinstic. &lt;code class=&quot;MathJax_Preview&quot;&gt;p(y\|x)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;p(y\|x)&lt;/script&gt;  is not for deciding whether certain or uncertain.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;MathJax_Preview&quot;&gt;p(y\|x)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;p(y\|x)&lt;/script&gt; is good as a metric of whether x matches y, though not a good metric indicating whether x is blur or not.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Utilities of Uncertainties&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 

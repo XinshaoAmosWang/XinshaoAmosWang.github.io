@@ -15,8 +15,15 @@ comment: true
 {:.message}
 
 
-### What I am doing now?
-* [Interpreting $$ p(y|x) $$ and modelling example weighting](../2020-02-18-code-releasing)
+### What am I working on now? Discussions are Welcome!
+* [Interpreting $$ p(y\|x) $$ and modelling example weighting](../2020-02-18-code-releasing)
+
+* Going to stop treating $$ p(y\|x) $$ as a classfication confidence metric, since it is determinstic. $$ p(y\|x) $$  is not for deciding whether certain or uncertain.
+
+
+* $$ p(y\|x) $$ is good as a metric of whether x matches y, though not a good metric indicating whether x is blur or not.  
+
+* Utilities of Uncertainties
 {:.message}
 
 
