@@ -1,5 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-03-02T22:53:16+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
-</subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Papers Related to My PhD Thesis-Example Weighting in Classification and Distance Metric Learning</title><link href="http://localhost:4000/paperlists/2020-02-24-ThesisRelatedPapers/" rel="alternate" type="text/html" title="Papers Related to My PhD Thesis-Example Weighting in Classification and Distance Metric Learning" /><published>2020-02-24T00:00:00+00:00</published><updated>2020-02-24T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ThesisRelatedPapers</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-02-24-ThesisRelatedPapers/">&lt;ol class=&quot;message&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-03-04T20:10:15+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
+</subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">I Love Learning and Applying Mathematics, Statistics!</title><link href="http://localhost:4000/blogs/2020-03-04-I-love-match/" rel="alternate" type="text/html" title="I Love Learning and Applying Mathematics, Statistics!" /><published>2020-03-04T00:00:00+00:00</published><updated>2020-03-04T00:00:00+00:00</updated><id>http://localhost:4000/blogs/I-love-match</id><content type="html" xml:base="http://localhost:4000/blogs/2020-03-04-I-love-match/">&lt;ol class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#linear-algebra&quot;&gt;Linear algebra&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#probabilistic-view-of-the-world&quot;&gt;Probabilistic view of the world&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#optimisation&quot;&gt;Optimisation&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;linear-algebra&quot;&gt;Linear algebra&lt;/h3&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.robots.ox.ac.uk/~davidc/pubs/tt2015_dac1.pdf&quot;&gt;Properties of the Covariance Matrix&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Positive semi-definite&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Eigen vectors and Diagonalisation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Eigen values and Determinant&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;probabilistic-view-of-the-world&quot;&gt;Probabilistic view of the world&lt;/h3&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Mahalanobis_distance&quot;&gt;Mahalanobis distance&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Mahalanobis distance is proportional, for a normal distribution, to the square root of the negative log likelihood (after adding a constant so the minimum is at zero).&lt;/li&gt;
+      &lt;li&gt;This intuitive approach can be made quantitative by defining the normalized distance between the test point and the set to be &lt;code class=&quot;MathJax_Preview&quot;&gt;{\displaystyle {x-\mu } \over \sigma }&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;{\displaystyle {x-\mu } \over \sigma }&lt;/script&gt; . By plugging this into the normal distribution we can derive the probability of the test point belonging to the set.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Maximum_likelihood_estimation&quot;&gt;Maximum likelihood estimation&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.robots.ox.ac.uk/~davidc/pubs/tt2015_dac1.pdf&quot;&gt;Properties of the Covariance Matrix&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Differential_entropy&quot;&gt;Differential entropy&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://math.stackexchange.com/questions/889425/what-does-determinant-of-covariance-matrix-give&quot;&gt;What does Determinant of Covariance Matrix give&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stats.stackexchange.com/questions/89952/why-do-we-use-the-determinant-of-the-covariance-matrix-when-using-the-multivaria&quot;&gt;Why do we use the determinant of the covariance matrix when using the multivariate normal?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;optimisation&quot;&gt;Optimisation&lt;/h3&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Concave_function&quot;&gt;Concave function&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Linear algebra Probabilistic view of the world Optimisation</summary></entry><entry><title type="html">Papers Related to My PhD Thesis-Example Weighting in Classification and Distance Metric Learning</title><link href="http://localhost:4000/paperlists/2020-02-24-ThesisRelatedPapers/" rel="alternate" type="text/html" title="Papers Related to My PhD Thesis-Example Weighting in Classification and Distance Metric Learning" /><published>2020-02-24T00:00:00+00:00</published><updated>2020-02-24T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ThesisRelatedPapers</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-02-24-ThesisRelatedPapers/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#distance-metric-learning-learning-to-retrieve&quot;&gt;Learning to Retrieve&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#learning-to-classify&quot;&gt;Learning to Classify &lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#others&quot;&gt;Others&lt;/a&gt;&lt;/li&gt;
@@ -31,6 +71,14 @@ Contrastive Predictive Coding&lt;/a&gt;&lt;/li&gt;
 &lt;h2 id=&quot;example-weighting&quot;&gt;Example Weighting&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.researchgate.net/publication/328731166_Weighted_Machine_Learning&quot;&gt;Weighted Machine Learning-Mahdi Hashemi∗, Hassan A. Karimi&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://proceedings.mlr.press/v80/katharopoulos18a.html&quot;&gt;Not All Samples Are Created Equal: Deep Learning with Importance Sampling-Angelos Katharopoulos, Franc¸ois Fleuret, ICML 2018&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;computing the importance score for the whole
+dataset is still prohibitive and would render the method
+unsuitable for online learning.&lt;/li&gt;
+      &lt;li&gt;In order to solve the problem of computing the importance for the whole dataset, we pre-sample a large batch of data points, compute the sampling distribution for that batch and re-sample a smaller batch with replacement.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Learning to Retrieve Learning to Classify Others</summary></entry><entry><title type="html">Learning Bayesian Deep Learning, Uncertainty &amp;amp; Variational Techniques</title><link href="http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/" rel="alternate" type="text/html" title="Learning Bayesian Deep Learning, Uncertainty &amp; Variational Techniques" /><published>2020-02-21T00:00:00+00:00</published><updated>2020-02-21T00:00:00+00:00</updated><id>http://localhost:4000/blogs/learn-bayesian-DL</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#blogs&quot;&gt;Blogs&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#papers-on-theories&quot;&gt;Papers on Theories&lt;/a&gt;&lt;/li&gt;
@@ -511,37 +559,4 @@ Mihaela Rosca&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://openreview.net/forum?id=BJgnXpVYwS&quot;&gt;WHY GRADIENT CLIPPING ACCELERATES TRAINING:
 A THEORETICAL JUSTIFICATION FOR ADAPTIVITY&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">ICLR-2019</title><link href="http://localhost:4000/paperlists/2019-12-30-ICLR/" rel="alternate" type="text/html" title="ICLR-2019" /><published>2019-12-30T00:00:00+00:00</published><updated>2019-12-30T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ICLR</id><content type="html" xml:base="http://localhost:4000/paperlists/2019-12-30-ICLR/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
-
-&lt;h2 id=&quot;corefundamental-deep-learning-informativeforgettable-example-uncertain-examples&quot;&gt;Core/Fundamental Deep Learning (Informative/Forgettable Example, Uncertain Examples)&lt;/h2&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;https://openreview.net/forum?id=BJlxm30cKm&quot;&gt;Informative/Forgettable Examples: An Empirical Study of Example Forgetting during Deep Neural Network Learning-Mariya Toneva&lt;em&gt;, Alessandro Sordoni&lt;/em&gt;, Remi Tachet des Combes*, Adam Trischler, Yoshua Bengio, Geoffrey J. Gordon&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;We define a ``forgetting event’’ to have occurred when an individual training example transitions from being classified correctly to incorrectly over the course of learning.
-  We show that catastrophic forgetting occurs within what is considered to be a single task and find that examples that are not prone to forgetting can be removed from the training set without loss of generalization.&lt;/li&gt;
-      &lt;li&gt;Across several benchmark data sets, we find that:
-        &lt;ul&gt;
-          &lt;li&gt;(i) certain examples are forgotten with high frequency, and some not at all;&lt;/li&gt;
-          &lt;li&gt;(ii) a data set’s (un)forgettable examples generalize across neural architectures;&lt;/li&gt;
-          &lt;li&gt;(iii) based on forgetting dynamics, a significant fraction of examples can be omitted from the training data set while still maintaining state-of-the-art generalization performance.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Their finding: Harder/Support/informative samples are learned later and may include noisy examples. &lt;br /&gt;
-  Then a question is arouse: How to differentiate informative and noisy examples? 
-  Our work provides a solution for this question. &lt;a href=&quot;https://arxiv.org/pdf/1905.11233.pdf&quot;&gt;Derivative Manipulation for General Example Weighting&lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Detailed findings of theirs:
-        &lt;ul&gt;
-          &lt;li&gt;Support examples = forgettable examples = Informative examples that cannot be removed. Removing unforgottable examples do not hurt the generalisation performance when training a model from scratch on the remained subset.&lt;/li&gt;
-          &lt;li&gt;The properties of support/informative examples: a) learnt later; b) larget misclassification margin when forgotten; c) perceptually ambiguous; d) tend to be noisy.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://papers.nips.cc/paper/6701-active-bias-training-more-accurate-neural-networks-by-emphasizing-high-variance-samples.pdf&quot;&gt;Uncertain Examples-NeurIPS2017: Active Bias: Training More Accurate Neural Networks by Emphasizing High Variance Samples-Haw-Shiuan Chang, Erik Learned-Miller, Andrew McCallum&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;How to define uncertain examples: predicitons in the history.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry></feed>

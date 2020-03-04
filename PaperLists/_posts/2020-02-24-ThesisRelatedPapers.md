@@ -38,6 +38,11 @@ Contrastive Predictive Coding](https://arxiv.org/pdf/1807.03748.pdf)
 
 ## Example Weighting
 * [Weighted Machine Learning-Mahdi Hashemi∗, Hassan A. Karimi](https://www.researchgate.net/publication/328731166_Weighted_Machine_Learning)
+* [Not All Samples Are Created Equal: Deep Learning with Importance Sampling-Angelos Katharopoulos, Franc¸ois Fleuret, ICML 2018](http://proceedings.mlr.press/v80/katharopoulos18a.html)
+    * computing the importance score for the whole
+dataset is still prohibitive and would render the method
+unsuitable for online learning.
+    * In order to solve the problem of computing the importance for the whole dataset, we pre-sample a large batch of data points, compute the sampling distribution for that batch and re-sample a smaller batch with replacement. 
 {:.message}
 
 
