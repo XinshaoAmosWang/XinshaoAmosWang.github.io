@@ -278,8 +278,18 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
 <ul class="message">
   <li><a href="https://en.wikipedia.org/wiki/Mahalanobis_distance">Mahalanobis distance</a>
     <ul>
+      <li><a href="https://blogs.sas.com/content/iml/2012/02/15/what-is-mahalanobis-distance.html">Distance is not always what it seems</a></li>
+      <li>The Mahalanobis distance is a measure of the <strong>distance between a point <code class="MathJax_Preview">\mathrm{P}</code><script type="math/tex">\mathrm{P}</script> and a distribution <code class="MathJax_Preview">\mathbf{D}</code><script type="math/tex">\mathbf{D}</script>.</strong>
+  It is a multi-dimensional generalization of the idea of measuring how many standard deviations away P is from the mean of D. This distance is zero if P is at the mean of D, and grows as P moves away from the mean along <strong>each principal component axis.</strong>
+        <ul>
+          <li>If each of these axes is re-scaled to have unit variance, then the Mahalanobis distance corresponds to standard Euclidean distance in the transformed space.</li>
+          <li>The Mahalanobis distance is thus unitless and scale-invariant, and takes into account the correlations of the data set.</li>
+        </ul>
+      </li>
       <li>Mahalanobis distance is proportional, for a normal distribution, to the square root of the negative log likelihood (after adding a constant so the minimum is at zero).</li>
-      <li>This intuitive approach can be made quantitative by defining the normalized distance between the test point and the set to be <code class="MathJax_Preview">{\displaystyle {x-\mu } \over \sigma }</code><script type="math/tex">{\displaystyle {x-\mu } \over \sigma }</script> . By plugging this into the normal distribution we can derive the probability of the test point belonging to the set.</li>
+      <li>This intuitive approach can be made quantitative by defining <strong>the normalized distance between the test point and the set to be <code class="MathJax_Preview">{\displaystyle {x-\mu } \over \sigma }</code><script type="math/tex">{\displaystyle {x-\mu } \over \sigma }</script></strong>. By plugging this into the normal distribution we can derive the probability of the test point belonging to the set.</li>
+      <li>Were the distribution to be decidedly non-spherical, for instance ellipsoidal, then we would expect the probability of the test point belonging to the set to depend not only on the distance from the center of mass, but also on the direction. In those directions where the ellipsoid has a short axis the test point must be closer, while in those where the axis is long the test point can be further away from the center.</li>
+      <li>The Mahalanobis distance is the distance of the test point from the center of mass <strong>divided by the width of the ellipsoid in the direction of the test point.</strong> (distance normalisation)</li>
     </ul>
   </li>
   <li>
