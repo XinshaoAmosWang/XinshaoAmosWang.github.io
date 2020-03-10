@@ -1,5 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-03-05T17:27:33+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
-</subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">I Love Learning and Applying Mathematics, Statistics!</title><link href="http://localhost:4000/blogs/2020-03-04-I-love-math/" rel="alternate" type="text/html" title="I Love Learning and Applying Mathematics, Statistics!" /><published>2020-03-04T00:00:00+00:00</published><updated>2020-03-04T00:00:00+00:00</updated><id>http://localhost:4000/blogs/I-love-math</id><content type="html" xml:base="http://localhost:4000/blogs/2020-03-04-I-love-math/">&lt;ol class=&quot;message&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-03-10T15:01:12+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
+</subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Example Weighting, Importance Sampling?</title><link href="http://localhost:4000/blogs/2020-03-08-example-weighting/" rel="alternate" type="text/html" title="Example Weighting, Importance Sampling?" /><published>2020-03-08T00:00:00+00:00</published><updated>2020-03-08T00:00:00+00:00</updated><id>http://localhost:4000/blogs/example-weighting</id><content type="html" xml:base="http://localhost:4000/blogs/2020-03-08-example-weighting/">&lt;ol class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#importance-samplinggradient&quot;&gt;Importance sampling&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;importance-samplinggradient&quot;&gt;Importance sampling–Gradient?&lt;/h3&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://proceedings.mlr.press/v80/katharopoulos18a.html&quot;&gt;Not All Samples Are Created Equal: Deep Learning with Importance Sampling-Angelos Katharopoulos et al&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://proceedings.mlr.press/v37/zhaoa15.pdf&quot;&gt;Stochastic Optimization with Importance Sampling for Regularized Loss Minimization-Peilin Zhao, Tong Zhang&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1401.2753.pdf&quot;&gt;Stochastic Optimization with Importance Sampling-Peilin Zhao et al&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.jmlr.org/papers/volume19/16-241/16-241.pdf&quot;&gt;Importance Sampling for Minibatches-Dominik Csiba et al&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://papers.nips.cc/paper/7025-safe-adaptive-importance-sampling.pdf&quot;&gt;Safe Adaptive Importance Sampling-Sebastian U. Stich et al&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Importance sampling</summary></entry><entry><title type="html">I Love Learning and Applying Mathematics, Statistics!</title><link href="http://localhost:4000/blogs/2020-03-04-I-love-math/" rel="alternate" type="text/html" title="I Love Learning and Applying Mathematics, Statistics!" /><published>2020-03-04T00:00:00+00:00</published><updated>2020-03-04T00:00:00+00:00</updated><id>http://localhost:4000/blogs/I-love-math</id><content type="html" xml:base="http://localhost:4000/blogs/2020-03-04-I-love-math/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#linear-algebra&quot;&gt;Linear algebra&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#probabilistic-view-of-the-world&quot;&gt;Probabilistic view of the world&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#optimisation&quot;&gt;Optimisation&lt;/a&gt;&lt;/li&gt;
@@ -253,7 +274,13 @@ If you want to include hidden files use,
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://github.com/XinshaoAmosWang/Deep-Metric-Embedding/blob/master/common_git.md&quot;&gt;Common commands&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Useful Links on General Study Github: Configuration of local machine to github remote GDrive Useful links on Jekyll, Google AdSense, Markdown. Useful links on Travel &amp;amp; Insurance.</summary></entry><entry><title type="html">arXiv-2020</title><link href="http://localhost:4000/paperlists/2020-02-16-arXiv/" rel="alternate" type="text/html" title="arXiv-2020" /><published>2020-02-16T00:00:00+00:00</published><updated>2020-02-16T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/arXiv</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-02-16-arXiv/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Useful Links on General Study Github: Configuration of local machine to github remote GDrive Useful links on Jekyll, Google AdSense, Markdown. Useful links on Travel &amp;amp; Insurance.</summary></entry><entry><title type="html">arXiv-2020</title><link href="http://localhost:4000/paperlists/2020-02-16-arXiv/" rel="alternate" type="text/html" title="arXiv-2020" /><published>2020-02-16T00:00:00+00:00</published><updated>2020-02-16T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/arXiv</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-02-16-arXiv/">&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#noisy-labels&quot;&gt;Noisy labels &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#active-learning&quot;&gt;Active Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#foundation-of-deep-learning&quot;&gt;Foundation of Deep Learning&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 
 &lt;h2 id=&quot;foundation-of-deep-learning&quot;&gt;Foundation of Deep Learning&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;
@@ -292,7 +319,20 @@ If you want to include hidden files use,
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://xinshaoamoswang.github.io/Papers/AnomalyAndRegularisation/#iclr-2019-learning-deep-representations-by-mutual-information-estimation-and-maximization&quot;&gt;ICLR 2019: Learning deep representations by mutual information estimation and maximization&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Paper notes on Anomalies&amp;amp;Regularisation</title><link href="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/" rel="alternate" type="text/html" title="Paper notes on Anomalies&amp;Regularisation" /><published>2020-02-15T00:00:00+00:00</published><updated>2020-02-15T00:00:00+00:00</updated><id>http://localhost:4000/blogs/anomalies-regularisation</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/">&lt;ul class=&quot;message&quot;&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;noisy-labels&quot;&gt;Noisy labels&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/2002.06482.pdf&quot;&gt;Learning Adaptive Loss for Robust Learning with Noisy Labels&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://openreview.net/forum?id=HJgExaVtwr&quot;&gt;DivideMix: Learning with Noisy Labels as Semi-supervised Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;amp;arnumber=9001093&quot;&gt;Group-Teaching: Learning Robust CNNs From Extremely Noisy Labels&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;[]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;active-learning&quot;&gt;Active Learning&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://papers.nips.cc/paper/7010-learning-active-learning-from-data.pdf&quot;&gt;Learning Active Learning from Data&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Noisy labels Active Learning Foundation of Deep Learning</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Paper notes on Anomalies&amp;amp;Regularisation</title><link href="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/" rel="alternate" type="text/html" title="Paper notes on Anomalies&amp;Regularisation" /><published>2020-02-15T00:00:00+00:00</published><updated>2020-02-15T00:00:00+00:00</updated><id>http://localhost:4000/blogs/anomalies-regularisation</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/">&lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;/Papers/AnomalyAndRegularisation/&quot;&gt;Paper notes on Anomalies&amp;amp;Regularisation&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Paper notes on Anomalies&amp;amp;Regularisation</summary></entry><entry><title type="html">Notes on Core ML Techniques</title><link href="http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/" rel="alternate" type="text/html" title="Notes on Core ML Techniques" /><published>2020-02-14T00:00:00+00:00</published><updated>2020-02-14T00:00:00+00:00</updated><id>http://localhost:4000/blogs/Core-machine-learning-topics</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#kullback-leibler-divergence&quot;&gt;Kullback-Leibler Divergence&lt;/a&gt;&lt;/li&gt;
@@ -561,12 +601,4 @@ For Sample Weighting-NeurIPS 2019&lt;/a&gt;
   &lt;li&gt;&lt;a href=&quot;http://efrosgans.eecs.berkeley.edu/CVPR18_slides/VAE_GANS_by_Rosca.pdf&quot;&gt;VAEs and GANs
 Mihaela Rosca&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://syncedreview.com/2019/06/06/going-beyond-gan-new-deepmind-vae-model-generates-high-fidelity-human-faces/&quot;&gt;Going Beyond GAN? New DeepMind VAE Model Generates High Fidelity Human Faces&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Kullback-Leibler Divergence What is the main difference between GAN and autoencoder What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?</summary></entry><entry><title type="html">ICLR-2020</title><link href="http://localhost:4000/paperlists/2020-01-02-ICLR/" rel="alternate" type="text/html" title="ICLR-2020" /><published>2020-01-02T00:00:00+00:00</published><updated>2020-01-02T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/ICLR</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-01-02-ICLR/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
-
-&lt;h2 id=&quot;foundation-of-deep-learning&quot;&gt;Foundation of Deep Learning&lt;/h2&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;https://openreview.net/forum?id=B1g8VkHFPH&quot;&gt;Rethinking the Hyperparameters for Fine-tuning&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://openreview.net/forum?id=BJgnXpVYwS&quot;&gt;WHY GRADIENT CLIPPING ACCELERATES TRAINING:
-A THEORETICAL JUSTIFICATION FOR ADAPTIVITY&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry></feed>
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Kullback-Leibler Divergence What is the main difference between GAN and autoencoder What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?</summary></entry></feed>
