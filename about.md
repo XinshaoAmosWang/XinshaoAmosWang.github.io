@@ -55,5 +55,8 @@ Fortunately, the concept of adversarial examples become universe/unrestricted no
 
 
 ### Related papers reading 
-[https://drive.google.com/file/d/1fU3N_u-_puOwEbupK6aOENerP2S45tZX/view?usp=sharing](https://github.com.cnpmjs.org/XinshaoAmosWang/DerivativeManipulation/blob/master/OutlierDetection_RobustInference.pptx.pdf)
+* [OutlierDetection_RobustInference using Mahalanobis Distance](https://github.com.cnpmjs.org/XinshaoAmosWang/DerivativeManipulation/blob/master/OutlierDetection_RobustInference.pptx.pdf)
 
+* [Distance is not always what it seems](https://blogs.sas.com/content/iml/2012/02/15/what-is-mahalanobis-distance.html)
+
+* [Detecting outliers in SAS: Part 3: Multivariate location and scatter & MCD: Robust estimation by subsampling](https://blogs.sas.com/content/iml/2012/02/02/detecting-outliers-in-sas-part-3-multivariate-location-and-scatter.html)
