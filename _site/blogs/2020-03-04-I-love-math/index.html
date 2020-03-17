@@ -269,6 +269,50 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
 <h3 id="linear-algebra">Linear algebra</h3>
 <ul class="message">
   <li><a href="http://www.robots.ox.ac.uk/~davidc/pubs/tt2015_dac1.pdf">Properties of the Covariance Matrix</a></li>
+  <li><a href="https://www.mathsisfun.com/data/correlation.html">Covariance and Correlation</a>
+    <ul>
+      <li>Interpreting: <strong>Variable = Axis</strong></li>
+      <li>Covariance:
+        <ul>
+          <li>remove mean for each axis/variable</li>
+          <li>projection (accumulation/expectation of dot product of observations from different axis/variable)</li>
+          <li>In other words, dot product of two points (dim &gt;= 2) from two axises (out of multiple axises) =&gt; expectation/accumulation</li>
+        </ul>
+      </li>
+      <li><strong>Dot product of two variable/axis</strong></li>
+      <li>Correlation = <code class="MathJax_Preview">\frac{Covariance(X_i, X_j)} { \sigma_i \times \sigma_j } \in [-1, 1]</code><script type="math/tex">\frac{Covariance(X_i, X_j)} { \sigma_i \times \sigma_j } \in [-1, 1]</script></li>
+      <li>For easier and intuitive understanding, looking at <code class="MathJax_Preview">\frac{(X_i - E(X_i))} { \sigma_i } \sim \mathcal{N}(0,\,1) = \mathbf{e}_i</code><script type="math/tex">\frac{(X_i - E(X_i))} { \sigma_i } \sim \mathcal{N}(0,\,1) = \mathbf{e}_i</script> and <code class="MathJax_Preview">\frac{(X_j - E(X_j))} { \sigma_j } \sim \mathcal{N}(0,\,1) = \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j</code><script type="math/tex">\frac{(X_j - E(X_j))} { \sigma_j } \sim \mathcal{N}(0,\,1) = \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j</script>
+        <ul>
+          <li><code class="MathJax_Preview">\mathbf{e}_i \sim \mathcal{N}(0,\,1)</code><script type="math/tex">\mathbf{e}_i \sim \mathcal{N}(0,\,1)</script>, <code class="MathJax_Preview">\mathbf{e}_j \sim \mathcal{N}(0,\,1)</code><script type="math/tex">\mathbf{e}_j \sim \mathcal{N}(0,\,1)</script></li>
+          <li><code class="MathJax_Preview">\mathbf{e}_i \text{ and } \mathbf{e}_j</code><script type="math/tex">\mathbf{e}_i \text{ and } \mathbf{e}_j</script> are two variables in two orthogonal axises.</li>
+          <li>Correlation = <code class="MathJax_Preview">\lambda \in [-1, 1]</code><script type="math/tex">\lambda \in [-1, 1]</script></li>
+          <li>Covariance = <code class="MathJax_Preview">\lambda \sigma_i \sigma_j</code><script type="math/tex">\lambda \sigma_i \sigma_j</script></li>
+          <li>
+            <pre class="MathJax_Preview"><code>\begin{aligned}
+E\{\frac{(X_i - E(X_i))} { \sigma_i }  \frac{(X_j - E(X_j))} { \sigma_j } \} &amp;= E\{ \mathbf{e}_i \cdot \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j \} \\
+&amp;= \lambda E\{ \mathbf{e}_i \cdot \mathbf{e}_i  \} + \sqrt{(1-\lambda^2)} E\{ \mathbf{e}_i \cdot \mathbf{e}_j \} \\
+&amp;= \lambda .
+\end{aligned}</code></pre>
+            <script type="math/tex; mode=display">% <![CDATA[
+\begin{aligned}
+E\{\frac{(X_i - E(X_i))} { \sigma_i }  \frac{(X_j - E(X_j))} { \sigma_j } \} &= E\{ \mathbf{e}_i \cdot \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j \} \\
+&= \lambda E\{ \mathbf{e}_i \cdot \mathbf{e}_i  \} + \sqrt{(1-\lambda^2)} E\{ \mathbf{e}_i \cdot \mathbf{e}_j \} \\
+&= \lambda .
+\end{aligned} %]]></script>
+          </li>
+          <li>
+            <pre class="MathJax_Preview"><code>\begin{aligned}
+E\{ {(X_i - E(X_i))}  \cdot {(X_j - E(X_j))}  \} =  \lambda  \sigma_i  \sigma_j.
+  \end{aligned}</code></pre>
+            <script type="math/tex; mode=display">\begin{aligned}
+E\{ {(X_i - E(X_i))}  \cdot {(X_j - E(X_j))}  \} =  \lambda  \sigma_i  \sigma_j.
+  \end{aligned}</script>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_and_independence">Correlation and independence</a></li>
   <li><a href="">Positive semi-definite</a></li>
   <li><a href="">Eigen vectors and Diagonalisation</a></li>
   <li><a href="">Eigen values and Determinant</a></li>
@@ -279,6 +323,8 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
   <li><a href="https://en.wikipedia.org/wiki/Mahalanobis_distance">Mahalanobis distance</a>
     <ul>
       <li><a href="https://blogs.sas.com/content/iml/2012/02/15/what-is-mahalanobis-distance.html">Distance is not always what it seems</a></li>
+      <li><a href="https://blogs.sas.com/content/iml/2012/02/02/detecting-outliers-in-sas-part-3-multivariate-location-and-scatter.html">Detecting outliers in SAS: Part 3: Multivariate location and scatter &amp; MCD: Robust estimation by subsampling</a></li>
+      <li><a href="https://github.com.cnpmjs.org/XinshaoAmosWang/DerivativeManipulation/blob/master/OutlierDetection_RobustInference.pptx.pdf">Outlier, Anomaly, and Adversaries Detection using Mahalanobis distance</a></li>
       <li>The Mahalanobis distance is a measure of the <strong>distance between a point <code class="MathJax_Preview">\mathrm{P}</code><script type="math/tex">\mathrm{P}</script> and a distribution <code class="MathJax_Preview">\mathbf{D}</code><script type="math/tex">\mathbf{D}</script>.</strong>
   It is a multi-dimensional generalization of the idea of measuring how many standard deviations away P is from the mean of D. This distance is zero if P is at the mean of D, and grows as P moves away from the mean along <strong>each principal component axis.</strong>
         <ul>

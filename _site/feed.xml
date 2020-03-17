@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-03-11T11:57:52+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-03-17T18:31:20+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
 </subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Example Weighting, Importance Sampling?</title><link href="http://localhost:4000/blogs/2020-03-08-example-weighting/" rel="alternate" type="text/html" title="Example Weighting, Importance Sampling?" /><published>2020-03-08T00:00:00+00:00</published><updated>2020-03-08T00:00:00+00:00</updated><id>http://localhost:4000/blogs/example-weighting</id><content type="html" xml:base="http://localhost:4000/blogs/2020-03-08-example-weighting/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#importance-samplinggradient&quot;&gt;Importance sampling&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -29,6 +29,50 @@
 &lt;h3 id=&quot;linear-algebra&quot;&gt;Linear algebra&lt;/h3&gt;
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.robots.ox.ac.uk/~davidc/pubs/tt2015_dac1.pdf&quot;&gt;Properties of the Covariance Matrix&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mathsisfun.com/data/correlation.html&quot;&gt;Covariance and Correlation&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Interpreting: &lt;strong&gt;Variable = Axis&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Covariance:
+        &lt;ul&gt;
+          &lt;li&gt;remove mean for each axis/variable&lt;/li&gt;
+          &lt;li&gt;projection (accumulation/expectation of dot product of observations from different axis/variable)&lt;/li&gt;
+          &lt;li&gt;In other words, dot product of two points (dim &amp;gt;= 2) from two axises (out of multiple axises) =&amp;gt; expectation/accumulation&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Dot product of two variable/axis&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Correlation = &lt;code class=&quot;MathJax_Preview&quot;&gt;\frac{Covariance(X_i, X_j)} { \sigma_i \times \sigma_j } \in [-1, 1]&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\frac{Covariance(X_i, X_j)} { \sigma_i \times \sigma_j } \in [-1, 1]&lt;/script&gt;&lt;/li&gt;
+      &lt;li&gt;For easier and intuitive understanding, looking at &lt;code class=&quot;MathJax_Preview&quot;&gt;\frac{(X_i - E(X_i))} { \sigma_i } \sim \mathcal{N}(0,\,1) = \mathbf{e}_i&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\frac{(X_i - E(X_i))} { \sigma_i } \sim \mathcal{N}(0,\,1) = \mathbf{e}_i&lt;/script&gt; and &lt;code class=&quot;MathJax_Preview&quot;&gt;\frac{(X_j - E(X_j))} { \sigma_j } \sim \mathcal{N}(0,\,1) = \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\frac{(X_j - E(X_j))} { \sigma_j } \sim \mathcal{N}(0,\,1) = \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j&lt;/script&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{e}_i \sim \mathcal{N}(0,\,1)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{e}_i \sim \mathcal{N}(0,\,1)&lt;/script&gt;, &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{e}_j \sim \mathcal{N}(0,\,1)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{e}_j \sim \mathcal{N}(0,\,1)&lt;/script&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{e}_i \text{ and } \mathbf{e}_j&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{e}_i \text{ and } \mathbf{e}_j&lt;/script&gt; are two variables in two orthogonal axises.&lt;/li&gt;
+          &lt;li&gt;Correlation = &lt;code class=&quot;MathJax_Preview&quot;&gt;\lambda \in [-1, 1]&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda \in [-1, 1]&lt;/script&gt;&lt;/li&gt;
+          &lt;li&gt;Covariance = &lt;code class=&quot;MathJax_Preview&quot;&gt;\lambda \sigma_i \sigma_j&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda \sigma_i \sigma_j&lt;/script&gt;&lt;/li&gt;
+          &lt;li&gt;
+            &lt;pre class=&quot;MathJax_Preview&quot;&gt;&lt;code&gt;\begin{aligned}
+E\{\frac{(X_i - E(X_i))} { \sigma_i }  \frac{(X_j - E(X_j))} { \sigma_j } \} &amp;amp;= E\{ \mathbf{e}_i \cdot \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j \} \\
+&amp;amp;= \lambda E\{ \mathbf{e}_i \cdot \mathbf{e}_i  \} + \sqrt{(1-\lambda^2)} E\{ \mathbf{e}_i \cdot \mathbf{e}_j \} \\
+&amp;amp;= \lambda .
+\end{aligned}&lt;/code&gt;&lt;/pre&gt;
+            &lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{aligned}
+E\{\frac{(X_i - E(X_i))} { \sigma_i }  \frac{(X_j - E(X_j))} { \sigma_j } \} &amp;= E\{ \mathbf{e}_i \cdot \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j \} \\
+&amp;= \lambda E\{ \mathbf{e}_i \cdot \mathbf{e}_i  \} + \sqrt{(1-\lambda^2)} E\{ \mathbf{e}_i \cdot \mathbf{e}_j \} \\
+&amp;= \lambda .
+\end{aligned} %]]&gt;&lt;/script&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;pre class=&quot;MathJax_Preview&quot;&gt;&lt;code&gt;\begin{aligned}
+E\{ {(X_i - E(X_i))}  \cdot {(X_j - E(X_j))}  \} =  \lambda  \sigma_i  \sigma_j.
+  \end{aligned}&lt;/code&gt;&lt;/pre&gt;
+            &lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{aligned}
+E\{ {(X_i - E(X_i))}  \cdot {(X_j - E(X_j))}  \} =  \lambda  \sigma_i  \sigma_j.
+  \end{aligned}&lt;/script&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_and_independence&quot;&gt;Correlation and independence&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;&quot;&gt;Positive semi-definite&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;&quot;&gt;Eigen vectors and Diagonalisation&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;&quot;&gt;Eigen values and Determinant&lt;/a&gt;&lt;/li&gt;
@@ -39,6 +83,8 @@
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Mahalanobis_distance&quot;&gt;Mahalanobis distance&lt;/a&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;https://blogs.sas.com/content/iml/2012/02/15/what-is-mahalanobis-distance.html&quot;&gt;Distance is not always what it seems&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://blogs.sas.com/content/iml/2012/02/02/detecting-outliers-in-sas-part-3-multivariate-location-and-scatter.html&quot;&gt;Detecting outliers in SAS: Part 3: Multivariate location and scatter &amp;amp; MCD: Robust estimation by subsampling&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com.cnpmjs.org/XinshaoAmosWang/DerivativeManipulation/blob/master/OutlierDetection_RobustInference.pptx.pdf&quot;&gt;Outlier, Anomaly, and Adversaries Detection using Mahalanobis distance&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;The Mahalanobis distance is a measure of the &lt;strong&gt;distance between a point &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathrm{P}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathrm{P}&lt;/script&gt; and a distribution &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{D}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{D}&lt;/script&gt;.&lt;/strong&gt;
   It is a multi-dimensional generalization of the idea of measuring how many standard deviations away P is from the mean of D. This distance is zero if P is at the mean of D, and grows as P moves away from the mean along &lt;strong&gt;each principal component axis.&lt;/strong&gt;
         &lt;ul&gt;
