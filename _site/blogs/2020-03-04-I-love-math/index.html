@@ -271,7 +271,59 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
   <li><a href="http://www.robots.ox.ac.uk/~davidc/pubs/tt2015_dac1.pdf">Properties of the Covariance Matrix</a></li>
   <li><a href="https://www.mathsisfun.com/data/correlation.html">Covariance and Correlation</a>
     <ul>
-      <li>Interpreting: <strong>Variable = Axis</strong></li>
+      <li>Interpreting: <strong>Variable = Axis</strong>
+        <ul>
+          <li>Variable = axis/component/one hyper-line</li>
+          <li>Observations of this variable = points of this axis/hyper-line</li>
+          <li>The observations of a variable = one vector of points in this line.</li>
+          <li><code class="MathJax_Preview">E(XY)=</code><script type="math/tex">E(XY)=</script> the dot product of two variables’ observation vector (multiple points for each variable)</li>
+          <li>If <code class="MathJax_Preview">X,Y</code><script type="math/tex">X,Y</script> are orthogonal, then for any point in <code class="MathJax_Preview">X</code><script type="math/tex">X</script> and any point in <code class="MathJax_Preview">Y</code><script type="math/tex">Y</script>, their dot product are zero, therefore, we have <code class="MathJax_Preview">E(XY) = 0</code><script type="math/tex">E(XY) = 0</script>.</li>
+          <li>Diagonalisation (Orthogonal, Making them independent) =&gt;  Decorrelation
+            <ul>
+              <li>In this context, uncorrelation = independence.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Uncorrelation (Orthogonalisaion) using Eigen vectors
+        <ul>
+          <li><strong>Projection of a normal distribtion</strong> <code class="MathJax_Preview">X \sim \mathcal{N}(0,\,{\sigma_x}^2)</code><script type="math/tex">X \sim \mathcal{N}(0,\,{\sigma_x}^2)</script> to a standard normal distribution <code class="MathJax_Preview">\mathcal{N}(0,\,1)</code><script type="math/tex">\mathcal{N}(0,\,1)</script>:
+            <ul>
+              <li><strong>the projected distribution</strong> is <code class="MathJax_Preview">\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)</code><script type="math/tex">\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)</script></li>
+              <li><code class="MathJax_Preview">\theta</code><script type="math/tex">\theta</script> determines their linear dependency: correlation coefficient=<code class="MathJax_Preview">\cos(\theta)</code><script type="math/tex">\cos(\theta)</script>.</li>
+            </ul>
+          </li>
+          <li>
+            <p>For each eigen vector: <strong>we project all the original variables to this eigen vector</strong> (an axis in the transformed orthogonal space) =&gt; summarise/accumulate those projected variables in this axis =&gt; New variable</p>
+
+            <ul>
+              <li>
+                <p>Two accumulated projected new variables of two axises (eigen vectors) are uncorrelated (being independent now).</p>
+              </li>
+              <li>
+                <p>Eigen value = sum of projected standard deviation.</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>The number of variables, the number of observations, the number of axises/components
+        <ul>
+          <li>The number of variables = the number of axis.</li>
+          <li>When the number of variables (feature dim) &gt; the number of observations?</li>
+        </ul>
+      </li>
+      <li>In a high-dimensional space with orthogonal axises:
+        <ul>
+          <li>Each axis is one independent event/variable. (Without losing generality, feel free to treat it as an unit normal distribution <code class="MathJax_Preview">~\sim \mathcal{N}(0,\,1)</code><script type="math/tex">~\sim \mathcal{N}(0,\,1)</script>)</li>
+          <li><strong>The sum of two independent normal random variables is also normal.</strong> However, if the two normal random variables are not independent, then their sum is not necessarily normal.</li>
+          <li>
+            <p>Then, the whole space becomes the combination (summarisation) of multiple independent normal random variables.</p>
+          </li>
+          <li>In this context, <strong>uncorrelation = independence.</strong>
+  Independent variables = indepdent axis/components = orthogonal components.</li>
+        </ul>
+      </li>
       <li>Covariance:
         <ul>
           <li>remove mean for each axis/variable</li>
@@ -312,18 +364,101 @@ E\{ {(X_i - E(X_i))}  \cdot {(X_j - E(X_j))}  \} =  \lambda  \sigma_i  \sigma_j.
       </li>
     </ul>
   </li>
-  <li><a href="https://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_and_independence">Correlation and independence</a></li>
+  <li><a href="https://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_and_independence">Correlation and dependence -1</a>
+    <ul>
+      <li>Correlation and dependencd are totally different concepts/terms for discribing two random variables.</li>
+      <li><strong>In the special case</strong> when <code class="MathJax_Preview">{\displaystyle X}</code><script type="math/tex">{\displaystyle X}</script> and <code class="MathJax_Preview">{\displaystyle Y}</code><script type="math/tex">{\displaystyle Y}</script> are jointly normal, uncorrelatedness is equivalent to independence.</li>
+    </ul>
+  </li>
+  <li><a href="https://www.probabilitycourse.com/chapter5/5_3_2_bivariate_normal_dist.php">Correlation and dependence-2-Bivariate Normal Distribution</a>
+    <ul>
+      <li>
+        <p>The sum of two independent normal random variables is also normal. However, <strong>if the two normal random variables are not independent, then their sum is not necessarily normal.</strong></p>
+      </li>
+      <li>
+        <p>If <code class="MathJax_Preview">X</code><script type="math/tex">X</script> and <code class="MathJax_Preview">Y</code><script type="math/tex">Y</script> are <strong>independent</strong>, <code class="MathJax_Preview">P(Y\|X)=P(Y) =&gt; E(XY)=E(X)E(Y) =&gt; Cov(X,Y)=E((X-E(X))(Y-E(Y)))=E(XY)-E(X)E(Y) = 0 =&gt;</code><script type="math/tex">P(Y\|X)=P(Y) => E(XY)=E(X)E(Y) => Cov(X,Y)=E((X-E(X))(Y-E(Y)))=E(XY)-E(X)E(Y) = 0 =></script><strong>Uncorrelated</strong>.</p>
+      </li>
+      <li>
+        <p>If <code class="MathJax_Preview">X</code><script type="math/tex">X</script> and <code class="MathJax_Preview">Y</code><script type="math/tex">Y</script> are uncorrelated, <code class="MathJax_Preview">Cov(X,Y)=0 =&gt; E(XY) = E(X)E(Y) =&gt; ?</code><script type="math/tex">Cov(X,Y)=0 => E(XY) = E(X)E(Y) => ?</script></p>
+        <ul>
+          <li><a href="http://home.iitk.ac.in/~zeeshan/pdf/The%20Bivariate%20Normal%20Distribution.pdf">Zero Correlation Implies Independence</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://www.actuaries.org.uk/system/files/documents/pdf/correlation.pdf">Why are we interested in
+correlation/dependency?</a></li>
+  <li>
+    <p><a href="https://www.probabilitycourse.com/chapter5/5_2_3_conditioning_independence.php">Conditioning and Independence</a></p>
+  </li>
   <li><a href="">Positive semi-definite</a></li>
   <li><a href="">Eigen vectors and Diagonalisation</a></li>
-  <li><a href="">Eigen values and Determinant</a></li>
+  <li>
+    <p><a href="">Eigen values and Determinant</a></p>
+  </li>
+  <li><a href="">Mahalanobis distance</a>
+    <ul>
+      <li>Transformation/projection to the orthogonal space, where one axis is an independent normal distribution</li>
+      <li>One each axis: compute the distance <code class="MathJax_Preview">\frac{(x-u)^T(x-u)}{\sigma^2}</code><script type="math/tex">\frac{(x-u)^T(x-u)}{\sigma^2}</script></li>
+      <li>Summarise all the distances of all axises.</li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="probabilistic-view-of-the-world">Probabilistic view of the world</h3>
 <ul class="message">
+  <li>Basic concepts/terms
+    <ul>
+      <li>Covariance and correlation</li>
+      <li>Bivariate Normal Distribution</li>
+      <li>The sum of two <strong>independent</strong> normal distributions</li>
+      <li>Distance = <code class="MathJax_Preview">num \times standard~deviation</code><script type="math/tex">num \times standard~deviation</script>
+  =&gt; Mahalanobis distance</li>
+      <li>Diagonalisation (Orthogonal, Making them independent) =&gt;  Decorrelation
+        <ul>
+          <li>In this context, uncorrelation = independence.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Uncorrelation (Orthogonalisaion) using Eigen vectors
+    <ul>
+      <li><strong>Projection of a normal distribtion</strong> <code class="MathJax_Preview">X \sim \mathcal{N}(0,\,{\sigma_x}^2)</code><script type="math/tex">X \sim \mathcal{N}(0,\,{\sigma_x}^2)</script> to a standard normal distribution <code class="MathJax_Preview">\mathcal{N}(0,\,1)</code><script type="math/tex">\mathcal{N}(0,\,1)</script>:
+        <ul>
+          <li><strong>the projected distribution</strong> is <code class="MathJax_Preview">\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)</code><script type="math/tex">\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)</script></li>
+          <li><code class="MathJax_Preview">\theta</code><script type="math/tex">\theta</script> determines their linear dependency: correlation coefficient=<code class="MathJax_Preview">\cos(\theta)</code><script type="math/tex">\cos(\theta)</script>.</li>
+        </ul>
+      </li>
+      <li>
+        <p>For each eigen vector: <strong>we project all the original variables to this eigen vector</strong> (an axis in the transformed orthogonal space) =&gt; summarise/accumulate those projected variables in this axis =&gt; New variable</p>
+
+        <ul>
+          <li>
+            <p>Two accumulated projected new variables of two axises (eigen vectors) are uncorrelated (being independent now).</p>
+          </li>
+          <li>
+            <p>Eigen value = sum of projected standard deviation.</p>
+          </li>
+        </ul>
+      </li>
+      <li>Eigen vectors are orthogonal, serving as independent axises where independent variables lie in.
+        <ul>
+          <li>Diagonal covariance matrix: each entry is the square of eigen value.</li>
+          <li>Eigen value = sum of projected standard deviation.</li>
+          <li><strong>Projection of a normal distribtion</strong>
+            <ul>
+              <li><strong>the projected distribution</strong> is <code class="MathJax_Preview">\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)</code><script type="math/tex">\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)</script></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
   <li><a href="https://en.wikipedia.org/wiki/Mahalanobis_distance">Mahalanobis distance</a>
     <ul>
       <li><a href="https://blogs.sas.com/content/iml/2012/02/15/what-is-mahalanobis-distance.html">Distance is not always what it seems</a></li>
       <li><a href="https://blogs.sas.com/content/iml/2012/02/02/detecting-outliers-in-sas-part-3-multivariate-location-and-scatter.html">Detecting outliers in SAS: Part 3: Multivariate location and scatter &amp; MCD: Robust estimation by subsampling</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Sum_of_normally_distributed_random_variables">Sum of normally distributed random variables-Independent random variables</a></li>
       <li><a href="https://github.com.cnpmjs.org/XinshaoAmosWang/DerivativeManipulation/blob/master/OutlierDetection_RobustInference.pptx.pdf">Outlier, Anomaly, and Adversaries Detection using Mahalanobis distance</a></li>
       <li>The Mahalanobis distance is a measure of the <strong>distance between a point <code class="MathJax_Preview">\mathrm{P}</code><script type="math/tex">\mathrm{P}</script> and a distribution <code class="MathJax_Preview">\mathbf{D}</code><script type="math/tex">\mathbf{D}</script>.</strong>
   It is a multi-dimensional generalization of the idea of measuring how many standard deviations away P is from the mean of D. This distance is zero if P is at the mean of D, and grows as P moves away from the mean along <strong>each principal component axis.</strong>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-03-17T18:33:54+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-03-18T21:17:04+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
 </subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Example Weighting, Importance Sampling?</title><link href="http://localhost:4000/blogs/2020-03-08-example-weighting/" rel="alternate" type="text/html" title="Example Weighting, Importance Sampling?" /><published>2020-03-08T00:00:00+00:00</published><updated>2020-03-08T00:00:00+00:00</updated><id>http://localhost:4000/blogs/example-weighting</id><content type="html" xml:base="http://localhost:4000/blogs/2020-03-08-example-weighting/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#importance-samplinggradient&quot;&gt;Importance sampling&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -31,7 +31,59 @@
   &lt;li&gt;&lt;a href=&quot;http://www.robots.ox.ac.uk/~davidc/pubs/tt2015_dac1.pdf&quot;&gt;Properties of the Covariance Matrix&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.mathsisfun.com/data/correlation.html&quot;&gt;Covariance and Correlation&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;Interpreting: &lt;strong&gt;Variable = Axis&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Interpreting: &lt;strong&gt;Variable = Axis&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Variable = axis/component/one hyper-line&lt;/li&gt;
+          &lt;li&gt;Observations of this variable = points of this axis/hyper-line&lt;/li&gt;
+          &lt;li&gt;The observations of a variable = one vector of points in this line.&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;MathJax_Preview&quot;&gt;E(XY)=&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;E(XY)=&lt;/script&gt; the dot product of two variables’ observation vector (multiple points for each variable)&lt;/li&gt;
+          &lt;li&gt;If &lt;code class=&quot;MathJax_Preview&quot;&gt;X,Y&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;X,Y&lt;/script&gt; are orthogonal, then for any point in &lt;code class=&quot;MathJax_Preview&quot;&gt;X&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and any point in &lt;code class=&quot;MathJax_Preview&quot;&gt;Y&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;, their dot product are zero, therefore, we have &lt;code class=&quot;MathJax_Preview&quot;&gt;E(XY) = 0&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;E(XY) = 0&lt;/script&gt;.&lt;/li&gt;
+          &lt;li&gt;Diagonalisation (Orthogonal, Making them independent) =&amp;gt;  Decorrelation
+            &lt;ul&gt;
+              &lt;li&gt;In this context, uncorrelation = independence.&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Uncorrelation (Orthogonalisaion) using Eigen vectors
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Projection of a normal distribtion&lt;/strong&gt; &lt;code class=&quot;MathJax_Preview&quot;&gt;X \sim \mathcal{N}(0,\,{\sigma_x}^2)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;X \sim \mathcal{N}(0,\,{\sigma_x}^2)&lt;/script&gt; to a standard normal distribution &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathcal{N}(0,\,1)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathcal{N}(0,\,1)&lt;/script&gt;:
+            &lt;ul&gt;
+              &lt;li&gt;&lt;strong&gt;the projected distribution&lt;/strong&gt; is &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)&lt;/script&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;code class=&quot;MathJax_Preview&quot;&gt;\theta&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\theta&lt;/script&gt; determines their linear dependency: correlation coefficient=&lt;code class=&quot;MathJax_Preview&quot;&gt;\cos(\theta)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\cos(\theta)&lt;/script&gt;.&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;For each eigen vector: &lt;strong&gt;we project all the original variables to this eigen vector&lt;/strong&gt; (an axis in the transformed orthogonal space) =&amp;gt; summarise/accumulate those projected variables in this axis =&amp;gt; New variable&lt;/p&gt;
+
+            &lt;ul&gt;
+              &lt;li&gt;
+                &lt;p&gt;Two accumulated projected new variables of two axises (eigen vectors) are uncorrelated (being independent now).&lt;/p&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;p&gt;Eigen value = sum of projected standard deviation.&lt;/p&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;The number of variables, the number of observations, the number of axises/components
+        &lt;ul&gt;
+          &lt;li&gt;The number of variables = the number of axis.&lt;/li&gt;
+          &lt;li&gt;When the number of variables (feature dim) &amp;gt; the number of observations?&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;In a high-dimensional space with orthogonal axises:
+        &lt;ul&gt;
+          &lt;li&gt;Each axis is one independent event/variable. (Without losing generality, feel free to treat it as an unit normal distribution &lt;code class=&quot;MathJax_Preview&quot;&gt;~\sim \mathcal{N}(0,\,1)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;~\sim \mathcal{N}(0,\,1)&lt;/script&gt;)&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;The sum of two independent normal random variables is also normal.&lt;/strong&gt; However, if the two normal random variables are not independent, then their sum is not necessarily normal.&lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;Then, the whole space becomes the combination (summarisation) of multiple independent normal random variables.&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;In this context, &lt;strong&gt;uncorrelation = independence.&lt;/strong&gt;
+  Independent variables = indepdent axis/components = orthogonal components.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
       &lt;li&gt;Covariance:
         &lt;ul&gt;
           &lt;li&gt;remove mean for each axis/variable&lt;/li&gt;
@@ -72,18 +124,101 @@ E\{ {(X_i - E(X_i))}  \cdot {(X_j - E(X_j))}  \} =  \lambda  \sigma_i  \sigma_j.
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_and_independence&quot;&gt;Correlation and independence&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_and_independence&quot;&gt;Correlation and dependence -1&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Correlation and dependencd are totally different concepts/terms for discribing two random variables.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;In the special case&lt;/strong&gt; when &lt;code class=&quot;MathJax_Preview&quot;&gt;{\displaystyle X}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;{\displaystyle X}&lt;/script&gt; and &lt;code class=&quot;MathJax_Preview&quot;&gt;{\displaystyle Y}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;{\displaystyle Y}&lt;/script&gt; are jointly normal, uncorrelatedness is equivalent to independence.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.probabilitycourse.com/chapter5/5_3_2_bivariate_normal_dist.php&quot;&gt;Correlation and dependence-2-Bivariate Normal Distribution&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;The sum of two independent normal random variables is also normal. However, &lt;strong&gt;if the two normal random variables are not independent, then their sum is not necessarily normal.&lt;/strong&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;If &lt;code class=&quot;MathJax_Preview&quot;&gt;X&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and &lt;code class=&quot;MathJax_Preview&quot;&gt;Y&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; are &lt;strong&gt;independent&lt;/strong&gt;, &lt;code class=&quot;MathJax_Preview&quot;&gt;P(Y\|X)=P(Y) =&amp;gt; E(XY)=E(X)E(Y) =&amp;gt; Cov(X,Y)=E((X-E(X))(Y-E(Y)))=E(XY)-E(X)E(Y) = 0 =&amp;gt;&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;P(Y\|X)=P(Y) =&gt; E(XY)=E(X)E(Y) =&gt; Cov(X,Y)=E((X-E(X))(Y-E(Y)))=E(XY)-E(X)E(Y) = 0 =&gt;&lt;/script&gt;&lt;strong&gt;Uncorrelated&lt;/strong&gt;.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;If &lt;code class=&quot;MathJax_Preview&quot;&gt;X&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and &lt;code class=&quot;MathJax_Preview&quot;&gt;Y&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; are uncorrelated, &lt;code class=&quot;MathJax_Preview&quot;&gt;Cov(X,Y)=0 =&amp;gt; E(XY) = E(X)E(Y) =&amp;gt; ?&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;Cov(X,Y)=0 =&gt; E(XY) = E(X)E(Y) =&gt; ?&lt;/script&gt;&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://home.iitk.ac.in/~zeeshan/pdf/The%20Bivariate%20Normal%20Distribution.pdf&quot;&gt;Zero Correlation Implies Independence&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.actuaries.org.uk/system/files/documents/pdf/correlation.pdf&quot;&gt;Why are we interested in
+correlation/dependency?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.probabilitycourse.com/chapter5/5_2_3_conditioning_independence.php&quot;&gt;Conditioning and Independence&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;&quot;&gt;Positive semi-definite&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;&quot;&gt;Eigen vectors and Diagonalisation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Eigen values and Determinant&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;&quot;&gt;Eigen values and Determinant&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;&quot;&gt;Mahalanobis distance&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Transformation/projection to the orthogonal space, where one axis is an independent normal distribution&lt;/li&gt;
+      &lt;li&gt;One each axis: compute the distance &lt;code class=&quot;MathJax_Preview&quot;&gt;\frac{(x-u)^T(x-u)}{\sigma^2}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\frac{(x-u)^T(x-u)}{\sigma^2}&lt;/script&gt;&lt;/li&gt;
+      &lt;li&gt;Summarise all the distances of all axises.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;probabilistic-view-of-the-world&quot;&gt;Probabilistic view of the world&lt;/h3&gt;
 &lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;Basic concepts/terms
+    &lt;ul&gt;
+      &lt;li&gt;Covariance and correlation&lt;/li&gt;
+      &lt;li&gt;Bivariate Normal Distribution&lt;/li&gt;
+      &lt;li&gt;The sum of two &lt;strong&gt;independent&lt;/strong&gt; normal distributions&lt;/li&gt;
+      &lt;li&gt;Distance = &lt;code class=&quot;MathJax_Preview&quot;&gt;num \times standard~deviation&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;num \times standard~deviation&lt;/script&gt;
+  =&amp;gt; Mahalanobis distance&lt;/li&gt;
+      &lt;li&gt;Diagonalisation (Orthogonal, Making them independent) =&amp;gt;  Decorrelation
+        &lt;ul&gt;
+          &lt;li&gt;In this context, uncorrelation = independence.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Uncorrelation (Orthogonalisaion) using Eigen vectors
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Projection of a normal distribtion&lt;/strong&gt; &lt;code class=&quot;MathJax_Preview&quot;&gt;X \sim \mathcal{N}(0,\,{\sigma_x}^2)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;X \sim \mathcal{N}(0,\,{\sigma_x}^2)&lt;/script&gt; to a standard normal distribution &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathcal{N}(0,\,1)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathcal{N}(0,\,1)&lt;/script&gt;:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;the projected distribution&lt;/strong&gt; is &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)&lt;/script&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;MathJax_Preview&quot;&gt;\theta&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\theta&lt;/script&gt; determines their linear dependency: correlation coefficient=&lt;code class=&quot;MathJax_Preview&quot;&gt;\cos(\theta)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\cos(\theta)&lt;/script&gt;.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;For each eigen vector: &lt;strong&gt;we project all the original variables to this eigen vector&lt;/strong&gt; (an axis in the transformed orthogonal space) =&amp;gt; summarise/accumulate those projected variables in this axis =&amp;gt; New variable&lt;/p&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;p&gt;Two accumulated projected new variables of two axises (eigen vectors) are uncorrelated (being independent now).&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;Eigen value = sum of projected standard deviation.&lt;/p&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Eigen vectors are orthogonal, serving as independent axises where independent variables lie in.
+        &lt;ul&gt;
+          &lt;li&gt;Diagonal covariance matrix: each entry is the square of eigen value.&lt;/li&gt;
+          &lt;li&gt;Eigen value = sum of projected standard deviation.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Projection of a normal distribtion&lt;/strong&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;strong&gt;the projected distribution&lt;/strong&gt; is &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)&lt;/script&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Mahalanobis_distance&quot;&gt;Mahalanobis distance&lt;/a&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;https://blogs.sas.com/content/iml/2012/02/15/what-is-mahalanobis-distance.html&quot;&gt;Distance is not always what it seems&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;https://blogs.sas.com/content/iml/2012/02/02/detecting-outliers-in-sas-part-3-multivariate-location-and-scatter.html&quot;&gt;Detecting outliers in SAS: Part 3: Multivariate location and scatter &amp;amp; MCD: Robust estimation by subsampling&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Sum_of_normally_distributed_random_variables&quot;&gt;Sum of normally distributed random variables-Independent random variables&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;https://github.com.cnpmjs.org/XinshaoAmosWang/DerivativeManipulation/blob/master/OutlierDetection_RobustInference.pptx.pdf&quot;&gt;Outlier, Anomaly, and Adversaries Detection using Mahalanobis distance&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;The Mahalanobis distance is a measure of the &lt;strong&gt;distance between a point &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathrm{P}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathrm{P}&lt;/script&gt; and a distribution &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{D}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{D}&lt;/script&gt;.&lt;/strong&gt;
   It is a multi-dimensional generalization of the idea of measuring how many standard deviations away P is from the mean of D. This distance is zero if P is at the mean of D, and grows as P moves away from the mean along &lt;strong&gt;each principal component axis.&lt;/strong&gt;
