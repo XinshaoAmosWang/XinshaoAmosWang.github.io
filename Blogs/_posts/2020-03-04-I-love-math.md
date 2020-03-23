@@ -8,7 +8,7 @@ comment: true
 ---
 
 
-
+0. [SGD & Newton's Method & Second-order Derivative Optimisation](#sgd--newtons-method--second-order-derivative-optimisation)
 0. [Linear algebra](#linear-algebra)
 0. [Probabilistic view of the world](#probabilistic-view-of-the-world)
 0. [Optimisation](#optimisation)
@@ -17,6 +17,7 @@ comment: true
 ### SGD & Newton's Method & Second-order Derivative Optimisation
 * [Newton's Method](https://en.wikipedia.org/wiki/Newton%27s_method)
 * [Newton's Method: Second-order Derivative Optimisation](https://en.wikipedia.org/wiki/Newton%27s_method_in_optimization)
+
 
 ### Linear algebra
 * [Properties of the Covariance Matrix](http://www.robots.ox.ac.uk/~davidc/pubs/tt2015_dac1.pdf)
