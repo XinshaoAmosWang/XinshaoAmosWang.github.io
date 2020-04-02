@@ -8,8 +8,52 @@ comment: true
 ---
 
 :+1: means being highly related to my personal research interest. 
+0. [ICCV 2019, CVPR 2020 Deep Metric Learning](#iccv-2019-cvpr-2020-deep-metric-learning)
+0. [CVPR 2019 Deep Metric Learning](#cvpr-2019-deep-metric-learning)
+0. [Few-shot Learning](#few-shot-learning)
+0. [Large Output Spaces](#large-output-spaces)
+0. [Poincaré, Hyperbolic, Curvilinear](#poincaré-hyperbolic-curvilinear)
+0. [Wasserstein](#wasserstein)
+0. [Semi-supervised or Unsupervised Learning](#semi-supervised-or-unsupervised-learning)
+0. [NeurIPS 2019-Stochastic Shared Embeddings: Data-driven Regularization of Embedding Layers](#neurips-2019-stochastic-shared-embeddings-data-driven-regularization-of-embedding-layers)
 {:.message}
 
+
+## ICCV 2019, CVPR 2020 Deep Metric Learning 
+* [Circle Loss: A Unified Perspective of Pair Similarity Optimization](https://arxiv.org/pdf/2002.10857.pdf)
+    *  Motivation: aiming to maximize the within-class similarity $$s_p$$ and minimize the between-class similarity $$s_n$$. We find a majority of loss functions, including the triplet loss and the softmax plus cross-entropy loss, embed $$s_n$$ and $$s_p$$ into similarity pairs and seek to reduce $$(s_n − s_p)$$. Such an optimization manner is inflexible, because the penalty strength on every single similarity score is restricted to be equal. 
+    * Our intuition is that if a similarity score deviates far from the optimum, it should be emphasized.
+    * we simply re-weight each similarity to highlight the less-optimized similarity scores. It results in a Circle loss, which is named due to its circular decision boundary. 
+    *  Circle loss offers a more flexible optimization approach towards a more definite convergence target,
+compared with the loss functions optimizing $$(s_n − s_p)$$.
+    * (1)  a unified loss function; (2) flexible optimization; (3) definite convergence status. 
+    * Evaluation:
+        * Tasks: 
+            * Face recognition 
+            * Person re-identification (Market-1501,MSMT17)
+            * Fine-grained image retrieval (CUB-100-2011, CARS-196, SOP-11318)
+
+        * Net architecture-1: ResNet50 (globla) + MGN (local features) for person reid (. Our implementation concatenates all the part features into a single feature vector for simplici);
+
+        * Net architecture-2: GoogLeNet (BN-Inception) for CUB, CARS, SOP, 512-D embeddings;
+    
+    * The performance is not better than Ranked List Loss on SOP. 
+    
+* [Sampling Wisely: Deep Image Embedding by Top-k Precision Optimization](http://openaccess.thecvf.com/content_ICCV_2019/papers/Lu_Sampling_Wisely_Deep_Image_Embedding_by_Top-K_Precision_Optimization_ICCV_2019_paper.pdf)
+    * In contrast, in this paper, we propose a novel deep image embedding algorithm with end-to-end optimization to top-k precision, the evaluation metric that is **closely related to user experience.**
+    * Specially, our loss function is constructed with **Wisely Sampled “misplaced” images along the top-k nearest neighbor decision boundary,** so that the gradient descent update directly
+promotes the concerned metric, top-k precision.
+    * **Our theoretical analysis** on the upper bounding and consistency properties of the proposed loss supports that minimizing our proposed loss is equivalent to maximizing top-k precision
+    * Evaluation:
+        * Datasets: CUB-200-2011, CARS-196, SOP 
+        * PyTorch + Adam
+        * Net architecture: Densenet 201, GoogLeNet V2 (Inception with BN)
+        * Finetuning
+        * Embedding size: 64, 512? 
+        * Input size: warp (256x256) => crop (227x227)
+        * Testing: only center crop
+    * The performance is not better than Ranked List Loss
+{:.message}
 
 ## CVPR 2019 Deep Metric Learning 
 * [Divide and Conquer the Embedding Space for Metric Learning](http://openaccess.thecvf.com/content_CVPR_2019/papers/Sanakoyeu_Divide_and_Conquer_the_Embedding_Space_for_Metric_Learning_CVPR_2019_paper.pdf) 
@@ -17,8 +61,9 @@ comment: true
     * Each learner will learn a separate distance metric using only a subspace of the original embedding space and **a part of the data**. 
 
     * Natural hard negatives mining: Finally, **the splitting and sampling connect to hard negative mining**, which is verified by them. (I appreciate this ablation study in Table 6 )
-    * Divide means: 1) Splitting the training data into K Clusters; 
-    2) Splitting the embedding into K Slices. 
+    * Divide means: 
+    (1) Splitting the training data into K Clusters; 
+    (2) Splitting the embedding into K Slices.  
 
 
 * [Deep Metric Learning to Rank](http://openaccess.thecvf.com/content_CVPR_2019/papers/Cakir_Deep_Metric_Learning_to_Rank_CVPR_2019_paper.pdf) :+1:

@@ -1,5 +1,210 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-03-19T21:51:21+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
-</subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Example Weighting, Importance Sampling?</title><link href="http://localhost:4000/blogs/2020-03-08-example-weighting/" rel="alternate" type="text/html" title="Example Weighting, Importance Sampling?" /><published>2020-03-08T00:00:00+00:00</published><updated>2020-03-08T00:00:00+00:00</updated><id>http://localhost:4000/blogs/example-weighting</id><content type="html" xml:base="http://localhost:4000/blogs/2020-03-08-example-weighting/">&lt;ol class=&quot;message&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-04-02T22:58:18+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
+</subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Paper Summary on Distance Metric, Representation Learning</title><link href="http://localhost:4000/blogs/2020-03-29-papers-summary-metric/" rel="alternate" type="text/html" title="Paper Summary on Distance Metric, Representation Learning" /><published>2020-03-29T00:00:00+00:00</published><updated>2020-03-29T00:00:00+00:00</updated><id>http://localhost:4000/blogs/papers-summary-metric</id><content type="html" xml:base="http://localhost:4000/blogs/2020-03-29-papers-summary-metric/">&lt;p&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
+&lt;ol class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#iccv-2019-cvpr-2020-deep-metric-learning&quot;&gt;ICCV 2019, CVPR 2020 Deep Metric Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#cvpr-2019-deep-metric-learning&quot;&gt;CVPR 2019 Deep Metric Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#few-shot-learning&quot;&gt;Few-shot Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#large-output-spaces&quot;&gt;Large Output Spaces&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#poincaré-hyperbolic-curvilinear&quot;&gt;Poincaré, Hyperbolic, Curvilinear&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#wasserstein&quot;&gt;Wasserstein&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#semi-supervised-or-unsupervised-learning&quot;&gt;Semi-supervised or Unsupervised Learning&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#neurips-2019-stochastic-shared-embeddings-data-driven-regularization-of-embedding-layers&quot;&gt;NeurIPS 2019-Stochastic Shared Embeddings: Data-driven Regularization of Embedding Layers&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;iccv-2019-cvpr-2020-deep-metric-learning&quot;&gt;ICCV 2019, CVPR 2020 Deep Metric Learning&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/2002.10857.pdf&quot;&gt;Circle Loss: A Unified Perspective of Pair Similarity Optimization&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Motivation: aiming to maximize the within-class similarity &lt;code class=&quot;MathJax_Preview&quot;&gt;s_p&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;s_p&lt;/script&gt; and minimize the between-class similarity &lt;code class=&quot;MathJax_Preview&quot;&gt;s_n&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;s_n&lt;/script&gt;. We find a majority of loss functions, including the triplet loss and the softmax plus cross-entropy loss, embed &lt;code class=&quot;MathJax_Preview&quot;&gt;s_n&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;s_n&lt;/script&gt; and &lt;code class=&quot;MathJax_Preview&quot;&gt;s_p&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;s_p&lt;/script&gt; into similarity pairs and seek to reduce &lt;code class=&quot;MathJax_Preview&quot;&gt;(s_n − s_p)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;(s_n − s_p)&lt;/script&gt;. Such an optimization manner is inflexible, because the penalty strength on every single similarity score is restricted to be equal.&lt;/li&gt;
+      &lt;li&gt;Our intuition is that if a similarity score deviates far from the optimum, it should be emphasized.&lt;/li&gt;
+      &lt;li&gt;we simply re-weight each similarity to highlight the less-optimized similarity scores. It results in a Circle loss, which is named due to its circular decision boundary.&lt;/li&gt;
+      &lt;li&gt;Circle loss offers a more flexible optimization approach towards a more definite convergence target,
+compared with the loss functions optimizing &lt;code class=&quot;MathJax_Preview&quot;&gt;(s_n − s_p)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;(s_n − s_p)&lt;/script&gt;.&lt;/li&gt;
+      &lt;li&gt;(1)  a unified loss function; (2) flexible optimization; (3) definite convergence status.&lt;/li&gt;
+      &lt;li&gt;Evaluation:
+        &lt;ul&gt;
+          &lt;li&gt;Tasks:
+            &lt;ul&gt;
+              &lt;li&gt;Face recognition&lt;/li&gt;
+              &lt;li&gt;Person re-identification (Market-1501,MSMT17)&lt;/li&gt;
+              &lt;li&gt;Fine-grained image retrieval (CUB-100-2011, CARS-196, SOP-11318)&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;Net architecture-1: ResNet50 (globla) + MGN (local features) for person reid (. Our implementation concatenates all the part features into a single feature vector for simplici);&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;Net architecture-2: GoogLeNet (BN-Inception) for CUB, CARS, SOP, 512-D embeddings;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;The performance is not better than Ranked List Loss on SOP.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Lu_Sampling_Wisely_Deep_Image_Embedding_by_Top-K_Precision_Optimization_ICCV_2019_paper.pdf&quot;&gt;Sampling Wisely: Deep Image Embedding by Top-k Precision Optimization&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;In contrast, in this paper, we propose a novel deep image embedding algorithm with end-to-end optimization to top-k precision, the evaluation metric that is &lt;strong&gt;closely related to user experience.&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Specially, our loss function is constructed with &lt;strong&gt;Wisely Sampled “misplaced” images along the top-k nearest neighbor decision boundary,&lt;/strong&gt; so that the gradient descent update directly
+promotes the concerned metric, top-k precision.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Our theoretical analysis&lt;/strong&gt; on the upper bounding and consistency properties of the proposed loss supports that minimizing our proposed loss is equivalent to maximizing top-k precision&lt;/li&gt;
+      &lt;li&gt;Evaluation:
+        &lt;ul&gt;
+          &lt;li&gt;Datasets: CUB-200-2011, CARS-196, SOP&lt;/li&gt;
+          &lt;li&gt;PyTorch + Adam&lt;/li&gt;
+          &lt;li&gt;Net architecture: Densenet 201, GoogLeNet V2 (Inception with BN)&lt;/li&gt;
+          &lt;li&gt;Finetuning&lt;/li&gt;
+          &lt;li&gt;Embedding size: 64, 512?&lt;/li&gt;
+          &lt;li&gt;Input size: warp (256x256) =&amp;gt; crop (227x227)&lt;/li&gt;
+          &lt;li&gt;Testing: only center crop&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;The performance is not better than Ranked List Loss&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;cvpr-2019-deep-metric-learning&quot;&gt;CVPR 2019 Deep Metric Learning&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Sanakoyeu_Divide_and_Conquer_the_Embedding_Space_for_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Divide and Conquer the Embedding Space for Metric Learning&lt;/a&gt; 
+:+1:
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Each learner will learn a separate distance metric using only a subspace of the original embedding space and &lt;strong&gt;a part of the data&lt;/strong&gt;.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Natural hard negatives mining: Finally, &lt;strong&gt;the splitting and sampling connect to hard negative mining&lt;/strong&gt;, which is verified by them. (I appreciate this ablation study in Table 6 )&lt;/li&gt;
+      &lt;li&gt;Divide means: 
+  (1) Splitting the training data into K Clusters; 
+  (2) Splitting the embedding into K Slices.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Cakir_Deep_Metric_Learning_to_Rank_CVPR_2019_paper.pdf&quot;&gt;Deep Metric Learning to Rank&lt;/a&gt; :+1:
+    &lt;ul&gt;
+      &lt;li&gt;Our main contribution is a novel solution to optimizing Average Precision under the Euclidean metric, based on the probabilistic interpretation of AP as the area under precision-recall curve, as well as distance quantization.&lt;/li&gt;
+      &lt;li&gt;We also propose a category-based minibatch sampling strategy and a large-batch training heuristic.&lt;/li&gt;
+      &lt;li&gt;On three &lt;strong&gt;few-shot image retrieval datasets&lt;/strong&gt;, FastAP consistently outperforms competing methods, which often involve complex optimization heuristics or costly model ensembles.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Multi-Similarity_Loss_With_General_Pair_Weighting_for_Deep_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Multi-Similarity Loss With General Pair Weighting for Deep Metric Learning&lt;/a&gt; :+1:
+    &lt;ul&gt;
+      &lt;li&gt;Objective of the proposed multi-similarity loss, which aims to collect informative pairs, and weight these pairs through their own and relative similarities.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1903.03238.pdf&quot;&gt;Ranked List Loss for Deep Metric Learning&lt;/a&gt; :+1:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Suh_Stochastic_Class-Based_Hard_Example_Mining_for_Deep_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Stochastic Class-Based Hard Example Mining for Deep Metric Learning&lt;/a&gt; :+1:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Scale linearly to the number of classes.&lt;/li&gt;
+      &lt;li&gt;The methods proposed by Movshovitz-Attias et al. [14] and Wen et al. [34] are related to ours in a sense that class representatives are jointly trained with the feature extractor. 
+However, their goal is to formulate new losses using the class representatives whereas we use them for hard negative mining.&lt;/li&gt;
+      &lt;li&gt;Given an anchor instance, our algorithm first selects a few hard negative classes based on the class-to-sample distances and then performs a refined search in an instance-level only from the selected classes.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A Theoretically Sound Upper Bound on the Triplet Loss for Improving the Efficiency of Deep Distance Metric Learning :+1:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Unsupervised&lt;/strong&gt; Embedding Learning via Invariant and Spreading Instance Feature :+1:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Yuan_Signal-To-Noise_Ratio_A_Robust_Distance_Metric_for_Deep_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Signal-To-Noise Ratio: A Robust Distance Metric for Deep Metric Learning&lt;/a&gt; :+1:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;We propose a robust SNR distance metric based on Signal-to-Noise Ratio (SNR) for measuring the similarity of image pairs for deep metric learning. Compared with Euclidean distance metric, our SNR distance metric can further jointly reduce the intra-class distances and enlarge the inter-class distances for learned features.&lt;/li&gt;
+      &lt;li&gt;SNR in signal processing is used to measure the level of a desired signal to the level of noise, and a larger SNR value means a higher signal quality.
+  For similarity measurement in deep metric learning, a pair of learned features x and y can be given as y = x + n, where n can be treated as a noise. Then, the SNR is the ratio of the feature variance and the noise variance.&lt;/li&gt;
+      &lt;li&gt;To show the generality of our SNR-based metric, we also extend our approach to hashing retrieval learning.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Branchaud-Charron_Spectral_Metric_for_Dataset_Complexity_Assessment_CVPR_2019_paper.pdf&quot;&gt;Spectral Metric for Dataset Complexity Assessment&lt;/a&gt; :+1:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Related work: &lt;a href=&quot;https://openreview.net/forum?id=ryup8-WCW&quot;&gt;Measuring the Intrinsic Dimension of Objective Landscapes ICLR 2018&lt;/a&gt;, 
+  &lt;a href=&quot;https://arxiv.org/abs/1808.03591&quot;&gt;How Complex is your classification problem? A survey on measuring classification complexity Survey on complexity measures&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Deep Asymmetric Metric Learning via Rich Relationship Mining :+1:
+    &lt;ul&gt;
+      &lt;li&gt;DAMLRRM relaxes the constraint on positive pairs to extend the generalization capability. We build positive pairs training pool by constructing a minimum connected tree for each category instead of considering all positive pairs within a mini-batch. As a result, there will exist a direct or indirect path between any positive pair, which ensures the relevance being bridged to each other. The inspiration comes from ranking on manifold [58] that spreads the relevance to their nearby neighbors one by one.&lt;/li&gt;
+      &lt;li&gt;Idea is novel. The results on SOP are not good, only 69.7 with GoogLeNet&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Hybrid-Attention_Based_Decoupled_Metric_Learning_for_Zero-Shot_Image_Retrieval_CVPR_2019_paper.pdf&quot;&gt;Hybrid-Attention Based Decoupled Metric Learning for Zero-Shot Image Retrieval&lt;/a&gt; :-1:
+    &lt;ul&gt;
+      &lt;li&gt;Very complex: object attention, spatial attention, random walk graph, etc.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1904.09626.pdf&quot;&gt;Deep Metric Learning Beyond Binary Supervision&lt;/a&gt; :-1:
+    &lt;ul&gt;
+      &lt;li&gt;Binary supervision indicating whether a pair of images are of the same class or not.&lt;/li&gt;
+      &lt;li&gt;Using continuous labels&lt;/li&gt;
+      &lt;li&gt;Learn the degree of similarity rather than just the order.&lt;/li&gt;
+      &lt;li&gt;A triplet mining strategy adapted to metric learning with continuous labels.&lt;/li&gt;
+      &lt;li&gt;Image retrieval tasks with continuous labels in terms of human poses, room layouts and image captions.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hardness-aware deep metric learning 
+:-1: : data augmentation&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ensemble Deep Manifold Similarity Learning using Hard Proxies :-1: random walk algorithm, ensemble models.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Re-Ranking via Metric Fusion for Object Retrieval and Person Re-Identification :-1:&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Deep Embedding Learning With Discriminative Sampling Policy :-1:&lt;/li&gt;
+  &lt;li&gt;Point Cloud Oversegmentation With Graph-Structured Deep Metric Learning :-1:&lt;/li&gt;
+  &lt;li&gt;Polysemous Visual-Semantic Embedding for Cross-Modal Retrieval :-1:&lt;/li&gt;
+  &lt;li&gt;A Compact Embedding for Facial Expression Similarity :-1:&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Karlinsky_RepMet_Representative-Based_Metric_Learning_for_Classification_and_Few-Shot_Object_Detection_CVPR_2019_paper.pdf&quot;&gt;RepMet: Representative-Based Metric Learning for Classification and Few-Shot Object Detection&lt;/a&gt; :-1:&lt;/li&gt;
+  &lt;li&gt;Eliminating Exposure Bias and Metric Mismatch in Multiple Object Tracking :-1:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;few-shot-learning&quot;&gt;&lt;a href=&quot;/my_docs/few-shot/&quot;&gt;Few-shot Learning&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;ICLR 2018-Meta-Learning for Semi-Supervised Few-Shot Classification&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Unsupervised Meta Learning for Few-Show Image Classification&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Learning to Self-Train for Semi-Supervised Few-Shot Classification&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Adaptive Cross-Modal Few-shot Learning&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Cross Attention Network for Few-shot Classification&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Incremental Few-Shot Learning with Attention Attractor Networks&lt;/li&gt;
+  &lt;li&gt;ICML 2019-LGM-Net: Learning to Generate Matching Networks for Few-Shot Learning&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;large-output-spaces&quot;&gt;&lt;a href=&quot;/my_docs/large-output-spaces/&quot;&gt;Large Output Spaces&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;NeurIPS 2019-Breaking the Glass Ceiling for Embedding-Based Classifiers for Large Output Spaces&lt;/li&gt;
+  &lt;li&gt;AISTATS 2019-Stochastic Negative Mining for Learning with Large Output Spaces&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;poincaré-hyperbolic-curvilinear&quot;&gt;&lt;a href=&quot;/my_docs/Poincare-Hyperbolic-Curvilinear/&quot;&gt;Poincaré, Hyperbolic, Curvilinear&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;NeurIPS 2019-Multi-relational Poincaré Graph Embeddings&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Numerically Accurate Hyperbolic Embeddings Using Tiling-Based Models&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Curvilinear Distance Metric Learning&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;wasserstein&quot;&gt;&lt;a href=&quot;/my_docs/wasserstein/&quot;&gt;Wasserstein&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;NeurIPS 2019-Generalized Sliced Wasserstein Distances&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Tree-Sliced Variants of Wasserstein Distances&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Sliced Gromov-Wasserstein&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2019-Wasserstein Dependency Measure for Representation Learning&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;semi-supervised-or-unsupervised-learning&quot;&gt;&lt;a href=&quot;/my_docs/Semi-Un-Supervised-Learning/&quot;&gt;Semi-supervised or Unsupervised Learning&lt;/a&gt;&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;CVPR 2019-Label Propagation for Deep Semi-supervised Learning&lt;/li&gt;
+  &lt;li&gt;NeurIPS 2017-Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results&lt;/li&gt;
+  &lt;li&gt;ICLR 2019-Unsupervised Learning via Meta-Learning&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;neurips-2019-stochastic-shared-embeddings-data-driven-regularization-of-embedding-layers&quot;&gt;&lt;a href=&quot;https://arxiv.org/pdf/1905.10630.pdf&quot;&gt;NeurIPS 2019-Stochastic Shared Embeddings: Data-driven Regularization of Embedding Layers&lt;/a&gt;&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: 
+In deep neural nets, lower level embedding layers account for a large portion of the total number of parameters.&lt;strong&gt;Tikhonov regularization, graph-based regularization, and hard parameter sharing are approaches that introduce explicit biases into training in a hope to reduce statistical complexity.&lt;/strong&gt; Alternatively, we propose stochastically shared embeddings (SSE), a data-driven approach to regularizing embedding layers, which stochastically transitions between embeddings during stochastic gradient descent (SGD). Because SSE integrates seamlessly with existing SGD algorithms, it can be used with only minor modifications when training large scale neural networks. We develop two versions of SSE: SSE-Graph using knowledge graphs of embeddings; SSE-SE using no prior information. We provide theoretical guarantees for our method and show its empirical effectiveness on 6 distinct tasks, from simple neural networks with one hidden layer in recommender systems, to the transformer and BERT in natural languages. &lt;strong&gt;We find that when used along with widely-used regularization methods such as weight decay and dropout, our proposed SSE can further reduce overfitting, which often leads to more favorable generalization results.&lt;/strong&gt; &lt;br /&gt;
+We conducted &lt;strong&gt;experiments for a total of 6 tasks from simple neural networks with one hidden layer in recommender systems, to the transformer and BERT in natural languages.&lt;/strong&gt;&lt;/p&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest. ICCV 2019, CVPR 2020 Deep Metric Learning CVPR 2019 Deep Metric Learning Few-shot Learning Large Output Spaces Poincaré, Hyperbolic, Curvilinear Wasserstein Semi-supervised or Unsupervised Learning NeurIPS 2019-Stochastic Shared Embeddings: Data-driven Regularization of Embedding Layers</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Example Weighting, Importance Sampling?</title><link href="http://localhost:4000/blogs/2020-03-08-example-weighting/" rel="alternate" type="text/html" title="Example Weighting, Importance Sampling?" /><published>2020-03-08T00:00:00+00:00</published><updated>2020-03-08T00:00:00+00:00</updated><id>http://localhost:4000/blogs/example-weighting</id><content type="html" xml:base="http://localhost:4000/blogs/2020-03-08-example-weighting/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#importance-samplinggradient&quot;&gt;Importance sampling&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -522,271 +727,4 @@ If you want to include hidden files use,
   &lt;li&gt;&lt;a href=&quot;https://papers.nips.cc/paper/7010-learning-active-learning-from-data.pdf&quot;&gt;Learning Active Learning from Data&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Noisy labels Active Learning Foundation of Deep Learning</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Paper notes on Anomalies&amp;amp;Regularisation</title><link href="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/" rel="alternate" type="text/html" title="Paper notes on Anomalies&amp;Regularisation" /><published>2020-02-15T00:00:00+00:00</published><updated>2020-02-15T00:00:00+00:00</updated><id>http://localhost:4000/blogs/anomalies-regularisation</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/">&lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;/Papers/AnomalyAndRegularisation/&quot;&gt;Paper notes on Anomalies&amp;amp;Regularisation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Paper notes on Anomalies&amp;amp;Regularisation</summary></entry><entry><title type="html">Notes on Core ML Techniques</title><link href="http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/" rel="alternate" type="text/html" title="Notes on Core ML Techniques" /><published>2020-02-14T00:00:00+00:00</published><updated>2020-02-14T00:00:00+00:00</updated><id>http://localhost:4000/blogs/Core-machine-learning-topics</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-14-Core-machine-learning-topics/">&lt;ol class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#kullback-leibler-divergence&quot;&gt;Kullback-Leibler Divergence&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#what-is-the-main-difference-between-gan-and-autoencoder&quot;&gt;What is the main difference between GAN and autoencoder&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;#whats-the-difference-between-a-variational-autoencoder-vae-and-an-autoencoder&quot;&gt;What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#knowledge-distillation&quot;&gt;Knowledge Distillation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;#confidence-penalty--label-smoothing--ouput-regularisation&quot;&gt;Confidence penalty &amp;amp; Label Smoothing &amp;amp;&amp;amp; Ouput Regularisation&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#uncertainty&quot;&gt;Uncertainty&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#long-tailed-recognition&quot;&gt;Long-tailed Recognition-Sample Imbalance&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#meta-learning&quot;&gt;Meta-learning&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#ensemble-methods&quot;&gt;Ensemble methods&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;knowledge-distillation&quot;&gt;Knowledge Distillation&lt;/h3&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1503.02531.pdf&quot;&gt;Distilling the Knowledge in a Neural Network&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;strong&gt;Knowledge definition&lt;/strong&gt;: A more
-abstract view of the knowledge, that frees it from any particular instantiation, is that it is a learned mapping from input vectors to output vectors.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;An obvious way to &lt;strong&gt;transfer the generalization ability of the cumbersome model to a small model&lt;/strong&gt; is
-to use the class probabilities produced by the cumbersome model as &lt;strong&gt;“soft targets” for training the
-small model.&lt;/strong&gt; When the soft targets
-have high entropy, they provide much more information per training case than hard targets and much
-less variance in the gradient between training cases, so the small model can often be trained on much
-less data than the original cumbersome model and using a much higher learning rate.&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;a href=&quot;#ensemble-methods&quot;&gt;A very simple way to improve the performance of almost any machine learning
-algorithm is to train many different models on the same data and then to average
-their predictions&lt;/a&gt; =&amp;gt; cumbersome and may be too computationally expensive&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;strong&gt;Compress/distill the knowledge in an ensemble into a single model&lt;/strong&gt; which is much easier to deploy (distilling the knowledge in an ensemble of models into a single model);&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;confidence-penalty--label-smoothing--ouput-regularisation&quot;&gt;Confidence penalty &amp;amp; Label Smoothing &amp;amp;&amp;amp; Ouput Regularisation&lt;/h3&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;https://openreview.net/pdf?id=HkCjNI5ex&quot;&gt;Regularizing Neural Networks by Penalizing Confident Output Distributions&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Output regularisation&lt;/strong&gt;: Regularizing the output distribution of large, deep neural networks has largely been unexplored.  Output regularization has the property that it is invariant
-to the parameterization of the underlying neural network.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Knowledge definition&lt;/strong&gt;: To motivate output regularizers, we can view the knowledge of a model as the conditional distribution it produces over outputs given an input (Hinton et al., 2015) as opposed to the learned values
-of its parameters.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Distillation definition:&lt;/strong&gt; explicitly training a small network to assign the same probabilities to incorrect
-classes as a large network or ensemble of networks that generalizes well.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Two output regularizers&lt;/strong&gt;:
-        &lt;ul&gt;
-          &lt;li&gt;A maximum entropy based confidence penalty;&lt;/li&gt;
-          &lt;li&gt;Label smoothing (uniform and unigram).&lt;/li&gt;
-          &lt;li&gt;We connect a maximum entropy based confidence penalty to label smoothing through the direction of the KL divergence.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;ANNEALING AND THRESHOLDING THE CONFIDENCE PENALTY
-        &lt;ul&gt;
-          &lt;li&gt;Suggesting a confidence penalty
-that is weak at the beginning of training and strong near convergence.&lt;/li&gt;
-          &lt;li&gt;Only penalize output distributions when they are below a certain entropy threshold&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Label/Objective smoothing:
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Smoothing the labels with a uniform distribution-&lt;a href=&quot;https://arxiv.org/pdf/1512.00567.pdf&quot;&gt;Rethinking the Inception Architecture&lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Smooth the labels with a teacher model &lt;a href=&quot;https://arxiv.org/pdf/1503.02531.pdf&quot;&gt;Distilling, Hinton et al., 2015&lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Smooth the labels with the model’s own distribution-&lt;a href=&quot;https://arxiv.org/pdf/1412.6596.pdf&quot;&gt;TRAINING DEEP NEURAL NETWORKS
-ON NOISY LABELS WITH BOOTSTRAPPING (Reed et al., 2014)&lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Adding label noise simply-&lt;a href=&quot;https://www.zpascal.net/cvpr2016/Xie_DisturbLabel_Regularizing_CNN_CVPR_2016_paper.pdf&quot;&gt;Disturblabel: Regularizing cnn on the loss layer–CVPR 2016&lt;/a&gt;&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;&lt;strong&gt;Distillation and self-distillation both
-regularize a network by incorporating information about the ratios between incorrect classes.&lt;/strong&gt;&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Label-Smoothing Regularization proposed in &lt;a href=&quot;https://arxiv.org/pdf/1512.00567.pdf&quot;&gt;Rethinking the Inception Architecture for Computer Vision&lt;/a&gt;-A mechanism for encouraging the model to be less confident.
-    &lt;ul&gt;
-      &lt;li&gt;Over-fitting&lt;/li&gt;
-      &lt;li&gt;Reduces the ability of the model to &lt;strong&gt;adapt: bounded gradient&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Virtual adversarial training (VAT) &lt;a href=&quot;https://arxiv.org/pdf/1507.00677.pdf&quot;&gt;Distributional
-smoothing by virtual adversarial examples&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Another promising smoothing regularizer. However, it has multiple hyperparameters, significantly more computation in grid-searching&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;uncertainty&quot;&gt;Uncertainty&lt;/h3&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://xinshaoamoswang.github.io/Papers/AnomalyAndRegularisation/#neurips-2018-predictive-uncertainty-estimation-via-prior-networks&quot;&gt;NeurIPS 2018: Predictive Uncertainty Estimation via Prior Networks&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://ermongroup.github.io/cs228-notes/extras/vae/&quot;&gt;The variational auto-encoder&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://papers.nips.cc/paper/7850-information-constraints-on-auto-encoding-variational-bayes.pdf&quot;&gt;Information Constraints on Auto-Encoding Variational Bayes-NeurIPS 2018&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/2002.07217.pdf&quot;&gt;Decision-Making with Auto-Encoding Variational Bayes&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1312.6114.pdf&quot;&gt;Auto-Encoding Variational Bayes-ICLR 2014&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://openreview.net/forum?id=HyxQzBceg&quot;&gt;Deep Variational Information Bottleneck-ICLR2017&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1610.03454.pdf&quot;&gt;Deep Variational Canonical Correlation Analysis&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/physics/0004057.pdf&quot;&gt;The information bottleneck (IB) principle–The information
-bottleneck method&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://ermongroup.github.io/cs228-notes/&quot;&gt;CS 228 - Probabilistic Graphical Models&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1906.04692.pdf&quot;&gt;Rethinking Person Re-Identification with Confidence&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;long-tailed-recognition&quot;&gt;Long-tailed Recognition&lt;/h3&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;https://openreview.net/references/pdf?id=nHObduxXz&quot;&gt;DECOUPLING REPRESENTATION AND CLASSIFIER
-FOR LONG-TAILED RECOGNITION-ICLR2020&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Representation Learning: We first train models to learn representations with different sampling strategies, including the standard instance-based sampling, class-balanced sampling and a mixture of them.&lt;/li&gt;
-      &lt;li&gt;Classification: We study three different basic approaches to obtain a classifier with balanced decision boundaries, on top of the learned representations.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;meta-learning&quot;&gt;Meta-learning&lt;/h3&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://www.reddit.com/r/MachineLearning/comments/f6e25t/r_confusion_on_the_definition_of_metalearning/&quot;&gt;Confusion on the definition of Meta-learning&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;../../my_docs/few-shot&quot;&gt;Few-shot Learning is an instantiation of Meta-learning&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_MetaCleaner_Learning_to_Hallucinate_Clean_Representations_for_Noisy-Labeled_Visual_Recognition_CVPR_2019_paper.pdf&quot;&gt;MetaCleaner: Learning to Hallucinate Clean Representations for Noisy-Labeled Visual Recognition&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Noisy Weighting: estimate the confidence scores of all the images in the noisy subset;  &lt;strong&gt;MetaCleaner compares these representations in the feature space =&amp;gt; discover relations between images =&amp;gt; generate the confidence score of each image in the subset.&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Clean Hallucinating: to hallucinate a `clean‘ representation of a class from the noisy subset, by summarizing the noisy images with their confidence scores;&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;MetaCleaner as a new layer before classifier: batch size $K \times N =&amp;gt; K$, $K$ categories, $N$ images per class in the batch&lt;/strong&gt;.&lt;/li&gt;
-      &lt;li&gt;Different from prototypical network, our MetaCleaner mainly develops a robust classifier to reduce confusion of noisy labels. Hence, it adaptively uses the weighted prototype as a ‘clean’ representation to generalize softmax classifier, instead of using the mean prototype to construct a metric classifier for low-shot learning.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Why is this called meta-learning?&lt;/strong&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Learning_to_Learn_From_Noisy_Labeled_Data_CVPR_2019_paper.pdf&quot;&gt;Learning to Learn From Noisy Labeled Data-CVPR 2019&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/LiJunnan1992/MLNT/issues/1&quot;&gt;My Understanding: https://github.com/LiJunnan1992/MLNT/issues/1&lt;/a&gt;
-        &lt;ul&gt;
-          &lt;li&gt;Iteratively Improve the Teacher/Oracle == Soft Target&lt;/li&gt;
-          &lt;li&gt;&lt;strong&gt;Meta-obejctive-training/testing:&lt;/strong&gt;   The meta-training sees synthetic noisy training examples. After training on them, the meta-testing evaluates its consistency with oracle and aims to maximise the consistency, i.e., making it unaffected after seeing synthetic noise.&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.reddit.com/r/MachineLearning/comments/bws5iv/r_cvpr_2019_noisetolerant_training_work_learning/&quot;&gt;Reddit Analysis&lt;/a&gt;: Extremely complex in practice. However, the ideas are interesting and novel.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1803.09050.pdf&quot;&gt;Learning to Reweight Examples for Robust Deep Learning-ICML 2018&lt;/a&gt;- Simultaneously minimize the loss on &lt;strong&gt;a clean unbiased validation set&lt;/strong&gt;.
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Meta-objective&lt;/strong&gt;: a novel meta-learning algorithm that learns to assign weights to training examples based on their gradient directions.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Solution&lt;/strong&gt;:  Suppose that &lt;strong&gt;a pair of training and validation examples are very similar&lt;/strong&gt;, and they also provide
-&lt;strong&gt;similar gradient directions&lt;/strong&gt;, then this training example is
-helpful and should be up-weighted, and conversely, if they
-provide &lt;strong&gt;opposite gradient directions&lt;/strong&gt;, this training example
-is harmful and should be downweighed.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://papers.nips.cc/paper/8467-meta-weight-net-learning-an-explicit-mapping-for-sample-weighting.pdf&quot;&gt;Meta-Weight-Net: Learning an Explicit Mapping
-For Sample Weighting-NeurIPS 2019&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;The major difference with &lt;a href=&quot;https://arxiv.org/pdf/1803.09050.pdf&quot;&gt;Learning to Reweight Examples&lt;/a&gt; is that the weights are implicitly learned there, without an explicit weighting function.
-        &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;I am skeptical and not convinced here!&lt;/strong&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;ensemble-methods&quot;&gt;Ensemble methods&lt;/h3&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=7F08BF5ADDA7E8BB9D5F40EA4241AD81?doi=10.1.1.228.2236&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;Ensemble methods in machine learning&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Ensemble methods are learning algorithms that construct &lt;strong&gt;a set of classifiers&lt;/strong&gt; and then classify new data points by taking &lt;strong&gt;a weighted vote of their predictions.&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;The original ensemble method is &lt;strong&gt;Bayesian averaging&lt;/strong&gt; but more recent algorithms include error correcting output coding, Bagging and boosting. &lt;strong&gt;This paper reviews these methods and explains why ensembles can often perform better than any single classifier.&lt;/strong&gt;
-        &lt;ul&gt;
-          &lt;li&gt;Bayesian Voting Enumerating the Hypotheses.&lt;/li&gt;
-          &lt;li&gt;Bagging: Bagging presents the learning algorithm with a training set that consists of a sample of $m$ training examples drawn randomly with replacement from the original training set of $m$ items.&lt;/li&gt;
-          &lt;li&gt;…&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;kullback-leibler-divergence&quot;&gt;Kullback-Leibler Divergence&lt;/h3&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained&quot;&gt;How to approximate our data (choose a parameterized distribution =&amp;gt; optimise its parameters): KL Divergence helps us to measure just how much information we lose when we choose an approximation compared with our observations.&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;The most important metric in information theory is called &lt;strong&gt;Entropy&lt;/strong&gt;, typically denoted as $\mathbf{H}$. The definition of Entropy for a probability distribution is: $\mathbf{H}=-\sum_{i=1}^{n} p(\mathbf{x}_i) \log p(\mathbf{x}_i) $.&lt;/li&gt;
-      &lt;li&gt;If we use $\log_2$ for our calculation we can interpret entropy as “the minimum number of bits it would take us to encode our information”.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-understanding-kl-divergence-2b382ca2b2a8&quot;&gt;Intuitive Guide to Understanding KL Divergence&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;What is a distributin?&lt;/li&gt;
-      &lt;li&gt;What is an event?&lt;/li&gt;
-      &lt;li&gt;Problem we’re trying to solve: choose a parameterized distribution =&amp;gt; optimise its parameters): KL Divergence helps us to measure just how much information we lose when we choose an approximation compared with our observations.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;what-is-the-main-difference-between-gan-and-autoencoder&quot;&gt;What is the main difference between GAN and autoencoder?&lt;/h3&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;https://datascience.stackexchange.com/a/55094&quot;&gt;An autoencoder learns to represent some input information very efficiently, and subsequently how to reconstruct the input from it’s compressed form.&lt;/a&gt;
-  ~ :) ~&lt;a href=&quot;https://qr.ae/TzM5Mv&quot;&gt;An autoencoder compresses its input down to a vector - with much fewer dimensions than its input data, and then transforms it back into a tensor with the same shape as its input over several neural net layers. They’re trained to reproduce their input, so it’s kind of like learning a compression algorithm for that specific dataset.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://datascience.stackexchange.com/a/55094&quot;&gt;A GAN uses an adversarial feedback loop to learn how to generate some information that “seems real” (i.e. looks the same/sounds the same/is otherwise indistinguishable from some real data)&lt;/a&gt; ~ :) ~ &lt;a href=&quot;https://qr.ae/TzM5Mv&quot;&gt;Instead of being given a bit of data as input, it’s given a small vector of random numbers. The generator network tries to transform this little vector into a realistic sample from the training data. The discriminator network then takes this generated sample(and some real samples from the dataset) and learns to guess whether the samples are real or fake.&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://qr.ae/TzM5Mv&quot;&gt;Another difference: while they both fall under the umbrella of unsupervised learning, they are different approaches to the problem. A GAN is a generative model - it’s supposed to learn to generate realistic &lt;em&gt;new&lt;/em&gt; samples of a dataset. Variational autoencoders are generative models, but normal “vanilla” autoencoders just reconstruct their inputs and can’t generate realistic new samples.&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://qr.ae/TzMSyS&quot;&gt;Autoencoders learn a given distribution comparing its input to its output, this is good for learning hidden representations of data, but is pretty bad for generating new data. Mainly because we learn an averaged representation of the data thus the output becomes pretty blurry.
-  Generative Adversarial Networks take an entirely different approach. They use another network (so-called Discriminator) to measure the distance between the generated and the real data.
-  The main advantage of GANs over Autoencoders in generating data is that they can be conditioned by different inputs. For example, you can learn the mapping between two domains: satellite images to google maps [1] . Or you can teach the generator to reproduce several classes of data: generating the MNIST dataset[2] .
-  &lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.keras.io/building-autoencoders-in-keras.html&quot;&gt; Building Autoencoders in Keras&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/gans-vs-autoencoders-comparison-of-deep-generative-models-985cf15936ea&quot;&gt;Coding: GANs vs. Autoencoders: Comparison of Deep Generative Models&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;whats-the-difference-between-a-variational-autoencoder-vae-and-an-autoencoder&quot;&gt;What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?&lt;/h3&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf&quot;&gt;Intuitively Understanding Variational Autoencoders – Towards Data Science by Irhum Shafkat.&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;span class=&quot;quora-content-embed&quot; data-name=&quot;Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154&quot;&gt;Read &lt;a class=&quot;quora-content-link&quot; data-width=&quot;560&quot; data-height=&quot;260&quot; href=&quot;https://www.quora.com/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder/answer/Vishal-Sharma-154&quot; data-type=&quot;answer&quot; data-id=&quot;66853410&quot; data-key=&quot;a5099035f08fbac1ed45a4bb7a1c5d2c&quot; load-full-answer=&quot;False&quot; data-embed=&quot;trhonms&quot;&gt;&lt;a href=&quot;https://www.quora.com/Vishal-Sharma-154&quot;&gt;Vishal Sharma&lt;/a&gt;'s &lt;a href=&quot;/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder?top_ans=66853410&quot;&gt;answer&lt;/a&gt; to &lt;a href=&quot;/Whats-the-difference-between-a-Variational-Autoencoder-VAE-and-an-Autoencoder&quot; ref=&quot;canonical&quot;&gt;&lt;span class=&quot;rendered_qtext&quot;&gt;What's the difference between a Variational Autoencoder (VAE) and an Autoencoder?&lt;/span&gt;&lt;/a&gt;&lt;/a&gt; on &lt;a href=&quot;https://www.quora.com&quot;&gt;Quora&lt;/a&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;https://www.quora.com/widgets/content&quot;&gt;&lt;/script&gt;&lt;/span&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://blog.keras.io/building-autoencoders-in-keras.html&quot;&gt; Building Autoencoders in Keras&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://distill.pub/2017/aia/&quot;&gt;Using Artificial Intelligence to Augment Human Intelligence&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://efrosgans.eecs.berkeley.edu/CVPR18_slides/VAE_GANS_by_Rosca.pdf&quot;&gt;VAEs and GANs
-Mihaela Rosca&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://syncedreview.com/2019/06/06/going-beyond-gan-new-deepmind-vae-model-generates-high-fidelity-human-faces/&quot;&gt;Going Beyond GAN? New DeepMind VAE Model Generates High Fidelity Human Faces&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Kullback-Leibler Divergence What is the main difference between GAN and autoencoder What’s the difference between a Variational Autoencoder (VAE) and an Autoencoder?</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Paper notes on Anomalies&amp;amp;Regularisation</summary></entry></feed>

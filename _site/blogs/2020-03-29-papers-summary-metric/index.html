@@ -44,14 +44,14 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 <meta property="og:locale" content="en" />
 <meta name="description" content="“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc" />
 <meta property="og:description" content="“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc" />
-<link rel="canonical" href="http://localhost:4000/blogs/2019-10-01-papers-summary-metric/" />
-<meta property="og:url" content="http://localhost:4000/blogs/2019-10-01-papers-summary-metric/" />
+<link rel="canonical" href="http://localhost:4000/blogs/2020-03-29-papers-summary-metric/" />
+<meta property="og:url" content="http://localhost:4000/blogs/2020-03-29-papers-summary-metric/" />
 <meta property="og:site_name" content="Xinshao (Amos) Wang" />
 <meta property="og:image" content="http://localhost:4000/assets/img/blog/steve-harvey.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-10-01T00:00:00+01:00" />
+<meta property="article:published_time" content="2020-03-29T00:00:00+00:00" />
 <script type="application/ld+json">
-{"description":"“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc","author":{"@type":"Person","name":"Xinshao (Amos) Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2019-10-01-papers-summary-metric/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao (Amos) Wang"},"image":"http://localhost:4000/assets/img/blog/steve-harvey.jpg","headline":"Paper Summary on Distance Metric, Representation Learning","dateModified":"2019-10-01T00:00:00+01:00","datePublished":"2019-10-01T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2019-10-01-papers-summary-metric/"},"@context":"https://schema.org"}</script>
+{"description":"“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc","author":{"@type":"Person","name":"Xinshao (Amos) Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2020-03-29-papers-summary-metric/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao (Amos) Wang"},"image":"http://localhost:4000/assets/img/blog/steve-harvey.jpg","headline":"Paper Summary on Distance Metric, Representation Learning","dateModified":"2020-03-29T00:00:00+00:00","datePublished":"2020-03-29T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2020-03-29-papers-summary-metric/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -81,7 +81,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-<link rel="alternate" href="http://localhost:4000/blogs/2019-10-01-papers-summary-metric/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/blogs/2020-03-29-papers-summary-metric/" hreflang="en">
 
 <link rel="shortcut icon" href="/assets/icons/icon.png">
 <link rel="apple-touch-icon" href="/assets/icons/icon.png">
@@ -201,7 +201,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
     <p class="post-date heading">
       
-      <time datetime="2019-10-01T00:00:00+01:00">01 Oct 2019</time>
+      <time datetime="2020-03-29T00:00:00+00:00">29 Mar 2020</time>
       
       
       
@@ -260,7 +260,71 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
   </header>
 
   
-    <p class="message"><img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> means being highly related to my personal research interest.</p>
+    <p><img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> means being highly related to my personal research interest.</p>
+<ol class="message">
+  <li><a href="#iccv-2019-cvpr-2020-deep-metric-learning">ICCV 2019, CVPR 2020 Deep Metric Learning</a></li>
+  <li><a href="#cvpr-2019-deep-metric-learning">CVPR 2019 Deep Metric Learning</a></li>
+  <li><a href="#few-shot-learning">Few-shot Learning</a></li>
+  <li><a href="#large-output-spaces">Large Output Spaces</a></li>
+  <li><a href="#poincar%C3%A9-hyperbolic-curvilinear">Poincaré, Hyperbolic, Curvilinear</a></li>
+  <li><a href="#wasserstein">Wasserstein</a></li>
+  <li><a href="#semi-supervised-or-unsupervised-learning">Semi-supervised or Unsupervised Learning</a></li>
+  <li><a href="#neurips-2019-stochastic-shared-embeddings-data-driven-regularization-of-embedding-layers">NeurIPS 2019-Stochastic Shared Embeddings: Data-driven Regularization of Embedding Layers</a></li>
+</ol>
+
+<h2 id="iccv-2019-cvpr-2020-deep-metric-learning">ICCV 2019, CVPR 2020 Deep Metric Learning</h2>
+<ul class="message">
+  <li>
+<a href="https://arxiv.org/pdf/2002.10857.pdf">Circle Loss: A Unified Perspective of Pair Similarity Optimization</a>
+    <ul>
+      <li>Motivation: aiming to maximize the within-class similarity <code class="MathJax_Preview">s_p</code><script type="math/tex">s_p</script> and minimize the between-class similarity <code class="MathJax_Preview">s_n</code><script type="math/tex">s_n</script>. We find a majority of loss functions, including the triplet loss and the softmax plus cross-entropy loss, embed <code class="MathJax_Preview">s_n</code><script type="math/tex">s_n</script> and <code class="MathJax_Preview">s_p</code><script type="math/tex">s_p</script> into similarity pairs and seek to reduce <code class="MathJax_Preview">(s_n − s_p)</code><script type="math/tex">(s_n − s_p)</script>. Such an optimization manner is inflexible, because the penalty strength on every single similarity score is restricted to be equal.</li>
+      <li>Our intuition is that if a similarity score deviates far from the optimum, it should be emphasized.</li>
+      <li>we simply re-weight each similarity to highlight the less-optimized similarity scores. It results in a Circle loss, which is named due to its circular decision boundary.</li>
+      <li>Circle loss offers a more flexible optimization approach towards a more definite convergence target,
+compared with the loss functions optimizing <code class="MathJax_Preview">(s_n − s_p)</code><script type="math/tex">(s_n − s_p)</script>.</li>
+      <li>(1)  a unified loss function; (2) flexible optimization; (3) definite convergence status.</li>
+      <li>Evaluation:
+        <ul>
+          <li>Tasks:
+            <ul>
+              <li>Face recognition</li>
+              <li>Person re-identification (Market-1501,MSMT17)</li>
+              <li>Fine-grained image retrieval (CUB-100-2011, CARS-196, SOP-11318)</li>
+            </ul>
+          </li>
+          <li>
+            <p>Net architecture-1: ResNet50 (globla) + MGN (local features) for person reid (. Our implementation concatenates all the part features into a single feature vector for simplici);</p>
+          </li>
+          <li>Net architecture-2: GoogLeNet (BN-Inception) for CUB, CARS, SOP, 512-D embeddings;</li>
+        </ul>
+      </li>
+      <li>The performance is not better than Ranked List Loss on SOP.</li>
+    </ul>
+  </li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Lu_Sampling_Wisely_Deep_Image_Embedding_by_Top-K_Precision_Optimization_ICCV_2019_paper.pdf">Sampling Wisely: Deep Image Embedding by Top-k Precision Optimization</a>
+    <ul>
+      <li>In contrast, in this paper, we propose a novel deep image embedding algorithm with end-to-end optimization to top-k precision, the evaluation metric that is <strong>closely related to user experience.</strong>
+</li>
+      <li>Specially, our loss function is constructed with <strong>Wisely Sampled “misplaced” images along the top-k nearest neighbor decision boundary,</strong> so that the gradient descent update directly
+promotes the concerned metric, top-k precision.</li>
+      <li>
+<strong>Our theoretical analysis</strong> on the upper bounding and consistency properties of the proposed loss supports that minimizing our proposed loss is equivalent to maximizing top-k precision</li>
+      <li>Evaluation:
+        <ul>
+          <li>Datasets: CUB-200-2011, CARS-196, SOP</li>
+          <li>PyTorch + Adam</li>
+          <li>Net architecture: Densenet 201, GoogLeNet V2 (Inception with BN)</li>
+          <li>Finetuning</li>
+          <li>Embedding size: 64, 512?</li>
+          <li>Input size: warp (256x256) =&gt; crop (227x227)</li>
+          <li>Testing: only center crop</li>
+        </ul>
+      </li>
+      <li>The performance is not better than Ranked List Loss</li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="cvpr-2019-deep-metric-learning">CVPR 2019 Deep Metric Learning</h2>
 <ul class="message">
@@ -272,8 +336,9 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
         <p>Each learner will learn a separate distance metric using only a subspace of the original embedding space and <strong>a part of the data</strong>.</p>
       </li>
       <li>Natural hard negatives mining: Finally, <strong>the splitting and sampling connect to hard negative mining</strong>, which is verified by them. (I appreciate this ablation study in Table 6 )</li>
-      <li>Divide means: 1) Splitting the training data into K Clusters; 
-  2) Splitting the embedding into K Slices.</li>
+      <li>Divide means: 
+  (1) Splitting the training data into K Clusters; 
+  (2) Splitting the embedding into K Slices.</li>
     </ul>
   </li>
   <li>
@@ -468,14 +533,10 @@ We conducted <strong>experiments for a total of 6 tasks from simple neural netwo
 
 <div class="navigator">
     
-        <span style="float:left"><a href="/blogs/2019-10-01-Research-GR/">« An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies</a>
-          · <a href="https://xinshaoamoswang.github.io/blogs/2019-10-01-Research-GR/#disqus_thread"></a>
+        <span style="float:left"><a href="/blogs/2020-03-08-example-weighting/">« Example Weighting, Importance Sampling?</a>
+          · <a href="https://xinshaoamoswang.github.io/blogs/2020-03-08-example-weighting/#disqus_thread"></a>
         </span>
     
-    
-        <span style="float:right"><a href="/blogs/2019-10-01-papers-summary-noise/">Paper Summary on Noise, Anomalies, Adversaries, Robust Learning, Generalization »</a>
-          · <a href="https://xinshaoamoswang.github.io/blogs/2019-10-01-papers-summary-noise/#disqus_thread"></a>
-        </span>
     
 </div>
 
@@ -492,7 +553,7 @@ We conducted <strong>experiments for a total of 6 tasks from simple neural netwo
 
 <script>
     var disqus_config = function () {
-            this.page.url = "https://xinshaoamoswang.github.io/blogs/2019-10-01-papers-summary-metric/";
+            this.page.url = "https://xinshaoamoswang.github.io/blogs/2020-03-29-papers-summary-metric/";
             this.page.identifier = "/blogs/papers-summary-metric";
         }; 
 
