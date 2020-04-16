@@ -1,5 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-04-03T09:16:46+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
-</subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Paper Summary on Distance Metric, Representation Learning</title><link href="http://localhost:4000/blogs/2020-03-29-papers-summary-metric/" rel="alternate" type="text/html" title="Paper Summary on Distance Metric, Representation Learning" /><published>2020-03-29T00:00:00+00:00</published><updated>2020-03-29T00:00:00+00:00</updated><id>http://localhost:4000/blogs/papers-summary-metric</id><content type="html" xml:base="http://localhost:4000/blogs/2020-03-29-papers-summary-metric/">&lt;p&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-04-16T09:38:25+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
+</subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Paper Summary on Label Manipulation, Output Regularisation (Optimisation tricks)</title><link href="http://localhost:4000/blogs/2020-04-09-label-manipulation/" rel="alternate" type="text/html" title="Paper Summary on Label Manipulation, Output Regularisation (Optimisation tricks)" /><published>2020-04-09T00:00:00+01:00</published><updated>2020-04-09T00:00:00+01:00</updated><id>http://localhost:4000/blogs/label-manipulation</id><content type="html" xml:base="http://localhost:4000/blogs/2020-04-09-label-manipulation/">&lt;p&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#label-smoothing&quot;&gt;Label Smoothing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Confidence Penalty&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Label Correction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Example Weighting&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p class=&quot;message&quot;&gt;&lt;a href=&quot;../2020-02-14-Core-machine-learning-topics/#knowledge-distillation&quot;&gt;Related Notes&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;label-smoothing&quot;&gt;Label Smoothing&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/2003.02819.pdf&quot;&gt;Does label smoothing mitigate label noise?- Michal Lukasik, Srinadh Bhojanapalli, Aditya Krishna Menon and Sanjiv Kumar&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;The definition of LS:&lt;/strong&gt; Label smoothing is commonly used in training deep learning models, wherein one-hot training labels are mixed with uniform label vectors.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;While &lt;strong&gt;label smoothing apparently amplifies this problem — being equivalent to injecting symmetric noise to the labels&lt;/strong&gt; — we show how it relates to a general family of loss-correction techniques from the label noise literature. Building on this connection, we show that label smoothing is competitive with loss-correction under label noise.
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Do you agree with this?&lt;/strong&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Further, we show that when distilling models from noisy data, label smoothing of the teacher is beneficial; this is in contrast to recent findings for noise-free problems, and sheds further light on settings where label smoothing is beneficial.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Interestingly, there are two competing intuitions. On the one hand, smoothing might mitigate the problem, as it &lt;strong&gt;prevents overconfidence on any one example&lt;/strong&gt;. On the other hand, smoothing might accentuate the problem, as it is &lt;strong&gt;equivalent to injecting uniform noise into all labels&lt;/strong&gt; [ DisturbLabel Xie et al., 2016].&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;At first glance, this connection indicates that smoothing has an opposite effect to one such loss-correction technique.&lt;/strong&gt; However, we &lt;strong&gt;empirically show that smoothing is competitive with such techniques in denoising&lt;/strong&gt;, and that it improves performance of distillation.
+        &lt;ul&gt;
+          &lt;li&gt;we present a novel connection of label smoothing to loss correction techniques from the label noise literature;&lt;/li&gt;
+          &lt;li&gt;We empirically demonstrate that label smoothing significantly improves performance under label noise, which we explain by relating smoothing to l2 regularisation.&lt;/li&gt;
+          &lt;li&gt;we show that when distilling from noisy labels, smoothing the teacher improves the student. While Müller et al. [2019] established that label smoothing can harm distillation, we show an opposite picture in noisy settings.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/2003.02819.pdf&quot;&gt;Does label smoothing mitigate label noise?- Label smoothing meets loss correction&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1605.00055.pdf&quot;&gt;DisturbLabel: Regularizing CNN on the Loss Layer-CVPR 2016-Lingxi Xie, Jingdong Wang, Zhen Wei, Meng Wang, Qi Tian&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Randomly replaces a part of labels as incorrect values in each iteration.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;In each training iteration, DisturbLabel randomly selects a small subset of samples (from those in the current mini-batch) and randomly sets their ground-truth labels to be incorrect, which results in a noisy loss function and, consequently, noisy gradient back-propagation.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;DisturbLabel works on each mini-batch independently.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1512.00567.pdf&quot;&gt;Rethinking the inception architecture for computer vision-CVPR 2016 Szegedy, C., Vanhoucke, V., Ioffe, S., Shlens, J., Wojna, Z&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Model Regularization via Label Smoothing&lt;/li&gt;
+      &lt;li&gt;LS is firstly proposed in this paper.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1503.02531.pdf&quot;&gt;Distilling the knowledge in a neural network-NeurIPS 2015 Workshop-Hinton, G., Vinyals, O., Dean, J&lt;/a&gt;&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;Soft targets definition&lt;/strong&gt;: An obvious way to transfer the generalization ability of the cumbersome model to a small model is
+  to &lt;strong&gt;use the class probabilities produced by the cumbersome model as “soft targets” for training the small model.&lt;/strong&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;More information and less variance&lt;/strong&gt;: When the soft targets have high entropy, they provide &lt;strong&gt;much more information&lt;/strong&gt; per training case than hard targets and &lt;strong&gt;much less variance in the gradient between training cases&lt;/strong&gt;, so the small model can often be trained on much    less data than the original cumbersome model and using a much higher learning rate.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Why?&lt;/strong&gt;:
+        &lt;ul&gt;
+          &lt;li&gt;&lt;strong&gt;Feasibility&lt;/strong&gt;: &lt;strong&gt;Caruana and his collaborators [1]&lt;/strong&gt; have shown that it is possible to
+  compress the knowledge in an ensemble into a single model which is much easier to deploy and we develop this approach further using a different compression technique.&lt;/li&gt;
+          &lt;li&gt;For tasks like MNIST in which the cumbersome model almost always produces the correct answer with very high confidence, much of the information about the learned function resides in the ratios of very small probabilities in the soft targets. For example, one version of a 2 may be given a probability of 10−6 of being a 3 and 10−9 of being a 7 whereas for another version it may be the other way around.&lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;&lt;strong&gt;Relative Probabilities?&lt;/strong&gt; This is valuable information that defines a rich similarity structure over the data (i. e. it says which 2’s look like 3’s and which look like 7’s) but it has very little influence on the cross-entropy cost function during the transfer stage because &lt;strong&gt;the probabilities are so close to zero.&lt;/strong&gt;&lt;/p&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Matching Logits?&lt;/strong&gt;: &lt;strong&gt;Caruana and his collaborators&lt;/strong&gt; circumvent this problem by &lt;strong&gt;using the logits (the inputs to the final softmax) rather than the probabilities produced by the softmax as the targets&lt;/strong&gt; for learning the small model and they minimize the squared difference between the logits produced by the cumbersome model and the logits produced by the small model.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Distillation Definition&lt;/strong&gt;:
+        &lt;ul&gt;
+          &lt;li&gt;Our more general solution, called “distillation”, is to &lt;strong&gt;raise the temperature of the final softmax until the cumbersome model produces a suitably soft set of targets&lt;/strong&gt;. We then use the same high temperature when training the small model to match these soft targets. We show later that matching the logits of the cumbersome model is actually a special case of distillation.&lt;/li&gt;
+          &lt;li&gt;we call “distillation” to transfer the knowledge from the cumbersome model to a small model that is more suitable for deployment.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Why Temperature?&lt;/strong&gt; =&amp;gt; &lt;strong&gt;Matching Logits is a special case of distillaiton?&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Using a higher value for T produces a softer probability distribution over classes.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Knowledge Definition&lt;/strong&gt;:
+        &lt;ul&gt;
+          &lt;li&gt;Relative probabilities: For cumbersome models that learn to discriminate between a large number of classes, the normal training objective is to maximize the average log probability of the correct answer, but a side-effect of the learning is that &lt;strong&gt;the trained model assigns probabilities to all of the incorrect answers and even when these probabilities are very small&lt;/strong&gt;, &lt;strong&gt;some of them are much larger than others&lt;/strong&gt;. &lt;strong&gt;The relative probabilities of incorrect answers&lt;/strong&gt; tell us a lot about how the cumbersome model tends to generalize.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Training Data&lt;/strong&gt;: The transfer set that is used to train the small model could consist entirely of unlabeled data [1] or we could use the original training set.
+        &lt;ul&gt;
+          &lt;li&gt;We have found that using the original training set works well, especially if we add a small term to the objective function that encourages the small model to predict the true targets as well as matching the soft targets provided by the cumbersome model.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Case Analysis&lt;/strong&gt;
+        &lt;ul&gt;
+          &lt;li&gt;In the simplest form of distillation: knowledge is transferred to the distilled model by training it on a transfer set and using a soft target distribution for each case in the transfer set that is produced by using the cumbersome model with a high temperature in its softmax. The same high temperature is used when training the distilled model, but after it has been trained it uses a temperature of 1.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;Two objectives: matching correct labels and soft targets generated by a cumbersome model&lt;/strong&gt;: When the correct labels are known for all or some of the transfer set, this method can be significantly improved by also training the distilled model to produce the correct labels. One way to do this is to use the correct labels to modify the soft targets, but we found that a better way is to simply use a weighted average of two different objective functions.&lt;/li&gt;
+          &lt;li&gt;Matching logits is a special case of distillation? &lt;strong&gt;Matching softer probabilities produced with high temperature versus matching logits!&lt;/strong&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;entropy-minimization-minimum-entropy-principle&quot;&gt;Entropy Minimization (Minimum Entropy Principle)&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://papers.nips.cc/paper/2740-semi-supervised-learning-by-entropy-minimization.pdf&quot;&gt;Semi-supervised Learning by Entropy Minimization-NeurIPS 2015-Yves Grandvalet, Yoshua Bengio&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;We consider the &lt;strong&gt;semi-supervised learning problem&lt;/strong&gt;, where a decision rule is to be learned from labeled and unlabeled data.&lt;/li&gt;
+      &lt;li&gt;A series of experiments illustrates that the proposed solution &lt;strong&gt;benefits from unlabeled data&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;The method challenges &lt;strong&gt;mixture models&lt;/strong&gt; when the data are sampled from the &lt;strong&gt;distribution class spanned by the generative model&lt;/strong&gt;. The performances are definitely in favor of minimum entropy regularization when generative models are misspecified, and the weighting of unlabeled data provides robustness to the violation of the “cluster assumption”.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Finally, we also illustrate that the method can also be far superior to manifold learning in high dimension spaces.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest. Label Smoothing Confidence Penalty Label Correction Example Weighting</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Paper Summary on Distance Metric, Representation Learning</title><link href="http://localhost:4000/blogs/2020-03-29-papers-summary-metric/" rel="alternate" type="text/html" title="Paper Summary on Distance Metric, Representation Learning" /><published>2020-03-29T00:00:00+00:00</published><updated>2020-03-29T00:00:00+00:00</updated><id>http://localhost:4000/blogs/papers-summary-metric</id><content type="html" xml:base="http://localhost:4000/blogs/2020-03-29-papers-summary-metric/">&lt;p&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
 &lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#iccv-2019-cvpr-2020-deep-metric-learning&quot;&gt;ICCV 2019, CVPR 2020 Deep Metric Learning&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#cvpr-2019-deep-metric-learning&quot;&gt;CVPR 2019 Deep Metric Learning&lt;/a&gt;&lt;/li&gt;
@@ -13,6 +141,32 @@
 
 &lt;h2 id=&quot;iccv-2019-cvpr-2020-deep-metric-learning&quot;&gt;ICCV 2019, CVPR 2020 Deep Metric Learning&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Roth_MIC_Mining_Interclass_Characteristics_for_Improved_Metric_Learning_ICCV_2019_paper.pdf&quot;&gt;Mic: Mining interclass characteristics for improved metric learning-Karsten Roth∗ , Biagio Brattoli⋆ , Bjorn Ommer&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;The common approach to metric learning is to &lt;strong&gt;enforce a representation that is invariant under all factors but the ones of interest.&lt;/strong&gt; (Very Common Practice)&lt;/li&gt;
+      &lt;li&gt;In contrast, we propose to &lt;strong&gt;explicitly learn the latent characteristics that are shared by and go across object classes&lt;/strong&gt;. We can then directly explain away structured visual variability, rather than assuming it to be unknown random noise. (Being Contrastive is Interesting! =&amp;gt; Regularisation Technique?)&lt;/li&gt;
+      &lt;li&gt;We propose a novel surrogate task to learn visual characteristics shared across classes with a separate encoder. This encoder is trained jointly with the encoder for class information by reducing their mutual information.&lt;/li&gt;
+      &lt;li&gt;ResNet-50 + PyTorch&lt;/li&gt;
+      &lt;li&gt;Complex methods for me:  &lt;strong&gt;The number of clusters is set before training to a fixed, problem-specific value&lt;/strong&gt;: 30 for CUB200-2011 [37], 200 for CARS196 [19], 50 for Stanford Online Products [28], 150 for In-Shop Clothes [43] and 50 for PKU VehicleID [21]. We update the cluster labels every other epoch.&lt;/li&gt;
+      &lt;li&gt;For all experiments, we use the original images without bounding boxes.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1912.06798.pdf&quot;&gt;Cross-Batch Memory for Embedding Learning-Xun Wang∗ , Haozhi Zhang∗ , Weilin Huang†, Matthew R. Scott&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;We propose a cross-batch memory (XBM) mechanism that memorizes the embeddings of past iterations, allowing the model to collect sufficient hard negative pairs across multiple minibatches - even over the whole dataset.&lt;/li&gt;
+      &lt;li&gt;GoogLeNet V1, V2 and ResNet-50&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2019/papers/Qian_SoftTriple_Loss_Deep_Metric_Learning_Without_Triplet_Sampling_ICCV_2019_paper.pdf&quot;&gt;SoftTriple Loss: Deep Metric Learning Without Triplet Sampling, Qian, Qi and Shang, Lei and Sun, Baigui and Hu, Juhua and Li, Hao and Jin, Rong&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Multiple Centers or Adaptive Number of Centers =&amp;gt; Softmax Loss&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Analogous to  ProxyNCA or ProxyTriplet&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Considering that images in CUB-2011 and Cars196 are similar to those in ImageNet, we freeze BN on these two data sets and keep BN training on the rest one.&lt;/strong&gt; Embeddings of examples and centers have the unit length in the experiments.&lt;/li&gt;
+      &lt;li&gt;Backbone: GoogLeNet V2 (Inception with BN)&lt;/li&gt;
+      &lt;li&gt;During training, only random horizontal mirroring and random crop are used as the data augmentation. A single center crop is taken for test.&lt;/li&gt;
+      &lt;li&gt;CUB-2011: We note that different works report the results with different dimension of embeddings while the size of embeddings has a significant impact on the performance. &lt;strong&gt;For fair comparison, we report the results for the dimension of 64, which is adopted by many existing methods and the results with 512 feature embeddings, which reports the state-of-the-art results on most of data sets.&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/2002.10857.pdf&quot;&gt;Circle Loss: A Unified Perspective of Pair Similarity Optimization&lt;/a&gt;
     &lt;ul&gt;
       &lt;li&gt;Motivation: aiming to maximize the within-class similarity &lt;code class=&quot;MathJax_Preview&quot;&gt;s_p&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;s_p&lt;/script&gt; and minimize the between-class similarity &lt;code class=&quot;MathJax_Preview&quot;&gt;s_n&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;s_n&lt;/script&gt;. We find a majority of loss functions, including the triplet loss and the softmax plus cross-entropy loss, embed &lt;code class=&quot;MathJax_Preview&quot;&gt;s_n&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;s_n&lt;/script&gt; and &lt;code class=&quot;MathJax_Preview&quot;&gt;s_p&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;s_p&lt;/script&gt; into similarity pairs and seek to reduce &lt;code class=&quot;MathJax_Preview&quot;&gt;(s_n − s_p)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;(s_n − s_p)&lt;/script&gt;. Such an optimization manner is inflexible, because the penalty strength on every single similarity score is restricted to be equal.&lt;/li&gt;
@@ -66,6 +220,7 @@ promotes the concerned metric, top-k precision.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Sanakoyeu_Divide_and_Conquer_the_Embedding_Space_for_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Divide and Conquer the Embedding Space for Metric Learning&lt;/a&gt; 
 :+1:
     &lt;ul&gt;
+      &lt;li&gt;ResNet-50&lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;Each learner will learn a separate distance metric using only a subspace of the original embedding space and &lt;strong&gt;a part of the data&lt;/strong&gt;.&lt;/p&gt;
       &lt;/li&gt;
@@ -75,8 +230,9 @@ promotes the concerned metric, top-k precision.&lt;/li&gt;
   (2) Splitting the embedding into K Slices.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Cakir_Deep_Metric_Learning_to_Rank_CVPR_2019_paper.pdf&quot;&gt;Deep Metric Learning to Rank&lt;/a&gt; :+1:
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Cakir_Deep_Metric_Learning_to_Rank_CVPR_2019_paper.pdf&quot;&gt;Deep Metric Learning to Rank=FastAP&lt;/a&gt; :+1:
     &lt;ul&gt;
+      &lt;li&gt;ResNet-18 &amp;amp; ResNet-50&lt;/li&gt;
       &lt;li&gt;Our main contribution is a novel solution to optimizing Average Precision under the Euclidean metric, based on the probabilistic interpretation of AP as the area under precision-recall curve, as well as distance quantization.&lt;/li&gt;
       &lt;li&gt;We also propose a category-based minibatch sampling strategy and a large-batch training heuristic.&lt;/li&gt;
       &lt;li&gt;On three &lt;strong&gt;few-shot image retrieval datasets&lt;/strong&gt;, FastAP consistently outperforms competing methods, which often involve complex optimization heuristics or costly model ensembles.&lt;/li&gt;
@@ -85,15 +241,17 @@ promotes the concerned metric, top-k precision.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Multi-Similarity_Loss_With_General_Pair_Weighting_for_Deep_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Multi-Similarity Loss With General Pair Weighting for Deep Metric Learning&lt;/a&gt; :+1:
     &lt;ul&gt;
       &lt;li&gt;Objective of the proposed multi-similarity loss, which aims to collect informative pairs, and weight these pairs through their own and relative similarities.&lt;/li&gt;
+      &lt;li&gt;GoogLeNet V2 (Inception BN)&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1903.03238.pdf&quot;&gt;Ranked List Loss for Deep Metric Learning&lt;/a&gt; :+1:&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Suh_Stochastic_Class-Based_Hard_Example_Mining_for_Deep_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Stochastic Class-Based Hard Example Mining for Deep Metric Learning&lt;/a&gt; :+1:&lt;/p&gt;
-
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1903.03238.pdf&quot;&gt;Ranked List Loss for Deep Metric Learning&lt;/a&gt; :+1:
     &lt;ul&gt;
+      &lt;li&gt;GoogLeNet V2 (Inception BN)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_CVPR_2019/papers/Suh_Stochastic_Class-Based_Hard_Example_Mining_for_Deep_Metric_Learning_CVPR_2019_paper.pdf&quot;&gt;Stochastic Class-Based Hard Example Mining for Deep Metric Learning&lt;/a&gt; :+1:
+    &lt;ul&gt;
+      &lt;li&gt;Inception V1&lt;/li&gt;
       &lt;li&gt;Scale linearly to the number of classes.&lt;/li&gt;
       &lt;li&gt;The methods proposed by Movshovitz-Attias et al. [14] and Wen et al. [34] are related to ours in a sense that class representatives are jointly trained with the feature extractor. 
 However, their goal is to formulate new losses using the class representatives whereas we use them for hard negative mining.&lt;/li&gt;
@@ -725,6 +883,4 @@ If you want to include hidden files use,
 &lt;h2 id=&quot;active-learning&quot;&gt;Active Learning&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;https://papers.nips.cc/paper/7010-learning-active-learning-from-data.pdf&quot;&gt;Learning Active Learning from Data&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Noisy labels Active Learning Foundation of Deep Learning</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Paper notes on Anomalies&amp;amp;Regularisation</title><link href="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/" rel="alternate" type="text/html" title="Paper notes on Anomalies&amp;Regularisation" /><published>2020-02-15T00:00:00+00:00</published><updated>2020-02-15T00:00:00+00:00</updated><id>http://localhost:4000/blogs/anomalies-regularisation</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-15-anomalies-regularisation/">&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;/Papers/AnomalyAndRegularisation/&quot;&gt;Paper notes on Anomalies&amp;amp;Regularisation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Paper notes on Anomalies&amp;amp;Regularisation</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Noisy labels Active Learning Foundation of Deep Learning</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry></feed>

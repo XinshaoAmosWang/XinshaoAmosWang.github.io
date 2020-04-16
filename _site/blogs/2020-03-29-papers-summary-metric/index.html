@@ -275,6 +275,37 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
 <h2 id="iccv-2019-cvpr-2020-deep-metric-learning">ICCV 2019, CVPR 2020 Deep Metric Learning</h2>
 <ul class="message">
   <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Roth_MIC_Mining_Interclass_Characteristics_for_Improved_Metric_Learning_ICCV_2019_paper.pdf">Mic: Mining interclass characteristics for improved metric learning-Karsten Roth∗ , Biagio Brattoli⋆ , Bjorn Ommer</a>
+    <ul>
+      <li>The common approach to metric learning is to <strong>enforce a representation that is invariant under all factors but the ones of interest.</strong> (Very Common Practice)</li>
+      <li>In contrast, we propose to <strong>explicitly learn the latent characteristics that are shared by and go across object classes</strong>. We can then directly explain away structured visual variability, rather than assuming it to be unknown random noise. (Being Contrastive is Interesting! =&gt; Regularisation Technique?)</li>
+      <li>We propose a novel surrogate task to learn visual characteristics shared across classes with a separate encoder. This encoder is trained jointly with the encoder for class information by reducing their mutual information.</li>
+      <li>ResNet-50 + PyTorch</li>
+      <li>Complex methods for me:  <strong>The number of clusters is set before training to a fixed, problem-specific value</strong>: 30 for CUB200-2011 [37], 200 for CARS196 [19], 50 for Stanford Online Products [28], 150 for In-Shop Clothes [43] and 50 for PKU VehicleID [21]. We update the cluster labels every other epoch.</li>
+      <li>For all experiments, we use the original images without bounding boxes.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://arxiv.org/pdf/1912.06798.pdf">Cross-Batch Memory for Embedding Learning-Xun Wang∗ , Haozhi Zhang∗ , Weilin Huang†, Matthew R. Scott</a>
+    <ul>
+      <li>We propose a cross-batch memory (XBM) mechanism that memorizes the embeddings of past iterations, allowing the model to collect sufficient hard negative pairs across multiple minibatches - even over the whole dataset.</li>
+      <li>GoogLeNet V1, V2 and ResNet-50</li>
+    </ul>
+  </li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Qian_SoftTriple_Loss_Deep_Metric_Learning_Without_Triplet_Sampling_ICCV_2019_paper.pdf">SoftTriple Loss: Deep Metric Learning Without Triplet Sampling, Qian, Qi and Shang, Lei and Sun, Baigui and Hu, Juhua and Li, Hao and Jin, Rong</a>
+    <ul>
+      <li><strong>Multiple Centers or Adaptive Number of Centers =&gt; Softmax Loss</strong></li>
+      <li>Analogous to  ProxyNCA or ProxyTriplet</li>
+      <li>
+<strong>Considering that images in CUB-2011 and Cars196 are similar to those in ImageNet, we freeze BN on these two data sets and keep BN training on the rest one.</strong> Embeddings of examples and centers have the unit length in the experiments.</li>
+      <li>Backbone: GoogLeNet V2 (Inception with BN)</li>
+      <li>During training, only random horizontal mirroring and random crop are used as the data augmentation. A single center crop is taken for test.</li>
+      <li>CUB-2011: We note that different works report the results with different dimension of embeddings while the size of embeddings has a significant impact on the performance. <strong>For fair comparison, we report the results for the dimension of 64, which is adopted by many existing methods and the results with 512 feature embeddings, which reports the state-of-the-art results on most of data sets.</strong>
+</li>
+    </ul>
+  </li>
+  <li>
 <a href="https://arxiv.org/pdf/2002.10857.pdf">Circle Loss: A Unified Perspective of Pair Similarity Optimization</a>
     <ul>
       <li>Motivation: aiming to maximize the within-class similarity <code class="MathJax_Preview">s_p</code><script type="math/tex">s_p</script> and minimize the between-class similarity <code class="MathJax_Preview">s_n</code><script type="math/tex">s_n</script>. We find a majority of loss functions, including the triplet loss and the softmax plus cross-entropy loss, embed <code class="MathJax_Preview">s_n</code><script type="math/tex">s_n</script> and <code class="MathJax_Preview">s_p</code><script type="math/tex">s_p</script> into similarity pairs and seek to reduce <code class="MathJax_Preview">(s_n − s_p)</code><script type="math/tex">(s_n − s_p)</script>. Such an optimization manner is inflexible, because the penalty strength on every single similarity score is restricted to be equal.</li>
@@ -332,6 +363,7 @@ promotes the concerned metric, top-k precision.</li>
 <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Sanakoyeu_Divide_and_Conquer_the_Embedding_Space_for_Metric_Learning_CVPR_2019_paper.pdf">Divide and Conquer the Embedding Space for Metric Learning</a> 
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">
     <ul>
+      <li>ResNet-50</li>
       <li>
         <p>Each learner will learn a separate distance metric using only a subspace of the original embedding space and <strong>a part of the data</strong>.</p>
       </li>
@@ -342,8 +374,9 @@ promotes the concerned metric, top-k precision.</li>
     </ul>
   </li>
   <li>
-<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Cakir_Deep_Metric_Learning_to_Rank_CVPR_2019_paper.pdf">Deep Metric Learning to Rank</a> <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Cakir_Deep_Metric_Learning_to_Rank_CVPR_2019_paper.pdf">Deep Metric Learning to Rank=FastAP</a> <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">
     <ul>
+      <li>ResNet-18 &amp; ResNet-50</li>
       <li>Our main contribution is a novel solution to optimizing Average Precision under the Euclidean metric, based on the probabilistic interpretation of AP as the area under precision-recall curve, as well as distance quantization.</li>
       <li>We also propose a category-based minibatch sampling strategy and a large-batch training heuristic.</li>
       <li>On three <strong>few-shot image retrieval datasets</strong>, FastAP consistently outperforms competing methods, which often involve complex optimization heuristics or costly model ensembles.</li>
@@ -353,15 +386,19 @@ promotes the concerned metric, top-k precision.</li>
 <a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Multi-Similarity_Loss_With_General_Pair_Weighting_for_Deep_Metric_Learning_CVPR_2019_paper.pdf">Multi-Similarity Loss With General Pair Weighting for Deep Metric Learning</a> <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">
     <ul>
       <li>Objective of the proposed multi-similarity loss, which aims to collect informative pairs, and weight these pairs through their own and relative similarities.</li>
+      <li>GoogLeNet V2 (Inception BN)</li>
     </ul>
   </li>
   <li>
-    <p><a href="https://arxiv.org/pdf/1903.03238.pdf">Ranked List Loss for Deep Metric Learning</a> <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"></p>
+<a href="https://arxiv.org/pdf/1903.03238.pdf">Ranked List Loss for Deep Metric Learning</a> <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">
+    <ul>
+      <li>GoogLeNet V2 (Inception BN)</li>
+    </ul>
   </li>
   <li>
-    <p><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Suh_Stochastic_Class-Based_Hard_Example_Mining_for_Deep_Metric_Learning_CVPR_2019_paper.pdf">Stochastic Class-Based Hard Example Mining for Deep Metric Learning</a> <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"></p>
-
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Suh_Stochastic_Class-Based_Hard_Example_Mining_for_Deep_Metric_Learning_CVPR_2019_paper.pdf">Stochastic Class-Based Hard Example Mining for Deep Metric Learning</a> <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">
     <ul>
+      <li>Inception V1</li>
       <li>Scale linearly to the number of classes.</li>
       <li>The methods proposed by Movshovitz-Attias et al. [14] and Wen et al. [34] are related to ours in a sense that class representatives are jointly trained with the feature extractor. 
 However, their goal is to formulate new losses using the class representatives whereas we use them for hard negative mining.</li>
@@ -537,6 +574,10 @@ We conducted <strong>experiments for a total of 6 tasks from simple neural netwo
           · <a href="https://xinshaoamoswang.github.io/blogs/2020-03-08-example-weighting/#disqus_thread"></a>
         </span>
     
+    
+        <span style="float:right"><a href="/blogs/2020-04-09-label-manipulation/">Paper Summary on Label Manipulation, Output Regularisation (Optimisation tricks) »</a>
+          · <a href="https://xinshaoamoswang.github.io/blogs/2020-04-09-label-manipulation/#disqus_thread"></a>
+        </span>
     
 </div>
 

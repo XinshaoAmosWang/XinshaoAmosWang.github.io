@@ -19,7 +19,28 @@ comment: true
 {:.message}
 
 
-## ICCV 2019, CVPR 2020 Deep Metric Learning 
+## ICCV 2019, CVPR 2020 Deep Metric Learning
+* [Mic: Mining interclass characteristics for improved metric learning-Karsten Roth∗ , Biagio Brattoli⋆ , Bjorn Ommer](http://openaccess.thecvf.com/content_ICCV_2019/papers/Roth_MIC_Mining_Interclass_Characteristics_for_Improved_Metric_Learning_ICCV_2019_paper.pdf)
+    * The common approach to metric learning is to **enforce a representation that is invariant under all factors but the ones of interest.** (Very Common Practice)
+    * In contrast, we propose to **explicitly learn the latent characteristics that are shared by and go across object classes**. We can then directly explain away structured visual variability, rather than assuming it to be unknown random noise. (Being Contrastive is Interesting! => Regularisation Technique?)
+    * We propose a novel surrogate task to learn visual characteristics shared across classes with a separate encoder. This encoder is trained jointly with the encoder for class information by reducing their mutual information.
+    * ResNet-50 + PyTorch
+    * Complex methods for me:  **The number of clusters is set before training to a fixed, problem-specific value**: 30 for CUB200-2011 [37], 200 for CARS196 [19], 50 for Stanford Online Products [28], 150 for In-Shop Clothes [43] and 50 for PKU VehicleID [21]. We update the cluster labels every other epoch.
+    * For all experiments, we use the original images without bounding boxes.
+
+
+* [Cross-Batch Memory for Embedding Learning-Xun Wang∗ , Haozhi Zhang∗ , Weilin Huang†, Matthew R. Scott](https://arxiv.org/pdf/1912.06798.pdf)
+    * We propose a cross-batch memory (XBM) mechanism that memorizes the embeddings of past iterations, allowing the model to collect sufficient hard negative pairs across multiple minibatches - even over the whole dataset.
+    * GoogLeNet V1, V2 and ResNet-50
+    
+* [SoftTriple Loss: Deep Metric Learning Without Triplet Sampling, Qian, Qi and Shang, Lei and Sun, Baigui and Hu, Juhua and Li, Hao and Jin, Rong](http://openaccess.thecvf.com/content_ICCV_2019/papers/Qian_SoftTriple_Loss_Deep_Metric_Learning_Without_Triplet_Sampling_ICCV_2019_paper.pdf)
+    * **Multiple Centers or Adaptive Number of Centers => Softmax Loss** 
+    * Analogous to  ProxyNCA or ProxyTriplet 
+    * **Considering that images in CUB-2011 and Cars196 are similar to those in ImageNet, we freeze BN on these two data sets and keep BN training on the rest one.** Embeddings of examples and centers have the unit length in the experiments. 
+    * Backbone: GoogLeNet V2 (Inception with BN)
+    * During training, only random horizontal mirroring and random crop are used as the data augmentation. A single center crop is taken for test.
+    * CUB-2011: We note that different works report the results with different dimension of embeddings while the size of embeddings has a significant impact on the performance. **For fair comparison, we report the results for the dimension of 64, which is adopted by many existing methods and the results with 512 feature embeddings, which reports the state-of-the-art results on most of data sets.**
+    
 * [Circle Loss: A Unified Perspective of Pair Similarity Optimization](https://arxiv.org/pdf/2002.10857.pdf)
     *  Motivation: aiming to maximize the within-class similarity $$s_p$$ and minimize the between-class similarity $$s_n$$. We find a majority of loss functions, including the triplet loss and the softmax plus cross-entropy loss, embed $$s_n$$ and $$s_p$$ into similarity pairs and seek to reduce $$(s_n − s_p)$$. Such an optimization manner is inflexible, because the penalty strength on every single similarity score is restricted to be equal. 
     * Our intuition is that if a similarity score deviates far from the optimum, it should be emphasized.
@@ -58,6 +79,7 @@ promotes the concerned metric, top-k precision.
 ## CVPR 2019 Deep Metric Learning 
 * [Divide and Conquer the Embedding Space for Metric Learning](http://openaccess.thecvf.com/content_CVPR_2019/papers/Sanakoyeu_Divide_and_Conquer_the_Embedding_Space_for_Metric_Learning_CVPR_2019_paper.pdf) 
 :+1:  
+    * ResNet-50
     * Each learner will learn a separate distance metric using only a subspace of the original embedding space and **a part of the data**. 
 
     * Natural hard negatives mining: Finally, **the splitting and sampling connect to hard negative mining**, which is verified by them. (I appreciate this ablation study in Table 6 )
@@ -66,7 +88,8 @@ promotes the concerned metric, top-k precision.
     (2) Splitting the embedding into K Slices.  
 
 
-* [Deep Metric Learning to Rank](http://openaccess.thecvf.com/content_CVPR_2019/papers/Cakir_Deep_Metric_Learning_to_Rank_CVPR_2019_paper.pdf) :+1:
+* [Deep Metric Learning to Rank=FastAP](http://openaccess.thecvf.com/content_CVPR_2019/papers/Cakir_Deep_Metric_Learning_to_Rank_CVPR_2019_paper.pdf) :+1:
+    * ResNet-18 & ResNet-50
     * Our main contribution is a novel solution to optimizing Average Precision under the Euclidean metric, based on the probabilistic interpretation of AP as the area under precision-recall curve, as well as distance quantization.
     * We also propose a category-based minibatch sampling strategy and a large-batch training heuristic.
     * On three **few-shot image retrieval datasets**, FastAP consistently outperforms competing methods, which often involve complex optimization heuristics or costly model ensembles.
@@ -74,13 +97,14 @@ promotes the concerned metric, top-k precision.
 
 * [Multi-Similarity Loss With General Pair Weighting for Deep Metric Learning](http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Multi-Similarity_Loss_With_General_Pair_Weighting_for_Deep_Metric_Learning_CVPR_2019_paper.pdf) :+1:
     * Objective of the proposed multi-similarity loss, which aims to collect informative pairs, and weight these pairs through their own and relative similarities.
+    * GoogLeNet V2 (Inception BN)
 
 
 * [Ranked List Loss for Deep Metric Learning](https://arxiv.org/pdf/1903.03238.pdf) :+1:
-
+    * GoogLeNet V2 (Inception BN)
 
 * [Stochastic Class-Based Hard Example Mining for Deep Metric Learning](http://openaccess.thecvf.com/content_CVPR_2019/papers/Suh_Stochastic_Class-Based_Hard_Example_Mining_for_Deep_Metric_Learning_CVPR_2019_paper.pdf) :+1:
-
+    * Inception V1
     * Scale linearly to the number of classes. 
     * The methods proposed by Movshovitz-Attias et al. [14] and Wen et al. [34] are related to ours in a sense that class representatives are jointly trained with the feature extractor. 
 However, their goal is to formulate new losses using the class representatives whereas we use them for hard negative mining.
