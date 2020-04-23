@@ -3,3 +3,5 @@ git remote set-url origin git@github.com:XinshaoAmosWang/XinshaoAmosWang.github.
 git add .
 git commit -m "updates"
 git push origin master
+
+git pull 
