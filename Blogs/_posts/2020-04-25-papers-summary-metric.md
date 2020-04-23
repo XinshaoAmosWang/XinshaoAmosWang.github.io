@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Paper Summary on Distance Metric, Representation Learning
-description: >
-  
+description: >  
+
 image: /assets/img/blog/steve-harvey.jpg
 comment: true
 ---
@@ -61,6 +61,7 @@ compared with the loss functions optimizing $$(s_n − s_p)$$.
     * The performance is not better than Ranked List Loss on SOP. 
     
 * [Sampling Wisely: Deep Image Embedding by Top-k Precision Optimization](http://openaccess.thecvf.com/content_ICCV_2019/papers/Lu_Sampling_Wisely_Deep_Image_Embedding_by_Top-K_Precision_Optimization_ICCV_2019_paper.pdf)
+    * This work is partially inspired by our work: Ranked List Loss, CVPR 2019
     * In contrast, in this paper, we propose a novel deep image embedding algorithm with end-to-end optimization to top-k precision, the evaluation metric that is **closely related to user experience.**
     * Specially, our loss function is constructed with **Wisely Sampled “misplaced” images along the top-k nearest neighbor decision boundary,** so that the gradient descent update directly
 promotes the concerned metric, top-k precision.
