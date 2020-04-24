@@ -19,6 +19,34 @@ comment: true
 {:.message}
 
 
+## arXiv 2020
+* [Revisiting Training Strategies and Generalization Performance in Deep Metric Learning-Karsten Roth et al](https://arxiv.org/pdf/2002.08473.pdf)
+    * Deep Metric Learning (DML) is arguably one of
+the most influential lines of research for learning visual similarities with many proposed approaches every year. Although the field benefits
+from the rapid progress, the divergence in training
+protocols, architectures, and parameter choices
+make an unbiased comparison difficult. To provide a consistent reference point, we revisit the
+most widely used DML objective functions and
+conduct a study of the crucial parameter choices
+as well as the commonly neglected mini-batch
+sampling process. Based on our analysis, we uncover a correlation between the embedding space
+compression and the generalization performance
+of DML models. Exploiting these insights, we
+propose a simple, yet effective, training regularization to reliably boost the performance of rankingbased DML models on various standard benchmark datasets. 
+    * We propose a simple technique to regularize the embedding space compression
+which we find to boost generalization performance of
+ranking-based DML approaches.
+
+* [Unbiased Evaluation of Deep Metric Learning Algorithms--Istvan Feh ´ erv ´ ari etal 2019](https://arxiv.org/pdf/1911.12528.pdf)
+    * we perform an unbiased comparison of
+the most popular DML baseline methods under same conditions and more importantly, not obfuscating any hyper
+parameter tuning or adjustment needed to favor a particular method. We find, that under equal conditions several
+older methods perform significantly better than previously
+believed.
+
+* [A Metric Learning Reality Check--Kevin Musgrave, Serge Belongie, Ser-Nam Lim](https://arxiv.org/pdf/2003.08505.pdf)
+{:.message}
+
 ## ICCV 2019, CVPR 2020 Deep Metric Learning
 * [Mic: Mining interclass characteristics for improved metric learning-Karsten Roth∗ , Biagio Brattoli⋆ , Bjorn Ommer](http://openaccess.thecvf.com/content_ICCV_2019/papers/Roth_MIC_Mining_Interclass_Characteristics_for_Improved_Metric_Learning_ICCV_2019_paper.pdf)
     * The common approach to metric learning is to **enforce a representation that is invariant under all factors but the ones of interest.** (Very Common Practice)
