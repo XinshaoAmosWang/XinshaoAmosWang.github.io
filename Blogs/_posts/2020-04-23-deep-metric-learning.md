@@ -8,6 +8,7 @@ comment: true
 ---
 
 :+1: means being highly related to my personal research interest. 
+0. [arXiv 2020-On the Fairness of Deep Metric Learning](#arxiv-2020)
 0. [ICCV 2019, CVPR 2020 Deep Metric Learning](#iccv-2019-cvpr-2020-deep-metric-learning)
 0. [CVPR 2019 Deep Metric Learning](#cvpr-2019-deep-metric-learning)
 0. [Few-shot Learning](#few-shot-learning)
