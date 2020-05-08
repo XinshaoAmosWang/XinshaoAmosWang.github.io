@@ -44,8 +44,8 @@ parameter tuning or adjustment needed to favor a particular method. We find, tha
 older methods perform significantly better than previously
 believed.
     * In this work, **it stated "On the SOP dataset, we never managed to make this algorithm converge." using [Ranked List Loss](https://arxiv.org/abs/1903.03238).** 
-        * This is not the fact; I thank their interest in our work, which is a great motivation for me and my collaborators. 
-        * Please see [Ranked List Loss](https://arxiv.org/abs/1903.03238) for its improved results, and [Github page](https://github.com/XinshaoAmosWang/Ranked-List-Loss-for-DML) 
+        * This is not the fact: I thank their interest in our work, which is a great motivation for me and my collaborators. I appreciate their report on the difficulty of applying our method.
+        * Please see [Ranked List Loss](https://arxiv.org/abs/1903.03238) for its improved results, and [Github page](https://github.com/XinshaoAmosWang/Ranked-List-Loss-for-DML) for reproducible results.  
 
 * [A Metric Learning Reality Check--Kevin Musgrave, Serge Belongie, Ser-Nam Lim](https://arxiv.org/pdf/2003.08505.pdf)
 {:.message}
