@@ -43,6 +43,9 @@ the most popular DML baseline methods under same conditions and more importantly
 parameter tuning or adjustment needed to favor a particular method. We find, that under equal conditions several
 older methods perform significantly better than previously
 believed.
+    * In this work, **it stated "On the SOP dataset, we never managed to make this algorithm converge." using [Ranked List Loss](https://arxiv.org/abs/1903.03238).** 
+        * This is not the fact; I thank their interest in our work, which is a great motivation for me and my collaborators. 
+        * Please see [Ranked List Loss](https://arxiv.org/abs/1903.03238) for its improved results, and [Github page](https://github.com/XinshaoAmosWang/Ranked-List-Loss-for-DML) 
 
 * [A Metric Learning Reality Check--Kevin Musgrave, Serge Belongie, Ser-Nam Lim](https://arxiv.org/pdf/2003.08505.pdf)
 {:.message}
@@ -62,13 +65,21 @@ believed.
     * GoogLeNet V1, V2 and ResNet-50
     
 * [SoftTriple Loss: Deep Metric Learning Without Triplet Sampling, Qian, Qi and Shang, Lei and Sun, Baigui and Hu, Juhua and Li, Hao and Jin, Rong](http://openaccess.thecvf.com/content_ICCV_2019/papers/Qian_SoftTriple_Loss_Deep_Metric_Learning_Without_Triplet_Sampling_ICCV_2019_paper.pdf)
+    
     * **Multiple Centers or Adaptive Number of Centers => Softmax Loss** 
+    
     * Analogous to  ProxyNCA or ProxyTriplet 
+    
     * **Considering that images in CUB-2011 and Cars196 are similar to those in ImageNet, we freeze BN on these two data sets and keep BN training on the rest one.** Embeddings of examples and centers have the unit length in the experiments. 
+    
     * Backbone: GoogLeNet V2 (Inception with BN)
+    
     * During training, only random horizontal mirroring and random crop are used as the data augmentation. A single center crop is taken for test.
+    
     * CUB-2011: We note that different works report the results with different dimension of embeddings while the size of embeddings has a significant impact on the performance. **For fair comparison, we report the results for the dimension of 64, which is adopted by many existing methods and the results with 512 feature embeddings, which reports the state-of-the-art results on most of data sets.**
     
+    * Prior Work: ProxyNCA
+
 * [Circle Loss: A Unified Perspective of Pair Similarity Optimization](https://arxiv.org/pdf/2002.10857.pdf)
     *  Motivation: aiming to maximize the within-class similarity $$s_p$$ and minimize the between-class similarity $$s_n$$. We find a majority of loss functions, including the triplet loss and the softmax plus cross-entropy loss, embed $$s_n$$ and $$s_p$$ into similarity pairs and seek to reduce $$(s_n − s_p)$$. Such an optimization manner is inflexible, because the penalty strength on every single similarity score is restricted to be equal. 
     * Our intuition is that if a similarity score deviates far from the optimum, it should be emphasized.

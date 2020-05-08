@@ -302,6 +302,13 @@ the most popular DML baseline methods under same conditions and more importantly
 parameter tuning or adjustment needed to favor a particular method. We find, that under equal conditions several
 older methods perform significantly better than previously
 believed.</li>
+      <li>In this work, <strong>it stated “On the SOP dataset, we never managed to make this algorithm converge.” using <a href="https://arxiv.org/abs/1903.03238">Ranked List Loss</a>.</strong>
+        <ul>
+          <li>This is not the fact; I thank their interest in our work, which is a great motivation for me and my collaborators.</li>
+          <li>Please see <a href="https://arxiv.org/abs/1903.03238">Ranked List Loss</a> for its improved results, and <a href="https://github.com/XinshaoAmosWang/Ranked-List-Loss-for-DML">Github page</a>
+</li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li><a href="https://arxiv.org/pdf/2003.08505.pdf">A Metric Learning Reality Check–Kevin Musgrave, Serge Belongie, Ser-Nam Lim</a></li>
@@ -328,16 +335,30 @@ believed.</li>
     </ul>
   </li>
   <li>
-<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Qian_SoftTriple_Loss_Deep_Metric_Learning_Without_Triplet_Sampling_ICCV_2019_paper.pdf">SoftTriple Loss: Deep Metric Learning Without Triplet Sampling, Qian, Qi and Shang, Lei and Sun, Baigui and Hu, Juhua and Li, Hao and Jin, Rong</a>
+    <p><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Qian_SoftTriple_Loss_Deep_Metric_Learning_Without_Triplet_Sampling_ICCV_2019_paper.pdf">SoftTriple Loss: Deep Metric Learning Without Triplet Sampling, Qian, Qi and Shang, Lei and Sun, Baigui and Hu, Juhua and Li, Hao and Jin, Rong</a></p>
+
     <ul>
-      <li><strong>Multiple Centers or Adaptive Number of Centers =&gt; Softmax Loss</strong></li>
-      <li>Analogous to  ProxyNCA or ProxyTriplet</li>
       <li>
-<strong>Considering that images in CUB-2011 and Cars196 are similar to those in ImageNet, we freeze BN on these two data sets and keep BN training on the rest one.</strong> Embeddings of examples and centers have the unit length in the experiments.</li>
-      <li>Backbone: GoogLeNet V2 (Inception with BN)</li>
-      <li>During training, only random horizontal mirroring and random crop are used as the data augmentation. A single center crop is taken for test.</li>
-      <li>CUB-2011: We note that different works report the results with different dimension of embeddings while the size of embeddings has a significant impact on the performance. <strong>For fair comparison, we report the results for the dimension of 64, which is adopted by many existing methods and the results with 512 feature embeddings, which reports the state-of-the-art results on most of data sets.</strong>
-</li>
+        <p><strong>Multiple Centers or Adaptive Number of Centers =&gt; Softmax Loss</strong></p>
+      </li>
+      <li>
+        <p>Analogous to  ProxyNCA or ProxyTriplet</p>
+      </li>
+      <li>
+        <p><strong>Considering that images in CUB-2011 and Cars196 are similar to those in ImageNet, we freeze BN on these two data sets and keep BN training on the rest one.</strong> Embeddings of examples and centers have the unit length in the experiments.</p>
+      </li>
+      <li>
+        <p>Backbone: GoogLeNet V2 (Inception with BN)</p>
+      </li>
+      <li>
+        <p>During training, only random horizontal mirroring and random crop are used as the data augmentation. A single center crop is taken for test.</p>
+      </li>
+      <li>
+        <p>CUB-2011: We note that different works report the results with different dimension of embeddings while the size of embeddings has a significant impact on the performance. <strong>For fair comparison, we report the results for the dimension of 64, which is adopted by many existing methods and the results with 512 feature embeddings, which reports the state-of-the-art results on most of data sets.</strong></p>
+      </li>
+      <li>
+        <p>Prior Work: ProxyNCA</p>
+      </li>
     </ul>
   </li>
   <li>

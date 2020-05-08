@@ -12,10 +12,21 @@ comment: true
 0. [Confidence Penalty](#)
 0. [Label Correction](#)
 0. [Example Weighting](#)
+0. [Know the unknown](#know-the-unknown)
+0. [Semi-supervised learning](#)
 
 [Related Notes](../2020-02-14-Core-machine-learning-topics/#knowledge-distillation)
 {:.message}
 
+## Experiments
+* [ICLR 2020 Discussion](https://openreview.net/forum?id=SJxyOhVtvB)
+* 
+{:.message}
+
+
+## Know the unknown and open-set noise
+* 
+{:.message}
 
 ## Label Smoothing
 * [Does label smoothing mitigate label noise?- Michal Lukasik, Srinadh Bhojanapalli, Aditya Krishna Menon and Sanjiv Kumar](https://arxiv.org/pdf/2003.02819.pdf)
