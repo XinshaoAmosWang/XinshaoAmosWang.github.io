@@ -14,7 +14,8 @@ are happy to provide if there is a request conditioned on academic use only and 
 Paper link: [ProSelfLC_arXiv_07062020.pdf](../figsProSelfLC/ProSelfLC_arXiv_07062020.pdf)
 ```
 @article{wang2020proselflc,
-  title={ProSelfLC: Progressive Self Label Correction for Training Robust Deep Neural Networks},
+  title={ProSelfLC: Progressive Self Label Correction 
+  for Training Robust Deep Neural Networks},
   author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M},
   journal={arXiv preprint arXiv:2005.03788},
   year={2020}
@@ -166,7 +167,8 @@ Theoretically, ProSelfLC also becomes robust against long time being exposed to 
     * [2019-IMAE for noise-robust learning: Mean absolute error does not treat examples equally and gradient magnitude’s variance matters.](https://arxiv.org/pdf/1903.12141.pdf)
     ```
     @article{wang2019imae,
-        title={ {IMAE} for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude's Variance Matters},
+        title={ {IMAE} for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally 
+        and Gradient Magnitude's Variance Matters},
         author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M},
         journal={arXiv preprint arXiv:1903.12141},
         year={2019}
