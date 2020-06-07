@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v8.5.2 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+
+
+  
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Paper Summary on Distance Metric, Representation Learning | Xinshao (Amos) Wang</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Paper Summary on Distance Metric, Representation Learning" />
+<meta name="author" content="Xinshao (Amos) Wang" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc" />
+<meta property="og:description" content="“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc" />
+<link rel="canonical" href="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/" />
+<meta property="og:url" content="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/" />
+<meta property="og:site_name" content="Xinshao (Amos) Wang" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/steve-harvey.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-23T00:00:00+01:00" />
+<script type="application/ld+json">
+{"description":"“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc","author":{"@type":"Person","name":"Xinshao (Amos) Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2020-04-23-deep-metric-learning/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao (Amos) Wang"},"image":"http://localhost:4000/assets/img/blog/steve-harvey.jpg","headline":"Paper Summary on Distance Metric, Representation Learning","dateModified":"2020-04-23T00:00:00+01:00","datePublished":"2020-04-23T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2020-04-23-deep-metric-learning/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="Xinshao (Amos) Wang; Machine Learning,Computer Vision,Robust Learning,Deep Metric Learning,Image Recognition,Video Recognition,Person ReID">
+  
+
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Xinshao (Amos) Wang">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<meta name="application-name" content="Xinshao (Amos) Wang">
+<meta name="msapplication-config" content="/assets/ieconfig.xml">
+
+
+<meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta name="generator" content="Hydejack v8.5.2" />
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Xinshao (Amos) Wang" />
+
+
+
+<link rel="alternate" href="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/" hreflang="en">
+
+<link rel="shortcut icon" href="/assets/icons/icon.png">
+<link rel="apple-touch-icon" href="/assets/icons/icon.png">
+
+<link rel="manifest" href="/assets/manifest.json">
+
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+
+
+<link rel="dns-prefetch" href="/" id="_baseURL">
+<link rel="dns-prefetch" href="/sw.js" id="_hrefSW">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.js" id="_hrefKatexJS">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css" id="_hrefKatexCSS">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.js" id="_hrefKatexCopyJS">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.css" id="_hrefKatexCopyCSS">
+<link rel="dns-prefetch" href="/assets/img/swipe.svg" id="_hrefSwipeSVG">
+
+
+
+
+<script>
+!function(e,t){"use strict";function n(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}e.loadJS=function(e,o){var r=t.createElement("script");r.src=e,o&&n(r,"load",o,{once:!0});var a=t.scripts[0];return a.parentNode.insertBefore(r,a),r},e._loaded=!1,e.loadJSDeferred=function(o,r){function a(){e._loaded=!0,r&&n(c,"load",r,{once:!0});var o=t.scripts[0];o.parentNode.insertBefore(c,o)}var c=t.createElement("script");return c.src=o,e._loaded?a():n(e,"load",a,{once:!0}),c},e.setRel=e.setRelStylesheet=function(e){function o(){this.rel="stylesheet"}n(t.getElementById(e),"load",o,{once:!0})}}(window,document);
+;
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+;
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+;
+!function(w, d) {
+  w._noPushState = false;
+  w._noDrawer = false;
+}(window, document);
+</script>
+
+<!--[if gt IE 8]><!---->
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/assets/css/hydejack-8.5.2.css">
+  <link rel="stylesheet" href="/assets/icomoon/style.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400|Noto+Sans:400,400i,700,700i&display=swap">
+  
+
+
+  <style id="_pageStyle">
+
+.content a:not(.btn){color:#4fb1ba;border-color:rgba(79,177,186,0.2)}.content a:not(.btn):hover{border-color:#4fb1ba}:focus{outline-color:#4fb1ba !important}.btn-primary{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:focus,.btn-primary.focus,.form-control:focus,.form-control.focus{box-shadow:0 0 0 3px rgba(79,177,186,0.5)}.btn-primary:hover,.btn-primary.hover{color:#fff;background-color:#409ba3;border-color:#409ba3}.btn-primary:disabled,.btn-primary.disabled{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:active,.btn-primary.active{color:#fff;background-color:#409ba3;border-color:#409ba3}::selection{color:#fff;background:#4fb1ba}::-moz-selection{color:#fff;background:#4fb1ba}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+
+  
+<script data-ad-client="ca-pub-8231481254980115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script data-ad-client="ca-pub-8231481254980115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body class="no-color-transition">
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <div class="nav-btn-bar">
+      <span class="sr-only">Jump to:</span>
+      <a id="_menu" class="nav-btn no-hover fl" href="#_navigation">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <!-- <a id="_search" class="nav-btn no-hover fl" href="#_search">
+        <span class="sr-only">Search</span>
+        <span class="icon-search"></span>
+      </a>
+      <form action="https://duckduckgo.com/" method="GET">
+        <div class="form-group fr">
+          <label class="sr-only" for="_search">Search</label>
+          <input id="_search" name="q" class="form-control" type="search" />
+        </div>
+        <input type="hidden" name="q" value="site:hydejack.com" />
+        <input type="hidden" name="ia" value="web" />
+      </form> -->
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden>
+
+
+<hy-push-state replace-ids="_main" link-selector="a[href]:not([href*='/assets/']):not(.external):not(.no-push-state)" duration="250" script-selector="script:not([type^='math/tex'])" prefetch>
+  
+    <main id="_main" class="content fade-in layout-post" role="main" data-color="rgb(79,177,186)" data-theme-color="rgb(25,55,71)" data-image="/assets/img/sidebar-bg.jpg" data-overlay>
+  
+
+
+
+
+<article id="post-blogs-deep-metric-learning" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title">
+      
+        Paper Summary on Distance Metric, Representation Learning
+      
+    </h1>
+
+    <p class="post-date heading">
+      
+      <time datetime="2020-04-23T00:00:00+01:00">23 Apr 2020</time>
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+
+in <span>Blogs</span>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+    </p>
+
+    
+    
+      <div class="img lead sixteen-nine">
+        
+
+
+  <hy-img src="/assets/img/blog/steve-harvey.jpg" alt="Paper Summary on Distance Metric, Representation Learning" root-margin="512px">
+    <noscript><img data-ignore src="/assets/img/blog/steve-harvey.jpg" alt="Paper Summary on Distance Metric, Representation Learning"></noscript>
+    <span class="loading" slot="loading" hidden>
+      <span class="icon-cog"></span>
+    </span>
+  </hy-img>
+
+
+      </div>
+      
+    
+
+    
+
+
+
+  
+
+
+  </header>
+
+  
+    <p><img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> means being highly related to my personal research interest.</p>
+<ol class="message">
+  <li><a href="#arxiv-2020">arXiv 2020-On the Fairness of Deep Metric Learning</a></li>
+  <li><a href="#iccv-2019-cvpr-2020-deep-metric-learning">ICCV 2019, CVPR 2020 Deep Metric Learning</a></li>
+  <li><a href="#cvpr-2019-deep-metric-learning">CVPR 2019 Deep Metric Learning</a></li>
+  <li><a href="#few-shot-learning">Few-shot Learning</a></li>
+  <li><a href="#large-output-spaces">Large Output Spaces</a></li>
+  <li><a href="#poincar%C3%A9-hyperbolic-curvilinear">Poincaré, Hyperbolic, Curvilinear</a></li>
+  <li><a href="#wasserstein">Wasserstein</a></li>
+  <li><a href="#semi-supervised-or-unsupervised-learning">Semi-supervised or Unsupervised Learning</a></li>
+  <li><a href="#neurips-2019-stochastic-shared-embeddings-data-driven-regularization-of-embedding-layers">NeurIPS 2019-Stochastic Shared Embeddings: Data-driven Regularization of Embedding Layers</a></li>
+</ol>
+
+<h2 id="arxiv-2020">arXiv 2020</h2>
+<ul class="message">
+  <li>
+<a href="https://arxiv.org/pdf/2002.08473.pdf">Revisiting Training Strategies and Generalization Performance in Deep Metric Learning-Karsten Roth et al</a>
+    <ul>
+      <li>Deep Metric Learning (DML) is arguably one of
+the most influential lines of research for learning visual similarities with many proposed approaches every year. Although the field benefits
+from the rapid progress, the divergence in training
+protocols, architectures, and parameter choices
+make an unbiased comparison difficult. To provide a consistent reference point, we revisit the
+most widely used DML objective functions and
+conduct a study of the crucial parameter choices
+as well as the commonly neglected mini-batch
+sampling process. Based on our analysis, we uncover a correlation between the embedding space
+compression and the generalization performance
+of DML models. Exploiting these insights, we
+propose a simple, yet effective, training regularization to reliably boost the performance of rankingbased DML models on various standard benchmark datasets.</li>
+      <li>We propose a simple technique to regularize the embedding space compression
+which we find to boost generalization performance of
+ranking-based DML approaches.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://arxiv.org/pdf/1911.12528.pdf">Unbiased Evaluation of Deep Metric Learning Algorithms–Istvan Feh ´ erv ´ ari etal 2019</a>
+    <ul>
+      <li>we perform an unbiased comparison of
+the most popular DML baseline methods under same conditions and more importantly, not obfuscating any hyper
+parameter tuning or adjustment needed to favor a particular method. We find, that under equal conditions several
+older methods perform significantly better than previously
+believed.</li>
+      <li>In this work, <strong>it stated “On the SOP dataset, we never managed to make this algorithm converge.” using <a href="https://arxiv.org/abs/1903.03238">Ranked List Loss</a>.</strong>
+        <ul>
+          <li>This is not the fact: I thank their interest in our work, which is a great motivation for me and my collaborators. I appreciate their report on the difficulty of applying our method.</li>
+          <li>Please see <a href="https://arxiv.org/abs/1903.03238">Ranked List Loss</a> for its improved results, and <a href="https://github.com/XinshaoAmosWang/Ranked-List-Loss-for-DML">Github page</a> for reproducible results.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://arxiv.org/pdf/2003.08505.pdf">A Metric Learning Reality Check–Kevin Musgrave, Serge Belongie, Ser-Nam Lim</a></li>
+</ul>
+
+<h2 id="iccv-2019-cvpr-2020-deep-metric-learning">ICCV 2019, CVPR 2020 Deep Metric Learning</h2>
+<ul class="message">
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Roth_MIC_Mining_Interclass_Characteristics_for_Improved_Metric_Learning_ICCV_2019_paper.pdf">Mic: Mining interclass characteristics for improved metric learning-Karsten Roth∗ , Biagio Brattoli⋆ , Bjorn Ommer</a>
+    <ul>
+      <li>The common approach to metric learning is to <strong>enforce a representation that is invariant under all factors but the ones of interest.</strong> (Very Common Practice)</li>
+      <li>In contrast, we propose to <strong>explicitly learn the latent characteristics that are shared by and go across object classes</strong>. We can then directly explain away structured visual variability, rather than assuming it to be unknown random noise. (Being Contrastive is Interesting! =&gt; Regularisation Technique?)</li>
+      <li>We propose a novel surrogate task to learn visual characteristics shared across classes with a separate encoder. This encoder is trained jointly with the encoder for class information by reducing their mutual information.</li>
+      <li>ResNet-50 + PyTorch</li>
+      <li>Complex methods for me:  <strong>The number of clusters is set before training to a fixed, problem-specific value</strong>: 30 for CUB200-2011 [37], 200 for CARS196 [19], 50 for Stanford Online Products [28], 150 for In-Shop Clothes [43] and 50 for PKU VehicleID [21]. We update the cluster labels every other epoch.</li>
+      <li>For all experiments, we use the original images without bounding boxes.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://arxiv.org/pdf/1912.06798.pdf">Cross-Batch Memory for Embedding Learning-Xun Wang∗ , Haozhi Zhang∗ , Weilin Huang†, Matthew R. Scott</a>
+    <ul>
+      <li>We propose a cross-batch memory (XBM) mechanism that memorizes the embeddings of past iterations, allowing the model to collect sufficient hard negative pairs across multiple minibatches - even over the whole dataset.</li>
+      <li>GoogLeNet V1, V2 and ResNet-50</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Qian_SoftTriple_Loss_Deep_Metric_Learning_Without_Triplet_Sampling_ICCV_2019_paper.pdf">SoftTriple Loss: Deep Metric Learning Without Triplet Sampling, Qian, Qi and Shang, Lei and Sun, Baigui and Hu, Juhua and Li, Hao and Jin, Rong</a></p>
+
+    <ul>
+      <li>
+        <p><strong>Multiple Centers or Adaptive Number of Centers =&gt; Softmax Loss</strong></p>
+      </li>
+      <li>
+        <p>Analogous to  ProxyNCA or ProxyTriplet</p>
+      </li>
+      <li>
+        <p><strong>Considering that images in CUB-2011 and Cars196 are similar to those in ImageNet, we freeze BN on these two data sets and keep BN training on the rest one.</strong> Embeddings of examples and centers have the unit length in the experiments.</p>
+      </li>
+      <li>
+        <p>Backbone: GoogLeNet V2 (Inception with BN)</p>
+      </li>
+      <li>
+        <p>During training, only random horizontal mirroring and random crop are used as the data augmentation. A single center crop is taken for test.</p>
+      </li>
+      <li>
+        <p>CUB-2011: We note that different works report the results with different dimension of embeddings while the size of embeddings has a significant impact on the performance. <strong>For fair comparison, we report the results for the dimension of 64, which is adopted by many existing methods and the results with 512 feature embeddings, which reports the state-of-the-art results on most of data sets.</strong></p>
+      </li>
+      <li>
+        <p>Prior Work: ProxyNCA</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://arxiv.org/pdf/2002.10857.pdf">Circle Loss: A Unified Perspective of Pair Similarity Optimization</a>
+    <ul>
+      <li>Motivation: aiming to maximize the within-class similarity <code class="MathJax_Preview">s_p</code><script type="math/tex">s_p</script> and minimize the between-class similarity <code class="MathJax_Preview">s_n</code><script type="math/tex">s_n</script>. We find a majority of loss functions, including the triplet loss and the softmax plus cross-entropy loss, embed <code class="MathJax_Preview">s_n</code><script type="math/tex">s_n</script> and <code class="MathJax_Preview">s_p</code><script type="math/tex">s_p</script> into similarity pairs and seek to reduce <code class="MathJax_Preview">(s_n − s_p)</code><script type="math/tex">(s_n − s_p)</script>. Such an optimization manner is inflexible, because the penalty strength on every single similarity score is restricted to be equal.</li>
+      <li>Our intuition is that if a similarity score deviates far from the optimum, it should be emphasized.</li>
+      <li>we simply re-weight each similarity to highlight the less-optimized similarity scores. It results in a Circle loss, which is named due to its circular decision boundary.</li>
+      <li>Circle loss offers a more flexible optimization approach towards a more definite convergence target,
+compared with the loss functions optimizing <code class="MathJax_Preview">(s_n − s_p)</code><script type="math/tex">(s_n − s_p)</script>.</li>
+      <li>(1)  a unified loss function; (2) flexible optimization; (3) definite convergence status.</li>
+      <li>Evaluation:
+        <ul>
+          <li>Tasks:
+            <ul>
+              <li>Face recognition</li>
+              <li>Person re-identification (Market-1501,MSMT17)</li>
+              <li>Fine-grained image retrieval (CUB-100-2011, CARS-196, SOP-11318)</li>
+            </ul>
+          </li>
+          <li>
+            <p>Net architecture-1: ResNet50 (globla) + MGN (local features) for person reid (. Our implementation concatenates all the part features into a single feature vector for simplici);</p>
+          </li>
+          <li>Net architecture-2: GoogLeNet (BN-Inception) for CUB, CARS, SOP, 512-D embeddings;</li>
+        </ul>
+      </li>
+      <li>The performance is not better than Ranked List Loss on SOP.</li>
+    </ul>
+  </li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Lu_Sampling_Wisely_Deep_Image_Embedding_by_Top-K_Precision_Optimization_ICCV_2019_paper.pdf">Sampling Wisely: Deep Image Embedding by Top-k Precision Optimization</a>
+    <ul>
+      <li>This work is partially inspired by our work: Ranked List Loss, CVPR 2019</li>
+      <li>In contrast, in this paper, we propose a novel deep image embedding algorithm with end-to-end optimization to top-k precision, the evaluation metric that is <strong>closely related to user experience.</strong>
+</li>
+      <li>Specially, our loss function is constructed with <strong>Wisely Sampled “misplaced” images along the top-k nearest neighbor decision boundary,</strong> so that the gradient descent update directly
+promotes the concerned metric, top-k precision.</li>
+      <li>
+<strong>Our theoretical analysis</strong> on the upper bounding and consistency properties of the proposed loss supports that minimizing our proposed loss is equivalent to maximizing top-k precision</li>
+      <li>Evaluation:
+        <ul>
+          <li>Datasets: CUB-200-2011, CARS-196, SOP</li>
+          <li>PyTorch + Adam</li>
+          <li>Net architecture: Densenet 201, GoogLeNet V2 (Inception with BN)</li>
+          <li>Finetuning</li>
+          <li>Embedding size: 64, 512?</li>
+          <li>Input size: warp (256x256) =&gt; crop (227x227)</li>
+          <li>Testing: only center crop</li>
+        </ul>
+      </li>
+      <li>The performance is not better than Ranked List Loss</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="cvpr-2019-deep-metric-learning">CVPR 2019 Deep Metric Learning</h2>
+<ul class="message">
+  <li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Sanakoyeu_Divide_and_Conquer_the_Embedding_Space_for_Metric_Learning_CVPR_2019_paper.pdf">Divide and Conquer the Embedding Space for Metric Learning</a> 
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">
+    <ul>
+      <li>ResNet-50</li>
+      <li>
+        <p>Each learner will learn a separate distance metric using only a subspace of the original embedding space and <strong>a part of the data</strong>.</p>
+      </li>
+      <li>Natural hard negatives mining: Finally, <strong>the splitting and sampling connect to hard negative mining</strong>, which is verified by them. (I appreciate this ablation study in Table 6 )</li>
+      <li>Divide means: 
+  (1) Splitting the training data into K Clusters; 
+  (2) Splitting the embedding into K Slices.</li>
+    </ul>
+  </li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Cakir_Deep_Metric_Learning_to_Rank_CVPR_2019_paper.pdf">Deep Metric Learning to Rank=FastAP</a> <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">
+    <ul>
+      <li>ResNet-18 &amp; ResNet-50</li>
+      <li>Our main contribution is a novel solution to optimizing Average Precision under the Euclidean metric, based on the probabilistic interpretation of AP as the area under precision-recall curve, as well as distance quantization.</li>
+      <li>We also propose a category-based minibatch sampling strategy and a large-batch training heuristic.</li>
+      <li>On three <strong>few-shot image retrieval datasets</strong>, FastAP consistently outperforms competing methods, which often involve complex optimization heuristics or costly model ensembles.</li>
+    </ul>
+  </li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Wang_Multi-Similarity_Loss_With_General_Pair_Weighting_for_Deep_Metric_Learning_CVPR_2019_paper.pdf">Multi-Similarity Loss With General Pair Weighting for Deep Metric Learning</a> <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">
+    <ul>
+      <li>Objective of the proposed multi-similarity loss, which aims to collect informative pairs, and weight these pairs through their own and relative similarities.</li>
+      <li>GoogLeNet V2 (Inception BN)</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://arxiv.org/pdf/1903.03238.pdf">Ranked List Loss for Deep Metric Learning</a> <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">
+    <ul>
+      <li>GoogLeNet V2 (Inception BN)</li>
+    </ul>
+  </li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Suh_Stochastic_Class-Based_Hard_Example_Mining_for_Deep_Metric_Learning_CVPR_2019_paper.pdf">Stochastic Class-Based Hard Example Mining for Deep Metric Learning</a> <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">
+    <ul>
+      <li>Inception V1</li>
+      <li>Scale linearly to the number of classes.</li>
+      <li>The methods proposed by Movshovitz-Attias et al. [14] and Wen et al. [34] are related to ours in a sense that class representatives are jointly trained with the feature extractor. 
+However, their goal is to formulate new losses using the class representatives whereas we use them for hard negative mining.</li>
+      <li>Given an anchor instance, our algorithm first selects a few hard negative classes based on the class-to-sample distances and then performs a refined search in an instance-level only from the selected classes.</li>
+    </ul>
+  </li>
+  <li>
+    <p>A Theoretically Sound Upper Bound on the Triplet Loss for Improving the Efficiency of Deep Distance Metric Learning <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"></p>
+  </li>
+  <li>
+    <p><strong>Unsupervised</strong> Embedding Learning via Invariant and Spreading Instance Feature <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"></p>
+  </li>
+  <li>
+    <p><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Yuan_Signal-To-Noise_Ratio_A_Robust_Distance_Metric_for_Deep_Metric_Learning_CVPR_2019_paper.pdf">Signal-To-Noise Ratio: A Robust Distance Metric for Deep Metric Learning</a> <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"></p>
+
+    <ul>
+      <li>We propose a robust SNR distance metric based on Signal-to-Noise Ratio (SNR) for measuring the similarity of image pairs for deep metric learning. Compared with Euclidean distance metric, our SNR distance metric can further jointly reduce the intra-class distances and enlarge the inter-class distances for learned features.</li>
+      <li>SNR in signal processing is used to measure the level of a desired signal to the level of noise, and a larger SNR value means a higher signal quality.
+  For similarity measurement in deep metric learning, a pair of learned features x and y can be given as y = x + n, where n can be treated as a noise. Then, the SNR is the ratio of the feature variance and the noise variance.</li>
+      <li>To show the generality of our SNR-based metric, we also extend our approach to hashing retrieval learning.</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Branchaud-Charron_Spectral_Metric_for_Dataset_Complexity_Assessment_CVPR_2019_paper.pdf">Spectral Metric for Dataset Complexity Assessment</a> <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"></p>
+
+    <ul>
+      <li>Related work: <a href="https://openreview.net/forum?id=ryup8-WCW">Measuring the Intrinsic Dimension of Objective Landscapes ICLR 2018</a>, 
+  <a href="https://arxiv.org/abs/1808.03591">How Complex is your classification problem? A survey on measuring classification complexity Survey on complexity measures</a>
+</li>
+    </ul>
+  </li>
+  <li>Deep Asymmetric Metric Learning via Rich Relationship Mining <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">
+    <ul>
+      <li>DAMLRRM relaxes the constraint on positive pairs to extend the generalization capability. We build positive pairs training pool by constructing a minimum connected tree for each category instead of considering all positive pairs within a mini-batch. As a result, there will exist a direct or indirect path between any positive pair, which ensures the relevance being bridged to each other. The inspiration comes from ranking on manifold [58] that spreads the relevance to their nearby neighbors one by one.</li>
+      <li>Idea is novel. The results on SOP are not good, only 69.7 with GoogLeNet</li>
+    </ul>
+  </li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Hybrid-Attention_Based_Decoupled_Metric_Learning_for_Zero-Shot_Image_Retrieval_CVPR_2019_paper.pdf">Hybrid-Attention Based Decoupled Metric Learning for Zero-Shot Image Retrieval</a> <img class="emoji" title=":-1:" alt=":-1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" height="20" width="20">
+    <ul>
+      <li>Very complex: object attention, spatial attention, random walk graph, etc.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://arxiv.org/pdf/1904.09626.pdf">Deep Metric Learning Beyond Binary Supervision</a> <img class="emoji" title=":-1:" alt=":-1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" height="20" width="20">
+    <ul>
+      <li>Binary supervision indicating whether a pair of images are of the same class or not.</li>
+      <li>Using continuous labels</li>
+      <li>Learn the degree of similarity rather than just the order.</li>
+      <li>A triplet mining strategy adapted to metric learning with continuous labels.</li>
+      <li>Image retrieval tasks with continuous labels in terms of human poses, room layouts and image captions.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Hardness-aware deep metric learning 
+<img class="emoji" title=":-1:" alt=":-1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" height="20" width="20"> : data augmentation</p>
+  </li>
+  <li>
+    <p>Ensemble Deep Manifold Similarity Learning using Hard Proxies <img class="emoji" title=":-1:" alt=":-1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" height="20" width="20"> random walk algorithm, ensemble models.</p>
+  </li>
+  <li>
+    <p>Re-Ranking via Metric Fusion for Object Retrieval and Person Re-Identification <img class="emoji" title=":-1:" alt=":-1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" height="20" width="20"></p>
+  </li>
+  <li>Deep Embedding Learning With Discriminative Sampling Policy <img class="emoji" title=":-1:" alt=":-1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" height="20" width="20">
+</li>
+  <li>Point Cloud Oversegmentation With Graph-Structured Deep Metric Learning <img class="emoji" title=":-1:" alt=":-1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" height="20" width="20">
+</li>
+  <li>Polysemous Visual-Semantic Embedding for Cross-Modal Retrieval <img class="emoji" title=":-1:" alt=":-1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" height="20" width="20">
+</li>
+  <li>A Compact Embedding for Facial Expression Similarity <img class="emoji" title=":-1:" alt=":-1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" height="20" width="20">
+</li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Karlinsky_RepMet_Representative-Based_Metric_Learning_for_Classification_and_Few-Shot_Object_Detection_CVPR_2019_paper.pdf">RepMet: Representative-Based Metric Learning for Classification and Few-Shot Object Detection</a> <img class="emoji" title=":-1:" alt=":-1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" height="20" width="20">
+</li>
+  <li>Eliminating Exposure Bias and Metric Mismatch in Multiple Object Tracking <img class="emoji" title=":-1:" alt=":-1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44e.png" height="20" width="20">
+</li>
+</ul>
+
+<h2 id="few-shot-learning"><a href="/my_docs/few-shot/">Few-shot Learning</a></h2>
+<ul class="message">
+  <li>ICLR 2018-Meta-Learning for Semi-Supervised Few-Shot Classification</li>
+  <li>NeurIPS 2019-Unsupervised Meta Learning for Few-Show Image Classification</li>
+  <li>NeurIPS 2019-Learning to Self-Train for Semi-Supervised Few-Shot Classification</li>
+  <li>NeurIPS 2019-Adaptive Cross-Modal Few-shot Learning</li>
+  <li>NeurIPS 2019-Cross Attention Network for Few-shot Classification</li>
+  <li>NeurIPS 2019-Incremental Few-Shot Learning with Attention Attractor Networks</li>
+  <li>ICML 2019-LGM-Net: Learning to Generate Matching Networks for Few-Shot Learning</li>
+</ul>
+
+<h2 id="large-output-spaces"><a href="/my_docs/large-output-spaces/">Large Output Spaces</a></h2>
+<ul class="message">
+  <li>NeurIPS 2019-Breaking the Glass Ceiling for Embedding-Based Classifiers for Large Output Spaces</li>
+  <li>AISTATS 2019-Stochastic Negative Mining for Learning with Large Output Spaces</li>
+</ul>
+
+<h2 id="poincaré-hyperbolic-curvilinear"><a href="/my_docs/Poincare-Hyperbolic-Curvilinear/">Poincaré, Hyperbolic, Curvilinear</a></h2>
+<ul class="message">
+  <li>NeurIPS 2019-Multi-relational Poincaré Graph Embeddings</li>
+  <li>NeurIPS 2019-Numerically Accurate Hyperbolic Embeddings Using Tiling-Based Models</li>
+  <li>NeurIPS 2019-Curvilinear Distance Metric Learning</li>
+</ul>
+
+<h2 id="wasserstein"><a href="/my_docs/wasserstein/">Wasserstein</a></h2>
+<ul class="message">
+  <li>NeurIPS 2019-Generalized Sliced Wasserstein Distances</li>
+  <li>NeurIPS 2019-Tree-Sliced Variants of Wasserstein Distances</li>
+  <li>NeurIPS 2019-Sliced Gromov-Wasserstein</li>
+  <li>NeurIPS 2019-Wasserstein Dependency Measure for Representation Learning</li>
+</ul>
+
+<h2 id="semi-supervised-or-unsupervised-learning"><a href="/my_docs/Semi-Un-Supervised-Learning/">Semi-supervised or Unsupervised Learning</a></h2>
+<ul class="message">
+  <li>CVPR 2019-Label Propagation for Deep Semi-supervised Learning</li>
+  <li>NeurIPS 2017-Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results</li>
+  <li>ICLR 2019-Unsupervised Learning via Meta-Learning</li>
+</ul>
+
+<h2 id="neurips-2019-stochastic-shared-embeddings-data-driven-regularization-of-embedding-layers"><a href="https://arxiv.org/pdf/1905.10630.pdf">NeurIPS 2019-Stochastic Shared Embeddings: Data-driven Regularization of Embedding Layers</a></h2>
+<p class="message"><strong>NOTE</strong>: 
+In deep neural nets, lower level embedding layers account for a large portion of the total number of parameters.<strong>Tikhonov regularization, graph-based regularization, and hard parameter sharing are approaches that introduce explicit biases into training in a hope to reduce statistical complexity.</strong> Alternatively, we propose stochastically shared embeddings (SSE), a data-driven approach to regularizing embedding layers, which stochastically transitions between embeddings during stochastic gradient descent (SGD). Because SSE integrates seamlessly with existing SGD algorithms, it can be used with only minor modifications when training large scale neural networks. We develop two versions of SSE: SSE-Graph using knowledge graphs of embeddings; SSE-SE using no prior information. We provide theoretical guarantees for our method and show its empirical effectiveness on 6 distinct tasks, from simple neural networks with one hidden layer in recommender systems, to the transformer and BERT in natural languages. <strong>We find that when used along with widely-used regularization methods such as weight decay and dropout, our proposed SSE can further reduce overfitting, which often leads to more favorable generalization results.</strong> <br>
+We conducted <strong>experiments for a total of 6 tasks from simple neural networks with one hidden layer in recommender systems, to the transformer and BERT in natural languages.</strong></p>
+
+
+  
+</article>
+
+
+
+<hr class="dingbat related">
+
+
+
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML">
+</script>
+
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-ef+6k-30-ac+ty" data-ad-client="ca-pub-8231481254980115" data-ad-slot="9596964208"></ins>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+
+
+<div class="navigator">
+    
+        <span style="float:left"><a href="/blogs/2020-04-09-label-manipulation/">« Paper Summary on Label Manipulation, Output Regularisation (Optimisation tricks)</a>
+          · <a href="https://xinshaoamoswang.github.io/blogs/2020-04-09-label-manipulation/#disqus_thread"></a>
+        </span>
+    
+    
+        <span style="float:right"><a href="/blogs/2020-06-07-Progressive-self-label-correction/">Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks »</a>
+          · <a href="https://xinshaoamoswang.github.io/blogs/2020-06-07-Progressive-self-label-correction/#disqus_thread"></a>
+        </span>
+    
+</div>
+
+#<script data-ad-client="ca-pub-8231481254980115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+#
+<script data-ad-client="ca-pub-8231481254980115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+
+<div id="disqus_thread"></div>
+
+
+<script>
+    var disqus_config = function () {
+            this.page.url = "https://xinshaoamoswang.github.io/blogs/2020-04-23-deep-metric-learning/";
+            this.page.identifier = "/blogs/deep-metric-learning";
+        }; 
+
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://xinshaowang.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+<noscript>Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+
+
+  
+
+  
+<footer role="contentinfo">
+  <hr>
+  
+    <p><small class="copyright">© 2019-2020. All rights reserved.
+</small></p>
+  
+  
+  <p><small>Welcome to Xinshao Wang's Personal Website</small></p>
+  <hr class="sr-only">
+</footer>
+
+
+</main>
+
+    <hy-drawer class="" align="left" threshold="10" touch-events prevent-default>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+    <div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+      <div class="sidebar-about">
+        
+          <a class="no-hover" href="/" tabindex="-1">
+            <img src="/assets/icons/android-chrome-192x192.png" class="avatar" alt="Xinshao (Amos) Wang" data-ignore>
+          </a>
+        
+        <h2 class="h1"><a href="/">Xinshao (Amos) Wang</a></h2>
+        
+        
+          <p class="fine">
+            Machine Learning (Robust Learning under Adverse Conditions, Deep Metric Learning).
+Computer Vision (Image/Video Recognition including retrieval and clustering, Person ReID).
+
+          </p>
+        
+      </div>
+
+      <nav class="sidebar-nav heading" role="navigation">
+        <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a id="_navigation" href="/blogs/" class="sidebar-nav-item active">
+          Blogs
+        </a>
+      </li>
+    
+      
+      <li>
+        <a href="/paperlists/" class="sidebar-nav-item">
+          PaperReading
+        </a>
+      </li>
+    
+      
+      <li>
+        <a href="/projects/" class="sidebar-nav-item">
+          Projects
+        </a>
+      </li>
+    
+      
+      <li>
+        <a href="/Resume/" class="sidebar-nav-item">
+          Resume
+        </a>
+      </li>
+    
+      
+      <li>
+        <a href="/about/" class="sidebar-nav-item">
+          About ME
+        </a>
+      </li>
+    
+  
+</ul>
+
+      </nav>
+
+      
+
+      <div class="sidebar-social">
+        <span class="sr-only">Social:</span>
+<ul>
+  
+    
+    
+
+    
+    
+
+    
+    
+  
+</ul>
+
+      </div>
+    </div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden>
+
+  
+</hy-push-state>
+
+<!--[if gt IE 10]><!---->
+
+  <script nomodule>!function(){var e=document.createElement("script");if(!("noModule"in e)&&"onbeforeload"in e){var t=!1;document.addEventListener("beforeload",function(n){if(n.target===e)t=!0;else if(!n.target.hasAttribute("nomodule")||!t)return;n.preventDefault()},!0),e.type="module",e.src=".",document.head.appendChild(e),e.remove()}}();
+</script>
+  <script type="module" src="/assets/js/hydejack-8.5.2.js"></script>
+  <script nomodule src="/assets/js/hydejack-legacy-8.5.2.js" defer></script>
+  
+
+  
+
+
+<!--<![endif]-->
+
+
+
+
+<h2 class="sr-only" hidden>Templates (for web app):</h2>
+
+<template id="_animation-template" hidden>
+  <div class="animation-main fixed-top">
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+<template id="_loading-template" hidden>
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+<template id="_error-template" hidden>
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+<template id="_forward-template" hidden>
+  <button id="_forward" class="forward nav-btn no-hover fl">
+    <span class="sr-only">Forward</span>
+    <span class="icon-arrow-right2"></span>
+  </button>
+</template>
+
+<template id="_back-template" hidden>
+  <button id="_back" class="back nav-btn no-hover fl">
+    <span class="sr-only">Back</span>
+    <span class="icon-arrow-left2"></span>
+  </button>
+</template>
+
+<template id="_permalink-template" hidden>
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="icon-link"></span>
+  </a>
+</template>
+
+
+
+
+
+  
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-ef+6k-30-ac+ty" data-ad-client="ca-pub-8231481254980115" data-ad-slot="9596964208"></ins>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+</body>
+
+
+
+<script id="dsq-count-scr" src="//xinshaowang.disqus.com/count.js" async></script>
+
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+</html>
