@@ -41,7 +41,7 @@ Paper link: [ProSelfLC_arXiv_07062020.pdf](../figsProSelfLC/ProSelfLC_arXiv_0706
     * We can solve it still by minimum entropy regularisation principle;
     * Diverse minimum-entropy statuses exist (e.g., when a learner perfectly fits random labels, the entropy also reaches a minimum):
         * The minimum-entropy status defined by untrusted human-annotated labels is incorrect, thus leading to poor generalisation. \\
-        **Non-meaningful minimum-entropy status => poor generalisation**.
+        **CCE => Non-meaningful minimum-entropy status => poor generalisation**.
         * We propose to redefine a more meaningful minimum-entropy status by exploiting the knowledge of a learner itself, which shows promising results.  \\
         **Label correction => Meaningful low-entropy status => good generalisation**.
 {:.message}
