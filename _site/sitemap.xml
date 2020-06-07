@@ -2,15 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/blogs/</loc>
-<lastmod>2020-06-07T13:23:00+01:00</lastmod>
+<lastmod>2020-06-07T13:24:23+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/paperlists/</loc>
-<lastmod>2020-06-07T13:23:00+01:00</lastmod>
+<lastmod>2020-06-07T13:24:23+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/projects/</loc>
-<lastmod>2020-06-07T13:23:00+01:00</lastmod>
+<lastmod>2020-06-07T13:24:23+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/paperlists/2017-12-30-NeurIPS/</loc>
@@ -125,8 +125,8 @@
 <lastmod>2020-04-23T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/blogs/2020-06-06-Progressive-self-label-correction/</loc>
-<lastmod>2020-06-06T00:00:00+01:00</lastmod>
+<loc>http://localhost:4000/blogs/2020-06-07-Progressive-self-label-correction/</loc>
+<lastmod>2020-06-07T00:00:00+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/my_docs/Adversarial-Examples-Reading-List/</loc>
