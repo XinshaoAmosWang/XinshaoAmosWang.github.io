@@ -10,19 +10,19 @@ comment: true
 
 For any specific discussion or potential future collaboration, please feel free to contact me. As a young
 researcher, your interest and star (citation) will mean a lot for me and my collaborators. For source codes, we
-are happy to provide if there is a request conditioned on academic use only and kindness to cite our work.
-<br />
-<br />
-@article{wang2020proselflc,<br />
-  title={ProSelfLC: Progressive Self Label Correction for Training Robust Deep Neural Networks},<br />
-  author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M},<br />
-  journal={arXiv preprint arXiv:2005.03788},<br />
-  year={2020}}
-<br />
+are happy to provide if there is a request conditioned on academic use only and kindness to cite this work.<br />
 Paper link: [ProSelfLC_arXiv_07062020.pdf](../figsProSelfLC/ProSelfLC_arXiv_07062020.pdf)
-{:.message}
+```
+@article{wang2020proselflc,
+  title={ProSelfLC: Progressive Self Label Correction for Training Robust Deep Neural Networks},
+  author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M},
+  journal={arXiv preprint arXiv:2005.03788},
+  year={2020}
+}
+```
 
 <!-- :+1: means being highly related to my personal research interest. -->
+List of Content
 0. [Storyline](#storyline)
 0. [Open ML Research Questions](#open-ml-research-questions)
 0. [Noticeable Findings](#noticeable-findings)
@@ -31,6 +31,7 @@ Paper link: [ProSelfLC_arXiv_07062020.pdf](../figsProSelfLC/ProSelfLC_arXiv_0706
 0. [Underlying Principle of ProSelfLC](#underlying-principle-of-proselflc)
 0. [Mathematical Details of ProSelfLC](#mathematical-details-of-proselflc)
 0. [Design Reasons of ProSelfLC](#design-reasons-of-proselflc)
+0. [Related Interesting Work](#related-interesting-work)
 {:.message}
 
 ## Storyline
@@ -146,4 +147,30 @@ As highlighted in Table 2, only when two conditions are met, we have $$\epsilon_
 $$\argmax\nolimits_j \mathbf{p}(j|\mathbf{x}) \neq \argmax\nolimits_j \mathbf{q}(j|\mathbf{x})$$, then the semantic class in $\mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}$ is changed to be determined by $$\mathbf{p}$$. 
 For example, we can deduce $$\mathbf{p} = [0.95, 0.01, 0.04], \mathbf{q} = [0, 0, 1], \epsilon_{\mathrm{ProSelfLC}}=0.8 \Rightarrow \mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}=(1- \epsilon_{\mathrm{ProSelfLC}})  \mathbf{q}+\epsilon_{\mathrm{ProSelfLC}} \mathbf{p}=[0.76, 0.008, 0.232]$$.  
 Theoretically, ProSelfLC also becomes robust against long time being exposed to the training data, so that early stopping is not required.
+{:.message}
+
+
+
+## Related Interesting Work
+* Deep models learn simple meaningful patterns before fitting noise, even when severe label noise exists in human annotations. 
+    * [2019-Derivative manipulation for general example weighting](https://arxiv.org/pdf/1905.11233.pdf)
+    ```
+    @article{wang2019derivative,
+        title={Derivative Manipulation for
+        General Example Weighting},
+        author={Wang, Xinshao and Kodirov, Elyor and Hua, Yang and Robertson, Neil M},
+        journal={arXiv preprint arXiv:1905.11233},
+        year={2019}
+    }
+    ```
+    * [2019-IMAE for noise-robust learning: Mean absolute error does not treat examples equally and gradient magnitude’s variance matters.](https://arxiv.org/pdf/1903.12141.pdf)
+    ```
+    @article{wang2019imae,
+        title={ {IMAE} for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude's Variance Matters},
+        author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M},
+        journal={arXiv preprint arXiv:1903.12141},
+        year={2019}
+    }
+    ```
+    * Arpit, D., Jastrz ̨ebski, S., Ballas, N., Krueger, D., Bengio, E., Kanwal, M.S., Maharaj, T., Fischer, A., Courville, A., Bengio, Y., Lacoste-Julien, S.: A closer look at memorization in deep networks. In: ICML. (2017)
 {:.message}
