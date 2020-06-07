@@ -154,9 +154,9 @@ Theoretically, ProSelfLC also becomes robust against long time being exposed to 
 
 ## Related Interesting Work
 * Contradictory Underlying Principle: Maximum-Entropy Learning, Confidence Penalty, Label Smoothing
-    * [Maximum Entropy Fine-Grained Classification](https://papers.nips.cc/paper/7344-maximum-entropy-fine-grained-classification.pdf)
     * [Confidence Penalty is proposed in Regularizing Neural Networks by Penalizing Confident Output Distributions](https://arxiv.org/pdf/1701.06548.pdf)
     * [Label Smoothing is proposed in Rethinking the Inception Architecture for Computer Vision](https://arxiv.org/pdf/1512.00567.pdf)
+    * [Maximum Entropy Fine-Grained Classification](https://papers.nips.cc/paper/7344-maximum-entropy-fine-grained-classification.pdf)
 * Deep models learn simple meaningful patterns before fitting noise, even when severe label noise exists in human annotations. 
     * [2019-Derivative manipulation for general example weighting](https://arxiv.org/pdf/1905.11233.pdf)
     ```
