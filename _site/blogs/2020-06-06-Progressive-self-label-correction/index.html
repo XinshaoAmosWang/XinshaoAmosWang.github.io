@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v8.5.2 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+
+
+  
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks | Xinshao (Amos) Wang</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks" />
+<meta name="author" content="Xinshao (Amos) Wang" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc" />
+<meta property="og:description" content="“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc" />
+<link rel="canonical" href="http://localhost:4000/blogs/2020-06-06-Progressive-self-label-correction/" />
+<meta property="og:url" content="http://localhost:4000/blogs/2020-06-06-Progressive-self-label-correction/" />
+<meta property="og:site_name" content="Xinshao (Amos) Wang" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-06T00:00:00+01:00" />
+<script type="application/ld+json">
+{"description":"“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc","author":{"@type":"Person","name":"Xinshao (Amos) Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2020-06-06-Progressive-self-label-correction/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao (Amos) Wang"},"headline":"Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks","dateModified":"2020-06-06T00:00:00+01:00","datePublished":"2020-06-06T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2020-06-06-Progressive-self-label-correction/"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+    <meta name="keywords" content="Xinshao (Amos) Wang; Machine Learning,Computer Vision,Robust Learning,Deep Metric Learning,Image Recognition,Video Recognition,Person ReID">
+  
+
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Xinshao (Amos) Wang">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<meta name="application-name" content="Xinshao (Amos) Wang">
+<meta name="msapplication-config" content="/assets/ieconfig.xml">
+
+
+<meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta name="generator" content="Hydejack v8.5.2" />
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Xinshao (Amos) Wang" />
+
+
+
+<link rel="alternate" href="http://localhost:4000/blogs/2020-06-06-Progressive-self-label-correction/" hreflang="en">
+
+<link rel="shortcut icon" href="/assets/icons/icon.png">
+<link rel="apple-touch-icon" href="/assets/icons/icon.png">
+
+<link rel="manifest" href="/assets/manifest.json">
+
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+
+
+<link rel="dns-prefetch" href="/" id="_baseURL">
+<link rel="dns-prefetch" href="/sw.js" id="_hrefSW">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.js" id="_hrefKatexJS">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/katex.min.css" id="_hrefKatexCSS">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.js" id="_hrefKatexCopyJS">
+<link rel="dns-prefetch" href="/assets/bower_components/katex/dist/contrib/copy-tex.min.css" id="_hrefKatexCopyCSS">
+<link rel="dns-prefetch" href="/assets/img/swipe.svg" id="_hrefSwipeSVG">
+
+
+
+
+<script>
+!function(e,t){"use strict";function n(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}e.loadJS=function(e,o){var r=t.createElement("script");r.src=e,o&&n(r,"load",o,{once:!0});var a=t.scripts[0];return a.parentNode.insertBefore(r,a),r},e._loaded=!1,e.loadJSDeferred=function(o,r){function a(){e._loaded=!0,r&&n(c,"load",r,{once:!0});var o=t.scripts[0];o.parentNode.insertBefore(c,o)}var c=t.createElement("script");return c.src=o,e._loaded?a():n(e,"load",a,{once:!0}),c},e.setRel=e.setRelStylesheet=function(e){function o(){this.rel="stylesheet"}n(t.getElementById(e),"load",o,{once:!0})}}(window,document);
+;
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+;
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+;
+!function(w, d) {
+  w._noPushState = false;
+  w._noDrawer = false;
+}(window, document);
+</script>
+
+<!--[if gt IE 8]><!---->
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/assets/css/hydejack-8.5.2.css">
+  <link rel="stylesheet" href="/assets/icomoon/style.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400|Noto+Sans:400,400i,700,700i&display=swap">
+  
+
+
+  <style id="_pageStyle">
+
+.content a:not(.btn){color:#4fb1ba;border-color:rgba(79,177,186,0.2)}.content a:not(.btn):hover{border-color:#4fb1ba}:focus{outline-color:#4fb1ba !important}.btn-primary{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:focus,.btn-primary.focus,.form-control:focus,.form-control.focus{box-shadow:0 0 0 3px rgba(79,177,186,0.5)}.btn-primary:hover,.btn-primary.hover{color:#fff;background-color:#409ba3;border-color:#409ba3}.btn-primary:disabled,.btn-primary.disabled{color:#fff;background-color:#4fb1ba;border-color:#4fb1ba}.btn-primary:active,.btn-primary.active{color:#fff;background-color:#409ba3;border-color:#409ba3}::selection{color:#fff;background:#4fb1ba}::-moz-selection{color:#fff;background:#4fb1ba}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+
+  
+<script data-ad-client="ca-pub-8231481254980115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script data-ad-client="ca-pub-8231481254980115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body class="no-color-transition">
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <div class="nav-btn-bar">
+      <span class="sr-only">Jump to:</span>
+      <a id="_menu" class="nav-btn no-hover fl" href="#_navigation">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <!-- <a id="_search" class="nav-btn no-hover fl" href="#_search">
+        <span class="sr-only">Search</span>
+        <span class="icon-search"></span>
+      </a>
+      <form action="https://duckduckgo.com/" method="GET">
+        <div class="form-group fr">
+          <label class="sr-only" for="_search">Search</label>
+          <input id="_search" name="q" class="form-control" type="search" />
+        </div>
+        <input type="hidden" name="q" value="site:hydejack.com" />
+        <input type="hidden" name="ia" value="web" />
+      </form> -->
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden>
+
+
+<hy-push-state replace-ids="_main" link-selector="a[href]:not([href*='/assets/']):not(.external):not(.no-push-state)" duration="250" script-selector="script:not([type^='math/tex'])" prefetch>
+  
+    <main id="_main" class="content fade-in layout-post" role="main" data-color="rgb(79,177,186)" data-theme-color="rgb(25,55,71)" data-image="/assets/img/sidebar-bg.jpg" data-overlay>
+  
+
+
+
+
+<article id="post-blogs-Progressive-self-label-correction" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title">
+      
+        Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks
+      
+    </h1>
+
+    <p class="post-date heading">
+      
+      <time datetime="2020-06-06T00:00:00+01:00">06 Jun 2020</time>
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+
+in <span>Blogs</span>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+    </p>
+
+    
+    
+
+    
+
+
+
+  <div class="hr pb0"></div>
+
+
+  </header>
+
+  
+    <p>For any specific discussion or potential future collaboration, please feel free to contact me. As a young
+researcher, your interest and star (citation) will mean a lot for me and my collaborators. For source codes, we
+are happy to provide if there is a request conditioned on academic use only and kindness to cite our work.
+<!-- :+1: means being highly related to my personal research interest. --></p>
+<ol class="message">
+  <li><a href="#storyline">Storyline</a></li>
+  <li><a href="#open-ml-research-questions">Open ML Research Questions</a></li>
+  <li><a href="#noticeable-findings">Noticeable Findings</a></li>
+  <li><a href="#literature-review">Literature Review</a></li>
+  <li><a href="#in-self-lc-a-core-question-is-not-well-answered">In Self LC, a core question is not well answered</a></li>
+  <li><a href="#underlying-principle-of-proselflc">Underlying Principle of ProSelfLC</a></li>
+  <li><a href="#mathematical-details-of-proselflc">Mathematical Details of ProSelfLC</a></li>
+  <li><a href="#design-reasons-of-proselflc">Design Reasons of ProSelfLC</a></li>
+</ol>
+
+<h2 id="storyline">Storyline</h2>
+<ul class="message">
+  <li>Human annotations contain bias, subjectiveness, and errors.
+    <ul>
+      <li>Therefore, some prior work <strong>penalises low-entropy statuses =&gt; so that wrong fitting is alleviated in some degree.</strong> Representative proposals are label smoothing and confidence penalty.</li>
+    </ul>
+  </li>
+  <li>Our new finding on <strong>Entropy Minimisation</strong>:
+    <ul>
+      <li>We can solve it still by minimum entropy regularisation principle;</li>
+      <li>Diverse minimum-entropy statuses exist (e.g., when a learner perfectly fits random labels, the entropy also reaches a minimum):
+        <ul>
+          <li>The minimum-entropy status defined by untrusted human-annotated labels is incorrect, thus leading to poor generalisation. <br>
+  <strong>Non-meaningful minimum-entropy status =&gt; poor generalisation</strong>.</li>
+          <li>We propose to redefine a more meaningful minimum-entropy status by exploiting the knowledge of a learner itself, which shows promising results.  <br>
+  <strong>Label correction =&gt; Meaningful low-entropy status =&gt; good generalisation</strong>.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="open-ml-research-questions">Open ML Research Questions</h2>
+<ul class="message">
+  <li>Should we trust and exploit a learner’s knowledge as training goes, or always trust human
+annotations?</li>
+  <li>Should we optimise a learner towards a correct low-entropy status, or penalise a low-entropy
+status?</li>
+  <li>Open discussion: we show it’s fine for a learner to be confident towards a correct low-entropy status.
+Then more future research attention should be paid to the definition of correct knowledge, as in general we
+accept, human annotations used for learning supervision may be biased, subjective, and wrong.</li>
+</ul>
+
+<h2 id="noticeable-findings">Noticeable Findings</h2>
+<ul class="message">
+  <li>Rewarding low entropy (towards a meaningful status) leads to better generalisation than penalising low entropy.</li>
+</ul>
+
+<p class="figure">Comprehensive learning dynamics for thorough understanding of learning behaviours.
+<hy-img root-margin="512px" src="/blogs/figsProSelfLC/comprehensive_dynamics.png" alt="ProSelfLC comprehensive_dynamics" class="lead" data-width="800" data-height="100">
+  <noscript><img data-ignore src="/blogs/figsProSelfLC/comprehensive_dynamics.png" alt="ProSelfLC comprehensive_dynamics" class="lead" data-width="800" data-height="100"></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+<ul class="message">
+  <li>Result analysis:
+    <ul>
+      <li>
+<strong>Revising the semantic class and perceptual similarity structure.</strong> Generally, the semantic class of an example is defined according to its perceptual similarities with training classes, and is chosen to be the most similar class. In Figure 3b and 3c, we show a learner’s behaviours on without fitting wrong labels and correcting them in different approaches. We remark that ProSelfLC performs the best.
+  <br>
+  <br>
+</li>
+      <li>
+<strong>To reward or penalise low entropy?</strong> LS and CP are proposed to penalise low entropy. On the one hand, we observe that LS and CP work, being consistent with prior evidence. As shown in Figure 3d and 3e, the entropies of both clean and noisy subset are the largest in LS and CP, and correspondingly their generalisation performance is the best except for ProSelfLC in Figure 3f. On the other hand, our ProSelfLC has the lowest low entropy while performs the best, which demonstrates <strong>it does not hurt for a learner to be confident. However, a learning model needs to be careful about what to be confident in.</strong> Let us look at Figure 3b and 3c, ProSelfLC has the least wrong fitting while the highest semantic class correction rate, which denotes it is confident in learning meaningful patterns.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="literature-review">Literature Review</h2>
+
+<p class="figure">Target modification includes OR (LS and CP), and LC (Self LC and Non-self LC). <br>
+Self LC is the most appealing because it requires no extra learners to
+revise learning targets, <br> 
+being free! <br>
+<hy-img root-margin="512px" src="../figsProSelfLC/methods_grouping.png" alt="Method Analysis" class="lead" data-width="800" data-height="100">
+  <noscript><img data-ignore src="../figsProSelfLC/methods_grouping.png" alt="Method Analysis" class="lead" data-width="800" data-height="100"></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<p class="figure">Summary of CCE, LS, CP and LC from the angle of target modification, entropy and KL divergence.
+<hy-img root-margin="512px" src="../figsProSelfLC/table_method_analysis.png" alt="Table Method Analysis" class="lead" data-width="800" data-height="100">
+  <noscript><img data-ignore src="../figsProSelfLC/table_method_analysis.png" alt="Table Method Analysis" class="lead" data-width="800" data-height="100"></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<h2 id="in-self-lc-a-core-question-is-not-well-answered">In Self LC, a core question is not well answered:</h2>
+<p class="message"><code class="MathJax_Preview">\textit{How much do we trust a learner to leverage its knowledge?}</code><script type="math/tex">\textit{How much do we trust a learner to leverage its knowledge?}</script></p>
+
+<h2 id="underlying-principle-of-proselflc">Underlying Principle of ProSelfLC</h2>
+<ul class="message">
+  <li>When a learner starts to learn, it trusts the supervision from human annotations. 
+<br>
+<br>
+This idea is inspired by the paradigm that deep models learn simple meaningful patterns before fitting noise, even when severe label noise exists in human annotations [1];
+<br>
+<br>
+</li>
+  <li>As a learner attains confident knowledge as time goes, we leverage its confident knowledge to correct labels. 
+<br>
+<br>
+This is surrounded by minimum entropy regularisation, which has been widely evaluated in unsupervised and semi-supervised scenarios [10, 2].</li>
+</ul>
+
+<h2 id="mathematical-details-of-proselflc">Mathematical Details of ProSelfLC</h2>
+
+<p class="figure">Beyond semantic class: the similarity structure defined by a label distribution.
+<hy-img root-margin="512px" src="../figsProSelfLC/definition_learning_target.png" alt="The definiton of learning targets/labels" class="lead" data-width="800" data-height="100">
+  <noscript><img data-ignore src="../figsProSelfLC/definition_learning_target.png" alt="The definiton of learning targets/labels" class="lead" data-width="800" data-height="100"></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<p class="figure">Human annotations and predicted label distributions, which should we trust more?
+<hy-img root-margin="512px" src="../figsProSelfLC/mathematical_expression.png" alt="Mathematical expression of ProSelfLC" class="lead" data-width="800" data-height="100">
+  <noscript><img data-ignore src="../figsProSelfLC/mathematical_expression.png" alt="Mathematical expression of ProSelfLC" class="lead" data-width="800" data-height="100"></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<h2 id="design-reasons-of-proselflc">Design Reasons of ProSelfLC</h2>
+<ul>
+  <li>
+    <p>Regarding <code class="MathJax_Preview">g(t)</code><script type="math/tex">g(t)</script>, 
+in the earlier learning phase, i.e., <code class="MathJax_Preview">t &lt; \Gamma/2</code><script type="math/tex">% <![CDATA[
+t < \Gamma/2 %]]></script>, <code class="MathJax_Preview">g(t) &lt; 0.5 \Rightarrow \epsilon_{\mathrm{ProSelfLC}} &lt; 0.5, \forall \mathbf{p}</code><script type="math/tex">% <![CDATA[
+g(t) < 0.5 \Rightarrow \epsilon_{\mathrm{ProSelfLC}} < 0.5, \forall \mathbf{p} %]]></script>, so that the human annotations dominate and ProSelfLC only modifies the similarity structure. This is because when a learner does not see the training data for enough times, we assume it is not trained well, which is the most elementary concept in deep learning. Most importantly, more randomness exists at the earlier phase, as a result, the learner may output a wrong confident prediction. In our design, <code class="MathJax_Preview">\epsilon_{\mathrm{ProSelfLC}} &lt; 0.5, \forall \mathbf{p}</code><script type="math/tex">% <![CDATA[
+\epsilon_{\mathrm{ProSelfLC}} < 0.5, \forall \mathbf{p} %]]></script> can assuage the bad impact of such unexpected cases. <br>
+When it comes to the later learning phase, i.e., <code class="MathJax_Preview">t &gt; \Gamma/2</code><script type="math/tex">t > \Gamma/2</script>, we have <code class="MathJax_Preview">g(t) &gt; 0.5</code><script type="math/tex">g(t) > 0.5</script>, which means overall we give enough credits to a learner as it has been trained for more than the half of total iterations.</p>
+  </li>
+  <li>
+    <p>Regarding <code class="MathJax_Preview">l(\mathbf{p})</code><script type="math/tex">l(\mathbf{p})</script>, we discuss its effect in the later learning phase when it becomes more meaningful. 
+If <code class="MathJax_Preview">\mathbf{p}</code><script type="math/tex">\mathbf{p}</script> is not confident, <code class="MathJax_Preview">l(\mathbf{p})</code><script type="math/tex">l(\mathbf{p})</script> will be large, then <code class="MathJax_Preview">\epsilon_{\mathrm{ProSelfLC}}</code><script type="math/tex">\epsilon_{\mathrm{ProSelfLC}}</script> will be small, which means we choose to trust a one-hot annotation more when its prediction is of high entropy, so that we can further reduce the entropy of output distributions}. In this case, ProSelfLC only modifies the similarity structure.
+Beyond, when <code class="MathJax_Preview">\mathbf{p}</code><script type="math/tex">\mathbf{p}</script> is highly confident, there are two fine cases: If <code class="MathJax_Preview">\mathbf{p}</code><script type="math/tex">\mathbf{p}</script> is consistent with <code class="MathJax_Preview">\mathbf{q}</code><script type="math/tex">\mathbf{q}</script> in the semantic class, ProSelfLC only modifies the similarity structure too; If they are inconsistent, ProSelfLC further corrects the semantic class of a human annotation.</p>
+  </li>
+</ul>
+
+<p class="figure">Ablation study on the design of ProSelfLC, where <code class="MathJax_Preview">\epsilon_{\mathrm{ProSelfLC}}</code><script type="math/tex">\epsilon_{\mathrm{ProSelfLC}}</script> consistently performs the best when multiple metrics are reported. 
+<hy-img root-margin="512px" src="../figsProSelfLC/ablation_study.png" alt="Ablation study on the design of ProSelfLC" class="lead" data-width="800" data-height="100">
+  <noscript><img data-ignore src="../figsProSelfLC/ablation_study.png" alt="Ablation study on the design of ProSelfLC" class="lead" data-width="800" data-height="100"></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<p class="figure">Case analysis on the design of ProSelfLC.
+<hy-img root-margin="512px" src="../figsProSelfLC/case_analysis.png" alt="Case analysis on the design of ProSelfLC" class="lead" data-width="800" data-height="100">
+  <noscript><img data-ignore src="../figsProSelfLC/case_analysis.png" alt="Case analysis on the design of ProSelfLC" class="lead" data-width="800" data-height="100"></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
+<ul class="message">
+  <li>
+    <p><strong>Correct the similarity structure for every data point in all cases.</strong>
+Given any data point <code class="MathJax_Preview">\mathbf{x}</code><script type="math/tex">\mathbf{x}</script>, by a convex combination of <code class="MathJax_Preview">\mathbf{p}</code><script type="math/tex">\mathbf{p}</script> and <code class="MathJax_Preview">\mathbf{q}</code><script type="math/tex">\mathbf{q}</script>, 
+we add the information about its relative probabilities of being different training classes using the knowledge of a learner itself.</p>
+  </li>
+  <li>
+    <p><strong>Revise the semantic class of an example only when the learning time is long and its prediction is confidently inconsistent.</strong>
+As highlighted in Table 2, only when two conditions are met, we have <code class="MathJax_Preview">\epsilon_{\mathrm{ProSelfLC}}  &gt; 0.5</code><script type="math/tex">\epsilon_{\mathrm{ProSelfLC}}  > 0.5</script> and 
+<code class="MathJax_Preview">\argmax\nolimits_j \mathbf{p}(j|\mathbf{x}) \neq \argmax\nolimits_j \mathbf{q}(j|\mathbf{x})</code><script type="math/tex">\argmax\nolimits_j \mathbf{p}(j|\mathbf{x}) \neq \argmax\nolimits_j \mathbf{q}(j|\mathbf{x})</script>, then the semantic class in $\mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}$ is changed to be determined by <code class="MathJax_Preview">\mathbf{p}</code><script type="math/tex">\mathbf{p}</script>. 
+For example, we can deduce <code class="MathJax_Preview">\mathbf{p} = [0.95, 0.01, 0.04], \mathbf{q} = [0, 0, 1], \epsilon_{\mathrm{ProSelfLC}}=0.8 \Rightarrow \mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}=(1- \epsilon_{\mathrm{ProSelfLC}})  \mathbf{q}+\epsilon_{\mathrm{ProSelfLC}} \mathbf{p}=[0.76, 0.008, 0.232]</code><script type="math/tex">\mathbf{p} = [0.95, 0.01, 0.04], \mathbf{q} = [0, 0, 1], \epsilon_{\mathrm{ProSelfLC}}=0.8 \Rightarrow \mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}=(1- \epsilon_{\mathrm{ProSelfLC}})  \mathbf{q}+\epsilon_{\mathrm{ProSelfLC}} \mathbf{p}=[0.76, 0.008, 0.232]</script>.<br>
+Theoretically, ProSelfLC also becomes robust against long time being exposed to the training data, so that early stopping is not required.</p>
+  </li>
+</ul>
+
+  
+</article>
+
+
+
+<hr class="dingbat related">
+
+
+
+
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML">
+</script>
+
+
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-ef+6k-30-ac+ty" data-ad-client="ca-pub-8231481254980115" data-ad-slot="9596964208"></ins>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+
+
+
+<div class="navigator">
+    
+        <span style="float:left"><a href="/blogs/2020-04-23-deep-metric-learning/">« Paper Summary on Distance Metric, Representation Learning</a>
+          · <a href="https://xinshaoamoswang.github.io/blogs/2020-04-23-deep-metric-learning/#disqus_thread"></a>
+        </span>
+    
+    
+</div>
+
+<script data-ad-client="ca-pub-8231481254980115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script data-ad-client="ca-pub-8231481254980115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+
+<div id="disqus_thread"></div>
+
+
+<script>
+    var disqus_config = function () {
+            this.page.url = "https://xinshaoamoswang.github.io/blogs/2020-06-06-Progressive-self-label-correction/";
+            this.page.identifier = "/blogs/Progressive-self-label-correction";
+        }; 
+
+    (function() { 
+    var d = document, s = d.createElement('script');
+    s.src = 'https://xinshaowang.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+<noscript>Please enable JavaScript to view the 
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+
+
+  
+
+  
+<footer role="contentinfo">
+  <hr>
+  
+    <p><small class="copyright">© 2019-2020. All rights reserved.
+</small></p>
+  
+  
+  <p><small>Welcome to Xinshao Wang's Personal Website</small></p>
+  <hr class="sr-only">
+</footer>
+
+
+</main>
+
+    <hy-drawer class="" align="left" threshold="10" touch-events prevent-default>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+    <div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+      <div class="sidebar-about">
+        
+          <a class="no-hover" href="/" tabindex="-1">
+            <img src="/assets/icons/android-chrome-192x192.png" class="avatar" alt="Xinshao (Amos) Wang" data-ignore>
+          </a>
+        
+        <h2 class="h1"><a href="/">Xinshao (Amos) Wang</a></h2>
+        
+        
+          <p class="fine">
+            Machine Learning (Robust Learning under Adverse Conditions, Deep Metric Learning).
+Computer Vision (Image/Video Recognition including retrieval and clustering, Person ReID).
+
+          </p>
+        
+      </div>
+
+      <nav class="sidebar-nav heading" role="navigation">
+        <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a id="_navigation" href="/blogs/" class="sidebar-nav-item active">
+          Blogs
+        </a>
+      </li>
+    
+      
+      <li>
+        <a href="/paperlists/" class="sidebar-nav-item">
+          PaperReading
+        </a>
+      </li>
+    
+      
+      <li>
+        <a href="/projects/" class="sidebar-nav-item">
+          Projects
+        </a>
+      </li>
+    
+      
+      <li>
+        <a href="/Resume/" class="sidebar-nav-item">
+          Resume
+        </a>
+      </li>
+    
+      
+      <li>
+        <a href="/about/" class="sidebar-nav-item">
+          About ME
+        </a>
+      </li>
+    
+  
+</ul>
+
+      </nav>
+
+      
+
+      <div class="sidebar-social">
+        <span class="sr-only">Social:</span>
+<ul>
+  
+    
+    
+
+    
+    
+
+    
+    
+  
+</ul>
+
+      </div>
+    </div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden>
+
+  
+</hy-push-state>
+
+<!--[if gt IE 10]><!---->
+
+  <script nomodule>!function(){var e=document.createElement("script");if(!("noModule"in e)&&"onbeforeload"in e){var t=!1;document.addEventListener("beforeload",function(n){if(n.target===e)t=!0;else if(!n.target.hasAttribute("nomodule")||!t)return;n.preventDefault()},!0),e.type="module",e.src=".",document.head.appendChild(e),e.remove()}}();
+</script>
+  <script type="module" src="/assets/js/hydejack-8.5.2.js"></script>
+  <script nomodule src="/assets/js/hydejack-legacy-8.5.2.js" defer></script>
+  
+
+  
+
+
+<!--<![endif]-->
+
+
+
+
+<h2 class="sr-only" hidden>Templates (for web app):</h2>
+
+<template id="_animation-template" hidden>
+  <div class="animation-main fixed-top">
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+<template id="_loading-template" hidden>
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+<template id="_error-template" hidden>
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+<template id="_forward-template" hidden>
+  <button id="_forward" class="forward nav-btn no-hover fl">
+    <span class="sr-only">Forward</span>
+    <span class="icon-arrow-right2"></span>
+  </button>
+</template>
+
+<template id="_back-template" hidden>
+  <button id="_back" class="back nav-btn no-hover fl">
+    <span class="sr-only">Back</span>
+    <span class="icon-arrow-left2"></span>
+  </button>
+</template>
+
+<template id="_permalink-template" hidden>
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="icon-link"></span>
+  </a>
+</template>
+
+
+
+
+
+  
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-ef+6k-30-ac+ty" data-ad-client="ca-pub-8231481254980115" data-ad-slot="9596964208"></ins>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+</body>
+
+
+
+<script id="dsq-count-scr" src="//xinshaowang.disqus.com/count.js" async></script>
+
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+</html>

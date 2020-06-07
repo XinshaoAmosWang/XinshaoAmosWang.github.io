@@ -52,7 +52,7 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Blog
+  - title:             Blogs
     url:               /blogs/
   - title:             PaperReading
     url:               /paperlists/

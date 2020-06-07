@@ -1,5 +1,132 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-05-11T18:26:53+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
-</subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Paper Summary on Distance Metric, Representation Learning</title><link href="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/" rel="alternate" type="text/html" title="Paper Summary on Distance Metric, Representation Learning" /><published>2020-04-23T00:00:00+01:00</published><updated>2020-04-23T00:00:00+01:00</updated><id>http://localhost:4000/blogs/deep-metric-learning</id><content type="html" xml:base="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/">:+1: means being highly related to my personal research interest. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-06-07T12:56:58+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
+</subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks</title><link href="http://localhost:4000/blogs/2020-06-06-Progressive-self-label-correction/" rel="alternate" type="text/html" title="Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks" /><published>2020-06-06T00:00:00+01:00</published><updated>2020-06-06T00:00:00+01:00</updated><id>http://localhost:4000/blogs/Progressive-self-label-correction</id><content type="html" xml:base="http://localhost:4000/blogs/2020-06-06-Progressive-self-label-correction/">For any specific discussion or potential future collaboration, please feel free to contact me. As a young
+researcher, your interest and star (citation) will mean a lot for me and my collaborators. For source codes, we
+are happy to provide if there is a request conditioned on academic use only and kindness to cite our work.
+&lt;!-- :+1: means being highly related to my personal research interest. --&gt;
+0. [Storyline](#storyline)
+0. [Open ML Research Questions](#open-ml-research-questions)
+0. [Noticeable Findings](#noticeable-findings)
+0. [Literature Review](#literature-review)
+0. [In Self LC, a core question is not well answered](#in-self-lc-a-core-question-is-not-well-answered)
+0. [Underlying Principle of ProSelfLC](#underlying-principle-of-proselflc)
+0. [Mathematical Details of ProSelfLC](#mathematical-details-of-proselflc)
+0. [Design Reasons of ProSelfLC](#design-reasons-of-proselflc)
+{:.message}
+
+## Storyline
+* Human annotations contain bias, subjectiveness, and errors. 
+    * Therefore, some prior work **penalises low-entropy statuses =&gt; so that wrong fitting is alleviated in some degree.** Representative proposals are label smoothing and confidence penalty.
+
+* Our new finding on **Entropy Minimisation**: 
+    * We can solve it still by minimum entropy regularisation principle;
+    * Diverse minimum-entropy statuses exist (e.g., when a learner perfectly fits random labels, the entropy also reaches a minimum):
+        * The minimum-entropy status defined by untrusted human-annotated labels is incorrect, thus leading to poor generalisation. \\
+        **Non-meaningful minimum-entropy status =&gt; poor generalisation**.
+        * We propose to redefine a more meaningful minimum-entropy status by exploiting the knowledge of a learner itself, which shows promising results.  \\
+        **Label correction =&gt; Meaningful low-entropy status =&gt; good generalisation**.
+{:.message}
+
+## Open ML Research Questions
+* Should we trust and exploit a learner’s knowledge as training goes, or always trust human
+annotations?
+* Should we optimise a learner towards a correct low-entropy status, or penalise a low-entropy
+status?
+* Open discussion: we show it’s fine for a learner to be confident towards a correct low-entropy status.
+Then more future research attention should be paid to the definition of correct knowledge, as in general we
+accept, human annotations used for learning supervision may be biased, subjective, and wrong.
+{:.message}
+
+## Noticeable Findings
+* Rewarding low entropy (towards a meaningful status) leads to better generalisation than penalising low entropy.
+{:.message}
+
+Comprehensive learning dynamics for thorough understanding of learning behaviours.
+![ProSelfLC comprehensive_dynamics](/blogs/figsProSelfLC/comprehensive_dynamics.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
+{:.figure}
+* Result analysis:
+    * **Revising the semantic class and perceptual similarity structure.** Generally, the semantic class of an example is defined according to its perceptual similarities with training classes, and is chosen to be the most similar class. In Figure 3b and 3c, we show a learner’s behaviours on without fitting wrong labels and correcting them in different approaches. We remark that ProSelfLC performs the best.
+    &lt;br /&gt;
+    &lt;br /&gt;
+    * **To reward or penalise low entropy?** LS and CP are proposed to penalise low entropy. On the one hand, we observe that LS and CP work, being consistent with prior evidence. As shown in Figure 3d and 3e, the entropies of both clean and noisy subset are the largest in LS and CP, and correspondingly their generalisation performance is the best except for ProSelfLC in Figure 3f. On the other hand, our ProSelfLC has the lowest low entropy while performs the best, which demonstrates **it does not hurt for a learner to be confident. However, a learning model needs to be careful about what to be confident in.** Let us look at Figure 3b and 3c, ProSelfLC has the least wrong fitting while the highest semantic class correction rate, which denotes it is confident in learning meaningful patterns.
+{:.message}
+
+## Literature Review
+
+Target modification includes OR (LS and CP), and LC (Self LC and Non-self LC). &lt;br /&gt;
+Self LC is the most appealing because it requires no extra learners to
+revise learning targets, &lt;br /&gt; 
+being free! &lt;br /&gt;
+![Method Analysis](../figsProSelfLC/methods_grouping.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
+{:.figure}
+
+Summary of CCE, LS, CP and LC from the angle of target modification, entropy and KL divergence.
+![Table Method Analysis](../figsProSelfLC/table_method_analysis.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
+{:.figure}
+
+
+## In Self LC, a core question is not well answered:
+$$\textit{How much do we trust a learner to leverage its knowledge?}$$
+{:.message}
+
+
+## Underlying Principle of ProSelfLC
+* When a learner starts to learn, it trusts the supervision from human annotations. 
+&lt;br /&gt;
+&lt;br /&gt;
+This idea is inspired by the paradigm that deep models learn simple meaningful patterns before fitting noise, even when severe label noise exists in human annotations [1];
+&lt;br /&gt;
+&lt;br /&gt;
+* As a learner attains confident knowledge as time goes, we leverage its confident knowledge to correct labels. 
+&lt;br /&gt;
+&lt;br /&gt;
+This is surrounded by minimum entropy regularisation, which has been widely evaluated in unsupervised and semi-supervised scenarios [10, 2].
+{:.message}
+
+
+## Mathematical Details of ProSelfLC
+
+Beyond semantic class: the similarity structure defined by a label distribution.
+![The definiton of learning targets/labels](../figsProSelfLC/definition_learning_target.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
+{:.figure}
+
+
+Human annotations and predicted label distributions, which should we trust more?
+![Mathematical expression of ProSelfLC](../figsProSelfLC/mathematical_expression.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
+{:.figure}
+
+
+## Design Reasons of ProSelfLC
+*  Regarding $$g(t)$$, 
+in the earlier learning phase, i.e., $$t &lt; \Gamma/2$$, $$g(t) &lt; 0.5 \Rightarrow \epsilon_{\mathrm{ProSelfLC}} &lt; 0.5, \forall \mathbf{p}$$, so that the human annotations dominate and ProSelfLC only modifies the similarity structure. This is because when a learner does not see the training data for enough times, we assume it is not trained well, which is the most elementary concept in deep learning. Most importantly, more randomness exists at the earlier phase, as a result, the learner may output a wrong confident prediction. In our design, $$\epsilon_{\mathrm{ProSelfLC}} &lt; 0.5, \forall \mathbf{p}$$ can assuage the bad impact of such unexpected cases.   
+When it comes to the later learning phase, i.e., $$t &gt; \Gamma/2$$, we have $$g(t) &gt; 0.5$$, which means overall we give enough credits to a learner as it has been trained for more than the half of total iterations. 
+
+*  Regarding $$l(\mathbf{p})$$, we discuss its effect in the later learning phase when it becomes more meaningful. 
+If $$\mathbf{p}$$ is not confident, $$l(\mathbf{p})$$ will be large, then $$\epsilon_{\mathrm{ProSelfLC}}$$ will be small, which means we choose to trust a one-hot annotation more when its prediction is of high entropy, so that we can further reduce the entropy of output distributions}. In this case, ProSelfLC only modifies the similarity structure.
+Beyond, when $$\mathbf{p}$$ is highly confident, there are two fine cases: If $$\mathbf{p}$$ is consistent with $$\mathbf{q}$$ in the semantic class, ProSelfLC only modifies the similarity structure too; If they are inconsistent, ProSelfLC further corrects the semantic class of a human annotation. 
+
+
+
+Ablation study on the design of ProSelfLC, where $$\epsilon_{\mathrm{ProSelfLC}}$$ consistently performs the best when multiple metrics are reported. 
+![Ablation study on the design of ProSelfLC](../figsProSelfLC/ablation_study.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
+{:.figure}
+
+
+
+Case analysis on the design of ProSelfLC.
+![Case analysis on the design of ProSelfLC](../figsProSelfLC/case_analysis.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
+{:.figure}
+
+* **Correct the similarity structure for every data point in all cases.**
+Given any data point $$\mathbf{x}$$, by a convex combination of $$\mathbf{p}$$ and $$\mathbf{q}$$, 
+we add the information about its relative probabilities of being different training classes using the knowledge of a learner itself. 
+
+
+* **Revise the semantic class of an example only when the learning time is long and its prediction is confidently inconsistent.**
+As highlighted in Table 2, only when two conditions are met, we have $$\epsilon_{\mathrm{ProSelfLC}}  &gt; 0.5$$ and 
+$$\argmax\nolimits_j \mathbf{p}(j|\mathbf{x}) \neq \argmax\nolimits_j \mathbf{q}(j|\mathbf{x})$$, then the semantic class in $\mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}$ is changed to be determined by $$\mathbf{p}$$. 
+For example, we can deduce $$\mathbf{p} = [0.95, 0.01, 0.04], \mathbf{q} = [0, 0, 1], \epsilon_{\mathrm{ProSelfLC}}=0.8 \Rightarrow \mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}=(1- \epsilon_{\mathrm{ProSelfLC}})  \mathbf{q}+\epsilon_{\mathrm{ProSelfLC}} \mathbf{p}=[0.76, 0.008, 0.232]$$.  
+Theoretically, ProSelfLC also becomes robust against long time being exposed to the training data, so that early stopping is not required.
+{:.message}</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">For any specific discussion or potential future collaboration, please feel free to contact me. As a young researcher, your interest and star (citation) will mean a lot for me and my collaborators. For source codes, we are happy to provide if there is a request conditioned on academic use only and kindness to cite our work. Storyline Open ML Research Questions Noticeable Findings Literature Review In Self LC, a core question is not well answered Underlying Principle of ProSelfLC Mathematical Details of ProSelfLC Design Reasons of ProSelfLC</summary></entry><entry><title type="html">Paper Summary on Distance Metric, Representation Learning</title><link href="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/" rel="alternate" type="text/html" title="Paper Summary on Distance Metric, Representation Learning" /><published>2020-04-23T00:00:00+01:00</published><updated>2020-04-23T00:00:00+01:00</updated><id>http://localhost:4000/blogs/deep-metric-learning</id><content type="html" xml:base="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/">:+1: means being highly related to my personal research interest. 
 0. [arXiv 2020-On the Fairness of Deep Metric Learning](#arxiv-2020)
 0. [ICCV 2019, CVPR 2020 Deep Metric Learning](#iccv-2019-cvpr-2020-deep-metric-learning)
 0. [CVPR 2019 Deep Metric Learning](#cvpr-2019-deep-metric-learning)
@@ -523,7 +650,13 @@ Contrastive Predictive Coding](https://arxiv.org/pdf/1807.03748.pdf)
 dataset is still prohibitive and would render the method
 unsuitable for online learning.
     * In order to solve the problem of computing the importance for the whole dataset, we pre-sample a large batch of data points, compute the sampling distribution for that batch and re-sample a smaller batch with replacement. 
-{:.message}</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Learning to Retrieve Learning to Classify Others</summary></entry><entry><title type="html">Learning Bayesian Deep Learning, Uncertainty &amp;amp; Variational Techniques</title><link href="http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/" rel="alternate" type="text/html" title="Learning Bayesian Deep Learning, Uncertainty &amp; Variational Techniques" /><published>2020-02-21T00:00:00+00:00</published><updated>2020-02-21T00:00:00+00:00</updated><id>http://localhost:4000/blogs/learn-bayesian-DL</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/">0. [Blogs](#blogs)
+{:.message}</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Learning to Retrieve Learning to Classify Others</summary></entry><entry><title type="html">AAAI-2020</title><link href="http://localhost:4000/paperlists/2020-02-21-AAAI/" rel="alternate" type="text/html" title="AAAI-2020" /><published>2020-02-21T00:00:00+00:00</published><updated>2020-02-21T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/AAAI</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-02-21-AAAI/">:+1: means being highly related to my personal research interest. 
+{:.message}
+
+
+## Learning to Compare and Retrieve 
+* [Active Ordinal Querying for Tuplewise Similarity Learning](https://arxiv.org/pdf/1910.04115.pdf) 
+{:.message}</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Learning Bayesian Deep Learning, Uncertainty &amp;amp; Variational Techniques</title><link href="http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/" rel="alternate" type="text/html" title="Learning Bayesian Deep Learning, Uncertainty &amp; Variational Techniques" /><published>2020-02-21T00:00:00+00:00</published><updated>2020-02-21T00:00:00+00:00</updated><id>http://localhost:4000/blogs/learn-bayesian-DL</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/">0. [Blogs](#blogs)
 0. [Papers on Theories](#papers-on-theories)
 0. [Papers on Applications](#papers-on-applications)
 {:.message}
@@ -572,13 +705,7 @@ unsuitable for online learning.
 * [Rethinking Person Re-Identification with Confidence](https://arxiv.org/pdf/1906.04692v1.pdf)
 * [Learning Confidence for Out-of-Distribution Detection in Neural Networks](https://arxiv.org/pdf/1802.04865.pdf)
 * [Training Confidence-calibrated Classifiers for Detecting Out-of-Distribution Samples](https://openreview.net/forum?id=ryiAv2xAZ)
-{:.message}</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Blogs Papers on Theories Papers on Applications</summary></entry><entry><title type="html">AAAI-2020</title><link href="http://localhost:4000/paperlists/2020-02-21-AAAI/" rel="alternate" type="text/html" title="AAAI-2020" /><published>2020-02-21T00:00:00+00:00</published><updated>2020-02-21T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/AAAI</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-02-21-AAAI/">:+1: means being highly related to my personal research interest. 
-{:.message}
-
-
-## Learning to Compare and Retrieve 
-* [Active Ordinal Querying for Tuplewise Similarity Learning](https://arxiv.org/pdf/1910.04115.pdf) 
-{:.message}</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Code Releasing of My Recent Work-Derivative Manipulation</title><link href="http://localhost:4000/blogs/2020-02-18-code-releasing/" rel="alternate" type="text/html" title="Code Releasing of My Recent Work-Derivative Manipulation" /><published>2020-02-18T00:00:00+00:00</published><updated>2020-02-18T00:00:00+00:00</updated><id>http://localhost:4000/blogs/code-releasing</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-18-code-releasing/">0. [IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters](../../my_docs/IMAE_Code_Illustration)
+{:.message}</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Blogs Papers on Theories Papers on Applications</summary></entry><entry><title type="html">Code Releasing of My Recent Work-Derivative Manipulation</title><link href="http://localhost:4000/blogs/2020-02-18-code-releasing/" rel="alternate" type="text/html" title="Code Releasing of My Recent Work-Derivative Manipulation" /><published>2020-02-18T00:00:00+00:00</published><updated>2020-02-18T00:00:00+00:00</updated><id>http://localhost:4000/blogs/code-releasing</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-18-code-releasing/">0. [IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters](../../my_docs/IMAE_Code_Illustration)
 
 0. [Derivative Manipulation for General Example Weighting](../../my_docs/DM_Code_Illustration)
 
@@ -658,49 +785,4 @@ find . -type f  -exec sed -i 's/Previous string/New string/g' {} +
 
 
 * [Common commands](https://github.com/XinshaoAmosWang/Deep-Metric-Embedding/blob/master/common_git.md)
-{:.message}</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Useful Links on General Study Github: Configuration of local machine to github remote GDrive Useful links on Jekyll, Google AdSense, Markdown. Useful links on Travel &amp;amp; Insurance.</summary></entry><entry><title type="html">arXiv-2020</title><link href="http://localhost:4000/paperlists/2020-02-16-arXiv/" rel="alternate" type="text/html" title="arXiv-2020" /><published>2020-02-16T00:00:00+00:00</published><updated>2020-02-16T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/arXiv</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-02-16-arXiv/">0. [Noisy labels ](#noisy-labels)
-0. [Active Learning](#active-learning)
-0. [Foundation of Deep Learning](#foundation-of-deep-learning)
-
-:+1: means being highly related to my personal research interest. 
-{:.message}
-
-
-## Foundation of Deep Learning 
-* [Neural Bayes: A Generic Parameterization Method for Unsupervised Representation Learning](https://arxiv.org/pdf/2002.09046.pdf)
-
-* [A Simple Framework for Contrastive Learning of Visual Representations](https://arxiv.org/pdf/2002.05709.pdf)
-    * Data augmentation: composition of data augmentations plays a critical role in defining effective predictive tasks;
-    * Auxiliary transformation:  introducing a learnable nonlinear transformation between the representation and the contrastive loss substantially improves the quality of the learned representations;
-    * Larger batch size and more training steps: contrastive learning benefits from larger batch sizes and more training steps compared to supervised learning.
-    * Results: By combining these findings, we are able to considerably outperform previous methods for self-supervised and semi-supervised learning on ImageNet. A linear classifier trained on self-supervised representations learned by SimCLR achieves 76.5% top-1 accuracy.
-
-
-* [Instance Cross Entropy for Deep Metric Learning](https://arxiv.org/pdf/1911.09976.pdf) and its application in SimCLR-A Simple Framework for Contrastive Learning of Visual Representations
-
-    * I am very glad to highlight that:  our proposed ICE is simple and effective, which has also been demonstrated in recent work SimCLR, in the context of self-supervised learning: A Simple Framework for Contrastive Learning of Visual Representations
-
-    * Its loss expression NT-Xent (the normalized temperature-scaled cross entropy loss) is a fantastic application of our recently proposed Instance Cross Entropy for Deep Metric Learning,  in the context of self-supervised learnining. I am very excited about this.
-        * #InstanceCrossEntropy #TemperatureScaling #RepresentationLearning
-    * [Research Gate](https://www.researchgate.net/publication/337485049_Instance_Cross_Entropy_for_Deep_Metric_Learning/comments)
-    * [Open Review](https://openreview.net/forum?id=BJeguTEKDB&amp;noteId=txrrkCL-sXhttps://openreview.net/forum?id=BJeguTEKDB&amp;noteId=txrrkCL-sX)
-    * [Reddit](https://www.reddit.com/r/MachineLearning/comments/f4x1sh/r_instance_cross_entropy_for_deep_metric_learning/)
-* [Unsupervised Embedding Learning via Invariant and Spreading Instance Feature](https://arxiv.org/pdf/1904.03436.pdf)
-    * Unsupervised Embedding Learning via Invariant and SpreadingInstance Feature is even closer, also in the context of self-supervised learning, maximising the agreement over augmentations of one instance.
-    * [ Instance Cross Entropy for Deep Metric Learning](https://arxiv.org/pdf/1911.09976.pdf) is in the context of supervised discriminative representation learning, maximising the agreement over augmentaions of multiple images i.e. a class.
-
-* [ICLR 2019: Learning deep representations by mutual information estimation and maximization](https://xinshaoamoswang.github.io/Papers/AnomalyAndRegularisation/#iclr-2019-learning-deep-representations-by-mutual-information-estimation-and-maximization) 
-{:.message}
-
-
-
-## Noisy labels 
-* [Learning Adaptive Loss for Robust Learning with Noisy Labels](https://arxiv.org/pdf/2002.06482.pdf)
-* [DivideMix: Learning with Noisy Labels as Semi-supervised Learning](https://openreview.net/forum?id=HJgExaVtwr)
-* [Group-Teaching: Learning Robust CNNs From Extremely Noisy Labels](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=9001093)
-* []
-{:.message}
-
-## Active Learning
-* [Learning Active Learning from Data](https://papers.nips.cc/paper/7010-learning-active-learning-from-data.pdf)
-{:.message}</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Noisy labels Active Learning Foundation of Deep Learning</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry></feed>
+{:.message}</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Useful Links on General Study Github: Configuration of local machine to github remote GDrive Useful links on Jekyll, Google AdSense, Markdown. Useful links on Travel &amp;amp; Insurance.</summary></entry></feed>
