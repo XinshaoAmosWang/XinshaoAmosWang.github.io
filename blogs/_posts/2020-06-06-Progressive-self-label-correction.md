@@ -11,6 +11,17 @@ comment: true
 For any specific discussion or potential future collaboration, please feel free to contact me. As a young
 researcher, your interest and star (citation) will mean a lot for me and my collaborators. For source codes, we
 are happy to provide if there is a request conditioned on academic use only and kindness to cite our work.
+<br />
+<br />
+@article{wang2020proselflc,<br />
+  title={ProSelfLC: Progressive Self Label Correction for Training Robust Deep Neural Networks},<br />
+  author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M},<br />
+  journal={arXiv preprint arXiv:2005.03788},<br />
+  year={2020}}
+<br />
+Paper link: [ProSelfLC_arXiv_07062020.pdf](../figsProSelfLC/ProSelfLC_arXiv_07062020.pdf)
+{:.message}
+
 <!-- :+1: means being highly related to my personal research interest. -->
 0. [Storyline](#storyline)
 0. [Open ML Research Questions](#open-ml-research-questions)

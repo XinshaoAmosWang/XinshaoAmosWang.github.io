@@ -1,7 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-06-07T12:56:58+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-06-07T13:08:14+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
 </subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks</title><link href="http://localhost:4000/blogs/2020-06-06-Progressive-self-label-correction/" rel="alternate" type="text/html" title="Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks" /><published>2020-06-06T00:00:00+01:00</published><updated>2020-06-06T00:00:00+01:00</updated><id>http://localhost:4000/blogs/Progressive-self-label-correction</id><content type="html" xml:base="http://localhost:4000/blogs/2020-06-06-Progressive-self-label-correction/">For any specific discussion or potential future collaboration, please feel free to contact me. As a young
 researcher, your interest and star (citation) will mean a lot for me and my collaborators. For source codes, we
 are happy to provide if there is a request conditioned on academic use only and kindness to cite our work.
+&lt;br /&gt;
+&lt;br /&gt;
+@article{wang2020proselflc,&lt;br /&gt;
+  title={ProSelfLC: Progressive Self Label Correction for Training Robust Deep Neural Networks},&lt;br /&gt;
+  author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M},&lt;br /&gt;
+  journal={arXiv preprint arXiv:2005.03788},&lt;br /&gt;
+  year={2020}}
+&lt;br /&gt;
+Paper link: [ProSelfLC_arXiv_07062020.pdf](../figsProSelfLC/ProSelfLC_arXiv_07062020.pdf)
+{:.message}
+
 &lt;!-- :+1: means being highly related to my personal research interest. --&gt;
 0. [Storyline](#storyline)
 0. [Open ML Research Questions](#open-ml-research-questions)
@@ -56,11 +67,11 @@ Target modification includes OR (LS and CP), and LC (Self LC and Non-self LC). &
 Self LC is the most appealing because it requires no extra learners to
 revise learning targets, &lt;br /&gt; 
 being free! &lt;br /&gt;
-![Method Analysis](../figsProSelfLC/methods_grouping.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
+![Method Analysis](/blogs/figsProSelfLC/methods_grouping.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
 {:.figure}
 
 Summary of CCE, LS, CP and LC from the angle of target modification, entropy and KL divergence.
-![Table Method Analysis](../figsProSelfLC/table_method_analysis.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
+![Table Method Analysis](/blogs/figsProSelfLC/table_method_analysis.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
 {:.figure}
 
 
@@ -86,12 +97,12 @@ This is surrounded by minimum entropy regularisation, which has been widely eval
 ## Mathematical Details of ProSelfLC
 
 Beyond semantic class: the similarity structure defined by a label distribution.
-![The definiton of learning targets/labels](../figsProSelfLC/definition_learning_target.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
+![The definiton of learning targets/labels](/blogs/figsProSelfLC/definition_learning_target.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
 {:.figure}
 
 
 Human annotations and predicted label distributions, which should we trust more?
-![Mathematical expression of ProSelfLC](../figsProSelfLC/mathematical_expression.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
+![Mathematical expression of ProSelfLC](/blogs/figsProSelfLC/mathematical_expression.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
 {:.figure}
 
 
@@ -107,13 +118,13 @@ Beyond, when $$\mathbf{p}$$ is highly confident, there are two fine cases: If $$
 
 
 Ablation study on the design of ProSelfLC, where $$\epsilon_{\mathrm{ProSelfLC}}$$ consistently performs the best when multiple metrics are reported. 
-![Ablation study on the design of ProSelfLC](../figsProSelfLC/ablation_study.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
+![Ablation study on the design of ProSelfLC](/blogs/figsProSelfLC/ablation_study.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
 {:.figure}
 
 
 
 Case analysis on the design of ProSelfLC.
-![Case analysis on the design of ProSelfLC](../figsProSelfLC/case_analysis.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
+![Case analysis on the design of ProSelfLC](/blogs/figsProSelfLC/case_analysis.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
 {:.figure}
 
 * **Correct the similarity structure for every data point in all cases.**
@@ -126,7 +137,7 @@ As highlighted in Table 2, only when two conditions are met, we have $$\epsilon_
 $$\argmax\nolimits_j \mathbf{p}(j|\mathbf{x}) \neq \argmax\nolimits_j \mathbf{q}(j|\mathbf{x})$$, then the semantic class in $\mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}$ is changed to be determined by $$\mathbf{p}$$. 
 For example, we can deduce $$\mathbf{p} = [0.95, 0.01, 0.04], \mathbf{q} = [0, 0, 1], \epsilon_{\mathrm{ProSelfLC}}=0.8 \Rightarrow \mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}=(1- \epsilon_{\mathrm{ProSelfLC}})  \mathbf{q}+\epsilon_{\mathrm{ProSelfLC}} \mathbf{p}=[0.76, 0.008, 0.232]$$.  
 Theoretically, ProSelfLC also becomes robust against long time being exposed to the training data, so that early stopping is not required.
-{:.message}</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">For any specific discussion or potential future collaboration, please feel free to contact me. As a young researcher, your interest and star (citation) will mean a lot for me and my collaborators. For source codes, we are happy to provide if there is a request conditioned on academic use only and kindness to cite our work. Storyline Open ML Research Questions Noticeable Findings Literature Review In Self LC, a core question is not well answered Underlying Principle of ProSelfLC Mathematical Details of ProSelfLC Design Reasons of ProSelfLC</summary></entry><entry><title type="html">Paper Summary on Distance Metric, Representation Learning</title><link href="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/" rel="alternate" type="text/html" title="Paper Summary on Distance Metric, Representation Learning" /><published>2020-04-23T00:00:00+01:00</published><updated>2020-04-23T00:00:00+01:00</updated><id>http://localhost:4000/blogs/deep-metric-learning</id><content type="html" xml:base="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/">:+1: means being highly related to my personal research interest. 
+{:.message}</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">For any specific discussion or potential future collaboration, please feel free to contact me. As a young researcher, your interest and star (citation) will mean a lot for me and my collaborators. For source codes, we are happy to provide if there is a request conditioned on academic use only and kindness to cite our work. @article{wang2020proselflc, title={ProSelfLC: Progressive Self Label Correction for Training Robust Deep Neural Networks}, author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M}, journal={arXiv preprint arXiv:2005.03788}, year={2020}} Paper link: ProSelfLC_arXiv_07062020.pdf</summary></entry><entry><title type="html">Paper Summary on Distance Metric, Representation Learning</title><link href="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/" rel="alternate" type="text/html" title="Paper Summary on Distance Metric, Representation Learning" /><published>2020-04-23T00:00:00+01:00</published><updated>2020-04-23T00:00:00+01:00</updated><id>http://localhost:4000/blogs/deep-metric-learning</id><content type="html" xml:base="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/">:+1: means being highly related to my personal research interest. 
 0. [arXiv 2020-On the Fairness of Deep Metric Learning](#arxiv-2020)
 0. [ICCV 2019, CVPR 2020 Deep Metric Learning](#iccv-2019-cvpr-2020-deep-metric-learning)
 0. [CVPR 2019 Deep Metric Learning](#cvpr-2019-deep-metric-learning)

@@ -244,10 +244,20 @@ in <span>Blogs</span>
   </header>
 
   
-    <p>For any specific discussion or potential future collaboration, please feel free to contact me. As a young
+    <p class="message">For any specific discussion or potential future collaboration, please feel free to contact me. As a young
 researcher, your interest and star (citation) will mean a lot for me and my collaborators. For source codes, we
 are happy to provide if there is a request conditioned on academic use only and kindness to cite our work.
-<!-- :+1: means being highly related to my personal research interest. --></p>
+<br>
+<br>
+@article{wang2020proselflc,<br>
+  title={ProSelfLC: Progressive Self Label Correction for Training Robust Deep Neural Networks},<br>
+  author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M},<br>
+  journal={arXiv preprint arXiv:2005.03788},<br>
+  year={2020}}
+<br>
+Paper link: <a href="../figsProSelfLC/ProSelfLC_arXiv_07062020.pdf">ProSelfLC_arXiv_07062020.pdf</a></p>
+
+<!-- :+1: means being highly related to my personal research interest. -->
 <ol class="message">
   <li><a href="#storyline">Storyline</a></li>
   <li><a href="#open-ml-research-questions">Open ML Research Questions</a></li>
@@ -323,15 +333,15 @@ accept, human annotations used for learning supervision may be biased, subjectiv
 Self LC is the most appealing because it requires no extra learners to
 revise learning targets, <br> 
 being free! <br>
-<hy-img root-margin="512px" src="../figsProSelfLC/methods_grouping.png" alt="Method Analysis" class="lead" data-width="800" data-height="100">
-  <noscript><img data-ignore src="../figsProSelfLC/methods_grouping.png" alt="Method Analysis" class="lead" data-width="800" data-height="100"></noscript>
+<hy-img root-margin="512px" src="/blogs/figsProSelfLC/methods_grouping.png" alt="Method Analysis" class="lead" data-width="800" data-height="100">
+  <noscript><img data-ignore src="/blogs/figsProSelfLC/methods_grouping.png" alt="Method Analysis" class="lead" data-width="800" data-height="100"></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
 </hy-img>
 </p>
 
 <p class="figure">Summary of CCE, LS, CP and LC from the angle of target modification, entropy and KL divergence.
-<hy-img root-margin="512px" src="../figsProSelfLC/table_method_analysis.png" alt="Table Method Analysis" class="lead" data-width="800" data-height="100">
-  <noscript><img data-ignore src="../figsProSelfLC/table_method_analysis.png" alt="Table Method Analysis" class="lead" data-width="800" data-height="100"></noscript>
+<hy-img root-margin="512px" src="/blogs/figsProSelfLC/table_method_analysis.png" alt="Table Method Analysis" class="lead" data-width="800" data-height="100">
+  <noscript><img data-ignore src="/blogs/figsProSelfLC/table_method_analysis.png" alt="Table Method Analysis" class="lead" data-width="800" data-height="100"></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
 </hy-img>
 </p>
@@ -357,15 +367,15 @@ This is surrounded by minimum entropy regularisation, which has been widely eval
 <h2 id="mathematical-details-of-proselflc">Mathematical Details of ProSelfLC</h2>
 
 <p class="figure">Beyond semantic class: the similarity structure defined by a label distribution.
-<hy-img root-margin="512px" src="../figsProSelfLC/definition_learning_target.png" alt="The definiton of learning targets/labels" class="lead" data-width="800" data-height="100">
-  <noscript><img data-ignore src="../figsProSelfLC/definition_learning_target.png" alt="The definiton of learning targets/labels" class="lead" data-width="800" data-height="100"></noscript>
+<hy-img root-margin="512px" src="/blogs/figsProSelfLC/definition_learning_target.png" alt="The definiton of learning targets/labels" class="lead" data-width="800" data-height="100">
+  <noscript><img data-ignore src="/blogs/figsProSelfLC/definition_learning_target.png" alt="The definiton of learning targets/labels" class="lead" data-width="800" data-height="100"></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
 </hy-img>
 </p>
 
 <p class="figure">Human annotations and predicted label distributions, which should we trust more?
-<hy-img root-margin="512px" src="../figsProSelfLC/mathematical_expression.png" alt="Mathematical expression of ProSelfLC" class="lead" data-width="800" data-height="100">
-  <noscript><img data-ignore src="../figsProSelfLC/mathematical_expression.png" alt="Mathematical expression of ProSelfLC" class="lead" data-width="800" data-height="100"></noscript>
+<hy-img root-margin="512px" src="/blogs/figsProSelfLC/mathematical_expression.png" alt="Mathematical expression of ProSelfLC" class="lead" data-width="800" data-height="100">
+  <noscript><img data-ignore src="/blogs/figsProSelfLC/mathematical_expression.png" alt="Mathematical expression of ProSelfLC" class="lead" data-width="800" data-height="100"></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
 </hy-img>
 </p>
@@ -388,15 +398,15 @@ Beyond, when <code class="MathJax_Preview">\mathbf{p}</code><script type="math/t
 </ul>
 
 <p class="figure">Ablation study on the design of ProSelfLC, where <code class="MathJax_Preview">\epsilon_{\mathrm{ProSelfLC}}</code><script type="math/tex">\epsilon_{\mathrm{ProSelfLC}}</script> consistently performs the best when multiple metrics are reported. 
-<hy-img root-margin="512px" src="../figsProSelfLC/ablation_study.png" alt="Ablation study on the design of ProSelfLC" class="lead" data-width="800" data-height="100">
-  <noscript><img data-ignore src="../figsProSelfLC/ablation_study.png" alt="Ablation study on the design of ProSelfLC" class="lead" data-width="800" data-height="100"></noscript>
+<hy-img root-margin="512px" src="/blogs/figsProSelfLC/ablation_study.png" alt="Ablation study on the design of ProSelfLC" class="lead" data-width="800" data-height="100">
+  <noscript><img data-ignore src="/blogs/figsProSelfLC/ablation_study.png" alt="Ablation study on the design of ProSelfLC" class="lead" data-width="800" data-height="100"></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
 </hy-img>
 </p>
 
 <p class="figure">Case analysis on the design of ProSelfLC.
-<hy-img root-margin="512px" src="../figsProSelfLC/case_analysis.png" alt="Case analysis on the design of ProSelfLC" class="lead" data-width="800" data-height="100">
-  <noscript><img data-ignore src="../figsProSelfLC/case_analysis.png" alt="Case analysis on the design of ProSelfLC" class="lead" data-width="800" data-height="100"></noscript>
+<hy-img root-margin="512px" src="/blogs/figsProSelfLC/case_analysis.png" alt="Case analysis on the design of ProSelfLC" class="lead" data-width="800" data-height="100">
+  <noscript><img data-ignore src="/blogs/figsProSelfLC/case_analysis.png" alt="Case analysis on the design of ProSelfLC" class="lead" data-width="800" data-height="100"></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
 </hy-img>
 </p>
