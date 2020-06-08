@@ -47,11 +47,18 @@ List of Content
         * We propose to redefine a more meaningful minimum-entropy status by exploiting the knowledge of a learner itself, which shows promising results.  \\
         **Label correction => Meaningful low-entropy status => good generalisation**.
 
-* We highlight **ProSelfLC's Underlying Principle is Contradictory with: Maximum-Entropy Learning, Confidence Penalty and Label Smoothing**, which are popular recently. 
+* We highlight **ProSelfLC's Underlying Principle is ''Contradictory'' with: Maximum-Entropy Learning, Confidence Penalty and Label Smoothing**, which are popular recently. 
 Then we wish our community think critically about two principles: 
     * **Rewarding a correct low-entropy status** (ProSelfLC)   
     * **Penalising a non-meaningful low-entropy status** (CCE+LS, or CCE+CP)
     * In our experiments: **ProSelfLC > (CCE+LS, or CCE+CP) > CCE**
+    * Or not contradictory, instead the angle differs: 
+        * CCE fits non-meaningful patterns => LS/CP penalises the fitting
+        * CCE fits non-meaningful patterns => ProSelfLC first corrects the patterns => then fits
+        
+* Why CCE fits non-meaningful patterns? 
+    * [2019-Derivative manipulation for general example weighting](https://arxiv.org/pdf/1905.11233.pdf)
+    * [2019-IMAE for noise-robust learning: Mean absolute error does not treat examples equally and gradient magnitude’s variance matters.](https://arxiv.org/pdf/1903.12141.pdf)
 {:.message}
 
 ## Open ML Research Questions
