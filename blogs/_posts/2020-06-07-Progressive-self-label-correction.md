@@ -46,6 +46,12 @@ List of Content
         **CCE => Non-meaningful minimum-entropy status => poor generalisation**.
         * We propose to redefine a more meaningful minimum-entropy status by exploiting the knowledge of a learner itself, which shows promising results.  \\
         **Label correction => Meaningful low-entropy status => good generalisation**.
+
+* We highlight **ProSelfLC's Underlying Principle is Contradictory with: Maximum-Entropy Learning, Confidence Penalty and Label Smoothing**, which are popular recently. 
+Then we wish our community think critically about two principles: 
+    * **Rewarding a correct low-entropy status** (ProSelfLC)   
+    * **Penalising a non-meaningful low-entropy status** (CCE+LS, or CCE+CP)
+    * In our experiments: **ProSelfLC > (CCE+LS, or CCE+CP) > CCE**
 {:.message}
 
 ## Open ML Research Questions
