@@ -2,15 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/blogs/</loc>
-<lastmod>2020-06-08T10:04:37+01:00</lastmod>
+<lastmod>2020-06-08T12:06:10+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/paperlists/</loc>
-<lastmod>2020-06-08T10:04:37+01:00</lastmod>
+<lastmod>2020-06-08T12:06:10+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/projects/</loc>
-<lastmod>2020-06-08T10:04:37+01:00</lastmod>
+<lastmod>2020-06-08T12:06:10+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/paperlists/2017-12-30-NeurIPS/</loc>
@@ -251,11 +251,11 @@
 </url>
 <url>
 <loc>http://localhost:4000/Resume/CV_XinshaoWang.pdf</loc>
-<lastmod>2020-05-11T18:26:53+01:00</lastmod>
+<lastmod>2020-06-08T12:05:53+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/Resume/CV_XinshaoWang_V09.pdf</loc>
-<lastmod>2020-05-11T18:26:29+01:00</lastmod>
+<lastmod>2020-06-08T12:04:33+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/Resume.pdf</loc>
