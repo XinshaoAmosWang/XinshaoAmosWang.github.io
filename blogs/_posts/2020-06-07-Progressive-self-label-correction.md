@@ -56,7 +56,7 @@ Then we wish our community think critically about two principles:
         * CCE fits non-meaningful patterns => LS/CP penalises the fitting
         * CCE fits non-meaningful patterns => ProSelfLC first corrects the patterns => then fits
         
-* Why CCE fits non-meaningful patterns? 
+* Why does CCE fit non-meaningful patterns? 
     * [2019-Derivative manipulation for general example weighting](https://arxiv.org/pdf/1905.11233.pdf)
     * [2019-IMAE for noise-robust learning: Mean absolute error does not treat examples equally and gradient magnitude’s variance matters.](https://arxiv.org/pdf/1903.12141.pdf)
 {:.message}
