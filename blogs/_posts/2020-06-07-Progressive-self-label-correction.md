@@ -52,9 +52,9 @@ Then we wish our community think critically about two principles:
     * **Rewarding a correct low-entropy status** (ProSelfLC)   
     * **Penalising a non-meaningful low-entropy status** (CCE+LS, or CCE+CP)
     * In our experiments: **ProSelfLC > (CCE+LS, or CCE+CP) > CCE**
-    * Or not contradictory, instead the angle differs: 
-        * CCE fits non-meaningful patterns => LS/CP penalises the fitting
-        * CCE fits non-meaningful patterns => ProSelfLC first corrects the patterns => then fits
+    * Being contradictory in entropy, both help but their angles differ: 
+        * CCE fits non-meaningful patterns => LS and CP penalise such fitting;
+        * CCE fits non-meaningful patterns => ProSelfLC first corrects them => then fits. 
         
 * Why does CCE fit non-meaningful patterns? 
     * [2019-Derivative manipulation for general example weighting](https://arxiv.org/pdf/1905.11233.pdf)
