@@ -1,9 +1,10 @@
 
 # IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude's Variance Matters
+Following work: [Derivative Manipulation for General Example Weighting](https://arxiv.org/pdf/1905.11233.pdf)
 
 ## Downloading Link
 
-[https://www.dropbox.com/sh/vb48gq7rugeugtm/AAACFbUSqAc8XNmVr_PniUena?dl=0](https://www.dropbox.com/sh/vb48gq7rugeugtm/AAACFbUSqAc8XNmVr_PniUena?dl=0)
+[https://xinshaoamoswang.github.io/blogs/2020-02-18-code-releasing/](https://xinshaoamoswang.github.io/blogs/2020-02-18-code-releasing/)
 
 ## Command for Visualising the Repository/Directory Tree Structure
 
