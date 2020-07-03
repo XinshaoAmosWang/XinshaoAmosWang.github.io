@@ -20,6 +20,8 @@ Conditions, e.g., Noisy Data and Sample Imbalance).
 
 ## Featured Research Delivering: 
 
+* [Open discussion on deep robustness, please and thanks!](https://www.reddit.com/r/MachineLearning/comments/hjlayq/r_open_discussion_on_deep_robustness_please/)
+
 * [Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks](../blogs/2020-06-07-Progressive-self-label-correction)
 
 * [Code Releasing of Recent Work--Derivative Manipulation and IMAE](../blogs/2020-06-14-code-releasing)
