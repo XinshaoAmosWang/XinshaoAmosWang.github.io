@@ -37,20 +37,21 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
   
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Foundations of Deep Learning, Machine Learning | Xinshao (Amos) Wang</title>
+<title>Paper Summary on Noise, Anomalies, Adversaries, Robust Learning, Generalization | Xinshao (Amos) Wang</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Foundations of Deep Learning, Machine Learning" />
+<meta property="og:title" content="Paper Summary on Noise, Anomalies, Adversaries, Robust Learning, Generalization" />
 <meta name="author" content="Xinshao (Amos) Wang" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc" />
 <meta property="og:description" content="“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc" />
-<link rel="canonical" href="http://localhost:4000/blogs/2019-12-12-papers-summary-reweighting/" />
-<meta property="og:url" content="http://localhost:4000/blogs/2019-12-12-papers-summary-reweighting/" />
+<link rel="canonical" href="http://localhost:4000/blogs/2019-10-01-papers-summary-noise/" />
+<meta property="og:url" content="http://localhost:4000/blogs/2019-10-01-papers-summary-noise/" />
 <meta property="og:site_name" content="Xinshao (Amos) Wang" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/steve-harvey.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-12-12T00:00:00+00:00" />
+<meta property="article:published_time" content="2019-10-01T00:00:00+01:00" />
 <script type="application/ld+json">
-{"description":"“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc","author":{"@type":"Person","name":"Xinshao (Amos) Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2019-12-12-papers-summary-reweighting/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao (Amos) Wang"},"headline":"Foundations of Deep Learning, Machine Learning","dateModified":"2019-12-12T00:00:00+00:00","datePublished":"2019-12-12T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2019-12-12-papers-summary-reweighting/"},"@context":"https://schema.org"}</script>
+{"description":"“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc","author":{"@type":"Person","name":"Xinshao (Amos) Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2019-10-01-papers-summary-noise/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao (Amos) Wang"},"image":"http://localhost:4000/assets/img/blog/steve-harvey.jpg","headline":"Paper Summary on Noise, Anomalies, Adversaries, Robust Learning, Generalization","dateModified":"2019-10-01T00:00:00+01:00","datePublished":"2019-10-01T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2019-10-01-papers-summary-noise/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -80,7 +81,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-<link rel="alternate" href="http://localhost:4000/blogs/2019-12-12-papers-summary-reweighting/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/blogs/2019-10-01-papers-summary-noise/" hreflang="en">
 
 <link rel="shortcut icon" href="/assets/icons/icon.png">
 <link rel="apple-touch-icon" href="/assets/icons/icon.png">
@@ -190,17 +191,17 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-<article id="post-blogs-papers-summary-reweighting" class="page post mb6" role="article">
+<article id="post-blogs-papers-summary-noise" class="page post mb6" role="article">
   <header>
     <h1 class="post-title">
       
-        Foundations of Deep Learning, Machine Learning
+        Paper Summary on Noise, Anomalies, Adversaries, Robust Learning, Generalization
       
     </h1>
 
     <p class="post-date heading">
       
-      <time datetime="2019-12-12T00:00:00+00:00">12 Dec 2019</time>
+      <time datetime="2019-10-01T00:00:00+01:00">01 Oct 2019</time>
       
       
       
@@ -215,7 +216,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-in <span>Blogs</span>
+in <a href="/blogs/" class="flip-title">Blogs</a>
 
       
 
@@ -233,12 +234,27 @@ in <span>Blogs</span>
 
     
     
+      <div class="img lead sixteen-nine">
+        
+
+
+  <hy-img src="/assets/img/blog/steve-harvey.jpg" alt="Paper Summary on Noise, Anomalies, Adversaries, Robust Learning, Generalization" root-margin="512px">
+    <noscript><img data-ignore src="/assets/img/blog/steve-harvey.jpg" alt="Paper Summary on Noise, Anomalies, Adversaries, Robust Learning, Generalization"></noscript>
+    <span class="loading" slot="loading" hidden>
+      <span class="icon-cog"></span>
+    </span>
+  </hy-img>
+
+
+      </div>
+      
+    
 
     
 
 
 
-  <div class="hr pb0"></div>
+  
 
 
   </header>
@@ -246,99 +262,129 @@ in <span>Blogs</span>
   
     <p class="message"><img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> means being highly related to my personal research interest.</p>
 
-<h2 id="iccv-2019-robustness">ICCV 2019: Robustness</h2>
+<h2 id="iccv-2019-on-label-noise-">ICCV 2019 on label noise, …</h2>
 <ul class="message">
-  <li><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Gowal_Scalable_Verified_Training_for_Provably_Robust_Image_Classification_ICCV_2019_paper.pdf">Scalable Verified Training for Provably Robust Image Classification</a></li>
-  <li><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Chen_Improving_Adversarial_Robustness_via_Guided_Complement_Entropy_ICCV_2019_paper.pdf">Improving Adversarial Robustness via Guided Complement Entropy</a></li>
-  <li><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Bilateral_Adversarial_Training_Towards_Fast_Training_of_More_Robust_Models_ICCV_2019_paper.pdf">Bilateral Adversarial Training: Towards Fast Training of More Robust Models
-Against Adversarial Attacks</a></li>
-  <li><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Peterson_Human_Uncertainty_Makes_Classification_More_Robust_ICCV_2019_paper.pdf">Human uncertainty makes classification more robust</a></li>
-  <li><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Yamaguchi_Subspace_Structure-Aware_Spectral_Clustering_for_Robust_Subspace_Clustering_ICCV_2019_paper.pdf">Subspace Structure-aware Spectral Clustering for Robust Subspace Clustering</a></li>
-</ul>
-
-<h2 id="1-neurips-2019-learning-data-manipulation-for-augmentation-and-weighting">
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="https://papers.nips.cc/paper/9706-learning-data-manipulation-for-augmentation-and-weighting.pdf">NeurIPS 2019-Learning Data Manipulation for Augmentation and Weighting</a>
-</h2>
-<ul class="message">
-  <li>Our
-approach builds upon a recent connection of supervised learning and reinforcement
-learning (RL), and adapts an off-the-shelf reward learning algorithm from RL for
-joint data manipulation learning and model training. Different parameterization
-of the “data reward” function instantiates different manipulation schemes.</li>
-  <li>We
-showcase data augmentation that learns a text transformation network, and data
-weighting that dynamically adapts the data sample importance. Experiments show
-the resulting algorithms significantly improve the image and text classification
-performance in low data regime and class-imbalance problems.</li>
-</ul>
-
-<h2 id="1-iclr-2019-critical-learning-periods-in-deep-networks">
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="https://openreview.net/forum?id=BkeStsCcKQ">ICLR 2019-Critical Learning Periods in Deep Networks</a>
-</h2>
-<ul class="message">
-  <li>Counterintuitively, information rises rapidly in the early phases of
-training, and then decreases, preventing redistribution of information resources in a phenomenon we refer to as a loss of “Information Plasticity”</li>
-  <li>Our analysis suggests that the
-first few epochs are critical for the creation of strong connections that are optimal relative
-to the input data distribution. Once such strong connections are created, they do not appear
-to change during additional training.</li>
-  <li>The initial learning transient, under-scrutinized compared to asymptotic behavior, plays a key role in determining
-the outcome of the training process.</li>
-  <li>The early transient is critical in determining the
-final solution of the optimization associated with training an artificial neural network. In particular,
-the effects of sensory deficits during a critical period cannot be overcome, no matter how much
-additional training is performed.</li>
-  <li>Our experiments show that, rather than helpful, pre-training can be detrimental, even if the
-tasks are similar (e.g., same labels, slightly blurred images).</li>
-</ul>
-
-<h2 id="1-neurips-2019-time-matters-in-regularizing-deep-networks-weight-decay-and-data-augmentation-affect-early-learning-dynamics-matter-little-near-convergence">
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="https://papers.nips.cc/paper/9252-time-matters-in-regularizing-deep-networks-weight-decay-and-data-augmentation-affect-early-learning-dynamics-matter-little-near-convergence.pdf">NeurIPS 2019-Time Matters in Regularizing Deep Networks: Weight Decay and Data Augmentation Affect Early Learning Dynamics, Matter Little Near Convergence</a>
-</h2>
-<ul class="message">
-  <li>Regularization is typically understood as improving generalization by altering
-the landscape of local extrema to which the model eventually converges. Deep
-neural networks (DNNs), however, challenge this view: We show that removing
-regularization after an initial transient period has little effect on generalization,
-even if the final loss landscape is the same as if there had been no regularization.</li>
-  <li>In some cases, generalization even improves after interrupting regularization.</li>
-  <li>Conversely, if regularization is applied only after the initial transient, it has no effect
-on the final solution, whose generalization gap is as bad as if regularization never
-happened.</li>
-  <li>What matters for training deep networks is not just
-whether or how, but when to regularize.</li>
-  <li>The phenomena we observe are manifest
-in different datasets (CIFAR-10, CIFAR-100, SVHN, ImageNet), different architectures (ResNet-18, All-CNN), different regularization methods (weight decay, data
-augmentation, mixup), different learning rate schedules (exponential, piece-wise
-constant). They collectively suggest that there is a “critical period” for regularizing
-deep networks that is decisive of the final performance. More analysis should,
-therefore, focus on the transient rather than asymptotic behavior of learning.</li>
   <li>
-<strong>Imposing regularization all along, however, causes over-smoothing</strong>, whereas the ground-truth disparity field is typically discontinuous. So, <strong>regularization is introduced initially and then removed to capture fine details.</strong>
-</li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Han_Deep_Self-Learning_From_Noisy_Labels_ICCV_2019_paper.pdf">Deep Self-Learning From Noisy Labels</a>: The proposed SMP trains in an iterative manner which
+contains two phases: the first phase is to train a network
+with <strong>the original noisy label and corrected label</strong> generated
+in the second phase.</li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Co-Mining_Deep_Face_Recognition_With_Noisy_Labels_ICCV_2019_paper.pdf">Co-Mining: Deep Face Recognition With Noisy Labels</a>: We propose a novel <strong>co-mining</strong> framework, which employs two peer networks to <strong>detect the noisy faces,
+exchanges the high-confidence clean faces and reweights the clean faces</strong> in a mini-batch fashion.</li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Kim_NLNL_Negative_Learning_for_Noisy_Labels_ICCV_2019_paper.pdf">NLNL: Negative Learning for Noisy Labels</a>: Input image belongs to this label–Positive Learning; Negative Learning (NL)–CNNs are trained using a complementary label as in “input image does not belong to this complementary label.”</li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Symmetric_Cross_Entropy_for_Robust_Learning_With_Noisy_Labels_ICCV_2019_paper.pdf">Symmetric Cross Entropy for Robust Learning With Noisy Labels</a>: Already compared in our method.</li>
+  <li>
+<a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Huang_O2U-Net_A_Simple_Noisy_Label_Detection_Approach_for_Deep_Neural_ICCV_2019_paper.pdf">O2U-Net: A Simple Noisy Label Detection Approach for Deep Neural Networks</a>: It only requires adjusting the hyper-parameters of the deep network to make its status transfer from overfitting to underfitting (O2U) cyclically. The losses of each sample are recorded during iterations. The higher the normalized average loss of a sample, the higher the probability of being noisy labels.</li>
 </ul>
 
-<h2 id="neurips-2019-inherent-weight-normalization-in-stochastic-neural-networks"><a href="https://papers.nips.cc/paper/8591-inherent-weight-normalization-in-stochastic-neural-networks">NeurIPS 2019-Inherent Weight Normalization in Stochastic Neural Networks</a></h2>
-<p class="message"><hy-img root-margin="512px" src="/imgs/Inherent_weight_normalisation.png" alt="Full-width image" class="lead" data-width="200" data-height="100">
-  <noscript><img data-ignore src="/imgs/Inherent_weight_normalisation.png" alt="Full-width image" class="lead" data-width="200" data-height="100"></noscript>
-  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
-</hy-img>
-</p>
+<h2 id="1-neurips-2019-meta-weight-net-learning-an-explicit-mapping-for-sample-weighting">
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="https://papers.nips.cc/paper/8467-meta-weight-net-learning-an-explicit-mapping-for-sample-weighting">NeurIPS 2019-Meta-Weight-Net: Learning an Explicit Mapping For Sample Weighting</a>
+</h2>
+<ul class="message">
+  <li>Targted problems: (1) Corrupted Labels (2) Class imbalance</li>
+  <li>Methodology: Guided by <strong>a small amount of unbiased meta-data</strong>,  to learn an explicit weighting layer which takes training losses as input and outputs examples’ weights.</li>
+  <li>Code: <a href="https://github.com/xjtushujun/meta-weight-net">https://github.com/xjtushujun/meta-weight-net</a>
+</li>
+  <li>
+<strong>Introduciton: Why are the targeted problems important?</strong> In practice, however, such biased training data are commonly encountered. For instance, practically
+collected training samples always contain corrupted labels [10, 11, 12, 13, 14, 15, 16, 17]. A typical
+example is a dataset roughly collected from a crowdsourcing system [18] or search engines [19, 20],
+which would possibly yield a large amount of noisy labels. Another popular type of biased training
+data is those with class imbalance. Real-world datasets are usually depicted as skewed distributions,
+with a long-tailed configuration. A few classes account for most of the data, while most classes are
+under-represented. Effective learning with these biased training data, which is regarded to be biased
+from evaluation/test ones, is thus an important while challenging issue in machine learning [1, 21].</li>
+  <li>There exist <strong>two entirely contradictive
+ideas for constructing such a loss-weight mapping:</strong>
+    <ul>
+      <li>
+<strong>Emphasise on harder ones:</strong> Enforce the learning to more emphasize samples with larger loss values
+since they are more like to be uncertain hard samples located on the classification boundary. Typical
+methods of this category include AdaBoost [22, 23], hard negative mining [24] and focal loss [25]. <strong>This sample weighting manner is known to be necessary for class imbalance problems, since it can
+prioritize the minority class with relatively higher training losses.</strong>
+</li>
+      <li>
+<strong>Emphasise on easier ones:</strong> The rationality
+lies on that these samples are more likely to be high-confident ones with clean labels. Typical methods
+include self-paced learning(SPL) [26], iterative reweighting [27, 17] and multiple variants [28, 29, 30].
+This weighting strategy has been especially used in noisy label cases, since it inclines to suppress the
+effects of samples with extremely large loss values, possibly with corrupted incorrect labels.</li>
+      <li>
+<strong>Deficiencies:</strong>
+        <ul>
+          <li>How about the case that the training set is both imbalanced and
+noisy.</li>
+          <li>They inevitably involve hyper-parameters, to be manually preset or tuned by cross-validation.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Experiments of this work:
+    <ul>
+      <li>Class Imbalance Experiments
+        <ul>
+          <li>ResNet-32 on  long-tailed CIFAR-10 and CIFAR-100.</li>
+        </ul>
+      </li>
+      <li>Corrupted Label Experiments on CIFAR-10 and CIFAR-100
+        <ul>
+          <li>WRN-28-10 with varying noise rates under uniform noise.</li>
+          <li>ResNet-32 with varying noise rates under flip noise - non-uniform noise.</li>
+        </ul>
+      </li>
+      <li>Real-world data-Clothing 1M with ResNet-50
+        <ul>
+          <li>We use the 7k clean data as the meta dataset.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Problems of this work:
+    <ul>
+      <li>For <strong>the case where the training set is both imbalanced and noisy</strong>, the authors mentioned in the introduction section that conventional methods cannot address this case. 
+  However, there is no experiment to demontrate that this method works.</li>
+      <li>Conventional methods inevitably involve hyper-parameters to tune by cross-validation. 
+  However, for the proposed method, <strong>unbiased meta-data is required, which is a more expensive hyper-factor</strong> in practice. 
+  Tuning hyper-parameters is cheaper than collecting unbiased meta-data for training the weighting function.</li>
+    </ul>
+  </li>
+</ul>
 
-<h2 id="neurips-2019-weight-agnostic-neural-networks"><a href="https://papers.nips.cc/paper/8777-weight-agnostic-neural-networks.pdf">NeurIPS 2019-Weight Agnostic Neural Networks</a></h2>
-<p class="message">Not all neural network architectures are created equal, some perform much better
-than others for certain tasks. But how important are the weight parameters of a
-neural network compared to its architecture? In this work, we question to what
-extent neural network architectures alone, without learning any weight parameters,
-can encode solutions for a given task. We propose a search method for neural
-network architectures that can already perform a task without any explicit weight
-training. To evaluate these networks, we populate the connections with a single
-shared weight parameter sampled from a uniform random distribution, and measure
-the expected performance. We demonstrate that our method can find minimal neural
-network architectures that can perform several reinforcement learning tasks without
-weight training. On a supervised learning domain, we find network architectures
-that achieve much higher than chance accuracy on MNIST using random weights.
-Interactive version of this paper at <a href="https://weightagnostic.github.io/">https://weightagnostic.github.io/</a></p>
+<h2 id="1-icml-2019-better-generalization-with-less-data-using-robust-gradient-descent">
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="http://proceedings.mlr.press/v97/holland19a/holland19a.pdf">ICML 2019-Better generalization with less data using robust gradient descent</a>
+</h2>
+
+<h2 id="gan-adversary-examples-adversary-machine-learning"><a href="/my_docs/adversary/">GAN, Adversary Examples, Adversary Machine Learning</a></h2>
+
+<h2 id="label-noise"><a href="/my_docs/Label-Noise/">Label Noise</a></h2>
+<ul class="message">
+  <li>NeurIPS 2019-L_DMI: A Novel Information-theoretic Loss Function for Training Deep Nets Robust to Label Noise</li>
+  <li>NeurIPS 2019-Are Anchor Points Really Indispensable in Label-Noise Learning?</li>
+  <li>NeurIPS 2019-Combinatorial Inference against Label Noise</li>
+</ul>
+
+<h2 id="1--neurips-2019-noise-tolerant-fair-classification">
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20">  <a href="https://arxiv.org/abs/1901.10837">NeurIPS 2019-Noise-tolerant fair classification</a>
+</h2>
+<p class="message"><strong>NOTE</strong>: Existing work on the problem operates <strong>under the assumption that the sensitive feature available in one’s training sample is perfectly reliable.</strong> This assumption may be violated in many real-world cases: for example, respondents to a survey may choose to conceal or obfuscate their group identity out of fear of potential discrimination. This poses the question of whether one can still learn fair classifiers given noisy sensitive features.</p>
+
+<h2 id="neurips-2019-neural-networks-grown-and-self-organized-by-noise"><a href="https://arxiv.org/abs/1906.01039">NeurIPS 2019-Neural networks grown and self-organized by noise</a></h2>
+<p class="message"><strong>NOTE</strong>: <strong>Living neural networks</strong> emerge through a process of growth and self-organization that begins with a single cell and results in a brain, an organized and functional computational device. Artificial neural networks, however, rely on human-designed, hand-programmed architectures for their remarkable performance. <strong>Can we develop artificial computational devices that can grow and self-organize without human intervention?</strong> In this paper, we propose a biologically inspired developmental algorithm that can <strong>‘grow’ a functional, layered neural network from a single initial cell.</strong> The algorithm organizes inter-layer connections to construct a convolutional pooling layer, a key constituent of convolutional neural networks (CNN’s). Our approach is inspired by the mechanisms employed by the early visual system to wire the retina to the lateral geniculate nucleus (LGN), days before animals open their eyes. The key ingredients for robust self-organization are an emergent spontaneous spatiotemporal activity wave in the first layer and a local learning rule in the second layer that ‘learns’ the underlying activity pattern in the first layer. The algorithm is adaptable to a wide-range of input-layer geometries, robust to malfunctioning units in the first layer, and so can be used to <strong>successfully grow and self-organize pooling architectures of different pool-sizes and shapes.</strong> The algorithm provides a primitive procedure for constructing layered neural networks through growth and self-organization. Broadly, our work shows that biologically inspired developmental algorithms can be applied to autonomously grow functional ‘brains’ in-silico.</p>
+
+<h2 id="stochastic-gradient-noise"><a href="/my_docs/Stochastic-Gradient-Noise/">Stochastic-Gradient-Noise</a></h2>
+<ul class="message">
+  <li>ICML 2019-A Tail-Index Analysis of Stochastic Gradient Noise in Deep Neural Networks</li>
+  <li>NeurIPS 2019-First Exit Time Analysis of Stochastic Gradient Descent Under Heavy-Tailed Gradient Noise</li>
+</ul>
+
+<h2 id="denoiser-noise-removal"><a href="/my_docs/Denoiser/">Denoiser, Noise Removal</a></h2>
+<ul class="message">
+  <li>NeurIPS 2019-Extending Stein’s unbiased risk estimator to train deep denoisers with correlated pairs of noisy images</li>
+  <li>NeurIPS 2019-Variational Denoising Network: Toward Blind Noise Modeling and Removal</li>
+</ul>
 
   
 </article>
@@ -388,13 +434,13 @@ Interactive version of this paper at <a href="https://weightagnostic.github.io/"
 
 <div class="navigator">
     
-        <span style="float:left"><a href="/projects/2019-10-10-person-reidentification/">« Person Re-identification</a>
-          · <a href="https://xinshaoamoswang.github.io/projects/2019-10-10-person-reidentification/#disqus_thread"></a>
+        <span style="float:left"><a href="/blogs/2019-10-01-Research-GR/">« An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies</a>
+          · <a href="https://xinshaoamoswang.github.io/blogs/2019-10-01-Research-GR/#disqus_thread"></a>
         </span>
     
     
-        <span style="float:right"><a href="/paperlists/2019-12-29-CVPR/">CVPR-2019 »</a>
-          · <a href="https://xinshaoamoswang.github.io/paperlists/2019-12-29-CVPR/#disqus_thread"></a>
+        <span style="float:right"><a href="/projects/2019-10-01-PhD-3rd-start/">Start 3rd year (the final year of my PhD) »</a>
+          · <a href="https://xinshaoamoswang.github.io/projects/2019-10-01-PhD-3rd-start/#disqus_thread"></a>
         </span>
     
 </div>
@@ -412,8 +458,8 @@ Interactive version of this paper at <a href="https://weightagnostic.github.io/"
 
 <script>
     var disqus_config = function () {
-            this.page.url = "https://xinshaoamoswang.github.io/blogs/2019-12-12-papers-summary-reweighting/";
-            this.page.identifier = "/blogs/papers-summary-reweighting";
+            this.page.url = "https://xinshaoamoswang.github.io/blogs/2019-10-01-papers-summary-noise/";
+            this.page.identifier = "/blogs/papers-summary-noise";
         }; 
 
     (function() { 

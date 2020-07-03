@@ -37,20 +37,21 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
   
 <!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Learning Bayesian Deep Learning, Uncertainty &amp; Variational Techniques | Xinshao (Amos) Wang</title>
+<title>An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies | Xinshao (Amos) Wang</title>
 <meta name="generator" content="Jekyll v3.8.6" />
-<meta property="og:title" content="Learning Bayesian Deep Learning, Uncertainty &amp; Variational Techniques" />
+<meta property="og:title" content="An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies" />
 <meta name="author" content="Xinshao (Amos) Wang" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc" />
 <meta property="og:description" content="“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc" />
-<link rel="canonical" href="http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/" />
-<meta property="og:url" content="http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/" />
+<link rel="canonical" href="http://localhost:4000/blogs/2019-10-01-Research-GR/" />
+<meta property="og:url" content="http://localhost:4000/blogs/2019-10-01-Research-GR/" />
 <meta property="og:site_name" content="Xinshao (Amos) Wang" />
+<meta property="og:image" content="http://localhost:4000/assets/img/blog/steve-harvey.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-02-21T00:00:00+00:00" />
+<meta property="article:published_time" content="2019-10-01T00:00:00+01:00" />
 <script type="application/ld+json">
-{"description":"“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc","author":{"@type":"Person","name":"Xinshao (Amos) Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao (Amos) Wang"},"headline":"Learning Bayesian Deep Learning, Uncertainty &amp; Variational Techniques","dateModified":"2020-02-21T00:00:00+00:00","datePublished":"2020-02-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/"},"@context":"https://schema.org"}</script>
+{"description":"“Stay Hungry. Stay Foolish. – Steve Jobs 2005”. ML/DL/AI Research with applications to CV/NLP, etc","author":{"@type":"Person","name":"Xinshao (Amos) Wang"},"@type":"BlogPosting","url":"http://localhost:4000/blogs/2019-10-01-Research-GR/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/icons/android-chrome-192x192.png"},"name":"Xinshao (Amos) Wang"},"image":"http://localhost:4000/assets/img/blog/steve-harvey.jpg","headline":"An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies","dateModified":"2019-10-01T00:00:00+01:00","datePublished":"2019-10-01T00:00:00+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blogs/2019-10-01-Research-GR/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -80,7 +81,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-<link rel="alternate" href="http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/blogs/2019-10-01-Research-GR/" hreflang="en">
 
 <link rel="shortcut icon" href="/assets/icons/icon.png">
 <link rel="apple-touch-icon" href="/assets/icons/icon.png">
@@ -206,17 +207,17 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-<article id="post-blogs-learn-bayesian-DL" class="page post mb6" role="article">
+<article id="post-blogs-Research-GR" class="page post mb6" role="article">
   <header>
     <h1 class="post-title">
       
-        Learning Bayesian Deep Learning, Uncertainty & Variational Techniques
+        An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies
       
     </h1>
 
     <p class="post-date heading">
       
-      <time datetime="2020-02-21T00:00:00+00:00">21 Feb 2020</time>
+      <time datetime="2019-10-01T00:00:00+01:00">01 Oct 2019</time>
       
       
       
@@ -231,7 +232,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 
 
 
-in <span>Blogs</span>
+in <a href="/blogs/" class="flip-title">Blogs</a>
 
       
 
@@ -249,74 +250,251 @@ in <span>Blogs</span>
 
     
     
+      <div class="img lead sixteen-nine">
+        
+
+
+  <hy-img
+    
+    src="/assets/img/blog/steve-harvey.jpg"
+    
+    alt="An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies"
+  
+    
+    root-margin="512px"
+  >
+    <noscript><img data-ignore 
+    src="/assets/img/blog/steve-harvey.jpg"
+    
+    alt="An Extremely Simple and Principled Solution for Robust Learning under Arbitrary Anomalies"
+  /></noscript>
+    <span class="loading" slot="loading" hidden>
+      <span class="icon-cog"></span>
+    </span>
+  </hy-img>
+
+
+      </div>
+      
+    
 
     
 
 
 
-  <div class="hr pb0"></div>
+  
 
 
   </header>
 
   
-    <ol class="message">
-  <li><a href="#blogs">Blogs</a></li>
-  <li><a href="#papers-on-theories">Papers on Theories</a></li>
-  <li><a href="#papers-on-applications">Papers on Applications</a></li>
+    <ol>
+  <li>
+    <p><a href="https://github.com/XinshaoAmosWang/DerivativeManipulation">Project page:Derivative Manipulation</a></p>
+  </li>
+  <li>
+    <p>General applicability: Label noise (semantic noise), outliers, heavy perceptual data noise, etc.</p>
+  </li>
 </ol>
 
-<h3 id="what-am-i-working-on-now-discussions-are-welcome">What am I working on now? Discussions are Welcome!</h3>
-<ul class="message">
+<p><strong>It is reasonable to assume that there is semantic noise in large-scale training datasets</strong>:</p>
+<ul>
+  <li>Class labels may be missing.</li>
+  <li>The labelling process may be subjective.</li>
+</ul>
+
+<p>Label noise is one of the most explicit cases where some observations and their labels are not matched in the training data. In this case, it is quite crucial to make your models learn meaningful patterns instead of errors.</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<ul>
   <li>
-    <p><a href="../2020-02-18-code-releasing">Interpreting <code class="MathJax_Preview">p(y\|x)</code><script type="math/tex">p(y\|x)</script> and modelling example weighting</a></p>
+    <p><strong>Main contribution:</strong> Intuitively and principally, we claim that two basic factors, what examples
+get higher weights (emphasis focus) and how large variance over examples’ weights (emphasis
+spread), should be babysit simultaneously when it comes to sample differentiation and reweighting.
+Unfortunately, these two intuitive and indispensable factors are not studied together in the literature.</p>
   </li>
   <li>
-    <p>Going to stop treating <code class="MathJax_Preview">p(y\|x)</code><script type="math/tex">p(y\|x)</script> as a classfication confidence metric, since it is determinstic. <code class="MathJax_Preview">p(y\|x)</code><script type="math/tex">p(y\|x)</script>  is not for deciding whether certain or uncertain.</p>
-  </li>
-  <li>
-    <p><code class="MathJax_Preview">p(y\|x)</code><script type="math/tex">p(y\|x)</script> is good as a metric of whether x matches y, though not a good metric indicating whether x is blur or not.</p>
-  </li>
-  <li>
-    <p>Utilities of Uncertainties</p>
+    <p>What training examples should be focused and how much more should they be emphasised when training DNNs under label noise?</p>
+
+    <p><strong>When noise rate is higher, we can improve a model’s robustness by focusing on relatively less difficult examples.</strong></p>
   </li>
 </ul>
 
-<h3 id="blogs">Blogs</h3>
-<ul class="message">
-  <li><a href="https://www.inference.vc/everything-that-works-works-because-its-bayesian-2/">Everything that Works Works Because it’s Bayesian: Why Deep Nets Generalize?</a></li>
-  <li><a href="https://www.facebook.com/yann.lecun/posts/10154058859142143">Yann LeCun’s Comments</a></li>
-  <li><a href="http://mlg.eng.cam.ac.uk/yarin/blog_2248.html?fbclid=IwAR1lNokscvPVsGFICXDQBhVa2bweIq-mkft6EfUkj9CR8tAIYJ7mNy3Qag8">YARIN GAL’s PhD Thesis</a></li>
+<p><a href="https://www.researchgate.net/publication/333418661_Emphasis_Regularisation_by_Gradient_Rescaling_for_Training_Deep_Neural_Networks_with_Noisy_Labels/comments">More comments and comparison with related work</a></p>
+
+<p><a href="https://drive.google.com/file/d/1fU3N_u-_puOwEbupK6aOENerP2S45tZX/view?usp=sharing">Paper reading about outlier detection and robust inference</a></p>
+
+<h2 id="effective-qualitative-and-quantitative-results">Effective (Qualitative and Quantitative Results)</h2>
+
+<p>Please see <a href="https://arxiv.org/pdf/1905.11233.pdf">our paper</a>:</p>
+
+<ul>
+  <li>Outperform existing work on synthetic label noise;</li>
+  <li>Outperform existing work on unknown real-world noise.</li>
 </ul>
 
-<h3 id="papers-on-theories">Papers on Theories</h3>
-<ul class="message">
-  <li><a href="https://arxiv.org/pdf/1506.02142.pdf">Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning-ICML 2016-YARIN GAL</a></li>
-  <li><a href="http://mlg.eng.cam.ac.uk/yarin/thesis/thesis.pdf">YARIN GAL’s PhD Thesis</a></li>
-  <li><a href="https://openreview.net/forum?id=BJij4yg0Z">A Bayesian Perspective on Generalization and Stochastic Gradient Descent-ICLR 2018 Google Brain-Samuel L. Smith and Quoc V. Le</a></li>
-  <li><a href="https://arxiv.org/pdf/2002.08791.pdf">Bayesian Deep Learning and a Probabilistic Perspective of Generalization–arXiv 2020 New York University-Andrew Gordon Wilson Pavel Izmailov</a></li>
-  <li><a href="https://arxiv.org/pdf/1703.04933.pdf">Sharp Minima Can Generalize For Deep Nets-ICML 2017</a></li>
-  <li><a href="https://cbmm.mit.edu/sites/default/files/publications/CBMM-Memo-067.pdf">Theory of Deep Learning III: Generalization Properties of SGD</a></li>
-  <li><a href="https://openreview.net/forum?id=H1oyRlYgg">On Large-Batch Training for Deep Learning: Generalization Gap and Sharp Minima-ICLR 2017</a></li>
-  <li><a href="https://papers.nips.cc/paper/7003-the-marginal-value-of-adaptive-gradient-methods-in-machine-learning">The Marginal Value of Adaptive Gradient Methods in Machine Learning-NIPS 2017</a></li>
-  <li><a href="http://www.jmlr.org/papers/volume18/17-214/17-214.pdf">Stochastic Gradient Descent as Approximate Bayesian Inference-JMLR 2017</a></li>
+<p float="left">
+  <hy-img root-margin="512px" src="/assets/img/blog/figs/Figure1.png" width="800">
+  <noscript><img data-ignore src="/assets/img/blog/figs/Figure1.png" width="800"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+
+  <hy-img root-margin="512px" src="/assets/img/blog/figs/Table1.png" width="800">
+  <noscript><img data-ignore src="/assets/img/blog/figs/Table1.png" width="800"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+
+  <hy-img root-margin="512px" src="/assets/img/blog/figs/Figure2.png" width="800">
+  <noscript><img data-ignore src="/assets/img/blog/figs/Figure2.png" width="800"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+
+  <hy-img root-margin="512px" src="/assets/img/blog/figs/Table4.png" width="800">
+  <noscript><img data-ignore src="/assets/img/blog/figs/Table4.png" width="800"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+
+  <hy-img root-margin="512px" src="/assets/img/blog/figs/Table5.png" width="800">
+  <noscript><img data-ignore src="/assets/img/blog/figs/Table5.png" width="800"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+
+  <hy-img root-margin="512px" src="/assets/img/blog/figs/Table6.png" width="800">
+  <noscript><img data-ignore src="/assets/img/blog/figs/Table6.png" width="800"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+
+  <hy-img root-margin="512px" src="/assets/img/blog/figs/Table7.png" width="800">
+  <noscript><img data-ignore src="/assets/img/blog/figs/Table7.png" width="800"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+
+  <hy-img root-margin="512px" src="/assets/img/blog/figs/Table9.png" width="800">
+  <noscript><img data-ignore src="/assets/img/blog/figs/Table9.png" width="800"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+
+</p>
+
+<h2 id="extremely-simple">Extremely Simple</h2>
+
+<p><strong>Without advanced training strategies</strong>: e.g.,</p>
+
+<p>a. Iterative retraining on gradual data correction</p>
+
+<p>b. Training based on carefully-designed curriculums</p>
+
+<p>…</p>
+
+<p><strong>Without using extra networks</strong>: e.g.,</p>
+
+<p>a. Decoupling” when to update” from” how to update”</p>
+
+<p>b. Co-teaching: Robust training of deep neural networks with extremely noisy labels</p>
+
+<p>c. Mentornet: Learning datadriven curriculum for very deep neural networks on corrupted labels</p>
+
+<p>…</p>
+
+<p><strong>Without using extra validation sets for model optimisation</strong>: e.g.,</p>
+
+<p>a.  Learning to reweight examples for
+robust deep learning</p>
+
+<p>b. Mentornet: Learning datadriven curriculum for very deep neural networks on corrupted labels</p>
+
+<p>c. Toward robustness against label noise in training deep discriminative neural networks</p>
+
+<p>d. Learning
+from noisy large-scale datasets with minimal supervision.</p>
+
+<p>e. Learning from
+noisy labels with distillation.</p>
+
+<p>f. Cleannet: Transfer learning for
+scalable image classifier training with label noise</p>
+
+<p>…</p>
+
+<p><strong>Without data pruning</strong>: e.g.,</p>
+
+<p>a. Generalized cross entropy loss for training deep neural networks
+with noisy labels. <br />
+  …</p>
+
+<p><strong>Without relabelling</strong>: e.g.,</p>
+
+<p>a. A semi-supervised two-stage approach
+to learning from noisy labels</p>
+
+<p>b. Joint optimization framework for learning with noisy labels</p>
+
+<p>…</p>
+
+<h2 id="citation">Citation</h2>
+<p>Please kindly cite us if you find our work useful and inspiring.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article<span class="o">{</span>wang2019emphasis,
+  <span class="nv">title</span><span class="o">={</span>Emphasis Regularisation by Gradient Rescaling <span class="k">for </span>Training Deep Neural Networks Robustly<span class="o">}</span>,
+  <span class="nv">author</span><span class="o">={</span>Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil<span class="o">}</span>,
+  <span class="nv">journal</span><span class="o">={</span>arXiv preprint arXiv:1905.11233<span class="o">}</span>,
+  <span class="nv">year</span><span class="o">={</span>2019<span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="references">References</h2>
+
+<ul>
   <li>
-    <p><a href="http://proceedings.mlr.press/v48/mandt16.pdf">A Variational Analysis of Stochastic Gradient Algorithms-ICML 2016</a></p>
+    <p>Eran Malach and Shai Shalev-Shwartz. Decoupling” when to update” from” how to update”. In
+NIPS, 2017.</p>
   </li>
-  <li><a href="https://arxiv.org/pdf/1503.02406.pdf">Deep Learning and the Information Bottleneck Principle</a></li>
-  <li><a href="https://arxiv.org/pdf/1912.13480.pdf">On the Difference Between the Information Bottleneck and the Deep Information Bottleneck</a></li>
-  <li><a href="http://proceedings.mlr.press/v80/belghazi18a/belghazi18a.pdf">Mutual Information Neural Estimation</a></li>
+  <li>
+    <p>Bo Han, Quanming Yao, Xingrui Yu, Gang Niu, Miao Xu, Weihua Hu, Ivor Tsang, and Masashi
+Sugiyama. Co-teaching: Robust training of deep neural networks with extremely noisy labels. In
+NIPS, 2018</p>
+  </li>
+  <li>
+    <p>Lu Jiang, Zhengyuan Zhou, Thomas Leung, Li-Jia Li, and Li Fei-Fei. Mentornet: Learning datadriven curriculum for very deep neural networks on corrupted labels. In ICML, 2018.</p>
+  </li>
+  <li>
+    <p>Mengye Ren, Wenyuan Zeng, Bin Yang, and Raquel Urtasun. Learning to reweight examples for
+robust deep learning. In ICML, 2018.</p>
+  </li>
+  <li>
+    <p>Arash Vahdat. Toward robustness against label noise in training deep discriminative neural networks.
+In NIPS, 2017.</p>
+  </li>
+  <li>
+    <p>Andreas Veit, Neil Alldrin, Gal Chechik, Ivan Krasin, Abhinav Gupta, and Serge Belongie. Learning
+from noisy large-scale datasets with minimal supervision. In CVPR, 2017.</p>
+  </li>
+  <li>
+    <p>Yuncheng Li, Jianchao Yang, Yale Song, Liangliang Cao, Jiebo Luo, and Li-Jia Li. Learning from
+noisy labels with distillation. In ICCV, 2017.</p>
+  </li>
+  <li>
+    <p>Kuang-Huei Lee, Xiaodong He, Lei Zhang, and Linjun Yang. Cleannet: Transfer learning for
+scalable image classifier training with label noise. In CVPR, 2018.</p>
+  </li>
+  <li>
+    <p>Zhilu Zhang and Mert R Sabuncu. Generalized cross entropy loss for training deep neural networks
+with noisy labels. In NIPS, 2018.</p>
+  </li>
+  <li>
+    <p>Yifan Ding, Liqiang Wang, Deliang Fan, and Boqing Gong. A semi-supervised two-stage approach
+to learning from noisy labels. In WACV, 2018.</p>
+  </li>
+  <li>
+    <p>Hwanjun Song, Minseok Kim, and Jae-Gil Lee. Selfie: Refurbishing unclean samples for robust
+deep learning. In ICML, 2019.</p>
+  </li>
+  <li>
+    <p>Daiki Tanaka, Daiki Ikami, Toshihiko Yamasaki, and Kiyoharu Aizawa. Joint optimization framework for learning with noisy labels. In CVPR, 2018.</p>
+  </li>
 </ul>
 
-<h3 id="papers-on-applications">Papers on Applications</h3>
-
-<ul class="message">
-  <li><a href="http://openaccess.thecvf.com/content_ICCV_2019/papers/Yu_Robust_Person_Re-Identification_by_Modelling_Feature_Uncertainty_ICCV_2019_paper.pdf">Robust Person Re-Identification by Modelling Feature Uncertainty</a></li>
-  <li><a href="https://arxiv.org/pdf/1904.09658.pdf">Probabilistic Face Embeddings</a></li>
-  <li><a href="https://arxiv.org/pdf/1906.04692v1.pdf">Rethinking Person Re-Identification with Confidence</a></li>
-  <li><a href="https://arxiv.org/pdf/1802.04865.pdf">Learning Confidence for Out-of-Distribution Detection in Neural Networks</a></li>
-  <li><a href="https://openreview.net/forum?id=ryiAv2xAZ">Training Confidence-calibrated Classifiers for Detecting Out-of-Distribution Samples</a></li>
-</ul>
 
   
 </article>
@@ -372,13 +550,13 @@ in <span>Blogs</span>
 
 <div class="navigator">
     
-        <span style="float:left"><a href="/paperlists/2020-02-21-AAAI/">« AAAI-2020</a>
-          · <a href="https://xinshaoamoswang.github.io/paperlists/2020-02-21-AAAI/#disqus_thread"></a>
+        <span style="float:left"><a href="/paperlists/2018-12-30-ICML/">« ICML-2018</a>
+          · <a href="https://xinshaoamoswang.github.io/paperlists/2018-12-30-ICML/#disqus_thread"></a>
         </span>
     
     
-        <span style="float:right"><a href="/paperlists/2020-02-24-ThesisRelatedPapers/">Papers Related to My PhD Thesis-Example Weighting in Classification and Distance Metric Learning »</a>
-          · <a href="https://xinshaoamoswang.github.io/paperlists/2020-02-24-ThesisRelatedPapers/#disqus_thread"></a>
+        <span style="float:right"><a href="/blogs/2019-10-01-papers-summary-noise/">Paper Summary on Noise, Anomalies, Adversaries, Robust Learning, Generalization »</a>
+          · <a href="https://xinshaoamoswang.github.io/blogs/2019-10-01-papers-summary-noise/#disqus_thread"></a>
         </span>
     
 </div>
@@ -396,8 +574,8 @@ in <span>Blogs</span>
 
 <script>
     var disqus_config = function () {
-            this.page.url = "https://xinshaoamoswang.github.io/blogs/2020-02-21-learn-bayesian-DL/";
-            this.page.identifier = "/blogs/learn-bayesian-DL";
+            this.page.url = "https://xinshaoamoswang.github.io/blogs/2019-10-01-Research-GR/";
+            this.page.identifier = "/blogs/Research-GR";
         }; 
 
     (function() { 

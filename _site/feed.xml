@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-07-03T23:46:40+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-07-03T23:52:52+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
 </subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Code Releasing of Recent Work–Derivative Manipulation and IMAE</title><link href="http://localhost:4000/blogs/2020-06-14-code-releasing/" rel="alternate" type="text/html" title="Code Releasing of Recent Work--Derivative Manipulation and IMAE" /><published>2020-06-14T00:00:00+01:00</published><updated>2020-06-14T00:00:00+01:00</updated><id>http://localhost:4000/blogs/code-releasing</id><content type="html" xml:base="http://localhost:4000/blogs/2020-06-14-code-releasing/">&lt;p&gt;For source codes, the usage is conditioned on academic use only and kindness to cite our work: Derivative Manipulation and IMAE.&lt;br /&gt;
 As a young researcher, your interest and kind citation (star) will definitely mean a lot for me and my collaborators.&lt;br /&gt;
 For any specific discussion or potential future collaboration, please feel free to contact me. 
@@ -122,7 +122,7 @@ accept, human annotations used for learning supervision may be biased, subjectiv
 &lt;/ul&gt;
 
 &lt;p class=&quot;figure&quot;&gt;Comprehensive learning dynamics for thorough understanding of learning behaviours.
-&lt;img src=&quot;/blogs/figsProSelfLC/comprehensive_dynamics.png&quot; alt=&quot;ProSelfLC comprehensive_dynamics&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/Blogs/figsProSelfLC/comprehensive_dynamics.png&quot; alt=&quot;ProSelfLC comprehensive_dynamics&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;Result analysis:
     &lt;ul&gt;
@@ -140,10 +140,10 @@ accept, human annotations used for learning supervision may be biased, subjectiv
 Self LC is the most appealing because it requires no extra learners to
 revise learning targets, &lt;br /&gt; 
 being free! &lt;br /&gt;
-&lt;img src=&quot;/blogs/figsProSelfLC/methods_grouping.png&quot; alt=&quot;Method Analysis&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/Blogs/figsProSelfLC/methods_grouping.png&quot; alt=&quot;Method Analysis&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
 
 &lt;p class=&quot;figure&quot;&gt;Summary of CCE, LS, CP and LC from the angle of target modification, entropy and KL divergence.
-&lt;img src=&quot;/blogs/figsProSelfLC/table_method_analysis.png&quot; alt=&quot;Table Method Analysis&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/Blogs/figsProSelfLC/table_method_analysis.png&quot; alt=&quot;Table Method Analysis&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;in-self-lc-a-core-question-is-not-well-answered&quot;&gt;In Self LC, a core question is not well answered:&lt;/h2&gt;
 &lt;p class=&quot;message&quot;&gt;&lt;code class=&quot;MathJax_Preview&quot;&gt;\textit{How much do we trust a learner to leverage its knowledge?}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\textit{How much do we trust a learner to leverage its knowledge?}&lt;/script&gt;&lt;/p&gt;
@@ -165,10 +165,10 @@ This is surrounded by minimum entropy regularisation, which has been widely eval
 &lt;h2 id=&quot;mathematical-details-of-proselflc&quot;&gt;Mathematical Details of ProSelfLC&lt;/h2&gt;
 
 &lt;p class=&quot;figure&quot;&gt;Beyond semantic class: the similarity structure defined by a label distribution.
-&lt;img src=&quot;/blogs/figsProSelfLC/definition_learning_target.png&quot; alt=&quot;The definiton of learning targets/labels&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/Blogs/figsProSelfLC/definition_learning_target.png&quot; alt=&quot;The definiton of learning targets/labels&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
 
 &lt;p class=&quot;figure&quot;&gt;Human annotations and predicted label distributions, which should we trust more?
-&lt;img src=&quot;/blogs/figsProSelfLC/mathematical_expression.png&quot; alt=&quot;Mathematical expression of ProSelfLC&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/Blogs/figsProSelfLC/mathematical_expression.png&quot; alt=&quot;Mathematical expression of ProSelfLC&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;design-reasons-of-proselflc&quot;&gt;Design Reasons of ProSelfLC&lt;/h2&gt;
 &lt;ul&gt;
@@ -188,10 +188,10 @@ Beyond, when &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{p}&lt;/code&g
 &lt;/ul&gt;
 
 &lt;p class=&quot;figure&quot;&gt;Ablation study on the design of ProSelfLC, where &lt;code class=&quot;MathJax_Preview&quot;&gt;\epsilon_{\mathrm{ProSelfLC}}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\epsilon_{\mathrm{ProSelfLC}}&lt;/script&gt; consistently performs the best when multiple metrics are reported. 
-&lt;img src=&quot;/blogs/figsProSelfLC/ablation_study.png&quot; alt=&quot;Ablation study on the design of ProSelfLC&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/Blogs/figsProSelfLC/ablation_study.png&quot; alt=&quot;Ablation study on the design of ProSelfLC&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
 
 &lt;p class=&quot;figure&quot;&gt;Case analysis on the design of ProSelfLC.
-&lt;img src=&quot;/blogs/figsProSelfLC/case_analysis.png&quot; alt=&quot;Case analysis on the design of ProSelfLC&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/Blogs/figsProSelfLC/case_analysis.png&quot; alt=&quot;Case analysis on the design of ProSelfLC&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
 
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;
@@ -975,12 +975,7 @@ unsuitable for online learning.&lt;/li&gt;
       &lt;li&gt;In order to solve the problem of computing the importance for the whole dataset, we pre-sample a large batch of data points, compute the sampling distribution for that batch and re-sample a smaller batch with replacement.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Learning to Retrieve Learning to Classify Others</summary></entry><entry><title type="html">AAAI-2020</title><link href="http://localhost:4000/paperlists/2020-02-21-AAAI/" rel="alternate" type="text/html" title="AAAI-2020" /><published>2020-02-21T00:00:00+00:00</published><updated>2020-02-21T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/AAAI</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-02-21-AAAI/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
-
-&lt;h2 id=&quot;learning-to-compare-and-retrieve&quot;&gt;Learning to Compare and Retrieve&lt;/h2&gt;
-&lt;ul class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1910.04115.pdf&quot;&gt;Active Ordinal Querying for Tuplewise Similarity Learning&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Learning Bayesian Deep Learning, Uncertainty &amp;amp; Variational Techniques</title><link href="http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/" rel="alternate" type="text/html" title="Learning Bayesian Deep Learning, Uncertainty &amp; Variational Techniques" /><published>2020-02-21T00:00:00+00:00</published><updated>2020-02-21T00:00:00+00:00</updated><id>http://localhost:4000/blogs/learn-bayesian-DL</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/">&lt;ol class=&quot;message&quot;&gt;
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Learning to Retrieve Learning to Classify Others</summary></entry><entry><title type="html">Learning Bayesian Deep Learning, Uncertainty &amp;amp; Variational Techniques</title><link href="http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/" rel="alternate" type="text/html" title="Learning Bayesian Deep Learning, Uncertainty &amp; Variational Techniques" /><published>2020-02-21T00:00:00+00:00</published><updated>2020-02-21T00:00:00+00:00</updated><id>http://localhost:4000/blogs/learn-bayesian-DL</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-21-learn-bayesian-DL/">&lt;ol class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#blogs&quot;&gt;Blogs&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#papers-on-theories&quot;&gt;Papers on Theories&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#papers-on-applications&quot;&gt;Papers on Applications&lt;/a&gt;&lt;/li&gt;
@@ -1036,7 +1031,12 @@ unsuitable for online learning.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1906.04692v1.pdf&quot;&gt;Rethinking Person Re-Identification with Confidence&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1802.04865.pdf&quot;&gt;Learning Confidence for Out-of-Distribution Detection in Neural Networks&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://openreview.net/forum?id=ryiAv2xAZ&quot;&gt;Training Confidence-calibrated Classifiers for Detecting Out-of-Distribution Samples&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Blogs Papers on Theories Papers on Applications</summary></entry><entry><title type="html">Code Releasing of Recent Work–Derivative Manipulation and IMAE</title><link href="http://localhost:4000/blogs/2020-02-18-code-releasing/" rel="alternate" type="text/html" title="Code Releasing of Recent Work--Derivative Manipulation and IMAE" /><published>2020-02-18T00:00:00+00:00</published><updated>2020-02-18T00:00:00+00:00</updated><id>http://localhost:4000/blogs/code-releasing</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-18-code-releasing/">&lt;p&gt;For source codes, the usage is conditioned on academic use only and kindness to cite our work: Derivative Manipulation and IMAE.&lt;br /&gt;
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Blogs Papers on Theories Papers on Applications</summary></entry><entry><title type="html">AAAI-2020</title><link href="http://localhost:4000/paperlists/2020-02-21-AAAI/" rel="alternate" type="text/html" title="AAAI-2020" /><published>2020-02-21T00:00:00+00:00</published><updated>2020-02-21T00:00:00+00:00</updated><id>http://localhost:4000/paperlists/AAAI</id><content type="html" xml:base="http://localhost:4000/paperlists/2020-02-21-AAAI/">&lt;p class=&quot;message&quot;&gt;:+1: means being highly related to my personal research interest.&lt;/p&gt;
+
+&lt;h2 id=&quot;learning-to-compare-and-retrieve&quot;&gt;Learning to Compare and Retrieve&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1910.04115.pdf&quot;&gt;Active Ordinal Querying for Tuplewise Similarity Learning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Code Releasing of Recent Work–Derivative Manipulation and IMAE</title><link href="http://localhost:4000/blogs/2020-02-18-code-releasing/" rel="alternate" type="text/html" title="Code Releasing of Recent Work--Derivative Manipulation and IMAE" /><published>2020-02-18T00:00:00+00:00</published><updated>2020-02-18T00:00:00+00:00</updated><id>http://localhost:4000/blogs/code-releasing</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-18-code-releasing/">&lt;p&gt;For source codes, the usage is conditioned on academic use only and kindness to cite our work: Derivative Manipulation and IMAE.&lt;br /&gt;
 As a young researcher, your interest and star (citation) will mean a lot for me and my collaborators.&lt;br /&gt;
 For any specific discussion or potential future collaboration, please feel free to contact me.&lt;/p&gt;
 
