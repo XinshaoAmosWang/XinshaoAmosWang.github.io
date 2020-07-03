@@ -3,7 +3,7 @@ layout: list
 title: Projects
 slug: Projects
 menu: true
-order: 2
+order: 3
 description: >
   Hi, welcome to my projects!
 accent_color: rgb(38,139,210)

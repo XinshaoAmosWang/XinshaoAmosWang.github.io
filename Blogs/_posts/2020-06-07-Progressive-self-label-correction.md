@@ -76,7 +76,7 @@ accept, human annotations used for learning supervision may be biased, subjectiv
 {:.message}
 
 Comprehensive learning dynamics for thorough understanding of learning behaviours.
-![ProSelfLC comprehensive_dynamics](../figsProSelfLC/comprehensive_dynamics.png){:.lead data-width="800" data-height="100"}
+![ProSelfLC comprehensive_dynamics](../../imgs/figsProSelfLC/comprehensive_dynamics.png){:.lead data-width="800" data-height="100"}
 {:.figure}
 * Result analysis:
     * **Revising the semantic class and perceptual similarity structure.** Generally, the semantic class of an example is defined according to its perceptual similarities with training classes, and is chosen to be the most similar class. In Figure 3b and 3c, we show a learner’s behaviours on without fitting wrong labels and correcting them in different approaches. We remark that ProSelfLC performs the best.
@@ -91,11 +91,11 @@ Target modification includes OR (LS and CP), and LC (Self LC and Non-self LC). <
 Self LC is the most appealing because it requires no extra learners to
 revise learning targets, <br /> 
 being free! <br />
-![Method Analysis](../figsProSelfLC/methods_grouping.png){:.lead data-width="800" data-height="100"}
+![Method Analysis](../../imgs/figsProSelfLC/methods_grouping.png){:.lead data-width="800" data-height="100"}
 {:.figure}
 
 Summary of CCE, LS, CP and LC from the angle of target modification, entropy and KL divergence.
-![Table Method Analysis](../figsProSelfLC/table_method_analysis.png){:.lead data-width="800" data-height="100"}
+![Table Method Analysis](../../imgs/figsProSelfLC/table_method_analysis.png){:.lead data-width="800" data-height="100"}
 {:.figure}
 
 
@@ -121,12 +121,12 @@ This is surrounded by minimum entropy regularisation, which has been widely eval
 ## Mathematical Details of ProSelfLC
 
 Beyond semantic class: the similarity structure defined by a label distribution.
-![The definiton of learning targets/labels](../figsProSelfLC/definition_learning_target.png){:.lead data-width="800" data-height="100"}
+![The definiton of learning targets/labels](../../imgs/figsProSelfLC/definition_learning_target.png){:.lead data-width="800" data-height="100"}
 {:.figure}
 
 
 Human annotations and predicted label distributions, which should we trust more?
-![Mathematical expression of ProSelfLC](../figsProSelfLC/mathematical_expression.png){:.lead data-width="800" data-height="100"}
+![Mathematical expression of ProSelfLC](../../imgs/figsProSelfLC/mathematical_expression.png){:.lead data-width="800" data-height="100"}
 {:.figure}
 
 
@@ -142,13 +142,13 @@ Beyond, when $$\mathbf{p}$$ is highly confident, there are two fine cases: If $$
 
 
 Ablation study on the design of ProSelfLC, where $$\epsilon_{\mathrm{ProSelfLC}}$$ consistently performs the best when multiple metrics are reported. 
-![Ablation study on the design of ProSelfLC](../figsProSelfLC/ablation_study.png){:.lead data-width="800" data-height="100"}
+![Ablation study on the design of ProSelfLC](../../imgs/figsProSelfLC/ablation_study.png){:.lead data-width="800" data-height="100"}
 {:.figure}
 
 
 
 Case analysis on the design of ProSelfLC.
-![Case analysis on the design of ProSelfLC](../figsProSelfLC/case_analysis.png){:.lead data-width="800" data-height="100"}
+![Case analysis on the design of ProSelfLC](../../imgs/figsProSelfLC/case_analysis.png){:.lead data-width="800" data-height="100"}
 {:.figure}
 
 * **Correct the similarity structure for every data point in all cases.**
