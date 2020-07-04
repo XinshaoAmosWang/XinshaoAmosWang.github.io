@@ -1,5 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-07-04T12:39:40+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
-</subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">Code Releasing of Recent Work–Derivative Manipulation and IMAE</title><link href="http://localhost:4000/blogs/2020-06-14-code-releasing/" rel="alternate" type="text/html" title="Code Releasing of Recent Work--Derivative Manipulation and IMAE" /><published>2020-06-14T00:00:00+01:00</published><updated>2020-06-14T00:00:00+01:00</updated><id>http://localhost:4000/blogs/code-releasing</id><content type="html" xml:base="http://localhost:4000/blogs/2020-06-14-code-releasing/">&lt;p&gt;For source codes, the usage is conditioned on academic use only and kindness to cite our work: Derivative Manipulation and IMAE.&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-07-04T16:30:27+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Xinshao (Amos) Wang</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. ML/DL/AI Research with applications to CV/NLP, etc
+</subtitle><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><entry><title type="html">In deep metric learning, The improvements over time have been marginal?</title><link href="http://localhost:4000/blogs/2020-07-03-deep-metric-learning-improvement/" rel="alternate" type="text/html" title="In deep metric learning, The improvements over time have been marginal?" /><published>2020-07-03T00:00:00+01:00</published><updated>2020-07-03T00:00:00+01:00</updated><id>http://localhost:4000/blogs/deep-metric-learning-improvement</id><content type="html" xml:base="http://localhost:4000/blogs/2020-07-03-deep-metric-learning-improvement/">&lt;p&gt;Recently, in paper &lt;a href=&quot;https://arxiv.org/pdf/2003.08505.pdf&quot;&gt;A Metric Learning Reality Check&lt;/a&gt;, it is reported that the improvements over time have been marginal at best. Is it true? I present my personal viewpoints as follows:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;First of all, acedemic research progress is naturally slow, continuous and tortuous. Beyond, it is full of flaws on its progress. For example,
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;In person re-identification, several years ago, some researchers vertically split one image into several parts for alignment, which is against the design of CNNs and non-meaningful. Because deep CNNs are designed to be invariant against translation, so that hand-crafted alignment is unnecessary.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;The Adam optimiser is found to be very sensitive to the setting of delta recently.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1903.12141.pdf&quot;&gt;Does Mean Absolute Error Treat Examples Equally?&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/1905.11233.pdf&quot;&gt;How to understand a loss function in a right way? Does a loss function have to be differentiable?&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Is &lt;a href=&quot;https://openaccess.thecvf.com/content_cvpr_2016/papers/Xie_DisturbLabel_Regularizing_CNN_CVPR_2016_paper.pdf&quot;&gt;DisturbLabel&lt;/a&gt; a meaningful regulariser? If so, it makes me think that we should &lt;strong&gt;deliberately generate label noise&lt;/strong&gt; at the training dataset! Is not it ridiculous? You will cultivate your own opinion after reading &lt;a href=&quot;https://arxiv.org/pdf/2005.03788.pdf&quot;&gt;ProSelfLC: Progressive Self Label Correction for Training Robust Deep Neural Networks&lt;/a&gt;.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;https://xinshaoamoswang.github.io/blogs/2020-06-07-Progressive-self-label-correction/#storyline&quot;&gt;Confidence penalty or rewarding, which one to go ahead?&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;https://arxiv.org/pdf/2005.03788.pdf&quot;&gt;To trust a learner (i.e. a deep model) or human annotations (i.e. textbooks for supervision), which one to choose?&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;…&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;There are some vital breakthroughs over the time although they seem to be trivial now.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.cse.huji.ac.il/~shashua/papers/multibatch-nips16.pdf&quot;&gt;Multibatch Method&lt;/a&gt;, after which people rarely use rigid input formats.
+        &lt;ul&gt;
+          &lt;li&gt;Before this milestone, we heard a lot about siamese networks, triplet networks, etc.&lt;/li&gt;
+          &lt;li&gt;After Multibatch Method, we construct doublets, triplets, or high-order tuples directly in the embedding space.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;The importance of sample mining/weighting becomes clearer for our community. Of course, there exist many variants of sample mining/weighting for different scenarios.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Our community become much more open-minded: all methods which learn discriminative representations can be categorised into deep metric learning, e.g., softmax + categorical cross entropy.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Deep metric learning tends to follow a similar training setting with few-shot training, i.e., in one training batch, C classes and K examples per class are randomly sampled. 
+  Naturally, we can make C and K random to increase the training stochasticity.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;…&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">Recently, in paper A Metric Learning Reality Check, it is reported that the improvements over time have been marginal at best. Is it true? I present my personal viewpoints as follows: First of all, acedemic research progress is naturally slow, continuous and tortuous. Beyond, it is full of flaws on its progress. For example, In person re-identification, several years ago, some researchers vertically split one image into several parts for alignment, which is against the design of CNNs and non-meaningful. Because deep CNNs are designed to be invariant against translation, so that hand-crafted alignment is unnecessary.</summary></entry><entry><title type="html">Code Releasing of Recent Work–Derivative Manipulation and IMAE</title><link href="http://localhost:4000/blogs/2020-06-14-code-releasing/" rel="alternate" type="text/html" title="Code Releasing of Recent Work--Derivative Manipulation and IMAE" /><published>2020-06-14T00:00:00+01:00</published><updated>2020-06-14T00:00:00+01:00</updated><id>http://localhost:4000/blogs/code-releasing</id><content type="html" xml:base="http://localhost:4000/blogs/2020-06-14-code-releasing/">&lt;p&gt;For source codes, the usage is conditioned on academic use only and kindness to cite our work: Derivative Manipulation and IMAE.&lt;br /&gt;
 As a young researcher, your interest and kind citation (star) will definitely mean a lot for me and my collaborators.&lt;br /&gt;
 For any specific discussion or potential future collaboration, please feel free to contact me. 
 &lt;br /&gt;&lt;/p&gt;
@@ -1036,43 +1087,4 @@ unsuitable for online learning.&lt;/li&gt;
 &lt;h2 id=&quot;learning-to-compare-and-retrieve&quot;&gt;Learning to Compare and Retrieve&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1910.04115.pdf&quot;&gt;Active Ordinal Querying for Tuplewise Similarity Learning&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry><entry><title type="html">Code Releasing of Recent Work–Derivative Manipulation and IMAE</title><link href="http://localhost:4000/blogs/2020-02-18-code-releasing/" rel="alternate" type="text/html" title="Code Releasing of Recent Work--Derivative Manipulation and IMAE" /><published>2020-02-18T00:00:00+00:00</published><updated>2020-02-18T00:00:00+00:00</updated><id>http://localhost:4000/blogs/code-releasing</id><content type="html" xml:base="http://localhost:4000/blogs/2020-02-18-code-releasing/">&lt;p&gt;For source codes, the usage is conditioned on academic use only and kindness to cite our work: Derivative Manipulation and IMAE.&lt;br /&gt;
-As a young researcher, your interest and star (citation) will mean a lot for me and my collaborators.&lt;br /&gt;
-For any specific discussion or potential future collaboration, please feel free to contact me.&lt;/p&gt;
-
-&lt;ol class=&quot;message&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;../../my_docs/IMAE_Code_Illustration&quot;&gt;IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Following work: &lt;a href=&quot;https://arxiv.org/pdf/1905.11233.pdf&quot;&gt;Derivative Manipulation for General Example Weighting&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;../../my_docs/DM_Code_Illustration&quot;&gt;Derivative Manipulation for General Example Weighting&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Preliminary: &lt;a href=&quot;https://arxiv.org/pdf/1903.12141.pdf#arXiv%20Paper.IMAE%20for%20Noise-Robust%20Learning&quot;&gt;IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Github Pages
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/XinshaoAmosWang/DerivativeManipulation&quot;&gt;DerivativeManipulation&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/XinshaoAmosWang/Improving-Mean-Absolute-Error-against-CCE&quot;&gt;IMAE&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Citation
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article{wang2020proselflc,
-  title={ProSelfLC: Progressive Self Label Correction 
-  for Training Robust Deep Neural Networks},
-  author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M},
-  journal={arXiv preprint arXiv:2005.03788},
-  year={2020}
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article{wang2020proselflc,
-  title={ProSelfLC: Progressive Self Label Correction 
-  for Training Robust Deep Neural Networks},
-  author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M},
-  journal={arXiv preprint arXiv:2005.03788},
-  year={2020}
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">For source codes, the usage is conditioned on academic use only and kindness to cite our work: Derivative Manipulation and IMAE. As a young researcher, your interest and star (citation) will mean a lot for me and my collaborators. For any specific discussion or potential future collaboration, please feel free to contact me.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Xinshao (Amos) Wang</name><email>xwang at qub dot ac dot uk xwang at qub dot ac dot uk</email></author><summary type="html">:+1: means being highly related to my personal research interest.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/steve-harvey.jpg" /></entry></feed>
