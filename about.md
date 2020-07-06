@@ -14,9 +14,11 @@ Conditions, e.g., Noisy Data and Sample Imbalance).
 
 * Computer Vision (Image/Video Recognition, Person Re-identification). 
 
-* [What am I working on now? Discussions are Welcome!](../blogs/2020-02-21-learn-bayesian-DL/#what-am-i-working-on-now-discussions-are-welcome) 
-
 * [Something new to come soon!]()
+
+<!--* [What am I working on now? Discussions are Welcome!](../blogs/2020-02-21-learn-bayesian-DL/#what-am-i-working-on-now-discussions-are-welcome) -->
+
+
 
 ## Featured Research Delivering: 
 
