@@ -7,5 +7,6 @@ permalink: /Resume/
 
 
 
-
+<!--
 <embed src="CV_XinshaoWang.pdf" type="application/pdf" width="100%" height="1000px"/>
+-->

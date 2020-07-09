@@ -6,7 +6,7 @@ image: /assets/img/blog/steve-harvey.jpg
 
 
 
-## Xinshao Wang, PDRA, University of Oxford. 
+## XW, PDRA, University of Oxford. 
 {:.lead}
 
 * Machine Learning (Deep Metric Learning, Robust Representation Learning under Adverse
@@ -83,7 +83,7 @@ In the large-scale training datasets, noisy training data points generally exist
 * [Detecting outliers in SAS: Part 3: Multivariate location and scatter & MCD: Robust estimation by subsampling](https://blogs.sas.com/content/iml/2012/02/02/detecting-outliers-in-sas-part-3-multivariate-location-and-scatter.html)
 
 
-
+<!--
 ## Linkedin Profile
 
 <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="xinshaowang">
@@ -96,3 +96,6 @@ In the large-scale training datasets, noisy training data points generally exist
 ## Twitter
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Featured Research Delivering<a href="https://t.co/R6VwNzNFj9">https://t.co/R6VwNzNFj9</a><br>Please kindly share and comments, many thanks. <a href="https://twitter.com/hashtag/RobustLearning?src=hash&amp;ref_src=twsrc%5Etfw">#RobustLearning</a> <a href="https://twitter.com/hashtag/RobustOptimisation?src=hash&amp;ref_src=twsrc%5Etfw">#RobustOptimisation</a><a href="https://twitter.com/hashtag/Entropy?src=hash&amp;ref_src=twsrc%5Etfw">#Entropy</a> <a href="https://twitter.com/hashtag/Confidence?src=hash&amp;ref_src=twsrc%5Etfw">#Confidence</a> <a href="https://twitter.com/hashtag/LearningDynamics?src=hash&amp;ref_src=twsrc%5Etfw">#LearningDynamics</a> <a href="https://twitter.com/hashtag/ML?src=hash&amp;ref_src=twsrc%5Etfw">#ML</a> <a href="https://twitter.com/hashtag/DL?src=hash&amp;ref_src=twsrc%5Etfw">#DL</a><a href="https://twitter.com/CVPRConf?ref_src=twsrc%5Etfw">@CVPRConf</a> <a href="https://twitter.com/RealAAAI?ref_src=twsrc%5Etfw">@RealAAAI</a> <a href="https://twitter.com/icmlconf?ref_src=twsrc%5Etfw">@icmlconf</a> <a href="https://twitter.com/iclr_conf?ref_src=twsrc%5Etfw">@iclr_conf</a> <a href="https://twitter.com/NeurIPSConf?ref_src=twsrc%5Etfw">@NeurIPSConf</a> <a href="https://t.co/7aw5KcW4TR">pic.twitter.com/7aw5KcW4TR</a></p>&mdash; Amos (@amos_xwang) <a href="https://twitter.com/amos_xwang/status/1279378803136004097?ref_src=twsrc%5Etfw">July 4, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+-->
