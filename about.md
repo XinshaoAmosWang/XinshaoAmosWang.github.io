@@ -6,7 +6,7 @@ image: /assets/img/blog/steve-harvey.jpg
 
 
 
-## XW, PDRA, University of Oxford. 
+## Postdoc, University of Oxford. 
 {:.lead}
 
 * Machine Learning (Deep Metric Learning, Robust Representation Learning under Adverse
