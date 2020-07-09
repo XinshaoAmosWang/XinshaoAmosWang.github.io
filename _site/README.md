@@ -3,8 +3,10 @@
 Welcome to [my personal website](https://xinshaoamoswang.github.io/).  
 
 
-## Research Topics
+## Postdoc, University of Oxford.
 
-### Machine Learning (Deep Metric Learning, Robust Learning under Arbitrary Anomalies.
+#### Core Machine Learning.
 
-### Computer Vision (Image/Video Recognition, Person ReID).
+#### Fundamental Deep Learning: Underfitting, Overfitting, Robust Learning/Optimisation.
+
+#### Applications: ...
