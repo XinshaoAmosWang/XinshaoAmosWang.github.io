@@ -275,6 +275,19 @@ For any specific discussion or potential future collaboration, please feel free 
   </li>
 </ul>
 
+<h3 id="we-really-need-to-rethink-robust-losses-and-optimisation-in-deep-learning">We really need to rethink robust losses and optimisation in deep learning!</h3>
+<ul>
+  <li>In <a href="https://arxiv.org/abs/2006.13554">Normalized Loss Functions for Deep Learning with Noisy Labels</a>,   it is stated in the abstract that “<strong>we theoretically show by applying a simple normalization that: any loss can be made robust to noisy labels. However, in practice, simply being robust is not sufficient for a loss function to train accurate DNNs.</strong>”
+    <ul>
+      <li>This statement is <strong>Quite</strong> <strong>Contradictory</strong>: A ROBUST LOSS IS NOT SUFFICIENT (i.e., ROBUST AND ACCURATE)?  =&gt; <strong>Then what is value to say whether a loss is robust or not?</strong></li>
+    </ul>
+  </li>
+  <li>
+    <p>For me, <strong>a trained robust model should be accurate on both training and testing datasets.</strong></p>
+  </li>
+  <li><strong>I remark that we are the first to thoroughly analyse robust losses, e.g., MAE’s underfitting, and how it weights data points.</strong></li>
+</ul>
+
 <ol class="message">
   <li><a href="../../my_docs/IMAE_Code_Illustration">IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters</a>
     <ul>

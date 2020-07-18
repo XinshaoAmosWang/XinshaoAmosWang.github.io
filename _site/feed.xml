@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-07-18T14:31:25+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Postdoc@OxfordU</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. A ML/DL/AI Researcher
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-07-18T16:16:44+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Postdoc@OxfordU</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. A ML/DL/AI Researcher
 </subtitle><author><name>XW</name></author><entry><title type="html">In deep metric learning, The improvements over time have been marginal?</title><link href="http://localhost:4000/blogs/2020-07-03-deep-metric-learning-improvement/" rel="alternate" type="text/html" title="In deep metric learning, The improvements over time have been marginal?" /><published>2020-07-03T00:00:00+01:00</published><updated>2020-07-03T00:00:00+01:00</updated><id>http://localhost:4000/blogs/deep-metric-learning-improvement</id><content type="html" xml:base="http://localhost:4000/blogs/2020-07-03-deep-metric-learning-improvement/">&lt;p&gt;Recently, in paper &lt;a href=&quot;https://arxiv.org/pdf/2003.08505.pdf&quot;&gt;A Metric Learning Reality Check&lt;/a&gt;, it is reported that the improvements over time have been marginal at best. Is it true? I present my personal viewpoints as follows:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;First of all, acedemic research progress is naturally slow, continuous and tortuous. Beyond, it is full of flaws on its progress. For example,
@@ -63,6 +63,19 @@ For any specific discussion or potential future collaboration, please feel free 
       &lt;li&gt;Personal comment: Though being true theorectically, in realistic deployment, we obtain more testing samples as time goes, accordingly we generally choose to retrain or fine-tune to make the system adaptive. Therefore, this arguement does not make much sense.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;we-really-need-to-rethink-robust-losses-and-optimisation-in-deep-learning&quot;&gt;We really need to rethink robust losses and optimisation in deep learning!&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;In &lt;a href=&quot;https://arxiv.org/abs/2006.13554&quot;&gt;Normalized Loss Functions for Deep Learning with Noisy Labels&lt;/a&gt;,   it is stated in the abstract that “&lt;strong&gt;we theoretically show by applying a simple normalization that: any loss can be made robust to noisy labels. However, in practice, simply being robust is not sufficient for a loss function to train accurate DNNs.&lt;/strong&gt;”
+    &lt;ul&gt;
+      &lt;li&gt;This statement is &lt;strong&gt;Quite&lt;/strong&gt; &lt;strong&gt;Contradictory&lt;/strong&gt;: A ROBUST LOSS IS NOT SUFFICIENT (i.e., ROBUST AND ACCURATE)?  =&amp;gt; &lt;strong&gt;Then what is value to say whether a loss is robust or not?&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For me, &lt;strong&gt;a trained robust model should be accurate on both training and testing datasets.&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;I remark that we are the first to thoroughly analyse robust losses, e.g., MAE’s underfitting, and how it weights data points.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;ol class=&quot;message&quot;&gt;
