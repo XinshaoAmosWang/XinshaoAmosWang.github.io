@@ -64,11 +64,20 @@ Then we wish our community think critically about two principles:
 ## Open ML Research Questions
 * Should we trust and exploit a learner’s knowledge as training goes, or always trust human
 annotations?
+    * As a learner, to trust yourself or supervison/textbooks?
+    * The answer should depend on what a learner has learned.
+
 * Should we optimise a learner towards a correct low-entropy status, or penalise a low-entropy
 status?
-* Open discussion: we show it’s fine for a learner to be confident towards a correct low-entropy status.
-Then more future research attention should be paid to the definition of correct knowledge, as in general we
-accept, human annotations used for learning supervision may be biased, subjective, and wrong.
+    * As a supervisor/evaluator, to reward or penalise a confident learner?
+
+* Open discussion: we show it’s fine for a learner to be confident towards a correct low-entropy status. 
+Then more future research attention should be paid to the definition of correct knowledge, as in general we accept, human annotations used for learning supervision may be biased, subjective, and wrong.
+* As a supervisor, before training multiple learners, to think about how to train one great learner first?
+    * 1st context: recently, many techniques about **training multiple learners** (co-training, mutual learning, knowledge distillation, adversarial training, etc) have been proposed.
+    * 2nd context: in our work, we work on **how to train single learner better.**
+    * 1st personal comment: training multiple learners is much more expensive and complex;
+    * 2nd personal comment: when training multiple learners collaboratively, if one learner does not perform well, it tends to hurt the other learners. 
 {:.message}
 
 ## Noticeable Findings

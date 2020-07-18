@@ -262,8 +262,19 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
   
     <p>For source codes, the usage is conditioned on academic use only and kindness to cite our work: Derivative Manipulation and IMAE.<br />
 As a young researcher, your interest and kind citation (star) will definitely mean a lot for me and my collaborators.<br />
-For any specific discussion or potential future collaboration, please feel free to contact me. 
-<br /></p>
+For any specific discussion or potential future collaboration, please feel free to contact me.</p>
+
+<h3 id="when-talking-about-robustnessregularisation-our-community-tend-to-connnect-it-merely-to-better-test-performance-i-advocate-caring-training-performance-as-well-because">When talking about robustness/regularisation, our community tend to connnect it merely to better test performance. I advocate caring training performance as well because:</h3>
+<ul>
+  <li>If noisy training examples are fitted well, a model has learned something wrong;</li>
+  <li>If clean ones are not fitted well,  a model is not good enough.</li>
+  <li>There is a potential arguement that the test dataset can be infinitely large theorectically, thus being significant.
+    <ul>
+      <li>Personal comment: Though being true theorectically, in realistic deployment, we obtain more testing samples as time goes, accordingly we generally choose to retrain or fine-tune to make the system adaptive. Therefore, this arguement does not make much sense.</li>
+    </ul>
+  </li>
+</ul>
+
 <ol class="message">
   <li><a href="../../my_docs/IMAE_Code_Illustration">IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters</a>
     <ul>

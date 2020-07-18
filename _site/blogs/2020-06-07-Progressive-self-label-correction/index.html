@@ -319,12 +319,29 @@ Then we wish our community think critically about two principles:
 <h2 id="open-ml-research-questions">Open ML Research Questions</h2>
 <ul class="message">
   <li>Should we trust and exploit a learner’s knowledge as training goes, or always trust human
-annotations?</li>
+annotations?
+    <ul>
+      <li>As a learner, to trust yourself or supervison/textbooks?</li>
+      <li>The answer should depend on what a learner has learned.</li>
+    </ul>
+  </li>
   <li>Should we optimise a learner towards a correct low-entropy status, or penalise a low-entropy
-status?</li>
-  <li>Open discussion: we show it’s fine for a learner to be confident towards a correct low-entropy status.
-Then more future research attention should be paid to the definition of correct knowledge, as in general we
-accept, human annotations used for learning supervision may be biased, subjective, and wrong.</li>
+status?
+    <ul>
+      <li>As a supervisor/evaluator, to reward or penalise a confident learner?</li>
+    </ul>
+  </li>
+  <li>Open discussion: we show it’s fine for a learner to be confident towards a correct low-entropy status. 
+Then more future research attention should be paid to the definition of correct knowledge, as in general we accept, human annotations used for learning supervision may be biased, subjective, and wrong.</li>
+  <li>As a supervisor, before training multiple learners, to think about how to train one great learner first?
+    <ul>
+      <li>1st context: recently, many techniques about <strong>training multiple learners</strong> (co-training, mutual learning, knowledge distillation, adversarial training, etc) have been proposed.</li>
+      <li>2nd context: in our work, we work on <strong>how to train single learner better.</strong>
+</li>
+      <li>1st personal comment: training multiple learners is much more expensive and complex;</li>
+      <li>2nd personal comment: when training multiple learners collaboratively, if one learner does not perform well, it tends to hurt the other learners.</li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="noticeable-findings">Noticeable Findings</h2>
