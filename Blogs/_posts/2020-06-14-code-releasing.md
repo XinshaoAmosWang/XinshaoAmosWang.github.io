@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Code Releasing of Recent Work--Derivative Manipulation and IMAE
+title: Robust Deep Learning via Derivative Manipulation and IMAE
 description: >
   
 #image: /assets/img/blog/steve-harvey.jpg
