@@ -26,7 +26,7 @@ Conditions, e.g., Noisy Data and Sample Imbalance).
 
 * [Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks](../blogs/2020-06-07-Progressive-self-label-correction)
 
-* [Code Releasing of Recent Work--Derivative Manipulation and IMAE](../blogs/2020-06-14-code-releasing)
+* [Robust Deep Learning via Derivative Manipulation and IMAE](../blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE)
 
 
 * [Ranked List Loss for Deep Metric Learning](https://arxiv.org/pdf/1903.03238.pdf)
