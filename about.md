@@ -10,9 +10,9 @@ image: /assets/img/blog/steve-harvey.jpg
 {:.lead}
 
 * Machine Learning: Deep Metric Learning, Robust Representation Learning under Adverse
-Conditions, e.g., missing labels (unsupervised learning), noisy labels, sample imbalance etc.  
+Conditions, e.g., missing labels (semi-supervised learning), noisy labels, sample imbalance, etc.  
 
-* Computer Vision (Image/Video Recognition, Person Re-identification). 
+* Computer Vision: Image/Video Recognition, Person Re-identification. 
 
 * [Something new to come soon!]()
 
