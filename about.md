@@ -9,8 +9,8 @@ image: /assets/img/blog/steve-harvey.jpg
 ## Postdoc, University of Oxford. 
 {:.lead}
 
-* Machine Learning (Deep Metric Learning, Robust Representation Learning under Adverse
-Conditions, e.g., Noisy Data and Sample Imbalance). 
+* Machine Learning: Deep Metric Learning, Robust Representation Learning under Adverse
+Conditions, e.g., missing labels (unsupervised learning), noisy labels, sample imbalance etc.  
 
 * Computer Vision (Image/Video Recognition, Person Re-identification). 
 
