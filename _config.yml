@@ -54,8 +54,8 @@ author:
 menu:
   - title:             Blogs
     url:               /blogs/
-  - title:             PaperReading
-    url:               /paperlists/
+  - title:             ReadingNotes
+    url:               /readingnotes/
   - title:             Projects
     url:               /projects/
   #- title:             Resume
