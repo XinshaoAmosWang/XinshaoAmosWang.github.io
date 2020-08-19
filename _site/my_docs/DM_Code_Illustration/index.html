@@ -38,7 +38,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
   
 <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Derivative Manipulation for General Example Weighting | Postdoc@OxfordU</title>
-<meta name="generator" content="Jekyll v3.8.7" />
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Derivative Manipulation for General Example Weighting" />
 <meta name="author" content="XW" />
 <meta property="og:locale" content="en" />
@@ -217,7 +217,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
 As a young researcher, your interest and kind citation (star) will definitely mean a lot for me and my collaborators.<br />
 For any specific discussion or potential future collaboration, please feel free to contact me. 
 <br /></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{wang2019derivative,
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{wang2019derivative,
   title={Derivative Manipulation for General Example Weighting},
   author={Wang, Xinshao and Kodirov, Elyor and Hua, Yang and Robertson, Neil M},
   journal={arXiv preprint arXiv:1905.11233},
@@ -230,7 +230,7 @@ For any specific discussion or potential future collaboration, please feel free 
 
 <h2 id="command-for-visualising-the-repositorydirectory-tree-structure">Command for Visualising the Repository/Directory Tree Structure</h2>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd directory_name
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd directory_name
 tree
 </code></pre></div></div>
 
@@ -298,19 +298,19 @@ tree
 
     <ul>
       <li>Prepare testing data:
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cd CIFAR100_Data_Toolkit
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cd CIFAR100_Data_Toolkit
   matlab -nodisplay -nosplash -nodesktop -r "run('test_data_preparation.m');exit;" | tail -n +11
 </code></pre></div>        </div>
       </li>
       <li>Prepare training data (symmetric noise rate: 0.0, 0.2, 0.4, 0.6):
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  matlab -nodisplay -nosplash -nodesktop -r "run('train_data_preparationV2_noise_0_0.m');exit;" | tail -n +11
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  matlab -nodisplay -nosplash -nodesktop -r "run('train_data_preparationV2_noise_0_0.m');exit;" | tail -n +11
   matlab -nodisplay -nosplash -nodesktop -r "run('train_data_preparationV2_noise_0_2.m');exit;" | tail -n +11
   matlab -nodisplay -nosplash -nodesktop -r "run('train_data_preparationV2_noise_0_4.m');exit;" | tail -n +11
   matlab -nodisplay -nosplash -nodesktop -r "run('train_data_preparationV2_noise_0_6.m');exit;" | tail -n +11
 </code></pre></div>        </div>
       </li>
       <li>Copy data
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cd .. 
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cd .. 
   echo CIFAR100_ResNet44*/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TestImageDataCell.mat
   echo CIFAR100_ResNet44*/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TrainImageDataCell0.0.mat
   echo CIFAR100_ResNet44*/pre_pro_process | xargs -n 1 cp CIFAR100_Data_Toolkit/TrainImageDataCell0.2.mat
@@ -326,7 +326,7 @@ tree
     <p>Run the training and testing scripts in the training folder of a specific setting defined by its corresponding prototxt folder.</p>
 
     <p>For example,</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cd CIFAR100_ResNet44_V03_lambda0_5/train_Res44_USW_Beta06_lambda1_0.0
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  cd CIFAR100_ResNet44_V03_lambda0_5/train_Res44_USW_Beta06_lambda1_0.0
   matlab -nodisplay -nosplash -nodesktop -r "run('train.m');exit;" | tail -n +11
   matlab -nodisplay -nosplash -nodesktop -r "run('test.m');exit;" | tail -n +11
 </code></pre></div>    </div>

@@ -38,7 +38,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
   
 <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>I Love Learning and Applying Mathematics, Statistics! | Postdoc@OxfordU</title>
-<meta name="generator" content="Jekyll v3.8.7" />
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="I Love Learning and Applying Mathematics, Statistics!" />
 <meta name="author" content="XW" />
 <meta property="og:locale" content="en" />
@@ -283,8 +283,8 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
           <li>Variable = axis/component/one hyper-line</li>
           <li>Observations of this variable = points of this axis/hyper-line</li>
           <li>The observations of a variable = one vector of points in this line.</li>
-          <li><code class="MathJax_Preview">E(XY)=</code><script type="math/tex">E(XY)=</script> the dot product of two variables’ observation vector (multiple points for each variable)</li>
-          <li>If <code class="MathJax_Preview">X,Y</code><script type="math/tex">X,Y</script> are orthogonal, then for any point in <code class="MathJax_Preview">X</code><script type="math/tex">X</script> and any point in <code class="MathJax_Preview">Y</code><script type="math/tex">Y</script>, their dot product are zero, therefore, we have <code class="MathJax_Preview">E(XY) = 0</code><script type="math/tex">E(XY) = 0</script>.</li>
+          <li>\(E(XY)=\) the dot product of two variables’ observation vector (multiple points for each variable)</li>
+          <li>If \(X,Y\) are orthogonal, then for any point in \(X\) and any point in \(Y\), their dot product are zero, therefore, we have \(E(XY) = 0\).</li>
           <li>Diagonalisation (Orthogonal, Making them independent) =&gt;  Decorrelation
             <ul>
               <li>In this context, uncorrelation = independence.</li>
@@ -294,10 +294,10 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
       </li>
       <li>Uncorrelation (Orthogonalisaion) using Eigen vectors
         <ul>
-          <li><strong>Projection of a normal distribtion</strong> <code class="MathJax_Preview">X \sim \mathcal{N}(0,\,{\sigma_x}^2)</code><script type="math/tex">X \sim \mathcal{N}(0,\,{\sigma_x}^2)</script> to a standard normal distribution <code class="MathJax_Preview">\mathcal{N}(0,\,1)</code><script type="math/tex">\mathcal{N}(0,\,1)</script>:
+          <li><strong>Projection of a normal distribtion</strong> \(X \sim \mathcal{N}(0,\,{\sigma_x}^2)\) to a standard normal distribution \(\mathcal{N}(0,\,1)\):
             <ul>
-              <li><strong>the projected distribution</strong> is <code class="MathJax_Preview">\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)</code><script type="math/tex">\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)</script></li>
-              <li><code class="MathJax_Preview">\theta</code><script type="math/tex">\theta</script> determines their linear dependency: correlation coefficient=<code class="MathJax_Preview">\cos(\theta)</code><script type="math/tex">\cos(\theta)</script>.</li>
+              <li><strong>the projected distribution</strong> is \(\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)\)</li>
+              <li>\(\theta\) determines their linear dependency: correlation coefficient=\(\cos(\theta)\).</li>
             </ul>
           </li>
           <li>
@@ -322,7 +322,7 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
       </li>
       <li>In a high-dimensional space with orthogonal axises:
         <ul>
-          <li>Each axis is one independent event/variable. (Without losing generality, feel free to treat it as an unit normal distribution <code class="MathJax_Preview">~\sim \mathcal{N}(0,\,1)</code><script type="math/tex">~\sim \mathcal{N}(0,\,1)</script>)</li>
+          <li>Each axis is one independent event/variable. (Without losing generality, feel free to treat it as an unit normal distribution \(~\sim \mathcal{N}(0,\,1)\))</li>
           <li><strong>The sum of two independent normal random variables is also normal.</strong> However, if the two normal random variables are not independent, then their sum is not necessarily normal.</li>
           <li>
             <p>Then, the whole space becomes the combination (summarisation) of multiple independent normal random variables.</p>
@@ -339,33 +339,24 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
         </ul>
       </li>
       <li><strong>Dot product of two variable/axis</strong></li>
-      <li>Correlation = <code class="MathJax_Preview">\frac{Covariance(X_i, X_j)} { \sigma_i \times \sigma_j } \in [-1, 1]</code><script type="math/tex">\frac{Covariance(X_i, X_j)} { \sigma_i \times \sigma_j } \in [-1, 1]</script></li>
-      <li>For easier and intuitive understanding, looking at <code class="MathJax_Preview">\frac{(X_i - E(X_i))} { \sigma_i } \sim \mathcal{N}(0,\,1) = \mathbf{e}_i</code><script type="math/tex">\frac{(X_i - E(X_i))} { \sigma_i } \sim \mathcal{N}(0,\,1) = \mathbf{e}_i</script> and <code class="MathJax_Preview">\frac{(X_j - E(X_j))} { \sigma_j } \sim \mathcal{N}(0,\,1) = \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j</code><script type="math/tex">\frac{(X_j - E(X_j))} { \sigma_j } \sim \mathcal{N}(0,\,1) = \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j</script>
+      <li>Correlation = \(\frac{Covariance(X_i, X_j)} { \sigma_i \times \sigma_j } \in [-1, 1]\)</li>
+      <li>For easier and intuitive understanding, looking at \(\frac{(X_i - E(X_i))} { \sigma_i } \sim \mathcal{N}(0,\,1) = \mathbf{e}_i\) and \(\frac{(X_j - E(X_j))} { \sigma_j } \sim \mathcal{N}(0,\,1) = \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j\)
         <ul>
-          <li><code class="MathJax_Preview">\mathbf{e}_i \sim \mathcal{N}(0,\,1)</code><script type="math/tex">\mathbf{e}_i \sim \mathcal{N}(0,\,1)</script>, <code class="MathJax_Preview">\mathbf{e}_j \sim \mathcal{N}(0,\,1)</code><script type="math/tex">\mathbf{e}_j \sim \mathcal{N}(0,\,1)</script></li>
-          <li><code class="MathJax_Preview">\mathbf{e}_i \text{ and } \mathbf{e}_j</code><script type="math/tex">\mathbf{e}_i \text{ and } \mathbf{e}_j</script> are two variables in two orthogonal axises.</li>
-          <li>Correlation = <code class="MathJax_Preview">\lambda \in [-1, 1]</code><script type="math/tex">\lambda \in [-1, 1]</script></li>
-          <li>Covariance = <code class="MathJax_Preview">\lambda \sigma_i \sigma_j</code><script type="math/tex">\lambda \sigma_i \sigma_j</script></li>
+          <li>\(\mathbf{e}_i \sim \mathcal{N}(0,\,1)\), \(\mathbf{e}_j \sim \mathcal{N}(0,\,1)\)</li>
+          <li>\(\mathbf{e}_i \text{ and } \mathbf{e}_j\) are two variables in two orthogonal axises.</li>
+          <li>Correlation = \(\lambda \in [-1, 1]\)</li>
+          <li>Covariance = \(\lambda \sigma_i \sigma_j\)</li>
           <li>
-            <pre class="MathJax_Preview"><code>\begin{aligned}
+\[\begin{aligned}
 E\{\frac{(X_i - E(X_i))} { \sigma_i }  \frac{(X_j - E(X_j))} { \sigma_j } \} &amp;= E\{ \mathbf{e}_i \cdot \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j \} \\
 &amp;= \lambda E\{ \mathbf{e}_i \cdot \mathbf{e}_i  \} + \sqrt{(1-\lambda^2)} E\{ \mathbf{e}_i \cdot \mathbf{e}_j \} \\
 &amp;= \lambda .
-\end{aligned}</code></pre>
-            <script type="math/tex; mode=display">% <![CDATA[
-\begin{aligned}
-E\{\frac{(X_i - E(X_i))} { \sigma_i }  \frac{(X_j - E(X_j))} { \sigma_j } \} &= E\{ \mathbf{e}_i \cdot \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j \} \\
-&= \lambda E\{ \mathbf{e}_i \cdot \mathbf{e}_i  \} + \sqrt{(1-\lambda^2)} E\{ \mathbf{e}_i \cdot \mathbf{e}_j \} \\
-&= \lambda .
-\end{aligned} %]]></script>
+\end{aligned}\]
           </li>
           <li>
-            <pre class="MathJax_Preview"><code>\begin{aligned}
+\[\begin{aligned}
 E\{ {(X_i - E(X_i))}  \cdot {(X_j - E(X_j))}  \} =  \lambda  \sigma_i  \sigma_j.
-  \end{aligned}</code></pre>
-            <script type="math/tex; mode=display">\begin{aligned}
-E\{ {(X_i - E(X_i))}  \cdot {(X_j - E(X_j))}  \} =  \lambda  \sigma_i  \sigma_j.
-  \end{aligned}</script>
+  \end{aligned}\]
           </li>
         </ul>
       </li>
@@ -374,7 +365,7 @@ E\{ {(X_i - E(X_i))}  \cdot {(X_j - E(X_j))}  \} =  \lambda  \sigma_i  \sigma_j.
   <li><a href="https://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_and_independence">Correlation and dependence -1</a>
     <ul>
       <li>Correlation and dependencd are totally different concepts/terms for discribing two random variables.</li>
-      <li><strong>In the special case</strong> when <code class="MathJax_Preview">{\displaystyle X}</code><script type="math/tex">{\displaystyle X}</script> and <code class="MathJax_Preview">{\displaystyle Y}</code><script type="math/tex">{\displaystyle Y}</script> are jointly normal, uncorrelatedness is equivalent to independence.</li>
+      <li><strong>In the special case</strong> when \({\displaystyle X}\) and \({\displaystyle Y}\) are jointly normal, uncorrelatedness is equivalent to independence.</li>
     </ul>
   </li>
   <li><a href="https://www.probabilitycourse.com/chapter5/5_3_2_bivariate_normal_dist.php">Correlation and dependence-2-Bivariate Normal Distribution</a>
@@ -383,10 +374,10 @@ E\{ {(X_i - E(X_i))}  \cdot {(X_j - E(X_j))}  \} =  \lambda  \sigma_i  \sigma_j.
         <p>The sum of two independent normal random variables is also normal. However, <strong>if the two normal random variables are not independent, then their sum is not necessarily normal.</strong></p>
       </li>
       <li>
-        <p>If <code class="MathJax_Preview">X</code><script type="math/tex">X</script> and <code class="MathJax_Preview">Y</code><script type="math/tex">Y</script> are <strong>independent</strong>, <code class="MathJax_Preview">P(Y\|X)=P(Y) =&gt; E(XY)=E(X)E(Y) =&gt; Cov(X,Y)=E((X-E(X))(Y-E(Y)))=E(XY)-E(X)E(Y) = 0 =&gt;</code><script type="math/tex">P(Y\|X)=P(Y) => E(XY)=E(X)E(Y) => Cov(X,Y)=E((X-E(X))(Y-E(Y)))=E(XY)-E(X)E(Y) = 0 =></script><strong>Uncorrelated</strong>.</p>
+        <p>If \(X\) and \(Y\) are <strong>independent</strong>, \(P(Y\|X)=P(Y) =&gt; E(XY)=E(X)E(Y) =&gt; Cov(X,Y)=E((X-E(X))(Y-E(Y)))=E(XY)-E(X)E(Y) = 0 =&gt;\)<strong>Uncorrelated</strong>.</p>
       </li>
       <li>
-        <p>If <code class="MathJax_Preview">X</code><script type="math/tex">X</script> and <code class="MathJax_Preview">Y</code><script type="math/tex">Y</script> are uncorrelated, <code class="MathJax_Preview">Cov(X,Y)=0 =&gt; E(XY) = E(X)E(Y) =&gt; ?</code><script type="math/tex">Cov(X,Y)=0 => E(XY) = E(X)E(Y) => ?</script></p>
+        <p>If \(X\) and \(Y\) are uncorrelated, \(Cov(X,Y)=0 =&gt; E(XY) = E(X)E(Y) =&gt; ?\)</p>
         <ul>
           <li><a href="http://home.iitk.ac.in/~zeeshan/pdf/The%20Bivariate%20Normal%20Distribution.pdf">Zero Correlation Implies Independence</a></li>
         </ul>
@@ -406,7 +397,7 @@ correlation/dependency?</a></li>
   <li><a href="">Mahalanobis distance</a>
     <ul>
       <li>Transformation/projection to the orthogonal space, where one axis is an independent normal distribution</li>
-      <li>One each axis: compute the distance <code class="MathJax_Preview">\frac{(x-u)^T(x-u)}{\sigma^2}</code><script type="math/tex">\frac{(x-u)^T(x-u)}{\sigma^2}</script></li>
+      <li>One each axis: compute the distance \(\frac{(x-u)^T(x-u)}{\sigma^2}\)</li>
       <li>Summarise all the distances of all axises.</li>
     </ul>
   </li>
@@ -419,7 +410,7 @@ correlation/dependency?</a></li>
       <li>Covariance and correlation</li>
       <li>Bivariate Normal Distribution</li>
       <li>The sum of two <strong>independent</strong> normal distributions</li>
-      <li>Distance = <code class="MathJax_Preview">num \times standard~deviation</code><script type="math/tex">num \times standard~deviation</script>
+      <li>Distance = \(num \times standard~deviation\)
   =&gt; Mahalanobis distance</li>
       <li>Diagonalisation (Orthogonal, Making them independent) =&gt;  Decorrelation
         <ul>
@@ -430,10 +421,10 @@ correlation/dependency?</a></li>
   </li>
   <li>Uncorrelation (Orthogonalisaion) using Eigen vectors
     <ul>
-      <li><strong>Projection of a normal distribtion</strong> <code class="MathJax_Preview">X \sim \mathcal{N}(0,\,{\sigma_x}^2)</code><script type="math/tex">X \sim \mathcal{N}(0,\,{\sigma_x}^2)</script> to a standard normal distribution <code class="MathJax_Preview">\mathcal{N}(0,\,1)</code><script type="math/tex">\mathcal{N}(0,\,1)</script>:
+      <li><strong>Projection of a normal distribtion</strong> \(X \sim \mathcal{N}(0,\,{\sigma_x}^2)\) to a standard normal distribution \(\mathcal{N}(0,\,1)\):
         <ul>
-          <li><strong>the projected distribution</strong> is <code class="MathJax_Preview">\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)</code><script type="math/tex">\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)</script></li>
-          <li><code class="MathJax_Preview">\theta</code><script type="math/tex">\theta</script> determines their linear dependency: correlation coefficient=<code class="MathJax_Preview">\cos(\theta)</code><script type="math/tex">\cos(\theta)</script>.</li>
+          <li><strong>the projected distribution</strong> is \(\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)\)</li>
+          <li>\(\theta\) determines their linear dependency: correlation coefficient=\(\cos(\theta)\).</li>
         </ul>
       </li>
       <li>
@@ -454,7 +445,7 @@ correlation/dependency?</a></li>
           <li>Eigen value = sum of projected standard deviation.</li>
           <li><strong>Projection of a normal distribtion</strong>
             <ul>
-              <li><strong>the projected distribution</strong> is <code class="MathJax_Preview">\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)</code><script type="math/tex">\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)</script></li>
+              <li><strong>the projected distribution</strong> is \(\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)\)</li>
             </ul>
           </li>
         </ul>
@@ -467,7 +458,7 @@ correlation/dependency?</a></li>
       <li><a href="https://blogs.sas.com/content/iml/2012/02/02/detecting-outliers-in-sas-part-3-multivariate-location-and-scatter.html">Detecting outliers in SAS: Part 3: Multivariate location and scatter &amp; MCD: Robust estimation by subsampling</a></li>
       <li><a href="https://en.wikipedia.org/wiki/Sum_of_normally_distributed_random_variables">Sum of normally distributed random variables-Independent random variables</a></li>
       <li><a href="https://github.com.cnpmjs.org/XinshaoAmosWang/DerivativeManipulation/blob/master/OutlierDetection_RobustInference.pptx.pdf">Outlier, Anomaly, and Adversaries Detection using Mahalanobis distance</a></li>
-      <li>The Mahalanobis distance is a measure of the <strong>distance between a point <code class="MathJax_Preview">\mathrm{P}</code><script type="math/tex">\mathrm{P}</script> and a distribution <code class="MathJax_Preview">\mathbf{D}</code><script type="math/tex">\mathbf{D}</script>.</strong>
+      <li>The Mahalanobis distance is a measure of the <strong>distance between a point \(\mathrm{P}\) and a distribution \(\mathbf{D}\).</strong>
   It is a multi-dimensional generalization of the idea of measuring how many standard deviations away P is from the mean of D. This distance is zero if P is at the mean of D, and grows as P moves away from the mean along <strong>each principal component axis.</strong>
         <ul>
           <li>If each of these axes is re-scaled to have unit variance, then the Mahalanobis distance corresponds to standard Euclidean distance in the transformed space.</li>
@@ -475,7 +466,7 @@ correlation/dependency?</a></li>
         </ul>
       </li>
       <li>Mahalanobis distance is proportional, for a normal distribution, to the square root of the negative log likelihood (after adding a constant so the minimum is at zero).</li>
-      <li>This intuitive approach can be made quantitative by defining <strong>the normalized distance between the test point and the set to be <code class="MathJax_Preview">{\displaystyle {x-\mu } \over \sigma }</code><script type="math/tex">{\displaystyle {x-\mu } \over \sigma }</script></strong>. By plugging this into the normal distribution we can derive the probability of the test point belonging to the set.</li>
+      <li>This intuitive approach can be made quantitative by defining <strong>the normalized distance between the test point and the set to be \({\displaystyle {x-\mu } \over \sigma }\)</strong>. By plugging this into the normal distribution we can derive the probability of the test point belonging to the set.</li>
       <li>Were the distribution to be decidedly non-spherical, for instance ellipsoidal, then we would expect the probability of the test point belonging to the set to depend not only on the distance from the center of mass, but also on the direction. In those directions where the ellipsoid has a short axis the test point must be closer, while in those where the axis is long the test point can be further away from the center.</li>
       <li>The Mahalanobis distance is the distance of the test point from the center of mass <strong>divided by the width of the ellipsoid in the direction of the test point.</strong> (distance normalisation)</li>
     </ul>

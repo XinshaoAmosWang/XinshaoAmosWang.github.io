@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-08-19T19:10:29+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Postdoc@OxfordU</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. A ML/DL/AI Researcher
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-08-19T20:12:09+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Postdoc@OxfordU</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. A ML/DL/AI Researcher
 </subtitle><author><name>XW</name></author><entry><title type="html">Robust DL/ML</title><link href="http://localhost:4000/readingnotes/2020-08-05-RobustMLDL/" rel="alternate" type="text/html" title="Robust DL/ML" /><published>2020-08-05T00:00:00+01:00</published><updated>2020-08-05T00:00:00+01:00</updated><id>http://localhost:4000/readingnotes/RobustMLDL</id><content type="html" xml:base="http://localhost:4000/readingnotes/2020-08-05-RobustMLDL/">&lt;p&gt;In general, robust deep learning covers: missing labels (semisupervised learning); noisy labels (noise detection and correction); regularisation techniques; sample imbalance (long-tailed class distribution); adversarial learning; and so on.&lt;/p&gt;
 
 &lt;ol class=&quot;message&quot;&gt;
@@ -106,14 +106,14 @@ For any specific discussion or potential future collaboration, please feel free 
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Citation
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article{wang2019derivative,
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article{wang2019derivative,
   title={Derivative Manipulation for General Example Weighting},
   author={Wang, Xinshao and Kodirov, Elyor and Hua, Yang and Robertson, Neil M},
   journal={arXiv preprint arXiv:1905.11233},
   year={2019}
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article{wang2019imae,
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@article{wang2019imae,
   title={ {IMAE} for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude's Variance Matters},
   author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M},
   journal={arXiv preprint arXiv:1903.12141},
@@ -124,7 +124,7 @@ For any specific discussion or potential future collaboration, please feel free 
 &lt;/ol&gt;</content><author><name>XW</name></author><summary type="html">For source codes, the usage is conditioned on academic use only and kindness to cite our work: Derivative Manipulation and IMAE. As a young researcher, your interest and kind citation (star) will definitely mean a lot for me and my collaborators. For any specific discussion or potential future collaboration, please feel free to contact me.</summary></entry><entry><title type="html">Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks</title><link href="http://localhost:4000/blogs/2020-06-07-Progressive-self-label-correction/" rel="alternate" type="text/html" title="Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks" /><published>2020-06-07T00:00:00+01:00</published><updated>2020-06-07T00:00:00+01:00</updated><id>http://localhost:4000/blogs/Progressive-self-label-correction</id><content type="html" xml:base="http://localhost:4000/blogs/2020-06-07-Progressive-self-label-correction/">&lt;p&gt;For any specific discussion or potential future collaboration, please feel free to contact me. As a young
 researcher, your interest and star (citation) will mean a lot for me and my collaborators. &lt;br /&gt;
 Paper link: &lt;a href=&quot;https://arxiv.org/abs/2005.03788&quot;&gt;https://arxiv.org/abs/2005.03788&lt;/a&gt;&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Cite our work if you find it useful
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Cite our work if you find it useful
 @article{wang2020proselflc,
   title={ProSelfLC: Progressive Self Label Correction 
   for Training Robust Deep Neural Networks},
@@ -254,7 +254,7 @@ being free! &lt;br /&gt;
 &lt;img src=&quot;/imgs/figsProSelfLC/table_method_analysis.png&quot; alt=&quot;Table Method Analysis&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;in-self-lc-a-core-question-is-not-well-answered&quot;&gt;In Self LC, a core question is not well answered:&lt;/h2&gt;
-&lt;p class=&quot;message&quot;&gt;&lt;code class=&quot;MathJax_Preview&quot;&gt;\textit{How much do we trust a learner to leverage its knowledge?}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\textit{How much do we trust a learner to leverage its knowledge?}&lt;/script&gt;&lt;/p&gt;
+&lt;p class=&quot;message&quot;&gt;\(\textit{How much do we trust a learner to leverage its knowledge?}\)&lt;/p&gt;
 
 &lt;h2 id=&quot;underlying-principle-of-proselflc&quot;&gt;Underlying Principle of ProSelfLC&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;
@@ -281,21 +281,18 @@ This is surrounded by minimum entropy regularisation, which has been widely eval
 &lt;h2 id=&quot;design-reasons-of-proselflc&quot;&gt;Design Reasons of ProSelfLC&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;Regarding &lt;code class=&quot;MathJax_Preview&quot;&gt;g(t)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;g(t)&lt;/script&gt;, 
-in the earlier learning phase, i.e., &lt;code class=&quot;MathJax_Preview&quot;&gt;t &amp;lt; \Gamma/2&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
-t &lt; \Gamma/2 %]]&gt;&lt;/script&gt;, &lt;code class=&quot;MathJax_Preview&quot;&gt;g(t) &amp;lt; 0.5 \Rightarrow \epsilon_{\mathrm{ProSelfLC}} &amp;lt; 0.5, \forall \mathbf{p}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
-g(t) &lt; 0.5 \Rightarrow \epsilon_{\mathrm{ProSelfLC}} &lt; 0.5, \forall \mathbf{p} %]]&gt;&lt;/script&gt;, so that the human annotations dominate and ProSelfLC only modifies the similarity structure. This is because when a learner does not see the training data for enough times, we assume it is not trained well, which is the most elementary concept in deep learning. Most importantly, more randomness exists at the earlier phase, as a result, the learner may output a wrong confident prediction. In our design, &lt;code class=&quot;MathJax_Preview&quot;&gt;\epsilon_{\mathrm{ProSelfLC}} &amp;lt; 0.5, \forall \mathbf{p}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;% &lt;![CDATA[
-\epsilon_{\mathrm{ProSelfLC}} &lt; 0.5, \forall \mathbf{p} %]]&gt;&lt;/script&gt; can assuage the bad impact of such unexpected cases. &lt;br /&gt;
-When it comes to the later learning phase, i.e., &lt;code class=&quot;MathJax_Preview&quot;&gt;t &amp;gt; \Gamma/2&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;t &gt; \Gamma/2&lt;/script&gt;, we have &lt;code class=&quot;MathJax_Preview&quot;&gt;g(t) &amp;gt; 0.5&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;g(t) &gt; 0.5&lt;/script&gt;, which means overall we give enough credits to a learner as it has been trained for more than the half of total iterations.&lt;/p&gt;
+    &lt;p&gt;Regarding \(g(t)\), 
+in the earlier learning phase, i.e., \(t &amp;lt; \Gamma/2\), \(g(t) &amp;lt; 0.5 \Rightarrow \epsilon_{\mathrm{ProSelfLC}} &amp;lt; 0.5, \forall \mathbf{p}\), so that the human annotations dominate and ProSelfLC only modifies the similarity structure. This is because when a learner does not see the training data for enough times, we assume it is not trained well, which is the most elementary concept in deep learning. Most importantly, more randomness exists at the earlier phase, as a result, the learner may output a wrong confident prediction. In our design, \(\epsilon_{\mathrm{ProSelfLC}} &amp;lt; 0.5, \forall \mathbf{p}\) can assuage the bad impact of such unexpected cases. &lt;br /&gt;
+When it comes to the later learning phase, i.e., \(t &amp;gt; \Gamma/2\), we have \(g(t) &amp;gt; 0.5\), which means overall we give enough credits to a learner as it has been trained for more than the half of total iterations.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Regarding &lt;code class=&quot;MathJax_Preview&quot;&gt;l(\mathbf{p})&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;l(\mathbf{p})&lt;/script&gt;, we discuss its effect in the later learning phase when it becomes more meaningful. 
-If &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{p}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{p}&lt;/script&gt; is not confident, &lt;code class=&quot;MathJax_Preview&quot;&gt;l(\mathbf{p})&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;l(\mathbf{p})&lt;/script&gt; will be large, then &lt;code class=&quot;MathJax_Preview&quot;&gt;\epsilon_{\mathrm{ProSelfLC}}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\epsilon_{\mathrm{ProSelfLC}}&lt;/script&gt; will be small, which means we choose to trust a one-hot annotation more when its prediction is of high entropy, so that we can further reduce the entropy of output distributions}. In this case, ProSelfLC only modifies the similarity structure.
-Beyond, when &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{p}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{p}&lt;/script&gt; is highly confident, there are two fine cases: If &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{p}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{p}&lt;/script&gt; is consistent with &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{q}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{q}&lt;/script&gt; in the semantic class, ProSelfLC only modifies the similarity structure too; If they are inconsistent, ProSelfLC further corrects the semantic class of a human annotation.&lt;/p&gt;
+    &lt;p&gt;Regarding \(l(\mathbf{p})\), we discuss its effect in the later learning phase when it becomes more meaningful. 
+If \(\mathbf{p}\) is not confident, \(l(\mathbf{p})\) will be large, then \(\epsilon_{\mathrm{ProSelfLC}}\) will be small, which means we choose to trust a one-hot annotation more when its prediction is of high entropy, so that we can further reduce the entropy of output distributions}. In this case, ProSelfLC only modifies the similarity structure.
+Beyond, when \(\mathbf{p}\) is highly confident, there are two fine cases: If \(\mathbf{p}\) is consistent with \(\mathbf{q}\) in the semantic class, ProSelfLC only modifies the similarity structure too; If they are inconsistent, ProSelfLC further corrects the semantic class of a human annotation.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p class=&quot;figure&quot;&gt;Ablation study on the design of ProSelfLC, where &lt;code class=&quot;MathJax_Preview&quot;&gt;\epsilon_{\mathrm{ProSelfLC}}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\epsilon_{\mathrm{ProSelfLC}}&lt;/script&gt; consistently performs the best when multiple metrics are reported. 
+&lt;p class=&quot;figure&quot;&gt;Ablation study on the design of ProSelfLC, where \(\epsilon_{\mathrm{ProSelfLC}}\) consistently performs the best when multiple metrics are reported. 
 &lt;img src=&quot;/imgs/figsProSelfLC/ablation_study.png&quot; alt=&quot;Ablation study on the design of ProSelfLC&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
 
 &lt;p class=&quot;figure&quot;&gt;Case analysis on the design of ProSelfLC.
@@ -304,14 +301,14 @@ Beyond, when &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{p}&lt;/code&g
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Correct the similarity structure for every data point in all cases.&lt;/strong&gt;
-Given any data point &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{x}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{x}&lt;/script&gt;, by a convex combination of &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{p}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{p}&lt;/script&gt; and &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{q}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{q}&lt;/script&gt;, 
+Given any data point \(\mathbf{x}\), by a convex combination of \(\mathbf{p}\) and \(\mathbf{q}\), 
 we add the information about its relative probabilities of being different training classes using the knowledge of a learner itself.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;Revise the semantic class of an example only when the learning time is long and its prediction is confidently inconsistent.&lt;/strong&gt;
-As highlighted in Table 2, only when two conditions are met, we have &lt;code class=&quot;MathJax_Preview&quot;&gt;\epsilon_{\mathrm{ProSelfLC}}  &amp;gt; 0.5&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\epsilon_{\mathrm{ProSelfLC}}  &gt; 0.5&lt;/script&gt; and 
-&lt;code class=&quot;MathJax_Preview&quot;&gt;\argmax\nolimits_j \mathbf{p}(j|\mathbf{x}) \neq \argmax\nolimits_j \mathbf{q}(j|\mathbf{x})&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\argmax\nolimits_j \mathbf{p}(j|\mathbf{x}) \neq \argmax\nolimits_j \mathbf{q}(j|\mathbf{x})&lt;/script&gt;, then the semantic class in $\mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}$ is changed to be determined by &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{p}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{p}&lt;/script&gt;. 
-For example, we can deduce &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{p} = [0.95, 0.01, 0.04], \mathbf{q} = [0, 0, 1], \epsilon_{\mathrm{ProSelfLC}}=0.8 \Rightarrow \mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}=(1- \epsilon_{\mathrm{ProSelfLC}})  \mathbf{q}+\epsilon_{\mathrm{ProSelfLC}} \mathbf{p}=[0.76, 0.008, 0.232]&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{p} = [0.95, 0.01, 0.04], \mathbf{q} = [0, 0, 1], \epsilon_{\mathrm{ProSelfLC}}=0.8 \Rightarrow \mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}=(1- \epsilon_{\mathrm{ProSelfLC}})  \mathbf{q}+\epsilon_{\mathrm{ProSelfLC}} \mathbf{p}=[0.76, 0.008, 0.232]&lt;/script&gt;.&lt;br /&gt;
+As highlighted in Table 2, only when two conditions are met, we have \(\epsilon_{\mathrm{ProSelfLC}}  &amp;gt; 0.5\) and 
+\(\argmax\nolimits_j \mathbf{p}(j|\mathbf{x}) \neq \argmax\nolimits_j \mathbf{q}(j|\mathbf{x})\), then the semantic class in $\mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}$ is changed to be determined by \(\mathbf{p}\). 
+For example, we can deduce \(\mathbf{p} = [0.95, 0.01, 0.04], \mathbf{q} = [0, 0, 1], \epsilon_{\mathrm{ProSelfLC}}=0.8 \Rightarrow \mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}=(1- \epsilon_{\mathrm{ProSelfLC}})  \mathbf{q}+\epsilon_{\mathrm{ProSelfLC}} \mathbf{p}=[0.76, 0.008, 0.232]\).&lt;br /&gt;
 Theoretically, ProSelfLC also becomes robust against long time being exposed to the training data, so that early stopping is not required.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -328,7 +325,7 @@ Theoretically, ProSelfLC also becomes robust against long time being exposed to 
   &lt;li&gt;Deep models learn simple meaningful patterns before fitting noise, even when severe label noise exists in human annotations.
     &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1905.11233.pdf&quot;&gt;2019-Derivative manipulation for general example weighting&lt;/a&gt;
-        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  @article{wang2019derivative,
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  @article{wang2019derivative,
   title={Derivative Manipulation for
   General Example Weighting},
   author={Wang, Xinshao and Kodirov, Elyor and Hua, Yang and Robertson, Neil M},
@@ -338,7 +335,7 @@ Theoretically, ProSelfLC also becomes robust against long time being exposed to 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
       &lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1903.12141.pdf&quot;&gt;2019-IMAE for noise-robust learning: Mean absolute error does not treat examples equally and gradient magnitude’s variance matters.&lt;/a&gt;
-        &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  @article{wang2019imae,
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  @article{wang2019imae,
   title={ {IMAE} for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally 
   and Gradient Magnitude's Variance Matters},
   author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M},
@@ -449,11 +446,11 @@ believed.&lt;/li&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/2002.10857.pdf&quot;&gt;Circle Loss: A Unified Perspective of Pair Similarity Optimization&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;Motivation: aiming to maximize the within-class similarity &lt;code class=&quot;MathJax_Preview&quot;&gt;s_p&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;s_p&lt;/script&gt; and minimize the between-class similarity &lt;code class=&quot;MathJax_Preview&quot;&gt;s_n&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;s_n&lt;/script&gt;. We find a majority of loss functions, including the triplet loss and the softmax plus cross-entropy loss, embed &lt;code class=&quot;MathJax_Preview&quot;&gt;s_n&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;s_n&lt;/script&gt; and &lt;code class=&quot;MathJax_Preview&quot;&gt;s_p&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;s_p&lt;/script&gt; into similarity pairs and seek to reduce &lt;code class=&quot;MathJax_Preview&quot;&gt;(s_n − s_p)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;(s_n − s_p)&lt;/script&gt;. Such an optimization manner is inflexible, because the penalty strength on every single similarity score is restricted to be equal.&lt;/li&gt;
+      &lt;li&gt;Motivation: aiming to maximize the within-class similarity \(s_p\) and minimize the between-class similarity \(s_n\). We find a majority of loss functions, including the triplet loss and the softmax plus cross-entropy loss, embed \(s_n\) and \(s_p\) into similarity pairs and seek to reduce \((s_n − s_p)\). Such an optimization manner is inflexible, because the penalty strength on every single similarity score is restricted to be equal.&lt;/li&gt;
       &lt;li&gt;Our intuition is that if a similarity score deviates far from the optimum, it should be emphasized.&lt;/li&gt;
       &lt;li&gt;we simply re-weight each similarity to highlight the less-optimized similarity scores. It results in a Circle loss, which is named due to its circular decision boundary.&lt;/li&gt;
       &lt;li&gt;Circle loss offers a more flexible optimization approach towards a more definite convergence target,
-compared with the loss functions optimizing &lt;code class=&quot;MathJax_Preview&quot;&gt;(s_n − s_p)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;(s_n − s_p)&lt;/script&gt;.&lt;/li&gt;
+compared with the loss functions optimizing \((s_n − s_p)\).&lt;/li&gt;
       &lt;li&gt;(1)  a unified loss function; (2) flexible optimization; (3) definite convergence status.&lt;/li&gt;
       &lt;li&gt;Evaluation:
         &lt;ul&gt;
@@ -828,8 +825,8 @@ We conducted &lt;strong&gt;experiments for a total of 6 tasks from simple neural
           &lt;li&gt;Variable = axis/component/one hyper-line&lt;/li&gt;
           &lt;li&gt;Observations of this variable = points of this axis/hyper-line&lt;/li&gt;
           &lt;li&gt;The observations of a variable = one vector of points in this line.&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;MathJax_Preview&quot;&gt;E(XY)=&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;E(XY)=&lt;/script&gt; the dot product of two variables’ observation vector (multiple points for each variable)&lt;/li&gt;
-          &lt;li&gt;If &lt;code class=&quot;MathJax_Preview&quot;&gt;X,Y&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;X,Y&lt;/script&gt; are orthogonal, then for any point in &lt;code class=&quot;MathJax_Preview&quot;&gt;X&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and any point in &lt;code class=&quot;MathJax_Preview&quot;&gt;Y&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt;, their dot product are zero, therefore, we have &lt;code class=&quot;MathJax_Preview&quot;&gt;E(XY) = 0&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;E(XY) = 0&lt;/script&gt;.&lt;/li&gt;
+          &lt;li&gt;\(E(XY)=\) the dot product of two variables’ observation vector (multiple points for each variable)&lt;/li&gt;
+          &lt;li&gt;If \(X,Y\) are orthogonal, then for any point in \(X\) and any point in \(Y\), their dot product are zero, therefore, we have \(E(XY) = 0\).&lt;/li&gt;
           &lt;li&gt;Diagonalisation (Orthogonal, Making them independent) =&amp;gt;  Decorrelation
             &lt;ul&gt;
               &lt;li&gt;In this context, uncorrelation = independence.&lt;/li&gt;
@@ -839,10 +836,10 @@ We conducted &lt;strong&gt;experiments for a total of 6 tasks from simple neural
       &lt;/li&gt;
       &lt;li&gt;Uncorrelation (Orthogonalisaion) using Eigen vectors
         &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;Projection of a normal distribtion&lt;/strong&gt; &lt;code class=&quot;MathJax_Preview&quot;&gt;X \sim \mathcal{N}(0,\,{\sigma_x}^2)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;X \sim \mathcal{N}(0,\,{\sigma_x}^2)&lt;/script&gt; to a standard normal distribution &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathcal{N}(0,\,1)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathcal{N}(0,\,1)&lt;/script&gt;:
+          &lt;li&gt;&lt;strong&gt;Projection of a normal distribtion&lt;/strong&gt; \(X \sim \mathcal{N}(0,\,{\sigma_x}^2)\) to a standard normal distribution \(\mathcal{N}(0,\,1)\):
             &lt;ul&gt;
-              &lt;li&gt;&lt;strong&gt;the projected distribution&lt;/strong&gt; is &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)&lt;/script&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;code class=&quot;MathJax_Preview&quot;&gt;\theta&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\theta&lt;/script&gt; determines their linear dependency: correlation coefficient=&lt;code class=&quot;MathJax_Preview&quot;&gt;\cos(\theta)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\cos(\theta)&lt;/script&gt;.&lt;/li&gt;
+              &lt;li&gt;&lt;strong&gt;the projected distribution&lt;/strong&gt; is \(\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)\)&lt;/li&gt;
+              &lt;li&gt;\(\theta\) determines their linear dependency: correlation coefficient=\(\cos(\theta)\).&lt;/li&gt;
             &lt;/ul&gt;
           &lt;/li&gt;
           &lt;li&gt;
@@ -867,7 +864,7 @@ We conducted &lt;strong&gt;experiments for a total of 6 tasks from simple neural
       &lt;/li&gt;
       &lt;li&gt;In a high-dimensional space with orthogonal axises:
         &lt;ul&gt;
-          &lt;li&gt;Each axis is one independent event/variable. (Without losing generality, feel free to treat it as an unit normal distribution &lt;code class=&quot;MathJax_Preview&quot;&gt;~\sim \mathcal{N}(0,\,1)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;~\sim \mathcal{N}(0,\,1)&lt;/script&gt;)&lt;/li&gt;
+          &lt;li&gt;Each axis is one independent event/variable. (Without losing generality, feel free to treat it as an unit normal distribution \(~\sim \mathcal{N}(0,\,1)\))&lt;/li&gt;
           &lt;li&gt;&lt;strong&gt;The sum of two independent normal random variables is also normal.&lt;/strong&gt; However, if the two normal random variables are not independent, then their sum is not necessarily normal.&lt;/li&gt;
           &lt;li&gt;
             &lt;p&gt;Then, the whole space becomes the combination (summarisation) of multiple independent normal random variables.&lt;/p&gt;
@@ -884,33 +881,24 @@ We conducted &lt;strong&gt;experiments for a total of 6 tasks from simple neural
         &lt;/ul&gt;
       &lt;/li&gt;
       &lt;li&gt;&lt;strong&gt;Dot product of two variable/axis&lt;/strong&gt;&lt;/li&gt;
-      &lt;li&gt;Correlation = &lt;code class=&quot;MathJax_Preview&quot;&gt;\frac{Covariance(X_i, X_j)} { \sigma_i \times \sigma_j } \in [-1, 1]&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\frac{Covariance(X_i, X_j)} { \sigma_i \times \sigma_j } \in [-1, 1]&lt;/script&gt;&lt;/li&gt;
-      &lt;li&gt;For easier and intuitive understanding, looking at &lt;code class=&quot;MathJax_Preview&quot;&gt;\frac{(X_i - E(X_i))} { \sigma_i } \sim \mathcal{N}(0,\,1) = \mathbf{e}_i&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\frac{(X_i - E(X_i))} { \sigma_i } \sim \mathcal{N}(0,\,1) = \mathbf{e}_i&lt;/script&gt; and &lt;code class=&quot;MathJax_Preview&quot;&gt;\frac{(X_j - E(X_j))} { \sigma_j } \sim \mathcal{N}(0,\,1) = \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\frac{(X_j - E(X_j))} { \sigma_j } \sim \mathcal{N}(0,\,1) = \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j&lt;/script&gt;
+      &lt;li&gt;Correlation = \(\frac{Covariance(X_i, X_j)} { \sigma_i \times \sigma_j } \in [-1, 1]\)&lt;/li&gt;
+      &lt;li&gt;For easier and intuitive understanding, looking at \(\frac{(X_i - E(X_i))} { \sigma_i } \sim \mathcal{N}(0,\,1) = \mathbf{e}_i\) and \(\frac{(X_j - E(X_j))} { \sigma_j } \sim \mathcal{N}(0,\,1) = \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j\)
         &lt;ul&gt;
-          &lt;li&gt;&lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{e}_i \sim \mathcal{N}(0,\,1)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{e}_i \sim \mathcal{N}(0,\,1)&lt;/script&gt;, &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{e}_j \sim \mathcal{N}(0,\,1)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{e}_j \sim \mathcal{N}(0,\,1)&lt;/script&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{e}_i \text{ and } \mathbf{e}_j&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{e}_i \text{ and } \mathbf{e}_j&lt;/script&gt; are two variables in two orthogonal axises.&lt;/li&gt;
-          &lt;li&gt;Correlation = &lt;code class=&quot;MathJax_Preview&quot;&gt;\lambda \in [-1, 1]&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda \in [-1, 1]&lt;/script&gt;&lt;/li&gt;
-          &lt;li&gt;Covariance = &lt;code class=&quot;MathJax_Preview&quot;&gt;\lambda \sigma_i \sigma_j&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\lambda \sigma_i \sigma_j&lt;/script&gt;&lt;/li&gt;
+          &lt;li&gt;\(\mathbf{e}_i \sim \mathcal{N}(0,\,1)\), \(\mathbf{e}_j \sim \mathcal{N}(0,\,1)\)&lt;/li&gt;
+          &lt;li&gt;\(\mathbf{e}_i \text{ and } \mathbf{e}_j\) are two variables in two orthogonal axises.&lt;/li&gt;
+          &lt;li&gt;Correlation = \(\lambda \in [-1, 1]\)&lt;/li&gt;
+          &lt;li&gt;Covariance = \(\lambda \sigma_i \sigma_j\)&lt;/li&gt;
           &lt;li&gt;
-            &lt;pre class=&quot;MathJax_Preview&quot;&gt;&lt;code&gt;\begin{aligned}
+\[\begin{aligned}
 E\{\frac{(X_i - E(X_i))} { \sigma_i }  \frac{(X_j - E(X_j))} { \sigma_j } \} &amp;amp;= E\{ \mathbf{e}_i \cdot \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j \} \\
 &amp;amp;= \lambda E\{ \mathbf{e}_i \cdot \mathbf{e}_i  \} + \sqrt{(1-\lambda^2)} E\{ \mathbf{e}_i \cdot \mathbf{e}_j \} \\
 &amp;amp;= \lambda .
-\end{aligned}&lt;/code&gt;&lt;/pre&gt;
-            &lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
-\begin{aligned}
-E\{\frac{(X_i - E(X_i))} { \sigma_i }  \frac{(X_j - E(X_j))} { \sigma_j } \} &amp;= E\{ \mathbf{e}_i \cdot \lambda\mathbf{e}_i + \sqrt{(1-\lambda^2)} \mathbf{e}_j \} \\
-&amp;= \lambda E\{ \mathbf{e}_i \cdot \mathbf{e}_i  \} + \sqrt{(1-\lambda^2)} E\{ \mathbf{e}_i \cdot \mathbf{e}_j \} \\
-&amp;= \lambda .
-\end{aligned} %]]&gt;&lt;/script&gt;
+\end{aligned}\]
           &lt;/li&gt;
           &lt;li&gt;
-            &lt;pre class=&quot;MathJax_Preview&quot;&gt;&lt;code&gt;\begin{aligned}
+\[\begin{aligned}
 E\{ {(X_i - E(X_i))}  \cdot {(X_j - E(X_j))}  \} =  \lambda  \sigma_i  \sigma_j.
-  \end{aligned}&lt;/code&gt;&lt;/pre&gt;
-            &lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{aligned}
-E\{ {(X_i - E(X_i))}  \cdot {(X_j - E(X_j))}  \} =  \lambda  \sigma_i  \sigma_j.
-  \end{aligned}&lt;/script&gt;
+  \end{aligned}\]
           &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
@@ -919,7 +907,7 @@ E\{ {(X_i - E(X_i))}  \cdot {(X_j - E(X_j))}  \} =  \lambda  \sigma_i  \sigma_j.
   &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Correlation_and_dependence#Correlation_and_independence&quot;&gt;Correlation and dependence -1&lt;/a&gt;
     &lt;ul&gt;
       &lt;li&gt;Correlation and dependencd are totally different concepts/terms for discribing two random variables.&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;In the special case&lt;/strong&gt; when &lt;code class=&quot;MathJax_Preview&quot;&gt;{\displaystyle X}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;{\displaystyle X}&lt;/script&gt; and &lt;code class=&quot;MathJax_Preview&quot;&gt;{\displaystyle Y}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;{\displaystyle Y}&lt;/script&gt; are jointly normal, uncorrelatedness is equivalent to independence.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;In the special case&lt;/strong&gt; when \({\displaystyle X}\) and \({\displaystyle Y}\) are jointly normal, uncorrelatedness is equivalent to independence.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.probabilitycourse.com/chapter5/5_3_2_bivariate_normal_dist.php&quot;&gt;Correlation and dependence-2-Bivariate Normal Distribution&lt;/a&gt;
@@ -928,10 +916,10 @@ E\{ {(X_i - E(X_i))}  \cdot {(X_j - E(X_j))}  \} =  \lambda  \sigma_i  \sigma_j.
         &lt;p&gt;The sum of two independent normal random variables is also normal. However, &lt;strong&gt;if the two normal random variables are not independent, then their sum is not necessarily normal.&lt;/strong&gt;&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;If &lt;code class=&quot;MathJax_Preview&quot;&gt;X&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and &lt;code class=&quot;MathJax_Preview&quot;&gt;Y&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; are &lt;strong&gt;independent&lt;/strong&gt;, &lt;code class=&quot;MathJax_Preview&quot;&gt;P(Y\|X)=P(Y) =&amp;gt; E(XY)=E(X)E(Y) =&amp;gt; Cov(X,Y)=E((X-E(X))(Y-E(Y)))=E(XY)-E(X)E(Y) = 0 =&amp;gt;&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;P(Y\|X)=P(Y) =&gt; E(XY)=E(X)E(Y) =&gt; Cov(X,Y)=E((X-E(X))(Y-E(Y)))=E(XY)-E(X)E(Y) = 0 =&gt;&lt;/script&gt;&lt;strong&gt;Uncorrelated&lt;/strong&gt;.&lt;/p&gt;
+        &lt;p&gt;If \(X\) and \(Y\) are &lt;strong&gt;independent&lt;/strong&gt;, \(P(Y\|X)=P(Y) =&amp;gt; E(XY)=E(X)E(Y) =&amp;gt; Cov(X,Y)=E((X-E(X))(Y-E(Y)))=E(XY)-E(X)E(Y) = 0 =&amp;gt;\)&lt;strong&gt;Uncorrelated&lt;/strong&gt;.&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;If &lt;code class=&quot;MathJax_Preview&quot;&gt;X&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; and &lt;code class=&quot;MathJax_Preview&quot;&gt;Y&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;Y&lt;/script&gt; are uncorrelated, &lt;code class=&quot;MathJax_Preview&quot;&gt;Cov(X,Y)=0 =&amp;gt; E(XY) = E(X)E(Y) =&amp;gt; ?&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;Cov(X,Y)=0 =&gt; E(XY) = E(X)E(Y) =&gt; ?&lt;/script&gt;&lt;/p&gt;
+        &lt;p&gt;If \(X\) and \(Y\) are uncorrelated, \(Cov(X,Y)=0 =&amp;gt; E(XY) = E(X)E(Y) =&amp;gt; ?\)&lt;/p&gt;
         &lt;ul&gt;
           &lt;li&gt;&lt;a href=&quot;http://home.iitk.ac.in/~zeeshan/pdf/The%20Bivariate%20Normal%20Distribution.pdf&quot;&gt;Zero Correlation Implies Independence&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
@@ -951,7 +939,7 @@ correlation/dependency?&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;&quot;&gt;Mahalanobis distance&lt;/a&gt;
     &lt;ul&gt;
       &lt;li&gt;Transformation/projection to the orthogonal space, where one axis is an independent normal distribution&lt;/li&gt;
-      &lt;li&gt;One each axis: compute the distance &lt;code class=&quot;MathJax_Preview&quot;&gt;\frac{(x-u)^T(x-u)}{\sigma^2}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\frac{(x-u)^T(x-u)}{\sigma^2}&lt;/script&gt;&lt;/li&gt;
+      &lt;li&gt;One each axis: compute the distance \(\frac{(x-u)^T(x-u)}{\sigma^2}\)&lt;/li&gt;
       &lt;li&gt;Summarise all the distances of all axises.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -964,7 +952,7 @@ correlation/dependency?&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;Covariance and correlation&lt;/li&gt;
       &lt;li&gt;Bivariate Normal Distribution&lt;/li&gt;
       &lt;li&gt;The sum of two &lt;strong&gt;independent&lt;/strong&gt; normal distributions&lt;/li&gt;
-      &lt;li&gt;Distance = &lt;code class=&quot;MathJax_Preview&quot;&gt;num \times standard~deviation&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;num \times standard~deviation&lt;/script&gt;
+      &lt;li&gt;Distance = \(num \times standard~deviation\)
   =&amp;gt; Mahalanobis distance&lt;/li&gt;
       &lt;li&gt;Diagonalisation (Orthogonal, Making them independent) =&amp;gt;  Decorrelation
         &lt;ul&gt;
@@ -975,10 +963,10 @@ correlation/dependency?&lt;/a&gt;&lt;/li&gt;
   &lt;/li&gt;
   &lt;li&gt;Uncorrelation (Orthogonalisaion) using Eigen vectors
     &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Projection of a normal distribtion&lt;/strong&gt; &lt;code class=&quot;MathJax_Preview&quot;&gt;X \sim \mathcal{N}(0,\,{\sigma_x}^2)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;X \sim \mathcal{N}(0,\,{\sigma_x}^2)&lt;/script&gt; to a standard normal distribution &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathcal{N}(0,\,1)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathcal{N}(0,\,1)&lt;/script&gt;:
+      &lt;li&gt;&lt;strong&gt;Projection of a normal distribtion&lt;/strong&gt; \(X \sim \mathcal{N}(0,\,{\sigma_x}^2)\) to a standard normal distribution \(\mathcal{N}(0,\,1)\):
         &lt;ul&gt;
-          &lt;li&gt;&lt;strong&gt;the projected distribution&lt;/strong&gt; is &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)&lt;/script&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;code class=&quot;MathJax_Preview&quot;&gt;\theta&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\theta&lt;/script&gt; determines their linear dependency: correlation coefficient=&lt;code class=&quot;MathJax_Preview&quot;&gt;\cos(\theta)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\cos(\theta)&lt;/script&gt;.&lt;/li&gt;
+          &lt;li&gt;&lt;strong&gt;the projected distribution&lt;/strong&gt; is \(\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)\)&lt;/li&gt;
+          &lt;li&gt;\(\theta\) determines their linear dependency: correlation coefficient=\(\cos(\theta)\).&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
       &lt;li&gt;
@@ -999,7 +987,7 @@ correlation/dependency?&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;Eigen value = sum of projected standard deviation.&lt;/li&gt;
           &lt;li&gt;&lt;strong&gt;Projection of a normal distribtion&lt;/strong&gt;
             &lt;ul&gt;
-              &lt;li&gt;&lt;strong&gt;the projected distribution&lt;/strong&gt; is &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)&lt;/script&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;strong&gt;the projected distribution&lt;/strong&gt; is \(\mathcal{N}(0,\,\{\cos(\theta) \times \sigma_x \times 1\}^2)\)&lt;/li&gt;
             &lt;/ul&gt;
           &lt;/li&gt;
         &lt;/ul&gt;
@@ -1012,7 +1000,7 @@ correlation/dependency?&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;https://blogs.sas.com/content/iml/2012/02/02/detecting-outliers-in-sas-part-3-multivariate-location-and-scatter.html&quot;&gt;Detecting outliers in SAS: Part 3: Multivariate location and scatter &amp;amp; MCD: Robust estimation by subsampling&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Sum_of_normally_distributed_random_variables&quot;&gt;Sum of normally distributed random variables-Independent random variables&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;https://github.com.cnpmjs.org/XinshaoAmosWang/DerivativeManipulation/blob/master/OutlierDetection_RobustInference.pptx.pdf&quot;&gt;Outlier, Anomaly, and Adversaries Detection using Mahalanobis distance&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;The Mahalanobis distance is a measure of the &lt;strong&gt;distance between a point &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathrm{P}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathrm{P}&lt;/script&gt; and a distribution &lt;code class=&quot;MathJax_Preview&quot;&gt;\mathbf{D}&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;\mathbf{D}&lt;/script&gt;.&lt;/strong&gt;
+      &lt;li&gt;The Mahalanobis distance is a measure of the &lt;strong&gt;distance between a point \(\mathrm{P}\) and a distribution \(\mathbf{D}\).&lt;/strong&gt;
   It is a multi-dimensional generalization of the idea of measuring how many standard deviations away P is from the mean of D. This distance is zero if P is at the mean of D, and grows as P moves away from the mean along &lt;strong&gt;each principal component axis.&lt;/strong&gt;
         &lt;ul&gt;
           &lt;li&gt;If each of these axes is re-scaled to have unit variance, then the Mahalanobis distance corresponds to standard Euclidean distance in the transformed space.&lt;/li&gt;
@@ -1020,7 +1008,7 @@ correlation/dependency?&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
       &lt;li&gt;Mahalanobis distance is proportional, for a normal distribution, to the square root of the negative log likelihood (after adding a constant so the minimum is at zero).&lt;/li&gt;
-      &lt;li&gt;This intuitive approach can be made quantitative by defining &lt;strong&gt;the normalized distance between the test point and the set to be &lt;code class=&quot;MathJax_Preview&quot;&gt;{\displaystyle {x-\mu } \over \sigma }&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;{\displaystyle {x-\mu } \over \sigma }&lt;/script&gt;&lt;/strong&gt;. By plugging this into the normal distribution we can derive the probability of the test point belonging to the set.&lt;/li&gt;
+      &lt;li&gt;This intuitive approach can be made quantitative by defining &lt;strong&gt;the normalized distance between the test point and the set to be \({\displaystyle {x-\mu } \over \sigma }\)&lt;/strong&gt;. By plugging this into the normal distribution we can derive the probability of the test point belonging to the set.&lt;/li&gt;
       &lt;li&gt;Were the distribution to be decidedly non-spherical, for instance ellipsoidal, then we would expect the probability of the test point belonging to the set to depend not only on the distance from the center of mass, but also on the direction. In those directions where the ellipsoid has a short axis the test point must be closer, while in those where the axis is long the test point can be further away from the center.&lt;/li&gt;
       &lt;li&gt;The Mahalanobis distance is the distance of the test point from the center of mass &lt;strong&gt;divided by the width of the ellipsoid in the direction of the test point.&lt;/strong&gt; (distance normalisation)&lt;/li&gt;
     &lt;/ul&gt;
@@ -1092,13 +1080,13 @@ unsuitable for online learning.&lt;/li&gt;
 &lt;h3 id=&quot;what-am-i-working-on-now-discussions-are-welcome&quot;&gt;What am I working on now? Discussions are Welcome!&lt;/h3&gt;
 &lt;ul class=&quot;message&quot;&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;../2020-02-18-code-releasing&quot;&gt;Interpreting &lt;code class=&quot;MathJax_Preview&quot;&gt;p(y\|x)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;p(y\|x)&lt;/script&gt; and modelling example weighting&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;../2020-02-18-code-releasing&quot;&gt;Interpreting \(p(y\|x)\) and modelling example weighting&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Going to stop treating &lt;code class=&quot;MathJax_Preview&quot;&gt;p(y\|x)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;p(y\|x)&lt;/script&gt; as a classfication confidence metric, since it is determinstic. &lt;code class=&quot;MathJax_Preview&quot;&gt;p(y\|x)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;p(y\|x)&lt;/script&gt;  is not for deciding whether certain or uncertain.&lt;/p&gt;
+    &lt;p&gt;Going to stop treating \(p(y\|x)\) as a classfication confidence metric, since it is determinstic. \(p(y\|x)\)  is not for deciding whether certain or uncertain.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;code class=&quot;MathJax_Preview&quot;&gt;p(y\|x)&lt;/code&gt;&lt;script type=&quot;math/tex&quot;&gt;p(y\|x)&lt;/script&gt; is good as a metric of whether x matches y, though not a good metric indicating whether x is blur or not.&lt;/p&gt;
+    &lt;p&gt;\(p(y\|x)\) is good as a metric of whether x matches y, though not a good metric indicating whether x is blur or not.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Utilities of Uncertainties&lt;/p&gt;

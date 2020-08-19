@@ -38,7 +38,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
   
 <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks | Postdoc@OxfordU</title>
-<meta name="generator" content="Jekyll v3.8.7" />
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks" />
 <meta name="author" content="XW" />
 <meta property="og:locale" content="en" />
@@ -247,7 +247,7 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
     <p>For any specific discussion or potential future collaboration, please feel free to contact me. As a young
 researcher, your interest and star (citation) will mean a lot for me and my collaborators. <br>
 Paper link: <a href="https://arxiv.org/abs/2005.03788">https://arxiv.org/abs/2005.03788</a></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cite our work if you find it useful
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cite our work if you find it useful
 @article{wang2020proselflc,
   title={ProSelfLC: Progressive Self Label Correction 
   for Training Robust Deep Neural Networks},
@@ -397,7 +397,7 @@ being free! <br>
 </p>
 
 <h2 id="in-self-lc-a-core-question-is-not-well-answered">In Self LC, a core question is not well answered:</h2>
-<p class="message"><code class="MathJax_Preview">\textit{How much do we trust a learner to leverage its knowledge?}</code><script type="math/tex">\textit{How much do we trust a learner to leverage its knowledge?}</script></p>
+<p class="message">\(\textit{How much do we trust a learner to leverage its knowledge?}\)</p>
 
 <h2 id="underlying-principle-of-proselflc">Underlying Principle of ProSelfLC</h2>
 <ul class="message">
@@ -433,21 +433,18 @@ This is surrounded by minimum entropy regularisation, which has been widely eval
 <h2 id="design-reasons-of-proselflc">Design Reasons of ProSelfLC</h2>
 <ul>
   <li>
-    <p>Regarding <code class="MathJax_Preview">g(t)</code><script type="math/tex">g(t)</script>, 
-in the earlier learning phase, i.e., <code class="MathJax_Preview">t &lt; \Gamma/2</code><script type="math/tex">% <![CDATA[
-t < \Gamma/2 %]]></script>, <code class="MathJax_Preview">g(t) &lt; 0.5 \Rightarrow \epsilon_{\mathrm{ProSelfLC}} &lt; 0.5, \forall \mathbf{p}</code><script type="math/tex">% <![CDATA[
-g(t) < 0.5 \Rightarrow \epsilon_{\mathrm{ProSelfLC}} < 0.5, \forall \mathbf{p} %]]></script>, so that the human annotations dominate and ProSelfLC only modifies the similarity structure. This is because when a learner does not see the training data for enough times, we assume it is not trained well, which is the most elementary concept in deep learning. Most importantly, more randomness exists at the earlier phase, as a result, the learner may output a wrong confident prediction. In our design, <code class="MathJax_Preview">\epsilon_{\mathrm{ProSelfLC}} &lt; 0.5, \forall \mathbf{p}</code><script type="math/tex">% <![CDATA[
-\epsilon_{\mathrm{ProSelfLC}} < 0.5, \forall \mathbf{p} %]]></script> can assuage the bad impact of such unexpected cases. <br>
-When it comes to the later learning phase, i.e., <code class="MathJax_Preview">t &gt; \Gamma/2</code><script type="math/tex">t > \Gamma/2</script>, we have <code class="MathJax_Preview">g(t) &gt; 0.5</code><script type="math/tex">g(t) > 0.5</script>, which means overall we give enough credits to a learner as it has been trained for more than the half of total iterations.</p>
+    <p>Regarding \(g(t)\), 
+in the earlier learning phase, i.e., \(t &lt; \Gamma/2\), \(g(t) &lt; 0.5 \Rightarrow \epsilon_{\mathrm{ProSelfLC}} &lt; 0.5, \forall \mathbf{p}\), so that the human annotations dominate and ProSelfLC only modifies the similarity structure. This is because when a learner does not see the training data for enough times, we assume it is not trained well, which is the most elementary concept in deep learning. Most importantly, more randomness exists at the earlier phase, as a result, the learner may output a wrong confident prediction. In our design, \(\epsilon_{\mathrm{ProSelfLC}} &lt; 0.5, \forall \mathbf{p}\) can assuage the bad impact of such unexpected cases. <br>
+When it comes to the later learning phase, i.e., \(t &gt; \Gamma/2\), we have \(g(t) &gt; 0.5\), which means overall we give enough credits to a learner as it has been trained for more than the half of total iterations.</p>
   </li>
   <li>
-    <p>Regarding <code class="MathJax_Preview">l(\mathbf{p})</code><script type="math/tex">l(\mathbf{p})</script>, we discuss its effect in the later learning phase when it becomes more meaningful. 
-If <code class="MathJax_Preview">\mathbf{p}</code><script type="math/tex">\mathbf{p}</script> is not confident, <code class="MathJax_Preview">l(\mathbf{p})</code><script type="math/tex">l(\mathbf{p})</script> will be large, then <code class="MathJax_Preview">\epsilon_{\mathrm{ProSelfLC}}</code><script type="math/tex">\epsilon_{\mathrm{ProSelfLC}}</script> will be small, which means we choose to trust a one-hot annotation more when its prediction is of high entropy, so that we can further reduce the entropy of output distributions}. In this case, ProSelfLC only modifies the similarity structure.
-Beyond, when <code class="MathJax_Preview">\mathbf{p}</code><script type="math/tex">\mathbf{p}</script> is highly confident, there are two fine cases: If <code class="MathJax_Preview">\mathbf{p}</code><script type="math/tex">\mathbf{p}</script> is consistent with <code class="MathJax_Preview">\mathbf{q}</code><script type="math/tex">\mathbf{q}</script> in the semantic class, ProSelfLC only modifies the similarity structure too; If they are inconsistent, ProSelfLC further corrects the semantic class of a human annotation.</p>
+    <p>Regarding \(l(\mathbf{p})\), we discuss its effect in the later learning phase when it becomes more meaningful. 
+If \(\mathbf{p}\) is not confident, \(l(\mathbf{p})\) will be large, then \(\epsilon_{\mathrm{ProSelfLC}}\) will be small, which means we choose to trust a one-hot annotation more when its prediction is of high entropy, so that we can further reduce the entropy of output distributions}. In this case, ProSelfLC only modifies the similarity structure.
+Beyond, when \(\mathbf{p}\) is highly confident, there are two fine cases: If \(\mathbf{p}\) is consistent with \(\mathbf{q}\) in the semantic class, ProSelfLC only modifies the similarity structure too; If they are inconsistent, ProSelfLC further corrects the semantic class of a human annotation.</p>
   </li>
 </ul>
 
-<p class="figure">Ablation study on the design of ProSelfLC, where <code class="MathJax_Preview">\epsilon_{\mathrm{ProSelfLC}}</code><script type="math/tex">\epsilon_{\mathrm{ProSelfLC}}</script> consistently performs the best when multiple metrics are reported. 
+<p class="figure">Ablation study on the design of ProSelfLC, where \(\epsilon_{\mathrm{ProSelfLC}}\) consistently performs the best when multiple metrics are reported. 
 <hy-img root-margin="512px" src="/imgs/figsProSelfLC/ablation_study.png" alt="Ablation study on the design of ProSelfLC" class="lead" data-width="800" data-height="100">
   <noscript><img data-ignore src="/imgs/figsProSelfLC/ablation_study.png" alt="Ablation study on the design of ProSelfLC" class="lead" data-width="800" data-height="100"></noscript>
   <span slot="loading" class="loading"><span class="icon-cog"></span></span>
@@ -464,14 +461,14 @@ Beyond, when <code class="MathJax_Preview">\mathbf{p}</code><script type="math/t
 <ul class="message">
   <li>
     <p><strong>Correct the similarity structure for every data point in all cases.</strong>
-Given any data point <code class="MathJax_Preview">\mathbf{x}</code><script type="math/tex">\mathbf{x}</script>, by a convex combination of <code class="MathJax_Preview">\mathbf{p}</code><script type="math/tex">\mathbf{p}</script> and <code class="MathJax_Preview">\mathbf{q}</code><script type="math/tex">\mathbf{q}</script>, 
+Given any data point \(\mathbf{x}\), by a convex combination of \(\mathbf{p}\) and \(\mathbf{q}\), 
 we add the information about its relative probabilities of being different training classes using the knowledge of a learner itself.</p>
   </li>
   <li>
     <p><strong>Revise the semantic class of an example only when the learning time is long and its prediction is confidently inconsistent.</strong>
-As highlighted in Table 2, only when two conditions are met, we have <code class="MathJax_Preview">\epsilon_{\mathrm{ProSelfLC}}  &gt; 0.5</code><script type="math/tex">\epsilon_{\mathrm{ProSelfLC}}  > 0.5</script> and 
-<code class="MathJax_Preview">\argmax\nolimits_j \mathbf{p}(j|\mathbf{x}) \neq \argmax\nolimits_j \mathbf{q}(j|\mathbf{x})</code><script type="math/tex">\argmax\nolimits_j \mathbf{p}(j|\mathbf{x}) \neq \argmax\nolimits_j \mathbf{q}(j|\mathbf{x})</script>, then the semantic class in $\mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}$ is changed to be determined by <code class="MathJax_Preview">\mathbf{p}</code><script type="math/tex">\mathbf{p}</script>. 
-For example, we can deduce <code class="MathJax_Preview">\mathbf{p} = [0.95, 0.01, 0.04], \mathbf{q} = [0, 0, 1], \epsilon_{\mathrm{ProSelfLC}}=0.8 \Rightarrow \mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}=(1- \epsilon_{\mathrm{ProSelfLC}})  \mathbf{q}+\epsilon_{\mathrm{ProSelfLC}} \mathbf{p}=[0.76, 0.008, 0.232]</code><script type="math/tex">\mathbf{p} = [0.95, 0.01, 0.04], \mathbf{q} = [0, 0, 1], \epsilon_{\mathrm{ProSelfLC}}=0.8 \Rightarrow \mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}=(1- \epsilon_{\mathrm{ProSelfLC}})  \mathbf{q}+\epsilon_{\mathrm{ProSelfLC}} \mathbf{p}=[0.76, 0.008, 0.232]</script>.<br>
+As highlighted in Table 2, only when two conditions are met, we have \(\epsilon_{\mathrm{ProSelfLC}}  &gt; 0.5\) and 
+\(\argmax\nolimits_j \mathbf{p}(j|\mathbf{x}) \neq \argmax\nolimits_j \mathbf{q}(j|\mathbf{x})\), then the semantic class in $\mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}$ is changed to be determined by \(\mathbf{p}\). 
+For example, we can deduce \(\mathbf{p} = [0.95, 0.01, 0.04], \mathbf{q} = [0, 0, 1], \epsilon_{\mathrm{ProSelfLC}}=0.8 \Rightarrow \mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}=(1- \epsilon_{\mathrm{ProSelfLC}})  \mathbf{q}+\epsilon_{\mathrm{ProSelfLC}} \mathbf{p}=[0.76, 0.008, 0.232]\).<br>
 Theoretically, ProSelfLC also becomes robust against long time being exposed to the training data, so that early stopping is not required.</p>
   </li>
 </ul>
@@ -489,7 +486,7 @@ Theoretically, ProSelfLC also becomes robust against long time being exposed to 
     <ul>
       <li>
 <a href="https://arxiv.org/pdf/1905.11233.pdf">2019-Derivative manipulation for general example weighting</a>
-        <div class="highlighter-rouge">
+        <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code>  @article{wang2019derivative,
   title={Derivative Manipulation for
   General Example Weighting},
@@ -501,7 +498,7 @@ Theoretically, ProSelfLC also becomes robust against long time being exposed to 
       </li>
       <li>
 <a href="https://arxiv.org/pdf/1903.12141.pdf">2019-IMAE for noise-robust learning: Mean absolute error does not treat examples equally and gradient magnitude’s variance matters.</a>
-        <div class="highlighter-rouge">
+        <div class="language-plaintext highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code>  @article{wang2019imae,
   title={ {IMAE} for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally 
   and Gradient Magnitude's Variance Matters},

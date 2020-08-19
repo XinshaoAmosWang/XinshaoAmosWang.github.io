@@ -38,7 +38,7 @@ Powered by Hydejack v8.5.2 <https://hydejack.com/>
   
 <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Paper Summary on Distance Metric, Representation Learning | Postdoc@OxfordU</title>
-<meta name="generator" content="Jekyll v3.8.7" />
+<meta name="generator" content="Jekyll v3.9.0" />
 <meta property="og:title" content="Paper Summary on Distance Metric, Representation Learning" />
 <meta name="author" content="XW" />
 <meta property="og:locale" content="en" />
@@ -364,11 +364,11 @@ believed.</li>
   <li>
 <a href="https://arxiv.org/pdf/2002.10857.pdf">Circle Loss: A Unified Perspective of Pair Similarity Optimization</a>
     <ul>
-      <li>Motivation: aiming to maximize the within-class similarity <code class="MathJax_Preview">s_p</code><script type="math/tex">s_p</script> and minimize the between-class similarity <code class="MathJax_Preview">s_n</code><script type="math/tex">s_n</script>. We find a majority of loss functions, including the triplet loss and the softmax plus cross-entropy loss, embed <code class="MathJax_Preview">s_n</code><script type="math/tex">s_n</script> and <code class="MathJax_Preview">s_p</code><script type="math/tex">s_p</script> into similarity pairs and seek to reduce <code class="MathJax_Preview">(s_n − s_p)</code><script type="math/tex">(s_n − s_p)</script>. Such an optimization manner is inflexible, because the penalty strength on every single similarity score is restricted to be equal.</li>
+      <li>Motivation: aiming to maximize the within-class similarity \(s_p\) and minimize the between-class similarity \(s_n\). We find a majority of loss functions, including the triplet loss and the softmax plus cross-entropy loss, embed \(s_n\) and \(s_p\) into similarity pairs and seek to reduce \((s_n − s_p)\). Such an optimization manner is inflexible, because the penalty strength on every single similarity score is restricted to be equal.</li>
       <li>Our intuition is that if a similarity score deviates far from the optimum, it should be emphasized.</li>
       <li>we simply re-weight each similarity to highlight the less-optimized similarity scores. It results in a Circle loss, which is named due to its circular decision boundary.</li>
       <li>Circle loss offers a more flexible optimization approach towards a more definite convergence target,
-compared with the loss functions optimizing <code class="MathJax_Preview">(s_n − s_p)</code><script type="math/tex">(s_n − s_p)</script>.</li>
+compared with the loss functions optimizing \((s_n − s_p)\).</li>
       <li>(1)  a unified loss function; (2) flexible optimization; (3) definite convergence status.</li>
       <li>Evaluation:
         <ul>
