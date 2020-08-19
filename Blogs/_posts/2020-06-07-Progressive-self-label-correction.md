@@ -39,6 +39,8 @@ List of Content
 ## Feedbacks
 * [Reviews](../../imgs/figsProSelfLC/CMT_Review.pdf)
 * [Personal replies](../../imgs/figsProSelfLC/ProSelfLC_personal_response.pdf): This is an unofficial letter from me to let peers know better about our work.
+{:.message}
+
 
 ## Storyline
 * Human annotations contain bias, subjectiveness, and errors. 
