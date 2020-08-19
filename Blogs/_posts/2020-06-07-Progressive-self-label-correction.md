@@ -9,10 +9,10 @@ comment: true
 
 
 For any specific discussion or potential future collaboration, please feel free to contact me. As a young
-researcher, your interest and star (citation) will mean a lot for me and my collaborators. For source codes, we
-are happy to provide if there is a request conditioned on academic use only and kindness to cite this work.<br />
-Paper link: [https://arxiv.org/pdf/2005.03788.pdf](https://arxiv.org/pdf/2005.03788.pdf)
+researcher, your interest and star (citation) will mean a lot for me and my collaborators. <br />
+Paper link: [https://arxiv.org/abs/2005.03788](https://arxiv.org/abs/2005.03788)
 ```
+Cite our work if you find it useful
 @article{wang2020proselflc,
   title={ProSelfLC: Progressive Self Label Correction 
   for Training Robust Deep Neural Networks},
@@ -24,6 +24,7 @@ Paper link: [https://arxiv.org/pdf/2005.03788.pdf](https://arxiv.org/pdf/2005.03
 
 <!-- :+1: means being highly related to my personal research interest. -->
 List of Content
+0. [Feedbacks](#feedbacks)
 0. [Storyline](#storyline)
 0. [Open ML Research Questions](#open-ml-research-questions)
 0. [Noticeable Findings](#noticeable-findings)
@@ -34,6 +35,10 @@ List of Content
 0. [Design Reasons of ProSelfLC](#design-reasons-of-proselflc)
 0. [Related Interesting Work](#related-interesting-work)
 {:.message}
+
+## Feedbacks
+* [Reviews](../../imgs/figsProSelfLC/CMT_Review.pdf)
+* [Personal replies](../../imgs/figsProSelfLC/ProSelfLC_personal_response.pdf): This is an unofficial letter from me to let peers know better about our work.
 
 ## Storyline
 * Human annotations contain bias, subjectiveness, and errors. 
