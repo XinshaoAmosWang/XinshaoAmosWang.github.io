@@ -6,21 +6,22 @@ image: /assets/img/blog/steve-harvey.jpg
 
 
 
-## Postdoc, University of Oxford. 
+## Postdoc, University of Oxford
 {:.lead}
-
+* [Google Scholar](https://scholar.google.com/citations?user=yOBhB7UAAAAJ&hl=en) 
 * Machine Learning: Deep Metric Learning, Robust Representation Learning under Adverse
 Conditions, e.g., missing labels (semi-supervised learning), noisy labels, sample imbalance, etc.  
 
 * Computer Vision: Image/Video Recognition, Person Re-identification. 
 
 * [Something new to come soon!]()
-
+{:.message}
 <!--* [What am I working on now? Discussions are Welcome!](../blogs/2020-02-21-learn-bayesian-DL/#what-am-i-working-on-now-discussions-are-welcome) -->
 
 
 
 ## Featured Research Delivering: 
+{:.lead}
 
 * [Open discussion on deep robustness, please and thanks!](https://www.reddit.com/r/MachineLearning/comments/hjlayq/r_open_discussion_on_deep_robustness_please/)
 
@@ -33,11 +34,12 @@ Conditions, e.g., missing labels (semi-supervised learning), noisy labels, sampl
 
 
 * [Instance Cross Entropy for Deep Metric Learning and its application in SimCLR-A Simple Framework for Contrastive Learning of Visual Representations](https://www.reddit.com/r/MachineLearning/comments/f4x1sh/r_instance_cross_entropy_for_deep_metric_learning/?utm_content=post&utm_medium=twitter&utm_source=share&utm_name=submit&utm_term=t3_f4x1sh)
+{:.message}
+
 
 ## Hightlight: Robust Learning and Inference under Adverse Conditions, e.g., noisy labels or observations, outliers, adversaries, sample imbalance (long-tailed), etc. 
-
+{:.lead}
 **Why important?**
-
 DNNs can brute forcelly fit well training examples with random lables (non-meaningful patterns): 
 * [Derivative Manipulation and IMAE](../blogs/2020-06-14-code-releasing)
 * [Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks](../blogs/2020-06-07-Progressive-self-label-correction)
@@ -47,9 +49,9 @@ DNNs can brute forcelly fit well training examples with random lables (non-meani
     * Examples with noisy labels which are fitted well during training;
     * Out-of-distribution data points which are fitted well during training or get high confidence scores during testing;
     * Examples with small pixel perturbation and perceptually ignorable which fool a model.
-
+<br/>
 In the large-scale training datasets, noisy training data points generally exist. Specifically and explicitly, the observations and their corresponding semantic labels may not matched. 
-
+{:.message}
 
 
 
@@ -63,8 +65,7 @@ In the large-scale training datasets, noisy training data points generally exist
 * Yes: [Deep Learning is Robust to Massive Label Noise](https://arxiv.org/abs/1705.10694)?
 
 * You may have your own answer if you read [Featured Research Delivering](#featured-research-delivering),   [ProSelfLC & Confidence penalty & Label Smoothing & Ouput Regularisation](../blogs/2020-06-07-Progressive-self-label-correction)
-
-
+{:.message}
 
 ## Intuitive concepts to keep in mind
 
@@ -73,7 +74,7 @@ In the large-scale training datasets, noisy training data points generally exist
 * Fitting of abnormal examples: When a deep model fits an abnormal example, i.e., mapping an oberservation to a semantically unmatched label, this abnormal example can be viewed as an successful adversary, i.e., an unrestricted adversarial example. 
 
 * Learning objective: A deep model is supposed to extract/learn meaningful patterns from training data, while avoid fitting any anomaly. 
-
+{:.message}
 
 ## Related papers reading 
 * [OutlierDetection_RobustInference using Mahalanobis Distance](https://github.com.cnpmjs.org/XinshaoAmosWang/DerivativeManipulation/blob/master/OutlierDetection_RobustInference.pptx.pdf)
@@ -81,7 +82,7 @@ In the large-scale training datasets, noisy training data points generally exist
 * [Distance is not always what it seems](https://blogs.sas.com/content/iml/2012/02/15/what-is-mahalanobis-distance.html)
 
 * [Detecting outliers in SAS: Part 3: Multivariate location and scatter & MCD: Robust estimation by subsampling](https://blogs.sas.com/content/iml/2012/02/02/detecting-outliers-in-sas-part-3-multivariate-location-and-scatter.html)
-
+{:.message}
 
 <!--
 ## Linkedin Profile
