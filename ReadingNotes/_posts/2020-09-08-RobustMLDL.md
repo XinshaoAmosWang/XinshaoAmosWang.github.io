@@ -17,6 +17,116 @@ In general, robust deep learning covers: missing labels (semisupervised learning
 
 ### ICML-20 papers (some are not from ICML, but cited in ICML)
 
+* [(arXiv-20-June) Early-Learning Regularization Prevents Memorization of Noisy Labels](https://arxiv.org/pdf/2007.00151.pdf)
+    * Their analysis is similar with [DM and IMAE](https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/), and they forgot to cite them in their first released version. 
+        * Early in training, the gradients corresponding to the correctly labeled examples dominate the dynamics—leading to early progress towards the true optimum—but that the gradients corresponding to wrong labels soon become dominant—at which point the classifier simply learns to fit the noisy labels.
+
+    * There are two key elements to our approach. (A regularization term that incorporates target probabilities estimated from the model outputs using several semi-supervised learning techniques.)
+        * First, we **leverage semi-supervised learning techniques to produce target probabilities** based on the model outputs. 
+        * Second, we design a regularization term that steers the model towards these targets, implicitly preventing memorization of the false labels.
+
+    * We also perform a systematic ablation study to evaluate the different alternatives to **compute the target probabilities**, and the effect of incorporating mixup data augmentation.
+        * Temporal ensembeling: averaging label predictions;
+        * MeanTeachers: Weight-averaged consistency targets
+        * MixMatch => DivideMix
+        * Consistency regularisation: Interpolation Consistency Training
+
+
+* [(IJCAI-19) Consistency regularisation: Interpolation Consistency Training for Semi-supervised Learning, Vikas Verma, Alex Lamb, Juho Kannala, Yoshua Bengio, and David Lopez-Paz](https://www.ijcai.org/Proceedings/2019/0504.pdf)
+    * ICT encourages the prediction at an interpolation of unlabeled points to be consistent with the interpolation of the predictions at those points.
+
+    * In classification problems, ICT moves the decision boundary to low-density regions of the data distribution.
+
+    * MixUp is used for preprocessing/data augmentation.
+
+* [(NeurIPS-19) David Berthelot, Nicholas Carlini, Ian J. Goodfellow, Nicolas Papernot, Avital Oliver, and ColinRaffel. Mixmatch: A holistic approach to semi-supervised learning.](https://papers.nips.cc/paper/8749-mixmatch-a-holistic-approach-to-semi-supervised-learning.pdf)
+    * This method is simple and effective. Their writing is also extremely naive to understand, instead of being fancy. 
+    * Many recent approaches for semi-supervised learning add a loss term which is computed on unlabeled data and encourages the model to generalize better to unseen data:    
+        * entropy minimization -- which encourages the model to output confident predictions on unlabeled data;
+        * consistency regularization -- which encourages the model to produce the same output distribution when its inputs are perturbed;
+        * generic regularization -- which encourages the model to generalize well and avoids overfitting the training data.
+    * We introduce MixMatch, an SSL algorithm which introduces a single loss that gracefully unifies these dominant approaches to semi-supervised learning. We further show in an ablation study that MixMatch is greater than the sum of its parts;
+    * [https://github.com/google-research/mixmatch](https://github.com/google-research/mixmatch)
+    * In short, MixMatch introduces a unified loss term for unlabeled data that seamlessly reduces entropy while maintaining consistency and remaining compatible with traditional regularization techniques. 
+
+    * Label guessing process used in MixMatch:
+    ![Label guessing process used in MixMatch](../../imgs/MixMatch_label_guessing_proces.png){:.lead data-width="800" data-height="100"}{:.figure}
+
+    * Question: if hyperparameters are not sensitive, why do we need it? Therefore, this writing is just for reviewers, not for readers. 
+    ![](../../imgs/MixMatch_hyperparameters.png){:.lead data-width="800" data-height="100"}{:.figure}
+
+    * To set the stage for MixMatch, we first introduce existing methods for SSL. **We focus mainly on those which are currently state-of-the-art and thatMixMatchbuilds on; there is a wide literature onSSL techniques that we do not discuss here** (e.g., “transductive” models [14,22,21], graph-based methods [49,4,29], generative modeling [3,27,41,9,17,23,38,34,42], etc.). **More comprehensive overviews are provided in [49,6].**
+    
+    * MixUp is used for preprocessing/data augmentation. 
+
+
+* [(ICLR-20) Junnan Li, Richard Socher, and Steven C.H. Hoi. DivideMix: Learning with noisy labels as semi-supervised learning.](https://openreview.net/forum?id=HJgExaVtwr&noteId=keqS67sTCbi)
+    * [https://openreview.net/forum?id=HJgExaVtwr&noteId=keqS67sTCbi](https://openreview.net/forum?id=HJgExaVtwr&noteId=keqS67sTCbi)
+        * **Exploiting MixMatch**;
+        * The algorithm is complex. Instead, DM, IMAE, and ProSelfLC are much simpler. 
+
+    * DivideMix models the per-sample loss distribution with a mixture model to **dynamically divide the training data into a labeled set with clean samples and an unlabeled set with noisy samples**, and trains the model on both the labeled and unlabeled data in a semi-supervised manner. 
+
+    * To avoid confirmation bias, we simultaneously train two diverged networks where each network uses the dataset division from the other network. During the semi-supervised training phase, we improve the **MixMatch** strategy by performing **label co-refinement and label co-guessing on labeled and unlabeled samples**, respectively. 
+
+    * DivideMix discards the sample labels that are highly likely to be noisy, and leverages the noisy samples as unlabeled data to regularize the model from overfitting and improve generalization performance.
+
+    * For labeled samples, we refine their ground-truth labels using the network's predictions guided by the GMM for the other network. For unlabeled samples,we use the ensemble of both networks to make reliable guesses for their labels.
+
+    * Training two networks, Co-divide datasets, label co-refinement and co-guessing.
+        * improving MixMatch with label co-refinement and co-guessing. 
+
+
+* [(NeurIPS-17 Antti Tarvainen and Harri Valpola. Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results. )](https://papers.nips.cc/paper/6719-mean-teachers-are-better-role-models-weight-averaged-consistency-targets-improve-semi-supervised-deep-learning-results.pdf)
+    * Because the targets change only onceper epoch, Temporal Ensembling becomes unwieldy when learning large datasets.
+    * To overcome this problem, we propose Mean Teacher, a method that averages model weights instead of label predictions. As an additional benefit, Mean Teacher improves test accuracy and enables training with fewer labels than Temporal Ensembling. 
+    * Abstract: Without changing the network architecture, Mean Teacher achieves anerror rate of 4.35% on SVHN with 250 labels, outperforming Temporal Ensembling trained with 1000 labels. We also show that a good network architecture is crucialto performance. Combining Mean Teacher and Residual Networks, we improve the state of the art on CIFAR-10 with 4000 labels from 10.55% to 6.28%, and on ImageNet 2012 with 10% of the labels from 35.24% to 9.11%.
+    
+    * Key algorithm:  
+    ![](../../imgs/MeanTeachers_KeyAlgorithm.png){:.lead data-width="800" data-height="100"}{:.figure}
+
+    * There are at least two ways to improve the target quality. One approach is to choose the perturbation of the representations carefully instead of barely applying additive or multiplicative noise. Another approach is to choose the teacher model carefully instead of barely replicating the student model.Concurrently to our research, [“Virtual Adversarial Training” (VAT)](https://arxiv.org/pdf/1704.03976.pdf) has taken the first approach and shown that Virtual Adversarial Training can yield impressive results. We take the second approach and will show that it too provides significant benefits. To our understanding, these two approaches are compatible, andtheir combination may produce even better outcomes. However, the analysis of their combined effectsis outside the scope of this paper.
+
+    * About [TEMPORALENSEMBLING FORSEMI-SUPERVISEDLEARNING](https://openreview.net/pdf?id=BJ6oOfqge): Each target is updated only once per epoch, the learned information is incorporated into the training process at a slow pace. The larger the dataset, the longer the span of the updates, and in the case of on-line learning, it is unclear how Temporal Ensembling can be used at all. (One could evaluate all the targets periodically more than once per epoch, but keeping the evaluation span constant would require $$O(n^2)$$ evaluations per epoch where n is the number of training examples.)
+
+
+* [(ICLR-17) Samuli Laine and Timo Aila. Temporal ensembling for semi-supervised learning. In ICLR, 2017.](https://openreview.net/pdf?id=BJ6oOfqge)
+    * We introduce **self-ensembling**, where we form **a consensus prediction of the unknown labels** using the outputs of the network-in-training on differentepochs, and most importantly, under different regularization and input augmentation conditions. **This ensemble prediction can be expected to be a better predictorfor the unknown labels than the output of the network at the most recent training epoch**, and can thus be used as a target for training;
+
+
+* [Unlabelled Data Improves Bayesian Uncertainty Calibration under Covariate Shift Alexander Chan, Ahmed Alaa, Zhaozhi Qian, Mihaela van der Schaar](https://proceedings.icml.cc/static/paper_files/icml/2020/2888-Paper.pdf)
+    * While existing variants of BNNs are able to produce reliable, albeit approximate, uncertainty estimates over in-distribution data, it has been shown that they tend to be overconfident in predictions made on target data whose distribution over features differs from the training data, i.e., **the covariate shift setup**.
+    * We develop **an approximate Bayesian inference scheme** based on posterior regularisation, where we use information from **unlabelled target data to produce more appropriate uncertainty estimates for ''covariate-shifted'' predictions.**
+    * Empirical evaluations demonstrate that our method performs competitively compared to Bayesian and frequentist approaches to **uncertainty estimation in neural networks.**
+        
+        * uncertainty estimation:  quantifying confidence in their predictions — this is crucial in **high-stakes applications that involve critical decision-making**.
+        
+        * We make the following observation: **a point being in the target data is an indication that the model should output higher uncertainty** because the target distribution is not well-represented by training data due to covariate shift.
+        **We use whether the data come from training or target set as a “pseudo-label”of model confidence.**
+        
+        * BNN learns a posterior distribution over parametersthat encapsulates the model uncertainty. Due the complexityof deep neural networks, the exact posterior is usually intractable. Hence, much of the research in BNN literature is devoted to finding better approximate inference algorithms for the posterior.
+
+    * We note  that  most  existingworks in SSL focus entirely on using unlabelled data toimprove predictive performance (e.g. accuracy), but muchless thoughts have been given to improving the uncertainty estimate for those predictions, which is the focus of this paper. 
+
+    * **Semi-supervised Learning**: Many recent works encourage the model to generalise better by using a regularisation term computed on the unlabelled data [MixMatch Berth-elot et al. (NeurIPS 2019)](https://papers.nips.cc/paper/8749-mixmatch-a-holistic-approach-to-semi-supervised-learning.pdf).
+        *  **Consistency regularization** applies data augmentation to semi-supervised learning by leveraging the idea that a classifier should output the same class distribution for an unlabeled example even after it has been augmented. 
+            * E.g. 1: [(TPAMI 2018) “Virtual Adversarial Training” (VAT)](https://arxiv.org/pdf/1704.03976.pdf) addresses this by instead computing an additive perturbation to apply to the input which maximally changes the output class distribution;
+            * E.g. 2: [(NeurIPS 2017) “Mean Teacher”: a method that averages model weights instead of label predictions.](https://papers.nips.cc/paper/6719-mean-teachers-are-better-role-models-weight-averaged-consistency-targets-improve-semi-supervised-deep-learning-results.pdf) uses an exponential moving average of model parameter values. This provides a more stable target and was found empirically to significantly improve results. 
+            Mean Teacher improves test accuracy and enables training with fewer labels than Temporal Ensembling.
+            Combining Mean Teacher and Residual Networks, we improvethe state of the art on CIFAR-10 with 4000 labels from 10.55% to 6.28%, and on ImageNet 2012 with 10% of the labels from 35.24% to 9.11%.
+            * E.g. 3: [MixMatch Berth-elot et al. (NeurIPS 2019)](https://papers.nips.cc/paper/8749-mixmatch-a-holistic-approach-to-semi-supervised-learning.pdf) utilizes a form of consistency regularization through the use of standard data augmentation for images (random horizontal flips and crops).
+            * [Connections](https://papers.nips.cc/paper/6719-mean-teachers-are-better-role-models-weight-averaged-consistency-targets-improve-semi-supervised-deep-learning-results.pdf): There are at least two ways to improve the target quality. One approach is to choose the perturbation of the representations carefully instead of barely applying additive or multiplicative noise. Another approach is to choose the teacher model carefully instead of barely replicating the student model.Concurrently to our research, [“Virtual Adversarial Training” (VAT)](https://arxiv.org/pdf/1704.03976.pdf) has taken the first approach and shown that Virtual Adversarial Training can yield impressive results. We take the second approach and will show that it too provides significant benefits. To our understanding, these two approaches are compatible, andtheir combination may produce even better outcomes. However, the analysis of their combined effectsis outside the scope of this paper.
+            * About [TEMPORALENSEMBLING FORSEMI-SUPERVISEDLEARNING](https://openreview.net/pdf?id=BJ6oOfqge): Each target is updated only once per epoch, the learned information is incorporated into the training process at a slow pace. The larger the dataset, the longer the span of the updates, and in the case of on-line learning, it is unclear how Temporal Ensembling can be used at all. (One could evaluate all the targets periodically more than once per epoch, but keeping the evaluation span constant would require $$O(n^2)$$ evaluations per epoch where n is the number of training examples.)
+        
+        * **Entropy Minimization**: CCE, [ProSelfLC](https://xinshaoamoswang.github.io/blogs/2020-06-07-Progressive-self-label-correction/), [(NeurIPS) Semi-supervised learning by entropy minimization](https://papers.nips.cc/paper/2740-semi-supervised-learning-by-entropy-minimization.pdf), [(ICML workshop 2013) Pseudo-Label](http://deeplearning.net/wp-content/uploads/2013/03/pseudo_label_final.pdf)
+
+        * **Traditional Regularization**: weight decay, MixUP, etc. 
+
+        * More work on semi-supervised learning: 
+            * [(NeurIPS 2018) Entropy minimisation: Jean, N., Xie, S. M., and Ermon, S. Semi-supervised deep kernel learning: Regression with unlabeled data by minimizing predictive variance.](https://papers.nips.cc/paper/7778-semi-supervised-deep-kernel-learning-regression-with-unlabeled-data-by-minimizing-predictive-variance.pdf)
+            * [(NeurIPS 2016) Consistency regularisation: Sajjadi, M., Javanmardi, M., and Tasdizen, T.  Regulariza-tion with stochastic transformations and perturbations fordeep semi-supervised learning.](https://papers.nips.cc/paper/6333-regularization-with-stochastic-transformations-and-perturbations-for-deep-semi-supervised-learning.pdf)
+            * [(IJCAI 20019) Consistency regularisation: Interpolation Consistency Training for Semi-supervised Learning  Vikas Verma, Alex Lamb, Juho Kannala, Yoshua Bengio, and David Lopez-Paz](https://www.ijcai.org/Proceedings/2019/0504.pdf)
+
 
 * [SIGUA: Forgetting May Make Learning with Noisy Labels More Robust, Bo Han, Gang Niu, Xingrui Yu, QUANMING YAO, Miao Xu, Ivor Tsang, Masashi Sugiyama](https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf)
     * We propose stochastic integrated gradient underweighted ascent (SIGUA): in a mini-batch, we adopt gradient descent on good data as usual, and learning-rate-reduced gradient ascent on bad data;
@@ -97,100 +207,6 @@ In general, robust deep learning covers: missing labels (semisupervised learning
 
 * [(CVPR-19) Ahmet Iscen et al Label Propagation for Deep Semi-supervised Learning](https://openaccess.thecvf.com/content_CVPR_2019/papers/Iscen_Label_Propagation_for_Deep_Semi-Supervised_Learning_CVPR_2019_paper.pdf)
 
-* [(IJCAI-19) Consistency regularisation: Interpolation Consistency Training for Semi-supervised Learning, Vikas Verma, Alex Lamb, Juho Kannala, Yoshua Bengio, and David Lopez-Paz](https://www.ijcai.org/Proceedings/2019/0504.pdf)
-    * ICT encourages the prediction at an interpolation of unlabeled points to be consistent with the interpolation of the predictions at those points.
-
-    * In classification problems, ICT moves the decision boundary to low-density regions of the data distribution.
-
-    * MixUp is used for preprocessing/data augmentation.
-
-* [(NeurIPS-19) David Berthelot, Nicholas Carlini, Ian J. Goodfellow, Nicolas Papernot, Avital Oliver, and ColinRaffel. Mixmatch: A holistic approach to semi-supervised learning.](https://papers.nips.cc/paper/8749-mixmatch-a-holistic-approach-to-semi-supervised-learning.pdf)
-    * This method is simple and effective. Their writing is also extremely naive to understand, instead of being fancy. 
-    * Many recent approaches for semi-supervised learning add a loss term which is computed on unlabeled data and encourages the model to generalize better to unseen data:    
-        * entropy minimization -- which encourages the model to output confident predictions on unlabeled data;
-        * consistency regularization -- which encourages the model to produce the same output distribution when its inputs are perturbed;
-        * generic regularization -- which encourages the model to generalize well and avoids overfitting the training data.
-    * We introduce MixMatch, an SSL algorithm which introduces a single loss that gracefully unifies these dominant approaches to semi-supervised learning. We further show in an ablation study that MixMatch is greater than the sum of its parts;
-    * [https://github.com/google-research/mixmatch](https://github.com/google-research/mixmatch)
-    * In short, MixMatch introduces a unified loss term for unlabeled data that seamlessly reduces entropy while maintaining consistency and remaining compatible with traditional regularization techniques. 
-
-    * Label guessing process used in MixMatch:
-    ![Label guessing process used in MixMatch](../../imgs/MixMatch_label_guessing_proces.png){:.lead data-width="800" data-height="100"}{:.figure}
-
-    * Question: if hyperparameters are not sensitive, why do we need it? Therefore, this writing is just for reviewers, not for readers. 
-    ![](../../imgs/MixMatch_hyperparameters.png){:.lead data-width="800" data-height="100"}{:.figure}
-
-    * To set the stage for MixMatch, we first introduce existing methods for SSL. **We focus mainly on those which are currently state-of-the-art and thatMixMatchbuilds on; there is a wide literature onSSL techniques that we do not discuss here** (e.g., “transductive” models [14,22,21], graph-based methods [49,4,29], generative modeling [3,27,41,9,17,23,38,34,42], etc.). **More comprehensive overviews are provided in [49,6].**
-    
-    * MixUp is used for preprocessing/data augmentation. 
-
-
-* [(ICLR-20) Junnan Li, Richard Socher, and Steven C.H. Hoi. DivideMix: Learning with noisy labels as semi-supervised learning.](https://openreview.net/forum?id=HJgExaVtwr&noteId=keqS67sTCbi)
-    * [https://openreview.net/forum?id=HJgExaVtwr&noteId=keqS67sTCbi](https://openreview.net/forum?id=HJgExaVtwr&noteId=keqS67sTCbi)
-        * Exploiting MixMatch;
-        * The algorithm is complex. 
-
-    * DivideMix models the per-sample loss distribution with a mixture model to **dynamically divide the training data into a labeled set with clean samples and an unlabeled set with noisy samples**, and trains the model on both the labeled and unlabeled data in a semi-supervised manner. 
-
-    * To avoid confirmation bias, we simultaneously train two diverged networks where each network uses the dataset division from the other network. During the semi-supervised training phase, we improve the **MixMatch** strategy by performing **label co-refinement and label co-guessing on labeled and unlabeled samples**, respectively. 
-
-    * DivideMix discards the sample labels that are highly likely to be noisy, and leverages the noisy samples as unlabeled data to regularize the model from overfitting and improve generalization performance.
-
-    * For labeled samples, we refine their ground-truth labels using the network's predictions guided by the GMM for the other network. For unlabeled samples,we use the ensemble of both networks to make reliable guesses for their labels.
-
-    * Training two networks, Co-divide datasets, label co-refinement and co-guessing.
-        * improving MixMatch with label co-refinement and co-guessing. 
-
-
-* [(NeurIPS-17 Antti Tarvainen and Harri Valpola. Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results. )](https://papers.nips.cc/paper/6719-mean-teachers-are-better-role-models-weight-averaged-consistency-targets-improve-semi-supervised-deep-learning-results.pdf)
-    * Because the targets change only onceper epoch, Temporal Ensembling becomes unwieldy when learning large datasets.
-    * To overcome this problem, we propose Mean Teacher, a method that averages model weights instead of label predictions. As an additional benefit, Mean Teacher improves test accuracy and enables training with fewer labels than Temporal Ensembling. 
-    * Abstract: Without changing the network architecture, Mean Teacher achieves anerror rate of 4.35% on SVHN with 250 labels, outperforming Temporal Ensembling trained with 1000 labels. We also show that a good network architecture is crucialto performance. Combining Mean Teacher and Residual Networks, we improve the state of the art on CIFAR-10 with 4000 labels from 10.55% to 6.28%, and on ImageNet 2012 with 10% of the labels from 35.24% to 9.11%.
-    
-    * Key algorithm:  
-    ![](../../imgs/MeanTeachers_KeyAlgorithm.png){:.lead data-width="800" data-height="100"}{:.figure}
-
-    * There are at least two ways to improve the target quality. One approach is to choose the perturbation of the representations carefully instead of barely applying additive or multiplicative noise. Another approach is to choose the teacher model carefully instead of barely replicating the student model.Concurrently to our research, [“Virtual Adversarial Training” (VAT)](https://arxiv.org/pdf/1704.03976.pdf) has taken the first approach and shown that Virtual Adversarial Training can yield impressive results. We take the second approach and will show that it too provides significant benefits. To our understanding, these two approaches are compatible, andtheir combination may produce even better outcomes. However, the analysis of their combined effectsis outside the scope of this paper.
-
-    * About [TEMPORALENSEMBLING FORSEMI-SUPERVISEDLEARNING](https://openreview.net/pdf?id=BJ6oOfqge): Each target is updated only once per epoch, the learned information is incorporated into the training process at a slow pace. The larger the dataset, the longer the span of the updates, and in the case of on-line learning, it is unclear how Temporal Ensembling can be used at all. (One could evaluate all the targets periodically more than once per epoch, but keeping the evaluation span constant would require $$O(n^2)$$ evaluations per epoch where n is the number of training examples.)
-
-
-* [(ICLR-17) Samuli Laine and Timo Aila. Temporal ensembling for semi-supervised learning. In ICLR, 2017.](https://openreview.net/pdf?id=BJ6oOfqge)
-    * We introduce **self-ensembling**, where we form **a consensus prediction of the unknown labels** using the outputs of the network-in-training on differentepochs, and most importantly, under different regularization and input augmentation conditions. **This ensemble prediction can be expected to be a better predictorfor the unknown labels than the output of the network at the most recent training epoch**, and can thus be used as a target for training;
-
-
-* [Unlabelled Data Improves Bayesian Uncertainty Calibration under Covariate Shift Alexander Chan, Ahmed Alaa, Zhaozhi Qian, Mihaela van der Schaar](https://proceedings.icml.cc/static/paper_files/icml/2020/2888-Paper.pdf)
-    * While existing variants of BNNs are able to produce reliable, albeit approximate, uncertainty estimates over in-distribution data, it has been shown that they tend to be overconfident in predictions made on target data whose distribution over features differs from the training data, i.e., **the covariate shift setup**.
-    * We develop **an approximate Bayesian inference scheme** based on posterior regularisation, where we use information from **unlabelled target data to produce more appropriate uncertainty estimates for ''covariate-shifted'' predictions.**
-    * Empirical evaluations demonstrate that our method performs competitively compared to Bayesian and frequentist approaches to **uncertainty estimation in neural networks.**
-        
-        * uncertainty estimation:  quantifying confidence in their predictions — this is crucial in **high-stakes applications that involve critical decision-making**.
-        
-        * We make the following observation: **a point being in the target data is an indication that the model should output higher uncertainty** because the target distribution is not well-represented by training data due to covariate shift.
-        **We use whether the data come from training or target set as a “pseudo-label”of model confidence.**
-        
-        * BNN learns a posterior distribution over parametersthat encapsulates the model uncertainty. Due the complexityof deep neural networks, the exact posterior is usually intractable. Hence, much of the research in BNN literature is devoted to finding better approximate inference algorithms for the posterior.
-
-    * We note  that  most  existingworks in SSL focus entirely on using unlabelled data toimprove predictive performance (e.g. accuracy), but muchless thoughts have been given to improving the uncertainty estimate for those predictions, which is the focus of this paper. 
-
-    * **Semi-supervised Learning**: Many recent works encourage the model to generalise better by using a regularisation term computed on the unlabelled data [MixMatch Berth-elot et al. (NeurIPS 2019)](https://papers.nips.cc/paper/8749-mixmatch-a-holistic-approach-to-semi-supervised-learning.pdf).
-        *  **Consistency regularization** applies data augmentation to semi-supervised learning by leveraging the idea that a classifier should output the same class distribution for an unlabeled example even after it has been augmented. 
-            * E.g. 1: [(TPAMI 2018) “Virtual Adversarial Training” (VAT)](https://arxiv.org/pdf/1704.03976.pdf) addresses this by instead computing an additive perturbation to apply to the input which maximally changes the output class distribution;
-            * E.g. 2: [(NeurIPS 2017) “Mean Teacher”: a method that averages model weights instead of label predictions.](https://papers.nips.cc/paper/6719-mean-teachers-are-better-role-models-weight-averaged-consistency-targets-improve-semi-supervised-deep-learning-results.pdf) uses an exponential moving average of model parameter values. This provides a more stable target and was found empirically to significantly improve results. 
-            Mean Teacher improves test accuracy and enables training with fewer labels than Temporal Ensembling.
-            Combining Mean Teacher and Residual Networks, we improvethe state of the art on CIFAR-10 with 4000 labels from 10.55% to 6.28%, and on ImageNet 2012 with 10% of the labels from 35.24% to 9.11%.
-            * E.g. 3: [MixMatch Berth-elot et al. (NeurIPS 2019)](https://papers.nips.cc/paper/8749-mixmatch-a-holistic-approach-to-semi-supervised-learning.pdf) utilizes a form of consistency regularization through the use of standard data augmentation for images (random horizontal flips and crops).
-            * [Connections](https://papers.nips.cc/paper/6719-mean-teachers-are-better-role-models-weight-averaged-consistency-targets-improve-semi-supervised-deep-learning-results.pdf): There are at least two ways to improve the target quality. One approach is to choose the perturbation of the representations carefully instead of barely applying additive or multiplicative noise. Another approach is to choose the teacher model carefully instead of barely replicating the student model.Concurrently to our research, [“Virtual Adversarial Training” (VAT)](https://arxiv.org/pdf/1704.03976.pdf) has taken the first approach and shown that Virtual Adversarial Training can yield impressive results. We take the second approach and will show that it too provides significant benefits. To our understanding, these two approaches are compatible, andtheir combination may produce even better outcomes. However, the analysis of their combined effectsis outside the scope of this paper.
-            * About [TEMPORALENSEMBLING FORSEMI-SUPERVISEDLEARNING](https://openreview.net/pdf?id=BJ6oOfqge): Each target is updated only once per epoch, the learned information is incorporated into the training process at a slow pace. The larger the dataset, the longer the span of the updates, and in the case of on-line learning, it is unclear how Temporal Ensembling can be used at all. (One could evaluate all the targets periodically more than once per epoch, but keeping the evaluation span constant would require $$O(n^2)$$ evaluations per epoch where n is the number of training examples.)
-        
-        * **Entropy Minimization**: CCE, [ProSelfLC](https://xinshaoamoswang.github.io/blogs/2020-06-07-Progressive-self-label-correction/), [(NeurIPS) Semi-supervised learning by entropy minimization](https://papers.nips.cc/paper/2740-semi-supervised-learning-by-entropy-minimization.pdf), [(ICML workshop 2013) Pseudo-Label](http://deeplearning.net/wp-content/uploads/2013/03/pseudo_label_final.pdf)
-
-        * **Traditional Regularization**: weight decay, MixUP, etc. 
-
-        * More work on semi-supervised learning: 
-            * [(NeurIPS 2018) Entropy minimisation: Jean, N., Xie, S. M., and Ermon, S. Semi-supervised deepkernel learning: Regression with unlabeled data by mini-mizing predictive variance.](https://papers.nips.cc/paper/7778-semi-supervised-deep-kernel-learning-regression-with-unlabeled-data-by-minimizing-predictive-variance.pdf)
-            * [(NeurIPS 2016) Consistency regularisation: Sajjadi, M., Javanmardi, M., and Tasdizen, T.  Regulariza-tion with stochastic transformations and perturbations fordeep semi-supervised learning.](https://papers.nips.cc/paper/6333-regularization-with-stochastic-transformations-and-perturbations-for-deep-semi-supervised-learning.pdf)
-            * [(IJCAI 20019) Consistency regularisation: Interpolation Consistency Training for Semi-supervised Learning  Vikas Verma, Alex Lamb, Juho Kannala, Yoshua Bengio, and David Lopez-Paz](https://www.ijcai.org/Proceedings/2019/0504.pdf)
 
 * [Progressive Identification of True Labels for Partial-Label Learning Jiaqi Lv, Miao Xu, LEI FENG, Gang Niu, Xin Geng, Masashi Sugiyama](https://proceedings.icml.cc/static/paper_files/icml/2020/6080-Paper.pdf)
     * **Partial-label learning** is one of the important **weakly supervised learning problems**, where each training example is equipped with **a set of candidate labels** that contains the true label.
