@@ -247,31 +247,70 @@ in <a href="/readingnotes/" class="flip-title">Reading Notes</a>
     <p>In general, robust deep learning covers: missing labels (semisupervised learning); noisy labels (noise detection and correction); regularisation techniques; sample imbalance (long-tailed class distribution); adversarial learning; and so on.</p>
 
 <ol class="message">
-  <li><a href="#icml-20-papers">ICML-20 papers</a></li>
+  <li><a href="#icml-20-papers-some-are-not-from-icml-but-cited-in-icml">ICML-20 papers</a></li>
   <li><a href="#the-design-of-loss-functions-ie-optimisation-objectives-or-output-regularistion">The design of loss functions (i.e., optimisation objectives or output regularistion)</a></li>
 </ol>
 
-<h3 id="icml-20-papers">ICML-20 papers</h3>
+<h3 id="icml-20-papers-some-are-not-from-icml-but-cited-in-icml">ICML-20 papers (some are not from ICML, but cited in ICML)</h3>
+
 <ul class="message">
+  <li>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf">SIGUA: Forgetting May Make Learning with Noisy Labels More Robust, Bo Han, Gang Niu, Xingrui Yu, QUANMING YAO, Miao Xu, Ivor Tsang, Masashi Sugiyama</a>
+    <ul>
+      <li>
+        <p>We propose stochastic integrated gradient underweighted ascent (SIGUA): in a mini-batch, we adopt gradient descent on good data as usual, and learning-rate-reduced gradient ascent on bad data;</p>
+      </li>
+      <li>
+        <p>Technically, SIGUA pulls optimization back for generalization when their goals conflict with each other;</p>
+      </li>
+      <li>Philosophically, SIGUA shows forgetting undesired memorization can reinforce desired memorization.
+        <ul>
+          <li><strong>The idea is similar with <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></li>
+        </ul>
+      </li>
+      <li>Almost the same authors as <a href="https://proceedings.icml.cc/book/2020/hash/72b386224056bf940cd5b01341f65e9d">Searching to Exploit Memorization Effect in Learning with Noisy Labels QUANMING YAO, Hansi Yang, Bo Han, Gang Niu, James Kwok</a>
+</li>
+    </ul>
+  </li>
   <li>
 <a href="https://proceedings.icml.cc/paper/2020/file/87682805257e619d49b8e0dfdc14affa-Paper.pdf">Error-Bounded Correction of Noisy Labels, Songzhu Zheng, Pengxiang Wu, Aman Goswami, Mayank Goswami, Dimitris Metaxas, Chao Chen</a>
     <ul>
-      <li>To be robust against label noise, many successful methods rely on the noisy classifiers (i.e., models trained on the noisy training data) to determine whether a label is trustworthy. However, it remains unknown why this heuristic works well in practice.</li>
-      <li>In this paper, <strong>we provide the first theoretical explanation</strong> for these methods.</li>
-      <li>We prove that the prediction of a noisy classifier can indeed be a good indicator of whether the label of a training data is clean.</li>
-      <li>Based on the theoretical result, we propose a novel algorithm that corrects the labels based on the noisy classifier prediction. The corrected labels are <strong>consistent with the true Bayesian optimal classifier with high probability.</strong>
-</li>
-      <li>We prove that when the noisy classifier has <strong>low confidence on the label of a datum, such label is likely corrupted.</strong> In fact, we can quantify the threshold of confidence, below which the label is likely to be corrupted, and above which is it likely to be not. We also empirically show that the bound in our theorem is tight.</li>
-      <li>We provide a theorem quantifying how a noisy classifier’s prediction correlates to the purity of a datum’s label. This provides theoretical explanation for data-recalibrating methods for noisy labels.</li>
-      <li>Inspired by the theorem, we propose <strong>a new label correction algorithm with guaranteed success rate.</strong>
-</li>
-      <li>A Bayes optimal classifier is the minimizer of the risk over all possible hypotheses.</li>
-      <li>We also have a burn-in stage in which we train the networkusing the original noisy labels for \(m\) epochs. During theburn-in stage, we use the original cross-entropy loss;</li>
-      <li>After the burn-in stage, we want to avoid overfitting of theneural network. To achieve this goal, we introduce aretroactive loss term. The  idea  is  to  enforce  the consistency between \(f\) and the prediction of the model at a previous epoch.</li>
+      <li>
+        <p>To be robust against label noise, many successful methods rely on the noisy classifiers (i.e., models trained on the noisy training data) to determine whether a label is trustworthy. However, it remains unknown why this heuristic works well in practice.</p>
+      </li>
+      <li>
+        <p>In this paper, <strong>we provide the first theoretical explanation</strong> for these methods.</p>
+      </li>
+      <li>
+        <p>We prove that the prediction of a noisy classifier can indeed be a good indicator of whether the label of a training data is clean.</p>
+      </li>
+      <li>
+        <p>Based on the theoretical result, we propose a novel algorithm that corrects the labels based on the noisy classifier prediction. The corrected labels are <strong>consistent with the true Bayesian optimal classifier with high probability.</strong></p>
+      </li>
+      <li>
+        <p>We prove that when the noisy classifier has <strong>low confidence on the label of a datum, such label is likely corrupted.</strong> In fact, we can quantify the threshold of confidence, below which the label is likely to be corrupted, and above which is it likely to be not. We also empirically show that the bound in our theorem is tight.</p>
+      </li>
+      <li>
+        <p>We provide a theorem quantifying how a noisy classifier’s prediction correlates to the purity of a datum’s label. This provides theoretical explanation for data-recalibrating methods for noisy labels.</p>
+      </li>
+      <li>
+        <p>Inspired by the theorem, we propose <strong>a new label correction algorithm with guaranteed success rate.</strong></p>
+      </li>
+      <li>
+        <p><strong>A Bayes optimal classifier is the minimizer of the risk over all possible hypotheses.</strong></p>
+      </li>
+      <li>
+        <p>We also have a burn-in stage in which we train the networkusing the original noisy labels for \(m\) epochs. During theburn-in stage, we use the original cross-entropy loss;</p>
+      </li>
+      <li>
+        <p>After the burn-in stage, we want to avoid overfitting of theneural network. To achieve this goal, we introduce aretroactive loss term. The  idea  is  to  enforce  the consistency between \(f\) and the prediction of the model at a previous epoch.</p>
+      </li>
       <li>
         <p>In all experiments, <strong>we use early stopping on validation set to tune hyperparameters and report theperformance on test set.</strong></p>
       </li>
-      <li><strong><a href="https://xinshaoamoswang.github.io/blogs/2020-06-07-Progressive-self-label-correction/">Simple and Effective ProSelfLC: Progressive Self Label Correction</a></strong></li>
+      <li>
+        <p><strong><a href="https://xinshaoamoswang.github.io/blogs/2020-06-07-Progressive-self-label-correction/">Simple and Effective ProSelfLC: Progressive Self Label Correction</a></strong></p>
+      </li>
     </ul>
   </li>
   <li>
@@ -300,12 +339,14 @@ in <a href="/readingnotes/" class="flip-title">Reading Notes</a>
     </ul>
   </li>
   <li>
-<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/3285-Paper.pdf">Searching to Exploit Memorization Effect in Learning with Noisy Labels QUANMING YAO, Hansi Yang, Bo Han, Gang Niu, James Kwok</a>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/3285-Paper.pdf">Searching to Exploit Memorization Effect in Learning with Noisy Labels, QUANMING YAO, Hansi Yang, Bo Han, Gang Niu, James Kwok</a>
     <ul>
       <li>Sample selection approaches: select \(R(t)\) small-loss samples based on network’s predictions</li>
       <li>Formulation as an AutoML Problem  (complex algorithm personally);</li>
       <li>Bi-level optimisation</li>
       <li><strong>No sample selection is needed: <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></li>
+      <li>Almost the same authors as <a href="https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf">SIGUA: Forgetting May Make Learning with Noisy Labels More Robust Bo Han, Gang Niu, Xingrui Yu, QUANMING YAO, Miao Xu, Ivor Tsang, Masashi Sugiyama</a>
+</li>
     </ul>
   </li>
   <li>
@@ -331,6 +372,148 @@ in <a href="/readingnotes/" class="flip-title">Reading Notes</a>
         <p>Relevant work 2: <a href="https://arxiv.org/pdf/1802.08887.pdf">Water from Two Rocks: Maximizing the Mutual Information</a></p>
       </li>
       <li><strong>No loss function is needed: <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Iscen_Label_Propagation_for_Deep_Semi-Supervised_Learning_CVPR_2019_paper.pdf">(CVPR-19) Ahmet Iscen et al Label Propagation for Deep Semi-supervised Learning</a></p>
+  </li>
+  <li>
+<a href="https://www.ijcai.org/Proceedings/2019/0504.pdf">(IJCAI-19) Consistency regularisation: Interpolation Consistency Training for Semi-supervised Learning, Vikas Verma, Alex Lamb, Juho Kannala, Yoshua Bengio, and David Lopez-Paz</a>
+    <ul>
+      <li>
+        <p>ICT encourages the prediction at an interpolation of unlabeled points to be consistent with the interpolation of the predictions at those points.</p>
+      </li>
+      <li>
+        <p>In classification problems, ICT moves the decision boundary to low-density regions of the data distribution.</p>
+      </li>
+      <li>
+        <p>MixUp is used for preprocessing/data augmentation.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://papers.nips.cc/paper/8749-mixmatch-a-holistic-approach-to-semi-supervised-learning.pdf">(NeurIPS-19) David Berthelot, Nicholas Carlini, Ian J. Goodfellow, Nicolas Papernot, Avital Oliver, and ColinRaffel. Mixmatch: A holistic approach to semi-supervised learning.</a>
+    <ul>
+      <li>This method is simple and effective. Their writing is also extremely naive to understand, instead of being fancy.</li>
+      <li>Many recent approaches for semi-supervised learning add a loss term which is computed on unlabeled data and encourages the model to generalize better to unseen data:
+        <ul>
+          <li>entropy minimization – which encourages the model to output confident predictions on unlabeled data;</li>
+          <li>consistency regularization – which encourages the model to produce the same output distribution when its inputs are perturbed;</li>
+          <li>generic regularization – which encourages the model to generalize well and avoids overfitting the training data.</li>
+        </ul>
+      </li>
+      <li>We introduce MixMatch, an SSL algorithm which introduces a single loss that gracefully unifies these dominant approaches to semi-supervised learning. We further show in an ablation study that MixMatch is greater than the sum of its parts;</li>
+      <li><a href="https://github.com/google-research/mixmatch">https://github.com/google-research/mixmatch</a></li>
+      <li>
+        <p>In short, MixMatch introduces a unified loss term for unlabeled data that seamlessly reduces entropy while maintaining consistency and remaining compatible with traditional regularization techniques.</p>
+      </li>
+      <li>
+        <p>Label guessing process used in MixMatch:
+  <hy-img root-margin="512px" src="../../imgs/MixMatch_label_guessing_proces.png" alt="Label guessing process used in MixMatch" class="lead figure" data-width="800" data-height="100">
+  <noscript><img data-ignore src="../../imgs/MixMatch_label_guessing_proces.png" alt="Label guessing process used in MixMatch" class="lead figure" data-width="800" data-height="100"></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+      </li>
+      <li>
+        <p>Question: if hyperparameters are not sensitive, why do we need it? Therefore, this writing is just for reviewers, not for readers. 
+  <hy-img root-margin="512px" src="../../imgs/MixMatch_hyperparameters.png" alt="" class="lead figure" data-width="800" data-height="100">
+  <noscript><img data-ignore src="../../imgs/MixMatch_hyperparameters.png" alt="" class="lead figure" data-width="800" data-height="100"></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+      </li>
+      <li>
+        <p>To set the stage for MixMatch, we first introduce existing methods for SSL. <strong>We focus mainly on those which are currently state-of-the-art and thatMixMatchbuilds on; there is a wide literature onSSL techniques that we do not discuss here</strong> (e.g., “transductive” models [14,22,21], graph-based methods [49,4,29], generative modeling [3,27,41,9,17,23,38,34,42], etc.). <strong>More comprehensive overviews are provided in [49,6].</strong></p>
+      </li>
+      <li>MixUp is used for preprocessing/data augmentation.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://openreview.net/forum?id=HJgExaVtwr&amp;noteId=keqS67sTCbi">(ICLR-20) Junnan Li, Richard Socher, and Steven C.H. Hoi. DivideMix: Learning with noisy labels as semi-supervised learning.</a>
+    <ul>
+      <li>
+<a href="https://openreview.net/forum?id=HJgExaVtwr&amp;noteId=keqS67sTCbi">https://openreview.net/forum?id=HJgExaVtwr&amp;noteId=keqS67sTCbi</a>
+        <ul>
+          <li>Exploiting MixMatch;</li>
+          <li>The algorithm is complex.</li>
+        </ul>
+      </li>
+      <li>
+        <p>DivideMix models the per-sample loss distribution with a mixture model to <strong>dynamically divide the training data into a labeled set with clean samples and an unlabeled set with noisy samples</strong>, and trains the model on both the labeled and unlabeled data in a semi-supervised manner.</p>
+      </li>
+      <li>
+        <p>To avoid confirmation bias, we simultaneously train two diverged networks where each network uses the dataset division from the other network. During the semi-supervised training phase, we improve the <strong>MixMatch</strong> strategy by performing <strong>label co-refinement and label co-guessing on labeled and unlabeled samples</strong>, respectively.</p>
+      </li>
+      <li>
+        <p>DivideMix discards the sample labels that are highly likely to be noisy, and leverages the noisy samples as unlabeled data to regularize the model from overfitting and improve generalization performance.</p>
+      </li>
+      <li>
+        <p>For labeled samples, we refine their ground-truth labels using the network’s predictions guided by the GMM for the other network. For unlabeled samples,we use the ensemble of both networks to make reliable guesses for their labels.</p>
+      </li>
+      <li>Training two networks, Co-divide datasets, label co-refinement and co-guessing.
+        <ul>
+          <li>improving MixMatch with label co-refinement and co-guessing.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/2888-Paper.pdf">Unlabelled Data Improves Bayesian Uncertainty Calibration under Covariate Shift Alexander Chan, Ahmed Alaa, Zhaozhi Qian, Mihaela van der Schaar</a>
+    <ul>
+      <li>While existing variants of BNNs are able to produce reliable, albeit approximate, uncertainty estimates over in-distribution data, it has been shown that they tend to be overconfident in predictions made on target data whose distribution over features differs from the training data, i.e., <strong>the covariate shift setup</strong>.</li>
+      <li>We develop <strong>an approximate Bayesian inference scheme</strong> based on posterior regularisation, where we use information from <strong>unlabelled target data to produce more appropriate uncertainty estimates for ‘‘covariate-shifted’’ predictions.</strong>
+</li>
+      <li>
+        <p>Empirical evaluations demonstrate that our method performs competitively compared to Bayesian and frequentist approaches to <strong>uncertainty estimation in neural networks.</strong></p>
+
+        <ul>
+          <li>
+            <p>uncertainty estimation:  quantifying confidence in their predictions — this is crucial in <strong>high-stakes applications that involve critical decision-making</strong>.</p>
+          </li>
+          <li>
+            <p>We make the following observation: <strong>a point being in the target data is an indication that the model should output higher uncertainty</strong> because the target distribution is not well-represented by training data due to covariate shift.
+  <strong>We use whether the data come from training or target set as a “pseudo-label”of model confidence.</strong></p>
+          </li>
+          <li>
+            <p>BNN learns a posterior distribution over parametersthat encapsulates the model uncertainty. Due the complexityof deep neural networks, the exact posterior is usually intractable. Hence, much of the research in BNN literature is devoted to finding better approximate inference algorithms for the posterior.</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>We note  that  most  existingworks in SSL focus entirely on using unlabelled data toimprove predictive performance (e.g. accuracy), but muchless thoughts have been given to improving the uncertainty estimate for those predictions, which is the focus of this paper.</p>
+      </li>
+      <li>
+<strong>Semi-supervised Learning</strong>: Many recent works encourage the model to generalise better by using a regularisation term computed on the unlabelled data <a href="https://papers.nips.cc/paper/8749-mixmatch-a-holistic-approach-to-semi-supervised-learning.pdf">MixMatch Berth-elot et al. (NeurIPS 2019)</a>.
+        <ul>
+          <li>
+<strong>Consistency regularization</strong> applies data augmentation to semi-supervised learning by leveraging the idea that a classifier should output the same class distribution for an unlabeled example even after it has been augmented.
+            <ul>
+              <li>E.g. 1: <a href="https://arxiv.org/pdf/1704.03976.pdf">(TPAMI 2018) “Virtual Adversarial Training” (VAT)</a> addresses this by instead computing an additive perturbation to apply to the input which maximally changes the output class distribution;</li>
+              <li>E.g. 2: <a href="https://papers.nips.cc/paper/6719-mean-teachers-are-better-role-models-weight-averaged-consistency-targets-improve-semi-supervised-deep-learning-results.pdf">(NeurIPS 2017) “Mean Teacher”: a method that averages model weights instead of label predictions.</a> uses an exponential moving average of model parameter values. This provides a more stable target and was found empirically to significantly improve results. 
+ Mean Teacher improves test accuracy and enables training with fewer labels than Temporal Ensembling.
+ Combining Mean Teacher and Residual Networks, we improvethe state of the art on CIFAR-10 with 4000 labels from 10.55% to 6.28%, and on ImageNet 2012 with 10% of the labels from 35.24% to 9.11%.</li>
+              <li>E.g. 3: <a href="https://papers.nips.cc/paper/8749-mixmatch-a-holistic-approach-to-semi-supervised-learning.pdf">MixMatch Berth-elot et al. (NeurIPS 2019)</a> utilizes a form of consistency regularization through the use of standard data augmentation for images (random horizontal flips and crops).</li>
+              <li>
+<a href="https://papers.nips.cc/paper/6719-mean-teachers-are-better-role-models-weight-averaged-consistency-targets-improve-semi-supervised-deep-learning-results.pdf">Connections</a>: There are at least two ways to improve the target quality. One approach is to choose the perturbation of the representations carefully instead of barely applying additive or multiplicative noise. Another approach is to choose the teacher model carefully instead of barely replicating the student model.Concurrently to our research, <a href="https://arxiv.org/pdf/1704.03976.pdf">“Virtual Adversarial Training” (VAT)</a> has taken the first approach and shown that Virtual Adversarial Training can yield impressive results. We take the second approach and will show that it too provides significant benefits. To our understanding, these two approaches are compatible, andtheir combination may produce even better outcomes. However, the analysis of their combined effectsis outside the scope of this paper.</li>
+              <li>About <a href="https://openreview.net/pdf?id=BJ6oOfqge">TEMPORALENSEMBLING FORSEMI-SUPERVISEDLEARNING</a>: Each target is updated only once per epoch, the learned information is incorporated into the training process at a slow pace. The larger the dataset, the longer the span of the updates, and in the case ofon-line learning, it is unclear how Temporal Ensembling can be used at all. (One could evaluate allthe targets periodically more than once per epoch, but keeping the evaluation span constant would require \(O(n^2)\) evaluations per epoch where n is the number of training examples.)</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Entropy Minimization</strong>: CCE, <a href="https://xinshaoamoswang.github.io/blogs/2020-06-07-Progressive-self-label-correction/">ProSelfLC</a>, <a href="https://papers.nips.cc/paper/2740-semi-supervised-learning-by-entropy-minimization.pdf">(NeurIPS) Semi-supervised learning by entropy minimization</a>, <a href="http://deeplearning.net/wp-content/uploads/2013/03/pseudo_label_final.pdf">(ICML workshop 2013) Pseudo-Label</a></p>
+          </li>
+          <li>
+            <p><strong>Traditional Regularization</strong>: weight decay, MixUP, etc.</p>
+          </li>
+          <li>More work on semi-supervised learning:
+            <ul>
+              <li><a href="https://papers.nips.cc/paper/7778-semi-supervised-deep-kernel-learning-regression-with-unlabeled-data-by-minimizing-predictive-variance.pdf">(NeurIPS 2018) Entropy minimisation: Jean, N., Xie, S. M., and Ermon, S. Semi-supervised deepkernel learning: Regression with unlabeled data by mini-mizing predictive variance.</a></li>
+              <li><a href="https://papers.nips.cc/paper/6333-regularization-with-stochastic-transformations-and-perturbations-for-deep-semi-supervised-learning.pdf">(NeurIPS 2016) Consistency regularisation: Sajjadi, M., Javanmardi, M., and Tasdizen, T.  Regulariza-tion with stochastic transformations and perturbations fordeep semi-supervised learning.</a></li>
+              <li><a href="https://www.ijcai.org/Proceedings/2019/0504.pdf">(IJCAI 20019) Consistency regularisation: Interpolation Consistency Training for Semi-supervised Learning  Vikas Verma, Alex Lamb, Juho Kannala, Yoshua Bengio, and David Lopez-Paz</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
     </ul>
   </li>
   <li><a href="https://proceedings.icml.cc/book/2020/hash/2e2079d63348233d91cad1fa9b1361e9">Federated Learning with Only Positive Labels Felix Xinnan Yu, Ankit Singh Rawat, Aditya Menon, Sanjiv Kumar</a></li>
