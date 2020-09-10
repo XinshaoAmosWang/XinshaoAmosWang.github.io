@@ -246,6 +246,8 @@ in <a href="/readingnotes/" class="flip-title">Reading Notes</a>
   
     <p>In general, robust deep learning covers: missing labels (semisupervised learning); noisy labels (noise detection and correction); regularisation techniques; sample imbalance (long-tailed class distribution); adversarial learning; and so on.</p>
 
+<p>Remark: in my reading notes, sometimes I simply copy texts directly from the original paper. Therefore, `we’ means a paper’s authors in many contexts.</p>
+
 <ol class="message">
   <li><a href="#icml-20-papers-some-are-not-from-icml-but-cited-in-icml">ICML-20 papers</a></li>
   <li><a href="#the-design-of-loss-functions-ie-optimisation-objectives-or-output-regularistion">The design of loss functions (i.e., optimisation objectives or output regularistion)</a></li>
@@ -254,6 +256,107 @@ in <a href="/readingnotes/" class="flip-title">Reading Notes</a>
 <h3 id="icml-20-papers-some-are-not-from-icml-but-cited-in-icml">ICML-20 papers (some are not from ICML, but cited in ICML)</h3>
 
 <ul class="message">
+  <li>
+    <p><a href="https://proceedings.icml.cc/static/paper_files/icml/2020/2572-Paper.pdf">Deep k-NN for Noisy Labels Dara Bahri, Heinrich Jiang, Maya Gupta</a></p>
+
+    <ul>
+      <li>
+        <p>In this paper, we provide an empirical study showing that a simple k-nearest neighbor-based filtering approach on the logit layer of a preliminary model can remove mislabeled training data and produce more accurate models than many recently proposed methods. 
+  <br>
+  We use a deep k-NN, in that we use a k-NN on learned intermediate rep-resentations of a preliminary model to identify suspicious examples for filtering.</p>
+      </li>
+      <li>
+<strong>After identifying examples whose labels disagree with their neighbors</strong>, one can <strong>either automatically remove them, or send them to a human operator for further review</strong>. This strategy can also be useful in <strong>human-in-the-loop systems</strong> where one can warn the human annotator that a label is suspicious and automatically propose new labels based on its nearest neighbors.
+        <ul>
+          <li><strong>This is suspicious in that a softmax classifier is based on similarities (logits), then why not using the predictions directly as done in <a href="../../blogs/2020-06-07-Progressive-self-label-correction/">ProSelfLC</a>?</strong></li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Theoretically</strong>, we show that k-NN’s predictions will, asymptotically, only identify a training example as clean if its label is the Bayes-optimal label.</p>
+      </li>
+      <li>We also provide <strong>finite-sample analysis</strong> in terms of the margin and how spread-out the corrupted labels are (Theorem 1), rates of convergence for the margin (Theorem 2) and rates under Tsybakov’s noise condition (Theorem 3) with all rates matching minimax-optimal rates in the noiseless setting.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/3231-Paper.pdf">Safe Deep Semi-Supervised Learning for Unseen-Class Unlabeled Data Lan-Zhe Guo, Zhen-Yu Zhang, Yuan Jiang, Yufeng Li, Zhi-Hua Zhou</a>
+    <ul>
+      <li>The performance  is  seriously  decreased  when  the class  distribution  is  mismatched,  among  which the common situation is that unlabeled data contains some classes not seen in the labeled data.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/2565-Paper.pdf">Certified Robustness to Label-Flipping Attacks via Randomized Smoothing, Elan Rosenfeld, Ezra Winston, Pradeep Ravikumar, Zico Kolter</a>
+    <ul>
+      <li>
+        <p>In this work,we propose a strategy for building <strong>linear classifiers</strong> that are certifiably robust against a strong variant of label flipping, where <strong>each test example is targeted independently</strong>. 
+  <br>
+  For each test point, our classifier includes a certification that its prediction would be the same had some number of training labels been changed adversarially.</p>
+      </li>
+      <li>
+        <p>We generalize our results to the multi-class case, providing the first multi-class classification algorithm that is certifiably robust to label-flipping attacks.</p>
+      </li>
+      <li>
+        <p>we propose <strong>a pointwise certified defense</strong>—this means that <strong>with each prediction</strong>, the classifier includes a certification guaranteeing that its prediction would not be different had it been trained on data with some number oflabels flipped.</p>
+      </li>
+      <li>
+        <p><strong>Prior works on certified defenses make statistical guarantees over the entire test distribution</strong> (rather than at the population level), but they make no guarantees as to the robustness of a predictionon any particular test point; thus, a determined adversary could still cause a specific test point to be misclassified. 
+  <br>
+  We therefore consider the threat of <strong>a worst-case adversary</strong> that can make a training set perturbation to target each test point individually.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="https://proceedings.icml.cc/static/paper_files/icml/2020/2305-Paper.pdf">Does label smoothing mitigate label noise? Michal Lukasik, Srinadh Bhojanapalli, Aditya Menon, Sanjiv Kumar</a>
+    <ul>
+      <li>
+        <p>There is <strong>a concurrent comprehensive analysis about label smoothing/manipulation: <a href="../../blogs/2020-06-07-Progressive-self-label-correction/">ProSelfLC</a></strong></p>
+      </li>
+      <li>
+        <p>We present <strong>a novel connection of label smoothing to loss correction techniques</strong> from the label noise literature; We empirically demonstrate that label smoothing significantly improves performance under label noise at varying noise levels, and <strong>is competitive with loss correction techniques</strong>.</p>
+      </li>
+      <li>
+        <p>We explain these denoising effects by <strong>relating label smoothing to l2 regularisation</strong>.</p>
+      </li>
+      <li>
+        <p>While Mülleret al. (2019) established that label smoothing can harm distillation, we show an opposite picture in noisy settings. We show that when distilling from noisy labels, smoothing the teacher improves the student;  this is in marked contrast to recent findings in noise-free settings.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="https://proceedings.icml.cc/static/paper_files/icml/2020/3104-Paper.pdf">Variational Label Enhancement, Ning Xu, Jun Shu, Yun-Peng Liu, Xin Geng</a>
+    <ul>
+      <li>The learning process on the instances labeled by label distributions is called label distribution learning (LDL).</li>
+      <li>Unfortunately, many training sets only contain simple logical labels rather than label distributions due to the difficulty of obtaining the label distributions directly.</li>
+      <li>
+<strong>This is consistent with the label definition in <a href="../../blogs/2020-06-07-Progressive-self-label-correction/">ProSelfLC</a></strong> 
+  <hy-img root-margin="512px" src="../../imgs/VariationalLabelEnhancement.png" alt="" class="lead figure" data-width="800" data-height="100">
+  <noscript><img data-ignore src="../../imgs/VariationalLabelEnhancement.png" alt="" class="lead figure" data-width="800" data-height="100"></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/4834-Paper.pdf">Beyond Synthetic Noise: Deep Learning on Controlled Noisy Labels, Lu Jiang, Di Huang, Mason Liu, Weilong Yang</a>
+    <ul>
+      <li>
+        <p><strong>“Webly-labeled” images</strong> are commonly used in the literature (Bootkrajang &amp; Kab ́an,2012; Li et al., 2017a; Krause et al., 2016; Chen &amp; Gupta,2015), in which both images and labels are crawled fromthe web and the noisy labels are automatically determined by matching the images’ surrounding text to a class name during web crawling or equivalently by querying the search index afterward. Unlike synthetic labels, web labels follow a realistic label noise distribution but have not been studied in a controlled setting.</p>
+      </li>
+      <li>
+        <p>First, we establish <strong>the first benchmark of controlled web label noise</strong>, where each  training  example  is  carefully  annotated  to  indicate whether the label is correct or not.  Specifically, we automatically collect images by querying Google Image Searchusing a set of class names, have each image annotated by3-5 workers, and create training sets of ten controlled noiselevels. As the primary goal of our annotation is to identify images with incorrect labels, to obtain a sufficient numberof these images we have to collect a total of about 800,000 annotations over 212,588 images. The new benchmark enables us to go beyond synthetic label noise and study weblabel noise in a controlled setting. For convenience, we will refer it as web label noise (or red noise) to distinguish itfrom synthetic label noise (or blue noise).</p>
+      </li>
+      <li>Second, this paper introduces a simple yet highly effective method to overcome both synthetic and real-world noisy labels. It is based on a new idea of minimizing the empirical vicinal risk using curriculum learning. We show that it consistently outperforms baseline methods on our datasets and achieves state-of-the-art performance on two public benchmarks of synthetic and real-world noisy labels. Notably, on the challenging benchmark WebVision 1.0 (Li et al., 2017a)that consists of 2.2 million images of real-world noisy labels,it yields a significant improvement of 3% in the top-1 accu-racy, achieving the best-published result under the standard training setting.
+        <ul>
+          <li>MentorMix: to design a new robust loss to overcome noisy labels using curriculum learning and vicinal risk minimization</li>
+          <li>MentorNet: curriculum learning</li>
+          <li>Mixup: data augmentation</li>
+        </ul>
+      </li>
+      <li>
+        <p>Finally, we conduct <strong>the largest study by far into understanding DNNs trained on noisy labels across a variety of noise types (blue and red), noise levels, training settings, and network architectures.</strong></p>
+      </li>
+      <li>We hope our <strong>(i) benchmark, (ii) new method, and (iii) findings</strong> will facilitate future deep learning research on noisy labeled data. We will release our data and code.</li>
+    </ul>
+  </li>
   <li>
 <a href="https://arxiv.org/pdf/2007.00151.pdf">(arXiv-20-June) Early-Learning Regularization Prevents Memorization of Noisy Labels</a>
     <ul>
