@@ -249,13 +249,38 @@ in <a href="/readingnotes/" class="flip-title">Reading Notes</a>
 <p>Remark: in my reading notes, sometimes I simply copy texts directly from the original paper. Therefore, `we’ means a paper’s authors in many contexts.</p>
 
 <ol class="message">
-  <li><a href="#icml-20-papers-some-are-not-from-icml-but-cited-in-icml">ICML-20 papers</a></li>
+  <li><a href="#label-noise">Label noise</a></li>
   <li><a href="#the-design-of-loss-functions-ie-optimisation-objectives-or-output-regularistion">The design of loss functions (i.e., optimisation objectives or output regularistion)</a></li>
+  <li><a href="#semi-supervised-learning">Semi-supervised learning</a></li>
+  <li><a href="#others">Others</a></li>
 </ol>
 
-<h3 id="icml-20-papers-some-are-not-from-icml-but-cited-in-icml">ICML-20 papers (some are not from ICML, but cited in ICML)</h3>
+<h3 id="label-noise">Label noise</h3>
 
 <ul class="message">
+  <li>
+    <p><a href="https://proceedings.icml.cc/static/paper_files/icml/2020/2896-Paper.pdf">Improving generalization by controlling label-noise information in neural network weights, Hrayr Harutyunyan, Kyle Reing, Greg Ver Steeg, Aram Galstyan</a></p>
+
+    <ul>
+      <li>
+        <p>In the presence of noisy or incorrect labels, neural networks have the undesirable tendency to memorize information about the noise. Standard regularization techniques such as dropout, weight decay or data augmentation sometimes help, but do not prevent this behavior.</p>
+      </li>
+      <li>
+        <p>If one considers <strong>neural network weights as random variables that depend on the data and stochasticity of training</strong>, <strong>the amount of memorized information can be quantified</strong> with the Shannon mutual information between weight and the vector of all training labels given inputs \(I(w;y\|x)\). 
+  <br>
+  We show that for any training algorithm, low values of this term correspond to reduction in memorization of label-noise and better generalization bounds.</p>
+      </li>
+      <li>
+        <p>Drawback: An auxiliary network is used to detect incorrect or misleading labels.</p>
+        <ul>
+          <li>Simpler method: <a href="../../blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a>
+</li>
+          <li>Simpler method: <a href="../../blogs/2020-06-07-Progressive-self-label-correction/">ProSelfLC</a>
+</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
   <li>
     <p><a href="https://proceedings.icml.cc/static/paper_files/icml/2020/2572-Paper.pdf">Deep k-NN for Noisy Labels Dara Bahri, Heinrich Jiang, Maya Gupta</a></p>
 
@@ -278,33 +303,6 @@ in <a href="/readingnotes/" class="flip-title">Reading Notes</a>
     </ul>
   </li>
   <li>
-<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/3231-Paper.pdf">Safe Deep Semi-Supervised Learning for Unseen-Class Unlabeled Data Lan-Zhe Guo, Zhen-Yu Zhang, Yuan Jiang, Yufeng Li, Zhi-Hua Zhou</a>
-    <ul>
-      <li>The performance  is  seriously  decreased  when  the class  distribution  is  mismatched,  among  which the common situation is that unlabeled data contains some classes not seen in the labeled data.</li>
-    </ul>
-  </li>
-  <li>
-<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/2565-Paper.pdf">Certified Robustness to Label-Flipping Attacks via Randomized Smoothing, Elan Rosenfeld, Ezra Winston, Pradeep Ravikumar, Zico Kolter</a>
-    <ul>
-      <li>
-        <p>In this work,we propose a strategy for building <strong>linear classifiers</strong> that are certifiably robust against a strong variant of label flipping, where <strong>each test example is targeted independently</strong>. 
-  <br>
-  For each test point, our classifier includes a certification that its prediction would be the same had some number of training labels been changed adversarially.</p>
-      </li>
-      <li>
-        <p>We generalize our results to the multi-class case, providing the first multi-class classification algorithm that is certifiably robust to label-flipping attacks.</p>
-      </li>
-      <li>
-        <p>we propose <strong>a pointwise certified defense</strong>—this means that <strong>with each prediction</strong>, the classifier includes a certification guaranteeing that its prediction would not be different had it been trained on data with some number oflabels flipped.</p>
-      </li>
-      <li>
-        <p><strong>Prior works on certified defenses make statistical guarantees over the entire test distribution</strong> (rather than at the population level), but they make no guarantees as to the robustness of a predictionon any particular test point; thus, a determined adversary could still cause a specific test point to be misclassified. 
-  <br>
-  We therefore consider the threat of <strong>a worst-case adversary</strong> that can make a training set perturbation to target each test point individually.</p>
-      </li>
-    </ul>
-  </li>
-  <li>
 <img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="https://proceedings.icml.cc/static/paper_files/icml/2020/2305-Paper.pdf">Does label smoothing mitigate label noise? Michal Lukasik, Srinadh Bhojanapalli, Aditya Menon, Sanjiv Kumar</a>
     <ul>
       <li>
@@ -319,20 +317,6 @@ in <a href="/readingnotes/" class="flip-title">Reading Notes</a>
       <li>
         <p>While Mülleret al. (2019) established that label smoothing can harm distillation, we show an opposite picture in noisy settings. We show that when distilling from noisy labels, smoothing the teacher improves the student;  this is in marked contrast to recent findings in noise-free settings.</p>
       </li>
-    </ul>
-  </li>
-  <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="https://proceedings.icml.cc/static/paper_files/icml/2020/3104-Paper.pdf">Variational Label Enhancement, Ning Xu, Jun Shu, Yun-Peng Liu, Xin Geng</a>
-    <ul>
-      <li>The learning process on the instances labeled by label distributions is called label distribution learning (LDL).</li>
-      <li>Unfortunately, many training sets only contain simple logical labels rather than label distributions due to the difficulty of obtaining the label distributions directly.</li>
-      <li>
-<strong>This is consistent with the label definition in <a href="../../blogs/2020-06-07-Progressive-self-label-correction/">ProSelfLC</a></strong> 
-  <hy-img root-margin="512px" src="../../imgs/VariationalLabelEnhancement.png" alt="" class="lead figure" data-width="800" data-height="100">
-  <noscript><img data-ignore src="../../imgs/VariationalLabelEnhancement.png" alt="" class="lead figure" data-width="800" data-height="100"></noscript>
-  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
-</hy-img>
-</li>
     </ul>
   </li>
   <li>
@@ -380,6 +364,212 @@ in <a href="/readingnotes/" class="flip-title">Reading Notes</a>
         </ul>
       </li>
     </ul>
+  </li>
+  <li>
+<a href="https://proceedings.icml.cc/paper/2020/file/87682805257e619d49b8e0dfdc14affa-Paper.pdf">Error-Bounded Correction of Noisy Labels, Songzhu Zheng, Pengxiang Wu, Aman Goswami, Mayank Goswami, Dimitris Metaxas, Chao Chen</a>
+    <ul>
+      <li>
+        <p>To be robust against label noise, many successful methods rely on the noisy classifiers (i.e., models trained on the noisy training data) to determine whether a label is trustworthy. However, it remains unknown why this heuristic works well in practice.</p>
+      </li>
+      <li>
+        <p>In this paper, <strong>we provide the first theoretical explanation</strong> for these methods.</p>
+      </li>
+      <li>
+        <p>We prove that the prediction of a noisy classifier can indeed be a good indicator of whether the label of a training data is clean.</p>
+      </li>
+      <li>
+        <p>Based on the theoretical result, we propose a novel algorithm that corrects the labels based on the noisy classifier prediction. The corrected labels are <strong>consistent with the true Bayesian optimal classifier with high probability.</strong></p>
+      </li>
+      <li>
+        <p>We prove that when the noisy classifier has <strong>low confidence on the label of a datum, such label is likely corrupted.</strong> In fact, we can quantify the threshold of confidence, below which the label is likely to be corrupted, and above which is it likely to be not. We also empirically show that the bound in our theorem is tight.</p>
+      </li>
+      <li>
+        <p>We provide a theorem quantifying how a noisy classifier’s prediction correlates to the purity of a datum’s label. This provides theoretical explanation for data-recalibrating methods for noisy labels.</p>
+      </li>
+      <li>
+        <p>Inspired by the theorem, we propose <strong>a new label correction algorithm with guaranteed success rate.</strong></p>
+      </li>
+      <li>
+        <p><strong>A Bayes optimal classifier is the minimizer of the risk over all possible hypotheses.</strong></p>
+      </li>
+      <li>
+        <p>We also have a burn-in stage in which we train the networkusing the original noisy labels for \(m\) epochs. During theburn-in stage, we use the original cross-entropy loss;</p>
+      </li>
+      <li>
+        <p>After the burn-in stage, we want to avoid overfitting of theneural network. To achieve this goal, we introduce aretroactive loss term. The  idea  is  to  enforce  the consistency between \(f\) and the prediction of the model at a previous epoch.</p>
+      </li>
+      <li>
+        <p>In all experiments, <strong>we use early stopping on validation set to tune hyperparameters and report theperformance on test set.</strong></p>
+      </li>
+      <li>
+        <p><strong><a href="https://xinshaoamoswang.github.io/blogs/2020-06-07-Progressive-self-label-correction/">Simple and Effective ProSelfLC: Progressive Self Label Correction</a></strong></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://proceedings.icml.cc/book/2020/hash/77f959f119f4fb2321e9ce801e2f5163">Normalized Loss Functions for Deep Learning with Noisy Labels Xingjun Ma, Hanxun Huang, Yisen Wang, Simone Romano, Sarah Erfani, James Bailey</a>
+    <ul>
+      <li>
+        <p><strong>This work is motivated by <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></p>
+      </li>
+      <li>
+        <p>We provide new theoretical insights into robust loss func-tions demonstrating that a simple normalization can makeany loss function robust to noisy labels.</p>
+      </li>
+      <li>
+        <p>We identify that existing robust loss functions suffer from an underfitting problem.  To address this, we propose ageneric framework Active Passive Loss(APL) to build new loss functions with <strong>theoretically guaranteed robustness and sufficient learning properties.</strong></p>
+      </li>
+      <li>
+        <p><strong>Robustness and Convergence?</strong></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf">SIGUA: Forgetting May Make Learning with Noisy Labels More Robust, Bo Han, Gang Niu, Xingrui Yu, QUANMING YAO, Miao Xu, Ivor Tsang, Masashi Sugiyama</a>
+    <ul>
+      <li>
+        <p>We propose stochastic integrated gradient underweighted ascent (SIGUA): in a mini-batch, we adopt gradient descent on good data as usual, and learning-rate-reduced gradient ascent on bad data;</p>
+      </li>
+      <li>
+        <p>Technically, SIGUA pulls optimization back for generalization when their goals conflict with each other;</p>
+      </li>
+      <li>Philosophically, SIGUA shows forgetting undesired memorization can reinforce desired memorization.
+        <ul>
+          <li><strong>The idea is similar with <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></li>
+        </ul>
+      </li>
+      <li>Almost the same authors as <a href="https://proceedings.icml.cc/book/2020/hash/72b386224056bf940cd5b01341f65e9d">Searching to Exploit Memorization Effect in Learning with Noisy Labels QUANMING YAO, Hansi Yang, Bo Han, Gang Niu, James Kwok</a>
+</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/3285-Paper.pdf">Searching to Exploit Memorization Effect in Learning with Noisy Labels, QUANMING YAO, Hansi Yang, Bo Han, Gang Niu, James Kwok</a>
+    <ul>
+      <li>Sample selection approaches: select \(R(t)\) small-loss samples based on network’s predictions</li>
+      <li>Formulation as an AutoML Problem  (complex algorithm personally);</li>
+      <li>Bi-level optimisation</li>
+      <li><strong>No sample selection is needed: <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></li>
+      <li>Almost the same authors as <a href="https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf">SIGUA: Forgetting May Make Learning with Noisy Labels More Robust Bo Han, Gang Niu, Xingrui Yu, QUANMING YAO, Miao Xu, Ivor Tsang, Masashi Sugiyama</a>
+</li>
+    </ul>
+  </li>
+  <li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="https://proceedings.icml.cc/static/paper_files/icml/2020/3104-Paper.pdf">Variational Label Enhancement, Ning Xu, Jun Shu, Yun-Peng Liu, Xin Geng</a>
+    <ul>
+      <li>The learning process on the instances labeled by label distributions is called label distribution learning (LDL).</li>
+      <li>Unfortunately, many training sets only contain simple logical labels rather than label distributions due to the difficulty of obtaining the label distributions directly.</li>
+      <li>
+<strong>This is consistent with the label definition in <a href="../../blogs/2020-06-07-Progressive-self-label-correction/">ProSelfLC</a></strong> 
+  <hy-img root-margin="512px" src="/imgs/VariationalLabelEnhancement.png" alt="" class="lead figure" data-width="800" data-height="100">
+  <noscript><img data-ignore src="/imgs/VariationalLabelEnhancement.png" alt="" class="lead figure" data-width="800" data-height="100"></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/4950-Paper.pdf">Peer Loss Functions: Learning from Noisy Labels without Knowing Noise Rates, Yang Liu, Hongyi Guo</a>
+    <ul>
+      <li>Overall, this method is complex due to <strong>peer samples</strong>.</li>
+      <li>
+<strong>The motivation/highlight is not novel</strong>: without Knowing Noise Rates.  Our main goal is to provide an al-ternative that does not require the specification of the noiserates, nor an additional estimation step for the noise.</li>
+      <li>
+        <p>Peer loss is invariant to label noise when optimizing with it. This effect helps us get rid of theestimation of noise rates.</p>
+      </li>
+      <li>
+        <p>i) is robust to asymmetriclabel noise with <strong>formal theoretical guarantees</strong>  and  ii)  requires  no  prior  knowledge  or  estimationof the noise rates (<strong>no need for specifying noise rates</strong>).</p>
+      </li>
+      <li>
+        <p>We also provide preliminary results on <strong>how peer loss generalizes to multi-class clas-sification problems.</strong></p>
+      </li>
+      <li>
+        <p>Relevant work 1: <a href="https://papers.nips.cc/paper/8853-l_dmi-a-novel-information-theoretic-loss-function-for-training-deep-nets-robust-to-label-noise.pdf">neurips-19: \(L_{DMI}\): A Novel Information-theoretic Loss Functionfor Training Deep Nets Robust to Label Noise</a> To the best ofour knowledge, \(L_{DMI}\) is the first loss function that is provably robust to instance-independent label noise, regardless of noise pattern, and it can be applied to any existing classification neural networks straightforwardly without any auxiliary information. In addition to theoretical justification, we also empirically show that using \(L_{DMI}\) outperforms all other counterparts in the classification task on both image dataset and natural language dataset include Fashion-MNIST, CIFAR-10, Dogs vs. Cats, MR with a variety of synthesized noise patterns and noise amounts,as well as a real-world dataset Clothing1M.
+  The core of \(L_{DMI}\) is a generalized version of mutual information, termed Determinant based Mutual Information (DMI), which is not only information-monotone but also relatively invariant.</p>
+      </li>
+      <li>
+        <p>Relevant work 2: <a href="https://arxiv.org/pdf/1802.08887.pdf">Water from Two Rocks: Maximizing the Mutual Information</a></p>
+      </li>
+      <li><strong>No loss function is needed: <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></li>
+    </ul>
+  </li>
+  <li>
+<a href="https://proceedings.icml.cc/paper/2020/file/f2d887e01a80e813d9080038decbbabb-Paper.pdf">Learning with Bounded Instance- and Label-dependent Label Noise, Jiacheng Cheng, Tongliang Liu, Kotagiri Ramamohanarao, Dacheng Tao</a>
+    <ul>
+      <li><strong>Binary classification =&gt; Not highly useful.</strong></li>
+      <li>. Specifically, we introduce the concept of <strong>distilled examples</strong>, i.e. examples whose labels are identical with the labels assigned for them by the Bayes optimal classifier, and prove that <strong>under certain conditions classifiers learnt on distilled examples will converge to the Bayes optimal classifier</strong>.</li>
+      <li>Inspired by the idea of learning with distilled examples, we then propose a learning algorithm with <strong>theoretical guarantees for its robustness to BILN</strong>.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://openreview.net/forum?id=HJgExaVtwr&amp;noteId=keqS67sTCbi">(ICLR-20) Junnan Li, Richard Socher, and Steven C.H. Hoi. DivideMix: Learning with noisy labels as semi-supervised learning.</a>
+    <ul>
+      <li>
+<a href="https://openreview.net/forum?id=HJgExaVtwr&amp;noteId=keqS67sTCbi">https://openreview.net/forum?id=HJgExaVtwr&amp;noteId=keqS67sTCbi</a>
+        <ul>
+          <li>
+<strong>Exploiting MixMatch</strong>;</li>
+          <li>The algorithm is complex. Instead, DM, IMAE, and ProSelfLC are much simpler.</li>
+        </ul>
+      </li>
+      <li>
+        <p>DivideMix models the per-sample loss distribution with a mixture model to <strong>dynamically divide the training data into a labeled set with clean samples and an unlabeled set with noisy samples</strong>, and trains the model on both the labeled and unlabeled data in a semi-supervised manner.</p>
+      </li>
+      <li>
+        <p>To avoid confirmation bias, we simultaneously train two diverged networks where each network uses the dataset division from the other network. During the semi-supervised training phase, we improve the <strong>MixMatch</strong> strategy by performing <strong>label co-refinement and label co-guessing on labeled and unlabeled samples</strong>, respectively.</p>
+      </li>
+      <li>
+        <p>DivideMix discards the sample labels that are highly likely to be noisy, and leverages the noisy samples as unlabeled data to regularize the model from overfitting and improve generalization performance.</p>
+      </li>
+      <li>
+        <p>For labeled samples, we refine their ground-truth labels using the network’s predictions guided by the GMM for the other network. For unlabeled samples,we use the ensemble of both networks to make reliable guesses for their labels.</p>
+      </li>
+      <li>Training two networks, Co-divide datasets, label co-refinement and co-guessing.
+        <ul>
+          <li>improving MixMatch with label co-refinement and co-guessing.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="the-design-of-loss-functions-ie-optimisation-objectives-or-output-regularistion">The design of loss functions (i.e., optimisation objectives or output regularistion)</h3>
+<ul class="message">
+  <li>
+<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="https://arxiv.org/pdf/1905.11528.pdf">Improved Training Speed, Accuracy, and Data Utilization Through Loss Function Optimization</a>
+    <ul>
+      <li>Speed, Accuracy, Data Efficiency, etc;</li>
+      <li>BAIKAL loss;</li>
+      <li>Genetic Loss Function Optimization (GLO) builds loss functions hierarchically from a set of operators and leaf nodes;</li>
+      <li>A general framework for loss function metalearning, covering both novel loss function discovery and optimization, is developed and evaluated experimentally.</li>
+      <li><strong>No loss function is needed: <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://arxiv.org/pdf/1506.01186.pdf">Cyclical Learning Rates for Training Neural Networks</a></p>
+  </li>
+  <li>
+<a href="https://arxiv.org/pdf/1702.05659.pdf">On loss functions for deep neural networks in classification =&gt; with theory of robustness and convergence</a>
+    <ul>
+      <li>We try to investigate how particular choices of loss functions affect deep models and their learning dynamics, as well as resulting classifiers robustness to various effects;</li>
+      <li>We present new insights into theoretical properties of a couple of these losses;</li>
+      <li>We provide experimental evaluation of resulting models’ properties, including the effect on speed of learning, final performance, input data and label noise robustness as well as convergence.</li>
+      <li>So why is using these two loss functions (\(L_1\), \(L_2\) losses) unpopular? Is there anything fundamentally wrong with this formulation from the mathematical perspective? While the following observation is not definitive, it shows an insight into what might be the issue causing slow convergence of such methods.</li>
+      <li>
+<strong>Lack of convexity</strong> comes from the same argument since <strong>second derivative wrt. to any weight in the final layer of the model changes sign (as it is equivalent to first derivative being non-monotonic)</strong>.</li>
+    </ul>
+
+    <p><strong>Proposition 2</strong>. \(L_1\), \(L_2\) losses applied to probabilities estimates coming
+  from sigmoid (or softmax) have <strong>non-monotonic partial derivatives wrt. to the output of the final layer (and the loss is not convex nor concave wrt. to last layer weights)</strong>. Furthermore, <strong>they vanish in both infinities, which slows down learning of heavily misclassified examples</strong>.</p>
+
+    <ul>
+      <li><strong>No loss function is needed: <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="semi-supervised-learning">Semi-supervised learning</h3>
+<ul class="message">
+  <li>
+    <p><a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Iscen_Label_Propagation_for_Deep_Semi-Supervised_Learning_CVPR_2019_paper.pdf">(CVPR-19) Ahmet Iscen et al Label Propagation for Deep Semi-supervised Learning</a></p>
   </li>
   <li>
 <a href="https://www.ijcai.org/Proceedings/2019/0504.pdf">(IJCAI-19) Consistency regularisation: Interpolation Consistency Training for Semi-supervised Learning, Vikas Verma, Alex Lamb, Juho Kannala, Yoshua Bengio, and David Lopez-Paz</a>
@@ -550,127 +740,70 @@ in <a href="/readingnotes/" class="flip-title">Reading Notes</a>
     </ul>
   </li>
   <li>
-<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf">SIGUA: Forgetting May Make Learning with Noisy Labels More Robust, Bo Han, Gang Niu, Xingrui Yu, QUANMING YAO, Miao Xu, Ivor Tsang, Masashi Sugiyama</a>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/4874-Paper.pdf">Poisson Learning: Graph Based Semi-Supervised Learning At Very Low Label Rates Jeff Calder, Brendan Cook, Matthew Thorpe, Dejan Slepcev</a>
     <ul>
-      <li>
-        <p>We propose stochastic integrated gradient underweighted ascent (SIGUA): in a mini-batch, we adopt gradient descent on good data as usual, and learning-rate-reduced gradient ascent on bad data;</p>
-      </li>
-      <li>
-        <p>Technically, SIGUA pulls optimization back for generalization when their goals conflict with each other;</p>
-      </li>
-      <li>Philosophically, SIGUA shows forgetting undesired memorization can reinforce desired memorization.
-        <ul>
-          <li><strong>The idea is similar with <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></li>
-        </ul>
-      </li>
-      <li>Almost the same authors as <a href="https://proceedings.icml.cc/book/2020/hash/72b386224056bf940cd5b01341f65e9d">Searching to Exploit Memorization Effect in Learning with Noisy Labels QUANMING YAO, Hansi Yang, Bo Han, Gang Niu, James Kwok</a>
-</li>
+      <li>The  need  to  address  the  degeneracy of Laplacian semi-supervised learning</li>
+      <li>Geometric or topological structure in unlabeled data can be used</li>
+      <li>The exact nature of the degeneracy in Laplace learning, and the question of how the tails of the spikes propagate label information, has not been studied and is still poorly understood.</li>
+      <li>We carefully analyze Laplace learning at very low label rates, and we discover that nearly all of the degeneracy of Laplace learning is due to a large constant bias in the solution of the Laplace equation that is present only at low label rates. In order to overcome this problem we introduce a new algorithm, we call Poisson learning</li>
     </ul>
   </li>
   <li>
-<a href="https://proceedings.icml.cc/paper/2020/file/87682805257e619d49b8e0dfdc14affa-Paper.pdf">Error-Bounded Correction of Noisy Labels, Songzhu Zheng, Pengxiang Wu, Aman Goswami, Mayank Goswami, Dimitris Metaxas, Chao Chen</a>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/3231-Paper.pdf">Safe Deep Semi-Supervised Learning for Unseen-Class Unlabeled Data Lan-Zhe Guo, Zhen-Yu Zhang, Yuan Jiang, Yufeng Li, Zhi-Hua Zhou</a>
+    <ul>
+      <li>The performance  is  seriously  decreased  when  the class  distribution  is  mismatched,  among  which the common situation is that unlabeled data contains some classes not seen in the labeled data.</li>
+    </ul>
+  </li>
+  <li>Semi-Supervised Learning Using Gaussian Fields and Harmonic Functions</li>
+  <li><a href="http://pages.cs.wisc.edu/~jerryzhu/pub/ssl_survey.pdf">Semi-Supervised Learning Literature Survey</a></li>
+  <li>
+    <p><a href="https://arxiv.org/pdf/1805.09180.pdf">On semi-supervised learning</a></p>
+  </li>
+  <li>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/2565-Paper.pdf">Certified Robustness to Label-Flipping Attacks via Randomized Smoothing, Elan Rosenfeld, Ezra Winston, Pradeep Ravikumar, Zico Kolter</a>
     <ul>
       <li>
-        <p>To be robust against label noise, many successful methods rely on the noisy classifiers (i.e., models trained on the noisy training data) to determine whether a label is trustworthy. However, it remains unknown why this heuristic works well in practice.</p>
+        <p>In this work,we propose a strategy for building <strong>linear classifiers</strong> that are certifiably robust against a strong variant of label flipping, where <strong>each test example is targeted independently</strong>. 
+  <br>
+  For each test point, our classifier includes a certification that its prediction would be the same had some number of training labels been changed adversarially.</p>
       </li>
       <li>
-        <p>In this paper, <strong>we provide the first theoretical explanation</strong> for these methods.</p>
+        <p>We generalize our results to the multi-class case, providing the first multi-class classification algorithm that is certifiably robust to label-flipping attacks.</p>
       </li>
       <li>
-        <p>We prove that the prediction of a noisy classifier can indeed be a good indicator of whether the label of a training data is clean.</p>
+        <p>we propose <strong>a pointwise certified defense</strong>—this means that <strong>with each prediction</strong>, the classifier includes a certification guaranteeing that its prediction would not be different had it been trained on data with some number oflabels flipped.</p>
       </li>
       <li>
-        <p>Based on the theoretical result, we propose a novel algorithm that corrects the labels based on the noisy classifier prediction. The corrected labels are <strong>consistent with the true Bayesian optimal classifier with high probability.</strong></p>
-      </li>
-      <li>
-        <p>We prove that when the noisy classifier has <strong>low confidence on the label of a datum, such label is likely corrupted.</strong> In fact, we can quantify the threshold of confidence, below which the label is likely to be corrupted, and above which is it likely to be not. We also empirically show that the bound in our theorem is tight.</p>
-      </li>
-      <li>
-        <p>We provide a theorem quantifying how a noisy classifier’s prediction correlates to the purity of a datum’s label. This provides theoretical explanation for data-recalibrating methods for noisy labels.</p>
-      </li>
-      <li>
-        <p>Inspired by the theorem, we propose <strong>a new label correction algorithm with guaranteed success rate.</strong></p>
-      </li>
-      <li>
-        <p><strong>A Bayes optimal classifier is the minimizer of the risk over all possible hypotheses.</strong></p>
-      </li>
-      <li>
-        <p>We also have a burn-in stage in which we train the networkusing the original noisy labels for \(m\) epochs. During theburn-in stage, we use the original cross-entropy loss;</p>
-      </li>
-      <li>
-        <p>After the burn-in stage, we want to avoid overfitting of theneural network. To achieve this goal, we introduce aretroactive loss term. The  idea  is  to  enforce  the consistency between \(f\) and the prediction of the model at a previous epoch.</p>
-      </li>
-      <li>
-        <p>In all experiments, <strong>we use early stopping on validation set to tune hyperparameters and report theperformance on test set.</strong></p>
-      </li>
-      <li>
-        <p><strong><a href="https://xinshaoamoswang.github.io/blogs/2020-06-07-Progressive-self-label-correction/">Simple and Effective ProSelfLC: Progressive Self Label Correction</a></strong></p>
+        <p><strong>Prior works on certified defenses make statistical guarantees over the entire test distribution</strong> (rather than at the population level), but they make no guarantees as to the robustness of a predictionon any particular test point; thus, a determined adversary could still cause a specific test point to be misclassified. 
+  <br>
+  We therefore consider the threat of <strong>a worst-case adversary</strong> that can make a training set perturbation to target each test point individually.</p>
       </li>
     </ul>
   </li>
+</ul>
+
+<h3 id="others">Others</h3>
+<ul class="message">
   <li>
-<a href="https://proceedings.icml.cc/paper/2020/file/f2d887e01a80e813d9080038decbbabb-Paper.pdf">Learning with Bounded Instance- and Label-dependent Label Noise, Jiacheng Cheng, Tongliang Liu, Kotagiri Ramamohanarao, Dacheng Tao</a>
-    <ul>
-      <li><strong>Binary classification =&gt; Not highly useful.</strong></li>
-      <li>. Specifically, we introduce the concept of <strong>distilled examples</strong>, i.e. examples whose labels are identical with the labels assigned for them by the Bayes optimal classifier, and prove that <strong>under certain conditions classifiers learnt on distilled examples will converge to the Bayes optimal classifier</strong>.</li>
-      <li>Inspired by the idea of learning with distilled examples, we then propose a learning algorithm with <strong>theoretical guarantees for its robustness to BILN</strong>.</li>
-    </ul>
-  </li>
-  <li>
-<a href="https://proceedings.icml.cc/book/2020/hash/77f959f119f4fb2321e9ce801e2f5163">Normalized Loss Functions for Deep Learning with Noisy Labels Xingjun Ma, Hanxun Huang, Yisen Wang, Simone Romano, Sarah Erfani, James Bailey</a>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/2565-Paper.pdf">Certified Robustness to Label-Flipping Attacks via Randomized Smoothing, Elan Rosenfeld, Ezra Winston, Pradeep Ravikumar, Zico Kolter</a>
     <ul>
       <li>
-        <p><strong>This work is motivated by <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></p>
+        <p>In this work,we propose a strategy for building <strong>linear classifiers</strong> that are certifiably robust against a strong variant of label flipping, where <strong>each test example is targeted independently</strong>. 
+  <br>
+  For each test point, our classifier includes a certification that its prediction would be the same had some number of training labels been changed adversarially.</p>
       </li>
       <li>
-        <p>We provide new theoretical insights into robust loss func-tions demonstrating that a simple normalization can makeany loss function robust to noisy labels.</p>
+        <p>We generalize our results to the multi-class case, providing the first multi-class classification algorithm that is certifiably robust to label-flipping attacks.</p>
       </li>
       <li>
-        <p>We identify that existing robust loss functions suffer from an underfitting problem.  To address this, we propose ageneric framework Active Passive Loss(APL) to build new loss functions with <strong>theoretically guaranteed robustness and sufficient learning properties.</strong></p>
+        <p>we propose <strong>a pointwise certified defense</strong>—this means that <strong>with each prediction</strong>, the classifier includes a certification guaranteeing that its prediction would not be different had it been trained on data with some number oflabels flipped.</p>
       </li>
       <li>
-        <p><strong>Robustness and Convergence?</strong></p>
+        <p><strong>Prior works on certified defenses make statistical guarantees over the entire test distribution</strong> (rather than at the population level), but they make no guarantees as to the robustness of a predictionon any particular test point; thus, a determined adversary could still cause a specific test point to be misclassified. 
+  <br>
+  We therefore consider the threat of <strong>a worst-case adversary</strong> that can make a training set perturbation to target each test point individually.</p>
       </li>
     </ul>
-  </li>
-  <li>
-<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/3285-Paper.pdf">Searching to Exploit Memorization Effect in Learning with Noisy Labels, QUANMING YAO, Hansi Yang, Bo Han, Gang Niu, James Kwok</a>
-    <ul>
-      <li>Sample selection approaches: select \(R(t)\) small-loss samples based on network’s predictions</li>
-      <li>Formulation as an AutoML Problem  (complex algorithm personally);</li>
-      <li>Bi-level optimisation</li>
-      <li><strong>No sample selection is needed: <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></li>
-      <li>Almost the same authors as <a href="https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf">SIGUA: Forgetting May Make Learning with Noisy Labels More Robust Bo Han, Gang Niu, Xingrui Yu, QUANMING YAO, Miao Xu, Ivor Tsang, Masashi Sugiyama</a>
-</li>
-    </ul>
-  </li>
-  <li>
-<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/4950-Paper.pdf">Peer Loss Functions: Learning from Noisy Labels without Knowing Noise Rates, Yang Liu, Hongyi Guo</a>
-    <ul>
-      <li>Overall, this method is complex due to <strong>peer samples</strong>.</li>
-      <li>
-<strong>The motivation/highlight is not novel</strong>: without Knowing Noise Rates.  Our main goal is to provide an al-ternative that does not require the specification of the noiserates, nor an additional estimation step for the noise.</li>
-      <li>
-        <p>Peer loss is invariant to label noise when optimizing with it. This effect helps us get rid of theestimation of noise rates.</p>
-      </li>
-      <li>
-        <p>i) is robust to asymmetriclabel noise with <strong>formal theoretical guarantees</strong>  and  ii)  requires  no  prior  knowledge  or  estimationof the noise rates (<strong>no need for specifying noise rates</strong>).</p>
-      </li>
-      <li>
-        <p>We also provide preliminary results on <strong>how peer loss generalizes to multi-class clas-sification problems.</strong></p>
-      </li>
-      <li>
-        <p>Relevant work 1: <a href="https://papers.nips.cc/paper/8853-l_dmi-a-novel-information-theoretic-loss-function-for-training-deep-nets-robust-to-label-noise.pdf">neurips-19: \(L_{DMI}\): A Novel Information-theoretic Loss Functionfor Training Deep Nets Robust to Label Noise</a> To the best ofour knowledge, \(L_{DMI}\) is the first loss function that is provably robust to instance-independent label noise, regardless of noise pattern, and it can be applied to any existing classification neural networks straightforwardly without any auxiliary information. In addition to theoretical justification, we also empirically show that using \(L_{DMI}\) outperforms all other counterparts in the classification task on both image dataset and natural language dataset include Fashion-MNIST, CIFAR-10, Dogs vs. Cats, MR with a variety of synthesized noise patterns and noise amounts,as well as a real-world dataset Clothing1M.
-  The core of \(L_{DMI}\) is a generalized version of mutual information, termed Determinant based Mutual Information (DMI), which is not only information-monotone but also relatively invariant.</p>
-      </li>
-      <li>
-        <p>Relevant work 2: <a href="https://arxiv.org/pdf/1802.08887.pdf">Water from Two Rocks: Maximizing the Mutual Information</a></p>
-      </li>
-      <li><strong>No loss function is needed: <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></li>
-    </ul>
-  </li>
-  <li>
-    <p><a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Iscen_Label_Propagation_for_Deep_Semi-Supervised_Learning_CVPR_2019_paper.pdf">(CVPR-19) Ahmet Iscen et al Label Propagation for Deep Semi-supervised Learning</a></p>
   </li>
   <li>
 <a href="https://proceedings.icml.cc/static/paper_files/icml/2020/6080-Paper.pdf">Progressive Identification of True Labels for Partial-Label Learning Jiaqi Lv, Miao Xu, LEI FENG, Gang Niu, Xin Geng, Masashi Sugiyama</a>
@@ -679,42 +812,30 @@ in <a href="/readingnotes/" class="flip-title">Reading Notes</a>
 <strong>Partial-label learning</strong> is one of the important <strong>weakly supervised learning problems</strong>, where each training example is equipped with <strong>a set of candidate labels</strong> that contains the true label.</li>
     </ul>
   </li>
-  <li><a href="https://proceedings.icml.cc/book/2020/hash/2e2079d63348233d91cad1fa9b1361e9">Federated Learning with Only Positive Labels Felix Xinnan Yu, Ankit Singh Rawat, Aditya Menon, Sanjiv Kumar</a></li>
-</ul>
-
-<h3 id="the-design-of-loss-functions-ie-optimisation-objectives-or-output-regularistion">The design of loss functions (i.e., optimisation objectives or output regularistion)</h3>
-<ul class="message">
   <li>
-<img class="emoji" title=":+1:" alt=":+1:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44d.png" height="20" width="20"> <a href="https://arxiv.org/pdf/1905.11528.pdf">Improved Training Speed, Accuracy, and Data Utilization Through Loss Function Optimization</a>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/1942-Paper.pdf">Label-Noise Robust Domain Adaptation Xiyu Yu, Tongliang Liu, Mingming Gong, Kun Zhang, Kayhan Batmanghelich, Dacheng Tao</a>
     <ul>
-      <li>Speed, Accuracy, Data Efficiency, etc;</li>
-      <li>BAIKAL loss;</li>
-      <li>Genetic Loss Function Optimization (GLO) builds loss functions hierarchically from a set of operators and leaf nodes;</li>
-      <li>A general framework for loss function metalearning, covering both novel loss function discovery and optimization, is developed and evaluated experimentally.</li>
-      <li><strong>No loss function is needed: <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></li>
-    </ul>
-  </li>
-  <li>
-    <p><a href="https://arxiv.org/pdf/1506.01186.pdf">Cyclical Learning Rates for Training Neural Networks</a></p>
-  </li>
-  <li>
-<a href="https://arxiv.org/pdf/1702.05659.pdf">On loss functions for deep neural networks in classification =&gt; with theory of robustness and convergence</a>
-    <ul>
-      <li>We try to investigate how particular choices of loss functions affect deep models and their learning dynamics, as well as resulting classifiers robustness to various effects;</li>
-      <li>We present new insights into theoretical properties of a couple of these losses;</li>
-      <li>We provide experimental evaluation of resulting models’ properties, including the effect on speed of learning, final performance, input data and label noise robustness as well as convergence.</li>
-      <li>So why is using these two loss functions (\(L_1\), \(L_2\) losses) unpopular? Is there anything fundamentally wrong with this formulation from the mathematical perspective? While the following observation is not definitive, it shows an insight into what might be the issue causing slow convergence of such methods.</li>
       <li>
-<strong>Lack of convexity</strong> comes from the same argument since <strong>second derivative wrt. to any weight in the final layer of the model changes sign (as it is equivalent to first derivative being non-monotonic)</strong>.</li>
-    </ul>
-
-    <p><strong>Proposition 2</strong>. \(L_1\), \(L_2\) losses applied to probabilities estimates coming
-  from sigmoid (or softmax) have <strong>non-monotonic partial derivatives wrt. to the output of the final layer (and the loss is not convex nor concave wrt. to last layer weights)</strong>. Furthermore, <strong>they vanish in both infinities, which slows down learning of heavily misclassified examples</strong>.</p>
-
-    <ul>
-      <li><strong>No loss function is needed: <a href="https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/">DM and IMAE</a></strong></li>
+        <p>State-of-the-art domain adaptation methods make use of deep networks to extract domain-invariant representations.</p>
+      </li>
+      <li>
+        <p>Existing methods assume that all the instances in the source domain are correctly labeled;  while in reality, it is unsurprising that we may obtain a source domain with noisy labels.</p>
+      </li>
+      <li>
+        <p>In this paper, we are the first to comprehensively investigate how label noise could adversely affect existing domain adaptation methods in various scenarios.</p>
+      </li>
+      <li>
+        <p>Further,  we theoretically prove that there exists a method that can essentially reduce the side-effect of noisy source labels in domain adaptation.</p>
+      </li>
     </ul>
   </li>
+  <li>
+<a href="https://proceedings.icml.cc/static/paper_files/icml/2020/2048-Paper.pdf">Self-supervised Label Augmentation via Input Transformations, Hankook Lee, Sung Ju Hwang, Jinwoo Shin</a>
+    <ul>
+      <li>How can we effectively utilize the transformation-based self-supervision for fully-supervised classification tasks?</li>
+    </ul>
+  </li>
+  <li><a href="https://proceedings.icml.cc/book/2020/hash/2e2079d63348233d91cad1fa9b1361e9">Federated Learning with Only Positive Labels Felix Xinnan Yu, Ankit Singh Rawat, Aditya Menon, Sanjiv Kumar</a></li>
 </ul>
 
   
