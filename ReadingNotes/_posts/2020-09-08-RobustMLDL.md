@@ -9,7 +9,7 @@ comment: true
 
 In general, robust deep learning covers: missing labels (semisupervised learning); noisy labels (noise detection and correction); regularisation techniques; sample imbalance (long-tailed class distribution); adversarial learning; and so on. 
 
-Remark: in my reading notes, sometimes I simply copy texts directly from the original paper. Therefore, `we' means a paper's authors in many contexts. 
+Remark: in my reading notes, sometimes I simply quote texts directly from the original paper. Therefore, `we' means a paper's authors in many contexts. 
 
 0. [Label noise](#label-noise)
 0. [The design of loss functions (i.e., optimisation objectives or output regularistion)](#the-design-of-loss-functions-ie-optimisation-objectives-or-output-regularistion)
