@@ -14,6 +14,8 @@ Conditions, e.g., missing labels (semi-supervised learning), noisy labels, sampl
 
 * Computer Vision: Image/Video Recognition, Person Re-identification. 
 
+* Academic Reviewer: TPAMI, TNNLS, Knowledge Based Systems, AAAI, etc 
+
 * [Something new to come soon!]()
 {:.message}
 <!--* [What am I working on now? Discussions are Welcome!](../blogs/2020-02-21-learn-bayesian-DL/#what-am-i-working-on-now-discussions-are-welcome) -->
