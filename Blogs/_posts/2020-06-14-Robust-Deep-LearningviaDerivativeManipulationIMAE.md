@@ -13,7 +13,7 @@ As a young researcher, your interest and kind citation (star) will definitely me
 For any specific discussion or potential future collaboration, please feel free to contact me. 
 
 
-### How do you think of requesting kind citations?
+## How do you think of requesting kind citations?
 * [SIGUA: Forgetting May Make Learning with Noisy Labels More Robust](https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf)
   *  **Reason1**: Reducing a learning rate on 'bad' examples, is intrinsically equivalent to,  reducing the weights (derivative magnitudes) of 'bad' data points.
 "SIGUA works in each mini-batch: it implements SGD on good data as usual, and if there are any bad data, it implements stochastic gradientascent (SGA) on bad data with a reduced learning rate."
@@ -29,7 +29,7 @@ For any specific discussion or potential future collaboration, please feel free 
 ![How do you think of requesting kind citations?](../../imgs/IMAE_DM/request_citation.png){:.lead data-width="1200" data-height="200"}
 {:.figure}
 
-### We really need to rethink robust losses and optimisation in deep learning!
+## We really need to rethink robust losses and optimisation in deep learning!
 * In [Normalized Loss Functions for Deep Learning with Noisy Labels](https://arxiv.org/abs/2006.13554),   it is stated in the abstract that "**we theoretically show by applying a simple normalization that: any loss can be made robust to noisy labels. However, in practice, simply being robust is not sufficient for a loss function to train accurate DNNs.**"
   * This statement is **Quite** **Contradictory**: A ROBUST LOSS IS NOT SUFFICIENT (i.e., ROBUST AND ACCURATE)?  => **Then what is value to say whether a loss is robust or not?**
 
@@ -39,7 +39,7 @@ For any specific discussion or potential future collaboration, please feel free 
 {:.message}
 
 
-### When talking about robustness/regularisation, our community tend to connnect it merely to better test performance. I advocate caring training performance as well because: 
+## When talking about robustness/regularisation, our community tend to connnect it merely to better test performance. I advocate caring training performance as well because: 
 * If noisy training examples are fitted well, a model has learned something wrong;
 * If clean ones are not fitted well,  a model is not good enough. 
 * There is a potential arguement that the test dataset can be infinitely large theorectically, thus being significant. 
@@ -47,7 +47,7 @@ For any specific discussion or potential future collaboration, please feel free 
 {:.message}
 
 
-### Other details
+## Other details
 0. [IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters](../../my_docs/IMAE_Code_Illustration)
     * Following work: [Derivative Manipulation for General Example Weighting](https://arxiv.org/pdf/1905.11233.pdf)
 0. [Derivative Manipulation for General Example Weighting](../../my_docs/DM_Code_Illustration)
