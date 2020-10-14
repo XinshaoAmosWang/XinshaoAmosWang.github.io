@@ -264,19 +264,37 @@ in <a href="/blogs/" class="flip-title">Blogs</a>
 As a young researcher, your interest and kind citation (star) will definitely mean a lot for me and my collaborators.<br />
 For any specific discussion or potential future collaboration, please feel free to contact me.</p>
 
-<h3 id="when-talking-about-robustnessregularisation-our-community-tend-to-connnect-it-merely-to-better-test-performance-i-advocate-caring-training-performance-as-well-because">When talking about robustness/regularisation, our community tend to connnect it merely to better test performance. I advocate caring training performance as well because:</h3>
+<h3 id="how-do-you-think-of-requesting-kind-citations">How do you think of requesting kind citations?</h3>
 <ul>
-  <li>If noisy training examples are fitted well, a model has learned something wrong;</li>
-  <li>If clean ones are not fitted well,  a model is not good enough.</li>
-  <li>There is a potential arguement that the test dataset can be infinitely large theorectically, thus being significant.
+  <li><a href="https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf">SIGUA: Forgetting May Make Learning with Noisy Labels More Robust</a>
     <ul>
-      <li>Personal comment: Though being true theorectically, in realistic deployment, we obtain more testing samples as time goes, accordingly we generally choose to retrain or fine-tune to make the system adaptive. Therefore, this arguement does not make much sense.</li>
+      <li><strong>Reason1</strong>: Reducing a learning rate on ‘bad’ examples, is intrinsically equivalent to,  reducing the weights (derivative magnitudes) of ‘bad’ data points.
+“SIGUA works in each mini-batch: it implements SGD on good data as usual, and if there are any bad data, it implements stochastic gradientascent (SGA) on bad data with a reduced learning rate.”</li>
+    </ul>
+
+    <p>In [DM] and [IMAE], we have studied on how to model example-level weighting from the perspective of gradient/derivative. Concretely, we have claimed that those ‘bad’ examples are assigned with smaller derivative magnitude at the final layer. 
+Mathematically, a point’s final gradient for back-propagation = its derivative * learning rate. You do not modify the derivative, instead you adjust the learning rate. But fundamentally, the principle is the same. Therefore, our work [DM] and [IMAE] should be discussed.</p>
+
+    <ul>
+      <li>
+        <p><strong>Reason 2</strong>: Although [DM] and [IMAE] are unpublished in conferences or journals, they have been released in arXiv for more than 1 year by now. Therefore, it is improper to ignore them.  Furthermore, [DM] and [IMAE] are included my PhD thesis and passed the examination. 
+<a href="https://pure.qub.ac.uk/en/studentTheses/example-weighting-for-deep-representation-learning">PhD Thesis: Example Weighting for Deep Representation Learning</a></p>
+      </li>
+      <li>
+        <p>I am looking forward to your ideas. <strong>If I am wrong, please feel free to tell me.</strong> Otherwise, I will appreciate it significantly if you agree to discuss our work in your paper. Many thanks.</p>
+      </li>
     </ul>
   </li>
 </ul>
 
+<p class="figure"><hy-img root-margin="512px" src="/imgs/IMAE_DM/request_citation.png" alt="How do you think of requesting kind citations?" class="lead" data-width="1200" data-height="200">
+  <noscript><img data-ignore src="/imgs/IMAE_DM/request_citation.png" alt="How do you think of requesting kind citations?" class="lead" data-width="1200" data-height="200"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
 <h3 id="we-really-need-to-rethink-robust-losses-and-optimisation-in-deep-learning">We really need to rethink robust losses and optimisation in deep learning!</h3>
-<ul>
+<ul class="message">
   <li>In <a href="https://arxiv.org/abs/2006.13554">Normalized Loss Functions for Deep Learning with Noisy Labels</a>,   it is stated in the abstract that “<strong>we theoretically show by applying a simple normalization that: any loss can be made robust to noisy labels. However, in practice, simply being robust is not sufficient for a loss function to train accurate DNNs.</strong>”
     <ul>
       <li>This statement is <strong>Quite</strong> <strong>Contradictory</strong>: A ROBUST LOSS IS NOT SUFFICIENT (i.e., ROBUST AND ACCURATE)?  =&gt; <strong>Then what is value to say whether a loss is robust or not?</strong></li>
@@ -288,6 +306,18 @@ For any specific discussion or potential future collaboration, please feel free 
   <li><strong>I remark that we are the first to thoroughly analyse robust losses, e.g., MAE’s underfitting, and how it weights data points.</strong></li>
 </ul>
 
+<h3 id="when-talking-about-robustnessregularisation-our-community-tend-to-connnect-it-merely-to-better-test-performance-i-advocate-caring-training-performance-as-well-because">When talking about robustness/regularisation, our community tend to connnect it merely to better test performance. I advocate caring training performance as well because:</h3>
+<ul class="message">
+  <li>If noisy training examples are fitted well, a model has learned something wrong;</li>
+  <li>If clean ones are not fitted well,  a model is not good enough.</li>
+  <li>There is a potential arguement that the test dataset can be infinitely large theorectically, thus being significant.
+    <ul>
+      <li>Personal comment: Though being true theorectically, in realistic deployment, we obtain more testing samples as time goes, accordingly we generally choose to retrain or fine-tune to make the system adaptive. Therefore, this arguement does not make much sense.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="other-details">Other details</h3>
 <ol class="message">
   <li><a href="../../my_docs/IMAE_Code_Illustration">IMAE for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally and Gradient Magnitude’s Variance Matters</a>
     <ul>
