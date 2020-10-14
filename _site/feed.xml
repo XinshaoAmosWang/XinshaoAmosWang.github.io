@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-10-14T13:55:47+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Postdoc@OxfordU</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. A ML/DL/AI Researcher
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-10-14T15:40:38+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Postdoc@OxfordU</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. A ML/DL/AI Researcher
 </subtitle><author><name>XW</name></author><entry><title type="html">Robust DL/ML</title><link href="http://localhost:4000/readingnotes/2020-09-08-RobustMLDL/" rel="alternate" type="text/html" title="Robust DL/ML" /><published>2020-09-08T00:00:00+01:00</published><updated>2020-09-08T00:00:00+01:00</updated><id>http://localhost:4000/readingnotes/RobustMLDL</id><content type="html" xml:base="http://localhost:4000/readingnotes/2020-09-08-RobustMLDL/">&lt;p&gt;In general, robust deep learning covers: missing labels (semisupervised learning); noisy labels (noise detection and correction); regularisation techniques; sample imbalance (long-tailed class distribution); adversarial learning; and so on.&lt;/p&gt;
 
 &lt;p&gt;Remark: in my reading notes, sometimes I simply quote texts directly from the original paper. Therefore, `we’ means a paper’s authors in many contexts.&lt;/p&gt;
@@ -687,14 +687,18 @@ For any specific discussion or potential future collaboration, please feel free 
 
 &lt;h2 id=&quot;how-do-you-think-of-requesting-kind-citations&quot;&gt;How do you think of requesting kind citations?&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf&quot;&gt;SIGUA: Forgetting May Make Learning with Noisy Labels More Robust&lt;/a&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf&quot;&gt;SIGUA: Forgetting May Make Learning with Noisy Labels More Robust&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p class=&quot;figure&quot;&gt;&lt;img src=&quot;/imgs/IMAE_DM/request_citation.png&quot; alt=&quot;How do you think of requesting kind citations?&quot; class=&quot;lead&quot; data-width=&quot;1200&quot; data-height=&quot;200&quot; /&gt;&lt;/p&gt;
+
     &lt;ul&gt;
       &lt;li&gt;&lt;strong&gt;Reason1&lt;/strong&gt;: Reducing a learning rate on ‘bad’ examples, is intrinsically equivalent to,  reducing the weights (derivative magnitudes) of ‘bad’ data points.
 “SIGUA works in each mini-batch: it implements SGD on good data as usual, and if there are any bad data, it implements stochastic gradientascent (SGA) on bad data with a reduced learning rate.”&lt;/li&gt;
     &lt;/ul&gt;
 
     &lt;p&gt;In [DM] and [IMAE], we have studied on how to model example-level weighting from the perspective of gradient/derivative. Concretely, we have claimed that those ‘bad’ examples are assigned with smaller derivative magnitude at the final layer. 
-Mathematically, a point’s final gradient for back-propagation = its derivative * learning rate. You do not modify the derivative, instead you adjust the learning rate. But fundamentally, the principle is the same. Therefore, our work [DM] and [IMAE] should be discussed.&lt;/p&gt;
+  Mathematically, a point’s final gradient for back-propagation = its derivative * learning rate. You do not modify the derivative, instead you adjust the learning rate. But fundamentally, the principle is the same. Therefore, our work [DM] and [IMAE] should be discussed.&lt;/p&gt;
 
     &lt;ul&gt;
       &lt;li&gt;
@@ -707,8 +711,6 @@ Mathematically, a point’s final gradient for back-propagation = its derivative
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p class=&quot;figure&quot;&gt;&lt;img src=&quot;/imgs/IMAE_DM/request_citation.png&quot; alt=&quot;How do you think of requesting kind citations?&quot; class=&quot;lead&quot; data-width=&quot;1200&quot; data-height=&quot;200&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;we-really-need-to-rethink-robust-losses-and-optimisation-in-deep-learning&quot;&gt;We really need to rethink robust losses and optimisation in deep learning!&lt;/h2&gt;
 &lt;ul class=&quot;message&quot;&gt;

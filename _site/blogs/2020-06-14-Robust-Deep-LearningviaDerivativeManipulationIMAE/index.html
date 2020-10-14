@@ -266,14 +266,22 @@ For any specific discussion or potential future collaboration, please feel free 
 
 <h2 id="how-do-you-think-of-requesting-kind-citations">How do you think of requesting kind citations?</h2>
 <ul>
-  <li><a href="https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf">SIGUA: Forgetting May Make Learning with Noisy Labels More Robust</a>
+  <li>
+    <p><a href="https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf">SIGUA: Forgetting May Make Learning with Noisy Labels More Robust</a></p>
+
+    <p class="figure"><hy-img root-margin="512px" src="/imgs/IMAE_DM/request_citation.png" alt="How do you think of requesting kind citations?" class="lead" data-width="1200" data-height="200">
+  <noscript><img data-ignore src="/imgs/IMAE_DM/request_citation.png" alt="How do you think of requesting kind citations?" class="lead" data-width="1200" data-height="200"/></noscript>
+  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
+</hy-img>
+</p>
+
     <ul>
       <li><strong>Reason1</strong>: Reducing a learning rate on ‘bad’ examples, is intrinsically equivalent to,  reducing the weights (derivative magnitudes) of ‘bad’ data points.
 “SIGUA works in each mini-batch: it implements SGD on good data as usual, and if there are any bad data, it implements stochastic gradientascent (SGA) on bad data with a reduced learning rate.”</li>
     </ul>
 
     <p>In [DM] and [IMAE], we have studied on how to model example-level weighting from the perspective of gradient/derivative. Concretely, we have claimed that those ‘bad’ examples are assigned with smaller derivative magnitude at the final layer. 
-Mathematically, a point’s final gradient for back-propagation = its derivative * learning rate. You do not modify the derivative, instead you adjust the learning rate. But fundamentally, the principle is the same. Therefore, our work [DM] and [IMAE] should be discussed.</p>
+  Mathematically, a point’s final gradient for back-propagation = its derivative * learning rate. You do not modify the derivative, instead you adjust the learning rate. But fundamentally, the principle is the same. Therefore, our work [DM] and [IMAE] should be discussed.</p>
 
     <ul>
       <li>
@@ -286,12 +294,6 @@ Mathematically, a point’s final gradient for back-propagation = its derivative
     </ul>
   </li>
 </ul>
-
-<p class="figure"><hy-img root-margin="512px" src="/imgs/IMAE_DM/request_citation.png" alt="How do you think of requesting kind citations?" class="lead" data-width="1200" data-height="200">
-  <noscript><img data-ignore src="/imgs/IMAE_DM/request_citation.png" alt="How do you think of requesting kind citations?" class="lead" data-width="1200" data-height="200"/></noscript>
-  <span slot="loading" class="loading"><span class="icon-cog"></span></span>
-</hy-img>
-</p>
 
 <h2 id="we-really-need-to-rethink-robust-losses-and-optimisation-in-deep-learning">We really need to rethink robust losses and optimisation in deep learning!</h2>
 <ul class="message">
