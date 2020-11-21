@@ -13,6 +13,25 @@ As a young researcher, your interest and kind citation (star) will definitely me
 For any specific discussion or potential future collaboration, please feel free to contact me. 
 
 
+## :+1: Selected work partially impacted by our work
+* [ICML-20: Normalized Loss Functions for Deep Learning with Noisy Labels](https://arxiv.org/pdf/2006.13554.pdf)
+* [ICML-20: SIGUA: Forgetting May Make Learning with Noisy Labels More Robust](https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf)
+  * [Notes and remarks](https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/#how-do-you-think-of-requesting-kind-citations)
+
+* [NeurIPS-20: Early-Learning Regularization Prevents Memorization of Noisy Labels](https://proceedings.neurips.cc/paper/2020/hash/ea89621bee7c88b2c5be6681c8ef4906-Abstract.html)
+  * **The analysis about "gradient and example weighting" has been done in our [IMAE](https://arxiv.org/abs/1903.12141) + [DM](https://arxiv.org/abs/1905.11233)**, which mathematically prove that CCE tends to over-fit and why, and how to propose robust example weighting schemes.
+  * Their analysis in Page#4: During the early-learning stage, the algorithm makes progress and the accuracy on wrongly labeledexamples increases. However, during this initial stage, the relative importance of the wrongly labeled examples continues to grow; once the effect of the wrongly labeled examples begins to dominate, memorization occurs.
+
+* [NeurIPS-20: Coresets for Robust Training of Deep Neural Networks against Noisy Labels](https://proceedings.neurips.cc/paper/2020/hash/8493eeaccb772c0878f99d60a0bd2bb3-Abstract.html)
+  * The key idea behind this method is to select subsets of clean data points that provide an approximately low-rank Jacobian matrix. The authors then prove that gradient descent applied to the subsets cannot overfit the noisy labels, even without regularization or early stopping.
+
+* [Medical Image Analysis: Deep learning with noisy labels: Exploring techniques and remedies in medical image analysis](https://www.sciencedirect.com/science/article/pii/S1361841520301237)
+
+* [2020 IEEE 17th International Symposium on Biomedical Imaging (ISBI): Learning to Detect Brain Lesions from Noisy Annotations](https://ieeexplore.ieee.org/abstract/document/9098599)
+* [A Survey on Deep Learning with Noisy Labels: How to train your model when you cannot trust on the annotations?](http://sibgrapi.sid.inpe.br/col/sid.inpe.br/sibgrapi/2020/09.30.23.54/doc/Tutorial_ID_4_SIBGRAPI_2020_camara_ready_v2%20copy.pdf)
+{:.message}
+
+
 ## How do you think of requesting kind citations?
 * [SIGUA: Forgetting May Make Learning with Noisy Labels More Robust](https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf)
 
@@ -21,7 +40,7 @@ For any specific discussion or potential future collaboration, please feel free 
 
   *  **Reason1**: Reducing a learning rate on 'bad' examples, is intrinsically equivalent to,  reducing the weights (derivative magnitudes) of 'bad' data points.
 "SIGUA works in each mini-batch: it implements SGD on good data as usual, and if there are any bad data, it implements stochastic gradientascent (SGA) on bad data with a reduced learning rate."
-
+  </br>
     In [DM] and [IMAE], we have studied on how to model example-level weighting from the perspective of gradient/derivative. Concretely, we have claimed that those 'bad' examples are assigned with smaller derivative magnitude at the final layer. 
     Mathematically, a point's final gradient for back-propagation = its derivative * learning rate. You do not modify the derivative, instead you adjust the learning rate. But fundamentally, the principle is the same. Therefore, our work [DM] and [IMAE] should be discussed. 
 
