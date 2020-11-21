@@ -40,9 +40,10 @@ For any specific discussion or potential future collaboration, please feel free 
 
   *  **Reason1**: Reducing a learning rate on 'bad' examples, is intrinsically equivalent to,  reducing the weights (derivative magnitudes) of 'bad' data points.
 "SIGUA works in each mini-batch: it implements SGD on good data as usual, and if there are any bad data, it implements stochastic gradientascent (SGA) on bad data with a reduced learning rate."
-  </br>
+  <br/>
+  <br/>
     In [DM] and [IMAE], we have studied on how to model example-level weighting from the perspective of gradient/derivative. Concretely, we have claimed that those 'bad' examples are assigned with smaller derivative magnitude at the final layer. 
-    Mathematically, a point's final gradient for back-propagation = its derivative * learning rate. You do not modify the derivative, instead you adjust the learning rate. But fundamentally, the principle is the same. Therefore, our work [DM] and [IMAE] should be discussed. 
+    Mathematically, **a point's final gradient for back-propagation = its derivative * learning rate**. You do not modify the derivative, instead you adjust the learning rate. But fundamentally, the principle is the same. Therefore, our work [DM] and [IMAE] should be discussed. 
 
   *  **Reason 2**: Although [DM] and [IMAE] are unpublished in conferences or journals, they have been released in arXiv for more than 1 year by now. Therefore, it is improper to ignore them.  Furthermore, [DM] and [IMAE] are included my PhD thesis and passed the examination. 
   [PhD Thesis: Example Weighting for Deep Representation Learning](https://pure.qub.ac.uk/en/studentTheses/example-weighting-for-deep-representation-learning)
