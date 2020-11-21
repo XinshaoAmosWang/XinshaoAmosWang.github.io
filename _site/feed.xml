@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-10-14T15:40:38+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Postdoc@OxfordU</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. A ML/DL/AI Researcher
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-11-21T14:26:13+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Postdoc@OxfordU</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. A ML/DL/AI Researcher
 </subtitle><author><name>XW</name></author><entry><title type="html">Robust DL/ML</title><link href="http://localhost:4000/readingnotes/2020-09-08-RobustMLDL/" rel="alternate" type="text/html" title="Robust DL/ML" /><published>2020-09-08T00:00:00+01:00</published><updated>2020-09-08T00:00:00+01:00</updated><id>http://localhost:4000/readingnotes/RobustMLDL</id><content type="html" xml:base="http://localhost:4000/readingnotes/2020-09-08-RobustMLDL/">&lt;p&gt;In general, robust deep learning covers: missing labels (semisupervised learning); noisy labels (noise detection and correction); regularisation techniques; sample imbalance (long-tailed class distribution); adversarial learning; and so on.&lt;/p&gt;
 
 &lt;p&gt;Remark: in my reading notes, sometimes I simply quote texts directly from the original paper. Therefore, `we’ means a paper’s authors in many contexts.&lt;/p&gt;
@@ -685,6 +685,32 @@
 As a young researcher, your interest and kind citation (star) will definitely mean a lot for me and my collaborators.&lt;br /&gt;
 For any specific discussion or potential future collaboration, please feel free to contact me.&lt;/p&gt;
 
+&lt;h2 id=&quot;1-selected-work-partially-impacted-by-our-work&quot;&gt;:+1: Selected work partially impacted by our work&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/2006.13554.pdf&quot;&gt;ICML-20: Normalized Loss Functions for Deep Learning with Noisy Labels&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://proceedings.icml.cc/static/paper_files/icml/2020/705-Paper.pdf&quot;&gt;ICML-20: SIGUA: Forgetting May Make Learning with Noisy Labels More Robust&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://xinshaoamoswang.github.io/blogs/2020-06-14-Robust-Deep-LearningviaDerivativeManipulationIMAE/#how-do-you-think-of-requesting-kind-citations&quot;&gt;Notes and remarks&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://proceedings.neurips.cc/paper/2020/hash/ea89621bee7c88b2c5be6681c8ef4906-Abstract.html&quot;&gt;NeurIPS-20: Early-Learning Regularization Prevents Memorization of Noisy Labels&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;The analysis about “gradient and example weighting” has been done in our &lt;a href=&quot;https://arxiv.org/abs/1903.12141&quot;&gt;IMAE&lt;/a&gt; + &lt;a href=&quot;https://arxiv.org/abs/1905.11233&quot;&gt;DM&lt;/a&gt;&lt;/strong&gt;, which mathematically prove that CCE tends to over-fit and why, and how to propose robust example weighting schemes.&lt;/li&gt;
+      &lt;li&gt;Their analysis in Page#4: During the early-learning stage, the algorithm makes progress and the accuracy on wrongly labeledexamples increases. However, during this initial stage, the relative importance of the wrongly labeled examples continues to grow; once the effect of the wrongly labeled examples begins to dominate, memorization occurs.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://proceedings.neurips.cc/paper/2020/hash/8493eeaccb772c0878f99d60a0bd2bb3-Abstract.html&quot;&gt;NeurIPS-20: Coresets for Robust Training of Deep Neural Networks against Noisy Labels&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;The key idea behind this method is to select subsets of clean data points that provide an approximately low-rank Jacobian matrix. The authors then prove that gradient descent applied to the subsets cannot overfit the noisy labels, even without regularization or early stopping.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S1361841520301237&quot;&gt;Medical Image Analysis: Deep learning with noisy labels: Exploring techniques and remedies in medical image analysis&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/9098599&quot;&gt;2020 IEEE 17th International Symposium on Biomedical Imaging (ISBI): Learning to Detect Brain Lesions from Noisy Annotations&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://sibgrapi.sid.inpe.br/col/sid.inpe.br/sibgrapi/2020/09.30.23.54/doc/Tutorial_ID_4_SIBGRAPI_2020_camara_ready_v2%20copy.pdf&quot;&gt;A Survey on Deep Learning with Noisy Labels: How to train your model when you cannot trust on the annotations?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h2 id=&quot;how-do-you-think-of-requesting-kind-citations&quot;&gt;How do you think of requesting kind citations?&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;
@@ -693,14 +719,13 @@ For any specific discussion or potential future collaboration, please feel free 
     &lt;p class=&quot;figure&quot;&gt;&lt;img src=&quot;/imgs/IMAE_DM/request_citation.png&quot; alt=&quot;How do you think of requesting kind citations?&quot; class=&quot;lead&quot; data-width=&quot;1200&quot; data-height=&quot;200&quot; /&gt;&lt;/p&gt;
 
     &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Reason1&lt;/strong&gt;: Reducing a learning rate on ‘bad’ examples, is intrinsically equivalent to,  reducing the weights (derivative magnitudes) of ‘bad’ data points.
-“SIGUA works in each mini-batch: it implements SGD on good data as usual, and if there are any bad data, it implements stochastic gradientascent (SGA) on bad data with a reduced learning rate.”&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;In [DM] and [IMAE], we have studied on how to model example-level weighting from the perspective of gradient/derivative. Concretely, we have claimed that those ‘bad’ examples are assigned with smaller derivative magnitude at the final layer. 
+      &lt;li&gt;
+        &lt;p&gt;&lt;strong&gt;Reason1&lt;/strong&gt;: Reducing a learning rate on ‘bad’ examples, is intrinsically equivalent to,  reducing the weights (derivative magnitudes) of ‘bad’ data points.
+“SIGUA works in each mini-batch: it implements SGD on good data as usual, and if there are any bad data, it implements stochastic gradientascent (SGA) on bad data with a reduced learning rate.”
+&amp;lt;/br&amp;gt;
+  In [DM] and [IMAE], we have studied on how to model example-level weighting from the perspective of gradient/derivative. Concretely, we have claimed that those ‘bad’ examples are assigned with smaller derivative magnitude at the final layer. 
   Mathematically, a point’s final gradient for back-propagation = its derivative * learning rate. You do not modify the derivative, instead you adjust the learning rate. But fundamentally, the principle is the same. Therefore, our work [DM] and [IMAE] should be discussed.&lt;/p&gt;
-
-    &lt;ul&gt;
+      &lt;/li&gt;
       &lt;li&gt;
         &lt;p&gt;&lt;strong&gt;Reason 2&lt;/strong&gt;: Although [DM] and [IMAE] are unpublished in conferences or journals, they have been released in arXiv for more than 1 year by now. Therefore, it is improper to ignore them.  Furthermore, [DM] and [IMAE] are included my PhD thesis and passed the examination. 
 &lt;a href=&quot;https://pure.qub.ac.uk/en/studentTheses/example-weighting-for-deep-representation-learning&quot;&gt;PhD Thesis: Example Weighting for Deep Representation Learning&lt;/a&gt;&lt;/p&gt;
