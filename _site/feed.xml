@@ -1,5 +1,233 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2020-11-21T14:28:49+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Postdoc@OxfordU</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. A ML/DL/AI Researcher
-</subtitle><author><name>XW</name></author><entry><title type="html">Robust DL/ML</title><link href="http://localhost:4000/readingnotes/2020-09-08-RobustMLDL/" rel="alternate" type="text/html" title="Robust DL/ML" /><published>2020-09-08T00:00:00+01:00</published><updated>2020-09-08T00:00:00+01:00</updated><id>http://localhost:4000/readingnotes/RobustMLDL</id><content type="html" xml:base="http://localhost:4000/readingnotes/2020-09-08-RobustMLDL/">In general, robust deep learning covers: missing labels (semisupervised learning); noisy labels (noise detection and correction); regularisation techniques; sample imbalance (long-tailed class distribution); adversarial learning; and so on. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2021-03-03T14:45:04+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Postdoc@OxfordU</title><subtitle>&quot;Stay Hungry. Stay Foolish. -- Steve Jobs 2005&quot;. A ML/DL/AI Researcher
+</subtitle><author><name>XW</name></author><entry><title type="html">CVPR 2021-Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks</title><link href="http://localhost:4000/blogs/2021-03-03-Progressive-self-label-correction/" rel="alternate" type="text/html" title="CVPR 2021-Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks" /><published>2021-03-03T00:00:00+00:00</published><updated>2021-03-03T00:00:00+00:00</updated><id>http://localhost:4000/blogs/Progressive-self-label-correction</id><content type="html" xml:base="http://localhost:4000/blogs/2021-03-03-Progressive-self-label-correction/">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Keywords: Label correction and smoothing, in defense of entropy minimisation, predictive uncertainty, progressive trust of a model's knowledge.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For any specific discussion or potential future collaboration, please feel free to contact me. &lt;br /&gt;
+As a young researcher, your interest and star (citation) will mean a lot for me and my collaborators. &lt;br /&gt;
+Paper link: &lt;a href=&quot;https://arxiv.org/abs/2005.03788&quot;&gt;https://arxiv.org/abs/2005.03788&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Cite our work kindly if you find it useful:
+@article{wang2020proselflc,
+    title={ {ProSelfLC}: Progressive Self Label Correction for Training Robust Deep Neural Networks},
+    author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Clifton, David A and Robertson, Neil M},
+    journal={arXiv preprint arXiv:2005.03788},
+    year={2020}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;!-- :+1: means being highly related to my personal research interest. --&gt;
+&lt;p&gt;List of Content&lt;/p&gt;
+&lt;ol class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#feedbacks&quot;&gt;Feedbacks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#storyline&quot;&gt;Storyline&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#open-ml-research-questions&quot;&gt;Open ML Research Questions&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#noticeable-findings&quot;&gt;Noticeable Findings&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#literature-review&quot;&gt;Literature Review&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#in-self-lc-a-core-question-is-not-well-answered&quot;&gt;In Self LC, a core question is not well answered&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#underlying-principle-of-proselflc&quot;&gt;Underlying Principle of ProSelfLC&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#mathematical-details-of-proselflc&quot;&gt;Mathematical Details of ProSelfLC&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#design-reasons-of-proselflc&quot;&gt;Design Reasons of ProSelfLC&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#related-interesting-work&quot;&gt;Related Interesting Work&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;feedbacks&quot;&gt;Feedbacks&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;/imgs/figsProSelfLC/CMT_Review.pdf&quot;&gt;Reviews&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/imgs/figsProSelfLC/ProSelfLC_personal_response.pdf&quot;&gt;Personal replies&lt;/a&gt;: This is an unofficial letter from me to let peers know better about our work.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;storyline&quot;&gt;Storyline&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;Human annotations contain bias, subjectiveness, and errors.
+    &lt;ul&gt;
+      &lt;li&gt;Therefore, some prior work &lt;strong&gt;penalises low-entropy statuses =&amp;gt; so that wrong fitting is alleviated in some degree.&lt;/strong&gt; Representative proposals are label smoothing and confidence penalty.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Our new finding on &lt;strong&gt;Entropy Minimisation&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;We can solve it still by minimum entropy regularisation principle;&lt;/li&gt;
+      &lt;li&gt;Diverse minimum-entropy statuses exist (e.g., when a learner perfectly fits random labels, the entropy also reaches a minimum):
+        &lt;ul&gt;
+          &lt;li&gt;The minimum-entropy status defined by untrusted human-annotated labels is incorrect, thus leading to poor generalisation. &lt;br /&gt;
+  &lt;strong&gt;CCE =&amp;gt; Non-meaningful minimum-entropy status =&amp;gt; poor generalisation&lt;/strong&gt;.&lt;/li&gt;
+          &lt;li&gt;We propose to redefine a more meaningful minimum-entropy status by exploiting the knowledge of a learner itself, which shows promising results.  &lt;br /&gt;
+  &lt;strong&gt;Label correction =&amp;gt; Meaningful low-entropy status =&amp;gt; good generalisation&lt;/strong&gt;.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;We highlight &lt;strong&gt;ProSelfLC’s Underlying Principle is ‘‘Contradictory’’ with: Maximum-Entropy Learning, Confidence Penalty and Label Smoothing&lt;/strong&gt;, which are popular recently.
+Then we wish our community think critically about two principles:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Rewarding a correct low-entropy status&lt;/strong&gt; (ProSelfLC)&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Penalising a non-meaningful low-entropy status&lt;/strong&gt; (CCE+LS, or CCE+CP)&lt;/li&gt;
+      &lt;li&gt;In our experiments: &lt;strong&gt;ProSelfLC &amp;gt; (CCE+LS, or CCE+CP) &amp;gt; CCE&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;Being contradictory in entropy, both help but their angles differ:
+        &lt;ul&gt;
+          &lt;li&gt;CCE fits non-meaningful patterns =&amp;gt; LS and CP penalise such fitting;&lt;/li&gt;
+          &lt;li&gt;CCE fits non-meaningful patterns =&amp;gt; ProSelfLC first corrects them =&amp;gt; then fits.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Why does CCE fit non-meaningful patterns?
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1905.11233.pdf&quot;&gt;2019-Derivative manipulation for general example weighting&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1903.12141.pdf&quot;&gt;2019-IMAE for noise-robust learning: Mean absolute error does not treat examples equally and gradient magnitude’s variance matters.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;open-ml-research-questions&quot;&gt;Open ML Research Questions&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;Should we trust and exploit a learner’s knowledge as training goes, or always trust human
+annotations?
+    &lt;ul&gt;
+      &lt;li&gt;As a learner, to trust yourself or supervison/textbooks?&lt;/li&gt;
+      &lt;li&gt;The answer should depend on what a learner has learned.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Should we optimise a learner towards a correct low-entropy status, or penalise a low-entropy
+status?
+    &lt;ul&gt;
+      &lt;li&gt;As a supervisor/evaluator, to reward or penalise a confident learner?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Open discussion: we show it’s fine for a learner to be confident towards a correct low-entropy status.
+Then more future research attention should be paid to the definition of correct knowledge, as in general we accept, human annotations used for learning supervision may be biased, subjective, and wrong.&lt;/li&gt;
+  &lt;li&gt;As a supervisor, before training multiple learners, to think about how to train one great learner first?
+    &lt;ul&gt;
+      &lt;li&gt;1st context: recently, many techniques about &lt;strong&gt;training multiple learners&lt;/strong&gt; (co-training, mutual learning, knowledge distillation, adversarial training, etc) have been proposed.&lt;/li&gt;
+      &lt;li&gt;2nd context: in our work, we work on &lt;strong&gt;how to train single learner better.&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;1st personal comment: training multiple learners is much more expensive and complex;&lt;/li&gt;
+      &lt;li&gt;2nd personal comment: when training multiple learners collaboratively, if one learner does not perform well, it tends to hurt the other learners.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;noticeable-findings&quot;&gt;Noticeable Findings&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;Rewarding low entropy (towards a meaningful status) leads to better generalisation than penalising low entropy.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;figure&quot;&gt;Comprehensive learning dynamics for thorough understanding of learning behaviours.
+&lt;img src=&quot;/imgs/figsProSelfLC/comprehensive_dynamics.png&quot; alt=&quot;ProSelfLC comprehensive_dynamics&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;Result analysis:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Revising the semantic class and perceptual similarity structure.&lt;/strong&gt; Generally, the semantic class of an example is defined according to its perceptual similarities with training classes, and is chosen to be the most similar class. In Figure 3b and 3c, we show a learner’s behaviours on without fitting wrong labels and correcting them in different approaches. We remark that ProSelfLC performs the best.
+  &lt;br /&gt;
+  &lt;br /&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;To reward or penalise low entropy?&lt;/strong&gt; LS and CP are proposed to penalise low entropy. On the one hand, we observe that LS and CP work, being consistent with prior evidence. As shown in Figure 3d and 3e, the entropies of both clean and noisy subset are the largest in LS and CP, and correspondingly their generalisation performance is the best except for ProSelfLC in Figure 3f. On the other hand, our ProSelfLC has the lowest low entropy while performs the best, which demonstrates &lt;strong&gt;it does not hurt for a learner to be confident. However, a learning model needs to be careful about what to be confident in.&lt;/strong&gt; Let us look at Figure 3b and 3c, ProSelfLC has the least wrong fitting while the highest semantic class correction rate, which denotes it is confident in learning meaningful patterns.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;literature-review&quot;&gt;Literature Review&lt;/h2&gt;
+
+&lt;p class=&quot;figure&quot;&gt;Target modification includes OR (LS and CP), and LC (Self LC and Non-self LC). &lt;br /&gt;
+Self LC is the most appealing because it requires no extra learners to
+revise learning targets, &lt;br /&gt;
+being free! &lt;br /&gt;
+&lt;img src=&quot;/imgs/figsProSelfLC/methods_grouping.png&quot; alt=&quot;Method Analysis&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;figure&quot;&gt;Summary of CCE, LS, CP and LC from the angle of target modification, entropy and KL divergence.
+&lt;img src=&quot;/imgs/figsProSelfLC/table_method_analysis.png&quot; alt=&quot;Table Method Analysis&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;in-self-lc-a-core-question-is-not-well-answered&quot;&gt;In Self LC, a core question is not well answered:&lt;/h2&gt;
+&lt;p class=&quot;message&quot;&gt;\(\textit{How much do we trust a learner to leverage its knowledge?}\)&lt;/p&gt;
+
+&lt;h2 id=&quot;underlying-principle-of-proselflc&quot;&gt;Underlying Principle of ProSelfLC&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;When a learner starts to learn, it trusts the supervision from human annotations.
+&lt;br /&gt;
+&lt;br /&gt;
+This idea is inspired by the paradigm that deep models learn simple meaningful patterns before fitting noise, even when severe label noise exists in human annotations [1];
+&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;As a learner attains confident knowledge as time goes, we leverage its confident knowledge to correct labels.
+&lt;br /&gt;
+&lt;br /&gt;
+This is surrounded by minimum entropy regularisation, which has been widely evaluated in unsupervised and semi-supervised scenarios [10, 2].&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;mathematical-details-of-proselflc&quot;&gt;Mathematical Details of ProSelfLC&lt;/h2&gt;
+
+&lt;p class=&quot;figure&quot;&gt;Beyond semantic class: the similarity structure defined by a label distribution.
+&lt;img src=&quot;/imgs/figsProSelfLC/definition_learning_target.png&quot; alt=&quot;The definiton of learning targets/labels&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;figure&quot;&gt;Human annotations and predicted label distributions, which should we trust more?
+&lt;img src=&quot;/imgs/figsProSelfLC/mathematical_expression.png&quot; alt=&quot;Mathematical expression of ProSelfLC&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;design-reasons-of-proselflc&quot;&gt;Design Reasons of ProSelfLC&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Regarding \(g(t)\),
+in the earlier learning phase, i.e., \(t &amp;lt; \Gamma/2\), \(g(t) &amp;lt; 0.5 \Rightarrow \epsilon_{\mathrm{ProSelfLC}} &amp;lt; 0.5, \forall \mathbf{p}\), so that the human annotations dominate and ProSelfLC only modifies the similarity structure. This is because when a learner does not see the training data for enough times, we assume it is not trained well, which is the most elementary concept in deep learning. Most importantly, more randomness exists at the earlier phase, as a result, the learner may output a wrong confident prediction. In our design, \(\epsilon_{\mathrm{ProSelfLC}} &amp;lt; 0.5, \forall \mathbf{p}\) can assuage the bad impact of such unexpected cases.
+When it comes to the later learning phase, i.e., \(t &amp;gt; \Gamma/2\), we have \(g(t) &amp;gt; 0.5\), which means overall we give enough credits to a learner as it has been trained for more than the half of total iterations.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Regarding \(l(\mathbf{p})\), we discuss its effect in the later learning phase when it becomes more meaningful.
+If \(\mathbf{p}\) is not confident, \(l(\mathbf{p})\) will be large, then \(\epsilon_{\mathrm{ProSelfLC}}\) will be small, which means we choose to trust a one-hot annotation more when its prediction is of high entropy, so that we can further reduce the entropy of output distributions}. In this case, ProSelfLC only modifies the similarity structure.
+Beyond, when \(\mathbf{p}\) is highly confident, there are two fine cases: If \(\mathbf{p}\) is consistent with \(\mathbf{q}\) in the semantic class, ProSelfLC only modifies the similarity structure too; If they are inconsistent, ProSelfLC further corrects the semantic class of a human annotation.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p class=&quot;figure&quot;&gt;Ablation study on the design of ProSelfLC, where \(\epsilon_{\mathrm{ProSelfLC}}\) consistently performs the best when multiple metrics are reported.
+&lt;img src=&quot;/imgs/figsProSelfLC/ablation_study.png&quot; alt=&quot;Ablation study on the design of ProSelfLC&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;figure&quot;&gt;Case analysis on the design of ProSelfLC.
+&lt;img src=&quot;/imgs/figsProSelfLC/case_analysis.png&quot; alt=&quot;Case analysis on the design of ProSelfLC&quot; class=&quot;lead&quot; data-width=&quot;800&quot; data-height=&quot;100&quot; /&gt;&lt;/p&gt;
+
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Correct the similarity structure for every data point in all cases.&lt;/strong&gt;
+Given any data point \(\mathbf{x}\), by a convex combination of \(\mathbf{p}\) and \(\mathbf{q}\),
+we add the information about its relative probabilities of being different training classes using the knowledge of a learner itself.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Revise the semantic class of an example only when the learning time is long and its prediction is confidently inconsistent.&lt;/strong&gt;
+As highlighted in Table 2, only when two conditions are met, we have \(\epsilon_{\mathrm{ProSelfLC}}  &amp;gt; 0.5\) and
+\(\argmax\nolimits_j \mathbf{p}(j|\mathbf{x}) \neq \argmax\nolimits_j \mathbf{q}(j|\mathbf{x})\), then the semantic class in $\mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}$ is changed to be determined by \(\mathbf{p}\).
+For example, we can deduce \(\mathbf{p} = [0.95, 0.01, 0.04], \mathbf{q} = [0, 0, 1], \epsilon_{\mathrm{ProSelfLC}}=0.8 \Rightarrow \mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}=(1- \epsilon_{\mathrm{ProSelfLC}})  \mathbf{q}+\epsilon_{\mathrm{ProSelfLC}} \mathbf{p}=[0.76, 0.008, 0.232]\).
+Theoretically, ProSelfLC also becomes robust against long time being exposed to the training data, so that early stopping is not required.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;related-interesting-work&quot;&gt;Related Interesting Work&lt;/h2&gt;
+&lt;ul class=&quot;message&quot;&gt;
+  &lt;li&gt;Contradictory Underlying Principle: Maximum-Entropy Learning, Confidence Penalty, Label Smoothing
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1701.06548.pdf&quot;&gt;Confidence Penalty is proposed in Regularizing Neural Networks by Penalizing Confident Output Distributions&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1512.00567.pdf&quot;&gt;Label Smoothing is proposed in Rethinking the Inception Architecture for Computer Vision&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://papers.nips.cc/paper/7344-maximum-entropy-fine-grained-classification.pdf&quot;&gt;Maximum Entropy Fine-Grained Classification&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Deep models learn simple meaningful patterns before fitting noise, even when severe label noise exists in human annotations.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1905.11233.pdf&quot;&gt;2019-Derivative manipulation for general example weighting&lt;/a&gt;
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  @article{wang2019derivative,
+  title={Derivative Manipulation for
+  General Example Weighting},
+  author={Wang, Xinshao and Kodirov, Elyor and Hua, Yang and Robertson, Neil M},
+  journal={arXiv preprint arXiv:1905.11233},
+  year={2019}
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1903.12141.pdf&quot;&gt;2019-IMAE for noise-robust learning: Mean absolute error does not treat examples equally and gradient magnitude’s variance matters.&lt;/a&gt;
+        &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  @article{wang2019imae,
+  title={ {IMAE} for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally
+  and Gradient Magnitude's Variance Matters},
+  author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M},
+  journal={arXiv preprint arXiv:1903.12141},
+  year={2019}
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Arpit, D., Jastrz ̨ebski, S., Ballas, N., Krueger, D., Bengio, E., Kanwal, M.S., Maharaj, T., Fischer, A., Courville, A., Bengio, Y., Lacoste-Julien, S.: A closer look at memorization in deep networks. In: ICML. (2017)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>XW</name></author><summary type="html">Keywords: Label correction and smoothing, in defense of entropy minimisation, predictive uncertainty, progressive trust of a model's knowledge.</summary></entry><entry><title type="html">Robust DL/ML</title><link href="http://localhost:4000/readingnotes/2020-09-08-RobustMLDL/" rel="alternate" type="text/html" title="Robust DL/ML" /><published>2020-09-08T00:00:00+01:00</published><updated>2020-09-08T00:00:00+01:00</updated><id>http://localhost:4000/readingnotes/RobustMLDL</id><content type="html" xml:base="http://localhost:4000/readingnotes/2020-09-08-RobustMLDL/">In general, robust deep learning covers: missing labels (semisupervised learning); noisy labels (noise detection and correction); regularisation techniques; sample imbalance (long-tailed class distribution); adversarial learning; and so on. 
 
 Remark: in my reading notes, sometimes I simply quote texts directly from the original paper. Therefore, `we' means a paper's authors in many contexts. 
 
@@ -534,206 +762,7 @@ For any specific discussion or potential future collaboration, please feel free 
   year={2019}
 }
 ```
-{:.message}</content><author><name>XW</name></author><summary type="html">For source codes, the usage is conditioned on academic use only and kindness to cite our work: Derivative Manipulation and IMAE. As a young researcher, your interest and kind citation (star) will definitely mean a lot for me and my collaborators. For any specific discussion or potential future collaboration, please feel free to contact me.</summary></entry><entry><title type="html">Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks</title><link href="http://localhost:4000/blogs/2020-06-07-Progressive-self-label-correction/" rel="alternate" type="text/html" title="Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks" /><published>2020-06-07T00:00:00+01:00</published><updated>2020-06-07T00:00:00+01:00</updated><id>http://localhost:4000/blogs/Progressive-self-label-correction</id><content type="html" xml:base="http://localhost:4000/blogs/2020-06-07-Progressive-self-label-correction/">For any specific discussion or potential future collaboration, please feel free to contact me. &lt;br /&gt;
-As a young researcher, your interest and star (citation) will mean a lot for me and my collaborators. &lt;br /&gt;
-Paper link: [https://arxiv.org/abs/2005.03788](https://arxiv.org/abs/2005.03788)
-```
-Cite our work kindly if you find it useful:
-@article{wang2020proselflc, 
-    title={ {ProSelfLC}: Progressive Self Label Correction for Training Robust Deep Neural Networks}, 
-    author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Clifton, David A and Robertson, Neil M}, 
-    journal={arXiv preprint arXiv:2005.03788}, 
-    year={2020}
-}
-```
-
-&lt;!-- :+1: means being highly related to my personal research interest. --&gt;
-List of Content
-0. [Feedbacks](#feedbacks)
-0. [Storyline](#storyline)
-0. [Open ML Research Questions](#open-ml-research-questions)
-0. [Noticeable Findings](#noticeable-findings)
-0. [Literature Review](#literature-review)
-0. [In Self LC, a core question is not well answered](#in-self-lc-a-core-question-is-not-well-answered)
-0. [Underlying Principle of ProSelfLC](#underlying-principle-of-proselflc)
-0. [Mathematical Details of ProSelfLC](#mathematical-details-of-proselflc)
-0. [Design Reasons of ProSelfLC](#design-reasons-of-proselflc)
-0. [Related Interesting Work](#related-interesting-work)
-{:.message}
-
-## Feedbacks
-* [Reviews](/imgs/figsProSelfLC/CMT_Review.pdf)
-* [Personal replies](/imgs/figsProSelfLC/ProSelfLC_personal_response.pdf): This is an unofficial letter from me to let peers know better about our work.
-{:.message}
-
-
-## Storyline
-* Human annotations contain bias, subjectiveness, and errors. 
-    * Therefore, some prior work **penalises low-entropy statuses =&gt; so that wrong fitting is alleviated in some degree.** Representative proposals are label smoothing and confidence penalty.
-
-* Our new finding on **Entropy Minimisation**: 
-    * We can solve it still by minimum entropy regularisation principle;
-    * Diverse minimum-entropy statuses exist (e.g., when a learner perfectly fits random labels, the entropy also reaches a minimum):
-        * The minimum-entropy status defined by untrusted human-annotated labels is incorrect, thus leading to poor generalisation. \\
-        **CCE =&gt; Non-meaningful minimum-entropy status =&gt; poor generalisation**.
-        * We propose to redefine a more meaningful minimum-entropy status by exploiting the knowledge of a learner itself, which shows promising results.  \\
-        **Label correction =&gt; Meaningful low-entropy status =&gt; good generalisation**.
-
-* We highlight **ProSelfLC's Underlying Principle is ''Contradictory'' with: Maximum-Entropy Learning, Confidence Penalty and Label Smoothing**, which are popular recently. 
-Then we wish our community think critically about two principles: 
-    * **Rewarding a correct low-entropy status** (ProSelfLC)   
-    * **Penalising a non-meaningful low-entropy status** (CCE+LS, or CCE+CP)
-    * In our experiments: **ProSelfLC &gt; (CCE+LS, or CCE+CP) &gt; CCE**
-    * Being contradictory in entropy, both help but their angles differ: 
-        * CCE fits non-meaningful patterns =&gt; LS and CP penalise such fitting;
-        * CCE fits non-meaningful patterns =&gt; ProSelfLC first corrects them =&gt; then fits. 
-        
-* Why does CCE fit non-meaningful patterns? 
-    * [2019-Derivative manipulation for general example weighting](https://arxiv.org/pdf/1905.11233.pdf)
-    * [2019-IMAE for noise-robust learning: Mean absolute error does not treat examples equally and gradient magnitude’s variance matters.](https://arxiv.org/pdf/1903.12141.pdf)
-{:.message}
-
-## Open ML Research Questions
-* Should we trust and exploit a learner’s knowledge as training goes, or always trust human
-annotations?
-    * As a learner, to trust yourself or supervison/textbooks?
-    * The answer should depend on what a learner has learned.
-
-* Should we optimise a learner towards a correct low-entropy status, or penalise a low-entropy
-status?
-    * As a supervisor/evaluator, to reward or penalise a confident learner?
-
-* Open discussion: we show it’s fine for a learner to be confident towards a correct low-entropy status. 
-Then more future research attention should be paid to the definition of correct knowledge, as in general we accept, human annotations used for learning supervision may be biased, subjective, and wrong.
-* As a supervisor, before training multiple learners, to think about how to train one great learner first?
-    * 1st context: recently, many techniques about **training multiple learners** (co-training, mutual learning, knowledge distillation, adversarial training, etc) have been proposed.
-    * 2nd context: in our work, we work on **how to train single learner better.**
-    * 1st personal comment: training multiple learners is much more expensive and complex;
-    * 2nd personal comment: when training multiple learners collaboratively, if one learner does not perform well, it tends to hurt the other learners. 
-{:.message}
-
-## Noticeable Findings
-* Rewarding low entropy (towards a meaningful status) leads to better generalisation than penalising low entropy.
-{:.message}
-
-Comprehensive learning dynamics for thorough understanding of learning behaviours.
-![ProSelfLC comprehensive_dynamics](/imgs/figsProSelfLC/comprehensive_dynamics.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
-{:.figure}
-* Result analysis:
-    * **Revising the semantic class and perceptual similarity structure.** Generally, the semantic class of an example is defined according to its perceptual similarities with training classes, and is chosen to be the most similar class. In Figure 3b and 3c, we show a learner’s behaviours on without fitting wrong labels and correcting them in different approaches. We remark that ProSelfLC performs the best.
-    &lt;br /&gt;
-    &lt;br /&gt;
-    * **To reward or penalise low entropy?** LS and CP are proposed to penalise low entropy. On the one hand, we observe that LS and CP work, being consistent with prior evidence. As shown in Figure 3d and 3e, the entropies of both clean and noisy subset are the largest in LS and CP, and correspondingly their generalisation performance is the best except for ProSelfLC in Figure 3f. On the other hand, our ProSelfLC has the lowest low entropy while performs the best, which demonstrates **it does not hurt for a learner to be confident. However, a learning model needs to be careful about what to be confident in.** Let us look at Figure 3b and 3c, ProSelfLC has the least wrong fitting while the highest semantic class correction rate, which denotes it is confident in learning meaningful patterns.
-{:.message}
-
-## Literature Review
-
-Target modification includes OR (LS and CP), and LC (Self LC and Non-self LC). &lt;br /&gt;
-Self LC is the most appealing because it requires no extra learners to
-revise learning targets, &lt;br /&gt; 
-being free! &lt;br /&gt;
-![Method Analysis](/imgs/figsProSelfLC/methods_grouping.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
-{:.figure}
-
-Summary of CCE, LS, CP and LC from the angle of target modification, entropy and KL divergence.
-![Table Method Analysis](/imgs/figsProSelfLC/table_method_analysis.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
-{:.figure}
-
-
-## In Self LC, a core question is not well answered:
-$$\textit{How much do we trust a learner to leverage its knowledge?}$$
-{:.message}
-
-
-## Underlying Principle of ProSelfLC
-* When a learner starts to learn, it trusts the supervision from human annotations. 
-&lt;br /&gt;
-&lt;br /&gt;
-This idea is inspired by the paradigm that deep models learn simple meaningful patterns before fitting noise, even when severe label noise exists in human annotations [1];
-&lt;br /&gt;
-&lt;br /&gt;
-* As a learner attains confident knowledge as time goes, we leverage its confident knowledge to correct labels. 
-&lt;br /&gt;
-&lt;br /&gt;
-This is surrounded by minimum entropy regularisation, which has been widely evaluated in unsupervised and semi-supervised scenarios [10, 2].
-{:.message}
-
-
-## Mathematical Details of ProSelfLC
-
-Beyond semantic class: the similarity structure defined by a label distribution.
-![The definiton of learning targets/labels](/imgs/figsProSelfLC/definition_learning_target.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
-{:.figure}
-
-
-Human annotations and predicted label distributions, which should we trust more?
-![Mathematical expression of ProSelfLC](/imgs/figsProSelfLC/mathematical_expression.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
-{:.figure}
-
-
-## Design Reasons of ProSelfLC
-*  Regarding $$g(t)$$, 
-in the earlier learning phase, i.e., $$t &lt; \Gamma/2$$, $$g(t) &lt; 0.5 \Rightarrow \epsilon_{\mathrm{ProSelfLC}} &lt; 0.5, \forall \mathbf{p}$$, so that the human annotations dominate and ProSelfLC only modifies the similarity structure. This is because when a learner does not see the training data for enough times, we assume it is not trained well, which is the most elementary concept in deep learning. Most importantly, more randomness exists at the earlier phase, as a result, the learner may output a wrong confident prediction. In our design, $$\epsilon_{\mathrm{ProSelfLC}} &lt; 0.5, \forall \mathbf{p}$$ can assuage the bad impact of such unexpected cases.   
-When it comes to the later learning phase, i.e., $$t &gt; \Gamma/2$$, we have $$g(t) &gt; 0.5$$, which means overall we give enough credits to a learner as it has been trained for more than the half of total iterations. 
-
-*  Regarding $$l(\mathbf{p})$$, we discuss its effect in the later learning phase when it becomes more meaningful. 
-If $$\mathbf{p}$$ is not confident, $$l(\mathbf{p})$$ will be large, then $$\epsilon_{\mathrm{ProSelfLC}}$$ will be small, which means we choose to trust a one-hot annotation more when its prediction is of high entropy, so that we can further reduce the entropy of output distributions}. In this case, ProSelfLC only modifies the similarity structure.
-Beyond, when $$\mathbf{p}$$ is highly confident, there are two fine cases: If $$\mathbf{p}$$ is consistent with $$\mathbf{q}$$ in the semantic class, ProSelfLC only modifies the similarity structure too; If they are inconsistent, ProSelfLC further corrects the semantic class of a human annotation. 
-
-
-
-Ablation study on the design of ProSelfLC, where $$\epsilon_{\mathrm{ProSelfLC}}$$ consistently performs the best when multiple metrics are reported. 
-![Ablation study on the design of ProSelfLC](/imgs/figsProSelfLC/ablation_study.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
-{:.figure}
-
-
-
-Case analysis on the design of ProSelfLC.
-![Case analysis on the design of ProSelfLC](/imgs/figsProSelfLC/case_analysis.png){:.lead data-width=&quot;800&quot; data-height=&quot;100&quot;}
-{:.figure}
-
-* **Correct the similarity structure for every data point in all cases.**
-Given any data point $$\mathbf{x}$$, by a convex combination of $$\mathbf{p}$$ and $$\mathbf{q}$$, 
-we add the information about its relative probabilities of being different training classes using the knowledge of a learner itself. 
-
-
-* **Revise the semantic class of an example only when the learning time is long and its prediction is confidently inconsistent.**
-As highlighted in Table 2, only when two conditions are met, we have $$\epsilon_{\mathrm{ProSelfLC}}  &gt; 0.5$$ and 
-$$\argmax\nolimits_j \mathbf{p}(j|\mathbf{x}) \neq \argmax\nolimits_j \mathbf{q}(j|\mathbf{x})$$, then the semantic class in $\mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}$ is changed to be determined by $$\mathbf{p}$$. 
-For example, we can deduce $$\mathbf{p} = [0.95, 0.01, 0.04], \mathbf{q} = [0, 0, 1], \epsilon_{\mathrm{ProSelfLC}}=0.8 \Rightarrow \mathbf{\tilde{q}_{\mathrm{ProSelfLC}}}=(1- \epsilon_{\mathrm{ProSelfLC}})  \mathbf{q}+\epsilon_{\mathrm{ProSelfLC}} \mathbf{p}=[0.76, 0.008, 0.232]$$.  
-Theoretically, ProSelfLC also becomes robust against long time being exposed to the training data, so that early stopping is not required.
-{:.message}
-
-
-
-## Related Interesting Work
-* Contradictory Underlying Principle: Maximum-Entropy Learning, Confidence Penalty, Label Smoothing
-    * [Confidence Penalty is proposed in Regularizing Neural Networks by Penalizing Confident Output Distributions](https://arxiv.org/pdf/1701.06548.pdf)
-    * [Label Smoothing is proposed in Rethinking the Inception Architecture for Computer Vision](https://arxiv.org/pdf/1512.00567.pdf)
-    * [Maximum Entropy Fine-Grained Classification](https://papers.nips.cc/paper/7344-maximum-entropy-fine-grained-classification.pdf)
-* Deep models learn simple meaningful patterns before fitting noise, even when severe label noise exists in human annotations. 
-    * [2019-Derivative manipulation for general example weighting](https://arxiv.org/pdf/1905.11233.pdf)
-    ```
-    @article{wang2019derivative,
-        title={Derivative Manipulation for
-        General Example Weighting},
-        author={Wang, Xinshao and Kodirov, Elyor and Hua, Yang and Robertson, Neil M},
-        journal={arXiv preprint arXiv:1905.11233},
-        year={2019}
-    }
-    ```
-    * [2019-IMAE for noise-robust learning: Mean absolute error does not treat examples equally and gradient magnitude’s variance matters.](https://arxiv.org/pdf/1903.12141.pdf)
-    ```
-    @article{wang2019imae,
-        title={ {IMAE} for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally 
-        and Gradient Magnitude's Variance Matters},
-        author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Robertson, Neil M},
-        journal={arXiv preprint arXiv:1903.12141},
-        year={2019}
-    }
-    ```
-    * Arpit, D., Jastrz ̨ebski, S., Ballas, N., Krueger, D., Bengio, E., Kanwal, M.S., Maharaj, T., Fischer, A., Courville, A., Bengio, Y., Lacoste-Julien, S.: A closer look at memorization in deep networks. In: ICML. (2017)
-{:.message}</content><author><name>XW</name></author><summary type="html">For any specific discussion or potential future collaboration, please feel free to contact me. As a young researcher, your interest and star (citation) will mean a lot for me and my collaborators. Paper link: https://arxiv.org/abs/2005.03788 Cite our work kindly if you find it useful: @article{wang2020proselflc, title={ {ProSelfLC}: Progressive Self Label Correction for Training Robust Deep Neural Networks}, author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Clifton, David A and Robertson, Neil M}, journal={arXiv preprint arXiv:2005.03788}, year={2020} }</summary></entry><entry><title type="html">Paper Summary on Distance Metric, Representation Learning</title><link href="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/" rel="alternate" type="text/html" title="Paper Summary on Distance Metric, Representation Learning" /><published>2020-04-23T00:00:00+01:00</published><updated>2020-04-23T00:00:00+01:00</updated><id>http://localhost:4000/blogs/deep-metric-learning</id><content type="html" xml:base="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/">:+1: means being highly related to my personal research interest. 
+{:.message}</content><author><name>XW</name></author><summary type="html">For source codes, the usage is conditioned on academic use only and kindness to cite our work: Derivative Manipulation and IMAE. As a young researcher, your interest and kind citation (star) will definitely mean a lot for me and my collaborators. For any specific discussion or potential future collaboration, please feel free to contact me.</summary></entry><entry><title type="html">Paper Summary on Distance Metric, Representation Learning</title><link href="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/" rel="alternate" type="text/html" title="Paper Summary on Distance Metric, Representation Learning" /><published>2020-04-23T00:00:00+01:00</published><updated>2020-04-23T00:00:00+01:00</updated><id>http://localhost:4000/blogs/deep-metric-learning</id><content type="html" xml:base="http://localhost:4000/blogs/2020-04-23-deep-metric-learning/">:+1: means being highly related to my personal research interest. 
 0. [arXiv 2020-On the Fairness of Deep Metric Learning](#arxiv-2020)
 0. [ICCV 2019, CVPR 2020 Deep Metric Learning](#iccv-2019-cvpr-2020-deep-metric-learning)
 0. [CVPR 2019 Deep Metric Learning](#cvpr-2019-deep-metric-learning)
