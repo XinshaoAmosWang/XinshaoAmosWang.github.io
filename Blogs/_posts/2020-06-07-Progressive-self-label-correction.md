@@ -14,16 +14,15 @@ comment: true
 For any specific discussion or potential future collaboration, please feel free to contact me. <br />
 As a young researcher, your interest and star (citation) will mean a lot for me and my collaborators. <br />
 Paper link: [https://arxiv.org/abs/2005.03788](https://arxiv.org/abs/2005.03788)
-```
-Cite our work kindly if you find it useful:
 
+Cite our work kindly if you find it useful:
 @inproceedings{wang2021proselflc,
     title={ {ProSelfLC}: Progressive Self Label Correction for Training Robust Deep Neural Networks},
     author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Clifton, David A and Robertson, Neil M},
     booktitle={CVPR},
     year={2021}
 }
-```
+{:.message}
 
 <!-- :+1: means being highly related to my personal research interest. -->
 List of Content
@@ -191,7 +190,7 @@ Theoretically, ProSelfLC also becomes robust against long time being exposed to 
     * [Maximum Entropy Fine-Grained Classification](https://papers.nips.cc/paper/7344-maximum-entropy-fine-grained-classification.pdf)
 * Deep models learn simple meaningful patterns before fitting noise, even when severe label noise exists in human annotations.
     * [2019-Derivative manipulation for general example weighting](https://arxiv.org/pdf/1905.11233.pdf)
-    ```
+    ---
     @article{wang2019derivative,
         title={Derivative Manipulation for
         General Example Weighting},
@@ -199,9 +198,9 @@ Theoretically, ProSelfLC also becomes robust against long time being exposed to 
         journal={arXiv preprint arXiv:1905.11233},
         year={2019}
     }
-    ```
+    ---
     * [2019-IMAE for noise-robust learning: Mean absolute error does not treat examples equally and gradient magnitude’s variance matters.](https://arxiv.org/pdf/1903.12141.pdf)
-    ```
+    ---
     @article{wang2019imae,
         title={ {IMAE} for Noise-Robust Learning: Mean Absolute Error Does Not Treat Examples Equally
         and Gradient Magnitude's Variance Matters},
@@ -209,6 +208,6 @@ Theoretically, ProSelfLC also becomes robust against long time being exposed to 
         journal={arXiv preprint arXiv:1903.12141},
         year={2019}
     }
-    ```
+    ---
     * Arpit, D., Jastrz ̨ebski, S., Ballas, N., Krueger, D., Bengio, E., Kanwal, M.S., Maharaj, T., Fischer, A., Courville, A., Bengio, Y., Lacoste-Julien, S.: A closer look at memorization in deep networks. In: ICML. (2017)
 {:.message}
