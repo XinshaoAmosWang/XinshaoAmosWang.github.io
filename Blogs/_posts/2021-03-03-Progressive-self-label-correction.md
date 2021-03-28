@@ -16,6 +16,7 @@ As a young researcher, your interest and star (citation) will mean a lot for me 
 Paper link: [https://arxiv.org/abs/2005.03788](https://arxiv.org/abs/2005.03788)
 
 Cite our work kindly if you find it useful:
+<br />
 @inproceedings{wang2021proselflc,
     title={ {ProSelfLC}: Progressive Self Label Correction for Training Robust Deep Neural Networks},
     author={Wang, Xinshao and Hua, Yang and Kodirov, Elyor and Clifton, David A and Robertson, Neil M},
