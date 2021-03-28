@@ -11,6 +11,10 @@ comment: true
 Keywords: Label correction and smoothing, in defense of entropy minimisation, predictive uncertainty, progressive trust of a model's knowledge.
 ```
 
+```
+Github code: [https://github.com/XinshaoAmosWang/ProSelfLC-CVPR2021](https://github.com/XinshaoAmosWang/ProSelfLC-CVPR2021)
+```
+
 For any specific discussion or potential future collaboration, please feel free to contact me. <br />
 As a young researcher, your interest and star (citation) will mean a lot for me and my collaborators. <br />
 Paper link: [https://arxiv.org/abs/2005.03788](https://arxiv.org/abs/2005.03788)
