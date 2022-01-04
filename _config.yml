@@ -19,7 +19,7 @@ baseurl:               ''
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 'Postdoc@OxfordU'
+title:                 'FormerPostdoc@OxfordU'
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -29,12 +29,13 @@ description:           >
 
 # A shorter description for the sidebar.
 tagline:               >
-  Core Machine Learning.
-
-  Fundamental Deep Learning.
+  Robust Machine Learning.
+  Generalisable and Transparent Deep Learning.
+  Synthetic Biology. 
+  Computer Vision. 
 
 # A list of keywords for your blog
-keywords:              [Machine Learning, Computer Vision, Robust Learning, Deep Metric Learning, Image Recognition, Video Recognition, Person ReID]
+keywords:              [Synthetic Biology, Machine Learning, Computer Vision, Robust Learning, Deep Metric Learning, Image Recognition, Video Recognition, Person ReID]
 
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
@@ -60,8 +61,8 @@ menu:
     url:               /projects/
   #- title:             Resume
   #  url:               /Resume/
-  #- title:             Documentations
-  #  url:               /my_docs/
+  - title:             Documentations
+    url:               /my_docs/
   - title:             About ME
     url:               /about/
 
@@ -74,7 +75,7 @@ menu:
 #     url:               /cookies-policy/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2019-2020. All rights reserved.
+copyright:             © 2022. All rights reserved.
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/
@@ -141,7 +142,7 @@ defaults:
 
 # Set your Google Analytics id to receive `pageview` events.
 # To remove Google Anaylics from your page, remove the line below.
-# google_analytics:      UA-XXXXXXXX-X
+google_analytics:      UA-156337007-1
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
