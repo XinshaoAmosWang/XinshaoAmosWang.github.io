@@ -42,6 +42,7 @@ List of Content
 ## Feedbacks
 * [Reviews](../../imgs/figsProSelfLC/CMT_Review.pdf)
 * [Personal replies](../../imgs/figsProSelfLC/ProSelfLC_personal_response.pdf): This is an unofficial letter from me to let peers know better about our work.
+* [More reviewer's comments from CVPR 2021](https://github.com/XinshaoAmosWang/ProSelfLC-CVPR2021#link-to-reviewers-comments)
 {:.message}
 
 
