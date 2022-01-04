@@ -9,17 +9,7 @@ author1:
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   # Open `_data/authors.yml` to edit this text.
   about:             |
-    Xinshao Wang, 3rd year PhD Student. 
 
-    Working on 
-    Machine Learning (Deep Metric Learning, Robust Learning under Arbitrary Anomalies)
-    and Computer Vision (Image/Video Recognition, Person ReID).
-
-    
-    [Personal Website][kit]
-    
-    [kit]: https://xinshaoamoswang.github.io/
-    
   # This photo will be used in the about section
   picture:
     path:            /assets/icons/android-chrome-192x192.png

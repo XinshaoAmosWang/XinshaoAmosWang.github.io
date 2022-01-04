@@ -1,0 +1,10 @@
+
+.idea/*
+
+.jekyll-cache/*
+.jekyll-metadata
+
+.sass-cache/*
+
+_js/*
+_site/*
