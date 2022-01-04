@@ -4,10 +4,9 @@ image: /assets/img/blog/steve-harvey.jpg
 
 
 
-
-
-## Postdoc, University of Oxford
+## Overview
 {:.lead}
+* [A former postdoc of University of Oxford.](https://eng.ox.ac.uk/chi/team/alumni/)
 * [Google Scholar](https://scholar.google.com/citations?user=yOBhB7UAAAAJ&hl=en) 
 * Machine Learning: Deep Metric Learning, Robust Representation Learning under Adverse
 Conditions, e.g., missing labels (semi-supervised learning), noisy labels, sample imbalance, etc.  
@@ -16,15 +15,14 @@ Conditions, e.g., missing labels (semi-supervised learning), noisy labels, sampl
 
 * Academic Reviewer: TPAMI, TNNLS, Knowledge Based Systems, AAAI, etc 
 
-* [Something new to come soon!]()
+* [I am working on AI for synthetic biology now, which is exciting and has huge potential](../projects/2022-01-03-synthetic-biology/)
 {:.message}
 <!--* [What am I working on now? Discussions are Welcome!](../blogs/2020-02-21-learn-bayesian-DL/#what-am-i-working-on-now-discussions-are-welcome) -->
 
 
 
-## Featured Research Delivering: 
+## Featured Research Delivering 
 {:.lead}
-
 * [Open discussion on deep robustness, please and thanks!](https://www.reddit.com/r/MachineLearning/comments/hjlayq/r_open_discussion_on_deep_robustness_please/)
 
 * [Progressive Self Label Correction (ProSelfLC) for Training Robust Deep Neural Networks](../blogs/2020-06-07-Progressive-self-label-correction)
@@ -39,7 +37,7 @@ Conditions, e.g., missing labels (semi-supervised learning), noisy labels, sampl
 {:.message}
 
 
-## Hightlight: Robust Learning and Inference under Adverse Conditions, e.g., noisy labels or observations, outliers, adversaries, sample imbalance (long-tailed), etc. 
+## Hightlight: Robust Learning and Inference under Adverse Conditions, e.g., noisy labels or observations, outliers, adversaries, sample imbalance (long-tailed), etc.  
 {:.lead}
 **Why important?**
 DNNs can brute forcelly fit well training examples with random lables (non-meaningful patterns): 
