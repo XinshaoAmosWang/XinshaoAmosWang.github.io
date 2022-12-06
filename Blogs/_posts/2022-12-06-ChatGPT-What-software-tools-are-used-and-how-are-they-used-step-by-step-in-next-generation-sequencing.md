@@ -8,6 +8,16 @@ comment: true
 ---
 
 <br />
+
+For the scientific questions, [ChatGPT](https://chat.openai.com/chat) is great, but still needs improving.
+I have impression that the large language models are replacing the large text databases, e.g., [AlphaFold2](https://alphafold.ebi.ac.uk/) are replacing the [PDB database](https://www.rcsb.org/), [ChatGPT](https://chat.openai.com/chat) has the potential to replace multiple text knowledge databases including wikipedia, stack overflow websites, academic proceedings, books, libraries, etc. I could be wrong, may be not replacing them, [ChatGPT](https://chat.openai.com/chat) has the potential to intergrate all of them into single powerful language AI model.
+
+Here is an example of using ChatGPT versus using google search to ask a bioscience question: 
+
+What software tools are used and how are they used step by step in next-generation sequencing?
+{:.message}
+
+<br />
 List of Content
 0. [Two picked replies from Google search](#two-picked-replies-from-google-search)
 0. [Ten different replies from ChatGPT](#ten-different-replies-from-chatgpt)
