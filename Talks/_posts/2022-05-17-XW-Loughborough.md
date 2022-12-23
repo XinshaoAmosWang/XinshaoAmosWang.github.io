@@ -10,5 +10,5 @@ description: |
 Research seminar on Robust Deep Learning: Understanding real-world data and data-centric AI. <br />
 {:.message}
 
-{% pdf "/resources_from2022-12-23/Talks/2022-05-17-XW-Loughborough.pdf" width=900px height=600px %}
+[/resources_from2022-12-23/Talks/2022-05-17-XW-Loughborough.pdf](/resources_from2022-12-23/Talks/2022-05-17-XW-Loughborough.pdf)
 
