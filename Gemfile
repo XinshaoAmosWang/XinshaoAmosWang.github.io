@@ -31,6 +31,7 @@ group :jekyll_plugins do
   gem "jekyll-titles-from-headings"
   gem "jekyll-replace-img"
   gem "kramdown-parser-gfm"
+  gem "jekyll-pdf-embed"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
