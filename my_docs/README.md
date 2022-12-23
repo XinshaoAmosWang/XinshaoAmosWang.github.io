@@ -13,8 +13,7 @@ comment: true
 
 * Information about probabilistic models of cognition
   * [Tom's Bayesian reading list](http://cocosci.princeton.edu/tom/bayes.html)
-
-...[http://cocosci.princeton.edu/resources.php](http://cocosci.princeton.edu/resources.php)
+  * [http://cocosci.princeton.edu/resources.php](http://cocosci.princeton.edu/resources.php)
 
 
 ## Useful links on Jekyll, Google AdSense, Markdown. 
