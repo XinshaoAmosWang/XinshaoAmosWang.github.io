@@ -12,4 +12,4 @@ Summary of research backgrounds, interest, expectations. <br />
 {:.message}
 
 
-[/resources_from2022-12-23/Talks/2022-12-23-ShanghaiDianJiUniversity.pdf](/resources_from2022-12-23/Talks/2022-12-23-ShanghaiDianJiUniversity.pdf)
+[/resources_starting2022-12-23/Talks/2022-12-23-ShanghaiDianJiUniversity.pdf](/resources_starting2022-12-23/Talks/2022-12-23-ShanghaiDianJiUniversity.pdf)
