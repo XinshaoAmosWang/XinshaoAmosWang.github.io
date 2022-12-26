@@ -8,7 +8,7 @@ description: |
 ---
 
 Dr. (Amos) Xinshao Wang: Data + Modelling <br />
-Summary of research backgrounds, interest, expectations. <br />
+Summary of research backgrounds, interest, projects. <br />
 {:.message}
 
 
