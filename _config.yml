@@ -19,7 +19,7 @@ baseurl:               ''
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 'FormerPostdoc@OxfordU'
+title:                 'Ex-Postdoc@OxfordU'
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -254,8 +254,6 @@ collections:
 
 exclude:
   - vendor
-  - Gemfile
-  - Gemfile.lock
   - node_modules
   - package.json
   - package-lock.json
@@ -285,7 +283,6 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-replace-img
   - jemoji
-  - jekyll-pdf-embed
 
 # Theme
 # ---------------------------------------------------------------------------------------

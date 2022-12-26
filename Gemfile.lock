@@ -54,6 +54,8 @@ GEM
     jekyll-optional-front-matter (0.3.2)
       jekyll (>= 3.0, < 5.0)
     jekyll-paginate (1.1.0)
+    jekyll-pdf-embed (1.1.2.1)
+      jekyll
     jekyll-readme-index (0.3.0)
       jekyll (>= 3.0, < 5.0)
     jekyll-redirect-from (0.16.0)
@@ -133,11 +135,11 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
-  jekyll
   jekyll-default-layout
   jekyll-feed
   jekyll-optional-front-matter
   jekyll-paginate
+  jekyll-pdf-embed
   jekyll-readme-index
   jekyll-redirect-from
   jekyll-relative-links
