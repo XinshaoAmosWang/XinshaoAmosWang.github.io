@@ -19,7 +19,7 @@ baseurl:               ''
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 'FormerPostdoc@OxfordU'
+title:                 'Ex-Postdoc@OxfordU'
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -53,6 +53,8 @@ author:
 
 # Add links to the sidebar.
 menu:
+  - title:             Talks
+    url:               /talks/
   - title:             Blogs
     url:               /blogs/
   - title:             ReadingNotes
@@ -75,7 +77,7 @@ menu:
 #     url:               /cookies-policy/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2022. All rights reserved.
+copyright:             © 2019-2022. All rights reserved.
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/
@@ -283,6 +285,7 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-replace-img
   - jemoji
+  - jekyll-pdf-embed
 
 # Theme
 # ---------------------------------------------------------------------------------------
