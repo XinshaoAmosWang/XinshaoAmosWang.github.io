@@ -285,7 +285,6 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-replace-img
   - jemoji
-  - jekyll-pdf-embed
 
 # Theme
 # ---------------------------------------------------------------------------------------
