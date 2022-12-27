@@ -12,4 +12,5 @@ Summary of research backgrounds, interest, projects. <br />
 {:.message}
 
 
-[/resources_starting2022-12-23/Talks/2022-12-23-ShanghaiDianJiUniversity.pdf](/resources_starting2022-12-23/Talks/2022-12-23-ShanghaiDianJiUniversity.pdf)
+
+{% pdf "/resources_starting2022-12-23/Talks/2022-12-23-ShanghaiDianJiUniversity.pdf" width=900px height=600px %}
