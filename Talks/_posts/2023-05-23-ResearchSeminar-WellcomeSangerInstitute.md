@@ -1,13 +1,15 @@
 ---
 layout: post
 title: |
-  2023-05-23-ResearchSeminar
+  2023-05-23-ResearchSeminar-Wellcome Sanger Institute
 description: | 
-  Generative AI: Text-to-image
+  An invited research sharing at Wellcome Sanger Institute. <br />
+  <br />
+  Multi-domain alignment, LLMs, and generative AI (text-to-image).  
 #noindex: true
 ---
 
-Key advances in multi-domain alignment and generative AI: 
+Key advances in multi-domain alignment, LLMs, and generative AI: 
 * Conditioning dropout, as a classifier-free guidance/conditioning. 
 * Guidance weight: to control the strength of guidance/alignment. <br />
 {:.message}
